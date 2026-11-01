@@ -146,6 +146,9 @@ header{flex-wrap:wrap}.brand{flex:0 0 100%;width:100%;font-size:14px;font-weight
 :root[data-theme="dark"] #tpop{background:rgba(13,26,38,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--edge75b);border-radius:18px;box-shadow:0 24px 60px -16px rgba(0,0,0,.85)}
 :root[data-theme="dark"] *{scrollbar-color:#244055 transparent;scrollbar-width:thin}
 ::selection{background:rgba(156,203,232,.35)}
+.pop79h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:6px}.lv96wrap{margin-top:14px;border-top:1px solid var(--line);padding-top:10px}.lv96bar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:6px}.lv96bar .chip.on{background:rgba(156,203,232,.2);border-color:#9ccbe8}.lv96nav{margin-left:auto;display:flex;gap:4px}
+.lv96ev{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:6px}.lv96e{display:flex;flex-direction:column;align-items:flex-start;text-align:left;padding:6px 10px;border-radius:10px;border:1px solid var(--line);background:transparent;color:inherit;cursor:pointer;font:inherit;font-size:12.5px}.lv96e b{font-weight:500;font-size:12px;color:var(--muted)}.lv96e.g{border-left:3px solid #3fa96b}.lv96e.b{border-left:3px solid #d9534f}.lv96e.m{border-left:3px solid #d9a400}.lv96e.w{border-left:3px solid #fff}.lv96e:hover{background:rgba(156,203,232,.06)}
+#lf96svg .ev96:hover{r:8}
 .nm94f{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;margin-bottom:12px}.nm94f label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted);margin:0}.nm94f label.w{flex:1 1 260px}.nm94f input,.nm94f select{min-width:120px}
 .nm94btn{padding:10px 20px;border-radius:12px;border:0;background:linear-gradient(135deg,#9ccbe8,#6fa8dc);color:#0b1520;font-weight:600;cursor:pointer}
 .nm94top{display:flex;gap:18px;align-items:center;padding:12px;border-radius:16px;background:rgba(156,203,232,.06);margin-bottom:12px}.nm94r{width:110px;height:110px;flex:none}.nm94tt{font-size:22px;font-weight:500;margin-bottom:4px}.nm94ms{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.nm94m{display:flex;flex-direction:column;gap:2px;font-size:11.5px;color:var(--muted)}
@@ -4073,7 +4076,7 @@ function lifeHTML46(nat){ const {pts,sv}=life46(nat), bt=WSTATE.bt, now=ageYMD(b
   for(let a=10;a<=100;a+=10) g+=`<text x="${X(a)}" y="${H-12}" font-size="9" text-anchor="middle" fill="var(--muted)">${a}</text>`;
   g+=`<text x="4" y="${Y(80)}" font-size="9" fill="#2e8b57">ขึ้น</text><text x="4" y="${Y(20)}" font-size="9" fill="#c0392b">ลง</text>`;
   const path=pts.map((p,i)=>(i?'L':'M')+X(p.a).toFixed(1)+' '+Y(p.s).toFixed(1)).join(''); g+=`<path d="${path}" fill="none" stroke="var(--gold)" stroke-width="2.4"/>`;
-  pts.forEach(p=>{ if(p.why.some(w=>/เสาร์จรทับ/.test(w))) g+=`<circle cx="${X(p.a)}" cy="${Y(p.s)}" r="2.6" fill="#c0392b"/>`; if(p.why.some(w=>/พฤหัสจรทับ/.test(w))) g+=`<circle cx="${X(p.a)}" cy="${Y(p.s)}" r="2.6" fill="#2e8b57"/>`; });
+  pts.forEach(p=>{ if(p.why.some(w=>/เสาร์จรทับ/.test(w))) g+=`<circle cx="${X(p.a)}" cy="${Y(p.s)}" r="4.2" fill="#c0392b" stroke="#fff" stroke-width="1" data-pa="${p.a}" data-k="b"><title>อายุ ${p.a}: ${p.why.join(' · ')}</title></circle>`; if(p.why.some(w=>/พฤหัสจรทับ/.test(w))) g+=`<circle cx="${X(p.a)}" cy="${Y(p.s)}" r="4.2" fill="#2e8b57" stroke="#fff" stroke-width="1" data-pa="${p.a}" data-k="g"><title>อายุ ${p.a}: ${p.why.join(' · ')}</title></circle>`; });
   if(now>=1&&now<=100) g+=`<line x1="${X(now)}" y1="8" x2="${X(now)}" y2="${H-30}" stroke="var(--accent)" stroke-width="1.5"/><text x="${X(now)}" y="${H-32}" font-size="9.5" text-anchor="middle" fill="var(--accent)">ตอนนี้ ${now}</text>`;
   LF46={pts,W,H,bt}; const svg=`<svg viewBox="0 0 ${W} ${H}" class="lf46svg" id="lf46svg" role="img" aria-label="กราฟเส้นชีวิต ๑ ถึง ๑๐๐ ปี — ลากหรือแตะเพื่อดูรายละเอียด">${g}<g id="lf46cur" style="display:none"><line id="lf46ln" x1="0" y1="8" x2="0" y2="${H-30}" stroke="var(--ink)" stroke-width="1" stroke-dasharray="3 2"/><circle id="lf46dot" r="5" fill="var(--gold)" stroke="#fff" stroke-width="1.5"/></g></svg><input type="range" id="lf46rng" class="lf46rng" min="0" max="1187" step="1" value="${Math.max(0,Math.min(1187,(now-1)*12))}" aria-label="เลื่อนเลือกอายุ"><div id="lf46info"></div>`;
   const hi=[...pts].sort((a,b)=>b.s-a.s).filter((p,i,arr)=>arr.findIndex(q=>Math.abs(q.a-p.a)<4)===i).slice(0,4).sort((a,b)=>a.a-b.a), lo=[...pts].sort((a,b)=>a.s-b.s).filter((p,i,arr)=>arr.findIndex(q=>Math.abs(q.a-p.a)<4)===i).slice(0,4).sort((a,b)=>a.a-b.a);
@@ -7093,6 +7096,83 @@ function run94(){ const p=document.getElementById('nm94Out'); if(!p) return; if(
   ['n94n','n94s'].forEach(id=>{ const e=document.getElementById(id); if(e) e.onkeydown=ev=>{ if(ev.key==='Enter'){ ev.preventDefault(); b.click(); } }; }); }
 { const _c94=compute; compute=function(){ const r=_c94.apply(this,arguments); const p=document.getElementById('nm94P'); if(p&&p.style.display!=='none'&&NM94.pick==='cur'&&!NM94.manual){ const k=WSTATE.bt.getTime()+'|'+(readForm().name||''); if(k!==window._k94){ window._k94=k; setTimeout(run94,40); } } return r; }; }
 { const _s94=cat29Show; cat29Show=function(id){ const r=_s94.apply(this,arguments); if(id==='name94'||id==='taksa') setTimeout(run94,0); return r; }; }
+
+// ===== v96: กราฟเส้นชีวิตแบบละเอียด — ซูม ๑๐ ปี/๒ ปี/๖ เดือน · คะแนนรายเดือน-รายวัน · จุดเหตุการณ์กดดูคำอธิบายได้ · จุดบนกราฟหลักกดได้
+let LV96={span:10,c:null};
+const EVX96={
+ 'SA-LA':['b','เสาร์จรทับลัคนา','ช่วงรับภาระหนัก ความกดดันตกที่ตัวเองและสุขภาพ งานเดินช้าแต่สร้างรากฐานได้ ไม่ควรเร่งตัดสินใจใหญ่ ควรวางแผนระยะยาวและดูแลร่างกาย'],
+ 'SA-MO':['b','เสาร์จรทับจันทร์','จิตใจหนัก เครียด กังวลง่าย เรื่องครอบครัวหรือคนใกล้ชิดต้องดูแล ควรหาเวลาพักใจและไม่แบกทุกอย่างคนเดียว'],
+ 'SA-SU':['b','เสาร์จรทับอาทิตย์','เกียรติและตำแหน่งถูกทดสอบ แรงกดดันจากผู้ใหญ่หรือผู้บังคับบัญชา ควรทำงานให้รัดกุม หลีกเลี่ยงการปะทะ'],
+ 'SA-7':['b','เสาร์จรเล็งลัคนา','แรงกดดันมาจากคู่ครอง หุ้นส่วน หรือคู่แข่ง ความสัมพันธ์ต้องใช้ความอดทน ควรทำสัญญาให้ชัดเจน'],
+ 'JU-LA':['g','พฤหัสจรทับลัคนา','โอกาสใหม่ ผู้ใหญ่อุปถัมภ์ ชื่อเสียงและความมั่นใจเพิ่ม เหมาะเริ่มงาน เรียนต่อ หรือขยายกิจการ'],
+ 'JU-MO':['g','พฤหัสจรทับจันทร์','จิตใจเบิกบาน ได้รับความช่วยเหลือ ครอบครัวมีข่าวดี เหมาะเรื่องบ้านและความสัมพันธ์'],
+ 'JU-SU':['g','พฤหัสจรทับอาทิตย์','ได้รับการยอมรับจากผู้ใหญ่ งานราชการหรือตำแหน่งมีโอกาสก้าวหน้า'],
+ 'JU-5':['g','พฤหัสจรตรีโกณลัคนา','จังหวะส่งเสริม ทำอะไรมีคนหนุน เหมาะเริ่มต้นสิ่งใหม่และลงทุนแบบระมัดระวัง'],
+ 'RA-LA':['b','ราหูจรทับลัคนา','ความเปลี่ยนแปลงฉับพลัน ความอยากได้และความกล้าเสี่ยงสูง ระวังหลงทาง ถูกชักจูง และสุขภาพจากความเครียด'],
+ 'RA-MO':['b','ราหูจรทับจันทร์','ใจว้าวุ่น อารมณ์แปรปรวน ระวังการตัดสินใจด้วยอารมณ์และเรื่องเงินกับคนใกล้ชิด'],
+ 'MA-LA':['m','อังคารจรทับลัคนา','พลังสูง กระตือรือร้น แต่ใจร้อน ระวังอุบัติเหตุเล็ก ๆ และการโต้เถียง (ผลระยะสั้นราว ๑–๒ เดือน)'],
+ 'VE-LA':['g','ศุกร์จรทับลัคนา','เสน่ห์ดี บรรยากาศรื่นรมย์ เหมาะเรื่องความรัก การเจรจา และงานสังคม (ผลระยะสั้น)']};
+const ORB96={SA:6,JU:6,RA:5,MA:4,VE:4};
+function q96(nat,k,L,tk){ try{ return planetQuality(k,nat,L,tk).g; }catch(e){ return 0; } }
+function sc96(nat,dt){ const bt=WSTATE.bt, L=sgn(nat.pos.LA), tk=taksaNatal(bt).m, inv=inv44(tk), h=horaOf(dt), sv=sevaya(bt,dt), M=sv.now||sv.list[sv.list.length-1], S=sv.sub||M.subs[0], why=[];
+  let v=50+q96(nat,PNUM2K[M.p],L,tk)*9+q96(nat,PNUM2K[S.p],L,tk)*4;
+  const age=Math.max(1,Math.ceil((dt-bt)/31556952000)); try{ const J=tkTr44(bt,age), kalJ=PNUM2K[J.m['กาลกิณี']], sriJ=PNUM2K[J.m['ศรี']], rnK=inv[PNUM[kalJ]]; if(['อายุ','บริวาร','ศรี'].includes(rnK)){ v-=4; why.push(['b',rnK+'เดิมเป็นกาลกิณีจร (ทักษาจรปีนี้)']); } if(inv[PNUM[sriJ]]==='กาลกิณี'){ v+=3; why.push(['g','กาลกิณีเดิมเป็นศรีจร (ทักษาจรปีนี้)']); } }catch(e){}
+  const T={}; ['SA','JU','RA','MA','VE'].forEach(k=>T[k]=posH(h,k)); const tg={LA:nat.pos.LA,MO:nat.pos.MO,SU:nat.pos.SU};
+  const W={SA:{LA:-7,MO:-6,SU:-3},JU:{LA:6,MO:5,SU:3},RA:{LA:-4,MO:-3},MA:{LA:-1.5},VE:{LA:1.5}};
+  Object.keys(W).forEach(k=>Object.keys(W[k]).forEach(n=>{ const d=sep66(T[k],tg[n]), o=ORB96[k]; if(d<=o){ const f=1-d/o; v+=W[k][n]*(0.4+0.6*f); why.push([W[k][n]>0?'g':'b',`${TH[k]}จรทับ${TH[n]}เดิม (ห่าง ${d.toFixed(1)}°)`]); } }));
+  { const d=sep66(T.SA,nat.pos.LA); if(Math.abs(d-180)<=6){ v-=3*(1-Math.abs(d-180)/6*0.6); why.push(['b',`เสาร์จรเล็งลัคนา (${(180-d).toFixed(1)}°)`]); } }
+  { const d=sep66(T.JU,nat.pos.LA); if(Math.abs(d-120)<=6){ v+=3*(1-Math.abs(d-120)/6*0.6); why.push(['g',`พฤหัสจรตรีโกณลัคนา`]); } }
+  return {v:Math.max(5,Math.min(95,v)),why,M:M.p,S:S.p,Sb:S.b,Se:S.e}; }
+function win96(nat){ const bt=WSTATE.bt, span=LV96.span, c=LV96.c, a0=Math.max(0,c-span/2), a1=Math.min(100,a0+span), t0=addYears(bt,a0), t1=addYears(bt,a1), N=span>=10?Math.round(span*12):span>=2?Math.round(span*26):Math.round(span*120), step=(t1-t0)/N, pts=[];
+  for(let i=0;i<=N;i++){ const t=new Date(t0.getTime()+i*step); pts.push({t,...sc96(nat,t)}); }
+  const ev=[], h0=horaOf(t0), tg={LA:nat.pos.LA,MO:nat.pos.MO,SU:nat.pos.SU}; let pv=null;
+  // dasha
+  pts.forEach((p,i)=>{ if(i&&p.M!==pts[i-1].M) ev.push({t:p.t,tone:'w',key:'dM',title:`เปลี่ยนดาวเสวยอายุ: ${TH[PNUM2K[pts[i-1].M]]} → ${TH[PNUM2K[p.M]]}`,desc:`เข้าสู่ช่วงเสวย${TH[PNUM2K[p.M]]} — บรรยากาศชีวิตหลักเปลี่ยนไปตามคุณภาพของ${TH[PNUM2K[p.M]]}ในดวงเดิม ${q96(nat,PNUM2K[p.M],sgn(nat.pos.LA),taksaNatal(bt).m)>0?'ซึ่งมีกำลังดี — เป็นช่วงขาขึ้น':q96(nat,PNUM2K[p.M],sgn(nat.pos.LA),taksaNatal(bt).m)<0?'ซึ่งอ่อนกำลัง — ควรระมัดระวังมากขึ้น':'ซึ่งอยู่ระดับกลาง'}`}); else if(i&&p.S!==pts[i-1].S) ev.push({t:p.t,tone:'w',key:'dS',title:`ดาวแทรกเปลี่ยนเป็น${TH[PNUM2K[p.S]]}`,desc:`ช่วงย่อยภายใต้ดาวเสวย${TH[PNUM2K[p.M]]} ถึง ${dTH44(p.Se)} — สีสันระยะสั้นตามธรรมชาติของ${TH[PNUM2K[p.S]]}${q96(nat,PNUM2K[p.S],sgn(nat.pos.LA),taksaNatal(bt).m)>0?' (ดาวแทรกให้คุณ)':q96(nat,PNUM2K[p.S],sgn(nat.pos.LA),taksaNatal(bt).m)<0?' (ดาวแทรกควรระวัง)':''}`}); });
+  // exact transits: local minima of separation under 1°
+  const D=[['SA','LA'],['SA','MO'],['SA','SU'],['JU','LA'],['JU','MO'],['JU','SU'],['RA','LA'],['RA','MO'],['MA','LA'],['VE','LA'],['SA','7'],['JU','5']];
+  const fine=Math.max(1,Math.round((t1-t0)/864e5/700)), seps={}; for(let t=t0.getTime(); t<=t1.getTime(); t+=fine*864e5){ const hh=horaOf(new Date(t)); D.forEach(([k,n])=>{ const x=posH(hh,k); let d; if(n==='7') d=Math.abs(180-sep66(x,nat.pos.LA)); else if(n==='5') d=Math.abs(120-sep66(x,nat.pos.LA)); else d=sep66(x,tg[n]); const key=k+'-'+n; (seps[key]=seps[key]||[]).push([t,d]); }); }
+  Object.keys(seps).forEach(key=>{ const a=seps[key], lim=key.startsWith('MA')||key.startsWith('VE')?1:1.2; for(let i=1;i<a.length-1;i++){ if(a[i][1]<=lim&&a[i][1]<=a[i-1][1]&&a[i][1]<a[i+1][1]){ const E=EVX96[key]; if(E&&!ev.some(e=>e.key===key&&Math.abs(e.t-a[i][0])<20*864e5)) ev.push({t:new Date(a[i][0]),tone:E[0],key,title:E[1]+' (ตรงองศา)',desc:E[2]}); } } });
+  if(span>=10) for(let i=ev.length-1;i>=0;i--) if(['MA-LA','VE-LA'].includes(ev[i].key)) ev.splice(i,1);
+  ev.sort((a,b)=>a.t-b.t); return {pts,ev,t0,t1,a0,a1}; }
+function detHTML96(nat){ if(LV96.c==null){ LV96.c=Math.max(1,(getTransit()-WSTATE.bt)/31556952000); }
+  const R=win96(nat), W=660, H=220, X=t=>36+(t-R.t0)/(R.t1-R.t0)*(W-48), Y=v=>H-34-(v-5)/90*(H-54), now=getTransit(); let g='';
+  // sub-dasha bands
+  let cur=null; R.pts.forEach((p,i)=>{ if(!cur||cur.S!==p.S){ if(cur) cur.e=p.t; cur={S:p.S,M:p.M,b:p.t}; (R.bands=R.bands||[]).push(cur); } }); if(cur) cur.e=R.t1;
+  const PC={1:'#d63a3a',2:'#9aa0a6',3:'#c0392b',4:'#2e8b57',5:'#d9a400',6:'#7b5cc4',7:'#7f8c8d',8:'#8e6c3a'};
+  (R.bands||[]).forEach((b,i)=>{ const x0=X(b.b), x1=X(b.e); g+=`<rect x="${x0}" y="8" width="${Math.max(0,x1-x0)}" height="${H-42}" fill="${PC[b.S]}" opacity="${i%2?.07:.12}"/>${x1-x0>34?`<text x="${(x0+x1)/2}" y="20" font-size="10" text-anchor="middle" fill="${PC[b.S]}">แทรก${TH[PNUM2K[b.S]]}</text>`:''}`; });
+  [25,50,75].forEach(v=>{ g+=`<line x1="36" y1="${Y(v)}" x2="${W-12}" y2="${Y(v)}" stroke="var(--line)" ${v===50?'':'stroke-dasharray="3 3"'}/><text x="30" y="${Y(v)+3}" font-size="9" text-anchor="end" fill="var(--muted)">${v}</text>`; });
+  // ticks
+  const months=(R.t1-R.t0)/2629746000, stepM=months>60?12:months>18?3:1; { const d=new Date(R.t0.getFullYear(),R.t0.getMonth()+1,1); while(d<R.t1){ if(d.getMonth()%stepM===0){ const x=X(d); g+=`<line x1="${x}" y1="${H-34}" x2="${x}" y2="${H-30}" stroke="var(--muted)"/><text x="${x}" y="${H-18}" font-size="9" text-anchor="middle" fill="var(--muted)">${stepM===12?d.getFullYear()+543:MONTHS_TH[d.getMonth()].slice(0,3)+(d.getMonth()===0||stepM>=3?' '+String(d.getFullYear()+543).slice(2):'')}</text>`; } d.setMonth(d.getMonth()+1); } }
+  const path=R.pts.map((p,i)=>(i?'L':'M')+X(p.t).toFixed(1)+' '+Y(p.v).toFixed(1)).join('');
+  g+=`<defs><linearGradient id="lg96" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3fa96b" stop-opacity=".35"/><stop offset=".5" stop-color="#3fa96b" stop-opacity="0"/><stop offset=".5" stop-color="#d9534f" stop-opacity="0"/><stop offset="1" stop-color="#d9534f" stop-opacity=".3"/></linearGradient></defs>`;
+  g+=`<path d="${path}L${X(R.t1)} ${Y(50)}L${X(R.t0)} ${Y(50)}Z" fill="url(#lg96)" opacity=".9"/><path d="${path}" fill="none" stroke="var(--gold,#e8a33d)" stroke-width="2.2"/>`;
+  if(now>R.t0&&now<R.t1) g+=`<line x1="${X(now)}" y1="8" x2="${X(now)}" y2="${H-34}" stroke="var(--accent,#9ccbe8)" stroke-width="1.5"/><text x="${X(now)+3}" y="${H-38}" font-size="9.5" fill="var(--accent,#9ccbe8)">วันนี้</text>`;
+  const near=t=>R.pts.reduce((a,p)=>Math.abs(p.t-t)<Math.abs(a.t-t)?p:a,R.pts[0]);
+  R.ev.forEach((e,i)=>{ const p=near(e.t), col={g:'#3fa96b',b:'#d9534f',m:'#d9a400',w:'#ffffff'}[e.tone]; g+=`<circle class="ev96" data-i="${i}" cx="${X(e.t).toFixed(1)}" cy="${Y(p.v).toFixed(1)}" r="${e.key==='dM'?7:5.5}" fill="${col}" stroke="#0b1520" stroke-width="1.5" style="cursor:pointer"><title>${e.title} · ${dTH44(e.t)}</title></circle>`; });
+  g+=`<g id="cur96" style="display:none"><line id="ln96" y1="8" y2="${H-34}" stroke="var(--ink,#ccc)" stroke-dasharray="3 2"/><circle id="dt96" r="4.5" fill="var(--gold,#e8a33d)" stroke="#fff"/></g>`;
+  LV96.R=R; LV96.geo={W,H,X,Y};
+  const sp=[[10,'๑๐ ปี (รายเดือน)'],[2,'๒ ปี (รายสัปดาห์)'],[0.5,'๖ เดือน (รายวัน)']];
+  return `<div class="lv96bar">${sp.map(([v,t])=>`<button type="button" class="chip${LV96.span===v?' on':''}" data-sp="${v}">${t}</button>`).join('')}<span class="lv96nav"><button type="button" class="chip" data-mv="-1">◀</button><button type="button" class="chip" data-mv="0">วันนี้</button><button type="button" class="chip" data-mv="1">▶</button></span></div>
+   <div class="note">ช่วง ${dTH44(R.t0)} – ${dTH44(R.t1)} (อายุ ${R.a0.toFixed(1)}–${R.a1.toFixed(1)} ปี) · แตะเส้นกราฟเพื่อดูคะแนนและเหตุผลของวันนั้น · <b>แตะจุด</b> เพื่ออ่านคำอธิบายเหตุการณ์</div>
+   <svg viewBox="0 0 ${W} ${H}" class="lf46svg" id="lf96svg" role="img" aria-label="กราฟชีวิตแบบละเอียด">${g}</svg>
+   <div class="nk72lg note"><span><i style="background:#3fa96b"></i>ดาวจรให้คุณ (ตรงองศา)</span><span><i style="background:#d9534f"></i>ดาวจรกดดัน (ตรงองศา)</span><span><i style="background:#d9a400"></i>ผลระยะสั้น</span><span><i style="background:#fff"></i>เปลี่ยนดาวเสวย/ดาวแทรก</span></div>
+   <div id="lf96info"></div>
+   <div class="bh70st" style="margin-top:8px">เหตุการณ์ในช่วงนี้ (${R.ev.length})</div><div class="lv96ev">${R.ev.map((e,i)=>`<button type="button" class="lv96e ${e.tone}" data-i="${i}"><b>${dTH44(e.t)}</b><span>${e.title}</span></button>`).join('')||'<p class="note">ไม่มีเหตุการณ์สำคัญในช่วงนี้</p>'}</div>`; }
+function evPop96(nat,e,ev){ const s=sc96(nat,e.t), f=(e.t-WSTATE.bt)/31556952000+1; let det=''; try{ det=lfInfo47(nat,f).html; }catch(_){}
+  pop79(`<div class="pop79h"><b>${e.title}</b><span class="note">${dTH44(e.t)}</span></div><p>${e.desc}</p><div class="ac28 ${s.v>=58?'as26g':s.v<=42?'as26b':'as26m'}">คะแนนวันนั้น <b>${Math.round(s.v)}</b> · เสวย${TH[PNUM2K[s.M]]} แทรก${TH[PNUM2K[s.S]]}${s.why.length?'<br>'+s.why.map(([t,w])=>`<span class="bg64 ${t}">${w}</span>`).join(' '):''}</div>${det}<p class="note">ผลของดาวจรเริ่มก่อนวันตรงองศาราว ๑–๓ สัปดาห์ (ดาวเร็ว) ถึง ๒–๖ เดือน (เสาร์ ราหู) และค่อย ๆ จางหลังผ่านจุดนี้</p>`,ev); }
+function bind96(nat){ const sv=$('lf96svg'); if(!sv) return; const box=sv.closest('#lv96Box');
+  box.querySelectorAll('[data-sp]').forEach(b=>b.onclick=()=>{ LV96.span=+b.dataset.sp; render96(nat); });
+  box.querySelectorAll('[data-mv]').forEach(b=>b.onclick=()=>{ const m=+b.dataset.mv; if(m===0) LV96.c=Math.max(1,(getTransit()-WSTATE.bt)/31556952000); else LV96.c=Math.max(LV96.span/2,Math.min(100-LV96.span/2,LV96.c+m*LV96.span*0.8)); render96(nat); });
+  const R=LV96.R, {W,X,Y}=LV96.geo;
+  box.querySelectorAll('.ev96,.lv96e').forEach(c=>c.addEventListener('click',ev=>{ ev.stopPropagation(); evPop96(nat,R.ev[+c.dataset.i],ev); }));
+  sv.addEventListener('click',e=>{ if(e.target.classList.contains('ev96')) return; const b=sv.getBoundingClientRect(), x=(e.clientX-b.left)/b.width*W, t=new Date(R.t0.getTime()+(x-36)/(W-48)*(R.t1-R.t0)); if(t<R.t0||t>R.t1) return; const s=sc96(nat,t); $('cur96').style.display=''; $('ln96').setAttribute('x1',X(t)); $('ln96').setAttribute('x2',X(t)); $('dt96').setAttribute('cx',X(t)); $('dt96').setAttribute('cy',Y(s.v));
+    $('lf96info').innerHTML=`<div class="ac28 ${s.v>=58?'as26g':s.v<=42?'as26b':'as26m'}"><b>${dTH44(t)}</b> · คะแนน ${Math.round(s.v)} · เสวย${TH[PNUM2K[s.M]]} แทรก${TH[PNUM2K[s.S]]} (${dTH44(s.Sb)} – ${dTH44(s.Se)})${s.why.length?'<br>'+s.why.map(([tt,w])=>`<span class="bg64 ${tt}">${w}</span>`).join(' '):'<br><span class="note">ไม่มีดาวจรสำคัญทับจุดเดิม — คะแนนมาจากคุณภาพดาวเสวยและดาวแทรกเป็นหลัก</span>'}</div>`; }); }
+function render96(nat){ const b=$('lv96Box'); if(!b) return; try{ b.innerHTML=detHTML96(nat); bind96(nat); }catch(e){ console.error(e); b.innerHTML='<p class="note">⚠ '+e.message+'</p>'; } }
+{ const _h96=lifeHTML46; lifeHTML46=function(nat){ const h=_h96.apply(this,arguments); LV96.c=null; return h.replace('<div id="lf46info"></div>','<div id="lf46info"></div><div class="lv96wrap"><div class="bh70st">ขยายดูละเอียด — รายเดือน · รายสัปดาห์ · รายวัน</div><div id="lv96Box"></div></div>'); }; }
+{ const _b96=lifeBind46; lifeBind46=function(nat){ _b96.apply(this,arguments); render96(nat);
+  const sv=$('lf46svg'); if(sv){ sv.querySelectorAll('circle[data-pa]').forEach(c=>{ c.style.cursor='pointer'; c.addEventListener('pointerdown',e=>e.stopPropagation()); c.addEventListener('click',e=>{ e.stopPropagation(); const a=+c.dataset.pa, P=LF46.pts[a-1]; let det=''; try{ det=lfInfo47(nat,a+0.5).html; }catch(_){} pop79(`<div class="pop79h"><b>อายุย่าง ${a} ปี — ${(P.why.filter(w=>/ทับ/.test(w)).join(' · '))||(c.dataset.k==='g'?'พฤหัสจรทับ':'เสาร์จรทับ')}</b></div><p>${P.why.filter(w=>/ทับ/.test(w)).map(w=>{ const k=(/เสาร์/.test(w)?'SA':/พฤหัส/.test(w)?'JU':'RA')+'-'+(/ลัคนา/.test(w)?'LA':'MO'); return EVX96[k]?EVX96[k][2]:''; }).filter(Boolean).join('<br>')}</p>${det}<p class="note">กดปุ่มด้านล่างกราฟเพื่อขยายดูช่วงนี้แบบรายเดือน</p><button type="button" class="chip" id="go96">ขยายดูช่วงนี้</button>`,e); const gb=document.getElementById('go96'); if(gb) gb.onclick=()=>{ LV96.c=a; LV96.span=2; render96(nat); if(typeof closePop==='function') closePop(); document.getElementById('lv96Box').scrollIntoView({behavior:'smooth',block:'center'}); }; }); }); }
+  const rng=$('lf46rng'); if(rng){ let tm; rng.addEventListener('change',()=>{ clearTimeout(tm); tm=setTimeout(()=>{ LV96.c=Math.max(LV96.span/2,Math.min(100-LV96.span/2,1+(+rng.value)/12)); render96(nat); },150); }); }
+  if(sv) sv.addEventListener('pointerup',()=>{ const r=$('lf46rng'); if(r){ LV96.c=Math.max(LV96.span/2,Math.min(100-LV96.span/2,1+(+r.value)/12)); render96(nat); } }); }; }
 
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
