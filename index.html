@@ -6959,7 +6959,10 @@ const FR94=[[1,5],[2,4],[6,3],[7,8]], EN94=[[1,3],[4,8],[6,7],[2,5]], EL94={1:'�
 const DOLL94=['ขาขวา','ขาซ้าย','เอวขวา','เอวซ้าย','แขนขวา','แขนซ้าย','หัว'], DLV94=[1,1,2,2,3,3,4], DLN94={1:'ขา',2:'เอว',3:'แขน',4:'หัว'};
 const DM94={4:'ความสำเร็จ ความอุดมสมบูรณ์ จุดสูงสุด (ด้านลบ: คิดมาก กังวล)',3:'ความสุขสงบ ความสะดวกสบาย ตำแหน่งหน้าที่ (ด้านลบ: เฉื่อยชา)',2:'ความขยัน ไม่อยู่นิ่ง การเดินทางใกล้ (ด้านลบ: วุ่นวาย ขาดความสงบ)',1:'กระตือรือร้น การเดินทางไกล (ด้านลบ: อุปสรรค การเปลี่ยนแปลง ความเดือดร้อน)'};
 const MB94=['ภังคะ','ปูติ','ขุมทรัพย์','มรณะ','อธิบดี','ราชา','ธงชัย'], MBM94={ภังคะ:['m','ทิฐิ ความมั่นใจในตนเอง'],ปูติ:['m','การเปลี่ยนแปลง การเดินทาง ไม่หยุดนิ่ง'],ขุมทรัพย์:['g','สินทรัพย์ ความขยัน ความอดทน'],มรณะ:['b','ความไม่แน่นอน ปาฏิหาริย์ สิ่งศักดิ์สิทธิ์'],อธิบดี:['g','ความรอบรู้ ไหวพริบ การเจรจา'],ราชา:['g','ความสามารถ สติปัญญา ความโดดเด่น'],ธงชัย:['g','ชัยชนะ ชื่อเสียง ความพิถีพิถัน']};
-let NM94={type:'p',n:'',s:'',g:'',day:'',by:'',early:'',snd:'',done:false};
+let NM94={type:'p',n:'',s:'',g:'',day:'',by:'',early:'',snd:'',done:false,pick:'cur',manual:false};
+function pday94(t){ const d=new Date(t.getTime()), h=t.getHours(); if(h<6) d.setDate(d.getDate()-1); const wd=d.getDay(); return (wd===3&&(h>=18||h<6))?8:[1,2,3,4,5,6,7][wd]; }
+function fromProf94(p,bt){ const a=String(p&&p.name||'').trim().split(/\s+/); if(a[0]&&a[0]!=='ไม่ระบุชื่อ'){ NM94.n=a[0]; NM94.s=a.slice(1).join(' '); } else { NM94.n=''; NM94.s=''; } if(p&&p.sex) NM94.g=/ญ|f/i.test(p.sex)?'f':/ช|m/i.test(p.sex)?'m':NM94.g;
+  if(bt){ NM94.day=String(pday94(bt)); NM94.by=String(bt.getFullYear()+543); NM94.early=(bt.getMonth()<3||(bt.getMonth()===3&&bt.getDate()<=15))?'1':'0'; } NM94.snd=''; NM94.manual=false; }
 const esc94=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function red94(n){ if(n<=100) return n; const s=String(n); return n%100<10?+(s[0]+s[s.length-1]):n%100; }
 function dr94(n){ while(n>9) n=String(n).split('').reduce((a,b)=>a+ +b,0); return n; }
@@ -7010,8 +7013,8 @@ function dollSVG94(D){ const pt={'หัว':[120,38],'แขนขวา':[46,1
   return `<svg viewBox="0 0 240 290" class="nm94d"><defs><marker id="ar94" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9ccbe8"/></marker></defs>${g}</svg>`; }
 const chip94=(t,col,sub)=>`<span class="nm94c" style="border-color:${col};background:${col}22"><b>${esc94(t)}</b>${sub?`<small>${sub}</small>`:''}</span>`;
 const gB94=g=>({g:['g','ดี'],m:['m','กลาง'],w:['m','ระวัง'],b:['b','ควรเลี่ยง']})[g];
-function form94(){ const ty=NM94.type, D=['','1','2','3','4','5','6','7','8'], DN={1:'อาทิตย์',2:'จันทร์',3:'อังคาร',4:'พุธ (กลางวัน)',5:'พฤหัสบดี',6:'ศุกร์',7:'เสาร์',8:'พุธกลางคืน (ราหู)'};
-  return `<div class="nm94f"><label>ประเภท<select id="n94t"><option value="p"${ty==='p'?' selected':''}>ชื่อ–นามสกุล</option><option value="k"${ty==='k'?' selected':''}>ชื่อเล่น</option><option value="c"${ty==='c'?' selected':''}>ชื่อบริษัท/แบรนด์</option></select></label>
+function form94(){ let ps=[]; try{ ps=loadProfiles(); }catch(e){} const ty=NM94.type, D=['','1','2','3','4','5','6','7','8'], DN={1:'อาทิตย์',2:'จันทร์',3:'อังคาร',4:'พุธ (กลางวัน)',5:'พฤหัสบดี',6:'ศุกร์',7:'เสาร์',8:'พุธกลางคืน (ราหู)'};
+  return `<div class="nm94f"><label class="w">ดึงชื่อจากดวงที่บันทึกไว้<select id="n94p"><option value="cur"${NM94.pick==='cur'?' selected':''}>ดวงที่เปิดอยู่ตอนนี้</option>${ps.map((p,i)=>`<option value="${i}"${String(NM94.pick)===String(i)?' selected':''}>${esc94(p.name)} (${p.d}/${p.m}/${p.y})</option>`).join('')}<option value="free"${NM94.pick==='free'?' selected':''}>— พิมพ์ชื่อเอง —</option></select></label><label>ประเภท<select id="n94t"><option value="p"${ty==='p'?' selected':''}>ชื่อ–นามสกุล</option><option value="k"${ty==='k'?' selected':''}>ชื่อเล่น</option><option value="c"${ty==='c'?' selected':''}>ชื่อบริษัท/แบรนด์</option></select></label>
    <label>${ty==='c'?'ชื่อบริษัท/แบรนด์':ty==='k'?'ชื่อเล่น':'ชื่อ'}<input id="n94n" value="${esc94(NM94.n)}" placeholder="${ty==='c'?'เช่น รุ่งทรัพย์มงคล':ty==='k'?'เช่น ขวัญ':'เช่น ธาริน'}"></label>
    ${ty==='p'?`<label>นามสกุล<input id="n94s" value="${esc94(NM94.s)}" placeholder="ไม่บังคับ"></label>`:''}
    ${ty!=='c'?`<label>เพศ<select id="n94g"><option value="">ไม่ระบุ</option><option value="m"${NM94.g==='m'?' selected':''}>ชาย</option><option value="f"${NM94.g==='f'?' selected':''}>หญิง</option></select></label>`:''}
@@ -7079,14 +7082,16 @@ function guide94(){ const dp=day94(), R=roles94(dp), by={}; Object.keys(R).forEa
    <ul class="lb88l"><li><span class="bg64 g">ชาย</span> นิยมใช้วรรคเดช (${GL94[by['เดช']]}) หรือมนตรี (${GL94[by['มนตรี']]}) นำหน้า</li><li><span class="bg64 g">หญิง</span> นิยมใช้วรรคศรี (${GL94[by['ศรี']]}) หรือมนตรีนำหน้า</li><li><span class="bg64 m">ต้องการทรัพย์</span> ใช้วรรคมูละ (${GL94[by['มูละ']]}) นำ · ต้องการความขยัน ใช้วรรคอุตสาหะ (${GL94[by['อุตสาหะ']]})</li><li><span class="bg64 b">ห้ามใช้</span> วรรคกาลกิณี ${GL94[by['กาลกิณี']]}${by['กาลกิณี']===1?' (อนุโลมไม้หันอากาศ ั และการันต์ ์)':''}</li>
    ${cf.out&&cf.out.length?`<li><span class="bg64 b">แก้เคล็ด</span> ดวงนี้ดาวกาลกิณี (${TH[cf.k]}) ${cf.out.join(' และ ')} — ควรใช้อักษรวรรคมูละ ${GL94[cf.mula]} นำหน้าชื่อ</li>`:''}</ul>
    <p class="note">ขั้นตอนตั้งชื่อแบบมืออาชีพ: ๑) เลือกความหมายและเสียงที่ดี ๒) ตัดอักษรกาลกิณีออก ๓) เลือกอักษรนำตามเป้าหมาย ๔) คำนวณเลขศาสตร์ชื่อและผลรวมกับนามสกุลให้อยู่กลุ่มเลขดี ๕) ตรวจอายตนะและตุ๊กตาไขนามเป็นเกณฑ์เสริม — ถ้าทักษาถูกต้อง ส่วนอื่นเป็นเพียงตัวเสริม</p>`; }
-function run94(){ const p=document.getElementById('nm94Out'); if(!p) return; if(!NM94.n&&WSTATE){ try{ const f=(readForm().name||'').trim(); if(f&&f!=='ไม่ระบุชื่อ'){ const a=f.split(/\s+/); NM94.n=a[0]; NM94.s=a.slice(1).join(' '); } }catch(e){} }
+function run94(){ const p=document.getElementById('nm94Out'); if(!p) return; if(NM94.pick==='cur'&&!NM94.manual&&WSTATE){ try{ const f=readForm(), k=WSTATE.bt.getTime()+'|'+f.name; if(k!==NM94.key){ NM94.key=k; fromProf94(f,WSTATE.bt); } }catch(e){} }
   try{ p.innerHTML=form94()+`<div id="nm94R">${res94()}</div>`; }catch(err){ console.error(err); p.innerHTML='<p class="note">⚠ '+err.message+'</p>'; }
   const g=document.getElementById('nm94G'); if(g) try{ g.innerHTML=guide94(); }catch(err){ g.innerHTML='<p class="note">⚠ '+err.message+'</p>'; }
   const rd=()=>{ const v=id=>{ const e=document.getElementById(id); return e?e.value:''; }; NM94.n=v('n94n'); NM94.s=v('n94s'); NM94.g=v('n94g'); NM94.day=v('n94d'); NM94.by=v('n94y'); NM94.early=v('n94e'); NM94.snd=v('n94o'); };
-  const b=document.getElementById('n94b'); if(b) b.onclick=()=>{ const old=NM94.n; rd(); if(NM94.n!==old&&document.getElementById('n94o').dataset.auto!=='0') NM94.snd=''; run94(); };
+  const pk=document.getElementById('n94p'); if(pk) pk.onchange=()=>{ NM94.pick=pk.value; if(pk.value==='free'){ NM94.manual=true; NM94.n=''; NM94.s=''; NM94.day=''; NM94.by=''; NM94.early=''; } else if(pk.value!=='cur'){ try{ const pr=loadProfiles()[+pk.value]; fromProf94(pr,birthDate(pr)); }catch(e){} } else { NM94.manual=false; NM94.key=''; } run94(); };
+  const b=document.getElementById('n94b'); if(b) b.onclick=()=>{ const old=NM94.n; rd(); if(NM94.n!==old||document.getElementById('n94s')&&NM94.s!==(document.getElementById('n94s').defaultValue)) NM94.manual=true; if(NM94.n!==old&&document.getElementById('n94o').dataset.auto!=='0') NM94.snd=''; run94(); };
   const t=document.getElementById('n94t'); if(t) t.onchange=()=>{ rd(); NM94.type=t.value; run94(); };
   const o=document.getElementById('n94o'); if(o){ if(!NM94.snd&&NM94.n) o.placeholder='ระบบแยกได้: '+onset94(NM94.n); o.oninput=()=>{ o.dataset.auto='0'; }; }
   ['n94n','n94s'].forEach(id=>{ const e=document.getElementById(id); if(e) e.onkeydown=ev=>{ if(ev.key==='Enter'){ ev.preventDefault(); b.click(); } }; }); }
+{ const _c94=compute; compute=function(){ const r=_c94.apply(this,arguments); const p=document.getElementById('nm94P'); if(p&&p.style.display!=='none'&&NM94.pick==='cur'&&!NM94.manual){ const k=WSTATE.bt.getTime()+'|'+(readForm().name||''); if(k!==window._k94){ window._k94=k; setTimeout(run94,40); } } return r; }; }
 { const _s94=cat29Show; cat29Show=function(id){ const r=_s94.apply(this,arguments); if(id==='name94'||id==='taksa') setTimeout(run94,0); return r; }; }
 
 let KEY77='';
