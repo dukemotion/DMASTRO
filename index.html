@@ -146,6 +146,9 @@ header{flex-wrap:wrap}.brand{flex:0 0 100%;width:100%;font-size:14px;font-weight
 :root[data-theme="dark"] #tpop{background:rgba(13,26,38,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--edge75b);border-radius:18px;box-shadow:0 24px 60px -16px rgba(0,0,0,.85)}
 :root[data-theme="dark"] *{scrollbar-color:#244055 transparent;scrollbar-width:thin}
 ::selection{background:rgba(156,203,232,.35)}
+.sv76 #saved{scroll-snap-type:none!important;cursor:grab;user-select:none;-webkit-user-select:none}.sv76 #saved.grab80{cursor:grabbing}.sv76 #saved.grab80 .svc76{pointer-events:none}
+.svc76 .si80{color:#cfe0ea!important;font-size:13px!important;white-space:nowrap}.sv76 #saved{grid-auto-columns:minmax(270px,1fr)!important}@media(max-width:700px){.sv76 #saved{grid-auto-columns:82%!important}}
+
 .bh71mn:has(.bw80){display:block}.bw80{margin:0;padding:10px;border-radius:16px;border:1px solid var(--line);border-top:3px solid var(--c)}.bw80 svg{width:100%!important;max-width:620px!important;height:auto;display:block;margin:0 auto}.bw80 figcaption{display:flex;gap:10px;align-items:baseline;padding:6px 4px 0}.bw80 figcaption span:last-child{font-size:20px;font-weight:500}
 .bh71ov:has(.bw80){grid-template-columns:1fr;justify-items:stretch}.bh71ov:has(.bw80)>div:first-child{order:2;max-width:440px;width:100%;justify-self:center}.bh71ov:has(.bw80)>.bh71mn{order:1}
 .bw80 svg{max-width:820px!important}@media(max-width:700px){.bw80{padding:4px;margin:0 -6px}.bw80 svg{width:118%!important;max-width:none!important;margin-left:-9%}}
@@ -1877,7 +1880,11 @@ function wheelF(o){
   s+=`<rect x="${cx-half}" y="${cy-half}" width="${2*half}" height="${2*half}" fill="none" stroke="var(--ink)" stroke-width="1.2"/>`;
   s+=Ln(-half,-half,-half,-out)+Ln(half,-half,half,-out)+Ln(-half,half,-half,out)+Ln(half,half,half,out)+Ln(-half,-half,-out,-half)+Ln(-half,half,-out,half)+Ln(half,-half,out,-half)+Ln(half,half,out,half);
   const dg=rW/Math.SQRT2; s+=Ln(-half,-half,-dg,-dg)+Ln(half,-half,dg,-dg)+Ln(-half,half,-dg,dg)+Ln(half,half,dg,dg);
-  if(o.hlSign!=null){ const hc=o.hlCol||'var(--gold)'; s+=`<path d="${arcPath(half+1,rW-1,o.hlSign*30+0.01,o.hlSign*30+29.99)}" fill="${hc}" fill-opacity=".2"/><path d="${arcPath(rOut+1,rSign+13,o.hlSign*30+0.01,o.hlSign*30+29.99)}" fill="${hc}" fill-opacity=".28"/>`; }
+  const cid81='cl81'+(o.id||'x')+Math.round(Math.random()*1e6), Rr=rW+2, hf=half, CP=[[[-hf,-hf],[hf,-hf],[hf,-Rr],[-hf,-Rr]],[[-hf,-hf],[-hf,-Rr],[-Rr,-Rr]],[[-hf,-hf],[-Rr,-Rr],[-Rr,-hf]],[[-hf,-hf],[-Rr,-hf],[-Rr,hf],[-hf,hf]],[[-hf,hf],[-Rr,hf],[-Rr,Rr]],[[-hf,hf],[-Rr,Rr],[-hf,Rr]],[[-hf,hf],[hf,hf],[hf,Rr],[-hf,Rr]],[[hf,hf],[Rr,Rr],[hf,Rr]],[[hf,hf],[Rr,hf],[Rr,Rr]],[[hf,-hf],[Rr,-hf],[Rr,hf],[hf,hf]],[[hf,-hf],[Rr,-Rr],[Rr,-hf]],[[hf,-hf],[hf,-Rr],[Rr,-Rr]]];
+  const cell81=(si,col,op,tt)=>`<polygon clip-path="url(#${cid81})" points="${CP[si].map(([a,b])=>(cx+a).toFixed(1)+','+(cy+b).toFixed(1)).join(' ')}" fill="${col}" fill-opacity="${op}">${tt?'<title>'+tt+'</title>':''}</polygon>`;
+  s+=`<defs><clipPath id="${cid81}"><circle cx="${cx}" cy="${cy}" r="${rW}"/></clipPath></defs>`;
+  if(o.lagSign!=null&&!o.noDus){ [6,8,12].forEach(hh=>{ const si=(o.lagSign+hh-1)%12; s+=cell81(si,'#d9534f',.16,'ภพ'+HOUSES[hh-1]+' (ทุสถานะ)'); }); }
+  if(o.hlSign!=null){ const hc=o.hlCol||'var(--gold)'; s+=cell81(o.hlSign,hc,.24,'')+`<path d="${arcPath(rOut+1,rSign+13,o.hlSign*30+0.01,o.hlSign*30+29.99)}" fill="${hc}" fill-opacity=".28"/>`; }
   // เส้นแบ่งราศี + ชื่อราศี + ชั้นละเอียด
   for(let i=0;i<12;i++){ const b=i*30, mid=b+15; if(rOut>rW) s+=seg(rW,rOut,b,'var(--ink)',.9);
     const wdeg=widths[i];
@@ -6060,11 +6067,14 @@ function hero76(){ const hd=document.querySelector('header.hd75'); if(!hd||hd._7
   nav.addEventListener('click',e=>{ const a=e.target.closest('a[data-n]'); if(!a) return; const n=a.dataset.n; if(n==='read'||n==='sky'||n==='today'){ e.preventDefault(); try{ cat29Show(n==='sky'?'sky':n==='today'?'transit':(localStorage.getItem('suriyayatra.cat')||'natal'),false); }catch(_){ } document.getElementById('catP29').scrollIntoView({behavior:'smooth',block:'start'}); }
     if(n==='form'){ e.preventDefault(); qf.scrollIntoView({behavior:'smooth',block:'center'}); setTimeout(()=>{ const i=document.getElementById('name'); i&&i.focus({preventScroll:true}); },400); } });
 }
+const PI80={}; function profInfo80(p){ const k=JSON.stringify(p); if(PI80[k]) return PI80[k]; let r={age:'',lag:''}; try{ const bt=birthDate(p), pl=placeOf(p), la=p.la!=null?p.la:lagna(bt,pl[1],pl[2]); const a=ageYMD(bt,new Date()); r={age:a.y,lag:SIGNS[sgn(la)]}; }catch(e){} return PI80[k]=r; }
 renderSaved=function(){ const ul=$('saved'); if(!ul) return; ul.innerHTML=''; const ps=loadProfiles(), cur=($('name')||{}).value;
-  ps.forEach((p,i)=>{ const li=document.createElement('li'); li.className='svc76'+(p.name===cur?' on':''); const ini=(p.name||'?').trim().charAt(0);
-    li.innerHTML=`<div class="sva">${ini}</div><div class="svt"><b>${p.name}</b><span>เกิด ${p.d}/${p.m}/${p.y} · ${String(p.h).padStart(2,'0')}:${String(p.mi).padStart(2,'0')} น.</span></div><button class="sm svx" type="button" aria-label="ลบดวง ${p.name}">ลบ</button>`;
-    li.onclick=e=>{ if(e.target.closest('.svx')) return; fillForm(p); compute(); ul.querySelectorAll('.svc76').forEach(x=>x.classList.toggle('on',x===li)); };
-    li.querySelector('.svx').onclick=()=>{ const a=loadProfiles(); a.splice(i,1); saveProfiles(a); renderSaved(); }; ul.appendChild(li); });
+  const one=(p,i,dup)=>{ const li=document.createElement('li'); li.className='svc76'+(p.name===cur?' on':''); const ini=(p.name||'?').trim().charAt(0);
+    const I=profInfo80(p); if(dup){ li.classList.add('dup80'); li.setAttribute('aria-hidden','true'); }
+    li.innerHTML=`<div class="sva">${ini}</div><div class="svt"><b>${p.name}</b><span class="si80">${I.age!==''?'อายุ '+I.age+' ปี':''}${I.lag?' · ลัคน์'+I.lag:''}</span><span>เกิด ${p.d}/${p.m}/${p.y} · ${String(p.h).padStart(2,'0')}:${String(p.mi).padStart(2,'0')} น.</span></div><button class="sm svx" type="button" aria-label="ลบดวง ${p.name}" tabindex="${dup?-1:0}">ลบ</button>`;
+    li.onclick=e=>{ if(ul._drag80) return; if(e.target.closest('.svx')) return; fillForm(p); compute(); ul.querySelectorAll('.svc76').forEach(x=>x.classList.toggle('on',x.dataset.i==String(i))); };
+    li.dataset.i=i; li.querySelector('.svx').onclick=e=>{ e.stopPropagation(); const a=loadProfiles(); a.splice(i,1); saveProfiles(a); renderSaved(); }; ul.appendChild(li); };
+  ps.forEach((p,i)=>one(p,i,false)); if(ps.length>3) ps.forEach((p,i)=>one(p,i,true)); auto80(ul);
   if(!ps.length) ul.innerHTML='<li class="sve76">ยังไม่มีดวงที่บันทึก กรอกข้อมูลด้านบนแล้วกด "บันทึก" ในแผงตั้งค่า</li>'; };
 try{ hero76(); }catch(e){ console.error(e); } setTimeout(()=>{ try{ renderSaved(); }catch(e){ console.error(e); } },0);
 
@@ -6211,6 +6221,18 @@ function facPop79(f,p){ const H=(t,s)=>`<div class="popH"><b>${t}</b> ${s||''}<b
   return H(f.t,bd)+`<div class="popSub">หลักที่ใช้</div><p>${m[0]}</p><div class="popSub">ผลต่อเจ้าชะตา</div><p>${m[1]}</p>${f.day?'<p class="note">ปัจจัยนี้คงที่ทั้งวัน มาจากคะแนนรายวัน</p>':''}`; }
 function pop79(html,ev){ let P=$('tpop'); if(!P){ P=document.createElement('div'); P.id='tpop'; document.body.appendChild(P); } drag25(P); P.innerHTML=html; placePop(P,ev,Math.min(560,window.innerWidth-24)); }
 
+function auto80(ul){ if(ul._a80) return; ul._a80=1; let pause=0, x=ul.scrollLeft, last=0; const rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hold=ms=>{ pause=Math.max(pause,performance.now()+ms); };
+  ul.addEventListener('mouseenter',()=>hold(1e9)); ul.addEventListener('mouseleave',()=>{ if(!down) pause=performance.now()+800; });
+  ul.addEventListener('touchstart',()=>hold(4000),{passive:true}); ul.addEventListener('wheel',()=>hold(3000),{passive:true});
+  let sx=0, sl=0, down=false, moved=0;
+  ul.addEventListener('pointerdown',e=>{ if(e.pointerType!=='mouse'||e.button!==0) return; down=true; moved=0; sx=e.clientX; sl=ul.scrollLeft; hold(1e9); });
+  window.addEventListener('pointermove',e=>{ if(!down) return; const dx=e.clientX-sx; moved=Math.max(moved,Math.abs(dx)); if(moved>4){ ul._drag80=true; ul.classList.add('grab80'); ul.scrollLeft=sl-dx; x=ul.scrollLeft; e.preventDefault(); } });
+  window.addEventListener('pointerup',()=>{ if(!down) return; down=false; ul.classList.remove('grab80'); setTimeout(()=>{ ul._drag80=false; },30); pause=performance.now()+(ul.matches(':hover')?1e9:2500); });
+  const step=t=>{ requestAnimationFrame(step); const dt=last?Math.min(64,t-last):16; last=t; if(rm||document.hidden||t<pause||!ul.isConnected){ x=ul.scrollLeft; return; }
+    const half=ul.scrollWidth/2; if(!ul.querySelector('.dup80')||half<=ul.clientWidth*0.5) return; x+=dt*0.028; if(x>=half) x-=half; ul.scrollLeft=x; };
+  ul.addEventListener('scroll',()=>{ const half=ul.scrollWidth/2; if(ul.querySelector('.dup80')&&ul.scrollLeft>=half&&!down){ ul.scrollLeft-=half; x=ul.scrollLeft; } },{passive:true});
+  requestAnimationFrame(step); }
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
   try{ rhythm77(); }catch(e){ console.error(e); document.getElementById('rh77Out').innerHTML='<p class="note">⚠ '+e.message+'</p>'; } }
