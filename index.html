@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#9a7b2f">
+<meta name="theme-color" content="#0a0f22">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <title>ดวงสุริยยาตร์</title>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600&family=Kanit:wght@300;400;500;600&family=Noto+Serif+Thai:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f6f1e6;--panel:#fffdf8;--ink:#1b1f3a;--muted:#6b6f85;--line:#d9d2c3;--gold:#9a7b2f;--gold2:#c9a84c;--natal:#1b1f3a;--tr:#1f7a3a;--ret:#b9402a;--accent:#2c4a9c;--hl:#fff3d1}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16182a;--panel:#1f2238;--ink:#ecebe4;--muted:#a3a6ba;--line:#3a3e58;--gold:#d2b15e;--gold2:#e6c97a;--natal:#ecebe4;--tr:#6ad48a;--ret:#ff7a5c;--accent:#8fa6ff;--hl:#3a3420}}
@@ -86,6 +86,67 @@ header{flex-wrap:wrap}.brand{flex:0 0 100%;width:100%;font-size:14px;font-weight
 #tpop{position:fixed;z-index:9999;display:none;background:var(--panel);color:var(--ink);border:1.5px solid var(--gold);border-radius:10px;box-shadow:0 8px 28px rgba(0,0,0,.25);padding:10px 12px;max-height:80vh;overflow:auto;font-size:13px;text-align:left}
 #tpop .popH{font-size:15px;display:flex;align-items:center;gap:6px}#tpop .popX{margin-left:auto;width:auto;padding:0 8px;border:none;background:transparent;color:var(--muted);font-size:16px;cursor:pointer}
 #tpop .popS{color:var(--muted);margin:4px 0 6px}#tpop .popSub{font-weight:600;margin:10px 0 4px;color:var(--gold)}#tpop table.popT{width:100%;border-collapse:collapse}#tpop .popT td,#tpop .popT th{border-top:1px solid var(--line);padding:4px 6px;vertical-align:top;white-space:normal}#tpop .popT th{font-weight:500;color:var(--muted);text-align:left}#tpop .popF{margin-top:8px;font-size:11.5px;color:var(--muted)}#tpop.dragged25{bottom:auto!important}
+/* ===== v75 Theme: Night Sky Glass (dark) — อ้างอิงอารมณ์ภาพท้องฟ้ายามค่ำ ฟ้าครามอมเขียว กระจกฝ้า ตัวอักษรบางสีขาว ===== */
+:root[data-theme="dark"]{--bg:#07111b;--panel:#0d1a26;--ink:#e6edf2;--muted:#8ea2b2;--line:#1d3040;--gold:#d8c08c;--gold2:#ecdcb4;--natal:#e6edf2;--tr:#7fd3b0;--ret:#ff9a85;--accent:#9ccbe8;--hl:#1e2a22;--card:#0a1620;
+ --glass75:rgba(16,32,46,.62);--edge75:rgba(190,220,240,.10);--edge75b:rgba(190,220,240,.18);--sky75:#9ccbe8;color-scheme:dark}
+:root[data-theme="dark"] body{font-family:"Anuphan",Kanit,system-ui,sans-serif;font-weight:400;font-size:15px;line-height:1.62;-webkit-font-smoothing:antialiased;
+ background:linear-gradient(180deg,#1b3a50 0px,#12283a 380px,#0b1a27 820px,#07111b 1300px) no-repeat,#07111b;background-attachment:scroll}
+:root[data-theme="dark"] body::before{content:"";position:absolute;left:0;right:0;top:0;height:1100px;pointer-events:none;z-index:-1;
+ background:radial-gradient(60% 40% at 30% 18%,rgba(140,190,220,.16),transparent 70%),radial-gradient(1px 1px at 12% 18%,#fff 50%,transparent 51%) 0 0/430px 430px,radial-gradient(1px 1px at 72% 12%,#fff 50%,transparent 51%) 0 0/430px 430px,radial-gradient(1.3px 1.3px at 38% 66%,#dbeefa 50%,transparent 51%) 0 0/430px 430px,radial-gradient(1px 1px at 88% 52%,#fff 50%,transparent 51%) 0 0/430px 430px,radial-gradient(1px 1px at 22% 86%,#cfe6f5 50%,transparent 51%) 0 0/430px 430px,radial-gradient(.8px .8px at 56% 34%,#fff 50%,transparent 51%) 0 0/280px 280px,radial-gradient(.8px .8px at 6% 52%,#fff 50%,transparent 51%) 0 0/280px 280px;
+ -webkit-mask-image:linear-gradient(180deg,#000 40%,transparent);mask-image:linear-gradient(180deg,#000 40%,transparent);opacity:.7}
+:root[data-theme="dark"] body{position:relative}
+/* hero header */
+.hd75{position:relative;overflow:hidden;display:flex!important;flex-direction:column;align-items:center;text-align:center;gap:0!important;padding:56px 20px 44px!important;margin:0 16px 18px;isolation:isolate}
+.hd75 .em75{width:46px;height:46px;color:#e6edf2;opacity:.9;margin-bottom:14px}
+.hd75 h1{font-family:"Anuphan",sans-serif!important;font-size:clamp(40px,6vw,68px)!important;font-weight:300!important;line-height:1.08!important;margin:0!important;color:#f3f7fa!important;letter-spacing:-.015em}
+.hd75 .by75{order:-1;margin:0 0 18px;padding:6px 16px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid var(--edge75b);color:#c9d7e1;font-size:13.5px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.hd75 .by75 b{color:#fff;font-weight:500}
+.hd75 .sub75{margin:16px 0 0;max-width:44ch;color:#b6c6d2;font-size:16px;font-weight:300;line-height:1.6}
+.hd75 .ring75{position:absolute;left:50%;top:50%;width:620px!important;height:620px!important;max-width:none!important;transform:translate(-50%,-50%);z-index:-1;opacity:.2;pointer-events:none}
+.hd75 .ring75 .rot75{transform-origin:170px 170px;animation:spin75 300s linear infinite}
+@keyframes spin75{to{transform:rotate(-360deg)}}
+@media (prefers-reduced-motion:reduce){.hd75 .ring75 .rot75{animation:none}}
+.hd75 .emw75{display:contents}
+@media(max-width:700px){.hd75{margin:0 8px 10px;padding:34px 12px 28px!important}.hd75 .sub75{font-size:14.5px}.hd75 .ring75{width:420px!important;height:420px!important;opacity:.16}.hd75 .em75{width:38px;height:38px}}
+/* glass surfaces */
+:root[data-theme="dark"] .panel{background:var(--glass75);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--edge75);border-radius:20px;box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+:root[data-theme="dark"] .panel .panel{border-radius:14px;background:rgba(8,18,28,.5);backdrop-filter:none;-webkit-backdrop-filter:none}
+:root[data-theme="dark"] .panel h2{font-size:16px;font-weight:500;color:#f3f7fa;letter-spacing:0}
+:root[data-theme="dark"] .panel>h3,:root[data-theme="dark"] .panel h3:first-child{font-weight:500!important;font-size:17px!important;color:#f3f7fa;line-height:1.45;letter-spacing:-.005em}
+:root[data-theme="dark"] h3{color:var(--ink)}
+:root[data-theme="dark"] .note{color:var(--muted)}
+:root[data-theme="dark"] a{color:var(--sky75)}
+/* inputs & buttons */
+:root[data-theme="dark"] input,:root[data-theme="dark"] select{background:rgba(5,14,22,.55);border:1px solid var(--edge75b);border-radius:12px;padding:8px 12px;color:var(--ink);transition:border-color .15s,box-shadow .15s}
+:root[data-theme="dark"] select option{background:#0d1a26}
+:root[data-theme="dark"] input:focus,:root[data-theme="dark"] select:focus{outline:none;border-color:rgba(156,203,232,.7);box-shadow:0 0 0 3px rgba(156,203,232,.16)}
+:root[data-theme="dark"] label{color:#9fb2c1}
+:root[data-theme="dark"] button{border-radius:999px;border:1px solid var(--edge75b);background:rgba(255,255,255,.05);color:var(--ink);transition:background .15s,border-color .15s}
+:root[data-theme="dark"] button:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.28)}
+:root[data-theme="dark"] button:focus-visible,:root[data-theme="dark"] a:focus-visible,:root[data-theme="dark"] summary:focus-visible{outline:2px solid #cfe6f5;outline-offset:2px}
+:root[data-theme="dark"] button.primary{background:rgba(230,240,248,.88)!important;color:#0b1a27!important;border:0!important;font-weight:500;box-shadow:0 8px 24px -10px rgba(156,203,232,.55)}
+:root[data-theme="dark"] button.primary:hover{background:#fff!important}
+:root[data-theme="dark"] .tabs button.on,:root[data-theme="dark"] .tkmode button.on{background:rgba(230,240,248,.9)!important;color:#0b1a27!important;border-color:transparent!important;font-weight:500}
+/* category rail */
+:root[data-theme="dark"] .crail29{background:rgba(10,22,33,.66);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--edge75);border-radius:22px;padding:8px}
+:root[data-theme="dark"] .crail29 button{color:#93a7b6;border:0;background:transparent;border-radius:14px}
+:root[data-theme="dark"] .crail29 button:hover{background:rgba(255,255,255,.06);color:#f3f7fa}
+:root[data-theme="dark"] .crail29 button.on{background:rgba(230,240,248,.12);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);font-weight:500}
+:root[data-theme="dark"] .chead29{background:transparent;border:0;border-radius:0;padding:2px 2px 14px;margin-bottom:14px;border-bottom:1px solid var(--edge75)}
+:root[data-theme="dark"] .chead29 b{display:block;font-size:30px;font-weight:300;letter-spacing:-.01em;color:#f3f7fa;line-height:1.2;margin-bottom:4px}
+/* floating nav */
+:root[data-theme="dark"] .mnav{background:rgba(14,28,40,.6);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--edge75b);box-shadow:0 18px 40px -14px rgba(0,0,0,.7)}
+:root[data-theme="dark"] .mnav a{color:#dbe6ee}
+:root[data-theme="dark"] .mnav a:hover{background:rgba(255,255,255,.1);color:#fff}
+:root[data-theme="dark"] .mnav a[data-go=clockP]{color:#fff}
+/* tables */
+:root[data-theme="dark"] table th{color:#cfdde7;font-weight:500;border-color:var(--line)}
+:root[data-theme="dark"] table td{border-color:rgba(29,48,64,.8)}
+/* popups */
+:root[data-theme="dark"] #tpop{background:rgba(13,26,38,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--edge75b);border-radius:18px;box-shadow:0 24px 60px -16px rgba(0,0,0,.85)}
+:root[data-theme="dark"] *{scrollbar-color:#244055 transparent;scrollbar-width:thin}
+::selection{background:rgba(156,203,232,.35)}
+
 .ds74top{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:8px}.ds74chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}.ds74chips a{text-decoration:none}
 .ds74g{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}.ds74{border:1px solid var(--line);border-radius:12px;padding:10px 12px;border-left:4px solid #3fa96b;height:100%;box-sizing:border-box}
 .ds74.b{border-left-color:#d9534f}.ds74.m{border-left-color:#d9a400}.ds74h{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}.ds74sv{display:flex;align-items:center;gap:4px;margin:6px 0;flex-wrap:wrap}
@@ -446,7 +507,9 @@ img,svg{max-width:100%}
 </style>
 </head>
 <body>
-<header><div class="brand">WALKING STAR ACADEMY <span>BY DM ENGINE</span></div><h1>ดวงสุริยยาตร์</h1><small>ผูกดวงกำเนิด · ตั้งวันจร · ราศีจักร นวางค์ ตรียางค์ ทักษา ตรีวัย — คำนวณด้วยสูตรคัมภีร์สุริยยาตร์ที่ถอดไว้</small></header>
+<header class="hd75"><svg class="em75" viewBox="0 0 52 52" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="26" cy="26" r="22" stroke-width="1.2" opacity=".55"/><ellipse cx="26" cy="26" rx="22" ry="8.5" transform="rotate(-28 26 26)" stroke-width="1.2"/><path d="M26 15l2.6 8.4L37 26l-8.4 2.6L26 37l-2.6-8.4L15 26l8.4-2.6z" fill="currentColor" stroke="none"/><circle cx="44.2" cy="16.4" r="2.4" fill="currentColor" stroke="none"/></svg>
+<h1>ดวงสุริยยาตร์</h1><p class="by75"><b>Walking Star Academy</b> โดย อ.ดุ๊ก</p>
+<p class="sub75">ผูกดวงกำเนิด ตั้งวันจร และอ่านดวงตามสูตรคัมภีร์สุริยยาตร์ ทั้งตำราไทยและภารตะ</p><svg class="ring75" id="ring75" viewBox="0 0 340 340" aria-label="ตำแหน่งดาวจรบนจักรราศี"></svg></header>
 <div class="wrap">
  <aside>
   <div class="panel">
@@ -5855,6 +5918,18 @@ function couple74(A,B){ const na=nk58(A.pos.MO), nb=nk58(B.pos.MO), sa=sgn(A.pos
    ${row('นทิโทษ',da===db,nadiEx,`จันทร์ฝ่ายแรก ${na+1} ${NAK[na]} = ${NADIN74[da]} · ฝ่ายหลัง ${nb+1} ${NAK[nb]} = ${NADIN74[db]}${da===db?' — ตกนทิเดียวกัน ตำราเตือนเรื่องสุขภาพบุตรและความกลมเกลียว ควรดูภพปุตตะและพฤหัสของทั้งคู่ประกอบ':' — ต่างนทิกัน ได้ ๘ คะแนน'}`)}
    ${row('ภะกูฏะโทษ',!!bk,bkEx,`จันทร์ห่างกัน ${pair==='1/1'?'ราศีเดียวกัน':pair==='7/7'?'๗/๗ (เล็งกัน)':pair+' ราศี'}${bk?' — '+bk:' — ไม่ใช่ ๖/๘ ๕/๙ ๒/๑๒'}`)}</div>`; }
 { const _c74=cmpHTML; cmpHTML=function(A,B){ let h=_c74(A,B); try{ h+=couple74(A,B); }catch(e){ console.error(e); } return h; }; }
+
+
+// ===== v75: วงจักรราศีบนหัวเว็บ แสดงดาวจรจริงของวันที่ตั้งไว้ =====
+function ring75(){ const el=document.getElementById('ring75'); if(!el) return; const c=170, R1=150, R2=118, t=getTransit(), h=horaOf(t);
+  const pt=(deg,r)=>{ const a=(deg-90)*Math.PI/180; return [c+r*Math.cos(a), c+r*Math.sin(a)]; };
+  let g=`<defs><radialGradient id="rg75" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ecdcb4" stop-opacity=".22"/><stop offset="1" stop-color="#ecdcb4" stop-opacity="0"/></radialGradient></defs><circle cx="${c}" cy="${c}" r="60" fill="url(#rg75)"/><g class="rot75">`;
+  g+=`<circle cx="${c}" cy="${c}" r="${R1}" fill="none" stroke="#cfe6f5" stroke-opacity=".45"/><circle cx="${c}" cy="${c}" r="${R2}" fill="none" stroke="#9ccbe8" stroke-opacity=".25"/><circle cx="${c}" cy="${c}" r="84" fill="none" stroke="#9ccbe8" stroke-opacity=".12" stroke-dasharray="2 5"/>`;
+  for(let i=0;i<12;i++){ const [x1,y1]=pt(i*30,R2), [x2,y2]=pt(i*30,R1), [tx,ty]=pt(i*30+15,(R1+R2)/2); g+=`<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="#cfe6f5" stroke-opacity=".35"/><text x="${tx.toFixed(1)}" y="${(ty+4).toFixed(1)}" text-anchor="middle" font-size="11" fill="#d6e4ee" fill-opacity=".75">${SIGNS[i]}</text>`; }
+  const TD='๐๑๒๓๔๕๖๗๘๙'; ['SU','MO','MA','ME','JU','VE','SA','RA'].forEach(k=>{ let L; try{ L=posH(h,k); }catch(e){ return; } if(!isFinite(L)) return; const [x,y]=pt(L,100), [lx,ly]=pt(L,R2-3);
+    g+=`<line x1="${lx.toFixed(1)}" y1="${ly.toFixed(1)}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="#ecdcb4" stroke-opacity=".35"/><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="9" fill="#0d1a26" stroke="${k==='SU'?'#ecdcb4':'#9ccbe8'}" stroke-opacity=".8"/><text x="${x.toFixed(1)}" y="${(y+4).toFixed(1)}" text-anchor="middle" font-size="11" fill="${k==='SU'?'#ecdcb4':'#e6edf2'}">${TD[PNUM[k]]}</text>`; });
+  el.innerHTML=g+'</g>'; }
+{ const _c75=compute; compute=function(){ const r=_c75.apply(this,arguments); try{ ring75(); }catch(e){ console.error(e); } return r; }; }
 
 window.addEventListener('error',e=>{ try{ if(!e.message||/Script error|ResizeObserver/.test(e.message)) return; let b=document.getElementById('err41'); if(!b){ b=document.createElement('div'); b.id='err41'; b.style.cssText='position:fixed;left:8px;right:8px;bottom:8px;z-index:9999;background:#c0392b;color:#fff;padding:8px 12px;border-radius:8px;font-size:13px;box-shadow:0 2px 8px rgba(0,0,0,.3)'; b.onclick=()=>b.remove(); document.body.appendChild(b); } b.textContent='⚠ เกิดข้อผิดพลาด: '+e.message+' (บรรทัด '+e.lineno+') — แตะเพื่อปิด และแจ้งข้อความนี้'; }catch(_){} });
 function popHTML(k){ return popHTML25(k); }
