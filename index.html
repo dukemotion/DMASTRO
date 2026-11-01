@@ -1883,7 +1883,7 @@ function wheelF(o){
   const cid81='cl81'+(o.id||'x')+Math.round(Math.random()*1e6), Rr=rW+2, hf=half, CP=[[[-hf,-hf],[hf,-hf],[hf,-Rr],[-hf,-Rr]],[[-hf,-hf],[-hf,-Rr],[-Rr,-Rr]],[[-hf,-hf],[-Rr,-Rr],[-Rr,-hf]],[[-hf,-hf],[-Rr,-hf],[-Rr,hf],[-hf,hf]],[[-hf,hf],[-Rr,hf],[-Rr,Rr]],[[-hf,hf],[-Rr,Rr],[-hf,Rr]],[[-hf,hf],[hf,hf],[hf,Rr],[-hf,Rr]],[[hf,hf],[Rr,Rr],[hf,Rr]],[[hf,hf],[Rr,hf],[Rr,Rr]],[[hf,-hf],[Rr,-hf],[Rr,hf],[hf,hf]],[[hf,-hf],[Rr,-Rr],[Rr,-hf]],[[hf,-hf],[hf,-Rr],[Rr,-Rr]]];
   const cell81=(si,col,op,tt)=>`<polygon clip-path="url(#${cid81})" points="${CP[si].map(([a,b])=>(cx+a).toFixed(1)+','+(cy+b).toFixed(1)).join(' ')}" fill="${col}" fill-opacity="${op}">${tt?'<title>'+tt+'</title>':''}</polygon>`;
   s+=`<defs><clipPath id="${cid81}"><circle cx="${cx}" cy="${cy}" r="${rW}"/></clipPath></defs>`;
-  if(o.lagSign!=null&&!o.noDus){ [6,8,12].forEach(hh=>{ const si=(o.lagSign+hh-1)%12; s+=cell81(si,'#d9534f',.16,'ภพ'+HOUSES[hh-1]+' (ทุสถานะ)'); }); }
+  if(o.lagSign!=null&&!o.noDus&&LAY.dus!==false){ [6,8,12].forEach(hh=>{ const si=(o.lagSign+hh-1)%12; s+=cell81(si,'#d9534f',.16,'ภพ'+HOUSES[hh-1]+' (ทุสถานะ)'); if(rOut>rW+1) s+=`<path d="${arcPath(rW,rOut,si*30+0.01,si*30+29.99)}" fill="#d9534f" fill-opacity=".14"><title>ภพ${HOUSES[hh-1]} (ทุสถานะ) — ดาวจรในช่องนี้ผ่านภพร้าย</title></path>`; }); }
   if(o.hlSign!=null){ const hc=o.hlCol||'var(--gold)'; s+=cell81(o.hlSign,hc,.24,'')+`<path d="${arcPath(rOut+1,rSign+13,o.hlSign*30+0.01,o.hlSign*30+29.99)}" fill="${hc}" fill-opacity=".28"/>`; }
   // เส้นแบ่งราศี + ชื่อราศี + ชั้นละเอียด
   for(let i=0;i<12;i++){ const b=i*30, mid=b+15; if(rOut>rW) s+=seg(rW,rOut,b,'var(--ink)',.9);
@@ -1941,8 +1941,8 @@ function wheelF(o){
 const WGEO={};
 
 // ───────── ชั้นข้อมูล / ซูม / ลากดาวจร ─────────
-const LAYERS_DEF=[['hl','ไฮไลต์'],['tr','ดวงจร'],['call','ป้ายองศากำเนิด'],['callT','ป้ายองศาจร'],['tri','ตรียางค์'],['nak','ฤกษ์'],['nav','นวางค์'],['deg','องศา']];
-let LAY={hl:true,tr:false,call:false,callT:false,tri:false,nak:false,nav:false,deg:false};
+const LAYERS_DEF=[['dus','ภพร้าย ๖·๘·๑๒'],['hl','ไฮไลต์'],['tr','ดวงจร'],['call','ป้ายองศากำเนิด'],['callT','ป้ายองศาจร'],['tri','ตรียางค์'],['nak','ฤกษ์'],['nav','นวางค์'],['deg','องศา']];
+let LAY={dus:true,hl:true,tr:false,call:false,callT:false,tri:false,nak:false,nav:false,deg:false};
 try{ const sv=JSON.parse(localStorage.getItem('wheelLayers')||'null'); if(sv) LAY={...LAY,...sv}; }catch(e){}
 function saveLay(){ try{ localStorage.setItem('wheelLayers',JSON.stringify(LAY)); }catch(e){} }
 let VB=null; // {x,y,w} มุมมองซูม
@@ -6290,6 +6290,7 @@ mini71=function(v,h){ const C=chart71(v), S=bhScore70(C,h); return `<figure clas
 { const _g80=bhGrid70; bhGrid70=function(nat){ let h=_g80(nat); return h.replace(/<span class="bh70n">(\d+)<\/span><b>/g,(m,n)=>`<span class="bh70n">${n}</span><span class="bhi80">${hic80(+n)}</span><b>`); }; }
 
 
+document.addEventListener('click',e=>{ if(!e.target.closest('[data-lay="dus"]')) return; setTimeout(()=>{ const m=document.querySelector('#bh70Out .bh71mn'); if(m) try{ m.innerHTML=big80(BHV71,BH70); }catch(err){} },0); });
 document.addEventListener('click',e=>{ const b=e.target.closest('#bh70Out .bh70c'); if(!b) return; setTimeout(()=>{ const m=document.querySelector('#bh70Out .bh71mn'); if(m) try{ m.innerHTML=big80(BHV71,BH70); }catch(err){ console.error(err); } },0); });
 window.addEventListener('error',e=>{ try{ if(!e.message||/Script error|ResizeObserver/.test(e.message)) return; let b=document.getElementById('err41'); if(!b){ b=document.createElement('div'); b.id='err41'; b.style.cssText='position:fixed;left:8px;right:8px;bottom:8px;z-index:9999;background:#c0392b;color:#fff;padding:8px 12px;border-radius:8px;font-size:13px;box-shadow:0 2px 8px rgba(0,0,0,.3)'; b.onclick=()=>b.remove(); document.body.appendChild(b); } b.textContent='⚠ เกิดข้อผิดพลาด: '+e.message+' (บรรทัด '+e.lineno+') — แตะเพื่อปิด และแจ้งข้อความนี้'; }catch(_){} });
 function popHTML(k){ return popHTML25(k); }
