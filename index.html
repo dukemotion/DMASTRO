@@ -146,6 +146,10 @@ header{flex-wrap:wrap}.brand{flex:0 0 100%;width:100%;font-size:14px;font-weight
 :root[data-theme="dark"] #tpop{background:rgba(13,26,38,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--edge75b);border-radius:18px;box-shadow:0 24px 60px -16px rgba(0,0,0,.85)}
 :root[data-theme="dark"] *{scrollbar-color:#244055 transparent;scrollbar-width:thin}
 ::selection{background:rgba(156,203,232,.35)}
+.bh71mn:has(.bw80){display:block}.bw80{margin:0;padding:10px;border-radius:16px;border:1px solid var(--line);border-top:3px solid var(--c)}.bw80 svg{width:100%!important;max-width:620px!important;height:auto;display:block;margin:0 auto}.bw80 figcaption{display:flex;gap:10px;align-items:baseline;padding:6px 4px 0}.bw80 figcaption span:last-child{font-size:20px;font-weight:500}
+.bh71ov:has(.bw80){grid-template-columns:1fr;justify-items:stretch}.bh71ov:has(.bw80)>div:first-child{order:2;max-width:440px;width:100%;justify-self:center}.bh71ov:has(.bw80)>.bh71mn{order:1}
+.bw80 svg{max-width:820px!important}@media(max-width:700px){.bw80{padding:4px;margin:0 -6px}.bw80 svg{width:118%!important;max-width:none!important;margin-left:-9%}}
+
 :root[data-theme="dark"] button.sm,:root[data-theme="dark"] .chip,:root[data-theme="dark"] .tabs button,:root[data-theme="dark"] .tkmode button,:root[data-theme="dark"] .spd,:root[data-theme="dark"] .tc60tab button,:root[data-theme="dark"] .nowbar button{border-radius:999px}
 .bhi80{display:inline-flex;width:34px;height:34px;border-radius:10px;align-items:center;justify-content:center;margin:2px 0 4px;color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent);border:1px solid color-mix(in srgb,var(--c) 35%,transparent)}
 .bhi80 svg.hic80{width:20px!important;height:20px!important;max-width:none}
@@ -1873,6 +1877,7 @@ function wheelF(o){
   s+=`<rect x="${cx-half}" y="${cy-half}" width="${2*half}" height="${2*half}" fill="none" stroke="var(--ink)" stroke-width="1.2"/>`;
   s+=Ln(-half,-half,-half,-out)+Ln(half,-half,half,-out)+Ln(-half,half,-half,out)+Ln(half,half,half,out)+Ln(-half,-half,-out,-half)+Ln(-half,half,-out,half)+Ln(half,-half,out,-half)+Ln(half,half,out,half);
   const dg=rW/Math.SQRT2; s+=Ln(-half,-half,-dg,-dg)+Ln(half,-half,dg,-dg)+Ln(-half,half,-dg,dg)+Ln(half,half,dg,dg);
+  if(o.hlSign!=null){ const hc=o.hlCol||'var(--gold)'; s+=`<path d="${arcPath(half+1,rW-1,o.hlSign*30+0.01,o.hlSign*30+29.99)}" fill="${hc}" fill-opacity=".2"/><path d="${arcPath(rOut+1,rSign+13,o.hlSign*30+0.01,o.hlSign*30+29.99)}" fill="${hc}" fill-opacity=".28"/>`; }
   // เส้นแบ่งราศี + ชื่อราศี + ชั้นละเอียด
   for(let i=0;i<12;i++){ const b=i*30, mid=b+15; if(rOut>rW) s+=seg(rW,rOut,b,'var(--ink)',.9);
     const wdeg=widths[i];
@@ -5722,6 +5727,14 @@ function radar71(){ const W=360,c=180,R=130, views=['n','t','d9','d3'], val={}; 
     if(on) val[v].forEach((q,i)=>{ const [x,y]=pt(i,q); g+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${i+1===BH70?5:3}" fill="${V71[v][1]}"><title>ภพ${HOUSES[i]} ${q}</title></circle>`; }); });
   return {svg:`<svg viewBox="0 0 ${W} ${W}" class="rd71" role="img" aria-label="เรดาร์กำลัง ๑๒ ภพ">${g}</svg>`,val}; }
 // ---------- วงจักรเล็ก ----------
+
+// ===== v80.2: จักรใน ๑๒ ภพ ใช้ตัววาดเดียวกับจักรหลัก =====
+function big80(v,h){ const S=WSTATE, C=chart71(v), Lg=sgn(C.pos.LA), sel=(Lg+h-1)%12; let natal, transit=null, retro={}, retroT={}, mark={};
+  if(v==='n'||v==='t'){ natal=S.nat2; retro=S.retroN||{}; mark=S.mark||{}; if(v==='t'){ const tr=chartAt(getTransit(),S.lat,S.lon); transit={LA:tr.pos.LA}; ORDER.forEach(k=>transit[k]=tr.pos[k]); ORDER.forEach(k=>{ if(k!=='RA'&&k!=='KE'&&tr.spd[k]<0) retroT[k]=1; }); } }
+  else { natal={}; ['LA',...KS71].forEach(k=>{ if(C.pos[k]!=null) natal[k]=C.pos[k]; }); }
+  const svg=wheelF({id:'bhw80',natal,transit,retro,retroT,mark:v==='d9'||v==='d3'?{}:mark,lagSign:Lg,center:[V71[v][0],'ภพ '+h+' = '+SIGNS[sel]],tanu:v==='n'?S.tanu:null,L:{call:v!=='t',callT:v==='t'},hlSign:sel,hlCol:V71[v][1]});
+  const sc=bhScore70(C,h).v; return `<figure class="bw80" style="--c:${V71[v][1]}">${svg}<figcaption><b>${V71[v][0]}</b><span class="note">ภพ${HOUSES[h-1]} อยู่ราศี${SIGNS[sel]} · ลัคน์${SIGNS[Lg]}</span><span style="color:${lvl30(sc)[1]};margin-left:auto">${sc}</span></figcaption></figure>`; }
+
 function mini71(v,h){ const C=chart71(v), L=sgn(C.pos.LA), s=(L+h-1)%12, W=170,c=85,R=78,r=30; let g=`<circle cx="${c}" cy="${c}" r="${R}" fill="var(--panel)" stroke="var(--line)"/>`;
   for(let i=0;i<12;i++){ const a0=(i*30-90-15)*Math.PI/180, a1=(i*30-90+15)*Math.PI/180, hh=i+1, sg=(L+i)%12, on=hh===h;
     g+=`<path d="M${(c+r*Math.cos(a0)).toFixed(1)} ${(c+r*Math.sin(a0)).toFixed(1)} L${(c+R*Math.cos(a0)).toFixed(1)} ${(c+R*Math.sin(a0)).toFixed(1)} A${R} ${R} 0 0 1 ${(c+R*Math.cos(a1)).toFixed(1)} ${(c+R*Math.sin(a1)).toFixed(1)} L${(c+r*Math.cos(a1)).toFixed(1)} ${(c+r*Math.sin(a1)).toFixed(1)} A${r} ${r} 0 0 0 ${(c+r*Math.cos(a0)).toFixed(1)} ${(c+r*Math.sin(a0)).toFixed(1)}Z" fill="${on?V71[v][1]:'transparent'}" fill-opacity="${on?.25:0}" stroke="var(--line)" stroke-width=".6"/>`;
@@ -5753,7 +5766,7 @@ function cmp71(h){ const TK=taksaYear71(); return ['n','t','d9','d3'].map(v=>{ c
 bhHTML70=function(nat){ const RD=radar71(), TK=taksaYear71();
   return `<div class="bh70"><div class="bh71bar"><div class="tc60tab">${Object.entries(V71).map(([v,[t,c]])=>`<button type="button" data-bv="${v}"${v===BHV71?' class="on"':''} style="--c:${c}">${t}</button>`).join('')}</div><span class="note">ปุ่มภพแสดง: เจ้าเรือน · ทักษาเดิม / ทักษาจร ปี ${TK.y} (อายุย่าง ${TK.age})</span></div>
    ${bhGrid70(nat)}
-   <div class="bh71ov"><div>${RD.svg}<div class="rd71lg">${Object.entries(V71).map(([v,[t,c]])=>`<span><i style="background:${c}"></i>${t}</span>`).join('')}</div></div><div class="bh71mn">${['n','t','d9','d3'].map(v=>mini71(v,BH70)).join('')}</div></div>
+   <div class="bh71ov"><div>${RD.svg}<div class="rd71lg">${Object.entries(V71).map(([v,[t,c]])=>`<span><i style="background:${c}"></i>${t}</span>`).join('')}</div></div><div class="bh71mn">${big80(BHV71,BH70)}</div></div>
    <div class="bh70det">${detail71(BH70)}</div>
    <p class="note">มุมมอง: ดวงเดิม = ตำแหน่งกำเนิด · ดวงจร = ดาว ณ วันจรเทียบลัคน์เดิม · นวางค์/ตรียางค์ = ดาวและลัคน์ย้ายไปตามราศีในจักรนั้นแล้วนับภพจากลัคน์ของจักรนั้น · คะแนนใช้สูตรเดียวกันทุกมุมมองเพื่อเทียบกันได้ · กราฟเวลาคำนวณดวงจรทุก ๑๕ วัน ล่วงหน้า ๒๔ เดือน</p></div>`; };
 function detail71(h){ const C=chart71(BHV71), TK=taksaYear71(), lk=lordOfH70(C,h), rn=TK.iN[PNUM[lk]], rj=TK.iJ[PNUM[lk]];
@@ -6254,6 +6267,8 @@ thaiMini80=function(C,h,col){ const W=660,cx=330,R3=322,Rm=262,Ri=203,L=Ri*2/Mat
 mini71=function(v,h){ const C=chart71(v), S=bhScore70(C,h); return `<figure class="mn71${v===BHV71?' on':''}" data-v="${v}" style="--c:${V71[v][1]}">${thaiMini80(C,h,V71[v][1],200)}<figcaption><b>${V71[v][0]}</b><span style="color:${lvl30(S.v)[1]}">${S.v}</span></figcaption></figure>`; };
 { const _g80=bhGrid70; bhGrid70=function(nat){ let h=_g80(nat); return h.replace(/<span class="bh70n">(\d+)<\/span><b>/g,(m,n)=>`<span class="bh70n">${n}</span><span class="bhi80">${hic80(+n)}</span><b>`); }; }
 
+
+document.addEventListener('click',e=>{ const b=e.target.closest('#bh70Out .bh70c'); if(!b) return; setTimeout(()=>{ const m=document.querySelector('#bh70Out .bh71mn'); if(m) try{ m.innerHTML=big80(BHV71,BH70); }catch(err){ console.error(err); } },0); });
 window.addEventListener('error',e=>{ try{ if(!e.message||/Script error|ResizeObserver/.test(e.message)) return; let b=document.getElementById('err41'); if(!b){ b=document.createElement('div'); b.id='err41'; b.style.cssText='position:fixed;left:8px;right:8px;bottom:8px;z-index:9999;background:#c0392b;color:#fff;padding:8px 12px;border-radius:8px;font-size:13px;box-shadow:0 2px 8px rgba(0,0,0,.3)'; b.onclick=()=>b.remove(); document.body.appendChild(b); } b.textContent='⚠ เกิดข้อผิดพลาด: '+e.message+' (บรรทัด '+e.lineno+') — แตะเพื่อปิด และแจ้งข้อความนี้'; }catch(_){} });
 function popHTML(k){ return popHTML25(k); }
 function placePop(P,ev,W){ P.style.display='block'; P.style.width=W+'px'; window._popAt=Date.now(); const vw=window.innerWidth, vh=window.innerHeight, cx=ev&&ev.clientX!=null?ev.clientX:vw/2, cy=ev&&ev.clientY!=null?ev.clientY:vh/2;
