@@ -146,6 +146,13 @@ header{flex-wrap:wrap}.brand{flex:0 0 100%;width:100%;font-size:14px;font-weight
 :root[data-theme="dark"] #tpop{background:rgba(13,26,38,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--edge75b);border-radius:18px;box-shadow:0 24px 60px -16px rgba(0,0,0,.85)}
 :root[data-theme="dark"] *{scrollbar-color:#244055 transparent;scrollbar-width:thin}
 ::selection{background:rgba(156,203,232,.35)}
+.lh83{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0 6px}.lh83 b{font-size:17px;font-weight:500;font-variant-numeric:tabular-nums}
+#live83{text-align:left;margin-top:8px;padding:10px 12px;border-radius:14px;border:1px solid var(--line);background:rgba(127,211,176,.04)}
+.lt83{display:flex;flex-direction:column;gap:3px}.lr83{display:grid;grid-template-columns:22px 58px 48px 104px 1fr 70px;gap:8px;align-items:center;font-size:13px;font-variant-numeric:tabular-nums}
+.lr83.la{color:#ff9a85}.lp83{font-size:16px;text-align:center}.ld83{font-weight:500}.lb83{height:5px;border-radius:3px;background:var(--line);overflow:hidden}.lb83 i{display:block;height:100%;background:linear-gradient(90deg,#7fd3b0,#ecdcb4)}.lr83.la .lb83 i{background:#ff8f78}
+.lw83{display:flex;flex-direction:column;gap:2px;min-width:0}.lc83{color:var(--muted);white-space:nowrap;font-size:12px;overflow:hidden;text-overflow:ellipsis}.lr83{padding:3px 0;border-bottom:1px solid rgba(255,255,255,.04)}.lc83 b{color:var(--ink);font-weight:500}.lv83s{color:var(--muted);text-align:right;font-size:11px;white-space:nowrap}
+@media(max-width:700px){.lr83{grid-template-columns:22px 52px 1fr 104px;row-gap:2px}.lr83 .lw83{grid-column:1 / -1;order:9}.lr83 .lv83s{display:none}}
+
 .sv76 #saved{scroll-snap-type:none!important;cursor:grab;user-select:none;-webkit-user-select:none}.sv76 #saved.grab80{cursor:grabbing}.sv76 #saved.grab80 .svc76{pointer-events:none}
 .svc76 .si80{color:#cfe0ea!important;font-size:13px!important;white-space:nowrap}.sv76 #saved{grid-auto-columns:minmax(270px,1fr)!important}@media(max-width:700px){.sv76 #saved{grid-auto-columns:82%!important}}
 
@@ -1937,7 +1944,7 @@ function wheelF(o){
   const hlf=(lon,col,rk)=>{ let h=''; if(rk&&PNUM[rk]!=null){ for(let i=0;i<12;i++) if(LORD[i]===PNUM[rk]){ h+=`<path d="${arcPath(rOut,rOut+13,i*30+0.01,i*30+29.99)}" fill="var(--gold)" fill-opacity=".9" stroke="var(--gold)" stroke-width="2"/><path d="${arcPath(rW-6,rW,i*30+0.01,i*30+29.99)}" fill="var(--gold)" fill-opacity=".75"/>`; h+=arcText(rOut+6.5,i*30+15,`เรือน${PN[rk]}`,8.5,'#fff'); } } const s0=sgn(lon), dd=norm(lon)-s0*30, ti=Math.floor(dd/10), ni=Math.floor(dd/(10/3)), ki=Math.floor(norm(lon)/(360/27)); const st=`fill="${col}" fill-opacity=".22" stroke="${col}" stroke-width="1.6"`;
     if(RG.tri) h+=`<path d="${arcPath(RG.tri[0],RG.tri[1],s0*30+ti*10,s0*30+ti*10+10)}" ${st}/>`; if(RG.nak) h+=`<path d="${arcPath(RG.nak[0],RG.nak[1],ki*360/27,(ki+1)*360/27)}" ${st}/>`; if(RG.nav) h+=`<path d="${arcPath(RG.nav[0],RG.nav[1],s0*30+ni*10/3,s0*30+(ni+1)*10/3)}" ${st}/>`; if(RG.deg){ const d0=Math.floor(norm(lon)); h+=`<path d="${arcPath(RG.deg[0],RG.deg[1],d0,d0+1)}" fill="${col}" fill-opacity=".55" stroke="${col}" stroke-width="1.6"/>`; const [tx,ty]=P(RG.deg[1]+9,d0+0.5); h+=`<text x="${tx}" y="${ty}" font-size="9" fill="${col}" text-anchor="middle" dominant-baseline="middle" font-weight="600">${Math.floor(dd)}°${String(Math.floor((dd%1)*60)).padStart(2,'0')}′</text>`; }
     const [x1,y1]=P(rW,lon),[x2,y2]=P(rOut,lon); h+=`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${col}" stroke-width="1.6" stroke-dasharray="3 2"/>`; return h; };
-  WGEO[o.id||'_']={cx,cy,Ainv,hl:hlf}; return s; }
+  WGEO[o.id||'_']={cx,cy,Ainv,A,rW,rOut,half,hl:hlf}; return s; }
 const WGEO={};
 
 // ───────── ชั้นข้อมูล / ซูม / ลากดาวจร ─────────
@@ -6233,6 +6240,31 @@ function auto80(ul){ if(ul._a80) return; ul._a80=1; let pause=0, x=ul.scrollLeft
     const half=ul.scrollWidth/2; if(!ul.querySelector('.dup80')||half<=ul.clientWidth*0.5) return; x+=dt*0.028; if(x>=half) x-=half; ul.scrollLeft=x; };
   ul.addEventListener('scroll',()=>{ const half=ul.scrollWidth/2; if(ul.querySelector('.dup80')&&ul.scrollLeft>=half&&!down){ ul.scrollLeft-=half; x=ul.scrollLeft; } },{passive:true});
   requestAnimationFrame(step); }
+// ===== v83: โหมดนาฬิกาจริงแบบละเอียด — เข็มลัคน์/จันทร์/อาทิตย์เคลื่อนต่อเนื่อง + แผงองศาถึงฟิลิปดา + นับถอยหลังย้ายราศี =====
+const LV83={raf:0,lastTxt:0};
+const dms83=x=>{ x=norm(x); const s=Math.floor(x/30), d=x-s*30, D=Math.floor(d), m=(d-D)*60, M=Math.floor(m), S=Math.floor((m-M)*60); return {s,D,M,S,txt:`${D}° ${String(M).padStart(2,'0')}′ ${String(S).padStart(2,'0')}″`}; };
+const cd83=sec=>{ if(!isFinite(sec)||sec<0) return '—'; const d=Math.floor(sec/86400), h=Math.floor(sec%86400/3600), m=Math.floor(sec%3600/60), s=Math.floor(sec%60); return (d?d+' วัน ':'')+`${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`; };
+function liveT83(){ if(!LIVE.on) return null; if(LIVE.speed===1) return new Date(); return new Date(LIVE.T.getTime()+(performance.now()-LIVE.last)*LIVE.speed); }
+function livePos83(T){ const h=horaOf(T), S=WSTATE, o={}; ['SU','MO','MA','ME','JU','VE','SA','RA','KE'].forEach(k=>{ try{ o[k]=posH(h,k); }catch(e){} }); try{ const t0=new Date(T); t0.setSeconds(0,0); const t1=new Date(t0.getTime()+6e4), l0=lagna(t0,S.lat,S.lon), l1=lagna(t1,S.lat,S.lon), f=(T-t0)/6e4; o.LA=norm(l0+((l1-l0+540)%360-180)*f); }catch(e){} return o; }
+function liveBox83(){ let b=document.getElementById('live83'); if(!b){ const nb=document.querySelector('.nowbar'); if(!nb) return null; b=document.createElement('div'); b.id='live83'; nb.after(b); } return b; }
+function liveFrame83(){ LV83.raf=0; if(!LIVE.on){ const b=document.getElementById('live83'); if(b) b.style.display='none'; const g=document.querySelector('#wsvg .lv83'); if(g) g.remove(); return; }
+  LV83.raf=requestAnimationFrame(liveFrame83); const T=liveT83(); if(!T||!WSTATE) return; const P=livePos83(T), G=WGEO.wsvg, svg=document.getElementById('wsvg');
+  if(svg&&G&&G.A){ let g=svg.querySelector('.lv83'); if(!g){ g=document.createElementNS('http://www.w3.org/2000/svg','g'); g.setAttribute('class','lv83'); g.setAttribute('pointer-events','none'); svg.appendChild(g); g._k=null; }
+    const pt=(r,lon)=>{ const a=(90+G.A(lon))*Math.PI/180; return [G.cx+r*Math.cos(a),G.cy-r*Math.sin(a)]; };
+    let h=''; [['LA','#ff8f78','ลัคน์จร',G.rOut+10,2.2],['MO','#cfe6f5','จันทร์จร',G.rOut+4,1.6],['SU','#ecdcb4','อาทิตย์จร',G.rOut+4,1.6]].forEach(([k,c,n,r2,w])=>{ if(P[k]==null) return; const [x1,y1]=pt(G.half*1.05,P[k]), [x2,y2]=pt(r2,P[k]), [x3,y3]=pt(r2+16,P[k]);
+      h+=`<line x1="${x1.toFixed(2)}" y1="${y1.toFixed(2)}" x2="${x2.toFixed(2)}" y2="${y2.toFixed(2)}" stroke="${c}" stroke-width="${w}" stroke-opacity=".85" stroke-dasharray="${k==='LA'?'':'4 3'}"/><circle cx="${x2.toFixed(2)}" cy="${y2.toFixed(2)}" r="${k==='LA'?5:3.5}" fill="${c}"><animate attributeName="r" values="${k==='LA'?'4;6.5;4':'3;4.5;3'}" dur="1.6s" repeatCount="indefinite"/></circle>`;
+      if(k==='LA') h+=`<text x="${x3.toFixed(1)}" y="${y3.toFixed(1)}" font-size="10" fill="${c}" text-anchor="middle" dominant-baseline="middle" stroke="var(--bg)" stroke-width="3" paint-order="stroke">ลจ ${dms83(P[k]).txt}</text>`; });
+    ['MA','ME','JU','VE','SA','RA','KE'].forEach(k=>{ if(P[k]==null) return; const [x,y]=pt(G.rW+3,P[k]); h+=`<circle cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="2.6" fill="#7fd3b0"/>`; });
+    g.innerHTML=h; if(g!==svg.lastElementChild) svg.appendChild(g); }
+  const now=performance.now(); if(now-LV83.lastTxt<120) return; LV83.lastTxt=now; const b=liveBox83(); if(!b) return; b.style.display='';
+  const dt=LIVE.speed===1?60:Math.max(60,LIVE.speed*2), T2=new Date(T.getTime()+dt*1000), P2=livePos83(T2);
+  const rows=['LA','MO','SU','ME','VE','MA','JU','SA','RA','KE'].filter(k=>P[k]!=null).map(k=>{ const a=dms83(P[k]); let v=((P2[k]-P[k]+540)%360-180)/dt; const left=v>0?(30-(norm(P[k])-a.s*30)):(norm(P[k])-a.s*30); const sec=Math.abs(v)>1e-9?left/Math.abs(v):Infinity, pct=(norm(P[k])-a.s*30)/30*100;
+    return `<div class="lr83${k==='LA'?' la':''}"><span class="lp83">${k==='LA'?'ล':PN[k]}</span><span class="ln83">${k==='LA'?'ลัคนาจร':TH[k]}</span><span class="ls83">${SIGNS[a.s]}</span><b class="ld83">${a.txt}</b><span class="lw83"><span class="lc83">${v<0&&!['RA','KE'].includes(k)?'พักร์ · ':''}ย้ายราศีในอีก <b>${cd83(sec)}</b></span><span class="lb83"><i style="width:${pct.toFixed(2)}%"></i></span></span><span class="lv83s">${(Math.abs(v)*3600).toFixed(Math.abs(v)*3600<0.1?4:2)}°/ชม.</span></div>`; }).join('');
+  const t=T, ts=`${t.getDate()} ${MONTHS_TH[t.getMonth()]} ${t.getFullYear()+543} · ${String(t.getHours()).padStart(2,'0')}:${String(t.getMinutes()).padStart(2,'0')}:${String(t.getSeconds()).padStart(2,'0')}`;
+  b.innerHTML=`<div class="lh83"><span class="livedot"></span><b>${ts}</b><span class="note">${LIVE.speed===1?'เวลาจริง':'เร่ง '+LIVE.speed+'×'} · องศาละเอียดถึงฟิลิปดา · นับถอยหลังคิดจากความเร็วดาวปัจจุบัน${LIVE.speed>1?' (เวลาในดวง)':''}</span></div><div class="lt83">${rows}</div>`; }
+function liveKick83(){ if(LIVE.on&&!LV83.raf) LV83.raf=requestAnimationFrame(liveFrame83); }
+{ const _s=startLive; startLive=function(){ const r=_s.apply(this,arguments); liveKick83(); return r; }; }
+{ const _p=stopLive; stopLive=function(){ const r=_p.apply(this,arguments); setTimeout(liveFrame83,0); return r; }; }
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
   try{ rhythm77(); }catch(e){ console.error(e); document.getElementById('rh77Out').innerHTML='<p class="note">⚠ '+e.message+'</p>'; } }
