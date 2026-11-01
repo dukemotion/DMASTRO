@@ -146,6 +146,12 @@ header{flex-wrap:wrap}.brand{flex:0 0 100%;width:100%;font-size:14px;font-weight
 :root[data-theme="dark"] #tpop{background:rgba(13,26,38,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--edge75b);border-radius:18px;box-shadow:0 24px 60px -16px rgba(0,0,0,.85)}
 :root[data-theme="dark"] *{scrollbar-color:#244055 transparent;scrollbar-width:thin}
 ::selection{background:rgba(156,203,232,.35)}
+.ng79{display:grid;grid-template-columns:repeat(11,1fr);gap:6px;margin:8px 0 4px}.np79{position:relative;overflow:hidden;display:flex!important;flex-direction:column;align-items:center;gap:0;padding:7px 2px 9px!important;border-radius:12px!important;min-height:0!important;width:auto!important}
+.np79 .pn79{font-size:15px;line-height:1.1}.np79 .nm79{font-size:11px;color:var(--muted)}.np79 b{font-size:15px;font-weight:500}.np79 i{position:absolute;left:0;bottom:0;height:3px;background:var(--muted)}.np79.g i{background:#3fa96b}.np79.b i{background:#d9534f}.np79.g b{color:#5fc48a}.np79.b b{color:#e87470}
+:root[data-theme] button.fb79.g{color:#5fc48a;border-color:rgba(63,169,107,.55);background:rgba(63,169,107,.1)}:root[data-theme] button.fb79.b{color:#ec7e7a;border-color:rgba(217,83,79,.55);background:rgba(217,83,79,.1)}:root[data-theme] button.fb79{border-radius:999px;padding:2px 10px;font-size:12.5px;white-space:normal}
+:root[data-theme] button.np79{border:1px solid var(--line);background:rgba(255,255,255,.03)}
+.fb79{cursor:pointer;width:auto!important;min-height:0!important;font-family:inherit;text-align:left}.fb79:hover{filter:brightness(1.25)}
+@media(max-width:700px){.ng79{grid-template-columns:repeat(6,1fr)}}
 .nb78{display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:10px;margin-bottom:6px}.k78{display:flex;flex-direction:column;gap:3px;padding:10px 12px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.02)}.k78 b{font-size:28px;font-weight:300;line-height:1.1}.k78 b.k78s{font-size:16px;font-weight:400}.k78 .bg64{align-self:flex-start}.nb78n{margin:4px 0 10px}
 .adv78{margin:6px 0 8px;padding:8px 10px;border-radius:10px;background:rgba(217,184,115,.08);border-left:3px solid var(--gold);font-size:13.5px;line-height:1.6}
 @media(max-width:700px){.nb78{grid-template-columns:1fr 1fr}.nb78 .k78:last-child{grid-column:1 / -1}}
@@ -6049,12 +6055,12 @@ const TGT77={LA:1.3,MO:1.25,SU:1.1,JU:1,VE:1,ME:.9,MA:.9,SA:.9,RA:.7,KE:.6,UR:.5
 const GOCH77={1:0,2:-.3,3:1,4:-.8,5:-.3,6:1,7:.7,8:-1,9:-.2,10:.8,11:1,12:-.8};
 let ST77={v:'m',sel:null,day:null};
 function pt77(t,mode){ const nat=WSTATE.nat, tr=chartAt(t,WSTATE.lat,WSTATE.lon), F=[];
-  const use=mode==='y'?['SA','JU','RA','KE','UR','MA']:mode==='m'?['SA','JU','RA','KE','MA','SU','VE','ME','MO']:['MO'];
-  const tgts=['LA','SU','MO','MA','ME','JU','VE','SA','RA','KE'];
+  const use=mode==='d'?['MO']:['SU','MO','MA','ME','JU','VE','SA','RA','KE','UR'];
+  const tgts=['LA','SU','MO','MA','ME','JU','VE','SA','RA','KE','UR'];
   use.forEach(k=>{ if(tr.pos[k]==null) return; tgts.forEach(n=>{ if(nat.pos[n]==null) return; const r=aspOf66(tr.pos[k],nat.pos[n]); if(!r||r.p<15) return;
     const tone=r.ang===0?BENE66[k]*1.2+(BENE66[n]||0)*.3:(r.q*.7+BENE66[k]*.5); if(Math.abs(tone)<.05) return;
-    const v=tone*(r.p/100)*W77[k]*(TGT77[n]||.7)*(mode==='d'&&k==='MO'?1.6:1);
-    F.push({k:'a'+k+n,v,t:`${TH[k]}จร${r.nm}${TH[n]}เดิม`}); }); });
+    const v=tone*(r.p/100)*W77[k]*(TGT77[n]||.7)*(mode==='d'&&k==='MO'?1.6:mode==='y'&&k==='MO'?.4:1);
+    const vv=tr.spd[k]||0, app=Math.abs(sep66(tr.pos[k]+vv*.5,nat.pos[n])-r.ang)<r.dev; F.push({k:'a'+k+n,v,t:`${TH[k]}จร${r.nm}${TH[n]}เดิม`,tk:k,nk:n,r,app}); }); });
   if(mode!=='y'){ const hm=((sgn(tr.pos.MO)-sgn(nat.pos.MO)+12)%12)+1, g=GOCH77[hm]; if(g) F.push({k:'gm',v:g*(mode==='d'?1.4:1.1),t:`จันทร์จรภพ ${hm} จากจันทร์เดิม${g>0?' (ภพให้คุณ)':' (ภพให้โทษ)'}`}); }
   if(mode!=='d'){ const hs=((sgn(tr.pos.SA)-sgn(nat.pos.MO)+12)%12)+1; if([12,1,2].includes(hs)) F.push({k:'ss',v:-1.2,t:`เสาร์จรช่วงเสตสาติ (ภพ ${hs} จากจันทร์)`}); else if([3,6,11].includes(hs)) F.push({k:'ss',v:.8,t:`เสาร์จรภพ ${hs} จากจันทร์ (เสาร์ให้คุณ)`}); }
   if(mode!=='d'){ const hj=((sgn(tr.pos.JU)-sgn(nat.pos.MO)+12)%12)+1; if([2,5,7,9,11].includes(hj)) F.push({k:'gj',v:1.1,t:`พฤหัสจรภพ ${hj} จากจันทร์ (พฤหัสให้คุณ)`}); else if([8,12].includes(hj)) F.push({k:'gj',v:-.7,t:`พฤหัสจรภพ ${hj} จากจันทร์`}); }
@@ -6097,7 +6103,7 @@ function graph77(P,mode,nar){ const W=nar?420:760,H=nar?240:250,L=34,R=12,T=16,B
   return `<svg viewBox="0 0 ${W} ${H}" class="g77" data-l="${L}" data-w="${W-L-R}" data-t="${T}" data-h="${H-T-B}">${g}</svg>`; }
 function why77(p,mode){ const NB=natal78(), dd=p.act-NB.base, lvl=dd>=6?['g','สูงกว่าพื้นดวง']:dd<=-6?['b','ต่ำกว่าพื้นดวง']:['n','ใกล้พื้นดวง'];
   return `<div class="w77"><div class="w77h"><b>${fd77(p.t,mode==='d'?'d':'m')}${mode==='d'?' · '+fd77(p.t,'m'):''}</b><span class="bg64 ${lvl[0]}">ผลจริง ${Math.round(p.act)} · ${lvl[1]} ${dd>=0?'+':''}${Math.round(dd)}</span><span class="note">ดาวจร ${Math.round(p.trs)} · พื้นดวง ${NB.base}</span></div><div class="adv78">${advice78(p,mode,NB)}</div>
-   <div class="w77l">${p.F.slice(0,7).map(f=>`<span class="bg64 ${f.v>0?'g':'b'}">${f.v>0?'+':'−'} ${f.t}</span>`).join(' ')||'<span class="note">ไม่มีดาวจรกระทบเด่น</span>'}</div>${mode==='m'?'<div class="note" style="margin-top:6px">แตะจุดในกราฟ 2 ครั้ง (หรือกดปุ่ม "ดูรายชั่วโมง") เพื่อดูเวลาดี–เวลาระวังของวันนั้น</div>':''}</div>`; }
+   <div class="w77l">${p.F.slice(0,12).map((f,j)=>`<button type="button" class="bg64 fb79 ${f.v>0?'g':'b'}" data-j="${j}">${f.v>0?'+':'−'} ${f.t}</button>`).join(' ')||'<span class="note">ไม่มีดาวจรกระทบเด่น</span>'}</div><div class="note" style="margin-top:4px">แตะป้ายแต่ละอันเพื่อดูคำอธิบายว่าแปลว่าอะไร กระทบเรื่องไหน และมีผลถึงเมื่อไร</div>${mode==='m'?'<div class="note" style="margin-top:6px">แตะจุดในกราฟ 2 ครั้ง (หรือกดปุ่ม "ดูรายชั่วโมง") เพื่อดูเวลาดี–เวลาระวังของวันนั้น</div>':''}</div>`; }
 function rhythm77(){ const box=document.getElementById('rh77Out'); if(!box||!WSTATE||!WSTATE.nat) return; const mode=ST77.v, base=mode==='d'&&ST77.day?ST77.day:getTransit();
   const P=series77(mode,base), ph=phases77(P), up=ph.filter(p=>p.d>0).sort((a,b)=>b.amp-a.amp).slice(0,3), dn=ph.filter(p=>p.d<0).sort((a,b)=>a.amp-b.amp).slice(0,3);
   const ttl=mode==='y'?`12 เดือน เริ่ม ${MONTHS_TH[base.getMonth()]} ${base.getFullYear()+543}`:mode==='m'?`${MONTHS_TH[base.getMonth()]} ${base.getFullYear()+543} รายวัน`:`วัน${['อาทิตย์','จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์','เสาร์'][base.getDay()]}ที่ ${fd77(base,'m')} รายครึ่งชั่วโมง`;
@@ -6105,13 +6111,15 @@ function rhythm77(){ const box=document.getElementById('rh77Out'); if(!box||!WST
   const card=(p,u)=>`<div class="ph77 ${u?'g':'b'}" data-a="${p.a}"><div class="ph77h"><span class="ar77">${u?'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 17l6-6 4 4 6-8"/><path d="M14 7h6v6"/></svg>':'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 7l6 6 4-4 6 8"/><path d="M14 17h6v-6"/></svg>'}</span><b>${u?'ขาขึ้น':'ขาลง'}</b><span class="note">${fmtR(p)}</span><span class="bg64 ${u?'g':'b'}">${u?'+':''}${Math.round(p.amp)}</span></div><div class="ph77w">${p.why.length?'เพราะ '+p.why.map(w=>w.on?w.t:'หมดอิทธิพล: '+w.t).join(' · '):'ผลรวมของดาวจรหลายดวง'}</div></div>`;
   const NB=natal78(), nowI=P.reduce((m,p,i)=>Math.abs(p.t-new Date())<Math.abs(P[m].t-new Date())?i:m,0), NP=P[nowI], inR=new Date()>=P[0].t&&new Date()<=P[P.length-1].t, L1=lvl78(NB.base), avg=P.reduce((a,p)=>a+p.act,0)/P.length;
   box.innerHTML=`<div class="nb78"><div class="k78"><span class="note">มาตรฐานดวงเดิม</span><b>${NB.base}</b><span class="bg64 ${L1[0]}">${L1[1]}</span></div><div class="k78"><span class="note">${inR?'ผลจริงตอนนี้':'ผลจริงเฉลี่ยช่วงนี้'}</span><b>${Math.round(inR?NP.act:avg)}</b><span class="bg64 ${(inR?NP.act:avg)-NB.base>=0?'g':'b'}">${(inR?NP.act:avg)-NB.base>=0?'+':''}${Math.round((inR?NP.act:avg)-NB.base)} จากพื้นดวง</span></div><div class="k78"><span class="note">ดาวเดิมหนุน / ถ่วง</span><b class="k78s">${NB.pl.slice(0,2).map(x=>TH[x.k]).join(' ')} / ${NB.pl.slice(-2).map(x=>TH[x.k]).join(' ')}</b><span class="note">ภพเด่น ${HOUSES[NB.hs[0].h-1]} · ภพอ่อน ${HOUSES[NB.hs[NB.hs.length-1].h-1]}</span></div></div>
-   <p class="note nb78n">พื้นดวงเดิมคิดจากกำลังดาวเดิมทุกดวง (เน้นเจ้าลัคน์ ${TH[NB.lag]} และจันทร์)${NB.dn.length?' หักโทษที่ยังไม่มีข้อล้าง: '+NB.dn.join(' '):''} · <b>ผลจริง</b> = พื้นดวงเดิม + แรงดาวจร โดยดวงเดิมดีจะรับดาวจรดีได้เต็มและทนดาวจรร้ายได้มาก ดวงเดิมอ่อนจะกลับกัน</p>
+   ${natGrid79(NB)}<p class="note nb78n">พื้นดวงเดิมคิดจากดาวเดิมครบ 10 ดวงและลัคนา แตะแต่ละดวงเพื่อดูว่าดี/อ่อนเรื่องอะไร (เน้นเจ้าลัคน์ ${TH[NB.lag]} และจันทร์)${NB.dn.length?' หักโทษที่ยังไม่มีข้อล้าง: '+NB.dn.join(' '):''} · <b>ผลจริง</b> = พื้นดวงเดิม + แรงดาวจร โดยดวงเดิมดีจะรับดาวจรดีได้เต็มและทนดาวจรร้ายได้มาก ดวงเดิมอ่อนจะกลับกัน</p>
    <div class="rh77bar"><div class="sg77" role="tablist">${[['y','รายปี'],['m','รายเดือน'],['d','รายวัน']].map(([k,t])=>`<button type="button" data-v="${k}" class="${mode===k?'on':''}">${t}</button>`).join('')}</div>
     <div class="nv77"><button type="button" data-s="-1" aria-label="ก่อนหน้า">‹</button><span>${ttl}</span><button type="button" data-s="1" aria-label="ถัดไป">›</button></div></div>
    <div class="gw77">${graph77(P,mode,box.clientWidth<600)}<div id="tip77" class="tip77"></div></div>
    <div id="sel77">${why77(P[ST77.sel!=null&&ST77.sel<P.length?ST77.sel:P.reduce((m,p,i)=>p.sm>P[m].sm?i:m,0)],mode)}</div>${mode==='m'?'<div style="text-align:right;margin-top:6px"><button type="button" class="sm" id="toDay77">ดูรายชั่วโมงของวันที่เลือก</button></div>':''}
    <div class="phg77"><div><h4>ช่วงขาขึ้นเด่น</h4>${up.map(p=>card(p,1)).join('')||'<p class="note">ไม่มีช่วงขาขึ้นชัดเจน</p>'}</div><div><h4>ช่วงขาลงที่ควรระวัง</h4>${dn.map(p=>card(p,0)).join('')||'<p class="note">ไม่มีช่วงขาลงชัดเจน</p>'}</div></div>
    <p class="note">วิธีคิดแรงดาวจร: เริ่มที่ 50 แล้วบวกลบตามดาวจรที่ทำมุมกุม โยค ฉาก ตรีโกณ เล็ง กับดาวเดิมและลัคนา (ดาวช้าอย่างเสาร์ พฤหัส ราหู มีน้ำหนักมาก) รวมกับภพที่จันทร์ พฤหัส และเสาร์จรผ่านนับจากจันทร์เดิม (โคจรผล) ดาวพักร์ ${mode==='d'?'และลัคนาจรกับทักษาของเจ้าชะตา ':''}· เส้นหนาคือแนวโน้มที่ปรับให้เรียบ เส้นจางคือค่าดิบ · ใช้เป็นแนวโน้มประกอบการวางแผน ไม่ใช่คำตัดสิน</p>`;
+  window.P77=P; const bindF=()=>box.querySelectorAll('.fb79').forEach(b=>b.onclick=ev=>{ const p=P[ST77.sel!=null&&ST77.sel<P.length?ST77.sel:P.reduce((m,q,i)=>q.sm>P[m].sm?i:m,0)]; pop79(facPop79(p.F[+b.dataset.j],p),ev); }); bindF();
+  box.querySelectorAll('.np79').forEach(b=>b.onclick=ev=>pop79(natPop79(b.dataset.nk),ev));
   box.querySelectorAll('.sg77 button').forEach(b=>b.onclick=()=>{ ST77.v=b.dataset.v; ST77.sel=null; if(ST77.v!=='d') ST77.day=null; rhythm77(); });
   box.querySelectorAll('.nv77 button').forEach(b=>b.onclick=()=>{ const s=+b.dataset.s, t=new Date(base); if(mode==='y') t.setFullYear(t.getFullYear()+s); else if(mode==='m') t.setMonth(t.getMonth()+s,1); else t.setDate(t.getDate()+s);
     if(mode==='d') ST77.day=t; else { try{ setTransit(t); compute(); }catch(e){ ST77.day=t; } } ST77.sel=null; rhythm77(); });
@@ -6119,11 +6127,11 @@ function rhythm77(){ const box=document.getElementById('rh77Out'); if(!box||!WST
   const show=i=>{ const p=P[i], x=+svg.dataset.l+(+svg.dataset.w)*i/(P.length-1), y=+svg.dataset.t+(+svg.dataset.h)*(1-p.sm/100); cur.setAttribute('x1',x); cur.setAttribute('x2',x); cur.setAttribute('opacity',1); dot.setAttribute('cx',x); dot.setAttribute('cy',y); dot.setAttribute('opacity',1);
     const r=svg.getBoundingClientRect(), sx=r.width/svg.viewBox.baseVal.width; tip.style.display='block'; tip.style.left=Math.min(r.width-170,Math.max(0,x*sx-80))+'px'; tip.style.top=Math.max(0,y*sx-58)+'px';
     tip.innerHTML=`<b>${fd77(p.t,mode==='d'?'d':'m')}</b> · ผลจริง ${Math.round(p.act)} (${p.act-natal78().base>=0?'+':''}${Math.round(p.act-natal78().base)})<br><span>${p.F[0]?(p.F[0].v>0?'+ ':'− ')+p.F[0].t:'—'}</span>`; };
-  svg.querySelectorAll('.hit77').forEach(h=>{ h.addEventListener('pointerenter',()=>show(+h.dataset.i)); h.addEventListener('click',()=>{ const i=+h.dataset.i, now=Date.now(); show(i); ST77.sel=i; box.querySelector('#sel77').innerHTML=why77(P[i],mode);
+  svg.querySelectorAll('.hit77').forEach(h=>{ h.addEventListener('pointerenter',()=>show(+h.dataset.i)); h.addEventListener('click',()=>{ const i=+h.dataset.i, now=Date.now(); show(i); ST77.sel=i; box.querySelector('#sel77').innerHTML=why77(P[i],mode); bindF();
     if(mode==='m'&&i===last&&now-lastTap<600){ ST77.v='d'; ST77.day=P[i].t; ST77.sel=null; rhythm77(); return; } last=i; lastTap=now; }); });
   svg.addEventListener('pointerleave',()=>{ tip.style.display='none'; });
   const td=box.querySelector('#toDay77'); if(td) td.onclick=()=>{ const i=ST77.sel!=null?ST77.sel:P.reduce((m,p,j)=>p.sm>P[m].sm?j:m,0); ST77.v='d'; ST77.day=P[i].t; ST77.sel=null; rhythm77(); };
-  box.querySelectorAll('.ph77').forEach(c=>c.onclick=()=>{ const i=+c.dataset.a; ST77.sel=i; box.querySelector('#sel77').innerHTML=why77(P[i],mode); show(i); }); }
+  box.querySelectorAll('.ph77').forEach(c=>c.onclick=()=>{ const i=+c.dataset.a; ST77.sel=i; box.querySelector('#sel77').innerHTML=why77(P[i],mode); bindF(); show(i); }); }
 // ===== v78: มาตรฐานดวงเดิม + ผลจริง (ดวงเดิม × ดวงจร) =====
 let NB78=null;
 function natal78(){ const nat=WSTATE.nat, key=WSTATE.bt.getTime()+'|'+nat.pos.LA.toFixed(2); if(NB78&&NB78.key===key) return NB78;
@@ -6144,6 +6152,45 @@ function advice78(p,mode,NB){ const d=p.act-NB.base, pos=p.F.filter(f=>f.v>0&&/^
   if(NB.base<45&&d>0) a+=' · พื้นดวงเดิมไม่สูง ดาวจรดีช่วยได้แต่ไม่ยาวนาน ควรเก็บผลให้ทันในช่วงขาขึ้น';
   if(NB.base>=60&&d<0) a+=' · พื้นดวงเดิมแข็ง ช่วงลงมักผ่านไปได้โดยไม่เสียหายมาก';
   return a; }
+
+// ===== v79: ดาวครบทุกดวง + popup อธิบายทุกสิ่งที่ตรวจพบ =====
+const KAR79={SU:'ยศ ศักดิ์ศรี อำนาจ บิดา ผู้ใหญ่ ราชการ',MO:'จิตใจ อารมณ์ มารดา ความนิยม สาธารณชน',MA:'ความกล้า พลังงาน การแข่งขัน ที่ดิน ความเร่งรีบ',ME:'การสื่อสาร การค้า สัญญา เอกสาร การเรียน',JU:'ปัญญา ครูบาอาจารย์ คุณธรรม การอุปถัมภ์ โชค',VE:'ความรัก คู่ครอง ความสุข ศิลปะ ทรัพย์สิน',SA:'งานหนัก ความอดทน ผู้สูงวัย อสังหาฯ ภาระหน้าที่',RA:'ความทะเยอทะยาน ต่างชาติ เทคโนโลยี สิ่งมัวเมา',KE:'การตัดขาด การหลุดพ้น ความเปลี่ยนแปลงฉับพลัน จิตวิญญาณ',UR:'การพลิกผัน นวัตกรรม เรื่องเหนือความคาดหมาย',LA:'ตัวเจ้าชะตา ร่างกาย ภาพลักษณ์ ทิศทางชีวิต'};
+const ACT79={SU:['ทำให้เด่น ได้รับความสนใจจากผู้ใหญ่','ปะทะกับผู้มีอำนาจ อีโก้สูง'],MO:['อารมณ์ดี คนรอบตัวเอ็นดู (ผลสั้น 1–3 วัน)','อารมณ์แปรปรวน ไม่มั่นใจ (ผลสั้น 1–3 วัน)'],MA:['มีแรงผลักดัน กล้าตัดสินใจ','ใจร้อน ขัดแย้ง ระวังอุบัติเหตุและการใช้กำลัง'],ME:['ข่าวดี เจรจาสำเร็จ ติดต่อคล่อง','เอกสารผิดพลาด สื่อสารคลาดเคลื่อน'],JU:['ขยายผล มีผู้ใหญ่หรือครูช่วย','ประมาทเพราะมั่นใจเกิน ใช้จ่ายเกินตัว'],VE:['ความสุข ความรัก เงินคล่อง','หลงความสุขจนเสียงานหรือเสียเงิน'],SA:['งานหนักแต่ได้ผลถาวร','กดดัน ล่าช้า เหนื่อย ต้องแบกภาระ'],RA:['ทะเยอทะยานได้ผล โอกาสจากคนแปลกหน้า/ต่างชาติ','วุ่นวาย ลุ่มหลง เกินตัว มีเรื่องไม่คาดฝัน'],KE:['ปล่อยวางสิ่งที่หมดประโยชน์ได้ง่าย','ตัดขาด สูญเสียฉับพลัน สับสน'],UR:['เปลี่ยนแปลงไปในทางใหม่ที่ดีกว่า','พลิกผันกะทันหัน แผนเดิมสะดุด']};
+const ASPM79={'กุม':'กุม (0°) — รวมพลังเต็มที่ ผลเป็นไปตามธรรมชาติของดาวจร','โยค':'โยค (60°) — ประตูโอกาสเปิดเล็ก ๆ ต้องลงมือเองจึงได้ผล','ฉาก':'ฉาก (90°) — แรงกดดัน ขัดแย้ง บีบให้ต้องปรับตัว','ตรีโกณ':'ตรีโกณ (120°) — ไหลลื่น ได้รับการหนุนโดยไม่ต้องออกแรงมาก','เล็ง':'เล็ง (180°) — ปะทะ เผชิญหน้า มักเกี่ยวกับคนอื่นหรือคู่กรณี ต้องเลือกทาง'};
+const ALL79=['SU','MO','MA','ME','JU','VE','SA','RA','KE','UR'];
+function topic79(k){ const nat=WSTATE.nat; if(k==='LA') return {rule:[1],sit:1,txt:HMEAN[0]}; const H=hFor78(k), hs=[...new Set([...H.rule,H.sit])]; return {rule:H.rule,sit:H.sit,hs,txt:hs.map(h=>`ภพ${HOUSES[h-1]} (${HMEAN[h-1]})`).join(' · ')}; }
+// ----- มาตรฐานดวงเดิม: ทุกดวง + ลัคนา -----
+natal78=function(){ const nat=WSTATE.nat, key=WSTATE.bt.getTime()+'|'+nat.pos.LA.toFixed(2); if(NB78&&NB78.key===key) return NB78;
+  const L=sgn(nat.pos.LA), lag=PNUM2K[LORD[L]], W={SU:1.1,MO:1.4,MA:1,ME:1,JU:1.1,VE:1,SA:1,RA:.8,KE:.6,UR:.5,LA:1.6}; W[lag]=(W[lag]||1)+1.2; let s=0,w=0; const pl=[];
+  Object.keys(W).forEach(k=>{ let v,why; if(k==='LA'){ const r=bhScore70(nat,1); v=Math.round(r.v); why=(r.why||[]).map(x=>Array.isArray(x)?x[0]:x); } else { if(nat.pos[k]==null) return; const r=sc30(nat,k); v=r.v; why=r.why; } s+=v*W[k]; w+=W[k]; pl.push({k,v,why,w:W[k]}); });
+  let base=s/w; const hs=[]; for(let h=1;h<=12;h++){ try{ hs.push({h,v:Math.round(bhScore70(nat,h).v)}); }catch(e){} }
+  let dpen=0, dn=[]; try{ doshas74(nat).list.forEach(o=>{ if(o.on&&!(o.cancel&&o.cancel.length)&&o.sev>=2){ dpen+=1.5; dn.push(o.name); } }); }catch(e){}
+  base=Math.max(22,Math.min(85,base-dpen)); const order=pl.slice(); pl.sort((a,b)=>b.v-a.v); hs.sort((a,b)=>b.v-a.v);
+  return NB78={key,base:Math.round(base),lag,pl,order,hs,dn}; };
+function natGrid79(NB){ return `<div class="ng79">${NB.order.map(x=>{ const t=x.v>=60?'g':x.v<45?'b':'n'; return `<button type="button" class="np79 ${t}" data-nk="${x.k}"><span class="pn79">${PN[x.k]}</span><span class="nm79">${TH[x.k]}</span><b>${x.v}</b><i style="width:${x.v}%"></i></button>`; }).join('')}</div>`; }
+function natPop79(k){ const NB=natal78(), x=NB.pl.find(p=>p.k===k), T=topic79(k), good=x.v>=60, bad=x.v<45, nat=WSTATE.nat, st=k==='LA'?'':(std(k,nat.pos[k])||'');
+  return `<div class="popH"><b>${TH[k]}เดิม · ${x.v} คะแนน</b> <span class="bg64 ${good?'g':bad?'b':'n'}">${good?'ให้คุณ':bad?'อ่อน/ให้โทษ':'กลาง'}</span><button class="popX" type="button" onclick="closePop()">✕</button></div>
+   <p class="popS">${k==='LA'?'ลัคนาราศี'+SIGNS[sgn(nat.pos.LA)]:'สถิตราศี'+SIGNS[sgn(nat.pos[k])]+' ภพ'+HOUSES[T.sit-1]+(st?' · '+st:'')}${k===NB.lag?' · เป็นเจ้าลัคน์ (น้ำหนักมากที่สุด)':''}</p>
+   <div class="popSub">ดาวนี้ดูแลเรื่องอะไร</div><p><b>ตามธรรมชาติดาว:</b> ${KAR79[k]}<br><b>ในดวงนี้:</b> ${T.txt}</p>
+   <div class="popSub">เหตุที่ได้คะแนนนี้</div><p>${(x.why||[]).map(w=>`<span class="bg64 ${/^\+/.test(w)||/กลับดี/.test(w)?'g':/^−|^-/.test(w)?'b':'n'}">${w}</span>`).join(' ')||'<span class="note">กำลังกลาง ๆ ไม่มีเกณฑ์พิเศษ</span>'}</p>
+   <div class="popSub">สรุป</div><p>${good?`พื้นดวงเรื่อง${T.txt.replace(/ \(.*?\)/g,'')} แข็งแรง ดาวจรดีที่มาสัมพันธ์กับ${TH[k]}เดิมจะให้ผลเต็ม ส่วนดาวจรร้ายกระทบได้ไม่มาก`:bad?`พื้นดวงเรื่อง${T.txt.replace(/ \(.*?\)/g,'')} เปราะบาง ช่วงที่ดาวจรร้ายทำมุมกับ${TH[k]}เดิมควรระวังเป็นพิเศษ`:`พื้นดวงเรื่องนี้ปานกลาง ผลขึ้นกับดาวจรในแต่ละช่วง`}</p>`; }
+// ----- ช่วงเวลาที่มุมนี้ยังมีผล -----
+function span79(tk,nk,ang,orb,t0){ const nat=WSTATE.nat, np=nat.pos[nk], inOrb=t=>{ const d=sep66(posH(horaOf(t),tk),np); return Math.abs(d-ang)<=orb; };
+  const st=tk==='MO'?0.1:['SU','ME','VE','MA'].includes(tk)?1:5, lim=tk==='MO'?3:['SU','ME','VE'].includes(tk)?60:tk==='MA'?120:700; let a=new Date(t0), b=new Date(t0);
+  for(let i=0;i<lim/st;i++){ const t=new Date(a.getTime()-st*864e5); if(!inOrb(t)) break; a=t; } for(let i=0;i<lim/st;i++){ const t=new Date(b.getTime()+st*864e5); if(!inOrb(t)) break; b=t; }
+  const f=t=>tk==='MO'?`${t.getDate()} ${MONTHS_TH[t.getMonth()].slice(0,3)} ${String(t.getHours()).padStart(2,'0')}:00`:`${t.getDate()} ${MONTHS_TH[t.getMonth()]} ${t.getFullYear()+543}`; return `${f(a)} – ${f(b)}`; }
+function facPop79(f,p){ const H=(t,s)=>`<div class="popH"><b>${t}</b> ${s||''}<button class="popX" type="button" onclick="closePop()">✕</button></div>`, g=f.v>0, bd=`<span class="bg64 ${g?'g':'b'}">${g?'ให้คุณ':'ให้โทษ'} ${g?'+':''}${f.v.toFixed(1)}</span>`;
+  if(f.tk){ const T=topic79(f.nk), x=natal78().pl.find(q=>q.k===f.nk)||{v:50}, act=ACT79[f.tk][g?0:1], strong=x.v>=60, weak=x.v<45;
+    return H(f.t,bd)+`<p class="popS">ความแรง ${f.r.p}% · ห่างจากมุมพอดี ${f.r.dev.toFixed(1)}° · ${f.app?'กำลังเข้ามุม (ผลกำลังมา)':'กำลังออกจากมุม (ผลเริ่มคลาย)'}</p>
+     <div class="popSub">ดาวจร: ${TH[f.tk]}</div><p>${act}</p><div class="popSub">มุม</div><p>${ASPM79[f.r.nm]||f.r.nm}</p>
+     <div class="popSub">ไปกระทบ: ${TH[f.nk]}เดิม (${x.v} คะแนน)</div><p><b>ธรรมชาติ:</b> ${KAR79[f.nk]}<br><b>ในดวงนี้ดูแล:</b> ${T.txt}</p>
+     <div class="popSub">แปลว่าอะไร</div><p>ช่วงนี้เรื่อง <b>${T.txt.replace(/ \(.*?\)/g,'').replace(/ · /g,' และ')}</b> ${g?'ได้แรงหนุน — ':'ถูกกระทบ — '}${act}${g?(strong?' และเพราะ'+TH[f.nk]+'เดิมแข็ง ผลดีจะออกเต็ม':weak?' แต่'+TH[f.nk]+'เดิมอ่อน ผลดีจะออกไม่เต็ม ต้องรีบใช้โอกาส':''):(strong?' แต่'+TH[f.nk]+'เดิมแข็ง จึงรับมือได้':weak?' และ'+TH[f.nk]+'เดิมอ่อน จึงต้องระวังมากกว่าปกติ':'')}</p>
+     <div class="popSub">ช่วงที่มุมนี้มีผล</div><p>${span79(f.tk,f.nk,f.r.ang,f.r.orb,p.t)}</p>
+     <div class="popSub">ควรทำอย่างไร</div><p>${g?'ใช้จังหวะนี้เดินหน้าเรื่องที่เกี่ยวข้อง ติดต่อ เจรจา หรือเริ่มงานใหม่ในหัวข้อข้างต้น':'ชะลอเรื่องสำคัญในหัวข้อข้างต้น ตรวจทานเอกสาร ใจเย็น หลีกเลี่ยงการเผชิญหน้า และรอให้มุมนี้คลาย'}</p>`; }
+  const M={gm:['จันทร์จรเปลี่ยนราศีทุก 2–3 วัน นับภพจากจันทร์เดิม (โคจรผลแบบภารตะ) ภพ 3 6 7 10 11 ให้คุณ ภพ 4 8 12 ให้โทษ','ผลด้านอารมณ์ ความรู้สึก และความลื่นไหลของวัน'],ss:['เสาร์จรเทียบกับจันทร์เดิม ภพ 12 1 2 คือเสตสาติ (7 ปีครึ่ง) ภพ 3 6 11 เสาร์ให้คุณ','ผลระยะยาวหลายเดือนถึงหลายปี เรื่องความอดทน ภาระ และความมั่นคง'],gj:['พฤหัสจรเทียบกับจันทร์เดิม ภพ 2 5 7 9 11 ให้คุณ ภพ 8 12 ให้โทษ','ผลราว 1 ปี เรื่องโอกาส ผู้อุปถัมภ์ และการเติบโต'],lg:['ลัคนาจร (ราศีที่ขึ้นขอบฟ้าตะวันออก) เปลี่ยนทุกราว 2 ชั่วโมง เทียบกับภพในดวงเดิม','ใช้เลือกเวลาในวัน: ลัคนาจรตกภพดีของดวงเดิม เหมาะลงมือ'],lt:['เจ้าราศีของลัคนาจรเทียบกับทักษาของเจ้าชะตา ถ้าเป็นศรี เดช มนตรี ให้คุณ ถ้าเป็นกาลกิณีให้โทษ','ใช้เลือกเวลาในวันตามหลักทักษา']};
+  const key=f.k.replace(/^b/,''), m=M[key]||(key[0]==='r'?['ดาวพักร์ (ถอยหลัง) ทำให้เรื่องของดาวนั้นล่าช้า ต้องทบทวนของเดิม',KAR79[key.slice(1)]?'เรื่องที่ล่าช้า: '+KAR79[key.slice(1)]:'']:['','']);
+  return H(f.t,bd)+`<div class="popSub">หลักที่ใช้</div><p>${m[0]}</p><div class="popSub">ผลต่อเจ้าชะตา</div><p>${m[1]}</p>${f.day?'<p class="note">ปัจจัยนี้คงที่ทั้งวัน มาจากคะแนนรายวัน</p>':''}`; }
+function pop79(html,ev){ let P=$('tpop'); if(!P){ P=document.createElement('div'); P.id='tpop'; document.body.appendChild(P); } drag25(P); P.innerHTML=html; placePop(P,ev,Math.min(560,window.innerWidth-24)); }
 
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
