@@ -146,6 +146,9 @@ header{flex-wrap:wrap}.brand{flex:0 0 100%;width:100%;font-size:14px;font-weight
 :root[data-theme="dark"] #tpop{background:rgba(13,26,38,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--edge75b);border-radius:18px;box-shadow:0 24px 60px -16px rgba(0,0,0,.85)}
 :root[data-theme="dark"] *{scrollbar-color:#244055 transparent;scrollbar-width:thin}
 ::selection{background:rgba(156,203,232,.35)}
+:root[data-theme] .ab{border:0!important;background:transparent!important;box-shadow:none!important;padding:4px 8px 4px 0!important}
+:root[data-theme] .abMoon{border:0!important}
+
 .abMoon{cursor:pointer;pointer-events:auto;border-color:rgba(236,220,180,.6)!important;align-items:center}.abMoon:hover{border-color:#ecdcb4!important}.abMoon svg.moon84{width:40px!important;height:40px!important;max-width:none;flex:none}.abMoon>div{display:flex;flex-direction:column;line-height:1.3}.abMoon small{font-size:11px;color:var(--muted)}.abMoon b{font-size:13.5px}
 .mp84{display:flex;gap:16px;align-items:center}.mp84 svg.moon84{width:120px!important;height:120px!important;max-width:none;flex:none}.mp84t{font-size:20px;font-weight:500;margin-bottom:4px}
 .mp84r{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.mp84r>div{display:flex;gap:8px;align-items:center}.mp84r svg.moon84{width:30px!important;height:30px!important;max-width:none;flex:none}.mp84r span{display:flex;flex-direction:column}.mp84r small{color:var(--muted);font-size:11.5px}
@@ -1953,8 +1956,8 @@ function wheelF(o){
 const WGEO={};
 
 // ───────── ชั้นข้อมูล / ซูม / ลากดาวจร ─────────
-const LAYERS_DEF=[['dus','ภพร้าย ๖·๘·๑๒'],['hl','ไฮไลต์'],['tr','ดวงจร'],['call','ป้ายองศากำเนิด'],['callT','ป้ายองศาจร'],['tri','ตรียางค์'],['nak','ฤกษ์'],['nav','นวางค์'],['deg','องศา']];
-let LAY={dus:true,hl:true,tr:false,call:false,callT:false,tri:false,nak:false,nav:false,deg:false};
+const LAYERS_DEF=[['dus','ภพร้าย ๖·๘·๑๒'],['trLag','ภพตามลัคนาจร'],['hl','ไฮไลต์'],['tr','ดวงจร'],['call','ป้ายองศากำเนิด'],['callT','ป้ายองศาจร'],['tri','ตรียางค์'],['nak','ฤกษ์'],['nav','นวางค์'],['deg','องศา']];
+let LAY={dus:true,trLag:false,hl:true,tr:false,call:false,callT:false,tri:false,nak:false,nav:false,deg:false};
 try{ const sv=JSON.parse(localStorage.getItem('wheelLayers')||'null'); if(sv) LAY={...LAY,...sv}; }catch(e){}
 function saveLay(){ try{ localStorage.setItem('wheelLayers',JSON.stringify(LAY)); }catch(e){} }
 let VB=null; // {x,y,w} มุมมองซูม
@@ -1976,7 +1979,7 @@ const MONTHS_TH=['มกราคม','กุมภาพันธ์','มี�
 let WSTATE=null; // ข้อมูลสำหรับวาดซ้ำตอนลาก
 function drawMain(tt){ const S=WSTATE; if(!S) return; let tr2=null, retroT={};
   if(LAY.tr){ const tr=chartAt(tt,S.lat,S.lon); tr2={LA:tr.pos.LA,...Object.fromEntries(ORDER.map(k=>[k,tr.pos[k]]))}; for(const k of ORDER) if(k!=='RA'&&k!=='KE'&&tr.spd[k]<0) retroT[k]=1; }
-  const OR=CMP.show&&CMP.chart; $('rasi').innerHTML=wheelF({id:'wsvg',vargo:Object.fromEntries(Object.entries(S.nat2).filter(([k,x])=>nav(x)===sgn(x)).map(([k])=>[k,1])),trCol:OR?'#9b59b6':null,activeT:OR?null:((HLPIN&&HLPIN.t)?HLPIN.k:null),mark:OR?{}:S.mark,natal:S.nat2,transit:OR?outerRing(tr2):tr2,retro:S.retroN,retroT:cmpRetro(retroT),lagSign:S.lagS,center:S.center,tanu:S.tanu,L:LAY});
+  const OR=CMP.show&&CMP.chart; $('rasi').innerHTML=wheelF({id:'wsvg',vargo:Object.fromEntries(Object.entries(S.nat2).filter(([k,x])=>nav(x)===sgn(x)).map(([k])=>[k,1])),trCol:OR?'#9b59b6':null,activeT:OR?null:((HLPIN&&HLPIN.t)?HLPIN.k:null),mark:OR?{}:S.mark,natal:S.nat2,transit:OR?outerRing(tr2):tr2,retro:S.retroN,retroT:cmpRetro(retroT),lagSign:LAY.trLag?sgn(lagna(tt,S.lat,S.lon)):S.lagS,center:LAY.trLag?[S.center[0],'ภพตามลัคน์จร '+SIGNS[sgn(lagna(tt,S.lat,S.lon))]]:S.center,tanu:S.tanu,L:LAY});
   $('wstatus').innerHTML=OR?`<span class="note" style="color:#9b59b6">● วงนอกสีม่วง = ดวงกำเนิดของ <b>${CMP.chart.p.name}</b> (โหมดเทียบดวง) — ปิดได้ที่ส่วนเทียบดวง</span>`:LAY.tr?wheelStatus(tt)+' <span class="note">· ลากดาวจรสีเขียวเพื่อเลื่อนเวลา</span>':'<span class="note">แสดงเฉพาะพื้นดวง — กด "ดวงจร" เพื่อเปิดดาวจร</span>';
   const svg=$('wsvg'); applyVB(svg); bindWheel(svg,tt); }
 function bindWheel(svg,tt){
@@ -6254,12 +6257,20 @@ function livePos83(T){ const h=horaOf(T), S=WSTATE, o={}; ['SU','MO','MA','ME','
 function liveBox83(){ let b=document.getElementById('live83'); if(!b){ const nb=document.querySelector('.nowbar'); if(!nb) return null; b=document.createElement('div'); b.id='live83'; nb.after(b); } return b; }
 function liveFrame83(){ LV83.raf=0; if(!LIVE.on){ const b=document.getElementById('live83'); if(b) b.style.display='none'; const g=document.querySelector('#wsvg .lv83'); if(g) g.remove(); return; }
   LV83.raf=requestAnimationFrame(liveFrame83); const T=liveT83(); if(!T||!WSTATE) return; const P=livePos83(T), G=WGEO.wsvg, svg=document.getElementById('wsvg');
-  if(svg&&G&&G.A){ let g=svg.querySelector('.lv83'); if(!g){ g=document.createElementNS('http://www.w3.org/2000/svg','g'); g.setAttribute('class','lv83'); g.setAttribute('pointer-events','none'); svg.appendChild(g); g._k=null; }
-    const pt=(r,lon)=>{ const a=(90+G.A(lon))*Math.PI/180; return [G.cx+r*Math.cos(a),G.cy-r*Math.sin(a)]; };
-    let h=''; [['LA','#ff8f78','ลัคน์จร',G.rOut+10,2.2],['MO','#cfe6f5','จันทร์จร',G.rOut+4,1.6],['SU','#ecdcb4','อาทิตย์จร',G.rOut+4,1.6]].forEach(([k,c,n,r2,w])=>{ if(P[k]==null) return; const [x1,y1]=pt(G.half*1.05,P[k]), [x2,y2]=pt(r2,P[k]), [x3,y3]=pt(r2+16,P[k]);
-      h+=`<line x1="${x1.toFixed(2)}" y1="${y1.toFixed(2)}" x2="${x2.toFixed(2)}" y2="${y2.toFixed(2)}" stroke="${c}" stroke-width="${w}" stroke-opacity=".85" stroke-dasharray="${k==='LA'?'':'4 3'}"/><circle cx="${x2.toFixed(2)}" cy="${y2.toFixed(2)}" r="${k==='LA'?5:3.5}" fill="${c}"><animate attributeName="r" values="${k==='LA'?'4;6.5;4':'3;4.5;3'}" dur="1.6s" repeatCount="indefinite"/></circle>`;
-      if(k==='LA') h+=`<text x="${x3.toFixed(1)}" y="${y3.toFixed(1)}" font-size="10" fill="${c}" text-anchor="middle" dominant-baseline="middle" stroke="var(--bg)" stroke-width="3" paint-order="stroke">ลจ ${dms83(P[k]).txt}</text>`; });
-    ['MA','ME','JU','VE','SA','RA','KE'].forEach(k=>{ if(P[k]==null) return; const [x,y]=pt(G.rW+3,P[k]); h+=`<circle cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="2.6" fill="#7fd3b0"/>`; });
+  if(svg&&G&&G.A){ let g=svg.querySelector('.lv83'); if(!g){ g=document.createElementNS('http://www.w3.org/2000/svg','g'); g.setAttribute('class','lv83'); g.setAttribute('pointer-events','none'); svg.appendChild(g); }
+    const pt=(r,lon)=>{ const a=(90+G.A(lon))*Math.PI/180; return [G.cx+r*Math.cos(a),G.cy-r*Math.sin(a)]; }, F=n=>n.toFixed(2), tnow=performance.now();
+    const blink=(0.72+0.28*Math.sin(tnow/240)).toFixed(3);
+    let h=`<defs><clipPath id="lvc85"><circle cx="${G.cx}" cy="${G.cy}" r="${G.rW}"/></clipPath></defs>`;
+    if(P.LA!=null){ const si=sgn(P.LA), hf=G.half, Rr=G.rW+2, CP=[[[-hf,-hf],[hf,-hf],[hf,-Rr],[-hf,-Rr]],[[-hf,-hf],[-hf,-Rr],[-Rr,-Rr]],[[-hf,-hf],[-Rr,-Rr],[-Rr,-hf]],[[-hf,-hf],[-Rr,-hf],[-Rr,hf],[-hf,hf]],[[-hf,hf],[-Rr,hf],[-Rr,Rr]],[[-hf,hf],[-Rr,Rr],[-hf,Rr]],[[-hf,hf],[hf,hf],[hf,Rr],[-hf,Rr]],[[hf,hf],[Rr,Rr],[hf,Rr]],[[hf,hf],[Rr,hf],[Rr,Rr]],[[hf,-hf],[Rr,-hf],[Rr,hf],[hf,hf]],[[hf,-hf],[Rr,-Rr],[Rr,-hf]],[[hf,-hf],[hf,-Rr],[Rr,-Rr]]];
+      h+=`<g opacity="${blink}"><polygon clip-path="url(#lvc85)" points="${CP[si].map(([a,b])=>F(G.cx+a)+','+F(G.cy+b)).join(' ')}" fill="#ff8f78" fill-opacity=".42" stroke="#ff8f78" stroke-width="2.2"/>${G.hl?G.hl(P.LA,'#ff8f78',null).replace(/fill-opacity=".22"/g,'fill-opacity=".55"'):''}</g>`;
+      const [x2,y2]=pt(G.rOut+3,P.LA), [x3,y3]=pt(G.rOut+18,P.LA); h+=`<circle cx="${F(x2)}" cy="${F(y2)}" r="4" fill="#ff8f78" opacity="${blink}"/><text x="${F(x3)}" y="${F(y3)}" font-size="10" fill="#ff8f78" text-anchor="middle" dominant-baseline="middle" stroke="var(--bg)" stroke-width="3" paint-order="stroke">ลจ ${dms83(P.LA).txt}</text>`; }
+    // ดาวจรเลื่อนครบ 1 ลิปดา → กระพริบ + เส้นค่อยขึ้นแล้วหาย
+    LV83.pu=LV83.pu||{}; LV83.lm=LV83.lm||{};
+    ['MO','SU','ME','VE','MA','JU','SA','RA','KE'].forEach(k=>{ if(P[k]==null) return; const m=Math.floor(norm(P[k])*60); if(LV83.lm[k]!=null&&LV83.lm[k]!==m&&!(LV83.pu[k]&&tnow-LV83.pu[k]<3000)) LV83.pu[k]=tnow; LV83.lm[k]=m; });
+    Object.entries(LV83.pu).forEach(([k,t0])=>{ const age=(tnow-t0)/2600; if(age>1||P[k]==null){ if(age>1) delete LV83.pu[k]; return; } const env=Math.sin(Math.PI*age), gl=svg.querySelector(`g.trg[data-k="${k}"] circle`);
+      const [x1,y1]=pt(G.rW,P[k]); let x2,y2; if(gl){ x2=+gl.getAttribute('cx'); y2=+gl.getAttribute('cy'); } else { [x2,y2]=pt(G.rOut,P[k]); }
+      const [x0,y0]=pt(G.half*1.1,P[k]), len=Math.hypot(x2-x0,y2-y0), grow=Math.min(1,age*2.2);
+      h+=`<line x1="${F(x0)}" y1="${F(y0)}" x2="${F(x0+(x2-x0)*grow)}" y2="${F(y0+(y2-y0)*grow)}" stroke="#7fd3b0" stroke-width="1.6" stroke-opacity="${(env*.9).toFixed(3)}" stroke-linecap="round"/><circle cx="${F(x1)}" cy="${F(y1)}" r="2.6" fill="#7fd3b0" opacity="${env.toFixed(3)}"/><circle cx="${F(x2)}" cy="${F(y2)}" r="${(9+8*age).toFixed(2)}" fill="none" stroke="#7fd3b0" stroke-width="2" opacity="${(env*.9).toFixed(3)}"/>`; });
     g.innerHTML=h; if(g!==svg.lastElementChild) svg.appendChild(g); }
   const now=performance.now(); if(now-LV83.lastTxt<120) return; LV83.lastTxt=now; const b=liveBox83(); if(!b) return; b.style.display='';
   const dt=LIVE.speed===1?60:Math.max(60,LIVE.speed*2), T2=new Date(T.getTime()+dt*1000), P2=livePos83(T2);
@@ -6297,6 +6308,7 @@ function moonPop84(ev){ const tt=getTransit(), h=horaOf(tt), el=moonElong(h), L=
 { const _ab84=ageBadge; ageBadge=function(f,bt,tt){ return _ab84(f,bt,tt)+moonCard84(tt); }; }
 document.addEventListener('click',e=>{ const m=e.target.closest('.abMoon'); if(m) moonPop84(e); });
 document.addEventListener('keydown',e=>{ if((e.key==='Enter'||e.key===' ')&&e.target.closest&&e.target.closest('.abMoon')){ e.preventDefault(); moonPop84(e); } });
+function trLagS85(tt){ try{ return sgn(lagna(tt,WSTATE.lat,WSTATE.lon)); }catch(e){ return WSTATE.lagS; } }
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
   try{ rhythm77(); }catch(e){ console.error(e); document.getElementById('rh77Out').innerHTML='<p class="note">⚠ '+e.message+'</p>'; } }
