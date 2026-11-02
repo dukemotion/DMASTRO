@@ -8134,7 +8134,8 @@ const CHG110=[
  {v:'130.3',d:'2026-11-02',k:'u',t:'ความรัก ๗ ขั้น: ศุกร์คู่ดาว',x:'ขั้นศุกร์และพุธเพิ่มหลักศุกร์ ๓ ข้อ: ศุกร์เป็นเจ้าเรือนปุตตะหรือปัตนิหรือไม่ · ตำแหน่งดีหรืออยู่ทุสถาน · ศุกร์กุมหรือเล็งดาวใด ตามความหมายคู่ ๑๖ ๒๖ ๓๖ ๔๖ ๕๖ ๗๖ ๘๖ ๙๖ ๖๐',c:['love'],p:['lv53P']},
  {v:'131',d:'2026-11-02',k:'u',t:'หน้าเจ้าเรือนใช้ไอคอน SVG ทั้งหมด',x:'เปลี่ยนอีโมจิบ้าน ดาวเคราะห์ และหนังสือในหัวข้อเจ้าเรือนสถิตภพ ดาวสถิตภพ และลิงก์ห้องสมุดเป็นไอคอน SVG · ลูกศรตัวอักษรในทุกแผงของหน้าเจ้าเรือนเปลี่ยนเป็นลูกศร SVG สีทอง · สามเหลี่ยมเปิดปิดหัวข้อเปลี่ยนเป็นไอคอน SVG ที่หมุนเมื่อเปิด',c:['lord'],p:['lhP']},
  {v:'132',d:'2026-11-02',k:'n',t:'ปี ค.ศ. และแชร์โลเคชั่น',x:'ช่องปีเกิดและปีของวันจรเลือกได้ทั้ง พ.ศ. และ ค.ศ. (พิมพ์ปีน้อยกว่า ๒๓๐๐ ระบบถือเป็น ค.ศ. ให้อัตโนมัติ และจำค่าที่เลือก) · ปุ่มใช้ตำแหน่งปัจจุบันเป็นที่เกิด หรือเป็นสถานที่วันจร · วางลิงก์แชร์โลเคชั่นจาก Google Maps / Apple Maps / LINE หรือพิมพ์พิกัด ระบบหาจังหวัดหรือเมืองที่ใกล้ที่สุดให้',c:['natal','transit'],p:[],go:'#qf76'},
- {v:'132.1',d:'2026-11-02',k:'f',t:'ภพตามลัคนาจร: ราศีอยู่กับที่ เปลี่ยนเฉพาะภพ',x:'ป๊อปอัปตอนลากหรือกดลัคนาจรใช้จักรแบบเดียวกับจักรราศีหลัก ราศีและดาวอยู่ตำแหน่งเดิม เปลี่ยนเฉพาะชื่อภพ เลขภพ และภพทุสถานที่แรเงา โดยนับจากลัคนาจร · รูปที่บันทึกจากปุ่มภพตามลัคนาจรเป็นแบบเดียวกัน',c:['natal'],p:[],go:'#rasi'}];
+ {v:'132.1',d:'2026-11-02',k:'f',t:'ภพตามลัคนาจร: ราศีอยู่กับที่ เปลี่ยนเฉพาะภพ',x:'ป๊อปอัปตอนลากหรือกดลัคนาจรใช้จักรแบบเดียวกับจักรราศีหลัก ราศีและดาวอยู่ตำแหน่งเดิม เปลี่ยนเฉพาะชื่อภพ เลขภพ และภพทุสถานที่แรเงา โดยนับจากลัคนาจร · รูปที่บันทึกจากปุ่มภพตามลัคนาจรเป็นแบบเดียวกัน',c:['natal'],p:[],go:'#rasi'},
+ {v:'133',d:'2026-11-02',k:'u',t:'เพิ่มดวงตัวอย่าง โอปอร์ AF6',x:'เพิ่มดวง โอปอร์ AF6 เกิดวันศุกร์ที่ ๒๓ ธันวาคม ๒๕๓๑ เวลา ๑๔:๒๖ น. อ.เมือง จ.แพร่ (18.145°N 100.142°E) เข้ารายการดวงที่บันทึกไว้ · ระบบเพิ่มให้ครั้งเดียว ถ้าลบหรือแก้แล้วจะไม่เพิ่มซ้ำ',c:[],p:[],go:'#sv76'}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
@@ -9286,6 +9287,12 @@ document.addEventListener('click',async e=>{ const b=e.target.closest&&e.target.
   catch(err){ if(st) st.innerHTML=`${bdg98('b','ใช้ตำแหน่งไม่ได้')} <span class="note">${err.message}${k.endsWith('gps')?' — ลองวางลิงก์แชร์โลเคชั่นในช่องข้าง ๆ แทน':''}</span>`; } });
 { const _c=compute; compute=function(){ const r=_c.apply(this,arguments); try{ trLab132(); eraSync132(); }catch(e){} return r; }; }
 setTimeout(eraInit132,0); window.addEventListener('load',eraInit132); setTimeout(eraInit132,1200);
+
+
+// ===== v133: ดวงตัวอย่างเพิ่ม (ชุด ๓) — เพิ่มเข้ารายการดวงที่บันทึกครั้งเดียว ไม่ทับดวงที่ผู้ใช้แก้ไว้
+const PRESETS3=[{name:'โอปอร์ AF6',d:23,m:12,y:2531,h:14,mi:26,prov:40,lat:18.145,lon:100.142,la:null,sex:'F'}];
+{ const _lp=loadProfiles; loadProfiles=function(){ const a=_lp.apply(this,arguments); let d=false; try{ d=localStorage.getItem(LS+'.presets3')==='1'; }catch(e){} if(!d){ for(const p of PRESETS3) if(!a.some(x=>x.name===p.name)) a.push({...p}); try{ localStorage.setItem(LS,JSON.stringify(a)); localStorage.setItem(LS+'.presets3','1'); }catch(e){} } return a; }; }
+setTimeout(()=>{ try{ if(window._cmpFill) window._cmpFill(); }catch(e){} },300);
 
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
