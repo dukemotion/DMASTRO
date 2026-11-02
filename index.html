@@ -146,6 +146,10 @@ header{flex-wrap:wrap}.brand{flex:0 0 100%;width:100%;font-size:14px;font-weight
 :root[data-theme="dark"] #tpop{background:rgba(13,26,38,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--edge75b);border-radius:18px;box-shadow:0 24px 60px -16px rgba(0,0,0,.85)}
 :root[data-theme="dark"] *{scrollbar-color:#244055 transparent;scrollbar-width:thin}
 ::selection{background:rgba(156,203,232,.35)}
+.g108{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin:10px 0}.pc108{border:1px solid var(--line);border-radius:8px;padding:6px 8px;display:flex;flex-direction:column;gap:2px;font-size:12.5px}.pc108.k{border-color:#9ccbe8;background:rgba(156,203,232,.12)}
+.vyw108{display:flex;flex-wrap:wrap;gap:6px}.vy108{border:1px solid var(--line);border-radius:8px;padding:6px 8px;display:flex;flex-direction:column;gap:3px;font-size:12.5px;min-width:92px}.vy108.now{border-color:#9ccbe8;background:rgba(156,203,232,.14)}
+@media(max-width:700px){.g108{grid-template-columns:repeat(3,1fr)}}
+#rd107Out .t98 td:last-child{min-width:260px;white-space:normal}#rd107Out .t98 td:nth-child(2),#rd107Out .t98 td:nth-child(3){white-space:nowrap}
 .ib104top{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:14px;align-items:start}.ib104w{width:100%;max-width:340px;height:auto;display:block;margin:auto}.ib104g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.ib104c{border-left-width:3px!important}@media(max-width:900px){.ib104top,.ib104g{grid-template-columns:1fr}}
 .transit{display:grid!important;grid-template-columns:1fr 1fr 1.5fr 1fr auto 1fr;gap:6px!important;align-items:center}.transit input{width:100%!important;min-width:0;border-radius:8px!important;text-align:center;padding-left:4px!important;padding-right:4px!important}#trBtn103{display:grid!important;grid-template-columns:repeat(5,1fr);gap:6px}#trBtn103 button{border-radius:8px!important;width:100%;min-height:42px;padding:6px 2px!important;white-space:nowrap;font-size:13px}#trBtn103 #now{font-weight:600}
 .cat29{grid-template-columns:96px 1fr}.gw102{display:flex;flex-direction:column;gap:2px}.crail29 .gh102{position:relative;gap:2px;padding:9px 2px 7px;color:var(--ink);font-weight:500;font-size:11.5px}.crail29 .gh102 i{font-style:normal;font-size:9.5px;line-height:1;opacity:.75;padding:2px 6px;border-radius:8px;background:rgba(156,203,232,.14)}.crail29 .gh102 .cv102{position:absolute;top:6px;right:5px;width:11px!important;height:11px!important;opacity:.55;transition:transform .2s}.gw102.open>.gh102 .cv102{transform:rotate(90deg)}:root .crail29 .gw102.cur>.gh102{color:var(--gold)}.gw102.open>.gh102{background:rgba(156,203,232,.08)}.gi102{display:none;flex-direction:column;gap:2px;margin:2px 0 8px;padding:4px 0;border-radius:10px;background:rgba(0,0,0,.18);box-shadow:inset 2px 0 0 rgba(201,162,39,.5)}.gw102.open>.gi102{display:flex}.gi102 button{font-size:11px!important;padding:6px 2px!important}.gi102 svg{width:18px!important;height:18px!important}@media(max-width:700px){.crail29{gap:4px;background:rgba(10,22,33,.94)!important;padding:6px!important}.gw102{flex-direction:row;flex:0 0 auto;align-items:stretch}.crail29 .gh102{flex:0 0 auto!important;width:auto!important;min-width:64px;padding:7px 10px!important;white-space:nowrap}.crail29 .gh102 .cv102,.crail29 .gh102 i{display:none}:root .crail29 .gw102.open>.gh102{background:rgba(201,162,39,.18);color:var(--gold)}:root .crail29 .gw102.open>.gh102 svg{color:var(--gold)}.crail29 .gi102 button{white-space:nowrap;flex:0 0 auto!important;width:auto!important;min-width:62px;padding:6px 8px!important}.gi102{flex-direction:row;margin:0 4px 0 2px;padding:0 4px;box-shadow:inset 0 -2px 0 rgba(201,162,39,.5)}.gi102 button{flex:0 0 66px!important}}
@@ -859,6 +863,8 @@ img,svg{max-width:100%}
   <div class="panel" style="margin-bottom:14px" id="kc106P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">กาลจักรลัคน์ — ลัคนาจรตามประเภทราศี ตลอดชีวิต</h3><div id="kc106Out"></div></div>
   <div class="panel" style="margin-bottom:14px" id="vai106P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">๓ วัย ๙ ช่วงจากตนุเศษ — ดาวครองแต่ละช่วงชีวิต</h3><div id="vai106Out"></div></div>
   <div class="panel" style="margin-bottom:14px" id="sr106P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">ดวงจรประจำปี — ดวงที่อาทิตย์จรกลับถึงองศาเดิม</h3><div id="sr106Out"></div></div>
+  <div class="panel" style="margin-bottom:14px" id="rd107P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">อ่านเจ้าเรือน ๒ จังหวะแบบหมอเถา — เหตุ → ผล ทั้ง ๑๒ เรื่อง · ลัคนาเทียบตนุลัคน์ · ดาวผสมเรือน</h3><div id="rd107Out"></div></div>
+  <div class="panel" style="margin-bottom:14px" id="mt108P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">พยากรณ์จรระบบหมอเถา — เกณฑ์ชันษาจร · ภพจร · ตนุเศษจร · ตรีเทพ · รายเดือน</h3><div id="mt108Out"></div></div>
   <div class="panel" style="margin-bottom:14px" id="kidP"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">ลูก·ตั้งครรภ์ — โอกาสมีบุตร · เพศ/จำนวน · จังหวะตั้งครรภ์ · ผูกดวงลูก · ดวงลูกส่งผลต่อพ่อแม่</h3><div id="kidOut"></div></div>
   <div class="panel" style="margin-bottom:14px" id="parP"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">พ่อแม่ — ดาวแทนบิดามารดาหลายสำนัก · ปู่ย่าตายาย · ช่วงดูแลพ่อแม่</h3><div id="parOut"></div></div>
   <div class="panel" style="margin-bottom:14px" id="marksP"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">หาตำหนิ — ไฝ · ปาน · แผลเป็น ตามตรียางค์ลัคน์ (ชี้ตำแหน่งบนร่างกาย)</h3><div id="marksOut"></div></div>
@@ -2439,7 +2445,7 @@ const CAT29=[
  {id:'natal',t:'ดวงเดิม',d:'ธาตุ · ลัคนา · ตนุลัคน์ · ตนุเศษ · มาตรฐาน · ดาวรายดวง · ภพ',ic:'<circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/>',p:['elem','stdread','pread','hread','lagChkP','s93P','ps98P']},
  {id:'bhava',t:'๑๒ ภพ',d:'แยกดูทีละภพ — ดาวสถิต เจ้าเรือน มุม ดาวการกะ ดวงจร และตำราที่เกี่ยวข้อง',ic:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>',p:['bh70P']},
  {id:'tree',t:'ต้นไม้ชะตา',d:'เปรียบดวงกับต้นไม้ · ส่วนไหนแข็งแรง ส่วนไหนอ่อนแอ',ic:'<path d="M12 22v-7"/><path d="M12 15c-4 0-7-2.5-7-6a5 5 0 0 1 4-4.9A4 4 0 0 1 12 2a4 4 0 0 1 3 2.1A5 5 0 0 1 19 9c0 3.5-3 6-7 6z"/><path d="M12 15l-3-3M12 13l3-3"/><path d="M8 22h8"/>',p:['treeP']},
- {id:'lord',t:'เจ้าเรือน',d:'ภพซ้อน เหตุ→ผล · อนุเกษตร · ดาวสถิตภพ',ic:'<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>',p:['lordMapP','lhP','tn90P','bb90P']},
+ {id:'lord',t:'เจ้าเรือน',d:'ภพซ้อน เหตุ→ผล · อนุเกษตร · ดาวสถิตภพ',ic:'<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>',p:['rd107P','lordMapP','lhP','tn90P','bb90P']},
  {id:'nava',t:'ฤกษ์·นวางค์',d:'ฤกษ์กำเนิด · ไส้ชะตา',ic:'<circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/>',p:['nak72P','bnakP','legP','nvq54P','navaP','nv90P']},
  {id:'spec',t:'เกณฑ์พิเศษ',d:'องค์เกณฑ์ · ดาวดับ · ยงยศ · คู่ดาว · นิจแก้ · ดวงนักโหร',ic:'<circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/><path d="M11 8v6M8 11h6"/>',p:['spec62P','kPlusP','fourP','standP','thao55P','nijP','jupP','ruP','specP','astP','shadP']},
  {id:'ved',t:'ภารตะ',d:'ปัญจางคะ · ทศา · โยค',ic:'<path d="M12 3c3 4 3 8 0 12c-3-4-3-8 0-12z"/><path d="M4 21h16"/><path d="M7 18c2-2 8-2 10 0"/>',p:['vedP']},
@@ -2469,7 +2475,7 @@ const CAT29=[
  {id:'name94',t:'นามศาสตร์·ตั้งชื่อ',d:'วิเคราะห์ชื่อ สกุล ชื่อเล่น บริษัท · ทักษา เลขศาสตร์ อายตนะ ตุ๊กตาไขนาม มหาภูติ ดาววาสนา',ic:'<path d="M4 20h16"/><path d="M6 16l5-12 5 12"/><path d="M8 11h6"/><path d="M18 4l2 2"/>',p:['nm94P','nm94GP']},
  {id:'old98',t:'สมพงศ์·โสฬส·ปีหลวง',d:'มิตร-ศัตรูวัน เดือน ธาตุปีเกิด · เกณฑ์แต่งงาน · ทักษาโสฬส · วารกำเนิด · มิตรสหาย · โชคชันษา · เถลิงศก · ธาราธิคุณ · พิรุณศาสตร์ · เถรสามทอง',ic:'<path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15.6 7.1 18.2l.9-5.5-4-3.9 5.5-.8z"/><circle cx="12" cy="11.5" r="2"/>',p:['sp98P','so98P','wd98P','ps98P','ch98P','yr98P','th98P']},
  {id:'ib104',t:'อินทภาส·บาทจันทร์',d:'คัมภีร์พิชัยสงคราม · หลักอินทภาส บาทจันทร์ ลัคนา · วัฒนะ/หายนะชะตา · จร · ฆาตมฤตยู',ic:'<circle cx="9" cy="12" r="4.5"/><path d="M9 3v2M9 19v2M2 12h2M3.9 6.9l1.4 1.4M3.9 17.1l1.4-1.4"/><path d="M19 6.5a5.5 5.5 0 1 0 0 11 4.5 4.5 0 0 1 0-11z"/>',p:['ib104P']},
- {id:'tm106',t:'ทศา·กาลจักร',d:'มหาทักษา ๑๐๘ จากฤกษ์จันทร์ · กาลจักรลัคน์ · ๓ วัย ๙ ช่วง · ดวงจรประจำปี',ic:'<circle cx="12" cy="12" r="9"/><path d="M12 3v9l6 4"/><path d="M3 12h2M19 12h2M12 19v2"/>',p:['as106P','kc106P','vai106P','sr106P']},
+ {id:'tm106',t:'ทศา·กาลจักร',d:'มหาทักษา ๑๐๘ จากฤกษ์จันทร์ · กาลจักรลัคน์ · ๓ วัย ๙ ช่วง · ดวงจรประจำปี',ic:'<circle cx="12" cy="12" r="9"/><path d="M12 3v9l6 4"/><path d="M3 12h2M19 12h2M12 19v2"/>',p:['mt108P','as106P','kc106P','vai106P','sr106P']},
  {id:'kam',t:'ตำราโบราณ',d:'ศูนยพาหะ · นวางศ์ลัคน์ · ภินทุ · ปฐาน · อุบลโชค · อสีติธาตุ · คัมภีร์เบ็ดเสร็จ · ฤกษ์โหรหลวง',ic:'<path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/>',p:['kam58P','yr58P','asi58P','bed58P','rk58P','yr98P','th98P']},
  {id:'kids',t:'ลูก·ตั้งครรภ์',d:'ฤกษ์ผ่าคลอด · โอกาสมีบุตร · เพศ · ตั้งครรภ์ · ดวงลูก',ic:'<circle cx="9" cy="6" r="2.3"/><circle cx="16.5" cy="9.5" r="1.7"/><path d="M5.5 20v-5a3.5 3.5 0 0 1 7 0v5M14 20v-3.5a2.5 2.5 0 0 1 5 0V20"/>',p:['br87P','kidP']},
  {id:'parents',t:'พ่อแม่',d:'ดาวบิดามารดา · ปู่ย่าตายาย · ช่วงดูแล',ic:'<circle cx="8" cy="6" r="2.3"/><circle cx="16" cy="6" r="2.3"/><path d="M4 20v-5a4 4 0 0 1 8 0v5M12 20v-5a4 4 0 0 1 8 0v5"/>',p:['parP']},
@@ -7719,6 +7725,112 @@ function sr106(){ const bt=WSTATE.bt, tt=getTransit(), nat=WSTATE.nat, L=sgn(nat
 function run106(){ [['as106Out',ash106],['kc106Out',kc106],['vai106Out',vai106],['sr106Out',sr106]].forEach(([id,f])=>{ const el=document.getElementById(id); if(!el||!WSTATE||!WSTATE.nat) return; const pn=el.closest('.panel'); if(pn&&pn.style.display==='none') return; try{ el.innerHTML=f(); }catch(e){ console.error(e); el.innerHTML='<p class="note">⚠ '+e.message+'</p>'; } }); }
 { const _s=cat29Show; cat29Show=function(id){ const r=_s.apply(this,arguments); setTimeout(run106,0); return r; }; }
 { const _c=compute; compute=function(){ const r=_c.apply(this,arguments); try{ const k=[WSTATE.bt&&WSTATE.bt.getTime(),getTransit().toDateString(),WSTATE.nat&&WSTATE.nat.pos.LA].join('|'); if(k!==window._k106){ window._k106=k; setTimeout(run106,0); } }catch(e){} return r; }; }
+
+// ===== v107: อ่านเจ้าเรือน ๒ จังหวะแบบหมอเถา (อ.อรุณ ลำเพ็ญ) — เหตุ (ภพที่เจ้าเรือนไปอยู่) → ผล (เจ้าบ้านไปอยู่ภพใด) + ตัวปรับมาตรฐาน + กฎผสมภพ + ดาวผสมเรือน
+const HC107=['ตัวเองลงมือเอง','ผูกกับเงินและรายได้','เพื่อน สังคม การติดต่อ','บ้าน ญาติ ถิ่นฐาน','ลูก ความสนุก การเสี่ยง','อุปสรรค การแข่งขัน งานบริการ','คู่ครอง หุ้นส่วน','การเปลี่ยนแปลง ความสูญเสีย การจากไกล','ผู้ใหญ่ ความรู้ ศาสนา','การงาน','โอกาส ความสำเร็จ คนสนิท','เรื่องลับ ต่างถิ่น การเสียสละ'];
+const HR107=['กลับมาที่ตัวเอง ตั้งหลักได้','ได้เงินหรือรายได้','ได้เพื่อน ชื่อเสียง การติดต่อ','ได้ความถาวร ที่อยู่ ญาติหนุน','ได้ความสุข ลูก หรือผลจากการเสี่ยง','เจออุปสรรค ต้องสู้','ได้คู่หรือหุ้นส่วน','เกิดการสูญเสีย จากไกล หรือเปลี่ยนแปลง','ผู้ใหญ่อุ้มชู ราบรื่น','ส่งผลถึงงาน','สำเร็จ สมหวัง','ไม่คาดฝัน เป็นความลับ ผิดหวังก่อน'];
+const MOD107=[[/มหาอุจ|อุจ(?!จา)/,'ใหญ่ มีเกียรติ เป็นเรื่องสำคัญ'],[/มหาจักร/,'พลิกแพลง เกินคาด'],[/ราชาโชค/,'มีผู้เมตตา ได้ตำแหน่ง'],[/เกษตร/,'ยาวนาน มั่นคง'],[/นิจ/,'ทีละน้อย ไม่สมศักดิ์ศรี'],[/ประ/,'ไม่มั่นคง ไม่เต็มเม็ด']];
+const REL107=(a,b)=>{ if(a===b) return 'ตนเอง'; const k=Math.min(a,b)+'-'+Math.max(a,b); return (PAIR[k]||'กลาง').replace(/^คู่/,''); };
+const HOST107={1:['สง่าขึ้น เข้มขึ้น','มั่นใจ เด็ดขาด ทิฐิแรง'],2:['นุ่มนวล สุภาพ ประณีต','อ่อนไหว เมตตา รักบ้าน ใจน้อย'],3:['กระฉับกระเฉง ห้าวขึ้น','กล้าพูดกล้าทำ ใจร้อน'],4:['คล่องตัว เป็นมิตร','ยืดหยุ่น ใช้เหตุผล รับฟัง'],5:['น่านับถือ สุขุม','ไตร่ตรอง ใจกว้าง ใจบุญ'],6:['มีเสน่ห์ ร่าเริง อ่อนหวาน','ชอบความงาม แสดงรักชังชัด'],7:['ช้า ระวังตัว ทรหด','รอบคอบ ระแวง อดทนรอได้'],8:['ผลุนผลัน มีแววนักเลง','ไหวพริบ กล้าเสี่ยง วู่วาม']};
+function sc107(k,x,L){ const st=std(k,x), h=houseOf(x,L); let s=0; if(/มหาอุจ|อุจ(?!จา)|ราชาโชค|มหาจักร/.test(st)) s+=1.2; else if(/เกษตร/.test(st)) s+=1; if(/นิจ|ประ/.test(st)) s-=1; if([6,8,12].includes(h)) s-=.7; if([1,4,7,10,5,9,11].includes(h)) s+=.3; return {s,st,h}; }
+function rd107(){ const nat=WSTATE.nat, L=sgn(nat.pos.LA), P8=k=>k, lordK=s=>PNUM2K[LORD[s]], tl=lordK(L), tlS=sgn(nat.pos[tl]), out=[];
+  for(let H=1;H<=12;H++){ const s=(L+H-1)%12, P=lordK(s), x=nat.pos[P], X=houseOf(x,L), sP=sgn(x), D=lordK(sP), y=nat.pos[D], Y=houseOf(y,L), a=sc107(P,x,L), b=sc107(D,y,L), rel=REL107(PNUM[P],PNUM[D]);
+    let txt, own=P===D, special='';
+    if(own){ const N=((sP-tlS+12)%12)+1; txt=`เจ้าเรือนอยู่ในบ้านตัวเอง (${a.st||'เกษตร'}) — มั่นคงในตัว · ต่อตนุลัคน์เป็นภพ${HOUSES[N-1]}: ${HR107[N-1]}`; }
+    else { const mod=(MOD107.find(m=>m[0].test(b.st))||[0,''])[1]; txt=`เหตุ: ${HC107[X-1]} → ผล: ${HR107[Y-1]}${mod?' ('+mod+')':''}`; }
+    if(!own){ if(H===8&&[6,12].includes(Y)||H===8&&Y===8) special='มรณะผสมอริ/วินาศ/มรณะ — ไปทางโทษ ควรระวังเป็นพิเศษ'; if(H===11&&Y===8) special='สำเร็จหลังความสูญเสีย หรือได้ประโยชน์จากเรื่องร้าย'; if(H===8&&Y===9) special='ขาดที่พึ่ง ผู้ใหญ่ห่างหาย'; if(H===9&&Y===6) special='ช่วยคนอื่นแล้วตัวเองเดือดร้อน แต่ยามลำบากจะมีคนช่วย'; if(/^มิตร/.test(rel)&&Y===6) special=(special?special+' · ':'')+'มิตรกลายเป็นตัวก่อเรื่อง'; }
+    const sc=a.s+(own?0:b.s*.6)+(/^มิตร|ธาตุ/.test(rel)?.3:/^ศัตรู/.test(rel)?-.3:0), g=sc>=.8?'g':sc<=-.6?'b':'m';
+    out.push({H,P,X,D,Y,txt,special,g,rel,a,b,own}); }
+  return {out,tl,tlS,L}; }
+function rdHTML107(){ const nat=WSTATE.nat, R=rd107(), ts=tanusetCh(nat), tsk=ts.key, tk=R.tl;
+  const mix=(k,mode)=>{ const s=sgn(nat.pos[k]), host=LORD[s], hk=PNUM2K[host], st=std(k,nat.pos[k]), amt=/นิจ|ประ/.test(st)?'รับมาก':/อุจ|เกษตร|ราชาโชค|มหาจักร/.test(st)?'รับน้อย':'รับปานกลาง'; if(hk===k) return `${TH[k]}อยู่บ้านตัวเอง — แสดงธรรมชาติของตนเต็มที่`; return `${TH[k]}อยู่ราศี${SIGNS[s]} บ้านของ${TH[hk]} → ${amt}: ${HOST107[host][mode]}`; };
+  const rows=R.out.map(r=>`<tr><td><b>${HOUSES[r.H-1]}</b></td><td>${TH[r.P]} → ภพ${HOUSES[r.X-1]}${r.a.st?' <span class="note">'+r.a.st+'</span>':''}</td><td>${r.own?'—':`${TH[r.D]} → ภพ${HOUSES[r.Y-1]}${r.b.st?' <span class="note">'+r.b.st+'</span>':''} <span class="note">(${r.rel})</span>`}</td><td>${bdg98(r.g,gname98[r.g])} ${r.txt}${r.special?`<br>${bdg98('b','กฎผสมภพ')} ${r.special}`:''}</td></tr>`).join('');
+  const cmp=[2,7,10].map(H=>{ const r=R.out[H-1], fromL=houseOf(nat.pos[r.P],R.L), fromT=((sgn(nat.pos[r.P])-R.tlS+12)%12)+1, b=x=>[6,8,12].includes(x)?'b':[1,4,5,7,9,10,11].includes(x)?'g':'m', A=b(fromL), B=b(fromT); return `<li><b>เจ้าเรือน${HOUSES[H-1]} (${TH[r.P]})</b>: จากลัคนาเป็นภพ${HOUSES[fromL-1]} ${bdg98(A,A==='g'?'ดี':A==='b'?'ร้าย':'กลาง')} · จากตนุลัคน์เป็นภพ${HOUSES[fromT-1]} ${bdg98(B,B==='g'?'ดี':B==='b'?'ร้าย':'กลาง')}${A==='b'&&B==='g'?' → <b>ต้นร้ายปลายดี</b>':A==='g'&&B==='b'?' → <b>ต้นดีปลายต้องระวัง</b>':''}</li>`; }).join('');
+  return `<div class="t98w"><table class="t98"><tr><th>เรื่อง (ภพ)</th><th>เหตุ: เจ้าเรือนไปอยู่</th><th>ผล: เจ้าบ้านไปอยู่</th><th>คำอ่าน</th></tr>${rows}</table></div>
+   <div class="sx89two"><div class="c98"><div class="bh70st">ลัคนา (ชีวิตช่วงต้น) เทียบ ตนุลัคน์ (ชีวิตที่ดำเนินไป)</div><ul class="lb88l">${cmp}</ul><p class="note">มุมจากลัคนาร้ายแต่จากตนุลัคน์ดี = ต้นร้ายปลายดี (และกลับกัน) — ห้ามเอาดีร้ายมาหักลบกัน</p></div>
+    <div class="c98"><div class="bh70st">ดาวผสมเรือน — ดาวรับธรรมชาติเจ้าบ้าน</div><ul class="lb88l"><li><b>ตนุลัคน์ (บุคลิกท่าทาง)</b>: ${mix(tk,0)}</li><li><b>ตนุเศษ (นิสัยใจ)</b>: ${mix(tsk,1)}</li></ul><p class="note">ดาวยิ่งอ่อน (นิจ ประ) ยิ่งรับธรรมชาติเจ้าบ้านมาก ดาวแข็ง (อุจ เกษตร) รับน้อย</p></div></div>
+   <p class="note">วิธีหมอเถา: จังหวะ ๑ เจ้าเรือนของเรื่องไปอยู่ภพใด = เหตุ · จังหวะ ๒ เจ้าของราศีที่มันอยู่ไปอยู่ภพใด = ผล (คุณภาพของผลดูจากตำแหน่งของเจ้าบ้าน) · เจ้าเรือนอยู่บ้านตัวเองให้นับจากตนุลัคน์แทน · ไม่อ่านเกินจังหวะ ๒ · ระบบนี้ใช้ราหูครองกุมภ์ — ที่มา: บทเรียนทางไปรษณีย์ อ.อรุณ ลำเพ็ญ (หมอเถา) เรียบเรียงเป็นตัวสร้างคำอ่านอัตโนมัติ</p>`; }
+function run107(){ const el=document.getElementById('rd107Out'); if(!el||!WSTATE||!WSTATE.nat) return; const pn=el.closest('.panel'); if(pn&&pn.style.display==='none') return; try{ el.innerHTML=rdHTML107(); }catch(e){ console.error(e); el.innerHTML='<p class="note">⚠ '+e.message+'</p>'; } }
+{ const _s=cat29Show; cat29Show=function(id){ const r=_s.apply(this,arguments); setTimeout(run107,0); return r; }; }
+{ const _c=compute; compute=function(){ const r=_c.apply(this,arguments); try{ const k=[WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.nat&&WSTATE.nat.pos.LA].join('|'); if(k!==window._k107){ window._k107=k; setTimeout(run107,0); } }catch(e){} return r; }; }
+
+// ===== v108: พยากรณ์จรระบบหมอเถา — เกณฑ์ชันษาจร (ตนุลัคน์จร) · ภพจร ๑๒ · ตนุเศษจรปี/เดือน · ดาวจรตรีเทพ · ดาวเทียม · ตัวกระตุ้นเฉพาะเรื่อง · จรวัย ๒ ระบบ
+const MR108={2:'เสียเงิน หรือย้ายบ้าน',3:'การเดินทาง',9:'เดินทางไกล หรือออกจากการศึกษาขั้นสูง',1:'สุขภาพอ่อนแอ',10:'ออกงาน ย้ายงาน หรือเปลี่ยนงาน',7:'ความสัมพันธ์แตกร้าวหรือห่างกัน',4:'ย้ายถิ่นที่อยู่',5:'บุตรไม่สบาย หรือเลิกแล้วเริ่มใหม่',11:'ได้ประโยชน์จากการสูญเสีย (ประกัน มรดก)',12:'เสียหายแบบปุบปับ',6:'เสียหายเดือดร้อนเป็นเรื่องเฉพาะ'};
+const HM108=['ตัวเอง','เงิน','เพื่อน การเดินทางใกล้','บ้าน ญาติ','บุตร ความสุข','อุปสรรคที่ยังแก้ได้','คู่ครอง หุ้นส่วน','การปฏิเสธผล การสูญเสีย (ไม่ได้แปลว่าตาย)','ผู้ใหญ่ การศึกษาสูง การไปไกล','การงาน','ความสำเร็จ','เรื่องไม่คาดหมาย'];
+const TS108={1:'ร้อนแรง เชื่อมั่นตัวเอง ทิฐิสูง อยากนำ',2:'อ่อนโยน รักบ้าน เมตตา ลังเล',3:'กล้า ไม่ยอมแพ้ หุนหันพลันแล่น',4:'ปรับตัวเก่ง ช่างพูด ประนีประนอม หวั่นไหวง่าย',5:'มีคุณธรรม เมตตา มั่นคง ใช้ปัญญา',6:'รื่นเริง รักแรง มีรสนิยม มองระยะสั้น',7:'อดทน รอบคอบ ระแวง ประหยัด เก็บตัว'};
+const kS108=(S,a)=>a<1?S:((S+(a-1)+Math.floor((a-1)/12))%12);
+const cnt108=(a,b)=>((b-a)%12+12)%12+1;
+const lk108=s=>PNUM2K[LORD[s]];
+function ts108(L,K,nat){ const a=cnt108(L,K), R=lk108(K), b=cnt108(K,sgn(nat.pos[R])); let r=(a*b)%7; if(!r) r=7; return {a,b,r,R}; }
+function two108(Z,P,pos){ const s1=sgn(pos[P]), D=lk108(s1), h1=cnt108(Z,s1); if(D===P) return {h:[h1],D:null}; return {h:[h1,cnt108(Z,sgn(pos[D]))],D}; }
+const hn108=h=>HOUSES[h-1];
+function gB108(hs){ const bad=hs.filter(h=>[6,8,12].includes(h)).length, good=hs.filter(h=>[1,2,4,5,7,9,10,11].includes(h)).length; return bad>=2?'b':bad&&!good?'b':bad?'m':'g'; }
+function pr108(pn,X){ // ความสัมพันธ์ในดวงเดิมระหว่างดาว X กับตรีเทพ
+  const T=['JU','SA','RA']; if(T.includes(X)) return {T:X,how:'เป็นตรีเทพเอง',lv:0};
+  const sX=sgn(pn[X]), c=[];
+  for(const t of T){ const sT=sgn(pn[t]); let lv=9, how='';
+    if(sT===sX){ lv=1; how='ร่วมราศี'; } else if(lk108(sX)===t){ lv=2; how='สถิตเรือนของ'+TH[t]; } else if(LORD[sX]===LORD[sT]){ lv=3; how='ร่วมเรือนเกษตร'; }
+    else { let k=lk108(sX), n=0, seen={}; while(k&&!seen[k]&&n<5){ seen[k]=1; if(k===t){ lv=4+n; how='แฝงดาวเกษตร '+(n+1)+' ทอด'; break; } k=lk108(sgn(pn[k])); n++; } }
+    if(lv<9){ const pr=PAIR[Math.min(PNUM[X],PNUM[t])+'-'+Math.max(PNUM[X],PNUM[t])]||''; const pk=/ธาตุ/.test(pr)?0:/มิตร/.test(pr)?1:/สมพล/.test(pr)?2:/ศัตรู/.test(pr)?4:3; c.push({T:t,how,lv,pk,pr}); } }
+  c.sort((a,b)=>a.lv-b.lv||a.pk-b.pk); return c[0]||null; }
+function tthai108(sP,P){ // สถานะเทียมจากเจ้าเรือนเดิม
+  const nat=WSTATE.nat, R=lk108(sP); if(!R||R===P) return ''; const X=sgn(nat.pos[R]), n=PNUM[P], o=[];
+  if(LORD[X]===n) o.push('เกษตรเทียม'); if(EXALT[P]===X) o.push('อุจจ์เทียม'); if(EXALT[P]!=null&&(EXALT[P]+6)%12===X) o.push('นิจเทียม'); if(LORD[(X+6)%12]===n) o.push('ประเทียม'); return o.join(' '); }
+function mt108HTML(){
+  const nat=WSTATE.nat, pn=nat.pos, bt=WSTATE.bt, tt=getTransit(), lat=WSTATE.lat, lon=WSTATE.lon, tr=chartAt(tt,lat,lon), tp=tr.pos;
+  const L=sgn(pn.LA), tl=lk108(L), TL=sgn(pn[tl]), A=ageYMD(bt,tt), age=A.y, K=kS108(TL,age), tsN=tanusetCh(nat), tsY=ts108(L,K,nat);
+  // วันเริ่มปีเกณฑ์ = วันเกิดครบรอบล่าสุด
+  const y0=new Date(bt.getTime()); y0.setFullYear(bt.getFullYear()+age); const ny=new Date(y0.getTime()); ny.setFullYear(y0.getFullYear()+1);
+  // วงภพจร
+  const sym=['M3','M2','M1'].map(()=>'');
+  const rows=[]; for(let i=0;i<12;i++){ const s=(K+i)%12, P=lk108(s), w=two108(L,P,pn), u=two108(TL,P,pn), ho=cnt108(L,s);
+    rows.push({i,s,P,w,u,ho}); }
+  const topic=[[0,'ตนุจร (ตัวเองทั้งปี)'],[9,'การงาน'],[1,'การเงิน'],[6,'คู่ครอง ความรัก'],[4,'บุตร'],[5,'อุปสรรค'],[7,'การสูญเสีย การเปลี่ยนแปลง']];
+  const rd=r=>{ const all=r.w.h.concat(r.u.h), g=gB108(all), st=std(r.P,pn[r.P]); let tx=`ทางลัคนา: ${r.w.h.map(hn108).join(' → ')}${r.w.D?` (ผ่าน${TH[r.w.D]})`:''} · ทางตนุลัคน์: ${r.u.h.map(hn108).join(' → ')}`;
+    const mean=[...new Set(all)].filter(h=>h!==r.i+1).slice(0,3).map(h=>HM108[h-1]).join(' / ');
+    return {g,st,tx,mean}; };
+  const tRows=topic.map(([i,nm])=>{ const r=rows[i], q=rd(r), rep=pr108(pn,r.P==='MO'?(sgn(pn.MO)===3?(ORDER.find(k=>k!=='MO'&&!['KE','UR'].includes(k)&&sgn(pn[k])===3)||'MO'):lk108(sgn(pn.MO))):r.P);
+    let trTxt='—'; if(rep){ const sT=sgn(tp[rep.T]), hL=cnt108(L,sT), hT=cnt108(TL,sT), over=ORDER.filter(k=>k!==rep.T&&sgn(pn[k])===sT).map(k=>TH[k]).join(' '); trTxt=`${TH[rep.T]}จร (${rep.how}) อยู่ราศี${SIGNS[sT]} = ภพ${hn108(hL)}จากลัคนา · ภพ${hn108(hT)}จากตนุลัคน์${over?' · ทับ'+over+'เดิม':''}`; }
+    const mr=i===7?[...new Set(q.tx?r.w.h.concat(r.u.h):[])].filter(h=>MR108[h]).map(h=>MR108[h]).slice(0,2).join(' หรือ '):'';
+    return `<tr><td><b>${nm}</b><br><span class="note">ราศี${SIGNS[r.s]} · ภพเดิม${hn108(r.ho)}</span></td><td>${TH[r.P]}${q.st?' <span class="note">'+q.st+'</span>':''}</td><td>${bdg98(q.g,q.g==='g'?'ดี':q.g==='b'?'ระวัง':'กลาง')} ${q.tx}${q.mean?`<br><span class="note">ความหมายที่เกี่ยวข้อง: ${q.mean}</span>`:''}${mr?`<br><span class="note">มรณะผสมภพ: ${mr}</span>`:''}<br><span class="note"><b>ตรีเทพ:</b> ${trTxt}</span></td></tr>`; }).join('');
+  // ตัวกระตุ้นเฉพาะเรื่อง
+  const trig=[]; const r7=rows[6], s7=sgn(pn[r7.P]);
+  if(s7===(L+6)%12) trig.push(['g',`เจ้าเรือนปัตนิจร (${TH[r7.P]}) เล็งลัคนา — ปีนี้มีเกณฑ์เรื่องความรักหรือแต่งงาน`]);
+  if(s7===(TL+6)%12) trig.push(['g',`เจ้าเรือนปัตนิจร (${TH[r7.P]}) เล็งตนุลัคน์ — เรื่องคู่ครองมาถึงตัว`]);
+  if(s7===TL&&r7.P!==tl) trig.push(['g',`เจ้าเรือนปัตนิจรร่วมราศีตนุลัคน์ — เรื่องคู่ถึงตัวแน่`]);
+  { const rep=pr108(pn,r7.P); if(rep){ const sT=sgn(tp[rep.T]); if(sT===L||sT===(L+6)%12||sT===(TL+6)%12) trig.push(['g',`ตรีเทพของปัตนิจร (${TH[rep.T]}จร) ${sT===L?'ทับลัคนา':sT===(L+6)%12?'เล็งลัคนา':'เล็งตนุลัคน์'} — เป็นจังหวะที่เรื่องคู่ครองเกิดผลชัด`]); } }
+  if(cnt108(L,K)===7||cnt108(TL,K)===7){ const sk=sgn(pn[lk108(K)]); trig.push([sk===L||sk===TL?'g':'m',`ราศีเกณฑ์ตกภพปัตนิจาก${cnt108(L,K)===7?'ลัคนา':'ตนุลัคน์'}${sk===L||sk===TL?' และเจ้าเรือนเกณฑ์กุมลัคน์/ร่วมตนุลัคน์ — มีความสัมพันธ์ใกล้ชิดเกิดขึ้น':' — เรื่องความสัมพันธ์เด่นในปีนี้'}`]); }
+  { const s8=rows[7].s, inS=ORDER.filter(k=>sgn(pn[k])===s8); if(inS.includes('SA')&&inS.includes('MA')||inS.includes('SA')&&inS.includes('MO')||inS.includes('UR')) trig.push(['b',`ราศีมรณะจร (${SIGNS[s8]}) มี${inS.map(k=>TH[k]).join(' ')}เดิม — ปีนี้ควรดูแลสุขภาพเป็นพิเศษ${inS.includes('UR')?' (มฤตยู: อาการหาสาเหตุยาก หายช้า)':''}`]); }
+  { const hs=[0,5,7].map(i=>rows[i]).filter(r=>{ const all=r.w.h; return all.includes(9)&&all.some(h=>[6,8].includes(h)); }); if(hs.length) trig.push(['b',`ศุภะผสมอริ/มรณะในตนุจร อริจร หรือมรณะจร — มีเกณฑ์ต้องพบแพทย์ (ถ้าเจ้าศุภะแข็งจะรักษาหาย)`]); }
+  // ดาวจร + เทียม + มุมสอบ
+  const T7=['SU','MO','MA','ME','JU','VE','SA','RA'];
+  const dv=T7.map(P=>{ const sP=sgn(tp[P]), real=std(P,tp[P]), fk=tthai108(sP,P), over=ORDER.filter(k=>k!==P&&!['KE','UR'].includes(k)&&sgn(pn[k])===sP), ms=over.map(Q=>`${TH[P]}เดิม→${TH[Q]}จร = ${hn108(cnt108(sgn(pn[P]),sgn(tp[Q])))}`).join(' · ');
+    return `<tr><td>${TH[P]}</td><td>${SIGNS[sP]} · ภพ${hn108(cnt108(L,sP))}</td><td>${real||'—'}${fk?' '+bdg98(/นิจ|ประ/.test(fk)?'b':'g',fk):''}</td><td class="note">${over.length?'ทับ'+over.map(k=>TH[k]).join(' ')+'เดิม · มุมสอบ '+ms:''}</td></tr>`; }).join('');
+  // เกณฑ์เดือน
+  const mo=[]; for(let m=0;m<12;m++){ const d0=new Date(y0.getTime()); d0.setMonth(y0.getMonth()+m); const d1=new Date(y0.getTime()); d1.setMonth(y0.getMonth()+m+1); d1.setDate(d1.getDate()-1); const s=(K+m)%12, t=ts108(L,s,nat), cur=tt>=d0&&tt<=new Date(d1.getTime()+86400000);
+    const mid=new Date((d0.getTime()+d1.getTime())/2), c=chartAt(mid,lat,lon), L10=rows[9].P, h10=cnt108(L,sgn(c.pos[L10]));
+    mo.push(`<tr${cur?' style="background:rgba(156,203,232,.14)"':''}><td>${fmtD(d0)} – ${fmtD(d1)}</td><td>${SIGNS[s]}</td><td>${TH[PNUM2K[t.r]]} <span class="note">(${t.a}×${t.b})</span></td><td class="note">${TH[L10]}จร (เจ้ากัมมะจร) ผ่านภพ${hn108(h10)}</td></tr>`); }
+  // จรวัย
+  const tln=PNUM[tl], st0=TAKSA_ORDER.indexOf(tln); let acc=0; const sv=[]; for(let i=0;i<8;i++){ const q=TAKSA_ORDER[(st0+i)%8], y=TAK_AGE[q], k=PNUM2K[q], g=sc107(k,pn[k],L); sv.push({k,a:acc,b:acc+y,g}); acc+=y; }
+  const NF=[['SU',0,6],['ME',6,23],['VE',23,44],['RA',44,56],['MA',56,64],['JU',64,83],['SA',83,93]].map(([k,a,b])=>({k,a,b,g:sc107(k,pn[k],L)}));
+  const ageF=age+A.m/12;
+  const bar=arr=>arr.map(x=>{ const g=x.g.s>=.8?'g':x.g.s<=-.6?'b':'m', now=ageF>=x.a&&ageF<x.b; return `<div class="vy108${now?' now':''}"><b>${TH[x.k]}</b><span>${x.a}–${x.b} ปี</span>${bdg98(g,x.g.st||(g==='g'?'ดี':g==='b'?'ระวัง':'กลาง'))}<span class="note">ภพ${hn108(x.g.h)}</span></div>`; }).join('');
+  const wh=rows.map(r=>`<div class="pc108${r.i===0?' k':''}"><b>${hn108(r.i+1)}จร</b><span>${SIGNS[r.s]}</span><span class="note">${TH[r.P]} · เดิม${hn108(r.ho)}</span></div>`).join('');
+  return `<div class="sx89two"><div class="c98"><div class="bh70st">เกณฑ์ชันษาจร ปีนี้</div>
+    <p>อายุเต็ม <b>${age}</b> ปี ${A.m} เดือน · ตนุลัคน์เดิม <b>${TH[tl]}</b> ราศี${SIGNS[TL]} → เกณฑ์ตก <b>ราศี${SIGNS[K]}</b> (ภพ${hn108(cnt108(L,K))}จากลัคนา) · ตนุจร = <b>${TH[lk108(K)]}</b></p>
+    <p class="note">รอบปีเกณฑ์: ${fmtD(y0)} – ${fmtD(new Date(ny.getTime()-86400000))} · สูตร: เริ่มอายุ ๑ ที่ราศีตนุลัคน์ เดินปีละราศี ครบ ๑๒ ปีข้าม ๑ ราศี</p></div>
+   <div class="c98"><div class="bh70st">ตนุเศษ — ใจประจำตัว เทียบ ใจประจำปี</div>
+    <p>ตนุเศษเดิม <b>${TH[tsN.key]}</b>: ${TS108[tsN.num]||''}</p><p>ตนุเศษจรปีนี้ <b>${TH[PNUM2K[tsY.r]]}</b> <span class="note">(${tsY.a}×${tsY.b}=${tsY.a*tsY.b} หาร ๗)</span>: ${TS108[tsY.r]}</p><p class="note">อารมณ์ประจำปีซ้อนบนนิสัยเดิมเสมอ ไม่ได้แทนที่</p></div></div>
+   <div class="g108">${wh}</div>
+   <div class="t98w"><table class="t98"><tr><th>เรื่อง (ภพจร)</th><th>เจ้าเรือนจร</th><th>อ่านสองจังหวะจากลัคนาและตนุลัคน์เดิม · ดาวจรตรีเทพ (ตัวจริง/ตัวแทน)</th></tr>${tRows}</table></div>
+   <div class="c98"><div class="bh70st">ตัวกระตุ้นเฉพาะเรื่องปีนี้</div>${trig.length?'<ul class="lb88l">'+trig.map(([g,t])=>`<li>${bdg98(g,g==='g'?'เด่น':g==='b'?'ระวัง':'น่าสังเกต')} ${t}</li>`).join('')+'</ul>':'<p class="note">ปีนี้ไม่เข้าเกณฑ์ตัวกระตุ้นเฉพาะเรื่องที่ตำรากำหนด</p>'}</div>
+   <div class="c98"><div class="bh70st">เกณฑ์ชันษาจรรายเดือน</div><div class="t98w"><table class="t98"><tr><th>ช่วง</th><th>เกณฑ์เดือน</th><th>ตนุเศษเดือน</th><th>จังหวะงาน</th></tr>${mo.join('')}</table></div></div>
+    <div class="c98"><div class="bh70st">ดาวจรวันนี้ · สถานะเทียม · มุมสอบ</div><div class="t98w"><table class="t98"><tr><th>ดาว</th><th>ราศี/ภพ</th><th>มาตรฐาน</th><th>ทับดาวเดิม</th></tr>${dv}</table></div><p class="note">เทียม = เจ้าเรือนของราศีที่ดาวจรอยู่ ไปสถิตในราศีเกษตร อุจจ์ นิจ หรือประของดาวจรนั้นในดวงเดิม · มุมสอบ = นับจากดาวจรตัวนั้นในดวงเดิมไปหาดาวเดิมที่ถูกทับ (ฝั่งจร)</p></div>
+   <div class="c98"><div class="bh70st">จรวัย ๒ ระบบ</div><p class="note">ตนุลัคน์เสวยอายุ (ระบบที่ตำราแนะนำ — เริ่มจากตนุลัคน์ วนลำดับทักษา ใช้กำลังดาว)</p><div class="vyw108">${bar(sv)}</div><p class="note" style="margin-top:8px">ใกล้–ไกลอาทิตย์ (ไม่ใช้ทักษา จันทร์เป็นผู้อุปถัมภ์ทุกวัย)</p><div class="vyw108">${bar(NF)}</div></div>
+   <p class="note">อ่านตามระบบหมอเถา: ตั้งราศีเกณฑ์เป็นตนุจร ไล่ภพจร ๑๒ ภพ เจ้าเรือนของแต่ละราศีทำหน้าที่ภพจรชั่วปีโดยยังพกความหมายภพเดิม แล้วใช้ลัคนาและตนุลัคน์เดิมอ่านไปหาเจ้าเรือนภพจรแบบสองจังหวะ · อริ = อุปสรรคที่ยังแก้ได้ · มรณะ = การปฏิเสธผลหรือการสูญเสียในความหมายกว้าง ไม่ได้แปลว่าตาย · นิจ ประ = ได้ทีละน้อย ไม่ได้หักล้างผล — ที่มา: บทเรียนทางไปรษณีย์ อ.อรุณ ลำเพ็ญ (หมอเถา) ภาคพยากรณ์จร เรียบเรียงเป็นตัวคำนวณ</p>`; }
+function run108(){ const el=document.getElementById('mt108Out'); if(!el||!WSTATE||!WSTATE.nat) return; const pn=el.closest('.panel'); if(pn&&pn.style.display==='none') return; try{ el.innerHTML=mt108HTML(); }catch(e){ console.error(e); el.innerHTML='<p class="note">⚠ '+e.message+'</p>'; } }
+{ const _s=cat29Show; cat29Show=function(id){ const r=_s.apply(this,arguments); setTimeout(run108,0); return r; }; }
+{ const _c=compute; compute=function(){ const r=_c.apply(this,arguments); try{ const k=[WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.nat&&WSTATE.nat.pos.LA,+getTransit()].join('|'); if(k!==window._k108){ window._k108=k; setTimeout(run108,0); } }catch(e){} return r; }; }
 
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
