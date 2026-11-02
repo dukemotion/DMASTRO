@@ -234,6 +234,10 @@ svg.lag140{display:inline-block;overflow:visible}
 @media (max-width:640px){.rd141 .sx141{flex-direction:column;align-items:flex-start}}
 .rd141 .ul141{margin:4px 0;padding-left:18px;font-size:13px;line-height:1.7}
 .rd141 .tb140{flex-wrap:nowrap}
+.rd141 .pg141{display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin:6px 0 8px}
+.rd141 .pn141{font-size:12px;padding:3px 9px;border-radius:8px;border:1px solid var(--line);background:rgba(127,127,127,.08);white-space:nowrap} .rd141 .pn141.g{border-color:rgba(63,169,107,.55);color:#3fa96b;background:rgba(63,169,107,.08)} .rd141 .pn141.b{border-color:rgba(217,83,79,.55);color:#d9534f;background:rgba(217,83,79,.08)}
+.rd141 .pa141{display:inline-flex;flex-direction:column;align-items:center;color:var(--muted);line-height:1} .rd141 .pa141 small{font-size:9.5px;margin-top:1px}
+.rd141 .pe141{font-size:11.5px;padding:2px 8px;border-radius:99px;margin-left:4px} .rd141 .pe141.n{background:rgba(127,127,127,.12);color:var(--muted)} .rd141 .pe141.g{background:rgba(63,169,107,.15);color:#3fa96b} .rd141 .pe141.m{background:rgba(217,164,0,.15);color:#c98a00}
 div.agebadge .mw140 button.ab.orb140b{border:1px solid rgba(236,220,180,.45)!important;border-radius:12px!important;background:rgba(255,255,255,.04)!important;padding:6px 9px!important;min-width:62px}
 div.agebadge .mw140 button.ab.orb140b:hover{border-color:var(--gold2)!important}
 .mw140{display:flex;align-items:center;gap:8px;min-width:0;max-width:100%}
@@ -8386,7 +8390,8 @@ const CHG110=[
  {v:'141',d:'2026-11-03',k:'n',t:'อ่านดวง — คำพยากรณ์ดวงเดิมและดวงจรแบบจัดเต็ม',x:'ปุ่มไอคอน "อ่านดวง" ข้างปุ่มอัตราดาวโคจร เปิดป๊อปอัปคำพยากรณ์เป็นย่อหน้า ใช้ได้กับทุกดวง · ดวงเดิม: ลัคนาและเจ้าเรือนลัคน์ ตนุเศษ ดาวกุมลัคน์ มาตรฐานและเกณฑ์ดาว (เกษตร อุจจ์ นิจ ประ ราชาโชค มหาจักร เรือนเกณฑ์ อุดมเกณฑ์ ตนุลัคน์ ฯลฯ พร้อมความหมายเฉพาะดาว) ดาวเจ้าเรือน ๑๒ ภพไปสถิตภพใด ดาวในภพ ดาวสัมพันธ์และคู่ดาว · ดวงจร: ภาพรวม ดาวจรสัมพันธ์ดาวเดิมแบ่งเกณฑ์ ๑° ๓° ๕° พร้อมระดับความแรง ดาวจรผ่านภพ มาตรฐานและการเดินของดาวจร ดาวที่จะย้ายราศีภายใน ๔๕ วัน และสรุปข้อควรใช้/ควรระวัง · คัดลอกคำพยากรณ์ได้',c:['natal'],p:[],go:'#ageBadge'},
  {v:'141.1',d:'2026-11-03',k:'u',t:'อ่านดวง: เพิ่มแท็บดาวจรกระทบดาวเดิม',x:'แท็บใหม่ในอ่านดวง: ตารางดาวจร × ดาวเดิม (ทับ เล็ง ฉาก ตรีโกณ โยค พร้อมระยะองศา สีบอกส่งเสริม/กดดัน แตะช่องเพื่อไปยังคำอธิบาย) · ดาวจรทับดาวเดิมตามราศีแบบไทย · คำอธิบายรายคู่บอกองศาจรและเดิม ภพที่สถิต ดาวเดิมเป็นเจ้าเรือนอะไร พื้นที่ชีวิตที่ถูกกระทบ ตำราดาวจรทับ คู่ดาว และสถานะพักร์ · บอกเวลามุมตรง ว่ากำลังเข้ามุมหรือผ่านไปแล้ว · กรองระยะ ๑° ๓° ๕° ๘° มุม ดาวจร รวม/ซ่อนจันทร์ และเรียงตามระยะ ความแรง หรือเวลามุมตรง',c:['natal'],p:[],go:'#ageBadge'},
  {v:'141.2',d:'2026-11-03',k:'u',t:'อ่านดวง: % ผลกระทบ วิเคราะห์ร่วมกับมาตรฐานและเกณฑ์พิเศษ',x:'ทุกคู่ดาวจรกระทบดาวเดิมมี % ผลกระทบต่อเจ้าชะตา และสัดส่วนส่งเสริม/กดดัน · คิดจากระยะองศา ชนิดมุม น้ำหนักดาวจร ความสำคัญของดาวเดิม (ลัคนา ตนุลัคน์ ตนุเศษ อาทิตย์ จันทร์) มาตรฐานดาวจร (เกษตร อุจจ์ ราชาโชค มหาจักร นิจ ประ) มาตรฐานและเกณฑ์ของดาวเดิม (อุดมเกณฑ์ เรือนเกณฑ์) ดาวบาปผ่านภพ ๓ ๖ ๑๑ เจ้าเรือนทุสถานะ คู่ดาว พักร์ และการเข้า/ออกจากมุม · กดดูปัจจัยที่ใช้คำนวณได้ทุกคู่ · มีวงแหวนแรงกระทบรวม ทิศทางรวม คู่ที่มีผลมากที่สุด และดาวเดิมที่ถูกกระทบหนักสุด · เรียงตาม % ผลกระทบได้ · ตารางและแท็บดวงจรแสดง % ด้วย',c:['natal'],p:[],go:'#ageBadge'},
- {v:'141.3',d:'2026-11-03',k:'u',t:'อ่านดวง: แท็บนวางค์·ตรียางค์ และแท็บทักษา',x:'แท็บนวางค์·ตรียางค์: ลัคนานวางค์ (ไส้ในของชีวิต ตกภพใดของดวงเดิม วรโคตม นวางค์ขาด ตำรานวางค์กำเนิด) · นวางค์กับอาชีพ · ดาวทุกดวงในนวางค์ ตัดสินว่ามาตรฐานแท้หรือไม่แท้ (ดีทั้งเปลือกและใน เปลือกดีในอ่อน เปลือกอ่อนในหนุน) · คู่ครองจากนวางค์จักร · ลัคนาและจันทร์ตรียางค์ พร้อมลูกพิษ · ความบริสุทธิ์ของดาวจากเจ้านวางค์ × เจ้าตรียางค์ · ตรีกูล · ตรีวัยช่วงอายุปัจจุบัน · แท็บทักษา: ดาวทั้ง ๘ รับบทบาทอะไร อยู่ภพไหน มีกำลังหรือไม่ · ทักษาจรประจำปีตามอายุ (บทบาทเดิม → บทบาทจร พร้อมคำทำนาย) · เกณฑ์ทักษาจรประจำปีที่ระบบตรวจเจอ · สรุปดาวที่ควรเสริมและควรเลี่ยง · แท็บอ่านทั้งหมดรวมสองหมวดนี้แล้ว',c:['natal'],p:[],go:'#ageBadge'}];
+ {v:'141.3',d:'2026-11-03',k:'u',t:'อ่านดวง: แท็บนวางค์·ตรียางค์ และแท็บทักษา',x:'แท็บนวางค์·ตรียางค์: ลัคนานวางค์ (ไส้ในของชีวิต ตกภพใดของดวงเดิม วรโคตม นวางค์ขาด ตำรานวางค์กำเนิด) · นวางค์กับอาชีพ · ดาวทุกดวงในนวางค์ ตัดสินว่ามาตรฐานแท้หรือไม่แท้ (ดีทั้งเปลือกและใน เปลือกดีในอ่อน เปลือกอ่อนในหนุน) · คู่ครองจากนวางค์จักร · ลัคนาและจันทร์ตรียางค์ พร้อมลูกพิษ · ความบริสุทธิ์ของดาวจากเจ้านวางค์ × เจ้าตรียางค์ · ตรีกูล · ตรีวัยช่วงอายุปัจจุบัน · แท็บทักษา: ดาวทั้ง ๘ รับบทบาทอะไร อยู่ภพไหน มีกำลังหรือไม่ · ทักษาจรประจำปีตามอายุ (บทบาทเดิม → บทบาทจร พร้อมคำทำนาย) · เกณฑ์ทักษาจรประจำปีที่ระบบตรวจเจอ · สรุปดาวที่ควรเสริมและควรเลี่ยง · แท็บอ่านทั้งหมดรวมสองหมวดนี้แล้ว',c:['natal'],p:[],go:'#ageBadge'},
+ {v:'141.4',d:'2026-11-03',k:'u',t:'อ่านดวง: แท็บอ่านแบบเสียบปลั๊ก (สายเจ้าเรือนต่อกัน)',x:'แท็บเสียบปลั๊ก: ตามสายเจ้าเรือนต่อกันเป็นทอด ภพ → เจ้าเรือนไปอยู่ภพไหน → เจ้าเรือนภพนั้นไปอยู่ไหน จนสุดสายที่ดาวเกษตร ดาวแลกเรือน หรือวนกลับเป็นวงจร · แกนของดวง (เต้ารับหลักที่สายไปสิ้นสุด และปลายทางของสายลัคนา) · สายครบ ๑๒ ภพพร้อมแผนผังลูกศรและคำอธิบายเป็นย่อหน้า บอกกำลังของดาวแต่ละทอด · สายของดาวแต่ละดวง · เสียบปลั๊กดวงจร: ดาวจรเข้าภพใด นำเรื่องของภพที่ตนเป็นเจ้าเรือนมาด้วย แล้วลามต่อตามสายเจ้าเรือนเดิม พร้อมเวลาที่สายนี้ทำงาน',c:['natal'],p:[],go:'#ageBadge'}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
@@ -9287,7 +9292,7 @@ function sv128init(){ const nb=document.querySelector('#rasi')&&document.querySe
     if(k==='all') sv128save(['rasi','nav','tri','taksa'].map(part128),'จักรราศี นวางค์ ตรียางค์ ทักษา'); else { const p=part128(k); sv128save([p],SVB128.find(x=>x[0]===k)[1]); } }); }
 setTimeout(sv128init,0);
 
-const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v139','v140','v140.1','v140.2','v140.3','v140.4','v140.6','v140.7','v141','v141.1','v141.2','v141.3','v1_20','v21','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
+const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v139','v140','v140.1','v140.2','v140.3','v140.4','v140.6','v140.7','v141','v141.1','v141.2','v141.3','v141.4','v1_20','v21','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
 // ───────── v129: หน้าอัปเดตระบบแบบบทความ — หัวข้อ · อัปเดตอะไร · รายละเอียด · ภาพหน้าจอ · ปุ่มลัดไปหน้านั้น · ปุ่มอัปเดตบนเมนูบน ─────────
 // ภาพหน้าจอสร้างอัตโนมัติด้วยสคริปต์ tools/shots129.js (ไล่ทุกรายการใน CHG110 ที่ยังไม่มีภาพ) แล้วบันทึกเป็น shots/<v>.webp — SHOTS129 คือรายชื่อไฟล์ที่มีอยู่
 // เป้าหมายของแต่ละรายการ: e.go (selector ที่อยู่นอกหมวด) → e.p[0] (แผงในหมวด) → หมวด e.c[0]
@@ -10567,7 +10572,7 @@ function render141(){ const P=document.getElementById('rd141'); if(!P) return; c
   P.innerHTML=`<div class="bx140 bx141" role="dialog" aria-label="อ่านดวง"><div class="hd140"><span class="hi140">${i141(IC141.read,22)}</span><div><b>อ่านดวง — ${esc94(nm)}</b><small>เกิด ${dtf140(bt)} · วันจร ${dtf140(t)}</small></div><button type="button" class="xb140" data-c141 title="คัดลอกคำพยากรณ์">${i141(IC141.copy,17)}</button><button type="button" class="xb140" data-x141 aria-label="ปิด">${i141(IC141.x,18)}</button></div>
    <div class="tb140"><button type="button" data-t141="n" class="${ST141.tab==='n'?'on':''}">${i141(IC141.lag,15)} ดวงเดิม</button><button type="button" data-t141="t" class="${ST141.tab==='t'?'on':''}">${i141(IC141.tr,15)} ดวงจร</button><button type="button" data-t141="a" class="${ST141.tab==='a'?'on':''}">${i141(IC141.read,15)} อ่านทั้งหมด</button></div>
    <div class="bdy140 rd141b"><p class="note">กำลังเรียบเรียงคำพยากรณ์…</p></div></div>`;
-  setTimeout(()=>{ const B=P.querySelector('.rd141b'); try{ B.innerHTML=ST141.tab==='n'?natal141():ST141.tab==='t'?transit141():ST141.tab==='i'?impactHTML141():ST141.tab==='v'?navTri141():ST141.tab==='k'?taksa141():`<h3 class="hh141">ดวงกำเนิด</h3>${natal141()}<h3 class="hh141">นวางค์ · ตรียางค์</h3>${navTri141()}<h3 class="hh141">ทักษา</h3>${taksa141()}<h3 class="hh141">ดวงจร</h3>${transit141()}`; if(ST141.tab==='a') B.querySelectorAll('details').forEach(d=>d.open=true); }catch(e){ console.error(e); B.innerHTML='<p class="note">เรียบเรียงไม่สำเร็จ — ตรวจว่าเปิดดวงแล้ว</p>'; } },15); }
+  setTimeout(()=>{ const B=P.querySelector('.rd141b'); try{ B.innerHTML=ST141.tab==='n'?natal141():ST141.tab==='t'?transit141():ST141.tab==='i'?impactHTML141():ST141.tab==='v'?navTri141():ST141.tab==='k'?taksa141():ST141.tab==='p'?plug141():`<h3 class="hh141">ดวงกำเนิด</h3>${natal141()}<h3 class="hh141">นวางค์ · ตรียางค์</h3>${navTri141()}<h3 class="hh141">ทักษา</h3>${taksa141()}<h3 class="hh141">อ่านแบบเสียบปลั๊ก</h3>${plug141()}<h3 class="hh141">ดวงจร</h3>${transit141()}`; if(ST141.tab==='a') B.querySelectorAll('details').forEach(d=>d.open=true); }catch(e){ console.error(e); B.innerHTML='<p class="note">เรียบเรียงไม่สำเร็จ — ตรวจว่าเปิดดวงแล้ว</p>'; } },15); }
 function open141(){ let P=document.getElementById('rd141'); if(!P){ P=document.createElement('div'); P.id='rd141'; P.className='pm135 orb140 rd141'; document.body.appendChild(P);
    P.addEventListener('click',e=>{ if(e.target===P||e.target.closest('[data-x141]')){ P.hidden=true; return; } const c=e.target.closest('[data-c141]'); if(c){ const txt=P.querySelector('.rd141b').innerText; try{ navigator.clipboard.writeText(txt); c.classList.add('ok'); setTimeout(()=>c.classList.remove('ok'),1200); }catch(_){} return; }
      const b=e.target.closest('[data-t141]'); if(b){ ST141.tab=b.dataset.t141; render141(); } });
@@ -10757,6 +10762,58 @@ function taksa141(){ const N=WSTATE.nat, P=N.pos, L=sgn(P.LA), hs=x=>houseOf(x,L
   return soft141(out.join('')); }
 { const _r=render141; render141=function(){ _r.apply(this,arguments); const P=document.getElementById('rd141'); if(!P) return; const tb=P.querySelector('.tb140'), a=tb&&tb.querySelector('[data-t141="a"]'); if(!a) return;
   a.insertAdjacentHTML('beforebegin',`<button type="button" data-t141="v" class="${ST141.tab==='v'?'on':''}">${i141(IC141B.nav,15)} นวางค์·ตรียางค์</button><button type="button" data-t141="k" class="${ST141.tab==='k'?'on':''}">${i141(IC141B.tak,15)} ทักษา</button>`); tb.querySelectorAll('[data-t141]').forEach(b=>b.classList.toggle('on',b.dataset.t141===ST141.tab)); const on=tb.querySelector('.on'); if(on) tb.scrollLeft=Math.max(0,on.offsetLeft-tb.clientWidth/2+on.offsetWidth/2); }; }
+
+// ───────── v141.4: อ่านดวง — แท็บ "เสียบปลั๊ก" (อ่านต่อสายเจ้าเรือน: ภพ → เจ้าเรือนไปอยู่ภพไหน → เจ้าเรือนภพนั้นไปอยู่ไหน … จนสุดสาย)
+// ดวงเดิม: ครบ ๑๒ ภพ + สายของดาวแต่ละดวง + แกนของดวง (ดาวปลายสาย) · ดวงจร: ดาวจรเข้าภพไหน แล้วเสียบปลั๊กต่อไปตามสายเจ้าเรือนเดิม
+const IC141E={plug:'<path d="M9 2v5M15 2v5"/><rect x="6" y="7" width="12" height="6" rx="1.5"/><path d="M12 13v3a4 4 0 0 1-4 4H6"/>'};
+function plugPath141(P,L,h0,max){ const lordOf=h=>pk2_141(LORD[(L+h-1)%12]); const path=[{h:h0}], seen=new Set([h0]); let h=h0;
+  for(let i=0;i<(max||12);i++){ const k=lordOf(h); if(!k||P[k]==null){ path.end='none'; break; } const nh=houseOf(P[k],L); path[path.length-1].k=k;
+    if(nh===h){ path.end='own'; break; }
+    const back=lordOf(nh); if(back&&P[back]!=null&&houseOf(P[back],L)===h){ path.push({h:nh}); path[path.length-1].k=back; path.end='swap'; break; }
+    if(seen.has(nh)){ path.end='loop'; path.loopTo=nh; break; } path.push({h:nh}); seen.add(nh); h=nh; }
+  return path; }
+const htone141=h=>[6,8,12].includes(h)?'b':[1,4,7,10,5,9].includes(h)?'g':'n';
+function plugChips141(path,P){ return `<div class="pg141">${path.map((s,i)=>`<span class="pn141 ${htone141(s.h)}">ภพ${HOUSES[s.h-1]}</span>${s.k&&(i<path.length-1||path.end==='loop'||path.end==='swap')?`<span class="pa141">${i141(IC141.move,12)}<small>${TN141(s.k)}</small></span>`:''}`).join('')}${path.end==='own'?`<span class="pe141 g">${TN141(path[path.length-1].k)}อยู่บ้านตัวเอง</span>`:path.end==='loop'?`<span class="pe141 m">วนกลับภพ${HOUSES[path.loopTo-1]}</span>`:path.end==='swap'?`<span class="pe141 g">แลกเรือนกัน</span>`:`<span class="pe141 n">ต่อ…</span>`}</div>`; }
+function plugText141(path,P,L){ const s=[], H=h=>`ภพ${HOUSES[h-1]} (${HM141(h)})`;
+  path.forEach((st,i)=>{ if(!st.k) return; const nx=path[i+1], k=st.k, sd=std(k,P[k])||'', q=/นิจ|ประ/.test(sd)?' แต่ดาวนี้'+sd.split(' ')[0]+' จึงส่งต่อได้ไม่เต็มกำลัง':/อุจจ์|เกษตร|ราชาโชค|มหาจักร|เทวีโชค|จุลจักร/.test(sd)?' และดาวนี้เป็น'+sd.split(' ')[0]+' ส่งต่อได้อย่างมีกำลัง':'';
+    if(i===0&&nx) s.push(`เริ่มจาก${H(st.h)} เจ้าเรือนคือดาว${TN141(k)} ซึ่งไปเสียบปลั๊กอยู่ที่${H(nx.h)}${q} — เรื่อง${HM141(st.h)}จึงต้องอาศัยหรือไหลไปสู่เรื่อง${HM141(nx.h)}`);
+    else if(nx) s.push(`ต่อจากนั้นเจ้าเรือนภพ${HOUSES[st.h-1]}คือดาว${TN141(k)} ไปอยู่${H(nx.h)}${q} ผลจึงส่งต่อเป็นทอดไปยังเรื่อง${HM141(nx.h)}`);
+  });
+  const last=path[path.length-1];
+  if(path.end==='own') s.push(`สายนี้สุดทางที่ดาว${TN141(last.k)}ซึ่งอยู่บ้านตัวเอง (เกษตร) เป็นหลักยึด เรื่องทั้งสายจึงมีจุดตั้งหลักที่มั่นคง ไปจบที่เรื่อง${HM141(last.h)}`);
+  else if(path.end==='swap') s.push(`ดาวเจ้าเรือนสองภพนี้แลกเรือนกัน (ปริวรรตน์) เรื่องทั้งสองจึงผูกกันแน่นและหนุนกันไปมา`);
+  else if(path.end==='loop') s.push(`สายนี้วนกลับไปที่ภพ${HOUSES[path.loopTo-1]} เกิดเป็นวงจรที่ส่งผลถึงกันไม่รู้จบ ${path.some(p=>[6,8,12].includes(p.h))?'ในวงมีทุสถานะ จึงเป็นเรื่องที่วนซ้ำ ต้องแก้ที่ต้นเหตุ':'วงนี้ประกอบด้วยภพดี จึงเป็นวงเสริมที่ช่วยกันเติบโต'}`);
+  const bad=path.filter(p=>[6,8,12].includes(p.h)).length, good=path.filter(p=>[1,4,5,7,9,10,11].includes(p.h)).length;
+  s.push(bad>good?'โดยรวมสายนี้ผ่านทุสถานะมาก เรื่องต้นสายจึงต้องใช้ความอดทน มีเรื่องซ่อนเร้นหรือค่าใช้จ่ายแฝง':good>bad?'โดยรวมสายนี้ผ่านภพดีเป็นส่วนใหญ่ เรื่องต้นสายจึงมีทางไปต่อและได้ผลลัพธ์ที่ดี':'สายนี้มีทั้งภพดีและภพที่ต้องระวังพอ ๆ กัน');
+  return s.join('. ')+'.'; }
+function plug141(){ const N=WSTATE.nat, P=N.pos, L=sgn(P.LA), t=getTransit(), h0=horaOf(t), out=[];
+  // ๑ สาย ๑๒ ภพ
+  const ends={}; const rows=[]; for(let h=1;h<=12;h++){ const p=plugPath141(P,L,h); const last=p[p.length-1]; const end=p.end==='own'?last.k:p.end==='loop'||p.end==='swap'?'วง':null; if(end) ends[end]=(ends[end]||0)+1;
+    rows.push(item141(`สายภพ${HOUSES[h-1]} · ${HM141(h)}`,'',plugChips141(p,P)+plugText141(p,P,L),p.end==='own'||p.end==='swap'?'g':p.filter(x=>[6,8,12].includes(x.h)).length>=2?'m':'')); }
+  // ๒ แกนของดวง
+  const owns=K8_141.filter(k=>LORD[sgn(P[k])]===PNUM[k]);
+  const lagP=plugPath141(P,L,1), lagEnd=lagP[lagP.length-1];
+  let core=owns.length?`ดาวที่อยู่บ้านตัวเอง (เกษตร) ในดวงนี้คือ ${owns.map(k=>`ดาว${TN141(k)} ที่ภพ${HOUSES[houseOf(P[k],L)-1]}`).join(', ')} ดาวเหล่านี้คือ "เต้ารับหลัก" ที่สายเจ้าเรือนจำนวนมากไปสิ้นสุด จึงเป็นแกนกำหนดทิศทางของดวง`
+    :'ดวงนี้ไม่มีดาวเกษตร สายเจ้าเรือนจึงไม่มีเต้ารับปลายทาง แต่จะวนเป็นวงจร ชีวิตมีการเปลี่ยนแปลงและหมุนเวียนสูง ต้องสร้างหลักยึดเอง';
+  if(Object.keys(ends).length) core+=` · สาย ๑๒ ภพไปสิ้นสุดที่ ${Object.entries(ends).sort((a,b)=>b[1]-a[1]).map(([k,v])=>k==='วง'?`วงจร ${v} สาย`:`ดาว${TN141(k)} ${v} สาย`).join(' · ')}`;
+  core+=` · สายของลัคนา (ตัวเจ้าชะตา) ไปจบที่ภพ${HOUSES[lagEnd.h-1]} ชีวิตจึงมีปลายทางอยู่ที่เรื่อง${HM141(lagEnd.h)}`;
+  out.push(sec141('แกนของดวง — เต้ารับหลักที่สายเจ้าเรือนไปสิ้นสุด',IC141E.plug,item141('ภาพรวมการเสียบปลั๊กของดวงเดิม','',core,owns.length?'g':'m'),true));
+  out.push(sec141('สายเจ้าเรือนครบ ๑๒ ภพ',IC141E.plug,rows.join('')+'<p class="note">อ่านแบบเสียบปลั๊ก: ดูว่าเจ้าเรือนของภพหนึ่งไปอยู่ภพใด แล้วตามเจ้าเรือนของภพนั้นต่อไปเรื่อย ๆ จนพบดาวที่อยู่บ้านตัวเอง ดาวที่แลกเรือนกัน หรือสายวนกลับ · สีเขียวคือเรือนเกณฑ์และตรีโกณ สีแดงคือทุสถานะ</p>',false,'๑๒ สาย'));
+  // ๓ สายของดาวแต่ละดวง
+  const pl=K8_141.map(k=>{ const h=houseOf(P[k],L), p=plugPath141(P,L,h,8), rl=lordHs140(k);
+    return item141(`ดาว${TN141(k)} (${NUM141(k)}) อยู่ภพ${HOUSES[h-1]}${rl.length?` · เจ้าเรือน${rl.map(x=>HOUSES[x-1]).join(' ')}`:''}`,'',`ดาว${TN141(k)}นำเรื่อง${rl.length?rl.map(x=>HM141(x)).join(' และ '):'ของตัวดาวเอง'} ไปเสียบที่ภพ${HOUSES[h-1]} จากนั้นพลังไหลต่อตามสายดังนี้`+plugChips141(p,P)+plugText141(p,P,L),''); });
+  out.push(sec141('สายของดาวแต่ละดวง',IC141E.plug,pl.join(''),false,'๘ ดวง'));
+  // ๔ เสียบปลั๊กดวงจร
+  const tr=['JU','SA','RA','KE','UR','MA','SU','VE','ME'].map(tk=>{ const x=norm(posH(h0,tk)), h=houseOf(x,L), p=plugPath141(P,L,h,4), rl=lordHs140(tk), n=ing140(tk,t,1);
+    const head=`ดาว${TN141(tk)}จรเข้าภพ${HOUSES[h-1]} (${HM141(h)})`;
+    let tx=`${head} ดาวจรนี้${rl.length?`ในดวงเดิมเป็นเจ้าเรือน${rl.map(x=>HOUSES[x-1]).join(' ')} จึงนำเรื่อง${rl.map(x=>HM141(x)).join(' และ ')}มาเสียบที่ภพ${HOUSES[h-1]}`:'ไม่ได้เป็นเจ้าเรือนในดวงเดิม จึงส่งผลตามธรรมชาติของดาวเป็นหลัก'} แล้วเสียบปลั๊กต่อเข้าสายเจ้าเรือนเดิม: `;
+    tx+=plugText141(p,P,L);
+    if(n) tx+=` สายนี้ทำงานไปจนดาว${TN141(tk)}ย้ายราศี ${dtf140(n)} (อีก ${dur140(n-t)})`;
+    return item141(`${TN141(tk)}จร → ภพ${HOUSES[h-1]}${speedH(h0,tk)<0&&!/RA|KE/.test(tk)?' · พักร์':''}`,`${TN141(tk)}: ${TRN25[tk]||''}`,plugChips141(p,P)+tx,BEN141[tk]?([6,8,12].includes(h)?'m':'g'):[3,6,11].includes(h)?'g':'m'); });
+  out.push(sec141('เสียบปลั๊กดวงจรเข้าดวงเดิม',IC141.tr,`<p class="note">ดาวจรเข้าภพใด ให้เสียบปลั๊กที่เจ้าเรือนเดิมของภพนั้น แล้วตามสายต่อไป เพื่อดูว่าผลของดาวจรจะลามไปเรื่องอะไรบ้าง</p>`+tr.join(''),true,'๙ ดวง'));
+  return soft141(out.join('')); }
+{ const _r=render141; render141=function(){ _r.apply(this,arguments); const P=document.getElementById('rd141'); if(!P) return; const tb=P.querySelector('.tb140'), a=tb&&tb.querySelector('[data-t141="a"]'); if(!a) return;
+  a.insertAdjacentHTML('beforebegin',`<button type="button" data-t141="p" class="${ST141.tab==='p'?'on':''}">${i141(IC141E.plug,15)} เสียบปลั๊ก</button>`); tb.querySelectorAll('[data-t141]').forEach(b=>b.classList.toggle('on',b.dataset.t141===ST141.tab)); const on=tb.querySelector('.on'); if(on) tb.scrollLeft=Math.max(0,on.offsetLeft-tb.clientWidth/2+on.offsetWidth/2); }; }
 
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
