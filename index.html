@@ -146,6 +146,11 @@ header{flex-wrap:wrap}.brand{flex:0 0 100%;width:100%;font-size:14px;font-weight
 :root[data-theme="dark"] #tpop{background:rgba(13,26,38,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--edge75b);border-radius:18px;box-shadow:0 24px 60px -16px rgba(0,0,0,.85)}
 :root[data-theme="dark"] *{scrollbar-color:#244055 transparent;scrollbar-width:thin}
 ::selection{background:rgba(156,203,232,.35)}
+.cg115{display:flex;flex-wrap:wrap;gap:4px;align-items:center;margin:2px 0}.cgn115{font-size:11px;font-weight:600;color:#9ccbe8;min-width:74px}
+#acg111Out .cf115,#acg111Out .lcl115 .cy111{width:auto!important;margin:0!important;min-height:0!important;display:inline-flex!important;align-items:center;gap:4px;border:1px solid var(--line);background:transparent;color:inherit;border-radius:6px;padding:2px 7px!important;font:inherit;font-size:12px;cursor:pointer;text-decoration:none}
+#acg111Out .cf115:hover{border-color:#9ccbe8}.lcb115{padding:6px;border-radius:8px;background:rgba(156,203,232,.07)}.lcl115{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.tb115{margin-top:10px}#acg111Out .bt115{width:auto!important;margin:0!important;border:1px solid #ffd166;background:rgba(255,209,102,.12);color:inherit;border-radius:8px;padding:6px 12px!important;font:inherit;font-size:13px;cursor:pointer;min-height:0!important}
+.ch115{width:100%;height:auto;margin-top:6px}.al115{fill:none;stroke:#ffd166;stroke-width:2}.hl115{fill:none;stroke:#8fa4b8;stroke-width:1.6;stroke-dasharray:4 3}.tmr115{margin-top:8px}
 .fr114{fill:none;stroke:#ffd166;stroke-width:1.6;stroke-dasharray:7 6;vector-effect:non-scaling-stroke;opacity:.7;animation:fl114 1.4s linear infinite}.fr114.on{stroke-width:2.6;opacity:1}
 @keyframes fl114{to{stroke-dashoffset:-13}}.pl114 path{fill:#ffd166;stroke:#0a1824;stroke-width:.6;vector-effect:non-scaling-stroke}.pl114.on path{fill:#fff2c4}
 .lg114{display:inline-flex;border:1px solid var(--line);border-radius:7px;overflow:hidden}#acg111Out .lg114 button{border:0!important;border-radius:0!important;padding:4px 11px!important;opacity:.6}#acg111Out .lg114 button.on{opacity:1;background:rgba(156,203,232,.22)}
@@ -8035,7 +8040,8 @@ const CHG110=[
  {v:'112',d:'2026-11-02',k:'u',t:'โหราศาสตร์แผนที่: ชื่อประเทศ/เมือง + แผนการเดินทาง',x:'ชื่อประเทศและเมืองบนแผนที่เป็นภาษาไทย พร้อมคำอ่านชื่ออังกฤษ · ค้นหาเมือง · แผนการเดินทางหลายจุดหมาย พร้อมคำทำนายดาวจรรายเมือง วันเด่น วันควรระวัง',c:['acg111']},
  {v:'112.1',d:'2026-11-02',k:'f',t:'แก้ตัวอักษรในเมนูเลือก (dropdown) จม',x:'รายการในเมนูเลือกประเทศ/เมืองเป็นตัวอักษรสว่างบนพื้นเข้ม ขนาดและระยะบรรทัดพอดี',c:['acg111']},
  {v:'113',d:'2026-11-02',k:'u',t:'ธงชาติในโหราศาสตร์แผนที่',x:'ธงประจำประเทศบนแผนที่ ในผลค้นหา ตารางเมือง แผนการเดินทาง และข้างเมนูเลือกประเทศ',c:['acg111']},
- {v:'114',d:'2026-11-02',k:'u',t:'เส้นทางบิน · เลือกภาษาไทย/อังกฤษ · แถบเลื่อนวันดาวจร',x:'แผนเดินทางแสดงเส้นทางบินโค้งตามผิวโลกพร้อมเครื่องบินและระยะทาง · สลับชื่อเมือง/ประเทศเป็นไทยหรืออังกฤษ · เลื่อนวันดาวจรด้วยแถบเลื่อนและปุ่มซ้าย-ขวา',c:['acg111']}];
+ {v:'114',d:'2026-11-02',k:'u',t:'เส้นทางบิน · เลือกภาษาไทย/อังกฤษ · แถบเลื่อนวันดาวจร',x:'แผนเดินทางแสดงเส้นทางบินโค้งตามผิวโลกพร้อมเครื่องบินและระยะทาง · สลับชื่อเมือง/ประเทศเป็นไทยหรืออังกฤษ · เลื่อนวันดาวจรด้วยแถบเลื่อนและปุ่มซ้าย-ขวา',c:['acg111']},
+ {v:'115',d:'2026-11-02',k:'u',t:'แบ่งทวีป · กดธงดูเมือง · วัน-เวลาเด่นเทียบบ้านเกิด',x:'ประเทศที่เส้นพาดผ่านจัดกลุ่มตามทวีป กดธงเพื่อดูรายชื่อเมืองตามแนวเส้น · กรองอันดับเมืองตามทวีป · คำนวณวันและเวลาที่ดีที่สุดเมื่อปักเมือง พร้อมกราฟเทียบจังหวะบ้านเกิด',c:['acg111']}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
@@ -8162,9 +8168,9 @@ function ptHTML111(){ if(!ST111.pt) return '<p class="note">แตะหรื�
   const li=R.map(r=>{ const m=mean111(r.k,r.a), s=str111(r.d), nt=NAT111[r.k], g=nt>0?'g':nt<0?'b':'m'; return `<li><span class="h111" style="color:${PL111.find(p=>p[0]===r.k)[2]}">${gl111(r.k,15)} <b>${TH111(r.k)} ${r.a}</b></span> ${bdg98(s===3?(g==='b'?'b':'g'):'m',SN111[s]+' · '+Math.round(r.d)+' กม.')} ${m.t}${m.good&&m.good.length?' <span class="note">เด่น: '+m.good.join(' ')+'</span>':''}${m.warn?`<br><span class="note">${bdg98('b','ระวัง')} ${m.warn}</span>`:''}</li>`; }).join('');
   return `<div class="c98"><div class="bh70st">${PIN103||''} ${nm} <span class="note">${Math.abs(la).toFixed(2)}°${la>=0?'N':'S'} ${Math.abs(lo).toFixed(2)}°${lo>=0?'E':'W'}</span></div>
    <p>ถ้าย้ายไปอยู่ที่นี่ ลัคนาจะย้ายเป็น <b>ราศี${SIGNS[rs]}</b> ${inL?`(มี${inL}กุมลัคน์)`:''} · ภพกัมมะเป็นราศี${SIGNS[(rs+9)%12]}${in10?` (มี${in10})`:''} <span class="note">— ดวงย้ายถิ่น (relocated) ใช้เวลาเกิดเดิมแต่เปลี่ยนพิกัด</span></p>
-   ${li?`<ul class="lb88l">${li}</ul>`:'<p class="note">ไม่มีเส้นดาวในรัศมี ๑,๑๐๐ กม. — พื้นที่ "เงียบ" ชีวิตดำเนินตามดวงเดิม ไม่มีดาวดวงใดเด่นเป็นพิเศษ</p>'}${ST111.tr?trNear112(la,lo):''}</div>`; }
+   ${li?`<ul class="lb88l">${li}</ul>`:'<p class="note">ไม่มีเส้นดาวในรัศมี ๑,๑๐๐ กม. — พื้นที่ "เงียบ" ชีวิตดำเนินตามดวงเดิม ไม่มีดาวดวงใดเด่นเป็นพิเศษ</p>'}${ST111.tr?trNear112(la,lo):''}${(()=>{ const tz=n.c?tz115(n.c[3],n.c[0],la,lo):'UTC', d0=ST111.trAt?new Date(ST111.trAt):new Date(); const ds=dstr112(d0); return `<div class="tb115"><button type="button" class="bt115" data-la="${la}" data-lo="${lo}" data-tz="${tz}" data-d0="${ds}" data-n="30" data-lab="${n.c&&n.d<250?cityL114(n.c[0],n.c[3]):'จุดที่เลือก'}">หาวัน-เวลาเด่น ๓๐ วัน (เทียบบ้านเกิด)</button><div class="to115"></div></div>`; })()}</div>`; }
 function rank111(topic){ const D=acgData111(), C=cities111(), res=[], bad=[];
-  for(const c of C){ if(Math.abs(c[1])>58) continue; let s=0,w=0; const why=[], wy=[]; for(const l of D.L){ const d=dist111(D.E[l.k],l.a,D.gm,c[1],c[2]); if(d==null||d>ORB111[2]) continue; const f=(1-d/ORB111[2])**1.5*ANGW111[l.a], m=mean111(l.k,l.a);
+  for(const c of C){ if(Math.abs(c[1])>58) continue; if(ST111.cont&&cont115(c[3])!==ST111.cont) continue; let s=0,w=0; const why=[], wy=[]; for(const l of D.L){ const d=dist111(D.E[l.k],l.a,D.gm,c[1],c[2]); if(d==null||d>ORB111[2]) continue; const f=(1-d/ORB111[2])**1.5*ANGW111[l.a], m=mean111(l.k,l.a);
       if((m.good||[]).includes(topic)){ s+=f*(NAT111[l.k]<0?.6:1); why.push([f,l,d]); } if(NAT111[l.k]<0){ w+=f; wy.push([f,l,d]); } }
     if(s>0) res.push({c,s:s-.5*w,why,wy}); if(w>.3) bad.push({c,w,wy}); }
   const pick=(arr,key)=>{ arr.sort((a,b)=>b[key]-a[key]); const per={}, o=[]; for(const r of arr){ const cc=r.c[3]; if((per[cc]||0)>=2) continue; per[cc]=(per[cc]||0)+1; o.push(r); if(o.length>=12) break; } return o; };
@@ -8175,9 +8181,9 @@ function rankHTML111(){ const R=rank111(ST111.topic), lnm=([f,l,d])=>`${TH111(l.
    <div class="c98"><div class="bh70st">พื้นที่ที่ควรระวัง (เส้นดาวหนักแรง)</div><div class="t98w"><table class="t98"><tr><th>เมือง</th><th>น้ำหนัก</th><th>เส้น</th></tr>${R.bad.map(r=>row(r,r.w,r.wy,'b')).join('')}</table></div><p class="note">เส้นอังคาร เสาร์ พลูโต ยูเรนัส เนปจูน ไม่ได้แปลว่าร้ายเสมอ แต่ให้บทเรียนและแรงกดดันสูง เหมาะกับงานหนัก การแข่งขัน หรือการเปลี่ยนแปลงใหญ่</p></div></div>`; }
 function linesHTML111(){ const D=acgData111(), C=cities111(), rows=[];
   for(const l of D.L){ if(!ST111.show[l.k]||!ST111.ang[l.a]) continue; const cs={}; for(const c of C){ const d=dist111(D.E[l.k],l.a,D.gm,c[1],c[2]); if(d!=null&&d<120){ cs[c[3]]=(cs[c[3]]||0)+1; } }
-    const top=Object.entries(cs).sort((a,b)=>b[1]-a[1]).slice(0,9).map(x=>cnf112(x[0])), m=mean111(l.k,l.a);
-    rows.push(`<tr><td style="white-space:nowrap"><span style="color:${PL111.find(p=>p[0]===l.k)[2]}">${gl111(l.k,15)}</span> ${TH111(l.k)} <b>${l.a}</b></td><td>${m.t||'—'}${m.kw&&m.kw.length?'<br><span class="note">'+m.kw.join(' · ')+'</span>':''}</td><td class="note">${top.join(' · ')||'ผ่านมหาสมุทรเป็นหลัก'}</td></tr>`); }
-  return `<div class="t98w"><table class="t98"><tr><th>เส้น</th><th>ความหมาย</th><th>ประเทศที่พาดผ่าน</th></tr>${rows.join('')}</table></div>`; }
+    const grp={}; Object.entries(cs).sort((a,b)=>b[1]-a[1]).forEach(([cc,n])=>{ const ct=cont115(cc); (grp[ct]=grp[ct]||[]).push(cc); }); const top=CONTN115.concat(['อื่น ๆ']).filter(c=>grp[c]).map(c=>`<div class="cg115"><span class="cgn115">${contL115(c)}</span>${grp[c].map(cc=>`<button type="button" class="cf115" data-cc="${cc}" data-l="${l.k}|${l.a}">${fl112(cc)} ${cnm112(cc)}</button>`).join('')}</div>`), m=mean111(l.k,l.a);
+    rows.push(`<tr><td style="white-space:nowrap"><span style="color:${PL111.find(p=>p[0]===l.k)[2]}">${gl111(l.k,15)}</span> ${TH111(l.k)} <b>${l.a}</b></td><td>${m.t||'—'}${m.kw&&m.kw.length?'<br><span class="note">'+m.kw.join(' · ')+'</span>':''}</td><td class="note">${top.join('')||'ผ่านมหาสมุทรเป็นหลัก'}</td></tr>`); }
+  return `<div class="t98w"><table class="t98"><tr><th>เส้น</th><th>ความหมาย</th><th>ประเทศที่พาดผ่าน (กดธงเพื่อดูเมือง)</th></tr>${rows.join('')}</table></div>`; }
 function parHTML111(){ const D=acgData111(), P=D.P.filter(p=>Math.abs(p.lat)<66).map(p=>({...p,w:(NAT111[p.k1]+NAT111[p.k2])})).sort((a,b)=>Math.abs(b.w)-Math.abs(a.w)).slice(0,14);
   return `<div class="t98w"><table class="t98"><tr><th>จุดตัด</th><th>ละติจูด</th><th>โทน</th></tr>${P.map(p=>`<tr><td>${TH111(p.k1)} ${p.a1} × ${TH111(p.k2)} ${p.a2}</td><td>${Math.abs(p.lat).toFixed(1)}°${p.lat>=0?'N':'S'}</td><td>${bdg98(p.w>0?'g':p.w<0?'b':'m',p.w>0?'เสริมกัน':p.w<0?'กดดัน':'ผสม')}</td></tr>`).join('')}</table></div><p class="note">จุดตัด (paran) ส่งผลทั้งแนวละติจูดนั้นรอบโลก (คลาดราว ±๑°) ไม่ใช่เฉพาะจุดบนแผนที่</p>`; }
 function leastHTML111(){ const D=acgData111(), a=Object.entries(D.asp).sort((x,y)=>x[1]-y[1]), lo=a[0], hi=a[a.length-1], bp=placeOf(readForm()), near=point111(bp[1],bp[2]).filter(r=>r.d<=ORB111[1]).slice(0,4);
@@ -8191,7 +8197,7 @@ function acgHTML111(){ const tb=PL111.map(([k,n,c])=>`<button type="button" clas
    <div class="mw111"><div id="mapbox111">${svgMap111(acgData111())}</div><div class="zm111"><button type="button" data-z="1.6">+</button><button type="button" data-z=".625">−</button><button type="button" data-z="0" title="ดูทั้งโลก"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c3 3 3 13 0 16M12 4c-3 3-3 13 0 16"/></svg></button></div></div>
    <div class="ts114" id="ts114">${slider114()}</div><p class="note">ถือดวงเกิดเป็นหลัก: เส้นทึบ = ดาวเดิมขึ้น (AC) กลางฟ้า (MC) ตก (DC) ใต้ฟ้า (IC) ณ เวลาเกิด · วงกลมเล็ก = ดาวอยู่เหนือศีรษะ · จุดขาว = จุดตัดของเส้น · วงสองชั้น = บ้านเกิด · ลากเพื่อเลื่อน ใช้ล้อเมาส์หรือปุ่มเพื่อซูม</p>
    <div id="pt111">${ptHTML111()}</div><div id="trip112">${tripHTML112()}</div>
-   <div class="c98"><div class="bh70st">หาเมืองตามเรื่องที่ต้องการ</div><div class="tb111">${tp}</div><div id="rk111">${rankHTML111()}</div></div>
+   <div class="c98"><div class="bh70st">หาเมืองตามเรื่องที่ต้องการ</div><div class="tb111">${tp}</div><div class="tb111">${['',...CONTN115].map(c=>`<button type="button" class="ct115${(ST111.cont||'')===c?' on':''}" data-c="${c}">${c?contL115(c):(LANG114()==='en'?'Worldwide':'ทั้งโลก')}</button>`).join('')}</div><div id="rk111">${rankHTML111()}</div></div>
    <div class="c98"><div class="bh70st">เส้นดาวทั้งหมดและประเทศที่พาดผ่าน</div>${linesHTML111()}</div>
    <div class="sx89two"><div class="c98"><div class="bh70st">จุดตัดสำคัญ (paran)</div>${parHTML111()}</div>${leastHTML111()}</div>
    <p class="note">${ACGNOTE111}</p>`; }
@@ -8213,7 +8219,7 @@ function bind111(el){ const svgPt=(e)=>{ const s=document.getElementById('map111
   el.querySelectorAll('.zm111 button').forEach(b=>b.onclick=()=>{ const z=+b.dataset.z, v=ST111.vb; if(!z) return vbSet111([0,50,1800,700]); const cx=v[0]+v[2]/2, cy=v[1]+v[3]/2, w=v[2]/z; vbSet111([cx-w/2,cy-w*350/1800,w,w*700/1800]); });
   el.onclick=e=>{ const c=e.target.closest('.cy111'); if(c){ setPt(+c.dataset.la,+c.dataset.lo); const w=300; vbSet111([X111(+c.dataset.lo)-w/2,Y111(+c.dataset.la)-w*350/1800,w,w*700/1800]); document.getElementById('mapbox111').scrollIntoView({behavior:'smooth',block:'center'}); } };
   const cc=el.querySelector('#cc111'), ct=el.querySelector('#ct111'); const fill=()=>{ const L=cc.value==='TH'?PROV.map(r=>[r[0],r[1],r[2]]):WORLD.c[cc.value]||[]; ct.innerHTML='<option value="">— เลือกเมือง —</option>'+L.map((r,i)=>`<option value="${i}">${LANG114()==='en'?cityL114(r[0],cc.value)+(cc.value==='TH'?' — '+r[0]:''):cityL114(r[0],cc.value)+(cc.value==='TH'?'':' — '+r[0])}</option>`).join(''); ct._L=L; };
-  cc.value=ST111.cc||'TH'; fill(); const cf=el.querySelector('#cf111'), cfu=()=>{ if(cf) cf.innerHTML=fl112(cc.value,22); }; cfu(); cc.onchange=()=>{ ST111.cc=cc.value; fill(); cfu(); }; ct.onchange=()=>{ const r=ct._L[+ct.value]; if(!r) return; setPt(r[1],r[2]); const w=300; vbSet111([X111(r[2])-w/2,Y111(r[1])-w*350/1800,w,w*700/1800]); }; bind112(el,setPt); bind114(el); }
+  cc.value=ST111.cc||'TH'; fill(); const cf=el.querySelector('#cf111'), cfu=()=>{ if(cf) cf.innerHTML=fl112(cc.value,22); }; cfu(); cc.onchange=()=>{ ST111.cc=cc.value; fill(); cfu(); }; ct.onchange=()=>{ const r=ct._L[+ct.value]; if(!r) return; setPt(r[1],r[2]); const w=300; vbSet111([X111(r[2])-w/2,Y111(r[1])-w*350/1800,w,w*700/1800]); }; bind112(el,setPt); bind114(el); bind115(el); }
 function run111(force){ const el=document.getElementById('acg111Out'); if(!el||!WSTATE||!WSTATE.nat) return; const p=el.closest('.panel'); if(p&&p.style.display==='none') return;
   const k=WSTATE.bt.getTime()+'|'+(ST111.tr?+(ST111.trAt||getTransit()):0); if(!force&&k===ST111.key&&el.innerHTML) return; ST111.key=k;
   try{ if(!ST111.pt0||ST111.pt0!==WSTATE.bt.getTime()){ ST111.pt0=WSTATE.bt.getTime(); const bp=placeOf(readForm()); ST111.pt=[bp[1],bp[2]]; } el.innerHTML=acgHTML111(); bind111(el); }catch(e){ console.error(e); el.innerHTML='<p class="note">⚠ '+e.message+'</p>'; } }
@@ -8300,7 +8306,7 @@ function stopHTML112(st,i){ let R; try{ R=stop112(st); }catch(e){ return `<p cla
     <div class="sx89two"><div class="c98"><div class="bh70st">เส้นดวงเดิมที่เมืองนี้</div>${nl?`<ul class="lb88l">${nl}</ul>`:'<p class="note">ไม่มีเส้นในรัศมี ๗๐๐ กม.</p>'}</div>
      <div class="c98"><div class="bh70st">ดาวจรช่วงเดินทาง (เทียบแผนที่กำเนิด)</div>${tl?`<ul class="lb88l">${tl}</ul>`:'<p class="note">ไม่มีดาวจรผ่านเส้นของเมืองนี้ในช่วงเวลานั้น</p>'}</div></div>
     <p class="note"><b>ดาวจรในดวงย้ายถิ่น (ลัคนา${SIGNS[R.rs]}):</b> ${trt}</p>
-    ${R.best.length||R.worst.length?`<p class="note">${R.best.length?'<b>วันเด่น:</b> '+R.best.map(d=>dth112(dstr112(d.t))).join(', '):''}${R.worst.length?' · <b>วันควรระวัง:</b> '+R.worst.map(d=>dth112(dstr112(d.t))).join(', '):''}</p>`:''}</div>`; }
+    <div class="tb115"><button type="button" class="bt115" data-la="${st.lat}" data-lo="${st.lon}" data-tz="${tz115(st.cc,st.name,st.lat,st.lon)}" data-d0="${st.d1}" data-n="${Math.min(45,R.nd)}" data-lab="${cityL114(st.name,st.cc)}">หาวัน-เวลาเด่นช่วงทริป (เทียบบ้านเกิด)</button><div class="to115"></div></div>${R.best.length||R.worst.length?`<p class="note">${R.best.length?'<b>วันเด่น:</b> '+R.best.map(d=>dth112(dstr112(d.t))).join(', '):''}${R.worst.length?' · <b>วันควรระวัง:</b> '+R.worst.map(d=>dth112(dstr112(d.t))).join(', '):''}</p>`:''}</div>`; }
 function tripHTML112(){ const T=ST111.trip||(ST111.trip=tripLoad112()), today=dstr112(new Date());
   const ccs=['TH'].concat(Object.keys(WORLD.c).filter(c=>/^[A-Z]{2}$/.test(c)).sort((a,b)=>cnm112(a).localeCompare(cnm112(b),LANG114()))).map(c=>`<option value="${c}">${cnm112(c)}</option>`).join('');
   return `<div class="c98"><div class="bh70st">แผนการเดินทาง — ทำนายรายจุดหมาย</div>
@@ -8357,6 +8363,59 @@ function bind114(el){ el.querySelectorAll('.lg114 button').forEach(b=>b.onclick=
   box.querySelector('#tsr114').oninput=e=>setTr114(new Date(base().getTime()+(+e.target.value)*864e5));
   box.querySelectorAll('button[data-d]').forEach(b=>b.onclick=()=>{ const d=+b.dataset.d; setTr114(d===0?base():new Date((ST111.trAt||base()).getTime()+d*864e5)); });
   el.addEventListener('keydown',e=>{ if(e.target&&e.target.id==='tsr114') return; }); }
+// ===== v115: ทวีป · กดธงดูเมืองที่เส้นพาดผ่าน · วัน-เวลาเด่นที่จุดหมาย (นาทีต่อนาทีของดาวขึ้น/กลางฟ้า) เทียบจังหวะบ้านเกิด
+const CONTN115=['เอเชีย','ยุโรป','แอฟริกา','อเมริกาเหนือ','อเมริกาใต้','โอเชียเนีย'];
+const SAM115=new Set(['AR','BO','BR','CL','CO','EC','GY','PY','PE','SR','UY','VE','GF','FK']);
+function cont115(cc){ if(cc==='TH') return 'เอเชีย'; if(SAM115.has(cc)) return 'อเมริกาใต้'; const L=WORLD.c[cc]; const tz=L&&L[0]?WORLD.tz[L[0][3]]||'':''; const p=tz.split('/')[0];
+  if(cc==='RU') return 'ยุโรป'; if(['MV','IO','LK'].includes(cc)) return 'เอเชีย'; if(['IS','PT','ES','FO'].includes(cc)) return 'ยุโรป'; if(['CV','SH'].includes(cc)) return 'แอฟริกา'; if(['BM','GL'].includes(cc)) return 'อเมริกาเหนือ'; if(['US'].includes(cc)) return 'อเมริกาเหนือ'; if(['TR','CY'].includes(cc)) return 'ยุโรป';
+  return p==='Asia'?'เอเชีย':p==='Europe'?'ยุโรป':p==='Africa'?'แอฟริกา':p==='America'?'อเมริกาเหนือ':(p==='Australia'||p==='Pacific')?'โอเชียเนีย':p==='Indian'?'แอฟริกา':p==='Atlantic'?'ยุโรป':'อื่น ๆ'; }
+const CONTEN115={'เอเชีย':'Asia','ยุโรป':'Europe','แอฟริกา':'Africa','อเมริกาเหนือ':'North America','อเมริกาใต้':'South America','โอเชียเนีย':'Oceania','อื่น ๆ':'Other'};
+const contL115=c=>LANG114()==='en'?CONTEN115[c]||c:c;
+function tz115(cc,name,la,lo){ if(cc==='TH') return 'Asia/Bangkok'; const L=WORLD.c[cc]||[]; let r=L.find(x=>x[0]===name); if(!r&&la!=null){ const n=near111(la,lo); if(n.c&&n.c[3]!=='TH'){ r=(WORLD.c[n.c[3]]||[]).find(x=>x[0]===n.c[0]); } else if(n.c) return 'Asia/Bangkok'; } return r?WORLD.tz[r[3]]||'UTC':'UTC'; }
+const AN115={AC:'ขึ้นขอบฟ้า',MC:'ขึ้นกลางฟ้า',DC:'ตกขอบฟ้า',IC:'อยู่ใต้ฟ้า'};
+// คะแนนหนึ่งช่วงเวลา: ดาวที่อยู่ใกล้มุมทั้งสี่ของท้องฟ้า ณ เมืองนั้น
+function hourSc115(E,la,lo){ const lst=n111(E.gmst+lo); let sc=0; const why=[];
+  for(const [k] of PL111){ if(k==='NN') continue; const p=E[k], HA=wr111(lst-p.ra); const c=-Math.tan(la*r111)*Math.tan(p.dec*r111); const H0=c>=-1&&c<=1?Math.acos(c)/r111:null;
+    const ds=[['MC',Math.abs(HA)],['IC',180-Math.abs(HA)]]; if(H0!=null){ ds.push(['AC',Math.abs(wr111(HA+H0))]); ds.push(['DC',Math.abs(wr111(HA-H0))]); }
+    let best=null; for(const [a,d] of ds){ const pr=Math.max(0,1-d/12)*ANGW111[a]; if(!best||pr>best.pr) best={a,pr,d}; } if(best&&best.pr>0){ const v=best.pr*NAT111[k]; sc+=v; if(Math.abs(v)>.25) why.push({k,a:best.a,v}); } }
+  why.sort((x,y)=>Math.abs(y.v)-Math.abs(x.v)); return {sc,why}; }
+function placeSc115(la,lo){ const D=acgData111(); let s=0; for(const l of D.L){ const d=dist111(D.E[l.k],l.a,D.gm,la,lo); if(d!=null&&d<=ORB111[2]) s+=(1-d/ORB111[2])**1.5*ANGW111[l.a]*NAT111[l.k]; } return s; }
+function trSc115(E,la,lo){ const D=acgData111(); let s=0; for(const [k] of PL111) for(const a of ['AC','MC','DC','IC']){ const d=dist111(E[k],a,D.gm,la,lo); if(d!=null&&d<=ORB111[1]) s+=(1-d/ORB111[1])*ANGW111[a]*NAT111[k]; } return s; }
+function days115(la,lo,tz,d0,n){ const out=[], ps=placeSc115(la,lo);
+  for(let i=0;i<n;i++){ const day=new Date(d0.getTime()+i*864e5), y=day.getFullYear(), m=day.getMonth(), d=day.getDate(); const noonU=zonedToUtc(y,m,d,12,0,tz), tsc=trSc115(eph111(noonU),la,lo); let bh=null;
+    for(let mi=6*60;mi<=22*60;mi+=20){ const u=zonedToUtc(y,m,d,Math.floor(mi/60),mi%60,tz), h=hourSc115(eph111(u),la,lo); if(!bh||h.sc>bh.sc) bh={...h,mi,u}; }
+    if(bh){ for(let dm=-15;dm<=15;dm+=5){ const mi=bh.mi+dm; if(mi<360||mi>1320) continue; const u=zonedToUtc(y,m,d,Math.floor(mi/60),mi%60,tz), h=hourSc115(eph111(u),la,lo); if(h.sc>bh.sc) bh={...h,mi,u}; } }
+    out.push({day,ps,tsc,bh,tot:ps+tsc+.6*(bh?bh.sc:0)}); }
+  return out; }
+const hm115=mi=>String(Math.floor(mi/60)).padStart(2,'0')+':'+String(mi%60).padStart(2,'0');
+function timeHTML115(la,lo,tz,d0,n,lab){ const A=days115(la,lo,tz,d0,n), hp=placeOf(readForm()), H=days115(hp[1],hp[2],hp[3]||'Asia/Bangkok',d0,n);
+  const best=A.map((x,i)=>({...x,i})).sort((a,b)=>b.tot-a.tot).slice(0,5), low=A.map((x,i)=>({...x,i})).sort((a,b)=>a.tot-b.tot).filter(x=>x.tot<A.reduce((s,x)=>s+x.tot,0)/A.length-.2).slice(0,3);
+  const why=b=>b.bh&&b.bh.why.length?b.bh.why.slice(0,2).map(w=>`${TH111(w.k)}${AN115[w.a]}`).join(' · '):'ไม่มีดาวเด่นที่มุมฟ้า';
+  const ds=d=>d.toLocaleDateString('th-TH',{weekday:'short',day:'numeric',month:'short',year:'2-digit'});
+  const win=A.filter((x,i)=>x.tot>H[i].tot).length, avg=(A.reduce((s,x)=>s+x.tot,0)-H.reduce((s,x)=>s+x.tot,0))/A.length;
+  const W=640,Ht=130,pd=24, all=A.concat(H).map(x=>x.tot), mn=Math.min(...all), mx=Math.max(...all), sy=v=>Ht-pd-(v-mn)/(mx-mn||1)*(Ht-2*pd), sx=i=>pd+i*(W-2*pd)/Math.max(1,n-1);
+  const pl=arr=>arr.map((x,i)=>`${sx(i).toFixed(1)},${sy(x.tot).toFixed(1)}`).join(' ');
+  const ticks=A.map((x,i)=>i%Math.max(1,Math.round(n/6))===0?`<text x="${sx(i)}" y="${Ht-6}" font-size="10" fill="var(--muted)" text-anchor="middle">${x.day.getDate()}/${x.day.getMonth()+1}</text>`:'').join('');
+  const dots=best.map(b=>`<circle cx="${sx(b.i)}" cy="${sy(b.tot)}" r="3.5" fill="#ffd166"/>`).join('');
+  const hh=(H[0]&&H[0].ps!=null)?H[0].ps:0;
+  return `<div class="tmr115"><div class="bh70st">วัน-เวลาเด่นที่${lab} <span class="note">(${ds(d0)} – ${ds(new Date(d0.getTime()+(n-1)*864e5))} · เวลาท้องถิ่น ${tz})</span></div>
+   <div class="t98w"><table class="t98"><tr><th>วัน</th><th>เวลาเด่น</th><th>ดาวที่มุมฟ้า</th><th>ปลายทาง</th><th>บ้านเกิด</th></tr>${best.map(b=>`<tr><td><b>${ds(b.day)}</b></td><td>${bdg98('g',hm115(b.bh.mi)+' น.')}</td><td class="note">${why(b)}</td><td>${b.tot.toFixed(2)}</td><td class="note">${H[b.i].tot.toFixed(2)}</td></tr>`).join('')}</table></div>
+   ${low.length?`<p class="note">${bdg98('b','ควรระวัง')} ${low.map(x=>ds(x.day)).join(', ')}</p>`:''}
+   <svg viewBox="0 0 ${W} ${Ht}" class="ch115"><polyline points="${pl(H)}" class="hl115"/><polyline points="${pl(A)}" class="al115"/>${dots}${ticks}</svg>
+   <div class="nk72lg note"><span><i style="background:#ffd166"></i>${lab}</span><span><i style="background:#8fa4b8"></i>บ้านเกิด (${hp[0].split(' · ')[0]})</span></div>
+   <p>${bdg98(avg>.15?'g':avg<-.15?'b':'m',avg>.15?'ปลายทางดีกว่าบ้านเกิด':avg<-.15?'บ้านเกิดดีกว่า':'ใกล้เคียงบ้านเกิด')} ปลายทางให้จังหวะดีกว่าบ้านเกิด ${win} จาก ${n} วัน · พลังสถานที่ (เส้นดวงเดิม) ปลายทาง ${A[0].ps.toFixed(2)} เทียบบ้านเกิด ${hh.toFixed(2)}</p>
+   <p class="note">คะแนนรายวัน = พลังสถานที่จากเส้นดวงเดิม + ดาวจรผ่านเส้นของเมือง + ๐.๖ × ช่วงเวลาที่ดีที่สุดของวัน (ดาวให้คุณขึ้นขอบฟ้าหรือขึ้นกลางฟ้าของเมืองนั้น ค้นทุก ๕–๒๐ นาที ระหว่าง ๐๖:๐๐–๒๒:๐๐ น. เวลาท้องถิ่น) · ดาวให้คุณ: อาทิตย์ จันทร์ ศุกร์ พฤหัส · ดาวหนัก: อังคาร เสาร์ พลูโต</p></div>`; }
+
+function lineCities115(k,a,cc){ const D=acgData111(), C=cities111(), o=[]; for(const c of C){ if(c[3]!==cc) continue; const d=dist111(D.E[k],a,D.gm,c[1],c[2]); if(d!=null&&d<160) o.push([c,d]); } o.sort((x,y)=>x[1]-y[1]); return o.slice(0,24); }
+function bind115(el){ if(el._b115) return; el._b115=1;
+  el.addEventListener('click',e=>{ const f=e.target.closest('.cf115'); if(f){ const row=f.closest('tr'), nx=row.nextElementSibling, key=f.dataset.l+'|'+f.dataset.cc;
+      if(nx&&nx.classList.contains('lc115')&&nx.dataset.key===key){ nx.remove(); return; } if(nx&&nx.classList.contains('lc115')) nx.remove();
+      const [k,a]=f.dataset.l.split('|'), L=lineCities115(k,a,f.dataset.cc), tr=document.createElement('tr'); tr.className='lc115'; tr.dataset.key=key;
+      tr.innerHTML=`<td colspan="3"><div class="lcb115"><b>${fl112(f.dataset.cc)} ${cnm112(f.dataset.cc)}</b> — เมืองตามแนวเส้น ${TH111(k)} ${a} (ภายใน ๑๖๐ กม.):<div class="lcl115">${L.map(([c,d])=>`<button type="button" class="cy111" data-la="${c[1]}" data-lo="${c[2]}">${nm112(c)} <span class="note">${Math.round(d)} กม.</span></button>`).join('')||'<span class="note">ไม่มีเมืองในฐานข้อมูลใกล้เส้น</span>'}</div></div></td>`;
+      row.after(tr); return; }
+    const b=e.target.closest('.bt115'); if(b){ const box=b.parentElement.querySelector('.to115'); box.innerHTML='<p class="note">กำลังคำนวณ…</p>'; b.disabled=true;
+      setTimeout(()=>{ try{ const la=+b.dataset.la, lo=+b.dataset.lo, tz=b.dataset.tz, d0=new Date(b.dataset.d0+'T12:00:00'), n=+b.dataset.n; box.innerHTML=timeHTML115(la,lo,tz,d0,n,b.dataset.lab); }catch(err){ console.error(err); box.innerHTML='<p class="note">⚠ '+err.message+'</p>'; } b.disabled=false; },20); return; }
+    const ct=e.target.closest('.ct115'); if(ct){ ST111.cont=ct.dataset.c; el.querySelectorAll('.ct115').forEach(x=>x.classList.toggle('on',x===ct)); document.getElementById('rk111').innerHTML=rankHTML111(); } }); }
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
   try{ rhythm77(); }catch(e){ console.error(e); document.getElementById('rh77Out').innerHTML='<p class="note">⚠ '+e.message+'</p>'; } }
