@@ -146,6 +146,11 @@ header{flex-wrap:wrap}.brand{flex:0 0 100%;width:100%;font-size:14px;font-weight
 :root[data-theme="dark"] #tpop{background:rgba(13,26,38,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--edge75b);border-radius:18px;box-shadow:0 24px 60px -16px rgba(0,0,0,.85)}
 :root[data-theme="dark"] *{scrollbar-color:#244055 transparent;scrollbar-width:thin}
 ::selection{background:rgba(156,203,232,.35)}
+.spi116{display:flex;gap:4px;align-items:flex-end}.spfc116{flex:1.15}.spb116{flex:.85}.spfc116 svg,.spb116 svg{width:100%;height:auto;display:block;border-radius:10px}
+.spg116{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}.spf116{margin:0;flex:0 0 230px;display:flex;flex-direction:column;gap:4px;border:1px solid var(--line);border-radius:12px;padding:6px;background:rgba(156,203,232,.04)}
+.spf116.big{flex-basis:330px}.spf116 svg{width:100%;height:auto;display:block}.spf116 figcaption{display:flex;flex-direction:column;gap:2px;font-size:12px}.spf116 figcaption span{opacity:.75;line-height:1.35}
+.spd116{margin-top:8px}.spd116 summary{cursor:pointer;color:#9ccbe8;font-size:13px}.spg116.all .spf116{flex-basis:220px}
+@media(max-width:700px){.spf116,.spf116.big,.spg116.all .spf116{flex-basis:100%}}
 .cg115{display:flex;flex-wrap:wrap;gap:4px;align-items:center;margin:2px 0}.cgn115{font-size:11px;font-weight:600;color:#9ccbe8;min-width:74px}
 #acg111Out .cf115,#acg111Out .lcl115 .cy111{width:auto!important;margin:0!important;min-height:0!important;display:inline-flex!important;align-items:center;gap:4px;border:1px solid var(--line);background:transparent;color:inherit;border-radius:6px;padding:2px 7px!important;font:inherit;font-size:12px;cursor:pointer;text-decoration:none}
 #acg111Out .cf115:hover{border-color:#9ccbe8}.lcb115{padding:6px;border-radius:8px;background:rgba(156,203,232,.07)}.lcl115{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
@@ -7269,7 +7274,7 @@ function render96(nat){ const b=$('lv96Box'); if(!b) return; try{ b.innerHTML=de
 
 // ===== v97: ภาพใบหน้าตามดาวแบบภาพเหมือน (portrait) — โครงหน้า ผม คอ ไหล่ แสงเงา ตา คิ้ว จมูก ปาก แบบศิลปิน
 function hexMix97(h,t,a){ const p=x=>parseInt(x,16), c=h.replace('#',''), A=[p(c.slice(0,2)),p(c.slice(2,4)),p(c.slice(4,6))], B=t==='w'?[255,255,255]:t==='k'?[40,20,12]:[parseInt(t.slice(1,3),16),parseInt(t.slice(3,5),16),parseInt(t.slice(5,7),16)]; return '#'+A.map((v,i)=>Math.round(v+(B[i]-v)*a).toString(16).padStart(2,'0')).join(''); }
-faceSVG46=function(F){ let sex='M'; try{ sex=(readForm().sex||'M'); }catch(e){} const fem=sex==='F', id='f97'+Math.random().toString(36).slice(2,7);
+faceSVG46=function(F){ let sex=F.sex||'M'; if(!F.sex) try{ sex=(readForm().sex||'M'); }catch(e){} const fem=sex==='F', id='f97'+Math.random().toString(36).slice(2,7);
   const sk=SKIN44[F.skin]||SKIN44.md, skL=hexMix97(sk,'w',.18), skD=hexMix97(sk,'k',.22), skDD=hexMix97(sk,'k',.38), lip=hexMix97(sk,'#b0443c',.55), lipD=hexMix97(lip,'k',.3), hair='#1f1611', hairL='#4a3528', W=300, H=370, cx=150;
   const SH={rd:{fw:80,cw:92,jw:82,cy:282,cr:30},ov:{fw:76,cw:86,jw:68,cy:292,cr:22},lg:{fw:70,cw:80,jw:62,cy:304,cr:20},sq:{fw:80,cw:88,jw:84,cy:288,cr:38},pt:{fw:84,cw:86,jw:58,cy:294,cr:9}}[F.shape]||{fw:76,cw:86,jw:68,cy:292,cr:22};
   const {fw,cw,jw,cy,cr}=SH;
@@ -7550,10 +7555,10 @@ setTimeout(check99,4000); setInterval(check99,3*60000);
 document.addEventListener('visibilitychange',()=>{ if(document.visibilityState==='visible') check99(); }); window.addEventListener('focus',check99);
 
 // ===== v101: ภาพรูปร่างเต็มตัว (หน้าตา·รูปร่าง) วาดใหม่แบบภาพประกอบแฟชั่น — สัดส่วน ๗.๕ ศีรษะ · แสงเงา · ผม/เสื้อผ้าตามเพศ
-lookSVG44=function(P){ let sex='M'; try{ sex=readForm().sex||'M'; }catch(e){} const fem=sex==='F', id='l101'+Math.random().toString(36).slice(2,7), f=n=>(+n).toFixed(1);
+lookSVG44=function(P){ let sex=P.sex||'M'; if(!P.sex) try{ sex=readForm().sex||'M'; }catch(e){} const fem=sex==='F', id='l101'+Math.random().toString(36).slice(2,7), f=n=>(+n).toFixed(1);
   const hs=1+.12*P.h, ws=1+.26*P.w, bel=P.b?1:0, sk=SKIN44[P.s]||SKIN44.md, skL=hexMix97(sk,'w',.22), skD=hexMix97(sk,'k',.24), skDD=hexMix97(sk,'k',.42);
   const W=220,H=340,cx=110,foot=318, Hf=258*hs, hu=Hf/7.5, top=foot-Hf;
-  const hair='#211813', hairL='#4b372a', c1=fem?'#4f8f97':'#e4e9ef', c1D=fem?'#2f6168':'#aeb8c4', c2=fem?'#2f5862':'#2c3a4f', c2D=fem?'#1d3b42':'#1a2433', shoe=fem?'#7a3b48':'#2a1d16';
+  const hair='#211813', hairL='#4b372a', c1=P.c1||(fem?'#4f8f97':'#e4e9ef'), c1D=P.c1?hexMix97(P.c1,'k',.32):(fem?'#2f6168':'#aeb8c4'), c2=fem?'#2f5862':'#2c3a4f', c2D=fem?'#1d3b42':'#1a2433', shoe=fem?'#7a3b48':'#2a1d16';
   // หัว
   const hcy=top+hu*.5, SHP={rd:[1.04,1,.9,.36],ov:[.92,1,.76,.2],lg:[.84,1.08,.7,.17],sq:[1,1,.96,.42],pt:[.92,1,.6,.05]}[P.f]||[.92,1,.76,.2], rx=hu*.4*SHP[0], ry=hu*.5*SHP[1], jw=rx*SHP[2], cw=rx*SHP[3];
   const faceD=`M${f(cx)} ${f(hcy-ry)}C${f(cx+rx*.75)} ${f(hcy-ry)} ${f(cx+rx)} ${f(hcy-ry*.5)} ${f(cx+rx)} ${f(hcy-ry*.05)}C${f(cx+rx)} ${f(hcy+ry*.45)} ${f(cx+jw)} ${f(hcy+ry*.78)} ${f(cx+cw)} ${f(hcy+ry)}Q${f(cx)} ${f(hcy+ry*1.06)} ${f(cx-cw)} ${f(hcy+ry)}C${f(cx-jw)} ${f(hcy+ry*.78)} ${f(cx-rx)} ${f(hcy+ry*.45)} ${f(cx-rx)} ${f(hcy-ry*.05)}C${f(cx-rx)} ${f(hcy-ry*.5)} ${f(cx-rx*.75)} ${f(hcy-ry)} ${f(cx)} ${f(hcy-ry)}Z`;
@@ -7588,7 +7593,7 @@ lookSVG44=function(P){ let sex='M'; try{ sex=readForm().sex||'M'; }catch(e){} co
   const ears=`<ellipse cx="${f(cx-rx*.98)}" cy="${f(hcy+ry*.08)}" rx="${f(rx*.13)}" ry="${f(ry*.2)}" fill="${skD}"/><ellipse cx="${f(cx+rx*.98)}" cy="${f(hcy+ry*.08)}" rx="${f(rx*.13)}" ry="${f(ry*.2)}" fill="${skD}"/>`;
   const legs=fem?`<path d="${legD(-1)}" fill="url(#${id}sk)"/><path d="${legD(1)}" fill="url(#${id}sk)"/>`:'';
   const ht=P.h>.3?'สูงมาก':P.h>0?'ค่อนข้างสูง':P.h>-.3?'สูงปานกลาง':'ค่อนข้างเตี้ย';
-  return `<svg viewBox="0 0 ${W} ${H}" class="lk44svg" role="img" aria-label="ภาพจำลองรูปร่างตามลัคนา"><defs>
+  return `<svg viewBox="0 0 ${W} ${H}" class="lk44svg" role="img" aria-label="${P.lbl||'ภาพจำลองรูปร่างตามลัคนา'}"><defs>
    <radialGradient id="${id}bg" cx="50%" cy="38%" r="70%"><stop offset="0" stop-color="#26445f"/><stop offset="1" stop-color="#0d1a28"/></radialGradient>
    <linearGradient id="${id}sk" x1="0" x2="1"><stop offset="0" stop-color="${skD}"/><stop offset=".35" stop-color="${skL}"/><stop offset=".7" stop-color="${sk}"/><stop offset="1" stop-color="${skD}"/></linearGradient>
    <radialGradient id="${id}fc" cx="42%" cy="40%" r="70%"><stop offset="0" stop-color="${skL}"/><stop offset=".65" stop-color="${sk}"/><stop offset="1" stop-color="${skD}"/></radialGradient>
@@ -7599,7 +7604,7 @@ lookSVG44=function(P){ let sex='M'; try{ sex=readForm().sex||'M'; }catch(e){} co
    ${hairBack}${legs}${shoeE(-1)}${shoeE(1)}<path d="${armD(-1)}" fill="url(#${id}sk)"/><path d="${armD(1)}" fill="url(#${id}sk)"/>${hand(-1)}${hand(1)}
    <rect x="${f(cx-neckW)}" y="${f(neckT)}" width="${f(neckW*2)}" height="${f(shY-neckT+hu*.05)}" fill="url(#${id}sk)"/><path d="M${f(cx-neckW)} ${f(neckT+hu*.12)}Q${f(cx)} ${f(neckT+hu*.24)} ${f(cx+neckW)} ${f(neckT+hu*.12)}" stroke="${skD}" stroke-width="2" fill="none" opacity=".5"/>
    ${cloth}${sleeve(-1)}${sleeve(1)}${bel?`<path d="M${f(cx-Ww*.7)} ${f(waY+hu*.05)}Q${f(cx)} ${f(waY+hu*.35)} ${f(cx+Ww*.7)} ${f(waY+hu*.05)}" stroke="${fem?c2D:c1D}" stroke-width="1" fill="none" opacity=".7"/>`:''}
-   ${ears}<path d="${faceD}" fill="url(#${id}fc)"/>${face}${hairFront}
+   ${ears}<path d="${faceD}" fill="url(#${id}fc)"/>${P.hc?`<path d="M${f(cx-rx*.78)} ${f(hcy+ry*.15)}Q${f(cx-rx*.55)} ${f(hcy+ry*.55)} ${f(cx-rx*.5)} ${f(hcy+ry*.7)}M${f(cx+rx*.78)} ${f(hcy+ry*.15)}Q${f(cx+rx*.55)} ${f(hcy+ry*.55)} ${f(cx+rx*.5)} ${f(hcy+ry*.7)}" stroke="${skDD}" stroke-width="1.6" fill="none" opacity=".45"/>`:''}${face}${hairFront}${P.wv?[...Array(7)].map((_,i)=>{ const t=-1+i/3, x=cx+t*rx*.95, y=hcy-ry*(.62+.38*(1-t*t)); return `<path d="M${f(x-rx*.13)} ${f(y)}q${f(rx*.065)} ${f(-ry*.16)} ${f(rx*.13)} 0t${f(rx*.13)} 0" stroke="${hairL}" stroke-width="1.3" fill="none"/>`; }).join(''):''}${P.gl?`<g fill="none" stroke="#c9a85a" stroke-width="1.1"><circle cx="${f(cx-rx*.42)}" cy="${f(hcy+ry*.06)}" r="${f(rx*.27)}"/><circle cx="${f(cx+rx*.42)}" cy="${f(hcy+ry*.06)}" r="${f(rx*.27)}"/><path d="M${f(cx-rx*.15)} ${f(hcy+ry*.04)}q${f(rx*.15)} ${f(-ry*.08)} ${f(rx*.3)} 0M${f(cx-rx*.69)} ${f(hcy)}L${f(cx-rx*.98)} ${f(hcy-ry*.05)}M${f(cx+rx*.69)} ${f(hcy)}L${f(cx+rx*.98)} ${f(hcy-ry*.05)}"/></g>`:''}${P.st?`<path d="M${f(cx-rx*.6)} ${f(hcy-ry*.92)}C${f(cx-rx*.3)} ${f(hcy-ry*1.12)} ${f(cx+rx*.1)} ${f(hcy-ry*1.1)} ${f(cx+rx*.3)} ${f(hcy-ry*.95)}" stroke="#7fd6cf" stroke-width="2.4" fill="none" opacity=".9"/>`:''}${P.ml?`<circle cx="${f(cx+rx*.5)}" cy="${f(hcy+ry*.5)}" r="1.2" fill="#3b2418"/>`:''}
    <g stroke="#9ccbe8" stroke-opacity=".55" stroke-width="1"><line x1="204" y1="${f(top)}" x2="204" y2="${foot}"/><line x1="199" y1="${f(top)}" x2="209" y2="${f(top)}"/><line x1="199" y1="${foot}" x2="209" y2="${foot}"/>${[1,2,3,4,5,6,7].map(i=>`<line x1="202" y1="${f(top+hu*i)}" x2="206" y2="${f(top+hu*i)}"/>`).join('')}</g>
    <text x="200" y="${f(top-6)}" font-size="9.5" text-anchor="end" fill="#cfe3f1">${ht}</text><text x="12" y="${H-8}" font-size="9" fill="#9ccbe8" opacity=".8">${fem?'หญิง':'ชาย'}</text></svg>`; };
 
@@ -7733,6 +7738,7 @@ function sp105(){ const nat=WSTATE.nat, L=sgn(nat.pos.LA), S=k=>sgn(nat.pos[k]),
   const vh=H('VE'), V=VEH105[vh];
   return `<div class="sx89two"><div class="c98"><div class="bh70st">เจ้าเรือนปัตนิ = ${TH[l7]}${l7r!==l7?' (กุมภ์ใช้เสาร์)':''} สถิตภพ${HOUSES[h7-1]} ${bdg98(A[0],gname98[A[0]])}</div><p>${A[1]}</p>${sd?`<p>${bdg98(sd[1],st)} ${sd[2]}</p>`:`<p class="note">มาตรฐาน${st?': '+st:'ปกติ'} — ไม่เข้าเกณฑ์พิเศษ</p>`}<p class="note">ทิศของคู่: ราศี${SIGNS[dirS]} = ทิศ${DIR105[dirS]} ของบ้านเกิด</p></div>
     <div class="c98"><div class="bh70st">ลักษณะของคู่ — จาก${srcT}</div><ul class="lb88l">${src.map(k=>`<li><b>${TH[k]}</b>: ${LOOK105[k]}</li>`).join('')}</ul><p>นิสัย: ${chr[0]} · อาชีพที่มักพบ: ${chr[1]}</p><p class="note">นิสัยและอาชีพดูจากเจ้าเรือนราศี${SIGNS[s7]} (ราศีภพปัตนิ) ${src.length>1?'· หลายดาวให้ผสมลักษณะกัน':''}</p></div></div>
+   <div class="c98"><div class="bh70st">ภาพลักษณะคู่</div>${spGal116(src)}</div>
    <div class="sx89two"><div class="c98"><div class="bh70st">ดาวในภพปัตนิ</div><ul class="lb88l">${in7.length?in7.map(k=>`<li>${bdg98(IN7_105[k][0],TH[k])} ${IN7_105[k][1]}</li>`).join(''):'<li>ไม่มีดาวในภพปัตนิ — ดูจากเจ้าเรือนเป็นหลัก</li>'}</ul></div>
     <div class="c98"><div class="bh70st">ชนิดของความรัก — ศุกร์สถิตภพ${HOUSES[vh-1]} ${bdg98(V[0],gname98[V[0]])}</div><p>${V[1]}</p></div></div>
    <div class="bh70s"><div class="bh70st">เกณฑ์การสมรส</div><ul class="lb88l">${tags.length?tags.map(t=>`<li>${bdg98(t[0],t[1])} <span class="note">${t[2]}</span></li>`).join(''):'<li>ไม่เข้าเกณฑ์สมรสเร็ว ช้า หรือเกณฑ์ระวังข้อใด — เป็นไปตามจังหวะทั่วไป</li>'}</ul><p class="note">"สัมพันธ์ลัคนา" = ดาวอยู่ภพ ๑ ๓ ๕ ๗ ๙ ๑๑ ดาวในภพคู่ (๒ ๔ ๖ ๘ ๑๐ ๑๒) ตำราถือว่าไม่ส่งผลถึงลัคนา</p></div>
@@ -8041,7 +8047,8 @@ const CHG110=[
  {v:'112.1',d:'2026-11-02',k:'f',t:'แก้ตัวอักษรในเมนูเลือก (dropdown) จม',x:'รายการในเมนูเลือกประเทศ/เมืองเป็นตัวอักษรสว่างบนพื้นเข้ม ขนาดและระยะบรรทัดพอดี',c:['acg111']},
  {v:'113',d:'2026-11-02',k:'u',t:'ธงชาติในโหราศาสตร์แผนที่',x:'ธงประจำประเทศบนแผนที่ ในผลค้นหา ตารางเมือง แผนการเดินทาง และข้างเมนูเลือกประเทศ',c:['acg111']},
  {v:'114',d:'2026-11-02',k:'u',t:'เส้นทางบิน · เลือกภาษาไทย/อังกฤษ · แถบเลื่อนวันดาวจร',x:'แผนเดินทางแสดงเส้นทางบินโค้งตามผิวโลกพร้อมเครื่องบินและระยะทาง · สลับชื่อเมือง/ประเทศเป็นไทยหรืออังกฤษ · เลื่อนวันดาวจรด้วยแถบเลื่อนและปุ่มซ้าย-ขวา',c:['acg111']},
- {v:'115',d:'2026-11-02',k:'u',t:'แบ่งทวีป · กดธงดูเมือง · วัน-เวลาเด่นเทียบบ้านเกิด',x:'ประเทศที่เส้นพาดผ่านจัดกลุ่มตามทวีป กดธงเพื่อดูรายชื่อเมืองตามแนวเส้น · กรองอันดับเมืองตามทวีป · คำนวณวันและเวลาที่ดีที่สุดเมื่อปักเมือง พร้อมกราฟเทียบจังหวะบ้านเกิด',c:['acg111']}];
+ {v:'115',d:'2026-11-02',k:'u',t:'แบ่งทวีป · กดธงดูเมือง · วัน-เวลาเด่นเทียบบ้านเกิด',x:'ประเทศที่เส้นพาดผ่านจัดกลุ่มตามทวีป กดธงเพื่อดูรายชื่อเมืองตามแนวเส้น · กรองอันดับเมืองตามทวีป · คำนวณวันและเวลาที่ดีที่สุดเมื่อปักเมือง พร้อมกราฟเทียบจังหวะบ้านเกิด',c:['acg111']},
+ {v:'116',d:'2026-11-02',k:'u',t:'วาดภาพลักษณะคู่ครอง',x:'ภาพเต็มตัวของคู่ตามดาวที่เล็งลัคนา/กุมลัคนา/เจ้าเรือนปัตนิ · ภาพผสมเมื่อมีหลายดาว · ดูครบทั้ง ๑๐ แบบ',c:['love'],p:['sp105P']}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
@@ -8416,6 +8423,17 @@ function bind115(el){ if(el._b115) return; el._b115=1;
     const b=e.target.closest('.bt115'); if(b){ const box=b.parentElement.querySelector('.to115'); box.innerHTML='<p class="note">กำลังคำนวณ…</p>'; b.disabled=true;
       setTimeout(()=>{ try{ const la=+b.dataset.la, lo=+b.dataset.lo, tz=b.dataset.tz, d0=new Date(b.dataset.d0+'T12:00:00'), n=+b.dataset.n; box.innerHTML=timeHTML115(la,lo,tz,d0,n,b.dataset.lab); }catch(err){ console.error(err); box.innerHTML='<p class="note">⚠ '+err.message+'</p>'; } b.disabled=false; },20); return; }
     const ct=e.target.closest('.ct115'); if(ct){ ST111.cont=ct.dataset.c; el.querySelectorAll('.ct115').forEach(x=>x.classList.toggle('on',x===ct)); document.getElementById('rk111').innerHTML=rankHTML111(); } }); }
+// ===== v116: วาดภาพลักษณะคู่ครองตามดาว (ทุกแบบ ๑๐ ดาว + ภาพผสมเมื่อมีหลายดาว)
+const SPF116={SU:{h:.1,w:.15,s:'red',f:'sq',e:'',c1:'#c0492f'},MO:{h:-.15,w:-.35,s:'pl',f:'rd',e:'',c1:'#e9dfbf'},MA:{h:.6,w:-.3,s:'red',f:'ov',e:'bg',wv:1,c1:'#d9576b'},ME:{h:-.45,w:-.5,s:'two',f:'lg',e:'',c1:'#3fa36a'},JU:{h:-.4,w:-.45,s:'lt',f:'ov',e:'',gl:1,c1:'#e0a030'},VE:{h:-.05,w:.6,s:'lt',f:'ov',e:'bg',c1:'#7fb3e0'},SA:{h:.65,w:-.4,s:'dk',f:'lg',e:'sm',hc:1,c1:'#3d3858'},RA:{h:0,w:.6,s:'dk',f:'lg',e:'',c1:'#5e5249'},KE:{h:-.65,w:-.3,s:'red',f:'ov',e:'',c1:'#7a6a90'},UR:{h:.2,w:0,s:'md',f:'pt',e:'sh',st:1,ml:1,c1:'#1f9e98'}};
+const SPK116=['SU','MO','MA','ME','JU','VE','SA','RA','KE','UR'];
+function spP116(ks,sex,lbl){ const P={sex,lbl,h:0,w:0}; ks.forEach(k=>{ P.h+=SPF116[k].h/ks.length; P.w+=SPF116[k].w/ks.length; }); const a=SPF116[ks[0]]; P.s=a.s; P.f=a.f; P.e=ks.map(k=>SPF116[k].e).find(e=>e)||''; P.c1=a.c1; ['wv','gl','hc','st','ml'].forEach(x=>{ if(ks.some(k=>SPF116[k][x])) P[x]=1; }); if(ks.length>1){ const sk=ks.map(k=>SPF116[k].s); P.s=sk.includes('dk')&&sk.includes('lt')?'two':sk.find(x=>x!=='md')||P.s; } return P; }
+const SPFC116={SU:{shape:'sq',skin:'red',brow:'thick',eye:'sharp',nose:'pointed',mouth:'firm'},MO:{shape:'rd',skin:'pl',brow:'soft',eye:'round',nose:'round',mouth:'soft'},MA:{shape:'ov',skin:'red',brow:'angled',eye:'big',nose:'pointed',mouth:'firm',mark:['scar']},ME:{shape:'lg',skin:'two',brow:'thin',eye:'small',nose:'thin',mouth:'smile'},JU:{shape:'ov',skin:'lt',brow:'arched',eye:'round',nose:'broad',mouth:'soft'},VE:{shape:'ov',skin:'lt',brow:'soft',eye:'big',nose:'round',mouth:'full',lash:true},SA:{shape:'lg',skin:'dk',brow:'straight',eye:'small',nose:'thin',mouth:'thin',lines:true},RA:{shape:'lg',skin:'dk',brow:'thick',eye:'sharp',nose:'broad',mouth:'full',mark:['mole']},KE:{shape:'ov',skin:'red',brow:'angled',eye:'small',nose:'thin',mouth:'firm',mark:['mole']},UR:{shape:'pt',skin:'md',brow:'angled',eye:'sharp',nose:'pointed',mouth:'thin',mark:['mole']}};
+function spFace116(ks,sex){ const a=SPFC116[ks[0]], F={...a,mark:[...(a.mark||[])],sex}; if(ks[1]){ const b=SPFC116[ks[1]]; F.eye=b.eye; F.mouth=b.mouth; if(b.lash) F.lash=true; (b.mark||[]).forEach(m=>F.mark.push(m)); } F.lines=ks.some(k=>SPFC116[k].lines)||false; if(ks.length>1){ const sk=ks.map(k=>SPFC116[k].skin); if(sk.includes('dk')&&sk.includes('lt')) F.skin='two'; } let svg=''; try{ svg=faceSVG46(F); }catch(e){} return svg; }
+function spCard116(ks,sex,title,txt,big){ const P=spP116(ks,sex,'ภาพจำลองลักษณะคู่ครอง '+title); let svg=''; try{ svg=lookSVG44(P); }catch(e){ svg=''; } return `<figure class="spf116${big?' big':''}"><div class="spi116"><div class="spfc116">${spFace116(ks,sex)}</div><div class="spb116">${svg}</div></div><figcaption><b>${title}</b><span>${txt}</span></figcaption></figure>`; }
+function spGal116(src){ const me=(()=>{ try{ return readForm().sex||'M'; }catch(e){ return 'M'; } })(), sx=me==='F'?'M':'F';
+  const cards=(src.length>1?[spCard116(src,sx,'ภาพรวมคู่ (ผสม '+src.map(k=>TH[k]).join(' + ')+')',src.map(k=>LOOK105[k]).join(' / '),1)]:[])+src.map(k=>spCard116([k],sx,TH[k],LOOK105[k],src.length===1)).join('');
+  const all=SPK116.map(k=>spCard116([k],sx,TH[k],LOOK105[k])).join('');
+  return `<div class="spg116">${cards}</div><details class="spd116"><summary>ดูลักษณะคู่ครบทั้ง ๑๐ แบบ (ตามดาว)</summary><div class="spg116 all">${all}</div></details><p class="note">ภาพเป็นการจำลองจากคำบรรยายในตำรา (รูปร่าง ผิว ใบหน้า ทรงผม) เพื่อช่วยให้นึกภาพ ไม่ใช่หน้าตาจริงของบุคคลใด · วาดเป็น${sx==='F'?'หญิง':'ชาย'}เพราะดวงนี้เป็น${me==='F'?'หญิง':'ชาย'} · สีเสื้อตามสีประจำดาว</p>`; }
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
   try{ rhythm77(); }catch(e){ console.error(e); document.getElementById('rh77Out').innerHTML='<p class="note">⚠ '+e.message+'</p>'; } }
