@@ -146,6 +146,17 @@ header{flex-wrap:wrap}.brand{flex:0 0 100%;width:100%;font-size:14px;font-weight
 :root[data-theme="dark"] #tpop{background:rgba(13,26,38,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--edge75b);border-radius:18px;box-shadow:0 24px 60px -16px rgba(0,0,0,.85)}
 :root[data-theme="dark"] *{scrollbar-color:#244055 transparent;scrollbar-width:thin}
 ::selection{background:rgba(156,203,232,.35)}
+.crail29 button[data-c]{position:relative}.bd110{font-style:normal;font-size:9.5px;font-weight:600;letter-spacing:.3px;border-radius:999px;padding:1px 6px;line-height:1.5;display:inline-block;vertical-align:middle;white-space:nowrap}
+.bd110.n{background:#9ccbe8;color:#0b1a24}.bd110.u{background:transparent;color:#f0c674;border:1px solid rgba(240,198,116,.7)}
+.crail29 button[data-c] .bd110{position:absolute;top:1px;right:1px;font-size:7.5px;padding:0 4px;line-height:1.4;z-index:2}.crail29 button[data-c] .bd110.u{background:#2b2412}
+.gh102{position:relative}.dot110{position:absolute;top:6px;left:24px;width:7px;height:7px;border-radius:50%;background:#f0c674}.dot110.n{background:#9ccbe8}
+.hs110{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:10px}.hs110>div{border:1px solid var(--line);border-radius:10px;padding:10px;display:flex;flex-direction:column;gap:2px}.hs110 b{font-size:22px;font-weight:500}.hs110 span{font-size:12px;opacity:.75}
+.fl110{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}.fl110 button{border:1px solid var(--line);background:transparent;color:inherit;border-radius:6px;padding:5px 12px;font:inherit;font-size:13px;cursor:pointer}.fl110 button.on{background:rgba(156,203,232,.18);border-color:#9ccbe8}
+.tl110{border-left:2px solid var(--line);margin:10px 0 0 6px;padding-left:14px}.dh110{font-size:13px;font-weight:600;margin:14px 0 6px;color:#9ccbe8;position:relative}.dh110:before{content:'';position:absolute;left:-20px;top:4px;width:10px;height:10px;border-radius:50%;background:#9ccbe8}
+.ce110{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}.cv110{flex:0 0 64px;font-size:12px;opacity:.8;padding-top:2px}.cb110{flex:1;display:flex;flex-direction:column;gap:3px}.ck110{font-size:11px;opacity:.7}
+.cl110{display:flex;flex-wrap:wrap;gap:5px;margin-top:3px}.go110{border:1px solid var(--line);background:transparent;color:inherit;border-radius:6px;padding:2px 8px;font:inherit;font-size:12px;cursor:pointer;display:inline-flex;gap:5px;align-items:center}.go110:hover{border-color:#9ccbe8}
+@media(max-width:700px){.hs110{grid-template-columns:repeat(2,1fr)}.cv110{flex-basis:48px}}
+#upd110Out .fl110 button,#upd110Out .go110{width:auto!important;flex:0 0 auto!important;display:inline-flex!important;margin:0!important;min-height:0!important}#upd110Out .cl110,#upd110Out .fl110{flex-direction:row!important}
 .ck109{display:inline-flex;align-items:center;gap:4px;margin:3px 8px 3px 0;font-size:13px;cursor:pointer}
 .g108{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin:10px 0}.pc108{border:1px solid var(--line);border-radius:8px;padding:6px 8px;display:flex;flex-direction:column;gap:2px;font-size:12.5px}.pc108.k{border-color:#9ccbe8;background:rgba(156,203,232,.12)}
 .vyw108{display:flex;flex-wrap:wrap;gap:6px}.vy108{border:1px solid var(--line);border-radius:8px;padding:6px 8px;display:flex;flex-direction:column;gap:3px;font-size:12.5px;min-width:92px}.vy108.now{border-color:#9ccbe8;background:rgba(156,203,232,.14)}
@@ -869,6 +880,7 @@ img,svg{max-width:100%}
   <div class="panel" style="margin-bottom:14px" id="dm109P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">ดาวผสมดาว — ความหมายสิ่งของ อาชีพ เหตุการณ์ จากดาวร่วมราศี</h3><div id="dm109Out"></div></div>
   <div class="panel" style="margin-bottom:14px" id="kid109P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">บุตรตามระบบหมอเถา — ภพปุตตะเดิม · ปุตตะจร ๕ ปี · แนวโน้มเพศบุตร</h3><div id="kid109Out"></div></div>
   <div class="panel" style="margin-bottom:14px" id="nm109P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">ตั้งชื่อแบบโหร (หมอเถา) — เลือกดาวปลอดโทษจากดวงชะตา</h3><div id="nm109Out"></div></div>
+  <div class="panel" style="margin-bottom:14px" id="upd110P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">ประวัติการอัปเดตระบบ — ทุกเวอร์ชันตั้งแต่เริ่ม</h3><div id="upd110Out"></div></div>
   <div class="panel" style="margin-bottom:14px" id="kidP"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">ลูก·ตั้งครรภ์ — โอกาสมีบุตร · เพศ/จำนวน · จังหวะตั้งครรภ์ · ผูกดวงลูก · ดวงลูกส่งผลต่อพ่อแม่</h3><div id="kidOut"></div></div>
   <div class="panel" style="margin-bottom:14px" id="parP"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">พ่อแม่ — ดาวแทนบิดามารดาหลายสำนัก · ปู่ย่าตายาย · ช่วงดูแลพ่อแม่</h3><div id="parOut"></div></div>
   <div class="panel" style="margin-bottom:14px" id="marksP"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">หาตำหนิ — ไฝ · ปาน · แผลเป็น ตามตรียางค์ลัคน์ (ชี้ตำแหน่งบนร่างกาย)</h3><div id="marksOut"></div></div>
@@ -2480,6 +2492,7 @@ const CAT29=[
  {id:'old98',t:'สมพงศ์·โสฬส·ปีหลวง',d:'มิตร-ศัตรูวัน เดือน ธาตุปีเกิด · เกณฑ์แต่งงาน · ทักษาโสฬส · วารกำเนิด · มิตรสหาย · โชคชันษา · เถลิงศก · ธาราธิคุณ · พิรุณศาสตร์ · เถรสามทอง',ic:'<path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15.6 7.1 18.2l.9-5.5-4-3.9 5.5-.8z"/><circle cx="12" cy="11.5" r="2"/>',p:['sp98P','so98P','wd98P','ps98P','ch98P','yr98P','th98P']},
  {id:'ib104',t:'อินทภาส·บาทจันทร์',d:'คัมภีร์พิชัยสงคราม · หลักอินทภาส บาทจันทร์ ลัคนา · วัฒนะ/หายนะชะตา · จร · ฆาตมฤตยู',ic:'<circle cx="9" cy="12" r="4.5"/><path d="M9 3v2M9 19v2M2 12h2M3.9 6.9l1.4 1.4M3.9 17.1l1.4-1.4"/><path d="M19 6.5a5.5 5.5 0 1 0 0 11 4.5 4.5 0 0 1 0-11z"/>',p:['ib104P']},
  {id:'tm106',t:'ทศา·กาลจักร',d:'มหาทักษา ๑๐๘ จากฤกษ์จันทร์ · กาลจักรลัคน์ · ๓ วัย ๙ ช่วง · ดวงจรประจำปี',ic:'<circle cx="12" cy="12" r="9"/><path d="M12 3v9l6 4"/><path d="M3 12h2M19 12h2M12 19v2"/>',p:['mt108P','as106P','kc106P','vai106P','sr106P']},
+ {id:'upd110',t:'อัปเดตระบบ',d:'ประวัติเวอร์ชันทั้งหมด · ฟีเจอร์ใหม่และที่ปรับปรุง',ic:'<path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/>',p:['upd110P']},
  {id:'kam',t:'ตำราโบราณ',d:'ศูนยพาหะ · นวางศ์ลัคน์ · ภินทุ · ปฐาน · อุบลโชค · อสีติธาตุ · คัมภีร์เบ็ดเสร็จ · ฤกษ์โหรหลวง',ic:'<path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/>',p:['kam58P','yr58P','asi58P','bed58P','rk58P','yr98P','th98P']},
  {id:'kids',t:'ลูก·ตั้งครรภ์',d:'ฤกษ์ผ่าคลอด · โอกาสมีบุตร · เพศ · ตั้งครรภ์ · ดวงลูก',ic:'<circle cx="9" cy="6" r="2.3"/><circle cx="16.5" cy="9.5" r="1.7"/><path d="M5.5 20v-5a3.5 3.5 0 0 1 7 0v5M14 20v-3.5a2.5 2.5 0 0 1 5 0V20"/>',p:['br87P','kidP','kid109P']},
  {id:'parents',t:'พ่อแม่',d:'ดาวบิดามารดา · ปู่ย่าตายาย · ช่วงดูแล',ic:'<circle cx="8" cy="6" r="2.3"/><circle cx="16" cy="6" r="2.3"/><path d="M4 20v-5a4 4 0 0 1 8 0v5M12 20v-5a4 4 0 0 1 8 0v5"/>',p:['parP']},
@@ -7913,6 +7926,100 @@ function nm109HTML(){ const nat=WSTATE.nat, pn=nat.pos, L=sgn(pn.LA), bp=bp98(WS
 function run109(){ [['dm109Out',dm109HTML],['kid109Out',kid109HTML],['nm109Out',nm109HTML]].forEach(([id,f])=>{ const el=document.getElementById(id); if(!el||!WSTATE||!WSTATE.nat) return; const p=el.closest('.panel'); if(p&&p.style.display==='none') return; try{ el.innerHTML=f(); if(id==='dm109Out') el.querySelectorAll('.ck109 input').forEach(c=>c.onchange=dmq109); }catch(e){ console.error(e); el.innerHTML='<p class="note">⚠ '+e.message+'</p>'; } }); }
 { const _s=cat29Show; cat29Show=function(id){ const r=_s.apply(this,arguments); setTimeout(run109,0); return r; }; }
 { const _c=compute; compute=function(){ const r=_c.apply(this,arguments); try{ const k=[WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.nat&&WSTATE.nat.pos.LA,+getTransit(),readForm().sex].join('|'); if(k!==window._k109){ window._k109=k; setTimeout(run109,0); } }catch(e){} return r; }; }
+
+// ===== v110: หน้า "อัปเดตระบบ" (ประวัติเวอร์ชันตั้งแต่เริ่ม) + badge NEW / อัปเดต บนเมนูหมวด กลุ่ม และแผง
+// k: n = หมวด/ฟีเจอร์ใหม่ · u = เพิ่มเติมในหมวดเดิม · f = ปรับระบบ/แก้ไข · c = หมวดที่เกี่ยวข้อง · p = แผงที่เพิ่ม
+const CHG110=[
+ {v:'1–20',d:null,k:'n',t:'รากฐานระบบดวงสุริยยาตร์',x:'ผูกดวงตามคัมภีร์สุริยยาตร์ · จักรราศีไทย · ดวงจร · ตารางดาว · มาตรฐานดาว · ตนุลัคน์ ตนุเศษ · ทักษา (สรุปรวมยุคแรก)',c:['natal','transit','taksa']},
+ {v:'21',d:null,k:'n',t:'จักรทีปนีจร · ภพผสมภพ ๑๔๔',x:'จักรทีปนีครบ ๑๐ ดาว · คู่ครอง/สมรส · ทิศประจำราศี · ษัฑพละ · คลังเคล็ดลับ',c:['transit','love','lib']},
+ {v:'22',d:null,k:'n',t:'มหาทักษา ๘×๘ · ภฤคุสูตร',x:'มรณะองศา · ตฤมศำศ · เกณฑ์พิเศษ · สิริมงคล · ทักษาชื่อ · อามาวสี/ปูรณมี',c:['taksa','spec']},
+ {v:'23',d:null,k:'n',t:'โหรภารตะ (พระเวท)',x:'ระบบภารตะตามแนวบทเรียน ๖๗ บท',c:['ved']},
+ {v:'24',d:null,k:'n',t:'ตำราเจ้าเรือนสถิตภพ',x:'ภพซ้อน เหตุ→ผล · อนุเกษตร/ปริวรรตนเกษตร · ดาวสถิตภพ/กุมลัคน์',c:['lord']},
+ {v:'25–26',d:null,k:'n',t:'ป๊อปอัปดาวจร · กราฟการเดินดาว',x:'ลากย้ายได้ · ย้ายราศี ๑๒ ครั้ง · ดาวจรกระทบดาวเดิม · จุดกลับทิศ · ไอคอน SVG',c:['transit']},
+ {v:'27',d:null,k:'n',t:'กายวิภาคโหราศาสตร์อายุรเวช',x:'ราศี ↔ อวัยวะ · จุดเสี่ยงจากดวงเดิมและดาวจร',c:['health']},
+ {v:'28',d:null,k:'n',t:'ดวงนักโหร',x:'ดาวอนาคตังสญาณถึงลัคนา · ตัวคุม ๕/๗ · สายโหร',c:['spec']},
+ {v:'29',d:null,k:'f',t:'จัดหมวดเมนูไอคอนซ้าย',x:'แสดงทีละหมวด แยกดวงเดิม ดวงจร ฤกษ์ คู่ สุขภาพ คลังความรู้'},
+ {v:'30',d:null,k:'n',t:'ต้นไม้ชะตา',x:'ลัคนาเป็นลำต้น ภพเป็นราก แก่น ใบ ดอก ผล เปลือก กิ่ง',c:['tree']},
+ {v:'31–32',d:null,k:'n',t:'นิจภังค์ · พฤหัสคุ้มดวง',x:'นิจแก้ด้วยองศา · นิจภังค์ ๖ ข้อ · ดาวดับ · ราหูตามราศี · มฤตยูสวิตช์ไฟ',c:['spec','nava']},
+ {v:'33–34',d:null,k:'n',t:'รัก·กามารมณ์ · โชคใหญ่',x:'พื้นดวง ดวงจร เทียบดวง ระบุช่วงเวลา · โชคใหญ่ ๕ กรณี · มหาธนะโยค',c:['eros','luck']},
+ {v:'35',d:null,k:'n',t:'จังหวะฆาต',x:'ฆาตขัย ๑๕ ข้อ · แม่ธาตุจร · ชันษาจร · ตรวจลัคนาคร่อม',c:['ghat']},
+ {v:'36–38',d:null,k:'n',t:'เกณฑ์ดาวพิเศษ · อริ·คดีความ · ตรีกูลธาตุ',x:'ชุดตำราเกณฑ์พิเศษ · ศัตรู คดีความ · จันทร์ในราศี',c:['spec','enemy']},
+ {v:'39',d:null,k:'n',t:'คัมภีร์สรีระพยากรณ์',x:'ศรี/กาลกิณีบนอวัยวะ',c:['sarira']},
+ {v:'40',d:null,k:'n',t:'โยค·วาสนา',x:'มังคละโทษ · แพ้ชนะราศี · อุบาทว์พระยม · กฎทองคำ ๓ จุด',c:['yoga','gold']},
+ {v:'41',d:null,k:'n',t:'หมวดใหม่ ๙ หมวด',x:'อาชีพ · การเงิน · สุขภาพตามวัย · ฤกษ์เฉพาะงาน · สี/ทิศ · ชื่อ/เลข · แก้เคล็ด · บ้านเมือง · รายงาน',c:['career','money','health','rerk','mongkol','city','report']},
+ {v:'42–43',d:null,k:'n',t:'หาตำหนิ · ลูก·ตั้งครรภ์ · พ่อแม่',x:'ไฝ ปาน แผลเป็น · โอกาสมีบุตร · ดาวบิดามารดา',c:['marks','kids','parents']},
+ {v:'44–46',d:null,k:'n',t:'ตรียางค์ · หน้าตา · ปฏิทินดวง · เส้นชีวิต · ทิศมงคล',x:'ตำนานฤกษ์ · จุดตั้งรับ · ดาวในราศี · ดวงคู่ซ้อน · ใบหน้าตามดาว',c:['triyang','look','cal','life','dir']},
+ {v:'47–53',d:null,k:'u',t:'กราฟเส้นชีวิต · การเงินอัจฉริยะ · ความรัก ๗ ขั้น',x:'กราฟลากได้ · ตารางดาวละเอียด · ต้นไม้ชะตาภาพใหม่ · กราฟเงินเข้า/ออก · โทษตรียางค์ลูกพิษ',c:['life','money','love','tree']},
+ {v:'54',d:null,k:'n',t:'ดวงตรียางค์จักร · นวางค์',x:'ตรวจคุณภาพดาวด้วยนวางค์ · คู่ครองจากนวางค์',c:['triyang','nava']},
+ {v:'55',d:null,k:'n',t:'เทคนิคหมอเถา (เก้าอี้สี่ขา)',x:'เกณฑ์ชันษา · สามลัคนา · ไล่เจ้าเรือน · ดาวแฝงแสง · ยามถาม',c:['spec']},
+ {v:'56–57',d:null,k:'f',t:'แว่นขยายจักรราศี · ตารางโคจรละเอียด',x:'กดค้างแล้วลาก · จัดเรียงเมนู'},
+ {v:'58',d:null,k:'n',t:'ตำราโบราณ',x:'ศูนยพาหะ · นวางศ์ลัคน์ · ภินทุอุบาทว์ · ปฐาน · อุบลโชค · อสีติธาตุ · คัมภีร์เบ็ดเสร็จ · มหาสมพงศ์',c:['kam']},
+ {v:'59',d:null,k:'n',t:'เส้นทางตำรา ๕๒ บท',x:'แผนที่ความรู้ · วิกลคติ · สัณฐานดวง · ภพปัตนิ ๔ มิติ',c:['path']},
+ {v:'60–64',d:null,k:'u',t:'ต้นไม้ชะตาเทียบดวงจร · ภาพรวมเกณฑ์พิเศษ',x:'แอนิเมชัน · ซูมจักรเต็มจอ · หมอเถาออกแบบใหม่ · คำอ่านดาวแบบ badge',c:['tree','spec','natal']},
+ {v:'65–66',d:null,k:'u',t:'รักทางไกล · ผังมุมสัมพันธ์ดาว',x:'ดวงคู่ต่างแดน · กุม โยค ฉาก ตรีโกณ เล็ง (%)',c:['love','transit']},
+ {v:'67–68',d:null,k:'n',t:'ท้องฟ้า 3D Live · เข็มทิศทักษา',x:'จักรราศี ๒๗ นักษัตร ดาวจร/ดาวเดิมแบบ 3 มิติ · ใช้ไจโรมือถือ',c:['sky','dir']},
+ {v:'70–71',d:null,k:'n',t:'โหมด ๑๒ ภพ',x:'รวมทุกเรื่องของแต่ละภพ · ๔ มุมมอง · กราฟเรดาร์',c:['bhava']},
+ {v:'72–73',d:null,k:'u',t:'แผนที่ ๒๗ นักษัตร · ท้องฟ้า 3D ขั้นสูง',x:'๙ หมวดฤกษ์ · สรัสวตีโยค · ทางช้างเผือก เนบิวลา',c:['nava','sky']},
+ {v:'74',d:'2026-11-01',k:'n',t:'โทษ·โยคภารตะ',x:'ตรวจโทษสำคัญพร้อมเงื่อนไข ข้อยกเว้น และเสตสาติ',c:['dosha']},
+ {v:'75–76',d:'2026-11-01',k:'f',t:'ธีมท้องฟ้ายามค่ำ · โครงหน้าใหม่',x:'กระจกฝ้า dark mode · ฟอนต์ Kanit · hero ท้องฟ้า · แถบผูกดวง · การ์ดดวงที่บันทึก'},
+ {v:'77–79',d:'2026-11-01',k:'u',t:'จังหวะชะตา',x:'กราฟขาขึ้น/ขาลง รายปี เดือน วัน · มาตรฐานดวงเดิม × ผลจริง · popup อธิบายทุกปัจจัย',c:['transit'],p:['rh77P']},
+ {v:'80',d:'2026-11-01',k:'u',t:'๑๒ ภพ จักรราศีแบบไทย',x:'ไอคอน SVG ประจำภพ · จักรแบบเดียวกับจักรหลัก',c:['bhava']},
+ {v:'81–85',d:'2026-11-01',k:'f',t:'ดวงที่บันทึก · นาฬิกาจริง · การ์ดพระจันทร์',x:'เลื่อนอัตโนมัติ · ไฮไลต์อริ มรณะ วินาศ · เข็มลัคน์จรละเอียด · ข้างขึ้นข้างแรมจริง'},
+ {v:'86',d:'2026-11-01',k:'n',t:'หุ้นส่วน·พนักงาน',x:'วิเคราะห์ความเข้ากันได้ทางธุรกิจ',c:['biz']},
+ {v:'87',d:'2026-11-01',k:'u',t:'ฤกษ์ผ่าคลอด',x:'แม่เป็นหลัก เทียบพ่อ · หลบลูกพิษ · ฤกษ์ ๙ หมู่',c:['kids'],p:['br87P']},
+ {v:'88',d:'2026-11-01',k:'n',t:'วิกลคติ·สัณฐาน',x:'พักร เสริด มนท์ · กฎลบ–ลบเป็นบวก · มาลัยโยค',c:['vikal'],u:['yoga']},
+ {v:'89',d:'2026-11-01',k:'n',t:'เสน่ห์·คู่รัก',x:'เสน่ห์ พลังกาย สไตล์รัก · เคมีคู่รัก · จังหวะดวงจร',c:['desire'],u:['love']},
+ {v:'90–91',d:'2026-11-01',k:'n',t:'ผสมดาว·ตนุลัคน์',x:'ดาวคู่ประสานเสียง · ตนุลัคน์ ๑-๒-๓ · ภพจากภพ ๑๔๔ เรื่อง',c:['mix'],u:['lord','nava']},
+ {v:'92',d:'2026-11-01',k:'n',t:'ระบบธาตุ',x:'ดาวปรับธาตุตามราศี · ตนุลัคน์รับมือ · มุมส่งธาตุ · ดาวจรระบบธาตุ',c:['el92'],u:['transit'],p:['elt92P']},
+ {v:'93',d:'2026-11-01',k:'n',t:'ตำแหน่งดาว·องศา',x:'มูลเกษตร · มหาอุจ · นิจภังค์ด้วยองศา · เจ้าเรือนกลางวัน-กลางคืน',c:['std93'],u:['natal'],p:['s93P']},
+ {v:'94–95',d:'2026-11-01',k:'n',t:'นามศาสตร์·ตั้งชื่อ',x:'วิเคราะห์ชื่อ สกุล ชื่อเล่น บริษัท ๗ ศาสตร์ · ดึงข้อมูลจากดวงที่บันทึก',c:['name94'],u:['taksa'],p:['nm94GP']},
+ {v:'96',d:'2026-11-01',k:'u',t:'กราฟเส้นชีวิตละเอียด',x:'ซูมรายเดือน/สัปดาห์/วัน · จุดเหตุการณ์กดดูคำอธิบาย',c:['life']},
+ {v:'97',d:'2026-11-01',k:'u',t:'ใบหน้าตามดาวแบบภาพเหมือน',x:'โครงหน้า ผม แสงเงา',c:['look']},
+ {v:'98',d:'2026-11-02',k:'n',t:'สมพงศ์·โสฬส·ปีหลวง',x:'สมพงศ์วัน/เดือน/ธาตุปีเกิด · เกณฑ์แต่งงาน · ทักษาโสฬส · วารกำเนิด · โชคชันษา · เถลิงศก · พิรุณศาสตร์',c:['old98'],u:['love','taksa','natal','transit','kam'],p:['sp98P','so98P','wd98P','ps98P','ch98P','yr98P','th98P']},
+ {v:'99',d:'2026-11-02',k:'f',t:'แจ้งเตือนเวอร์ชันใหม่',x:'ขึ้นแถบปุ่มรีเฟรชเมื่อระบบอัปเดต'},
+ {v:'100',d:'2026-11-02',k:'u',t:'ภารตะ: ไอคอน SVG',x:'เปลี่ยนอีโมจิหัวข้อเป็นไอคอน',c:['ved']},
+ {v:'101',d:'2026-11-02',k:'u',t:'ภาพรูปร่างเต็มตัว',x:'สัดส่วน ๗.๕ ศีรษะ · เสื้อผ้าตามเพศ · ไม้บรรทัดความสูง',c:['look']},
+ {v:'102',d:'2026-11-02',k:'f',t:'จัดเมนูเป็น ๙ กลุ่ม',x:'accordion เปิดทีละกลุ่ม · แก้ไอคอนซ้อนบนมือถือ'},
+ {v:'103',d:'2026-11-02',k:'f',t:'เขต/อำเภอที่เกิด ๙๒๘ แห่ง',x:'พิกัดละเอียดขึ้น · ปุ่มวันจรทรงสี่เหลี่ยม'},
+ {v:'104',d:'2026-11-02',k:'n',t:'อินทภาส·บาทจันทร์',x:'หลัก ๓ หลัก วงรอบ ๑๐๘ ปี · วัฒนะ/หายนะชะตา · ฆาตมฤตยู',c:['ib104']},
+ {v:'105',d:'2026-11-02',k:'u',t:'คู่ครองและอาชีพตามตำรา',x:'เจ้าเรือนปัตนิ ลักษณะคู่ ทิศ ช่วงพบกัน · อาชีพจากภพกัมมะ',c:['love','career'],p:['sp105P','cr105P']},
+ {v:'106',d:'2026-11-02',k:'n',t:'ทศา·กาลจักร',x:'อัษโฏตตรีทศา ๑๐๘ · กาลจักรลัคน์ · ๓ วัย ๙ ช่วง · ดวงวันเกิดประจำปี',c:['tm106']},
+ {v:'107',d:'2026-11-02',k:'u',t:'อ่านเจ้าเรือน ๒ จังหวะแบบหมอเถา',x:'เหตุ → ผล ๑๒ เรื่อง · ลัคนาเทียบตนุลัคน์ · ดาวผสมเรือน',c:['lord'],p:['rd107P']},
+ {v:'108',d:'2026-11-02',k:'u',t:'พยากรณ์จรระบบหมอเถา',x:'เกณฑ์ชันษาจร · ภพจร · ตนุเศษจรปี/เดือน · ตรีเทพ · ดาวเทียม · จรวัย',c:['tm106'],p:['mt108P']},
+ {v:'109',d:'2026-11-02',k:'u',t:'ดาวผสมดาว · บุตร · ตั้งชื่อแบบโหร',x:'พจนานุกรมดาวผสมดาว · ปุตตะจรและเพศบุตร · กฎตั้งชื่อ ๕ ข้อ',c:['natal','kids','name94'],p:['dm109P','kid109P','nm109P']},
+ {v:'110',d:'2026-11-02',k:'n',t:'หน้าอัปเดตระบบ',x:'ประวัติเวอร์ชันทั้งหมด · badge NEW/อัปเดต บนเมนูและแผง',c:['upd110']}];
+const WIN110=7*86400000;
+const vnum110=v=>parseFloat(String(v).split('–').pop());
+function now110(){ return new Date(); }
+function seen110(){ try{ return JSON.parse(localStorage.getItem('suriyayatra.seen110')||'{}')||{}; }catch(e){ return {}; } }
+function badgeMap110(){ const t=now110(), S=seen110(), cat={}, pan={};
+  CHG110.forEach(e=>{ if(!e.d||t-new Date(e.d+'T23:59:59+07:00')>WIN110) return; const n=vnum110(e.v);
+    (e.c||[]).forEach(c=>{ const k=e.k==='n'?'n':'u'; const o=cat[c]; if(!o||k==='n'||n>o.v) cat[c]={k:o&&o.k==='n'?'n':k,v:Math.max(n,o?o.v:0)}; });
+    (e.u||[]).forEach(c=>{ const o=cat[c]; cat[c]={k:o?o.k:'u',v:Math.max(n,o?o.v:0)}; });
+    (e.p||[]).forEach(p=>pan[p]=1); });
+  Object.keys(cat).forEach(c=>{ if((S[c]||0)>=cat[c].v) delete cat[c]; }); return {cat,pan}; }
+const bd110=k=>k==='n'?'<i class="bd110 n">NEW</i>':'<i class="bd110 u">อัปเดต</i>';
+function paint110(){ const r=document.querySelector('.crail29'); if(!r) return; const M=badgeMap110();
+  r.querySelectorAll('button[data-c]').forEach(b=>{ b.querySelectorAll('.bd110').forEach(x=>x.remove()); const o=M.cat[b.dataset.c]; if(o) b.insertAdjacentHTML('beforeend',bd110(o.k)); });
+  r.querySelectorAll('.gw102').forEach(w=>{ const h=w.querySelector('.gh102'); if(!h) return; h.querySelectorAll('.dot110').forEach(x=>x.remove()); const ks=[...w.querySelectorAll('button[data-c] .bd110')]; if(ks.length) h.insertAdjacentHTML('beforeend',`<b class="dot110 ${ks.some(x=>x.classList.contains('n'))?'n':'u'}" title="มี ${ks.length} หมวดที่ใหม่หรืออัปเดต"></b>`); });
+  Object.keys(M.pan).forEach(p=>{ const el=document.getElementById(p); const h=el&&(el.classList.contains('panel')?el:el.closest('.panel')); const h3=h&&h.querySelector('h3'); if(h3&&!h3.querySelector('.bd110')) h3.insertAdjacentHTML('afterbegin',bd110('n')+' '); }); }
+function upd110HTML(){ const M=badgeMap110(), ttl=CAT29.reduce((a,c)=>a+c.p.length,0);
+  const lab={n:'ใหม่',u:'อัปเดต',f:'ปรับระบบ'}, cat=id=>{ const C=CAT29.find(c=>c.id===id); return C?`<button type="button" class="go110" data-cat="${id}">${C.t}${M.cat[id]?bd110(M.cat[id].k):''}</button>`:''; };
+  let last='', html='';
+  [...CHG110].reverse().forEach(e=>{ const day=e.d?new Date(e.d+'T12:00:00+07:00').toLocaleDateString('th-TH',{day:'numeric',month:'long',year:'numeric'}):'ยุคแรก (ก่อนบันทึกวันที่)';
+    if(day!==last){ html+=`<div class="dh110">${day}</div>`; last=day; }
+    const fresh=e.d&&now110()-new Date(e.d+'T23:59:59+07:00')<=WIN110;
+    html+=`<div class="ce110" data-k="${e.k}"><div class="cv110">v${e.v}</div><div class="cb110"><div class="ct110">${fresh&&e.k!=='f'?bd110(e.k)+' ':''}<b>${e.t}</b> <span class="ck110 ${e.k}">${lab[e.k]}</span></div><div class="note">${e.x}</div>${(e.c||[]).concat(e.u||[]).length?`<div class="cl110">${[...new Set((e.c||[]).concat(e.u||[]))].map(cat).join('')}</div>`:''}</div></div>`; });
+  const nNew=CHG110.filter(e=>e.k==='n').length, nC=Object.keys(M.cat).length;
+  return `<div class="hs110"><div><b>${CHG110.length}</b><span>รายการอัปเดต</span></div><div><b>${CAT29.length}</b><span>หมวด</span></div><div><b>${ttl}</b><span>แผงคำนวณ</span></div><div><b>${nC}</b><span>หมวดที่คุณยังไม่ได้เปิดดูหลังอัปเดต</span></div></div>
+   <div class="fl110"><button type="button" data-f="" class="on">ทั้งหมด</button><button type="button" data-f="n">ใหม่ (${nNew})</button><button type="button" data-f="u">อัปเดต</button><button type="button" data-f="f">ปรับระบบ</button></div>
+   <p class="note">${bd110('n')} = หมวดหรือแผงใหม่ · ${bd110('u')} = หมวดเดิมที่มีฟีเจอร์เพิ่ม · badge แสดง ๗ วันหลังอัปเดต และหายไปเมื่อคุณเปิดหมวดนั้นแล้ว · กดชื่อหมวดเพื่อไปดูได้ทันที</p>
+   <div class="tl110">${html}</div>`; }
+function run110(){ const el=document.getElementById('upd110Out'); if(!el) return; const p=el.closest('.panel'); if(p&&p.style.display==='none') return; el.innerHTML=upd110HTML();
+  el.onclick=e=>{ const g=e.target.closest('.go110'); if(g){ cat29Show(g.dataset.cat,true); return; } const f=e.target.closest('.fl110 button'); if(f){ el.querySelectorAll('.fl110 button').forEach(b=>b.classList.toggle('on',b===f)); el.querySelectorAll('.ce110').forEach(c=>c.style.display=!f.dataset.f||c.dataset.k===f.dataset.f?'':'none'); } }; }
+{ const _s=cat29Show; cat29Show=function(id){ const r=_s.apply(this,arguments); try{ const M=badgeMap110(); if(M.cat[id]){ const S=seen110(); S[id]=M.cat[id].v; localStorage.setItem('suriyayatra.seen110',JSON.stringify(S)); } }catch(e){} setTimeout(()=>{ paint110(); run110(); },0); return r; }; }
+if(typeof GRP102!=='undefined'){ const T=GRP102.find(G=>G.g==='tool'); if(T&&!T.c.includes('upd110')) T.c.unshift('upd110'); }
+setTimeout(paint110,50); setTimeout(paint110,800);
 
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
