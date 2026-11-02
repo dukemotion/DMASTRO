@@ -212,6 +212,16 @@ svg.lag140{display:inline-block;overflow:visible}
 .rd141 .sm141{display:grid;grid-template-columns:1fr 1fr;gap:12px} .rd141 .sm141 h5{margin:6px 0;font-size:13.5px} .rd141 .sm141 h5.g{color:#3fa96b} .rd141 .sm141 h5.b{color:#d9534f} .rd141 .sm141 ul{margin:0;padding-left:18px;font-size:13px;line-height:1.7}
 .rd141 .hh141{margin:6px 0 10px;font-size:16px;color:var(--gold2);border-bottom:1px solid var(--line);padding-bottom:6px}
 @media (max-width:640px){.rd141 .sm141{grid-template-columns:1fr} .rd141 .ri141x p{font-size:13px}}
+.rd141 .fl141{display:flex;flex-direction:column;gap:6px;margin:0 0 12px;padding:10px 12px;border:1px dashed var(--line);border-radius:12px}
+.rd141 .fl141>div{display:flex;flex-wrap:wrap;align-items:center;gap:5px} .rd141 .fl141 span{font-size:12px;color:var(--muted);min-width:70px}
+.rd141 .fl141 button{display:inline-flex!important;width:auto!important;margin:0!important;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:99px;padding:3px 10px;font:inherit;font-size:12px;cursor:pointer} .rd141 .fl141 button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.rd141 table.gx141{border-collapse:separate;border-spacing:3px;font-size:12px;margin:0 auto} .rd141 .gx141 th{font-weight:600;color:var(--ink);padding:4px;text-align:center;white-space:nowrap} .rd141 .gx141 th small{display:block;font-size:9.5px;color:var(--muted);font-weight:400}
+.rd141 .gx141 td{width:52px;height:40px;text-align:center;border-radius:8px;background:rgba(127,127,127,.06)} .rd141 .gx141 td a{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:inherit;text-decoration:none} .rd141 .gx141 td b{font-size:11.5px} .rd141 .gx141 td small{font-size:10px;opacity:.8}
+.rd141 .gx141 td.g{background:rgba(63,169,107,.18);color:#3fa96b} .rd141 .gx141 td.b{background:rgba(217,83,79,.18);color:#d9534f} .rd141 .gx141 td.m{background:rgba(217,164,0,.16);color:#c98a00}
+.rd141 .so141{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 8px} .rd141 .so141 .bd140{font-size:12px;padding:3px 10px}
+.rd141 .ex141{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;padding:2px 9px;border-radius:99px;margin:2px 0 4px} .rd141 .ex141.a{background:rgba(111,140,255,.12);color:var(--accent)} .rd141 .ex141.s{background:rgba(127,127,127,.12);color:var(--muted)}
+.rd141 .ri141x.fl{background:rgba(201,168,76,.14);transition:background .4s}
+@media (max-width:640px){.rd141 .gx141 td{width:40px;height:36px} .rd141 .fl141 span{min-width:100%}}
 div.agebadge .mw140 button.ab.orb140b{border:1px solid rgba(236,220,180,.45)!important;border-radius:12px!important;background:rgba(255,255,255,.04)!important;padding:6px 9px!important;min-width:62px}
 div.agebadge .mw140 button.ab.orb140b:hover{border-color:var(--gold2)!important}
 .mw140{display:flex;align-items:center;gap:8px;min-width:0;max-width:100%}
@@ -8361,7 +8371,8 @@ const CHG110=[
  {v:'140.5',d:'2026-11-02',k:'f',t:'แสดงเลขเวอร์ชันบนเมนู และลดปัญหาเบราว์เซอร์จำหน้าเก่า',x:'ปุ่ม "อัปเดตระบบ" บนเมนูแสดงเลขเวอร์ชันล่าสุด (เช่น v140.5) ให้ตรวจได้ทันทีว่าเปิดหน้าล่าสุดอยู่หรือไม่ · เพิ่มคำสั่งไม่ให้เบราว์เซอร์เก็บแคชหน้าเว็บ',c:['natal'],p:[],go:'#ageBadge'},
  {v:'140.6',d:'2026-11-02',k:'u',t:'ดูรายมาตรฐาน: เพิ่มองค์เกณฑ์ และ อุดมเกณฑ์',x:'แท็บดูรายมาตรฐานในอัตราดาวโคจรเพิ่ม องค์เกณฑ์ (ดาวจรอยู่ภพ ๑ ๔ ๗ ๑๐ จากลัคนา) และ อุดมเกณฑ์ (ดาวเกษตรอยู่ภพ ๑ ๔ ๗ ๑๐) · เลือกนับจากลัคนากำเนิดหรือลัคนาจรได้ · การ์ดบอกภพที่ดาวจรสถิต · ไทม์ไลน์บอกเมื่อดาวเข้าหรือพ้นองค์เกณฑ์/อุดมเกณฑ์ และกรองเฉพาะสองเกณฑ์นี้ได้ · ตารางดาว × ราศีบอกภพของแต่ละราศี ไฮไลต์ภพเกณฑ์สีทอง',c:['natal'],p:[],go:'#ageBadge'},
  {v:'140.7',d:'2026-11-03',k:'u',t:'อัตราดาวโคจร: บอกภพมาจากไหน ไปไหน เจ้าเรือนอะไร และความหมายมาตรฐาน',x:'ทั้ง ๓ แท็บ (ภาพรวมรายเดือน ดูรายดาว ดูรายมาตรฐาน) บอกภพที่ดาวจรย้ายจากและย้ายไป (เช่น ภพตนุ → ภพวินาศ) และดาวนั้นเป็นเจ้าเรือนภพใด · การ์ดรายดาวมีแถบ มาจาก → อยู่ตอนนี้ → ไปต่อ · ลำดับการย้ายราศีถัดไปบอกภพทุกครั้ง · ตัวเลือกนับภพจากลัคนากำเนิดหรือลัคนาจรย้ายมาอยู่ใต้แท็บ ใช้ร่วมทุกแท็บ · แตะหรือชี้ป้ายมาตรฐาน (เกษตร มหาอุจจ์ ราชาโชค มหาจักร เทวีโชค จุลจักร นิจ ประ องค์เกณฑ์ อุดมเกณฑ์) แล้วความหมายขึ้นทันที · การ์ดรายดาวแสดงความหมายมาตรฐานใต้ป้ายด้วย',c:['natal'],p:[],go:'#ageBadge'},
- {v:'141',d:'2026-11-03',k:'n',t:'อ่านดวง — คำพยากรณ์ดวงเดิมและดวงจรแบบจัดเต็ม',x:'ปุ่มไอคอน "อ่านดวง" ข้างปุ่มอัตราดาวโคจร เปิดป๊อปอัปคำพยากรณ์เป็นย่อหน้า ใช้ได้กับทุกดวง · ดวงเดิม: ลัคนาและเจ้าเรือนลัคน์ ตนุเศษ ดาวกุมลัคน์ มาตรฐานและเกณฑ์ดาว (เกษตร อุจจ์ นิจ ประ ราชาโชค มหาจักร เรือนเกณฑ์ อุดมเกณฑ์ ตนุลัคน์ ฯลฯ พร้อมความหมายเฉพาะดาว) ดาวเจ้าเรือน ๑๒ ภพไปสถิตภพใด ดาวในภพ ดาวสัมพันธ์และคู่ดาว · ดวงจร: ภาพรวม ดาวจรสัมพันธ์ดาวเดิมแบ่งเกณฑ์ ๑° ๓° ๕° พร้อมระดับความแรง ดาวจรผ่านภพ มาตรฐานและการเดินของดาวจร ดาวที่จะย้ายราศีภายใน ๔๕ วัน และสรุปข้อควรใช้/ควรระวัง · คัดลอกคำพยากรณ์ได้',c:['natal'],p:[],go:'#ageBadge'}];
+ {v:'141',d:'2026-11-03',k:'n',t:'อ่านดวง — คำพยากรณ์ดวงเดิมและดวงจรแบบจัดเต็ม',x:'ปุ่มไอคอน "อ่านดวง" ข้างปุ่มอัตราดาวโคจร เปิดป๊อปอัปคำพยากรณ์เป็นย่อหน้า ใช้ได้กับทุกดวง · ดวงเดิม: ลัคนาและเจ้าเรือนลัคน์ ตนุเศษ ดาวกุมลัคน์ มาตรฐานและเกณฑ์ดาว (เกษตร อุจจ์ นิจ ประ ราชาโชค มหาจักร เรือนเกณฑ์ อุดมเกณฑ์ ตนุลัคน์ ฯลฯ พร้อมความหมายเฉพาะดาว) ดาวเจ้าเรือน ๑๒ ภพไปสถิตภพใด ดาวในภพ ดาวสัมพันธ์และคู่ดาว · ดวงจร: ภาพรวม ดาวจรสัมพันธ์ดาวเดิมแบ่งเกณฑ์ ๑° ๓° ๕° พร้อมระดับความแรง ดาวจรผ่านภพ มาตรฐานและการเดินของดาวจร ดาวที่จะย้ายราศีภายใน ๔๕ วัน และสรุปข้อควรใช้/ควรระวัง · คัดลอกคำพยากรณ์ได้',c:['natal'],p:[],go:'#ageBadge'},
+ {v:'141.1',d:'2026-11-03',k:'u',t:'อ่านดวง: เพิ่มแท็บดาวจรกระทบดาวเดิม',x:'แท็บใหม่ในอ่านดวง: ตารางดาวจร × ดาวเดิม (ทับ เล็ง ฉาก ตรีโกณ โยค พร้อมระยะองศา สีบอกส่งเสริม/กดดัน แตะช่องเพื่อไปยังคำอธิบาย) · ดาวจรทับดาวเดิมตามราศีแบบไทย · คำอธิบายรายคู่บอกองศาจรและเดิม ภพที่สถิต ดาวเดิมเป็นเจ้าเรือนอะไร พื้นที่ชีวิตที่ถูกกระทบ ตำราดาวจรทับ คู่ดาว และสถานะพักร์ · บอกเวลามุมตรง ว่ากำลังเข้ามุมหรือผ่านไปแล้ว · กรองระยะ ๑° ๓° ๕° ๘° มุม ดาวจร รวม/ซ่อนจันทร์ และเรียงตามระยะ ความแรง หรือเวลามุมตรง',c:['natal'],p:[],go:'#ageBadge'}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
@@ -9262,7 +9273,7 @@ function sv128init(){ const nb=document.querySelector('#rasi')&&document.querySe
     if(k==='all') sv128save(['rasi','nav','tri','taksa'].map(part128),'จักรราศี นวางค์ ตรียางค์ ทักษา'); else { const p=part128(k); sv128save([p],SVB128.find(x=>x[0]===k)[1]); } }); }
 setTimeout(sv128init,0);
 
-const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v139','v140','v140.1','v140.2','v140.3','v140.4','v140.6','v140.7','v141','v1_20','v21','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
+const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v139','v140','v140.1','v140.2','v140.3','v140.4','v140.6','v140.7','v141','v141.1','v1_20','v21','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
 // ───────── v129: หน้าอัปเดตระบบแบบบทความ — หัวข้อ · อัปเดตอะไร · รายละเอียด · ภาพหน้าจอ · ปุ่มลัดไปหน้านั้น · ปุ่มอัปเดตบนเมนูบน ─────────
 // ภาพหน้าจอสร้างอัตโนมัติด้วยสคริปต์ tools/shots129.js (ไล่ทุกรายการใน CHG110 ที่ยังไม่มีภาพ) แล้วบันทึกเป็น shots/<v>.webp — SHOTS129 คือรายชื่อไฟล์ที่มีอยู่
 // เป้าหมายของแต่ละรายการ: e.go (selector ที่อยู่นอกหมวด) → e.p[0] (แผงในหมวด) → หมวด e.c[0]
@@ -10541,7 +10552,7 @@ function render141(){ const P=document.getElementById('rd141'); if(!P) return; c
   P.innerHTML=`<div class="bx140 bx141" role="dialog" aria-label="อ่านดวง"><div class="hd140"><span class="hi140">${i141(IC141.read,22)}</span><div><b>อ่านดวง — ${esc94(nm)}</b><small>เกิด ${dtf140(bt)} · วันจร ${dtf140(t)}</small></div><button type="button" class="xb140" data-c141 title="คัดลอกคำพยากรณ์">${i141(IC141.copy,17)}</button><button type="button" class="xb140" data-x141 aria-label="ปิด">${i141(IC141.x,18)}</button></div>
    <div class="tb140"><button type="button" data-t141="n" class="${ST141.tab==='n'?'on':''}">${i141(IC141.lag,15)} ดวงเดิม</button><button type="button" data-t141="t" class="${ST141.tab==='t'?'on':''}">${i141(IC141.tr,15)} ดวงจร</button><button type="button" data-t141="a" class="${ST141.tab==='a'?'on':''}">${i141(IC141.read,15)} อ่านทั้งหมด</button></div>
    <div class="bdy140 rd141b"><p class="note">กำลังเรียบเรียงคำพยากรณ์…</p></div></div>`;
-  setTimeout(()=>{ const B=P.querySelector('.rd141b'); try{ B.innerHTML=ST141.tab==='n'?natal141():ST141.tab==='t'?transit141():`<h3 class="hh141">ดวงกำเนิด</h3>${natal141()}<h3 class="hh141">ดวงจร</h3>${transit141()}`; if(ST141.tab==='a') B.querySelectorAll('details').forEach(d=>d.open=true); }catch(e){ console.error(e); B.innerHTML='<p class="note">เรียบเรียงไม่สำเร็จ — ตรวจว่าเปิดดวงแล้ว</p>'; } },15); }
+  setTimeout(()=>{ const B=P.querySelector('.rd141b'); try{ B.innerHTML=ST141.tab==='n'?natal141():ST141.tab==='t'?transit141():ST141.tab==='i'?impactHTML141():`<h3 class="hh141">ดวงกำเนิด</h3>${natal141()}<h3 class="hh141">ดวงจร</h3>${transit141()}`; if(ST141.tab==='a') B.querySelectorAll('details').forEach(d=>d.open=true); }catch(e){ console.error(e); B.innerHTML='<p class="note">เรียบเรียงไม่สำเร็จ — ตรวจว่าเปิดดวงแล้ว</p>'; } },15); }
 function open141(){ let P=document.getElementById('rd141'); if(!P){ P=document.createElement('div'); P.id='rd141'; P.className='pm135 orb140 rd141'; document.body.appendChild(P);
    P.addEventListener('click',e=>{ if(e.target===P||e.target.closest('[data-x141]')){ P.hidden=true; return; } const c=e.target.closest('[data-c141]'); if(c){ const txt=P.querySelector('.rd141b').innerText; try{ navigator.clipboard.writeText(txt); c.classList.add('ok'); setTimeout(()=>c.classList.remove('ok'),1200); }catch(_){} return; }
      const b=e.target.closest('[data-t141]'); if(b){ ST141.tab=b.dataset.t141; render141(); } });
@@ -10550,6 +10561,62 @@ function open141(){ let P=document.getElementById('rd141'); if(!P){ P=document.c
 { const _ab=ageBadge; ageBadge=function(){ const h=_ab.apply(this,arguments); const btn=`<button type="button" class="ab orb140b rd141btn" data-rd141 title="อ่านดวง — คำพยากรณ์ดวงเดิมและดวงจรแบบจัดเต็ม">${i141(IC141.read,24)}<span>อ่าน<br>ดวง</span></button>`;
   const i=h.lastIndexOf('</div>'); return h.includes('class="mw140"')&&i>0?h.slice(0,i)+btn+h.slice(i):h+btn; }; }
 document.addEventListener('click',e=>{ const b=e.target.closest&&e.target.closest('[data-rd141]'); if(!b) return; e.preventDefault(); e.stopPropagation(); open141(); },true);
+
+// ───────── v141.1: อ่านดวง — แท็บ "ดาวจรกระทบดาวเดิม" แบบละเอียด
+// ตารางดาวจร × ดาวเดิม · กรองระยะ/มุม/ดาว · เรียงตามระยะ ความแรง หรือเวลาที่มุมตรง · เวลามุมตรง เข้า/ออกจากมุม · ภพและเจ้าเรือนที่ถูกกระทบ · ทับตามราศีแบบไทย
+Object.assign(ST141,{orb:5,asp:'ALL',tk:'ALL',sort:'orb',moon:0});
+const ASPS141=[0,60,90,120,180], ASPAB141={0:'ทับ',60:'โยค',90:'ฉาก',120:'ตรีโกณ',180:'เล็ง'};
+const tone141=(tk,nk,g)=>{ const soft=[60,120].includes(g), hard=[90,180].includes(g), en=/คู่ศัตรู/.test(pairOf141(tk,nk)); if(en&&!hard&&!(MAL141[tk]&&g===0)) return 'm'; if(BEN141[tk]&&!hard) return 'g'; if(MAL141[tk]&&(hard||g===0)) return 'b'; if(soft) return 'g'; return 'm'; };
+const sev141=(tk,nk,g)=>{ if([60,120].includes(g)) return BEN141[tk]?0:1; let s=0; if(MAL141[tk]) s++; if(['SA','RA'].includes(tk)) s++; if(['LA','SU','MO'].includes(nk)) s++; if([0,90,180].includes(g)&&MAL141[tk]) s++; return Math.min(4,s); };
+const STEP141={MO:1/24,SU:0.25,ME:0.25,VE:0.25,MA:0.5,JU:1,SA:2,RA:2,KE:1,UR:3};
+function exact141(tk,nat,A,t){ // หาเวลาที่มุมตรงที่ใกล้ปัจจุบันที่สุด (ย้อนหลังและล่วงหน้า)
+  const h0=horaOf(t), f=h=>wr139(norm(posH(h,tk))-nat-A), st=STEP141[tk]||1, lim=tk==='MO'?3:tk==='SA'||tk==='RA'||tk==='UR'||tk==='JU'?400:120; let best=null;
+  for(const dir of [1,-1]){ let a=h0, fa=f(a); for(let i=1;i*st<=lim;i++){ const b=h0+dir*i*st, fb=f(b); if(Math.sign(fa)!==Math.sign(fb)&&Math.abs(fa-fb)<90){ let lo=a,hi=b,fl=fa; for(let j=0;j<40;j++){ const m=(lo+hi)/2, fm=f(m); if(Math.sign(fm)===Math.sign(fl)){ lo=m; fl=fm; } else hi=m; } const h=(lo+hi)/2; if(!best||Math.abs(h-h0)<Math.abs(best-h0)) best=h; break; } a=b; fa=fb; } }
+  if(best==null) return null; const d=fromHora(best); return {t:d,app:best>h0}; }
+function impacts141(){ const N=WSTATE.nat, P=N.pos, L=sgn(P.LA), t=getTransit(), h0=horaOf(t), T={}, sp={};
+  for(const k of K141){ T[k]=norm(posH(h0,k)); sp[k]=speedH(h0,k); }
+  const H=[]; for(const tk of K141){ if(tk==='MO'&&!ST141.moon) continue; for(const nk of [...K141,'LA']){ const a=norm(T[tk]-P[nk]); let best=null; for(const g of ASPS141){ for(const A of g===0||g===180?[g]:[g,-g]){ const o=Math.abs(wr139(a-A)); if(o<=ST141.orb&&(!best||o<best.o)) best={g,A,o}; } } if(best) H.push({tk,nk,...best,tone:tone141(tk,nk,best.g),sev:sev141(tk,nk,best.g)}); } }
+  return {N,P,L,t,T,sp,H}; }
+function impactHTML141(){ const D=impacts141(), {P,L,t,T,sp}=D; let H=D.H.slice();
+  if(ST141.asp!=='ALL') H=H.filter(x=>String(x.g)===ST141.asp); if(ST141.tk!=='ALL') H=H.filter(x=>x.tk===ST141.tk);
+  H.forEach(x=>{ x.ex=exact141(x.tk,P[x.nk],x.A,t); });
+  if(ST141.sort==='orb') H.sort((a,b)=>a.o-b.o); else if(ST141.sort==='sev') H.sort((a,b)=>b.sev-a.sev||a.o-b.o); else H.sort((a,b)=>(a.ex?Math.abs(a.ex.t-t):1e15)-(b.ex?Math.abs(b.ex.t-t):1e15));
+  const NK=[...K141,'LA'], TK=K141.filter(k=>k!=='MO'||ST141.moon);
+  // ตาราง
+  const cell=(tk,nk)=>{ const x=D.H.find(y=>y.tk===tk&&y.nk===nk); if(!x) return '<td></td>'; return `<td class="${x.tone}"><a href="#im141-${tk}-${nk}" title="${TN141(tk)}จร ${ASPAB141[x.g]} ${TN141(nk)}เดิม ระยะ ${x.o.toFixed(2)}°"><b>${ASPAB141[x.g]}</b><small>${x.o.toFixed(1)}°</small></a></td>`; };
+  const grid=`<div class="tw140"><table class="gx141"><thead><tr><th>จร \\ เดิม</th>${NK.map(k=>`<th>${k==='LA'?lagGlyph140('currentColor',11):NUM141(k)}<small>${TN141(k)}</small></th>`).join('')}</tr></thead><tbody>${TK.map(tk=>`<tr><th>${NUM141(tk)} <small>${TN141(tk)}${sp[tk]<0&&!/RA|KE/.test(tk)?' พ.':''}</small></th>${NK.map(nk=>cell(tk,nk)).join('')}</tr>`).join('')}</tbody></table></div>`;
+  // ทับตามราศี (ไทย)
+  const sitOn=[]; for(const tk of K141){ for(const nk of [...K141,'LA']){ if(sgn(T[tk])===sgn(P[nk])) sitOn.push({tk,nk}); } }
+  const sitHTML=sitOn.length?`<div class="so141">${sitOn.map(s=>`<span class="bd140 ${tone141(s.tk,s.nk,0)}">${TN141(s.tk)}จรทับ${s.nk==='LA'?'ลัคนา':TN141(s.nk)}เดิม · ${SIGNS[sgn(T[s.tk])]}</span>`).join('')}</div>`:'<p class="note">ไม่มีดาวจรอยู่ราศีเดียวกับดาวเดิม</p>';
+  // การ์ดรายคู่
+  const cards=H.map(x=>{ const tk=x.tk, nk=x.nk, hT=houseOf(T[tk],L), hN=houseOf(P[nk],L), lordH=nk==='LA'?[1]:lordHs140(nk);
+    const areas=[...new Set([hN,...lordH])].map(h=>`ภพ${HOUSES[h-1]} (${HM141(h)})`).join(' · ');
+    const tw=TRN25[tk]||'', nw=nk==='LA'?'ตัวเจ้าชะตา สภาพแวดล้อม ความรู้สึก':(NTN25[nk]||'').replace(/\//g,' ');
+    const verb=x.g===0?'เข้าทับ':x.g===180?'เล็ง':x.g===90?'ตั้งฉากกับ':x.g===120?'ทำมุมตรีโกณกับ':'ทำมุมโยคกับ';
+    let txt=`ดาว${TN141(tk)}จรซึ่งนำพลังเรื่อง${tw} ${verb}${nk==='LA'?'ลัคนา':'ดาว'+TN141(nk)}เดิมซึ่งเป็นตัวแทนเรื่อง${nw} `;
+    txt+=x.tone==='g'?'ผลจึงออกมาในทางส่งเสริม เรื่องที่เกี่ยวข้องมีโอกาสคืบหน้าหรือได้รับความช่วยเหลือ':x.tone==='b'?'จึงเกิดแรงกดดันต่อเรื่องเหล่านี้ อาจล่าช้า ติดขัด หรือมีเรื่องให้กังวล ควรรอบคอบและไม่ประมาท':'ผลจึงขึ้นกับจังหวะและการตัดสินใจ มีทั้งโอกาสและเรื่องที่ต้องระวัง';
+    txt+=`. พื้นที่ชีวิตที่ถูกกระทบคือ ${areas}`;
+    if(x.g===0&&TR2[tk]&&TR2[tk][nk]) txt+=`. ตามตำราดาวจรทับ: ${TR2[tk][nk]}`;
+    const pr=pairOf141(tk,nk); if(pr) txt+=`. สองดาวนี้เป็น${pr}`;
+    if(sp[tk]<0&&!/RA|KE/.test(tk)) txt+='. ดาวจรกำลังพักร์ เรื่องอาจวนกลับมาให้แก้ซ้ำ หรือเกิดผลหลายระลอก';
+    const ex=x.ex?`<span class="ex141 ${x.ex.app?'a':'s'}">${i141(IC141.move,12)} ${x.ex.app?'กำลังเข้ามุม · ตรงมุม':'ผ่านมุมตรงแล้ว ·'} ${dtf140(x.ex.t)}${x.ex.app?` (อีก ${dur140(x.ex.t-t)})`:` (${dur140(t-x.ex.t)} ที่แล้ว)`}</span>`:'';
+    return `<div class="ri141x ${x.tone}" id="im141-${tk}-${nk}"><h5>${dots141(x.sev)}ดาว${TN141(tk)} (${NUM141(tk)}) จร${sp[tk]<0&&!/RA|KE/.test(tk)?' พักร์':''} ${ASPW141[x.g]} ${nk==='LA'?'ลัคนา':'ดาว'+TN141(nk)} (${NUM141(nk)}) เดิม</h5>
+     <p class="kw141">${TN141(tk)}จร ${fmt(T[tk])} ภพ${HOUSES[hT-1]} · ${nk==='LA'?'ลัคนา':TN141(nk)}เดิม ${fmt(P[nk])} ภพ${HOUSES[hN-1]}${nk!=='LA'&&lordTxt140(nk)?' · '+lordTxt140(nk):''} · ระยะ ${x.o.toFixed(2)}°</p>${ex}<p>${soft141(txt)}.</p></div>`; }).join('');
+  const btn=(attr,v,lab,cur)=>`<button type="button" ${attr}="${v}" class="${String(cur)===String(v)?'on':''}">${lab}</button>`;
+  const ctrl=`<div class="fl141"><div><span>ระยะไม่เกิน</span>${[1,3,5,8].map(v=>btn('data-io141',v,v+'°',ST141.orb)).join('')}</div>
+   <div><span>มุม</span>${btn('data-ia141','ALL','ทั้งหมด',ST141.asp)}${ASPS141.map(g=>btn('data-ia141',String(g),ASPAB141[g],ST141.asp)).join('')}</div>
+   <div><span>ดาวจร</span>${btn('data-ik141','ALL','ทุกดวง',ST141.tk)}${K141.filter(k=>k!=='MO'||ST141.moon).map(k=>btn('data-ik141',k,TN141(k),ST141.tk)).join('')}${btn('data-im141','1',(ST141.moon?'ซ่อน':'รวม')+'จันทร์จร','')}</div>
+   <div><span>เรียงตาม</span>${btn('data-is141','orb','ระยะใกล้สุด',ST141.sort)}${btn('data-is141','sev','ความแรง',ST141.sort)}${btn('data-is141','time','เวลามุมตรง',ST141.sort)}</div></div>`;
+  const g=H.filter(x=>x.tone==='g').length, b=H.filter(x=>x.tone==='b').length;
+  return ctrl+sec141('ตารางดาวจร × ดาวเดิม',IC141.asp,`${grid}<p class="note">ตัวเลขใต้ชื่อมุมคือระยะห่างจากมุมตรง (องศา) · สีเขียวส่งเสริม สีแดงกดดัน สีเหลืองขึ้นกับการตัดสินใจ · แตะช่องเพื่อไปยังคำอธิบาย</p>`,true,`${D.H.length} คู่`)
+    +sec141('ดาวจรทับดาวเดิมตามราศี (แบบไทย)',IC141.house,sitHTML+'<p class="note">ตำราไทยถือว่าดาวจรอยู่ราศีเดียวกับดาวเดิมเป็นการ "ทับ" แม้องศายังห่าง ผลจะเริ่มตั้งแต่ดาวจรเข้าราศีและแรงที่สุดเมื่อองศาตรงกัน</p>',true,sitOn.length+' คู่')
+    +sec141('คำอธิบายรายคู่',IC141.read,`<p class="note">พบ ${H.length} คู่ · ส่งเสริม ${g} · กดดัน ${b}</p>`+cards,true); }
+{ const _r=render141; render141=function(){ _r.apply(this,arguments); const P=document.getElementById('rd141'); if(!P) return; const tb=P.querySelector('.tb140'); if(!tb) return;
+  const a=tb.querySelector('[data-t141="a"]'); a.insertAdjacentHTML('beforebegin',`<button type="button" data-t141="i" class="${ST141.tab==='i'?'on':''}">${i141(IC141.asp,15)} ดาวจรกระทบดาวเดิม</button>`); }; }
+document.addEventListener('click',e=>{ const b=e.target.closest&&e.target.closest('#rd141 [data-io141],#rd141 [data-ia141],#rd141 [data-ik141],#rd141 [data-is141],#rd141 [data-im141]'); if(!b) return; e.stopPropagation();
+  if(b.dataset.io141) ST141.orb=+b.dataset.io141; else if(b.dataset.ia141) ST141.asp=b.dataset.ia141; else if(b.dataset.ik141) ST141.tk=b.dataset.ik141; else if(b.dataset.is141) ST141.sort=b.dataset.is141; else { ST141.moon=ST141.moon?0:1; if(!ST141.moon&&ST141.tk==='MO') ST141.tk='ALL'; }
+  const B=document.querySelector('#rd141 .rd141b'); if(B){ B.innerHTML='<p class="note">กำลังคำนวณ…</p>'; setTimeout(()=>{ B.innerHTML=impactHTML141(); },20); } },true);
+document.addEventListener('click',e=>{ const a=e.target.closest&&e.target.closest('#rd141 .gx141 a[href^="#im141-"]'); if(!a) return; e.preventDefault(); const el=document.getElementById(a.getAttribute('href').slice(1)); if(el){ el.scrollIntoView({behavior:'smooth',block:'center'}); el.classList.add('fl'); setTimeout(()=>el.classList.remove('fl'),1600); } },true);
 
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
