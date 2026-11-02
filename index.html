@@ -146,6 +146,7 @@ header{flex-wrap:wrap}.brand{flex:0 0 100%;width:100%;font-size:14px;font-weight
 :root[data-theme="dark"] #tpop{background:rgba(13,26,38,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--edge75b);border-radius:18px;box-shadow:0 24px 60px -16px rgba(0,0,0,.85)}
 :root[data-theme="dark"] *{scrollbar-color:#244055 transparent;scrollbar-width:thin}
 ::selection{background:rgba(156,203,232,.35)}
+.lp120 td{vertical-align:top;font-size:12.5px}.lpl120{display:flex;flex-wrap:wrap;gap:5px;margin:6px 0}#tpop .lg120{width:auto!important;margin:0!important;min-height:0!important;border:1px solid var(--line);background:rgba(156,203,232,.1);color:inherit;border-radius:6px;padding:3px 8px!important;font:inherit;font-size:12px;cursor:pointer}#tpop .lg120:hover{border-color:#9ccbe8}
 .mvl119{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center;justify-content:center}.mvl119 span{display:inline-flex;align-items:center;gap:5px}.mv119{pointer-events:stroke}
 .evt118{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}#ev118P .evt118 button,#ev118P .tc118 button{width:auto!important;flex:0 0 auto;margin:0!important;border:1px solid var(--line);background:transparent;color:inherit;border-radius:8px;padding:5px 12px;font:inherit;font-size:13px;cursor:pointer;opacity:.65;min-height:0!important}
 #ev118P .evt118 button.on,#ev118P .tc118 button.on{opacity:1;background:rgba(156,203,232,.16);border-color:#9ccbe8}
@@ -2203,7 +2204,7 @@ function bindWheel(svg,tt){
         if(!raf) raf=requestAnimationFrame(()=>{ raf=0; setTransit(lastT); const tr=chartAt(lastT,window._trLoc?window._trLoc.lat:WSTATE.lat,window._trLoc?window._trLoc.lon:WSTATE.lon); const tr2={LA:tr.pos.LA,...Object.fromEntries(ORDER.map(z=>[z,tr.pos[z]]))}; const rT={}; for(const z of ORDER) if(z!=='RA'&&z!=='KE'&&tr.spd[z]<0) rT[z]=1;
           const vb=svg.getAttribute('viewBox'); const tmp=document.createElement('div'); WSTATE.mark=markOf(WSTATE.bt,lastT); tmp.innerHTML=wheelF({id:'wsvg',activeT:k,mark:WSTATE.mark,natal:WSTATE.nat2,transit:tr2,retro:WSTATE.retroN,retroT:rT,lagSign:WSTATE.lagS,center:WSTATE.center,tanu:WSTATE.tanu,L:LAY});
           const ns=tmp.firstChild; svg.innerHTML=ns.innerHTML; svg.setAttribute('viewBox',vb); HLPIN={k,t:1}; applyHL(svg); renderTaksa(WSTATE.bt,lastT); $('ageBadge').innerHTML=ageBadge(readForm(),WSTATE.bt,lastT); $('wstatus').innerHTML=wheelStatus(lastT)+` <span class="note">· กำลังลาก ${PN[k]} ${TH[k]} → ${fmt(tr.pos[k])}</span>`+hitTxt(k); }); };
-      const up=()=>{ svg.removeEventListener('pointermove',mv); svg.removeEventListener('pointerup',up); svg.style.cursor=''; if(moved){ setTransit(lastT); compute(); } else { HLPIN={k,t:1}; applyHL(svg); if(k!=='LA') showPop(k,ev); } };
+      const up=()=>{ svg.removeEventListener('pointermove',mv); svg.removeEventListener('pointerup',up); svg.style.cursor=''; if(moved){ setTransit(lastT); compute(); } else { HLPIN={k,t:1}; applyHL(svg); if(k!=='LA') showPop(k,ev); else showLagPop120(ev); } };
       svg.addEventListener('pointermove',mv); svg.addEventListener('pointerup',up); return; }
     // ลากพื้นหลังเพื่อเลื่อนมุมมอง (เมื่อซูมอยู่)
     if(!VB||VB.w>=VB.W) return; const p0=svgPt(svg,ev), x0=VB.x, y0=VB.y; svg.setPointerCapture(ev.pointerId);
@@ -8084,7 +8085,8 @@ const CHG110=[
  {v:'117.4',d:'2026-11-02',k:'u',t:'ทักษาลอยข้างจักรราศีขณะลากดาวจร',x:'แผงทักษาคู่ลอยขึ้นมุมจอขณะลากดาวจร เห็นเลขกระพริบได้ทันทีโดยไม่ต้องเลื่อนหา · บอกเจ้าเรือนภพ ดาวเดิมสถิตภพ และดาวจรอยู่ภพใด'},
  {v:'118',d:'2026-11-02',k:'n',t:'วันจร · นัดหมาย · ช่วงเดินทาง (timeline แบบ terminal)',x:'ใต้จักรราศี ใส่วัน เวลา จังหวัด/เมือง สำหรับนัดหมาย หรือช่วงไป–กลับ แล้วรัน timeline เหตุการณ์ดาว: ย้ายราศี พักร์ ทับ/เล็งดาวเดิม วันใหม่ ข้างขึ้นข้างแรม วันพระ ทักษาประจำวัน · แตะบรรทัดเพื่อตั้งวันจร'},
  {v:'119',d:'2026-11-02',k:'u',t:'ทางเดินดาวจรบนจักรราศี',x:'ลูกศรบอกทิศดาวจร (เดินหน้า/ถอย/หยุดนิ่ง) และเส้นประระยะที่ดาวจะเดินไปในช่วงเวลาข้างหน้า'},
- {v:'119.1',d:'2026-11-02',k:'u',t:'เส้นทางดาวจรหดตามจุดเปลี่ยนสถานะ',x:'เส้นประวิ่งถึงจุดที่จะเริ่ม/พ้นพักร์ มนท์ เสริด และสั้นลงเมื่อลากดาวเข้าใกล้ · สีตามสถานะ · บอกจำนวนวันที่เหลือ'}];
+ {v:'119.1',d:'2026-11-02',k:'u',t:'เส้นทางดาวจรหดตามจุดเปลี่ยนสถานะ',x:'เส้นประวิ่งถึงจุดที่จะเริ่ม/พ้นพักร์ มนท์ เสริด และสั้นลงเมื่อลากดาวเข้าใกล้ · สีตามสถานะ · บอกจำนวนวันที่เหลือ'},
+ {v:'120',d:'2026-11-02',k:'u',t:'กดลัคนาจรดูเวลาย้ายนวางค์ ฤกษ์ ราศี',x:'แตะลัคนาจรบนจักรราศี จะบอกเวลาเริ่มและเวลาย้ายถัดไปของลูกนวางค์ ฤกษ์ และราศี (ถึงวินาที) พร้อมรายการลัคนาย้ายราศีใน ๒๔ ชั่วโมง และปุ่มเลื่อนวันจรไปจุดนั้น'}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
@@ -8581,6 +8583,22 @@ function mv119(o,P,a1,cx,cy){ let T; try{ T=getTransit(); }catch(e){ return ''; 
     else out+=`<path d="M${(end[0]+5*Math.cos(ang)).toFixed(1)} ${(end[1]+5*Math.sin(ang)).toFixed(1)}L${(end[0]+4*Math.cos(ang+2.5)).toFixed(1)} ${(end[1]+4*Math.sin(ang+2.5)).toFixed(1)}L${(end[0]+4*Math.cos(ang-2.5)).toFixed(1)} ${(end[1]+4*Math.sin(ang-2.5)).toFixed(1)}Z" fill="currentColor"/>`;
     out+='</g>'; }
   return out; }
+// ===== v120: กดลัคนาจร → เวลาลัคนาย้ายนวางค์ ย้ายฤกษ์ ย้ายราศี (ณ สถานที่จร)
+function lagAt120(t){ const lc=window._trLoc||{lat:WSTATE.lat,lon:WSTATE.lon}; return norm(lagna(t,lc.lat,lc.lon)); }
+const UN120=[['นวางค์',10/3],['ฤกษ์',40/3],['ราศี',30]];
+function edge120(t0,size,dir){ const i0=Math.floor(lagAt120(t0)/size); let a=new Date(t0); for(let m=1;m<=24*60;m++){ const b=new Date(t0.getTime()+dir*m*60000); if(Math.floor(lagAt120(b)/size)!==i0){ let lo=a, hi=b; for(let j=0;j<16;j++){ const md=new Date((lo.getTime()+hi.getTime())/2); if(Math.floor(lagAt120(md)/size)===i0) lo=md; else hi=md; } return dir>0?hi:lo; } a=b; } return null; }
+const tm120=d=>d?`${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')} น.`:'—';
+const dd120=d=>d?`${d.getDate()} ${MONTHS_TH[d.getMonth()].slice(0,3)}`:'';
+function nm120(u,L){ const s=sgn(L); if(u==='ราศี') return 'ราศี'+SIGNS[s]; if(u==='ฤกษ์'){ const n=Math.floor(L/(40/3)); return `ฤกษ์ที่ ${n+1} ${NAK[n]}`; } const n=Math.floor((L-s*30)/(10/3)), ns=nav(L); return `ลูกนวางค์ที่ ${THN[n+1]} (นวางค์${SIGNS[ns]} · ${TH[PNUM2K[LORD[ns]]]})`; }
+function showLagPop120(ev){ const T=getTransit(), L=lagAt120(T), lc=window._trLoc, nat=WSTATE.nat, Ln=sgn(nat.pos.LA), hs=x=>((x-Ln+12)%12)+1;
+  const rows=UN120.map(([u,sz])=>{ const st=edge120(T,sz,-1), en=edge120(T,sz,1), nx=en?lagAt120(new Date(en.getTime()+1000)):null, left=en?Math.round((en-T)/60000):null; return `<tr><td><b>${u}</b><br><span class="note">${nm120(u,L)}</span></td><td>${tm120(st)}<br><span class="note">${dd120(st)}</span></td><td>${tm120(en)} <span class="note">${dd120(en)}</span><br><span class="note">→ ${nx!=null?nm120(u,nx):''}</span></td><td>${left!=null?(left<60?left+' นาที':Math.floor(left/60)+' ชม. '+(left%60)+' นาที'):'—'}${en?`<br><button type="button" class="lg120" data-t="${en.getTime()+1000}">ไปที่เวลานี้</button>`:''}</td></tr>`; }).join('');
+  const nxt=[]; let t=new Date(T); for(let i=0;i<12;i++){ const e=edge120(t,30,1); if(!e) break; const s=sgn(lagAt120(new Date(e.getTime()+1000))); nxt.push([e,s]); t=new Date(e.getTime()+2000); }
+  const html=`<div class="popH"><b>ลัคนาจร ${fmt(L)}</b> <span class="hb">ภพ${HOUSES[hs(sgn(L))-1]}ของดวงเดิม</span><button class="popX" type="button" onclick="closePop()" aria-label="ปิด"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+   <div class="note" style="margin:2px 0 6px">${dd120(T)} ${tm120(T)} · คำนวณ ณ ${lc?(lc.cc==='TH'||!lc.cc?lc.name:cityL114(lc.name,lc.cc)):'ที่เกิด'} · ${nm120('ฤกษ์',L)} · ${nm120('นวางค์',L)}</div>
+   <div class="t98w"><table class="t98 lp120"><tr><th>ระดับ</th><th>เริ่ม</th><th>ย้ายถัดไป</th><th>อีก</th></tr>${rows}</table></div>
+   <div class="bh70st" style="margin-top:8px">ลัคนาย้ายราศีใน ๒๔ ชั่วโมงข้างหน้า</div><div class="lpl120">${nxt.map(([e,s])=>`<button type="button" class="lg120" data-t="${e.getTime()+1000}"><b>${tm120(e).slice(0,5)}</b> ${SIGNS[s]} <span class="note">ภพ${HOUSES[hs(s)-1]}</span></button>`).join('')}</div>
+   <p class="note">เวลาละเอียดระดับนาที (ตามวิธีคำนวณลัคนาของระบบ) · ลัคนาเปลี่ยนนวางค์ราว ๑๐–๒๐ นาที เปลี่ยนฤกษ์ราว ๔๐–๗๐ นาที เปลี่ยนราศีราว ๑½–๒½ ชั่วโมง (ตามอันโตนาทีของแต่ละราศี) · กด "ไปที่เวลานี้" เพื่อเลื่อนวันจรไปยังจุดนั้น</p>`;
+  showCellPop(html,ev); const P=document.getElementById('tpop'); if(P) P.onclick=e=>{ const b=e.target.closest('.lg120'); if(!b) return; setTransit(new Date(+b.dataset.t)); compute(); setTimeout(()=>showLagPop120(ev),50); }; }
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
   try{ rhythm77(); }catch(e){ console.error(e); document.getElementById('rh77Out').innerHTML='<p class="note">⚠ '+e.message+'</p>'; } }
