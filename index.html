@@ -146,6 +146,10 @@ header{flex-wrap:wrap}.brand{flex:0 0 100%;width:100%;font-size:14px;font-weight
 :root[data-theme="dark"] #tpop{background:rgba(13,26,38,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--edge75b);border-radius:18px;box-shadow:0 24px 60px -16px rgba(0,0,0,.85)}
 :root[data-theme="dark"] *{scrollbar-color:#244055 transparent;scrollbar-width:thin}
 ::selection{background:rgba(156,203,232,.35)}
+#tkFloat117{position:fixed;right:12px;bottom:84px;z-index:9000;width:min(360px,calc(100vw - 24px));max-height:70vh;overflow:auto;background:rgba(10,24,36,.96);border:1px solid rgba(255,209,102,.55);border-radius:14px;padding:8px;box-shadow:0 12px 36px rgba(0,0,0,.5);opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .2s,transform .2s;color:#e8f0f6}
+#tkFloat117.on{opacity:1;transform:none;pointer-events:auto}.tkfh117{display:flex;align-items:center;gap:8px;font-size:12.5px;margin-bottom:6px}.tkfh117 b{flex:1;font-weight:500}
+#tkFloat117 .tkfx117{width:26px!important;height:26px;padding:0!important;display:flex!important;align-items:center;justify-content:center;border-radius:6px;border:1px solid var(--line);background:transparent;color:inherit;cursor:pointer;flex:0 0 auto;margin:0!important;min-height:0!important}
+#tkFloat117 .tkpair117 .grid3{grid-auto-rows:64px}#tkFloat117 .tkpair117 .grid3>div .num{font-size:16px}.tkfi117{font-size:12px;margin-top:6px}.tkfi117 .tkh117{font-size:12px;margin:0}
 .tkpair117{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:start;margin-top:4px}.tkc117{min-width:0;border:1px solid var(--line);border-radius:12px;padding:8px 5px 5px;background:rgba(156,203,232,.035)}
 .tkt117{font-weight:500;margin:0 0 6px;text-align:center;font-size:12.5px;letter-spacing:.2px;height:18px;line-height:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .tkpair117 .grid3{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;grid-auto-rows:70px;gap:4px!important;margin:0 auto!important;max-width:270px!important;width:100%}.tkc117{display:flex;flex-direction:column;align-items:center}.tkc117>*{width:100%;max-width:270px}
@@ -157,7 +161,7 @@ header{flex-wrap:wrap}.brand{flex:0 0 100%;width:100%;font-size:14px;font-weight
 .tkpair117 .grid3>div[style*="border:none"]{background:transparent}.tkpair117 .grid3>div[style*="border:none"] .jr{background:none!important;white-space:normal;text-align:center;font-size:10px!important;line-height:1.35}
 .tkh117w{margin:8px 0}
 @media(max-width:380px){.tkpair117 .grid3{grid-auto-rows:64px}.tkpair117 .grid3>div .num{font-size:17px}}.tkg117 .tk .jr{font-size:11px;opacity:.75}
-.tkh117{margin:8px 0 4px;font-size:13px;line-height:1.6}
+.tkh117{margin:8px 0 4px;font-size:13px;line-height:1.6;display:flex;flex-direction:column;gap:4px}.tkr117{padding-left:8px;border-left:2px solid rgba(255,209,102,.5)}
 @keyframes bl117{0%,100%{box-shadow:0 0 0 0 rgba(255,209,102,0);outline-color:rgba(255,209,102,.25)}50%{box-shadow:0 0 0 4px rgba(255,209,102,.55),0 0 18px rgba(255,209,102,.6);outline-color:#ffd166}}
 .tk.blink117{animation:bl117 .9s ease-in-out infinite;outline:2px solid #ffd166;outline-offset:-2px;position:relative;z-index:1}
 .spi116{display:flex;gap:4px;align-items:flex-end}.spfc116{flex:1.15}.spb116{flex:.85}.spfc116 svg,.spb116 svg{width:100%;height:auto;display:block;border-radius:10px}
@@ -8063,7 +8067,8 @@ const CHG110=[
  {v:'114',d:'2026-11-02',k:'u',t:'เส้นทางบิน · เลือกภาษาไทย/อังกฤษ · แถบเลื่อนวันดาวจร',x:'แผนเดินทางแสดงเส้นทางบินโค้งตามผิวโลกพร้อมเครื่องบินและระยะทาง · สลับชื่อเมือง/ประเทศเป็นไทยหรืออังกฤษ · เลื่อนวันดาวจรด้วยแถบเลื่อนและปุ่มซ้าย-ขวา',c:['acg111']},
  {v:'115',d:'2026-11-02',k:'u',t:'แบ่งทวีป · กดธงดูเมือง · วัน-เวลาเด่นเทียบบ้านเกิด',x:'ประเทศที่เส้นพาดผ่านจัดกลุ่มตามทวีป กดธงเพื่อดูรายชื่อเมืองตามแนวเส้น · กรองอันดับเมืองตามทวีป · คำนวณวันและเวลาที่ดีที่สุดเมื่อปักเมือง พร้อมกราฟเทียบจังหวะบ้านเกิด',c:['acg111']},
  {v:'116',d:'2026-11-02',k:'u',t:'วาดภาพลักษณะคู่ครอง',x:'ภาพเต็มตัวของคู่ตามดาวที่เล็งลัคนา/กุมลัคนา/เจ้าเรือนปัตนิ · ภาพผสมเมื่อมีหลายดาว · ดูครบทั้ง ๑๐ แบบ',c:['love'],p:['sp105P']},
- {v:'117',d:'2026-11-02',k:'u',t:'ทักษาประจำวัน + กระพริบเมื่อลากดาวจร',x:'หน้าแรกมีตารางทักษาประจำวันตามวันจร · ลากดาวจรไปกระทบลูกนวางค์ใด เลขทักษาของเจ้าเรือนนวางค์นั้นจะกระพริบทั้งในทักษากำเนิดและทักษาประจำวัน'}];
+ {v:'117',d:'2026-11-02',k:'u',t:'ทักษาประจำวัน + กระพริบเมื่อลากดาวจร',x:'หน้าแรกมีตารางทักษาประจำวันตามวันจร · ลากดาวจรไปกระทบลูกนวางค์ใด เลขทักษาของเจ้าเรือนนวางค์นั้นจะกระพริบทั้งในทักษากำเนิดและทักษาประจำวัน'},
+ {v:'117.4',d:'2026-11-02',k:'u',t:'ทักษาลอยข้างจักรราศีขณะลากดาวจร',x:'แผงทักษาคู่ลอยขึ้นมุมจอขณะลากดาวจร เห็นเลขกระพริบได้ทันทีโดยไม่ต้องเลื่อนหา · บอกเจ้าเรือนภพ ดาวเดิมสถิตภพ และดาวจรอยู่ภพใด'}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
@@ -8459,9 +8464,19 @@ function tkDay117(bt,tt){ const box=document.getElementById('tkDay117'); if(!box
   const cell=p=>`<div class="tk${cls(role[p])}${hit&&hit.p===p?' blink117':''}" data-p="${p}"><div class="nm">${role[p]}</div><div class="num">${THN[p]}</div><div class="jr">${TH[PNUM2K[p]]}</div></div>`;
   const ctr=`<div style="border:none"><div class="jr" style="color:var(--muted);line-height:1.35">วัน${night?'พุธกลางคืน':DOW117[wd]}<br>${tt.getDate()} ${MONTHS_TH[tt.getMonth()].slice(0,3)} ${String(tt.getHours()).padStart(2,'0')}:${String(tt.getMinutes()).padStart(2,'0')}${shifted?'<br>(ก่อนอาทิตย์ขึ้น)':''}</div></div>`;
   const grid=[cell(1),cell(2),cell(3),cell(6),ctr,cell(4),cell(8),cell(5),cell(7)].join('');
-  const info=hit?`<div class="tkh117">${bdg98(['ศรี','มูละ','เดช','มนตรี'].includes(role[hit.p])?'g':role[hit.p]==='กาลกิณี'?'b':'m','กำลังกระทบ')} <b>${TH[hit.k]}จร</b> ${fmt(hit.lon)} อยู่ลูกนวางค์ที่ ${THN[hit.n]} ของราศี${SIGNS[hit.s]} (นวางค์ราศี${SIGNS[hit.ns]}) → เจ้าเรือน <b>${THN[hit.p]} ${TH[PNUM2K[hit.p]]}</b> · ทักษากำเนิดเป็น<b>${nrole[hit.p]}</b> · ทักษาประจำวันเป็น<b>${role[hit.p]}</b></div>`:'<div class="note">ลากดาวจรบนจักรราศี แล้วเลขทักษาของเจ้าเรือนลูกนวางค์ที่ดาวนั้นไปกระทบจะกระพริบในทั้งสองตาราง</div>';
+  const info=hit?(()=>{ const nat=WSTATE&&WSTATE.nat; if(!nat) return ''; const L=sgn(nat.pos.LA), hs=x=>((x-L+12)%12)+1, pk=PNUM2K[hit.p], own=[...Array(12).keys()].filter(z=>LORD[z]===hit.p), ns=sgn(nat.pos[pk]), tp=posH(horaOf(tt),pk), ts=sgn(tp), st=std(pk,nat.pos[pk]);
+    const g=['ศรี','มูละ','เดช','มนตรี'].includes(role[hit.p])?'g':role[hit.p]==='กาลกิณี'?'b':'m';
+    return `<div class="tkh117"><div>${bdg98(g,'กำลังกระทบ')} <b>${TH[hit.k]}จร</b> ${fmt(hit.lon)} · อยู่ราศี${SIGNS[hit.s]} = <b>ภพ${HOUSES[hs(hit.s)-1]}</b> ของดวงเดิม · ลูกนวางค์ที่ ${THN[hit.n]} (นวางค์ราศี${SIGNS[hit.ns]})</div>
+     <div class="tkr117"><b>${THN[hit.p]} ${TH[pk]}</b> เจ้าเรือนนวางค์นี้ · เป็นเจ้าเรือน${own.map(z=>`ภพ${HOUSES[hs(z)-1]} (${SIGNS[z]})`).join(' และ ')} · ดาวเดิมสถิตราศี${SIGNS[ns]} = <b>ภพ${HOUSES[hs(ns)-1]}</b>${st?` <span class="note">(${st})</span>`:''} · ${TH[pk]}จรตอนนี้อยู่ราศี${SIGNS[ts]} = ภพ${HOUSES[hs(ts)-1]}</div>
+     <div class="tkr117">ทักษากำเนิดเป็น<b>${nrole[hit.p]}</b> · ทักษาประจำวันเป็น<b>${role[hit.p]}</b> → เรื่องของภพ${own.map(z=>HOUSES[hs(z)-1]).join('/')}จะถูกกระตุ้น ${g==='g'?'ไปในทางดี':g==='b'?'ควรระวังเป็นพิเศษ':'ปานกลาง'}</div></div>`; })():'<div class="note">ลากดาวจรบนจักรราศี แล้วเลขทักษาของเจ้าเรือนลูกนวางค์ที่ดาวนั้นไปกระทบจะกระพริบในทั้งสองตาราง</div>';
   box.innerHTML=`<div class="tkt117">ทักษาประจำวัน</div><div class="grid3 tkg117">${grid}</div>`; const hb=document.getElementById('tkHit117'); if(hb) hb.innerHTML=info+'<div class="note">ทักษาประจำวันวางตามวันของวันจร (ก่อนพระอาทิตย์ขึ้นนับเป็นวันก่อนหน้า · พุธหลัง ๑๘:๐๐ น. ใช้ราหูเป็นบริวาร)</div>';
-  const tk=document.getElementById('taksa'); if(tk){ tk.querySelectorAll('.tk').forEach(c=>c.classList.toggle('blink117',!!hit&&+c.dataset.p===hit.p)); } }
+  const tk=document.getElementById('taksa'); if(tk){ tk.querySelectorAll('.tk').forEach(c=>c.classList.toggle('blink117',!!hit&&+c.dataset.p===hit.p)); }
+  // แผงลอย: ตารางทักษาคู่ + สรุป แสดงข้างจักรราศีระหว่างลากดาวจร (ตารางหลักอยู่ไกลจากจักรราศี)
+  try{ let F=document.getElementById('tkFloat117'); if(!hit){ if(F) F.classList.remove('on'); return; }
+    if(!F){ F=document.createElement('div'); F.id='tkFloat117'; document.body.appendChild(F); F.addEventListener('click',e=>{ if(e.target.closest('.tkfx117')){ F.classList.remove('on'); F._closed=Date.now(); } }); F.addEventListener('mouseenter',()=>{ F._hov=1; }); F.addEventListener('mouseleave',()=>{ F._hov=0; }); }
+    if(F._closed&&Date.now()-F._closed<1500) return;
+    F.innerHTML=`<div class="tkfh117"><b>ทักษา · ${TH[hit.k]}จรกระทบลูกนวางค์ของ ${THN[hit.p]} ${TH[PNUM2K[hit.p]]}</b><button type="button" class="tkfx117" aria-label="ปิด"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><div class="tkpair117"><div class="tkc117"><div class="tkt117">ทักษากำเนิด · จร</div><div class="grid3">${tk?tk.innerHTML:''}</div></div><div class="tkc117"><div class="tkt117">ทักษาประจำวัน</div><div class="grid3">${grid}</div></div></div><div class="tkfi117">${(document.getElementById('tkHit117')||{}).innerHTML||''}</div>`;
+    F.querySelectorAll('.tkfi117 > .note').forEach(n=>n.remove()); F.classList.add('on'); clearTimeout(F._t); const hide=()=>{ if(F._hov) F._t=setTimeout(hide,1500); else F.classList.remove('on'); }; F._t=setTimeout(hide,9000); }catch(e){ console.error(e); } }
 { const _r=renderTaksa; renderTaksa=function(bt,tt){ const r=_r.apply(this,arguments); try{ tkDay117(bt,tt); }catch(e){ console.error(e); } return r; }; }
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
