@@ -163,6 +163,7 @@ svg.lag140{display:inline-block;overflow:visible}
 .orb140 .ln140{display:flex;flex-wrap:wrap;align-items:center;gap:5px}
 .orb140 .tb140{overflow-x:auto;scrollbar-width:none;flex:none} .orb140 .hd140{flex:none} .orb140 .tb140 button{white-space:nowrap;flex:none}
 @media (max-width:640px){.orb140 .tb140{padding:8px 10px 0;gap:4px} .orb140 .tb140 button{font-size:12px!important;padding:6px 9px!important}}
+.orb140 .hs140{color:var(--muted);font-size:11px} .orb140 table.mx140 th small{display:block;font-size:9.5px;color:var(--muted);font-weight:400} .orb140 table.mx140 th.kd140{color:var(--gold2)} .orb140 table.mx140 th.kd140 small{color:var(--gold2)} .orb140 .rf140{padding:8px 10px;border:1px dashed var(--line);border-radius:10px}
 .orb140 .sg140w{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}
 .orb140 .sc140{border:1px solid var(--line);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:6px;border-left:4px solid var(--muted)}
 .orb140 .sc140.g{border-left-color:#3fa96b} .orb140 .sc140.b{border-left-color:#d9534f}
@@ -8323,7 +8324,8 @@ const CHG110=[
  {v:'140.2',d:'2026-11-02',k:'u',t:'อัตราดาวโคจร: เพิ่มแท็บดูรายมาตรฐาน',x:'แท็บใหม่ "ดูรายมาตรฐาน" ในป๊อปอัปอัตราดาวโคจร: (๑) การ์ดตามมาตรฐาน มหาอุจจ์ เกษตร ราชาโชค มหาจักร เทวีโชค จุลจักร นิจ ประ — บอกว่าดาวจรดวงใดอยู่มาตรฐานนั้น ณ วันจร พร้อมความหมาย และจะพ้นเมื่อไร ไปราศีใด มาตรฐานใหม่คืออะไร (๒) ไทม์ไลน์การเปลี่ยนมาตรฐานล่วงหน้า ๑ / ๓ / ๖ / ๑๒ เดือน กรองได้ เช่น เฉพาะเข้ามาตรฐานดี เข้านิจ/ประ หรือมาตรฐานใดมาตรฐานหนึ่ง เลือกรวมจันทร์ได้ (๓) ตารางมาตรฐานดาว × ๑๒ ราศี ไฮไลต์ราศีที่ดาวจรอยู่ตอนนี้',c:['natal'],p:[],go:'#ageBadge'},
  {v:'140.3',d:'2026-11-02',k:'u',t:'สัญลักษณ์ลัคนาแบบ perfect circle',x:'วาดสัญลักษณ์ลัคนาใหม่ด้วยวงกลมสมบูรณ์ทั้งหมด: ส่วนโค้งบนและท้องล่างรัศมีเท่ากัน (r60) ต่อด้วยเส้นตรงแนวดิ่งให้แนวสัมผัสต่อเนื่อง · บ่วงบนเป็นวงกลม r34 · หางเป็นส่วนโค้ง r80 ตัดผ่านเส้นตั้งขวา · หัวม้วนซ้อนวงกลม r30 กับ r12 ปิดด้วยจุดกลม · เส้นหนาเท่ากันตลอด สีแดง ไม่มีเงา ใช้ทุกผังดวงและในป๊อปอัปอัตราดาวโคจร',c:['natal'],p:[],go:'#ageBadge'},
  {v:'140.4',d:'2026-11-02',k:'u',t:'ปรับสัญลักษณ์ลัคนาให้สวยขึ้น — กลับไปใกล้ต้นฉบับแต่ยังเป็นวงกลมสมบูรณ์',x:'แก้จุดที่ทำให้แบบ v140.3 ดูแข็ง: เส้นกลางกลับเป็นแนวทแยงพาดสัมผัสร่วมระหว่างโค้งบนกับท้องล่าง (ไหลแบบลายมือ) · เส้นหนาขึ้น (30) ใกล้น้ำหนักต้นฉบับ · หัวม้วนเป็นวง r28 ปลายจุดกลมใหญ่ r21 เห็นช่องว่างชัด ไม่เป็นก้อน · ฐานหัวม้วนกับท้องล่างอยู่ระดับเดียวกัน · บ่วงบนกับหางวางให้หางพุ่งเฉียงขึ้นขวาแบบต้นฉบับ · ทุกช่วงเป็นส่วนโค้งของวงกลมจริงต่อกันแบบแนวสัมผัส',c:['natal'],p:[],go:'#ageBadge'},
- {v:'140.5',d:'2026-11-02',k:'f',t:'แสดงเลขเวอร์ชันบนเมนู และลดปัญหาเบราว์เซอร์จำหน้าเก่า',x:'ปุ่ม "อัปเดตระบบ" บนเมนูแสดงเลขเวอร์ชันล่าสุด (เช่น v140.5) ให้ตรวจได้ทันทีว่าเปิดหน้าล่าสุดอยู่หรือไม่ · เพิ่มคำสั่งไม่ให้เบราว์เซอร์เก็บแคชหน้าเว็บ',c:['natal'],p:[],go:'#ageBadge'}];
+ {v:'140.5',d:'2026-11-02',k:'f',t:'แสดงเลขเวอร์ชันบนเมนู และลดปัญหาเบราว์เซอร์จำหน้าเก่า',x:'ปุ่ม "อัปเดตระบบ" บนเมนูแสดงเลขเวอร์ชันล่าสุด (เช่น v140.5) ให้ตรวจได้ทันทีว่าเปิดหน้าล่าสุดอยู่หรือไม่ · เพิ่มคำสั่งไม่ให้เบราว์เซอร์เก็บแคชหน้าเว็บ',c:['natal'],p:[],go:'#ageBadge'},
+ {v:'140.6',d:'2026-11-02',k:'u',t:'ดูรายมาตรฐาน: เพิ่มองค์เกณฑ์ และ อุดมเกณฑ์',x:'แท็บดูรายมาตรฐานในอัตราดาวโคจรเพิ่ม องค์เกณฑ์ (ดาวจรอยู่ภพ ๑ ๔ ๗ ๑๐ จากลัคนา) และ อุดมเกณฑ์ (ดาวเกษตรอยู่ภพ ๑ ๔ ๗ ๑๐) · เลือกนับจากลัคนากำเนิดหรือลัคนาจรได้ · การ์ดบอกภพที่ดาวจรสถิต · ไทม์ไลน์บอกเมื่อดาวเข้าหรือพ้นองค์เกณฑ์/อุดมเกณฑ์ และกรองเฉพาะสองเกณฑ์นี้ได้ · ตารางดาว × ราศีบอกภพของแต่ละราศี ไฮไลต์ภพเกณฑ์สีทอง',c:['natal'],p:[],go:'#ageBadge'}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
@@ -9224,7 +9226,7 @@ function sv128init(){ const nb=document.querySelector('#rasi')&&document.querySe
     if(k==='all') sv128save(['rasi','nav','tri','taksa'].map(part128),'จักรราศี นวางค์ ตรียางค์ ทักษา'); else { const p=part128(k); sv128save([p],SVB128.find(x=>x[0]===k)[1]); } }); }
 setTimeout(sv128init,0);
 
-const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v139','v140','v140.1','v140.2','v140.3','v140.4','v1_20','v21','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
+const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v139','v140','v140.1','v140.2','v140.3','v140.4','v140.6','v1_20','v21','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
 // ───────── v129: หน้าอัปเดตระบบแบบบทความ — หัวข้อ · อัปเดตอะไร · รายละเอียด · ภาพหน้าจอ · ปุ่มลัดไปหน้านั้น · ปุ่มอัปเดตบนเมนูบน ─────────
 // ภาพหน้าจอสร้างอัตโนมัติด้วยสคริปต์ tools/shots129.js (ไล่ทุกรายการใน CHG110 ที่ยังไม่มีภาพ) แล้วบันทึกเป็น shots/<v>.webp — SHOTS129 คือรายชื่อไฟล์ที่มีอยู่
 // เป้าหมายของแต่ละรายการ: e.go (selector ที่อยู่นอกหมวด) → e.p[0] (แผงในหมวด) → หมวด e.c[0]
@@ -10278,36 +10280,40 @@ document.addEventListener('click',e=>{ const b=e.target.closest&&e.target.closes
 
 // ───────── v140.2: อัตราดาวโคจร — แท็บ "ดูรายมาตรฐาน": ดาวจรอยู่มาตรฐานใดตอนนี้ · มาตรฐานจะเปลี่ยนเมื่อไร · ตารางมาตรฐานดาว × ราศี
 ST140.rng=3; ST140.f='ALL'; ST140.smo=0;
-const SN140=['มหาอุจจ์','เกษตร','ราชาโชค','มหาจักร','เทวีโชค','จุลจักร','นิจ','ประ',''];
+const SN140=['อุดมเกณฑ์','องค์เกณฑ์','มหาอุจจ์','เกษตร','ราชาโชค','มหาจักร','เทวีโชค','จุลจักร','นิจ','ประ',''];
+ST140.ref='N';
+const KEN140={'อุดมเกณฑ์':'ดาวเกษตรอยู่เรือนเกณฑ์ (ภพ ๑ ๔ ๗ ๑๐ จากลัคนา) — มั่นคงและเด่นมาก ให้ผลเต็มกำลัง','องค์เกณฑ์':'ดาวอยู่เรือนเกณฑ์ (ภพ ๑ ๔ ๗ ๑๐ จากลัคนา) — มีกำลังแสดงผลเด่นชัด ถ้าทับลัคน์ (๑) หรือเล็งลัคน์ (๗) แรงที่สุด'};
+const lagS140=()=>{ try{ if(ST140.ref==='T') return sgn(lagAt140(getTransit())); return sgn(WSTATE.nat.pos.LA); }catch(_){ return 0; } };
+const stdK140=(k,x)=>{ const L=lagS140(), h=houseOf(x,L), tg=(std(k,x)||'').split(/\s+/).filter(Boolean); if([1,4,7,10].includes(h)){ tg.unshift('องค์เกณฑ์'); if(LORD[sgn(x)]===PNUM[k]) tg.unshift('อุดมเกณฑ์'); } return tg.join(' '); };
 const SNL140=s=>s||'ไม่มีมาตรฐานพิเศษ';
-const SNC140=s=>!s?'n':STD_GOOD.test(s)?'g':STD_BAD.test(s)?'b':'n';
-const SNI140={'มหาอุจจ์':'<path d="M12 3l3 6 6 .9-4.5 4.3 1 6.3L12 17.5 6.5 20.5l1-6.3L3 9.9 9 9z"/>','เกษตร':'<path d="M4 20h16M6 20V10l6-5 6 5v10M10 20v-5h4v5"/>','ราชาโชค':'<path d="M3 18h18l-2-10-4.5 4L12 5l-2.5 7L5 8z"/>','มหาจักร':'<circle cx="12" cy="12" r="8"/><path d="M12 4v16M4 12h16M6.3 6.3l11.4 11.4M17.7 6.3L6.3 17.7"/>',
+const SNC140=s=>!s?'n':/อุดมเกณฑ์|องค์เกณฑ์/.test(s)?'g':STD_GOOD.test(s)?'g':STD_BAD.test(s)?'b':'n';
+const SNI140={'อุดมเกณฑ์':'<path d="M12 3l2.6 5.6 6 .6-4.5 4 1.3 6L12 16.3 6.6 19.2l1.3-6-4.5-4 6-.6z"/><circle cx="12" cy="12" r="2" fill="currentColor"/>','องค์เกณฑ์':'<rect x="4" y="4" width="16" height="16" rx="2" transform="rotate(45 12 12)"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/>','มหาอุจจ์':'<path d="M12 3l3 6 6 .9-4.5 4.3 1 6.3L12 17.5 6.5 20.5l1-6.3L3 9.9 9 9z"/>','เกษตร':'<path d="M4 20h16M6 20V10l6-5 6 5v10M10 20v-5h4v5"/>','ราชาโชค':'<path d="M3 18h18l-2-10-4.5 4L12 5l-2.5 7L5 8z"/>','มหาจักร':'<circle cx="12" cy="12" r="8"/><path d="M12 4v16M4 12h16M6.3 6.3l11.4 11.4M17.7 6.3L6.3 17.7"/>',
  'เทวีโชค':'<path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/>','จุลจักร':'<circle cx="12" cy="12" r="5"/><path d="M12 7v10M7 12h10"/>','นิจ':'<path d="M12 4v14M6 12l6 6 6-6"/>','ประ':'<path d="M5 5l14 14M19 5L5 19"/>','':'<circle cx="12" cy="12" r="7"/>'};
 const K140S=['SU','MO','MA','ME','JU','VE','SA','RA','KE','UR'];
-const stds140=(k,x)=>{ const s=std(k,x); return s?s.split(/\s+/):['']; };
+const stds140=(k,x)=>{ const s=stdK140(k,x); return s?s.split(/\s+/):['']; };
 const stdTags140=(k,x)=>stds140(k,x).map(w=>`<span class="bd140 ${SNC140(w)}">${SNL140(w)}</span>`).join(' ');
 function stdChanges140(t0,t1,withMoon){ const L=[];
   for(const k of K140S){ if(k==='MO'&&!withMoon) continue; let t=t0;
     for(let i=0;i<(k==='MO'?200:60);i++){ const n=ing140(k,t,1); if(!n||n>t1) break; const a=posAt140(k,new Date(n.getTime()-3600000)), b=posAt140(k,new Date(n.getTime()+3600000));
-      const sa=std(k,a), sb=std(k,b); if(sa!==sb) L.push({k,t:n,fs:sgn(a),ts:sgn(b),sa,sb,mc:motion(k,spdAt140(k,n)).code}); t=new Date(n.getTime()+3600000); } }
+      const sa=stdK140(k,a), sb=stdK140(k,b); if(sa!==sb) L.push({k,t:n,fs:sgn(a),ts:sgn(b),sa,sb,mc:motion(k,spdAt140(k,n)).code}); t=new Date(n.getTime()+3600000); } }
   return L.sort((a,b)=>a.t-b.t); }
 function stdHTML140(){ const t=getTransit();
   // ก) ตอนนี้
   const now={}; SN140.forEach(s=>now[s]=[]);
   for(const k of K140S){ const x=posAt140(k,t); stds140(k,x).forEach(s=>{ (now[s]||(now[s]=[])).push({k,x}); }); }
   const cards=SN140.filter(s=>now[s]&&now[s].length).map(s=>`<div class="sc140 ${SNC140(s)}"><div class="sh140"><span class="si140">${i140(SNI140[s]||SNI140[''],16)}</span><b>${SNL140(s)}</b><small>${now[s].length} ดวง</small></div>
-     ${s&&STD_MEAN[s]?`<p>${STD_MEAN[s]}</p>`:''}
-     ${now[s].map(({k,x})=>{ const n=ing140(k,t,1), ns=n?sgn(posAt140(k,new Date(n.getTime()+3600000))):null; return `<div class="sr140">${ico140(k,22)}<div><span class="ln140"><b>${TH[k]}</b> <span class="sg140" style="--s:${SIGC140[sgn(x)]}">${SIGNS[sgn(x)]}</span></span><small>${n?`ถึง ${dtf140(n)} (อีก ${dur140(n-t)}) → ${SIGNS[ns]} · ${stds140(k,ns*30+1).map(w=>SNL140(w)).join(' ')}`:'—'}</small></div></div>`; }).join('')}</div>`).join('');
+     ${s&&(KEN140[s]||STD_MEAN[s])?`<p>${KEN140[s]||STD_MEAN[s]}</p>`:''}
+     ${now[s].map(({k,x})=>{ const n=ing140(k,t,1), ns=n?sgn(posAt140(k,new Date(n.getTime()+3600000))):null; return `<div class="sr140">${ico140(k,22)}<div><span class="ln140"><b>${TH[k]}</b> <span class="sg140" style="--s:${SIGC140[sgn(x)]}">${SIGNS[sgn(x)]}</span> <small class="hs140">ภพ${HOUSES[houseOf(x,lagS140())-1]}</small></span><small>${n?`ถึง ${dtf140(n)} (อีก ${dur140(n-t)}) → ${SIGNS[ns]} · ${stds140(k,ns*30+1).map(w=>SNL140(w)).join(' ')}`:'—'}</small></div></div>`; }).join('')}</div>`).join('');
   // ข) การเปลี่ยนมาตรฐานล่วงหน้า
   const t1=new Date(t.getTime()); t1.setMonth(t1.getMonth()+ST140.rng); const CH=stdChanges140(t,t1,ST140.smo);
   const hit=c=>ST140.f==='ALL'||(ST140.f==='g'?(STD_GOOD.test(c.sb)):ST140.f==='b'?(STD_BAD.test(c.sb)):(c.sa+' '+c.sb).split(/\s+/).includes(ST140.f));
-  const F=[['ALL','ทั้งหมด'],['g','เข้ามาตรฐานดี'],['b','เข้านิจ/ประ'],['มหาอุจจ์','มหาอุจจ์'],['เกษตร','เกษตร'],['ราชาโชค','ราชาโชค'],['มหาจักร','มหาจักร'],['เทวีโชค','เทวีโชค'],['จุลจักร','จุลจักร'],['นิจ','นิจ'],['ประ','ประ']];
+  const F=[['ALL','ทั้งหมด'],['g','เข้ามาตรฐานดี'],['b','เข้านิจ/ประ'],['อุดมเกณฑ์','อุดมเกณฑ์'],['องค์เกณฑ์','องค์เกณฑ์'],['มหาอุจจ์','มหาอุจจ์'],['เกษตร','เกษตร'],['ราชาโชค','ราชาโชค'],['มหาจักร','มหาจักร'],['เทวีโชค','เทวีโชค'],['จุลจักร','จุลจักร'],['นิจ','นิจ'],['ประ','ประ']];
   let last=''; const rows=CH.filter(hit).map(c=>{ const mk=`${c.t.getFullYear()}-${c.t.getMonth()}`, head=mk!==last?`<div class="tm140">${MONTHS_TH[c.t.getMonth()]} ${c.t.getFullYear()+543}</div>`:''; last=mk;
     return `${head}<div class="ti140" style="--c:${COL140[c.k]}"><i></i>${ico140(c.k,22)}<div><span class="ln140"><b>${TH[c.k]}</b> ${SIGNS[c.fs]} → <span class="sg140" style="--s:${SIGC140[c.ts]}">${SIGNS[c.ts]}</span>${c.mc==='พ.'?' <span class="bd140 b">ขณะพักร์</span>':''}</span>
      <span class="ln140">${(c.sa||'').split(/\s+/).map(w=>`<span class="bd140 ${SNC140(w)} old">${SNL140(w)}</span>`).join('')} ${i140(IC140.in,12)} ${(c.sb||'').split(/\s+/).map(w=>`<span class="bd140 ${SNC140(w)}">${SNL140(w)}</span>`).join('')}</span><small>${dtf140(c.t)}</small></div></div>`; }).join('');
   // ค) ตารางอ้างอิง ดาว × ราศี
-  const mat=`<div class="tw140"><table class="t140 mx140"><thead><tr><th>ดาว</th>${SIGNS.map(s=>`<th>${s}</th>`).join('')}</tr></thead><tbody>${K140S.map(k=>{ const cs=sgn(posAt140(k,t)); return `<tr><td>${ico140(k,20)}<b>${TH[k]}</b></td>${SIGNS.map((_,i)=>{ const w=stds140(k,i*30+1).filter(Boolean); return `<td class="${i===cs?'cur':''}">${w.map(x=>`<span class="bd140 ${SNC140(x)}">${x}</span>`).join('')}</td>`; }).join('')}</tr>`; }).join('')}</tbody></table></div>`;
-  return `<h4 class="gh140">${i140(IC140.clock,15)} ดาวจรอยู่มาตรฐานใด ณ วันจร</h4><div class="sg140w">${cards}</div>
+  const mat=`<div class="tw140"><table class="t140 mx140"><thead><tr><th>ดาว</th>${SIGNS.map((s,i)=>{ const h=((i-lagS140())%12+12)%12+1; return `<th class="${[1,4,7,10].includes(h)?'kd140':''}">${s}<small>ภพ ${h}</small></th>`; }).join('')}</tr></thead><tbody>${K140S.map(k=>{ const cs=sgn(posAt140(k,t)); return `<tr><td>${ico140(k,20)}<b>${TH[k]}</b></td>${SIGNS.map((_,i)=>{ const w=stds140(k,i*30+1).filter(Boolean); return `<td class="${i===cs?'cur':''}">${w.map(x=>`<span class="bd140 ${SNC140(x)}">${x}</span>`).join('')}</td>`; }).join('')}</tr>`; }).join('')}</tbody></table></div>`;
+  return `<div class="so140 rf140"><span>${i140('<circle cx="12" cy="12" r="8"/><path d="M12 4v16M4 12h16"/>',14)} นับเรือนเกณฑ์จาก</span><button type="button" data-rf140="N" class="${ST140.ref==='N'?'on':''}">ลัคนากำเนิด (${SIGNS[(()=>{try{return sgn(WSTATE.nat.pos.LA)}catch(_){return 0}})()]})</button><button type="button" data-rf140="T" class="${ST140.ref==='T'?'on':''}">ลัคนาจร (${SIGNS[sgn(lagAt140(t))]})</button><small class="note">องค์เกณฑ์ = ดาวอยู่ภพ ๑ ๔ ๗ ๑๐ · อุดมเกณฑ์ = ดาวเกษตรในภพ ๑ ๔ ๗ ๑๐</small></div><h4 class="gh140">${i140(IC140.clock,15)} ดาวจรอยู่มาตรฐานใด ณ วันจร</h4><div class="sg140w">${cards}</div>
    <div class="tlh140"><h4>${i140('<path d="M4 12h16M14 6l6 6-6 6"/>',16)} มาตรฐานจะเปลี่ยนเมื่อไร <small>${CH.filter(hit).length} ครั้ง</small></h4>
     <div class="so140">${[[1,'๑ เดือน'],[3,'๓ เดือน'],[6,'๖ เดือน'],[12,'๑๒ เดือน']].map(([v,l])=>`<button type="button" data-r140="${v}" class="${ST140.rng===v?'on':''}">${l}</button>`).join('')}<button type="button" data-q140 class="${ST140.smo?'on':''}">${i140(IC140.one,12)} รวมจันทร์</button></div></div>
    <div class="so140">${F.map(([v,l])=>`<button type="button" data-f140="${v}" class="${ST140.f===v?'on':''}">${l}</button>`).join('')}</div>
@@ -10319,8 +10325,8 @@ render140=function(){ const P=document.getElementById('orb140'); if(!P) return; 
    <div class="tb140"><button type="button" data-t140="m" class="${ST140.tab==='m'?'on':''}">${i140(IC140.cal,15)} ภาพรวมรายเดือน</button><button type="button" data-t140="o" class="${ST140.tab==='o'?'on':''}">${i140(IC140.one,15)} ดูรายดาว</button><button type="button" data-t140="s" class="${ST140.tab==='s'?'on':''}">${i140(SNI140['ราชาโชค'],15)} ดูรายมาตรฐาน</button></div>
    <div class="bdy140"><p class="note">กำลังคำนวณ…</p></div></div>`;
   setTimeout(()=>{ const B=P.querySelector('.bdy140'); try{ B.innerHTML=ST140.tab==='m'?monthHTML140():ST140.tab==='s'?stdHTML140():oneHTML140(); }catch(e){ console.error(e); B.innerHTML='<p class="note">คำนวณไม่สำเร็จ</p>'; } },10); };
-document.addEventListener('click',e=>{ const b=e.target.closest&&e.target.closest('#orb140 [data-r140],#orb140 [data-f140],#orb140 [data-q140]'); if(!b) return; e.stopPropagation();
-  if(b.dataset.r140) ST140.rng=+b.dataset.r140; else if(b.dataset.f140) ST140.f=b.dataset.f140; else ST140.smo=ST140.smo?0:1;
+document.addEventListener('click',e=>{ const b=e.target.closest&&e.target.closest('#orb140 [data-r140],#orb140 [data-f140],#orb140 [data-q140],#orb140 [data-rf140]'); if(!b) return; e.stopPropagation();
+  if(b.dataset.rf140) ST140.ref=b.dataset.rf140; else if(b.dataset.r140) ST140.rng=+b.dataset.r140; else if(b.dataset.f140) ST140.f=b.dataset.f140; else ST140.smo=ST140.smo?0:1;
   const B=document.querySelector('#orb140 .bdy140'); if(B){ const st=B.scrollTop; B.innerHTML='<p class="note">กำลังคำนวณ…</p>'; setTimeout(()=>{ B.innerHTML=stdHTML140(); B.scrollTop=st; },10); } },true);
 
 let KEY77='';
