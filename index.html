@@ -149,10 +149,10 @@ header{flex-wrap:wrap}.brand{flex:0 0 100%;width:100%;font-size:14px;font-weight
 .th112{opacity:.75;font-size:.92em}.cl112{fill:rgba(220,232,242,.5);font-family:Kanit,sans-serif;font-weight:500;pointer-events:none;letter-spacing:.4px}
 .ci112 circle{fill:#e9d3a4}.ci112 text{fill:#f1e4c8;font-family:Kanit,sans-serif;paint-order:stroke;stroke:rgba(10,24,36,.85);stroke-width:.25em;pointer-events:none}.ci112.tr circle{fill:#ffd166}.ci112.tr text{fill:#ffd166;font-weight:600}
 .tm112 circle{fill:#ffd166;stroke:#0a1824;stroke-width:1;vector-effect:non-scaling-stroke}.tmt112{fill:#0a1824;font-weight:700;font-family:Kanit,sans-serif}
-.sq112{position:relative;flex:1 1 220px;min-width:200px}.sq112 input{width:100%;font:inherit;font-size:13px;padding:5px 9px;border-radius:6px;border:1px solid var(--line);background:transparent;color:inherit;box-sizing:border-box}
+.sq112{position:relative;flex:1 1 220px;min-width:200px}.sq112 input{width:100%;font:inherit;font-size:13.5px;line-height:1.5;min-height:36px;padding:6px 10px!important;border-radius:6px;border:1px solid var(--line);background:transparent;color:inherit;box-sizing:border-box}
 #qr112{position:absolute;z-index:30;left:0;right:0;top:100%;margin-top:3px;max-height:280px;overflow:auto;background:#0f2232;border:1px solid var(--line);border-radius:8px;padding:4px;display:flex;flex-direction:column}
 #acg111Out .qi112{width:100%!important;text-align:left;background:none;border:none;color:inherit;padding:6px 8px!important;border-radius:6px;font:inherit;font-size:13px;cursor:pointer;opacity:1;justify-content:flex-start}#acg111Out .qi112:hover{background:rgba(156,203,232,.15)}
-.tf112{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:6px 0}.tf112 select,.tf112 input{font:inherit;font-size:13px;padding:5px 7px;border-radius:6px;border:1px solid var(--line);background:transparent;color:inherit;max-width:220px}.tf112 select option{color:#111}
+.tf112{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:6px 0}.tf112 select,.tf112 input{font:inherit;font-size:13.5px;line-height:1.5;padding:6px 10px!important;min-height:36px;border-radius:8px!important;border:1px solid var(--line);color:inherit;max-width:230px;box-sizing:border-box}.tf112 select option,.sp111 select option{color:var(--ink);background:var(--bg)}:root[data-theme="dark"] .tf112 select option,:root[data-theme="dark"] .sp111 select option{color:#e8f0f6;background:#0d1a26}
 .tf112 label{display:inline-flex;gap:4px;align-items:center;font-size:13px;white-space:nowrap}
 #acg111Out .tf112 button,#acg111Out .tpa112 button{width:auto!important;flex:0 0 auto!important;margin:0!important;border:1px solid var(--line);background:rgba(156,203,232,.12);color:inherit;border-radius:6px;padding:5px 11px;font:inherit;font-size:12.5px;cursor:pointer;min-height:0!important}
 .tp112{border:1px solid var(--line);border-radius:10px;padding:10px;margin:10px 0}.tph112{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}.tpa112{margin-left:auto;display:inline-flex;gap:6px}
@@ -160,8 +160,8 @@ header{flex-wrap:wrap}.brand{flex:0 0 100%;width:100%;font-size:14px;font-weight
 .tb111{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;margin:6px 0}.tb111 label{white-space:nowrap;width:auto!important;flex:0 0 auto}
 #acg111Out .tb111 button{width:auto!important;flex:0 0 auto!important;margin:0!important;display:inline-flex!important;align-items:center;gap:5px;border:1px solid var(--line);background:transparent;color:inherit;border-radius:6px;padding:4px 9px;font:inherit;font-size:12.5px;cursor:pointer;opacity:.55;min-height:0!important}
 #acg111Out .tb111 button.on{opacity:1;border-color:var(--c,#9ccbe8);background:rgba(156,203,232,.12)}
-.sp111{display:inline-flex;gap:6px;margin-left:auto}.sp111 select{max-width:170px;font:inherit;font-size:12.5px;padding:4px 6px;border-radius:6px;background:transparent;color:inherit;border:1px solid var(--line)}
-.sp111 select option{color:#111}
+.sp111{display:inline-flex;gap:6px;margin-left:auto}.sp111 select{max-width:190px;font:inherit;font-size:13.5px;line-height:1.5;padding:6px 10px!important;min-height:36px;border-radius:8px!important;color:inherit;border:1px solid var(--line);box-sizing:border-box}
+
 .mw111{position:relative;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:6px 0;touch-action:none}
 #map111{display:block;width:100%;height:auto;aspect-ratio:1800/700;cursor:grab;user-select:none}
 .sea111{fill:#0a1824}.land111 path{fill:#2b4a5f;stroke:#4f6f86;stroke-width:.35;vector-effect:non-scaling-stroke}
@@ -8024,7 +8024,8 @@ const CHG110=[
  {v:'110',d:'2026-11-02',k:'n',t:'หน้าอัปเดตระบบ',x:'ประวัติเวอร์ชันทั้งหมด · badge NEW/อัปเดต บนเมนูและแผง',c:['upd110']},
  {v:'111',d:'2026-11-02',k:'n',t:'โหราศาสตร์แผนที่ (Astro*Carto*Graphy)',x:'เส้น AC MC DC IC ของดาว ๑๑ ดวงบนแผนที่โลก · จุดตัด · ดาวจรเทียบแผนที่ · จัดอันดับเมืองตามเรื่อง · ลัคนาย้ายถิ่นแบบราศีไทย',c:['acg111']},
  {v:'111.1',d:'2026-11-02',k:'f',t:'แก้เมนูเลือกดวงคู่รักในเคมีคู่รัก',x:'เลือกดวงคู่ได้ทุกครั้ง ไม่ค้างที่ดวงแรก · แสดงสถานะกำลังคำนวณ',c:['desire','love']},
- {v:'112',d:'2026-11-02',k:'u',t:'โหราศาสตร์แผนที่: ชื่อประเทศ/เมือง + แผนการเดินทาง',x:'ชื่อประเทศและเมืองบนแผนที่เป็นภาษาไทย พร้อมคำอ่านชื่ออังกฤษ · ค้นหาเมือง · แผนการเดินทางหลายจุดหมาย พร้อมคำทำนายดาวจรรายเมือง วันเด่น วันควรระวัง',c:['acg111']}];
+ {v:'112',d:'2026-11-02',k:'u',t:'โหราศาสตร์แผนที่: ชื่อประเทศ/เมือง + แผนการเดินทาง',x:'ชื่อประเทศและเมืองบนแผนที่เป็นภาษาไทย พร้อมคำอ่านชื่ออังกฤษ · ค้นหาเมือง · แผนการเดินทางหลายจุดหมาย พร้อมคำทำนายดาวจรรายเมือง วันเด่น วันควรระวัง',c:['acg111']},
+ {v:'112.1',d:'2026-11-02',k:'f',t:'แก้ตัวอักษรในเมนูเลือก (dropdown) จม',x:'รายการในเมนูเลือกประเทศ/เมืองเป็นตัวอักษรสว่างบนพื้นเข้ม ขนาดและระยะบรรทัดพอดี',c:['acg111']}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
