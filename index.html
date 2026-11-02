@@ -147,6 +147,41 @@ header{flex-wrap:wrap}.brand{flex:0 0 100%;width:100%;font-size:14px;font-weight
 :root[data-theme="dark"] *{scrollbar-color:#244055 transparent;scrollbar-width:thin}
 ::selection{background:rgba(156,203,232,.35)}
 #eph138P .ic138{display:inline-block;vertical-align:-3px;flex:0 0 auto}
+#eph138P .gp139{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:-2px 0 10px;font-size:12px;color:var(--muted)}
+#eph138P .gp139 button{display:inline-flex!important;align-items:center;gap:5px;width:auto!important;margin:0!important;border:1px solid var(--line);border-radius:99px;background:transparent;color:var(--muted);padding:4px 10px;font:inherit;font-size:12px;cursor:pointer}
+#eph138P .gp139 button.on{border-color:var(--accent);color:var(--accent);background:rgba(44,74,156,.08)}
+#eph138P .t139 .v139{white-space:nowrap;text-align:left;padding:3px 6px}
+#eph138P .t139 .v139 span{margin-right:3px}
+#eph138P .t139 .v139 .d{font-weight:600}
+#eph138P .sg139{display:inline-block;min-width:34px;font-size:11px;color:var(--muted);opacity:.55}
+#eph138P .sg139.c{color:var(--gold);opacity:1;font-weight:700}
+#eph138P .sg139.x{min-width:0;padding:0 3px}
+#eph138P .t139 .dc b{font-size:10.5px;margin:0 3px 0 1px} #eph138P .t139 .dc b.n{color:var(--tr)} #eph138P .t139 .dc b.s{color:var(--ret)}
+#eph138P .pm139{font-size:10.5px;margin-left:3px} #eph138P .pm139.r{color:var(--ret)} #eph138P .pm139.s{color:#c98a1b}
+#eph138P .st139{font-variant-numeric:tabular-nums;color:var(--accent)}
+#eph138P .t139.no-ast .ga,#eph138P .t139.no-ura .gu{display:none}
+#eph138P .gd139{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;margin-top:14px}
+#eph138P .cd139{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--panel)}
+#eph138P .cd139 h4{margin:0 0 8px;font-size:13.5px;font-weight:600;display:flex;gap:6px;align-items:center;color:var(--gold)}
+#eph138P .kv139{display:flex;justify-content:space-between;gap:10px;font-size:12.5px;padding:3px 0;border-bottom:1px dashed rgba(127,127,127,.18)}
+#eph138P .kv139:last-child{border-bottom:0}
+#eph138P .kv139 span{color:var(--muted);display:inline-flex;align-items:center;gap:5px} #eph138P .kv139 b{font-weight:500;text-align:right}
+#eph138P .sk139 .tx139{display:flex;flex-direction:column;gap:1px;flex:1 1 180px} #eph138P .sk139 .tx139 small{color:var(--muted);font-size:11px}
+#eph138P .ei138.k-cj,#eph138P .ei138.k-dc,#eph138P .ei138.k-nd{background:rgba(111,140,255,.13);color:#6f8cff}
+#eph138P .ei138.k-st,#eph138P .ei138.k-mt{background:rgba(201,168,76,.16);color:var(--gold)}
+#eph138P .ei138.k-pp,#eph138P .ei138.k-el,#eph138P .ei138.k-op{background:rgba(31,122,58,.12);color:var(--tr)}
+#eph138P .ei138.k-pg{background:rgba(185,64,42,.1);color:var(--ret)}
+.rc139{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;margin-top:8px}
+.rc139 div{border:1px solid var(--line);border-radius:9px;padding:6px 2px;text-align:center;display:flex;flex-direction:column;gap:2px}
+.rc139 div b{font-size:16px} .rc139 div small{font-size:10.5px;color:var(--muted)}
+.rc139 div.k{border-color:rgba(217,83,79,.45)} .rc139 div.k small{color:#d9534f}
+.rc139 div.on{background:rgba(232,163,61,.14);border-color:#e8a33d}
+.lt139{display:inline-block;min-width:22px;text-align:center;padding:1px 5px;border-radius:6px;background:rgba(232,163,61,.15);margin-right:2px}
+.gl139{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin:10px 0}
+.gl139 div{border:1px solid var(--line);border-radius:10px;padding:8px 10px;display:flex;flex-direction:column;gap:2px}
+.gl139 b.g{color:#3fa96b} .gl139 b.b{color:#d9534f} .gl139 span{font-size:15px} .gl139 small{color:var(--muted);font-size:11.5px}
+@media (max-width:640px){.rc139{grid-template-columns:repeat(4,1fr)}}
+
 #eph138P .bar138{display:flex;flex-wrap:wrap;gap:8px 14px;justify-content:space-between;align-items:center;margin:4px 0 10px}
 #eph138P .nav138{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 #eph138P select{font:inherit;font-size:13px;padding:5px 8px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink)}
@@ -8206,7 +8241,8 @@ const CHG110=[
  {v:'136.1',d:'2026-11-02',k:'u',t:'เพิ่มญาติได้ ๒ ทาง: เลือกดวงที่บันทึก หรือลงวันเดือนปีเกิดใหม่',x:'ฟอร์มเพิ่มความสัมพันธ์/ญาติมีปุ่มสลับ ๒ แบบ · เลือกจากดวงที่บันทึก พร้อมช่องพิมพ์ค้นหาชื่อ (เรียง ก–ฮ) · ลงวันเดือนปีเกิดใหม่ ใส่ชื่อ เพศ วัน เดือน ปี (พ.ศ. หรือ ค.ศ.) เวลาเกิด และจังหวัด แล้วบันทึกเป็นดวงให้อัตโนมัติ จึงเห็นวันเกิด ปีนักษัตร และคะแนนเข้ากันในผังทันที · ไม่ทราบวันเกิดใส่แค่ชื่อก็ได้ · ใช้ได้ทั้งในผังครอบครัวและหน้ารายละเอียดดวง',c:[],p:[],go:'#sv76'},
  {v:'136.2',d:'2026-11-02',k:'u',t:'ปุ่มคลังดวง ความสัมพันธ์ ผังครอบครัว เป็นไอคอน SVG สี่เหลี่ยม',x:'หัวแถบดวงที่บันทึกไว้มีปุ่มสี่เหลี่ยมไอคอน SVG ๓ ปุ่ม: คลังดวง · ความสัมพันธ์ · ผังครอบครัว กดแล้วเปิดป๊อปอัปแท็บนั้นทันที · บนมือถือปุ่มขยายเต็มแถวใต้หัวข้อ',c:[],p:[],go:'#sv76'},
  {v:'137',d:'2026-11-02',k:'n',t:'ดาวศุกร์ ๓ มิติ — การวางแผน การเงิน ความรัก',x:'แผงใหม่ในหมวดคู่ครองและการเงิน: ความหมายศุกร์ทั้ง ๑๒ ราศีแยก ๓ ด้าน (การวางแผน/ความคิด · การเงิน · ความรัก) พร้อมไอคอน SVG และป้ายเด่น/กลาง/ระวัง · รวมความหมายราศีกับภพที่ศุกร์สถิตตามหลักบทความ · อาชีพที่ศุกร์ส่งเสริม (ศิลปะ การแสดง พิธีกร ที่ปรึกษา การเงิน) ตามภพและเรือนที่ศุกร์ครอง · ศุกร์จรตอนนี้ · ตารางศุกร์ทั้ง ๑๒ ราศี · ขั้นศุกร์ในวิเคราะห์ความรัก ๗ ขั้นมีสรุปศุกร์ตามราศีเพิ่ม',c:['love','money'],p:['ve137P']},
- {v:'138',d:'2026-11-02',k:'n',t:'ปฏิทินโหราศาสตร์รายเดือน (ปฏิทินดาราศาสตร์) — นิรายนะ ลาหิรี / สุริยยาตร์',x:'แผงใหม่ในหมวดปฏิทินดวง: ตารางสมผุสดาวทุกวันของเดือน ณ เวลาที่เลือก (ค่าเริ่ม 07:00 น.) ครบ อาทิตย์ จันทร์ อังคาร พุธ พฤหัส ศุกร์ เสาร์ ราหูกลาง/ราหูจริง เกตุไทย/เกตุจริง มฤตยู เนปจูน พลูโต · เครื่องหมาย พ.(พักร์) ม.(มนท์) ส.(เสริด) · เวลาจันทร์ยกราศี · ฤกษ์และดิถีพร้อมเวลาเต็ม · ข้างขึ้นแรม เดือนจันทรคติ · หัวตารางบอกปีนักษัตร จ.ศ. ม.ศ. ร.ศ. และค่าอายนางศะลาหิรี · สรุปเหตุการณ์ประจำเดือน (ข้างจันทร์ ๔ ช่วง ดาวย้ายราศี ดาวหยุดเปลี่ยนทิศ) · สลับระบบลาหิรีกับสุริยยาตร์ · แตะแถวเพื่อตั้งเป็นวันจร · ดาวน์โหลด CSV',c:['cal'],p:['eph138P'],go:'#eph138P'}];
+ {v:'138',d:'2026-11-02',k:'n',t:'ปฏิทินโหราศาสตร์รายเดือน (ปฏิทินดาราศาสตร์) — นิรายนะ ลาหิรี / สุริยยาตร์',x:'แผงใหม่ในหมวดปฏิทินดวง: ตารางสมผุสดาวทุกวันของเดือน ณ เวลาที่เลือก (ค่าเริ่ม 07:00 น.) ครบ อาทิตย์ จันทร์ อังคาร พุธ พฤหัส ศุกร์ เสาร์ ราหูกลาง/ราหูจริง เกตุไทย/เกตุจริง มฤตยู เนปจูน พลูโต · เครื่องหมาย พ.(พักร์) ม.(มนท์) ส.(เสริด) · เวลาจันทร์ยกราศี · ฤกษ์และดิถีพร้อมเวลาเต็ม · ข้างขึ้นแรม เดือนจันทรคติ · หัวตารางบอกปีนักษัตร จ.ศ. ม.ศ. ร.ศ. และค่าอายนางศะลาหิรี · สรุปเหตุการณ์ประจำเดือน (ข้างจันทร์ ๔ ช่วง ดาวย้ายราศี ดาวหยุดเปลี่ยนทิศ) · สลับระบบลาหิรีกับสุริยยาตร์ · แตะแถวเพื่อตั้งเป็นวันจร · ดาวน์โหลด CSV',c:['cal'],p:['eph138P'],go:'#eph138P'},
+ {v:'139',d:'2026-11-02',k:'n',t:'ปฏิทินดาราศาสตร์ สายนะวิธี (Tropical) + ปรากฏการณ์ท้องฟ้า · นามศาสตร์เพิ่มเลขรหัสชีวิตและอักษรเทพเจ้า ผีหลวง หลาวเหล็ก',x:'ปฏิทินรายเดือนเพิ่มโหมดที่ ๓ "สายนะ": Sid.Time · อาทิตย์และเดคลิเนชัน · จันทร์ ละติจูด เดคลิเนชัน · ราหูเฉลี่ย · ดาวเคราะห์ ๘ · ดาวเคราะห์น้อย อีริส ไครอน จูโน เวสต้า พาลลาส เซเรส · แบล็คมูน · ดาวยูเรเนียน ๘ (เปิดปิดกลุ่มคอลัมน์ได้) · เครื่องหมาย R/S · การ์ดค่าดาราศาสตร์ (Julian Date, Delta T, Obliquity, Nutation, อายนางศะลาหิรีและฟาแกน) · ข้างจันทร์และอุปราคา · ดาวยก · จันทร์ยก · ปรากฏการณ์ท้องฟ้าคำนวณเอง (จันทร์ใกล้ดาวเคราะห์และดาวฤกษ์ ดาวเคราะห์ใกล้กัน จุดราหูเกตุ จันทร์ปัดเหนือใต้ ใกล้ไกลโลก พุธศุกร์ทิศห่างสุด ร่วมทิศ ดาวเพ็ญ ฝนดาวตก) · ดาวน์โหลด CSV · หมวดนามศาสตร์เพิ่มหัวข้อ ๘ เลขรหัสชีวิต และ ๙ อักษรเทพเจ้า-เทวดา อักษรผีหลวง อักษรหลาวเหล็ก รวมทั้งในแนวทางตั้งชื่อตามวันเกิด',c:['cal','name94'],p:['eph138P','nm94P','nm94GP'],go:'#eph138P'}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
@@ -9107,7 +9143,7 @@ function sv128init(){ const nb=document.querySelector('#rasi')&&document.querySe
     if(k==='all') sv128save(['rasi','nav','tri','taksa'].map(part128),'จักรราศี นวางค์ ตรียางค์ ทักษา'); else { const p=part128(k); sv128save([p],SVB128.find(x=>x[0]===k)[1]); } }); }
 setTimeout(sv128init,0);
 
-const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v1_20','v21','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
+const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v139','v1_20','v21','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
 // ───────── v129: หน้าอัปเดตระบบแบบบทความ — หัวข้อ · อัปเดตอะไร · รายละเอียด · ภาพหน้าจอ · ปุ่มลัดไปหน้านั้น · ปุ่มอัปเดตบนเมนูบน ─────────
 // ภาพหน้าจอสร้างอัตโนมัติด้วยสคริปต์ tools/shots129.js (ไล่ทุกรายการใน CHG110 ที่ยังไม่มีภาพ) แล้วบันทึกเป็น shots/<v>.webp — SHOTS129 คือรายชื่อไฟล์ที่มีอยู่
 // เป้าหมายของแต่ละรายการ: e.go (selector ที่อยู่นอกหมวด) → e.p[0] (แผงในหมวด) → หมวด e.c[0]
@@ -9812,7 +9848,7 @@ function run138(force){ const el=document.getElementById('eph138Out'); if(!el) r
 document.addEventListener('click',e=>{ const b=e.target.closest&&e.target.closest('[data-e138]'); if(b){ e.preventDefault(); const a=b.dataset.e138;
     if(a==='prev'||a==='next'){ let m=ST138.m+(a==='next'?1:-1), y=ST138.y; if(m<0){m=11;y--;} if(m>11){m=0;y++;} ST138.m=m; ST138.y=y; }
     else if(a==='today'){ const n=new Date(); ST138.y=n.getFullYear(); ST138.m=n.getMonth(); }
-    else if(a==='mL'||a==='mT') ST138.mode=a.slice(1);
+    else if(a==='mL'||a==='mT'||a==='mS') ST138.mode=a.slice(1);
     else if(a==='csv'){ dl138(); return; }
     run138(true); return; }
   const tr=e.target.closest&&e.target.closest('tr[data-day138]'); if(tr){ const d=+tr.dataset.day138; const t=new Date(ST138.y,ST138.m,d,ST138.hh===24?23:ST138.hh,ST138.hh===24?59:ST138.mi);
@@ -9821,6 +9857,190 @@ document.addEventListener('click',e=>{ const b=e.target.closest&&e.target.closes
 document.addEventListener('change',e=>{ const id=e.target&&e.target.id; if(id==='m138'){ ST138.m=+e.target.value; run138(true); } else if(id==='y138'){ ST138.y=+e.target.value; run138(true); }
   else if(id==='t138'){ const [a,b]=e.target.value.split(':').map(Number); ST138.hh=a; ST138.mi=b; run138(true); } });
 { const _s=cat29Show; cat29Show=function(){ const r=_s.apply(this,arguments); setTimeout(()=>run138(),0); return r; }; }
+
+// ───────── v139: ปฏิทินดาราศาสตร์ สายนะวิธี (Tropical) + ปรากฏการณ์ท้องฟ้า · และนามศาสตร์เพิ่ม: เลขรหัสชีวิต · อักษรเทพเจ้า ผีหลวง หลาวเหล็ก
+// ปฏิทินสายนะ: Sid.Time · อาทิตย์ (+Dec) · จันทร์ (+Lat +Dec) · ราหูเฉลี่ย · ดาวเคราะห์ ๘ · อีริส ไครอน จูโน เวสต้า พาลลาส เซเรส · แบล็คมูน · ยูเรเนียน ๘ (คิวปิโด…โพไซดอน)
+// ดาวเคราะห์น้อยใช้วงโคจรเคปเลอร์ (J2000) ปรับเทียบจุดเริ่มที่ JD 2461345.5 (1 พ.ย. 2569 07:00 น.) · ยูเรเนียนใช้วงโคจรวงกลมตามคาบ a^1.5 ปี
+const ST139={g:{ast:1,ura:1}};
+const EP139=2461345.5, R139=Math.PI/180;
+const AST139={ER:['อีริส',67.9,0.437,44.04,35.95,151.64,210.2223],CH:['ไครอน',13.69,0.379,6.93,209.30,339.25,219.5655],JN:['จูโน',2.6689,0.2562,12.99,169.84,247.92,295.4962],
+ VS:['เวสต้า',2.3617,0.0886,7.14,103.71,151.66,120.5191],PA:['พาลลาส',2.7704,0.2305,34.93,172.89,310.87,285.3328],CE:['เซเรส',2.7675,0.0785,10.588,80.25,73.30,305.4037]};
+const URA139={CU:['คิวปิโด',40.99837,280.1294],HA:['ฮาเดส',50.66744,105.2862],ZE:['เซอุส',59.21436,205.6262],KR:['โครโนส',64.81690,106.4505],AP:['อาพอลลอน',70.29949,216.9088],AD:['แอดเมตอส',73.62765,65.0089],VU:['วัลคานุส',77.25568,124.5368],PO:['โพไซดอน',83.66907,226.5679]};
+const kep139=(a,e,i,O,w,M)=>{ let E=M*R139; for(let k=0;k<30;k++) E-=(E-e*Math.sin(E)-M*R139)/(1-e*Math.cos(E)); const xp=a*(Math.cos(E)-e), yp=a*Math.sqrt(1-e*e)*Math.sin(E), I=i*R139, Om=O*R139, W=w*R139, cw=Math.cos(W), sw=Math.sin(W), cO=Math.cos(Om), sO=Math.sin(Om), cI=Math.cos(I), sI=Math.sin(I);
+  return [(cw*cO-sw*sO*cI)*xp+(-sw*cO-cw*sO*cI)*yp,(cw*sO+sw*cO*cI)*xp+(-sw*sO+cw*cO*cI)*yp,(sw*sI)*xp+(cw*sI)*yp]; };
+function moonDist139(T){ const c=Math.cos, D=(297.8501921+445267.1114034*T)*R139, M=(357.5291092+35999.0502909*T)*R139, Mp=(134.9633964+477198.8675055*T)*R139, F=(93.2720950+483202.0175233*T)*R139, E=1-0.002516*T;
+  const r=-20905355*c(Mp)-3699111*c(2*D-Mp)-2955968*c(2*D)-569925*c(2*Mp)+48888*E*c(M)-3149*c(2*F)+246158*c(2*D-2*Mp)-152138*E*c(2*D-M-Mp)-170733*c(2*D+Mp)-204586*E*c(2*D-M)-129620*E*c(M-Mp)+108743*c(D)+104755*E*c(M+Mp)+10321*c(2*D-2*F)+79661*c(Mp-2*F)-34782*c(4*D-Mp)-23210*c(3*Mp)-21636*c(4*D-2*Mp)+24208*E*c(2*D+M-Mp)+30824*E*c(2*D+M)-8379*c(D-Mp)-16675*E*c(D+M)-12831*E*c(2*D-M+Mp)-10445*c(2*D+2*Mp)-11650*c(4*D)+14403*c(2*D-3*Mp)-7003*E*c(M-2*Mp)+10056*E*c(2*D-M-2*Mp)+6322*c(D+Mp)-9884*E*E*c(2*D-2*M);
+  return 385000.56+r/1000; }
+function nut139(T){ const O=(125.04452-1934.136261*T)*R139, L=(280.4665+36000.7698*T)*R139, Lp=(218.3165+481267.8813*T)*R139;
+  return {dp:(-17.20*Math.sin(O)-1.32*Math.sin(2*L)-0.23*Math.sin(2*Lp)+0.21*Math.sin(2*O))/3600, de:(9.20*Math.cos(O)+0.57*Math.cos(2*L)+0.10*Math.cos(2*Lp)-0.09*Math.cos(2*O))/3600}; }
+const dT139=y=>{ if(y>=2015&&y<=2035) return 69.2; if(y>=2005&&y<2015) return 64.7+0.45*(y-2005); if(y>=1986&&y<2005){ const t=y-2000; return 63.86+0.3345*t-0.060374*t*t+0.0017275*t**3; } const u=(y-1820)/100; return -20+32*u*u; };
+const STAR139=[['ดาวหัวใจสิงห์','Regulus',152.093,11.967],['ดาวรวงข้าว','Spica',201.298,-11.161],['ดาวหัวใจแมงป่อง','Antares',247.352,-26.432],['ดาวตาวัว','Aldebaran',68.980,16.509],['กระจุกดาวลูกไก่','Pleiades',56.871,24.105],['กระจุกดาวรังผึ้ง','Beehive',130.1,19.67]].map(([th,en,ra,de])=>{
+  const e=23.4392911*R139, a=ra*R139, d=de*R139; const lon=Math.atan2(Math.sin(a)*Math.cos(e)+Math.tan(d)*Math.sin(e),Math.cos(a)), lat=Math.asin(Math.sin(d)*Math.cos(e)-Math.cos(d)*Math.sin(e)*Math.sin(a));
+  return {th,en,lon:nm138(lon/R139),lat:lat/R139}; });
+const MET139=[['ควอดแดรนติดส์','Quadrantids',0,4,110],['ไลริดส์','Lyrids',3,22,18],['อีตาอควอริดส์','Eta Aquariids',4,6,50],['เดลตาอควอริดส์ใต้','S. Delta Aquariids',6,30,25],['เพอร์เซอิดส์','Perseids',7,12,100],['ดราโคนิดส์','Draconids',9,8,10],['โอไรออนิดส์','Orionids',9,21,20],['ทอริดส์ใต้','South Taurids',10,5,10],['ทอริดส์เหนือ','North Taurids',10,12,15],['สิงโต (ลีโอนิดส์)','Leonids',10,17,15],['เจมินิดส์','Geminids',11,14,150],['เออร์ซิดส์','Ursids',11,22,10]];
+const BOD139=['SU','MO','RA','ME','VE','MA','JU','SA','UR','NE','PL'];
+const NM139={SU:'อาทิตย์',MO:'จันทร์',RA:'ราหู (เฉลี่ย)',ME:'พุธ',VE:'ศุกร์',MA:'อังคาร',JU:'พฤหัสบดี',SA:'เสาร์',UR:'ยูเรนัส',NE:'เนปจูน',PL:'พลูโต',LI:'แบล็คมูน'};
+Object.keys(AST139).forEach(k=>NM139[k]=AST139[k][0]); Object.keys(URA139).forEach(k=>NM139[k]=URA139[k][0]);
+const EN139={SU:'Sun',MO:'Moon',ME:'Mercury',VE:'Venus',MA:'Mars',JU:'Jupiter',SA:'Saturn',UR:'Uranus',NE:'Neptune',PL:'Pluto'};
+function bod139(ut){ const e=eph111(ut), JD=ut/D138+2440587.5, T=(JD-2451545)/36525, pre=1.396971*T+0.0003086*T*T, Ea=hel111('EM',T), d=JD-EP139, o={e};
+  for(const k of BOD139) o[k]=k==='RA'?e.NN.lon:e[k].lon;
+  for(const k in AST139){ const A=AST139[k], v=kep139(A[1],A[2],A[3],A[4],A[5],A[6]+0.9856076686/Math.pow(A[1],1.5)*d); o[k]=nm138(Math.atan2(v[1]-Ea[1],v[0]-Ea[0])/R139+pre); }
+  for(const k in URA139){ const U=URA139[k], L=(U[2]+0.9856076686/Math.pow(U[1],1.5)*d)*R139; o[k]=nm138(Math.atan2(U[1]*Math.sin(L)-Ea[1],U[1]*Math.cos(L)-Ea[0])/R139+pre); }
+  o.LI=nm138(83.3532465+4069.0137287*T-0.01032*T*T+180+0.1155); // ปรับเทียบ ~7′ ให้ตรงค่ามาตรฐานแบล็คมูน (mean apogee)
+  return o; }
+// ── ค่าแปรง่าย
+const sgn139=x=>Math.floor(nm138(x)/30);
+const dms139=(x,prev,pm)=>{ const v=nm138(x), s=Math.floor(v/30), r=v%30; let dg=Math.floor(r), mn=Math.floor((r-dg)*60), sc=Math.round(((r-dg)*60-mn)*60); if(sc===60){sc=0;mn++;} if(mn===60){mn=0;dg++;}
+  const ch=prev==null||sgn139(prev)!==s; return `<td class="v139"><span class="d">${String(dg).padStart(2,'0')}°</span><span class="${ch?'sg139 c':'sg139'}">${SIGNS[s]}</span><span>${String(mn).padStart(2,'0')}′${String(sc).padStart(2,'0')}″</span>${pm?`<b class="pm139 ${pm==='R'?'r':'s'}">${pm}</b>`:''}</td>`; };
+const dec139=x=>{ const a=Math.abs(x), d=Math.floor(a), m=Math.floor((a-d)*60); return `<td class="v139 dc"><span class="d">${String(d).padStart(2,'0')}°</span><b class="${x<0?'s':'n'}">${x<0?'S':'N'}</b><span>${String(m).padStart(2,'0')}′</span></td>`; };
+const hms139=h=>{ h=((h%24)+24)%24; const H=Math.floor(h), M=Math.floor((h-H)*60), S=Math.floor(((h-H)*60-M)*60); return `${String(H).padStart(2,'0')}:${String(M).padStart(2,'0')}:${String(S).padStart(2,'0')}`; };
+const dt139=W=>`${dms138(W)} ${String((new Date(W).getUTCFullYear()+543)%100).padStart(2,'0')} · ${hm138(W)} น.`;
+// ค้นหาเหตุการณ์จากฟังก์ชันต่อเนื่อง: crossing ของมุม (wrap ±180) หรือ extremum
+function zero139(f,a,b,step){ const out=[]; let t0=a, v0=f(a); for(let t=a+step;t<=b+1e-6;t+=step){ const v=f(t); if(v0!=null&&v!=null&&((v0<0&&v>=0)||(v0>0&&v<=0))&&Math.abs(v-v0)<90){ let lo=t0,hi=t,fl=v0; for(let i=0;i<30;i++){ const md=(lo+hi)/2, fm=f(md); if((fl<0&&fm<0)||(fl>0&&fm>0)){lo=md;fl=fm;} else hi=md; } out.push((lo+hi)/2); } t0=t; v0=v; } return out; }
+function ext139(f,a,b,step){ const out=[]; let p0=f(a-step), p1=f(a); for(let t=a;t<=b;t+=step){ const p2=f(t+step); if((p1>p0&&p1>=p2)||(p1<p0&&p1<=p2)){ let lo=t-step,hi=t+step; for(let i=0;i<40;i++){ const m1=lo+(hi-lo)/3, m2=hi-(hi-lo)/3; const g1=f(m1), g2=f(m2); if(p1>p0?g1<g2:g1>g2) lo=m1; else hi=m2; } const tt=(lo+hi)/2; out.push({t:tt,max:p1>p0,v:f(tt)}); } p0=p1; p1=p2; } return out; }
+const wr139=x=>((x+540)%360)-180;
+
+function sky139(y,m){ const key=y+'|'+m; if(sky139.c&&sky139.c.key===key) return sky139.c;
+  const A=Date.UTC(y,m,1)-7*H138, B=Date.UTC(y,m+1,1)-7*H138, ev=[], H=H138, C={};
+  const g=ut=>{ const k=Math.round(ut/6e4); if(C[k]) return C[k]; const e=eph111(ut); return (C[k]=e); }; // แคชรายนาที
+  const L=(ut,k)=>g(ut)[k].lon, B_=(ut,k)=>g(ut)[k].lat;
+  const pre=ut=>{ const T=(ut/D138+2440587.5-2451545)/36525; return 1.396971*T+0.0003086*T*T; };
+  const sep=(ut,a,b)=>B_(ut,a)-B_(ut,b);
+  const put=(ut,th,en,ty)=>{ if(ut>=A&&ut<B) ev.push({W:ut+7*H,th,en,ty}); };
+  const dir=v=>v>=0?'เหนือ':'ใต้', RA=(ut,k)=>g(ut)[k].ra, DE=(ut,k)=>g(ut)[k].dec;
+  const sRD=(S,ut)=>{ const T=(ut/D138+2440587.5-2451545)/36525, e=(23.439291-0.0130042*T)*R139, l=(S.lon+pre(ut))*R139, b=S.lat*R139; return {ra:nm138(Math.atan2(Math.sin(l)*Math.cos(e)-Math.tan(b)*Math.sin(e),Math.cos(l))/R139),dec:Math.asin(Math.sin(b)*Math.cos(e)+Math.cos(b)*Math.sin(e)*Math.sin(l))/R139}; };
+  // ดวงจันทร์ใกล้ดาวเคราะห์
+  for(const k of ['ME','VE','MA','JU','SA']) for(const t of zero139(ut=>wr139(RA(ut,'MO')-RA(ut,k)),A-H,B+H,3*H)){ const s=DE(t,k)-DE(t,'MO'); if(Math.abs(s)<4) put(t,`ดวงจันทร์ ใกล้ ดาว${NM139[k]} — ดาว${NM139[k]}อยู่ทาง${dir(s)}ของดวงจันทร์ ${Math.abs(s).toFixed(2)}°`,`Moon-${EN139[k]} ${Math.abs(s).toFixed(1)}°${s>=0?'N':'S'}`,'cj'); }
+  // ดวงจันทร์ใกล้ดาวฤกษ์/กระจุกดาว
+  for(const S of STAR139){ for(const t of zero139(ut=>wr139(RA(ut,'MO')-sRD(S,ut).ra),A-H,B+H,3*H)){ const s=sRD(S,t).dec-DE(t,'MO'); if(Math.abs(s)<4) put(t,`ดวงจันทร์ ใกล้ ${S.th} — อยู่ทาง${dir(s)}ของดวงจันทร์ ${Math.abs(s).toFixed(2)}°`,`Moon-${S.en} ${Math.abs(s).toFixed(1)}°${s>=0?'N':'S'}`,'st'); } }
+  // ดาวเคราะห์ใกล้กัน / ใกล้ดาวฤกษ์
+  const PP=['ME','VE','MA','JU','SA','UR','NE'];
+  const asep=(r1,d1,r2,d2)=>{ const c=Math.sin(d1*R139)*Math.sin(d2*R139)+Math.cos(d1*R139)*Math.cos(d2*R139)*Math.cos((r1-r2)*R139); return Math.acos(Math.max(-1,Math.min(1,c)))/R139; };
+  for(let i=0;i<PP.length;i++) for(let j=i+1;j<PP.length;j++){ const a=PP[i], b=PP[j]; for(const t of ext139(ut=>asep(RA(ut,a),DE(ut,a),RA(ut,b),DE(ut,b)),A,B,12*H).filter(x=>!x.max&&x.v<3).map(x=>x.t)){ const s=DE(t,a)-DE(t,b); if(Math.abs(s)<3) put(t,`ดาว${NM139[a]} ใกล้ ดาว${NM139[b]} — ดาว${NM139[a]}อยู่ทาง${dir(s)} ${Math.abs(s).toFixed(2)}°`,`${EN139[a]}-${EN139[b]} ${Math.abs(s).toFixed(1)}°${s>=0?'N':'S'}`,'pp'); } }
+  for(const k of ['ME','VE','MA','JU','SA']) for(const S of STAR139){ if(S.en==='Pleiades'||S.en==='Beehive') continue; for(const t of ext139(ut=>{ const q=sRD(S,ut); return asep(RA(ut,k),DE(ut,k),q.ra,q.dec); },A,B,12*H).filter(x=>!x.max&&x.v<3).map(x=>x.t)){ const s=DE(t,k)-sRD(S,t).dec; if(Math.abs(s)<3) put(t,`ดาว${NM139[k]} ใกล้ ${S.th} — ดาว${NM139[k]}อยู่ทาง${dir(s)} ${Math.abs(s).toFixed(2)}°`,`${EN139[k]}-${S.en} ${Math.abs(s).toFixed(1)}°${s>=0?'N':'S'}`,'st'); } }
+  // จุดราหู/เกตุ ของดวงจันทร์ (ละติจูดเป็นศูนย์)
+  for(const t of zero139(ut=>B_(ut,'MO'),A-H,B+H,3*H)){ const up=B_(t+H,'MO')>B_(t-H,'MO'); put(t,`ดวงจันทร์ ผ่าน ${up?'จุดราหู':'จุดเกตุ'}`,`Moon ${up?'Ascending':'Descending'} Node`,'nd'); }
+  // ดวงจันทร์ปัดเหนือ/ใต้สุด
+  for(const x of ext139(ut=>g(ut).MO.dec,A,B,3*H)) put(x.t,`ดวงจันทร์ ปัด${x.max?'เหนือ':'ใต้'} ${Math.abs(x.v).toFixed(2)}° ${x.max?'เหนือ':'ใต้'}`,`Moon ${x.max?'North':'South'} Dec.`,'dc');
+  // ใกล้/ไกลโลก
+  const md=ut=>moonDist139((ut/D138+2440587.5-2451545)/36525);
+  for(const x of ext139(md,A,B,3*H)) put(x.t,`ดวงจันทร์ ${x.max?'ไกล':'ใกล้'} โลก ${(Math.round(x.v/100)*100).toLocaleString('en-US')} กิโลเมตร`,`Moon ${x.max?'Apogee':'Perigee'}`,'pg');
+  // พุธ/ศุกร์ ห่างอาทิตย์สุด และร่วมทิศ
+  const elo=(ut,k)=>{ const e=g(ut), a=e[k], s=e.SU; const c=Math.cos(a.lat*R139)*Math.cos((a.lon-s.lon)*R139); return Math.acos(Math.max(-1,Math.min(1,c)))/R139; };
+  for(const k of ['ME','VE']){ for(const x of ext139(ut=>elo(ut,k),A,B,12*H)){ if(!x.max) continue; const east=wr139(L(x.t,k)-L(x.t,'SU'))>0; put(x.t,`ดาว${NM139[k]} ทิศห่างสุด ${x.v.toFixed(2)}° ${east?'ตะวันออก (ค่ำ)':'ตะวันตก (เช้า)'}`,`${EN139[k]} Greatest Elongation`,'el'); }
+    for(const t of zero139(ut=>wr139(L(ut,k)-L(ut,'SU')),A-12*H,B+12*H,12*H)){ const inf=wr139(L(t+6*H,k)-L(t-6*H,k))<0; put(t,`ดาว${NM139[k]} ร่วมทิศ${inf?'ด้านใกล้':'ด้านไกล'}`,`${EN139[k]} ${inf?'Inferior':'Superior'} Conjunction`,'el'); } }
+  // ดาวเคราะห์วงนอก เพ็ญ (opposition) / ร่วมทิศอาทิตย์
+  for(const k of ['MA','JU','SA','UR','NE','PL']){ for(const t of zero139(ut=>wr139(L(ut,k)-L(ut,'SU')-180),A-12*H,B+12*H,12*H)) put(t,`ดาว${NM139[k]} เพ็ญ (อยู่ตรงข้ามดวงอาทิตย์)`,`${EN139[k]} Opposition`,'op');
+    for(const t of zero139(ut=>wr139(L(ut,k)-L(ut,'SU')),A-12*H,B+12*H,12*H)) put(t,`ดาว${NM139[k]} ร่วมทิศกับดวงอาทิตย์`,`${EN139[k]} Conjunction`,'op'); }
+  // ฝนดาวตก (คืนที่มีอัตราสูงสุดโดยประมาณ)
+  for(const s of MET139) if(s[2]===m) put(Date.UTC(y,m,s[3],2)-7*H,`ฝนดาวตก ${s[0]} ZHR ≈ ${s[4]} (ช่วงก่อนรุ่งสาง วันที่โดยประมาณ)`,`${s[1]} Shower`,'mt');
+  // อุปราคา (ประเมินจากละติจูดจันทร์ ณ จันทร์ดับ/เพ็ญ)
+  const ecl=[];
+  for(const t of zero139(ut=>wr139(L(ut,'MO')-L(ut,'SU')),A,B,3*H)){ const b=Math.abs(B_(t,'MO')); if(b<1.55) ecl.push({W:t+7*H,s:1,b,t:b<0.95?'สุริยุปราคา (มีโอกาสเห็นเป็นวงแหวน/เต็มดวงในบางพื้นที่)':'สุริยุปราคาบางส่วน (บริเวณใกล้ขั้วโลก)'}); }
+  for(const t of zero139(ut=>wr139(L(ut,'MO')-L(ut,'SU')-180),A,B,3*H)){ const b=Math.abs(B_(t,'MO')); if(b<1.55) ecl.push({W:t+7*H,s:0,b,t:b<0.4?'จันทรุปราคาเต็มดวง':b<0.95?'จันทรุปราคาบางส่วน':'จันทรุปราคาเงามัว'}); }
+  ev.sort((a,b)=>a.W-b.W);
+  return sky139.c={key,ev,ecl}; }
+
+const IC139={ast:'<circle cx="12" cy="12" r="3.2"/><circle cx="5" cy="6" r="1.6"/><circle cx="19" cy="7" r="1.3"/><circle cx="17" cy="18" r="1.8"/><circle cx="6.5" cy="17.5" r="1.1"/>',ura:'<circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17M3.5 12h17"/><circle cx="12" cy="12" r="2"/>',
+ cj:'<circle cx="9" cy="12" r="5"/><circle cx="16.5" cy="12" r="3"/>',st:'<path d="M12 3l2.4 5.6 6 .5-4.6 4 1.4 5.9L12 16l-5.2 3 1.4-5.9-4.6-4 6-.5z"/>',pp:'<circle cx="8" cy="12" r="3.5"/><circle cx="16" cy="12" r="3.5"/><path d="M11.5 12h1"/>',
+ nd:'<path d="M3 15c4-8 14-8 18 0"/><circle cx="12" cy="9" r="2.2" fill="currentColor"/>',dc:'<path d="M12 3v18M7 8l5-5 5 5M7 16l5 5 5-5"/>',pg:'<circle cx="7" cy="12" r="3.5"/><circle cx="18" cy="12" r="2"/><path d="M11 12h4" stroke-dasharray="1.5 2"/>',
+ el:'<circle cx="7" cy="12" r="4"/><path d="M12 12h5"/><circle cx="19.5" cy="12" r="1.8"/>',op:'<circle cx="4.5" cy="12" r="2.5"/><circle cx="12" cy="12" r="2"/><circle cx="19.5" cy="12" r="2.5"/>',mt:'<path d="M4 4l9 9M8 3l7 7M3 9l6 6"/><circle cx="17" cy="17" r="3.4" fill="currentColor"/>',
+ ecl:'<circle cx="12" cy="12" r="8"/><circle cx="15" cy="10" r="6" fill="currentColor" fill-opacity=".85"/>'};
+
+function eph139(){ const now=new Date(); if(ST138.y==null){ ST138.y=now.getFullYear(); ST138.m=now.getMonth(); }
+  const {y,m,hh,mi}=ST138, BE=y+543, tLab=`${String(hh).padStart(2,'0')}:${String(mi).padStart(2,'0')}`, MON=MONTHS_TH, R=month138(y,m,hh,mi,'S'), SK=sky139(y,m);
+  const yrs=[]; for(let i=-60;i<=40;i++) yrs.push(y+i); const TL=['00:00','06:00','07:00','12:00','18:00','24:00'];
+  let h=`<div class="bar138"><div class="nav138"><button type="button" class="b138" data-e138="prev" title="เดือนก่อน">${ic138(IC138.prev)}</button>
+    <select id="m138" aria-label="เดือน">${MON.map((x,i)=>`<option value="${i}"${i===m?' selected':''}>${x}</option>`).join('')}</select>
+    <select id="y138" aria-label="ปี">${yrs.map(v=>`<option value="${v}"${v===y?' selected':''}>พ.ศ. ${v+543} / ${v}</option>`).join('')}</select>
+    <button type="button" class="b138" data-e138="next" title="เดือนถัดไป">${ic138(IC138.next)}</button>
+    <button type="button" class="b138 t" data-e138="today" title="เดือนนี้">${ic138(IC138.today)}<span>เดือนนี้</span></button></div>
+   <div class="nav138"><label class="lb138">สมผุส ณ <select id="t138">${TL.map(v=>`<option${v===tLab?' selected':''}>${v}</option>`).join('')}${TL.includes(tLab)?'':`<option selected>${tLab}</option>`}</select> น.</label>
+    <div class="seg138" role="group" aria-label="ระบบคำนวณ"><button type="button" data-e138="mL">นิรายนะ ลาหิรี</button><button type="button" data-e138="mT">สุริยยาตร์</button><button type="button" data-e138="mS" class="on">สายนะ</button></div>
+    <button type="button" class="b138 t" data-e138="csv" title="ดาวน์โหลดตารางเป็น CSV">${ic138(IC138.csv)}<span>CSV</span></button></div></div>
+   <div class="gp139"><span>แสดงคอลัมน์</span><button type="button" data-g139="ast" class="${ST139.g.ast?'on':''}">${ic138(IC139.ast,14)} ดาวเคราะห์น้อย · แบล็คมูน</button><button type="button" data-g139="ura" class="${ST139.g.ura?'on':''}">${ic138(IC139.ura,14)} ดาวยูเรเนียน ๘</button></div>`;
+  h+=`<div class="hd138"><b>ปฏิทินดาราศาสตร์ ปฏิทินโหราศาสตร์ สายนะวิธี ${MON[m]} พ.ศ. ${BE} / ค.ศ. ${y}</b>
+   <span>ปี${ANI138[((y-4)%12+12)%12]} · จ.ศ. ${BE-(m<3?1182:1181)} · ม.ศ. ${y-78} · ร.ศ. ${BE-(m<3?2325:2324)}</span>
+   <span>คำนวณตามระบบดาราศาสตร์ โหราศาสตร์สายนะวิธี (Tropical / Movable Zodiac) · สมผุส ณ เวลา ${tLab} น. (UTC+07:00) · Sid.Time = เวลาดาราคติกรีนิช</span></div>`;
+  const AK=Object.keys(AST139).concat(['LI']), UK=Object.keys(URA139), MK=['ME','VE','MA','JU','SA','UR','NE','PL'];
+  const th=(k,c)=>`<th class="${c||''}">${NM139[k]}</th>`;
+  h+=`<div class="tw138"><table class="t138 t139${ST139.g.ast?'':' no-ast'}${ST139.g.ura?'':' no-ura'}"><thead><tr><th>ที่</th><th>วัน</th><th>Sid.Time</th><th class="pl138">อาทิตย์</th><th>Dec.</th><th class="pl138">จันทร์</th><th>Lat.</th><th>Dec.</th><th class="pl138">ราหู (เฉลี่ย)</th>${MK.map(k=>th(k,'pl138')).join('')}${AK.map(k=>th(k,'ga pl138')).join('')}${UK.map(k=>th(k,'gu pl138')).join('')}</tr></thead><tbody>`;
+  const todayW=Date.UTC(now.getFullYear(),now.getMonth(),now.getDate()); let prev=null; const rows=[];
+  for(const r of R.rows){ const ut=r.W-7*H138, P=bod139(ut), P0=bod139(ut-12*H138), P1=bod139(ut+12*H138), sp={};
+    for(const k of [...MK,...AK,...UK]) sp[k]=wr139(P1[k]-P0[k]);
+    const pm=k=>{ if(k==='LI') return ''; if(sp[k]<0) return 'R'; if(MEANV[k]&&motion(k,sp[k]).code==='ม.') return 'S'; return ''; };
+    rows.push({r,P,sp});
+    h+=`<tr class="${r.W0===todayW?'td138':''}${r.wd===0||r.wd===6?' we138':''}" data-day138="${r.d}"><td class="dn138">${r.d}</td><td>${WDS138[r.wd]}</td><td class="st139">${hms139(P.e.gmst/15)}</td>
+     ${dms139(P.SU,prev&&prev.SU)}${dec139(P.e.SU.dec)}${dms139(P.MO,prev&&prev.MO)}${dec139(P.e.MO.lat)}${dec139(P.e.MO.dec)}${dms139(P.RA,prev&&prev.RA)}
+     ${MK.map(k=>dms139(P[k],prev&&prev[k],pm(k))).join('')}${AK.map(k=>dms139(P[k],prev&&prev[k],pm(k)).replace('<td class="v139"','<td class="v139 ga"')).join('')}${UK.map(k=>dms139(P[k],prev&&prev[k],pm(k)).replace('<td class="v139"','<td class="v139 gu"')).join('')}</tr>`;
+    prev=P; }
+  h+=`</tbody></table></div>`;
+  eph139.rows=rows;
+  // ข้อมูลประกอบ
+  const ut1=Date.UTC(y,m,1), JD=ut1/D138+2440587.5, T=(JD-2451545)/36525, N=nut139(T), eps0=23.439291-0.0130042*T, LA=AY138(ut1);
+  const dd=x=>{ const s=x<0?'-':'', a=Math.abs(x), d=Math.floor(a), mm=Math.floor((a-d)*60), ss=Math.round(((a-d)*60-mm)*60); return `${s}${String(d).padStart(2,'0')}° ${String(mm).padStart(2,'0')}′ ${String(ss).padStart(2,'0')}″`; };
+  const card=(t,body,ic)=>`<div class="cd139"><h4>${ic?ic138(ic,16):''}${t}</h4>${body}</div>`;
+  const kv=(a,b)=>`<div class="kv139"><span>${a}</span><b>${b}</b></div>`;
+  const ingS=R.ev.filter(e=>e.ty==='in'), ph=R.ev.filter(e=>e.ty==='ph'), stn=R.ev.filter(e=>e.ty==='st');
+  const moonIn=R.rows.filter(r=>r.yk).map(r=>`<div class="kv139"><span>${SIGNS[r.yk.s]}</span><b>${dt139(r.yk.t)}</b></div>`).join('');
+  h+=`<div class="gd139">
+   ${card('ค่าดาราศาสตร์ประจำเดือน',kv('Julian Date (1 '+MS138[m]+' 00:00 UT)',JD.toFixed(2))+kv('Delta T (ประมาณ)',dT139(y+m/12).toFixed(1)+' วินาที')+kv('Obliquity (แท้)',dd(eps0+N.de))+kv('Nutation Δψ / Δε',`${(N.dp*3600).toFixed(1)}″ / ${(N.de*3600).toFixed(1)}″`)+kv('อายนางศะ ลาหิรี (1 '+MS138[m]+')',dd(LA))+kv('อายนางศะ ฟาแกน/แบรดลีย์',dd(LA+0.88333)),IC138.info)}
+   ${card('ดวงจันทร์',ph.map(e=>`<div class="kv139"><span>${ic138(IC138.ph[e.q],15)} ${PH138[e.q]}</span><b>${dt139(e.t)}</b></div>`).join('')+`<div class="kv139"><span>${ic138(IC139.ecl,15)} สุริยุปราคา/สุริยคราส</span><b>${SK.ecl.filter(x=>x.s).map(x=>`${x.t} · ${dt139(x.W)}`).join('<br>')||'ไม่มี'}</b></div><div class="kv139"><span>${ic138(IC139.ecl,15)} จันทรุปราคา/จันทรคราส</span><b>${SK.ecl.filter(x=>!x.s).map(x=>`${x.t} · ${dt139(x.W)}`).join('<br>')||'ไม่มี'}</b></div>`,IC138.ph[2])}
+   ${card('ดาวยก (ย้ายราศีสายนะ)',(ingS.map(e=>`<div class="kv139"><span>${NM139[e.k]||PN138[e.k]} ${e.retro?'<b class="pm139 r">R</b> ':''}➜ ${SIGNS[e.s]}</span><b>${dt139(e.t)}</b></div>`).join('')||'<p class="note">ไม่มีดาวย้ายราศีในเดือนนี้</p>')+(stn.length?stn.map(e=>`<div class="kv139"><span>${NM139[e.k]} ${e.dir==='R'?'หยุดแล้วถอยหลัง (R)':'หยุดแล้วเดินหน้า (D)'}</span><b>${dt139(e.t)}</b></div>`).join(''):''),IC138.in)}
+   ${card('จันทร์ยก (เข้าราศีสายนะ)',moonIn,IC138.ph[1])}</div>`;
+  h+=`<div class="evw138"><h4>${ic138(IC138.info,16)} ปรากฏการณ์ท้องฟ้า ${MON[m]} ${BE}</h4><ul class="evl138 sk139">${SK.ev.map(e=>`<li><span class="ei138 k-${e.ty}">${ic138(IC139[e.ty],16)}</span><span class="tx139">${e.th}<small>${e.en}</small></span><time>${dt139(e.W)}</time></li>`).join('')||'<li>—</li>'}</ul></div>`;
+  h+=`<details class="lg138"><summary>วิธีอ่านปฏิทินสายนะ</summary><div class="lgb138">
+   <p><b>สายนะวิธี (Tropical)</b> นับราศีจากจุดวสันตวิษุวัต (จุดที่ดวงอาทิตย์ข้ามเส้นศูนย์สูตรฟ้าในเดือนมีนาคม) เป็น 0° เมษเสมอ จักรราศีจึงเลื่อนตามการส่ายของแกนโลก ต่างจาก <b>นิรายนะ</b> ที่ยึดดาวฤกษ์ — ผลต่างคือค่าอายนางศะ (ลาหิรีราว 24° ในปัจจุบัน) ดังนั้นสมผุสสายนะ = สมผุสนิรายนะ + อายนางศะ</p>
+   <p><b>Sid.Time</b> เวลาดาราคติกรีนิช (เวลานับตามการหมุนของโลกเทียบดาวฤกษ์ ใช้ตั้งลัคนา) · <b>Dec.</b> เดคลิเนชัน (ระยะเหนือ/ใต้เส้นศูนย์สูตรฟ้า N/S) · <b>Lat.</b> ละติจูดสุริยวิถีของดวงจันทร์ (เมื่อใกล้ 0° ขณะจันทร์ดับหรือเพ็ญ จึงเกิดอุปราคา)</p>
+   <p><b>R</b> = ถอยหลัง (Retrograde) · <b>S</b> = เดินช้าใกล้หยุด (Slow/Stationary). ชื่อราศี<span class="sg139 c x">สีทอง</span>คือวันที่ดาวเพิ่งเข้าราศีใหม่</p>
+   <p><b>ดาวเคราะห์น้อย</b> เซเรส พาลลาส จูโน เวสต้า ไครอน อีริส และ <b>แบล็คมูน</b> (Lilith จุดไกลโลกเฉลี่ยของวงโคจรดวงจันทร์) นิยมใช้ในโหราศาสตร์ตะวันตกสมัยใหม่ · <b>ดาวยูเรเนียน ๘</b> (คิวปิโด ฮาเดส เซอุส โครโนส อาพอลลอน แอดเมตอส วัลคานุส โพไซดอน) เป็นจุดสมมุติของสำนักฮัมบูร์ก (Uranian Astrology) ใช้กับเทคนิคจุดกึ่งกลาง (midpoint)</p>
+   <p class="note">ความแม่นยำ: ดาวเคราะห์หลักคลาดไม่เกินราว 1–5 ลิปดา · ดาวเคราะห์น้อยคำนวณจากวงโคจรเคปเลอร์ที่ปรับเทียบไว้ ณ พ.ย. 2569 จึงแม่นในช่วงไม่กี่ปีรอบปีนี้ ไกลออกไปอาจคลาดเป็นองศา · เวลาปรากฏการณ์คลาดได้ไม่กี่นาทีถึงชั่วโมง (ใกล้/ไกลโลก และฝนดาวตกเป็นค่าประมาณ) · อุปราคาประเมินจากละติจูดจันทร์ ควรตรวจรายละเอียดเส้นทางจากแหล่งดาราศาสตร์อีกครั้ง</p></div></details>`;
+  return h; }
+
+// ── ผูกเข้ากับปฏิทิน v138
+{ const _p=pos138; pos138=function(W,mode){ if(mode!=='S') return _p(W,mode); const e=eph111(W-7*H138), o={}; for(const k of ['SU','MO','MA','ME','JU','VE','SA','UR','NE','PL']) o[k]=e[k].lon; o.RA=e.NN.lon; o.KE=nm138(o.RA+180); o.K9=o.KE; return o; }; }
+{ const _s=sm138; sm138=function(W,mode){ if(mode!=='S') return _s(W,mode); const ut=W-7*H138, T=(ut/D138+2440587.5-2451545)/36525, pre=1.396971*T+0.0003086*T*T, Ea=hel111('EM',T); return [nm138(Math.atan2(-Ea[1],-Ea[0])/r111+pre), nm138(moon111(T)[0])]; }; }
+{ const _c=cols138; cols138=function(m){ return m==='S'?['ME','VE','MA','JU','SA','UR','NE','PL','RA']:_c(m); }; }
+{ const _e=eph138; eph138=function(){ if(ST138.mode==='S') return eph139(); return _e().replace(/(data-e138="mT"[^>]*>สุริยยาตร์<\/button>)/,'$1<button type="button" data-e138="mS">สายนะ</button>'); }; }
+{ const _v=csv138; csv138=function(){ if(ST138.mode!=='S'||!eph139.rows) return _v(); const f=x=>{ const v=nm138(x); return `${SIGNS[Math.floor(v/30)]} ${(v%30).toFixed(4)}`; };
+  const AK=Object.keys(AST139).concat(['LI']), UK=Object.keys(URA139), MK=['ME','VE','MA','JU','SA','UR','NE','PL'], K=['SU','MO','RA',...MK,...AK,...UK];
+  const L=[['วันที่','Sid.Time','Sun Dec','Moon Lat','Moon Dec',...K.map(k=>NM139[k])].join(',')];
+  for(const x of eph139.rows){ L.push([`${x.r.d}/${ST138.m+1}/${ST138.y+543}`,hms139(x.P.e.gmst/15),x.P.e.SU.dec.toFixed(3),x.P.e.MO.lat.toFixed(3),x.P.e.MO.dec.toFixed(3),...K.map(k=>(x.sp[k]<0?'R ':'')+f(x.P[k]))].map(v=>`"${v}"`).join(',')); }
+  return '﻿'+L.join('\n'); }; }
+document.addEventListener('click',e=>{ const b=e.target.closest&&e.target.closest('[data-g139]'); if(!b) return; e.preventDefault(); const g=b.dataset.g139; ST139.g[g]=ST139.g[g]?0:1; b.classList.toggle('on',!!ST139.g[g]);
+  const t=document.querySelector('#eph138Out table.t139'); if(t) t.classList.toggle(g==='ast'?'no-ast':'no-ura',!ST139.g[g]); });
+{ const _d=dl138; dl138=function(){ if(ST138.mode==='S'){ const fn=`ปฏิทินดาราศาสตร์-สายนะ-${ST138.y+543}-${String(ST138.m+1).padStart(2,'0')}.csv`, blob=new Blob([csv138()],{type:'text/csv;charset=utf-8'});
+  return (async()=>{ let dl=null; try{ dl=window.claude&&window.claude.use?await window.claude.use('downloads'):null; }catch(_){} if(dl){ try{ await dl.save({filename:fn,data:blob}); return; }catch(_){} }
+   const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=fn; document.body.appendChild(a); a.click(); a.remove(); })(); } return _d(); }; }
+
+// ───────── นามศาสตร์เพิ่ม: เลขรหัสชีวิต · อักษรเทพเจ้า-เทวดา / ผีหลวง / หลาวเหล็ก (ตามวันเกิด)
+// หลัก: รหัสชีวิต = ถอดผลรวมเลขศาสตร์ด้วยการบวกเลขโดดจนเหลือหลักเดียว (๙ ถือเป็น ๘) แล้วอ่านตามภูมิทักษาของวันเกิด (รหัส n = ภูมิของดาว n)
+const TEP139={1:3,2:5,3:7,4:4,5:6,6:2,7:8,8:4}, PHI139={1:8,2:2,3:1,4:6,5:4,6:5,7:3,8:6}, LAO139={1:5,2:2,3:6,4:6,5:4,6:5,7:2,8:6};
+const rc139=n=>{ while(n>9) n=String(n).split('').reduce((a,b)=>a+ +b,0); return n===9?8:n; };
+const RCM139={บริวาร:'พวกพ้อง คู่ครอง บุตร ลูกน้อง มิตรสหาย บารมีในหมู่คน',อายุ:'สุขภาพแข็งแรง ความเป็นอยู่ดี ใจเป็นสุข',เดช:'อำนาจ เกียรติยศ ชื่อเสียง ความเด็ดขาด',ศรี:'สิริมงคล ทรัพย์สิน โชคลาภ เสน่ห์',มูละ:'ฐานะ ทุนทรัพย์ มรดก หลักฐานมั่นคง',อุตสาหะ:'ความขยัน มานะ ความรับผิดชอบ',มนตรี:'ผู้ใหญ่อุปถัมภ์ ปัญญา ความช่วยเหลือ',กาลกิณี:'อุปสรรค คู่แข่ง ความติดขัด ความเหนื่อย'};
+function grp139(c){ return GRP94[c]; }
+function letters139(nm,dp,R){ const cons=chars94(nm).filter(c=>GRP94[c]&&!VOW94.includes(c)&&!EXM94.includes(c));
+  const hit=(g)=>cons.filter(c=>GRP94[c]===g&&(g!==1||c==='อ'));
+  return {tep:{g:TEP139[dp],hit:hit(TEP139[dp]),r:R[TEP139[dp]]},phi:{g:PHI139[dp],hit:hit(PHI139[dp]),r:R[PHI139[dp]]},lao:{g:LAO139[dp],hit:hit(LAO139[dp]),r:R[LAO139[dp]]}}; }
+function nmExtra139(){ const ty=NM94.type, nm=NM94.n.trim(), sn=ty==='p'?NM94.s.trim():''; if(!nm) return '';
+  const dp=day94(), R=roles94(dp), N1=num94(nm), N2=sn?num94(sn):null;
+  const c1=rc139(N1.sum), c2=N2?rc139(N2.sum):null, cT=N2?rc139(N1.sum+N2.sum):null;
+  const line=(lab,sum,c)=>{ const r=R[c], g=r==='กาลกิณี'?'b':['เดช','ศรี','มูละ','มนตรี'].includes(r)?'g':'m'; return `<li><span class="bg64 ${g}">${lab} ${sum} → ${c} · ${r}</span> ${r==='กาลกิณี'?'ตกภูมิกาลกิณี — แนวโน้มเจออุปสรรค ความติดขัด ควรเสริมด้วยส่วนอื่นของชื่อ':'ส่งเสริมเรื่อง'+RCM139[r]}</li>`; };
+  const L=letters139(nm,dp,R), chip=(arr)=>arr.length?arr.map(c=>`<b class="lt139">${esc94(c)}</b>`).join(' '):'<span class="note">ไม่มี</span>';
+  let h=`<div class="nm94s"><div class="nm94h">๘ เลขรหัสชีวิต — ถอดผลเลขศาสตร์อ่านตามภูมิทักษาวัน${PN94[dp]}</div>
+   <p>นำผลรวมเลขศาสตร์มาบวกเลขโดดจนเหลือหลักเดียว (ถ้าได้ ๙ ให้ถือเป็น ๘ เพราะกำลังดาวมี ๑–๘) แล้วดูว่าเลขนั้นตรงกับดาวที่อยู่ภูมิใดของผู้เกิดวัน${PN94[dp]}</p>
+   <ul class="lb88l">${line('ชื่อ',N1.sum,c1)}${N2?line('นามสกุล',N2.sum,c2)+line('ผลรวม',N1.sum+N2.sum,cT):''}</ul>
+   <div class="rc139">${[1,2,3,4,5,6,7,8].map(n=>`<div class="${R[n]==='กาลกิณี'?'k':''}${[c1,c2,cT].includes(n)?' on':''}"><b>${n}</b><small>${R[n]}</small></div>`).join('')}</div></div>`;
+  const row=(t,o,good)=>`<li><span class="bg64 ${good?(o.hit.length?'g':'m'):(o.hit.length?'b':'g')}">${t}</span> อักษร${t.replace('อักษร','')}ของผู้เกิดวัน${PN94[dp]} คือ <b>${GL94[o.g]}</b> (ภูมิ${o.r}) · ในชื่อ: ${chip(o.hit)} — ${good?(o.hit.length?'มีอักษรมงคลนี้ ช่วยเสริมให้ผู้ใหญ่และสิ่งศักดิ์สิทธิ์เกื้อหนุน':'ยังไม่มี หากต้องการเสริมความเป็นมงคล ใช้อักษรกลุ่มนี้ได้'):(o.hit.length?'ตำรานี้ถือเป็นอักษรอัปมงคล ควรเลี่ยงถ้าเลือกได้':'ไม่มี ผ่านเกณฑ์')}</li>`;
+  h+=`<div class="nm94s"><div class="nm94h">๙ อักษรเทพเจ้า-เทวดา · อักษรผีหลวง · อักษรหลาวเหล็ก</div>
+   <p>ตำรา ๓ เล่มนี้เดิมใช้ดูทิศเดินทางประจำวัน (ทิศเทพเจ้า ทิศผีหลวง ทิศหลาวเหล็ก) เมื่อเทียบกับทิศของดาว ๘ ในภูมิทักษา จึงได้อักษรประจำวันเกิด</p>
+   <ul class="lb88l">${row('อักษรเทพเจ้า',L.tep,true)}${row('อักษรผีหลวง',L.phi,false)}${row('อักษรหลาวเหล็ก',L.lao,false)}</ul>
+   <p class="note">พิจารณาเฉพาะพยัญชนะในชื่อ (อักษรผีหลวงวันอังคารคือ "อ และสระ" — นับเฉพาะตัว อ เพราะสระมีในเกือบทุกชื่อ) · ตำรานี้เป็นเกณฑ์เสริม ให้น้ำหนักรองจากทักษาและเลขศาสตร์</p></div>`;
+  return h; }
+{ const _r=res94; res94=function(){ const h=_r.apply(this,arguments); let x=''; try{ x=nmExtra139(); }catch(e){ console.error(e); } if(!x) return h; const i=h.indexOf('<div class="nm94s nm94sum">'); return i>0?h.slice(0,i)+x+h.slice(i):h+x; }; }
+{ const _g=guide94; guide94=function(){ const h=_g.apply(this,arguments); try{ const dp=day94(), R=roles94(dp);
+  return h+`<div class="gl139"><div><b class="g">อักษรเทพเจ้า</b><span>${GL94[TEP139[dp]]}</span><small>ภูมิ${R[TEP139[dp]]} · ใช้ได้ เสริมมงคล</small></div><div><b class="b">อักษรผีหลวง</b><span>${GL94[PHI139[dp]]}</span><small>ภูมิ${R[PHI139[dp]]} · ควรเลี่ยง</small></div><div><b class="b">อักษรหลาวเหล็ก</b><span>${GL94[LAO139[dp]]}</span><small>ภูมิ${R[LAO139[dp]]} · ควรเลี่ยง</small></div></div>
+  <p class="note">เลขรหัสชีวิตของผู้เกิดวัน${PN94[dp]}: ${[1,2,3,4,5,6,7,8].map(n=>`${n}=${R[n]}`).join(' · ')} — เลือกชื่อที่ผลรวมเลขศาสตร์ถอดแล้วไม่ตกกาลกิณี (${[1,2,3,4,5,6,7,8].filter(n=>R[n]==='กาลกิณี').join(', ')})</p>`; }catch(e){ return h; } }; }
 
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
