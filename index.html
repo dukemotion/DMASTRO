@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="th" data-theme="dark">
 <head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0a0f22">
@@ -175,6 +176,7 @@ svg.lag140{display:inline-block;overflow:visible}
 .orb140 .bd140.old{opacity:.6;text-decoration:line-through}
 .orb140 table.mx140 th,.orb140 table.mx140 td{text-align:center;padding:5px 3px;font-size:11px} .orb140 table.mx140 td:first-child{text-align:left}
 .orb140 table.mx140 td .bd140{display:block;margin:1px auto;font-size:10px;padding:0 5px} .orb140 table.mx140 td.cur{outline:2px solid var(--gold2);outline-offset:-2px;border-radius:6px;background:rgba(201,168,76,.08)}
+.vv140{font-size:10.5px;opacity:.75;font-weight:500;margin-left:3px;padding:0 5px;border:1px solid currentColor;border-radius:99px}
 div.agebadge .mw140 button.ab.orb140b{border:1px solid rgba(236,220,180,.45)!important;border-radius:12px!important;background:rgba(255,255,255,.04)!important;padding:6px 9px!important;min-width:62px}
 div.agebadge .mw140 button.ab.orb140b:hover{border-color:var(--gold2)!important}
 .mw140{display:flex;align-items:center;gap:8px;min-width:0;max-width:100%}
@@ -8320,7 +8322,8 @@ const CHG110=[
  {v:'140.1',d:'2026-11-02',k:'u',t:'อัตราดาวโคจร: เรียงลำดับดาวได้ และเส้นไทม์ไลน์เหตุการณ์',x:'ภาพรวมรายเดือนเพิ่มปุ่มเรียงตาม ลำดับดาว / เหตุการณ์ก่อน → หลัง / ย้ายหรือเปลี่ยนบ่อยสุด / เดินเร็ว → ช้า (ใช้ทั้งแถบเวลาและตาราง) · แถบเวลามีเส้นกริดรายวัน เส้นหนาวันอาทิตย์ จุดบอกเวลาย้ายราศี · เพิ่มไทม์ไลน์แนวตั้งเรียงเหตุการณ์ตามเวลา ทั้งย้ายราศีและเปลี่ยนการเดิน (พักร์ มนท์ เสริด) จัดกลุ่มตามวัน เหตุการณ์ที่ผ่านแล้วจางลง เลือกรวมหรือซ่อนจันทร์ย้ายราศีได้',c:['natal'],p:[],go:'#ageBadge'},
  {v:'140.2',d:'2026-11-02',k:'u',t:'อัตราดาวโคจร: เพิ่มแท็บดูรายมาตรฐาน',x:'แท็บใหม่ "ดูรายมาตรฐาน" ในป๊อปอัปอัตราดาวโคจร: (๑) การ์ดตามมาตรฐาน มหาอุจจ์ เกษตร ราชาโชค มหาจักร เทวีโชค จุลจักร นิจ ประ — บอกว่าดาวจรดวงใดอยู่มาตรฐานนั้น ณ วันจร พร้อมความหมาย และจะพ้นเมื่อไร ไปราศีใด มาตรฐานใหม่คืออะไร (๒) ไทม์ไลน์การเปลี่ยนมาตรฐานล่วงหน้า ๑ / ๓ / ๖ / ๑๒ เดือน กรองได้ เช่น เฉพาะเข้ามาตรฐานดี เข้านิจ/ประ หรือมาตรฐานใดมาตรฐานหนึ่ง เลือกรวมจันทร์ได้ (๓) ตารางมาตรฐานดาว × ๑๒ ราศี ไฮไลต์ราศีที่ดาวจรอยู่ตอนนี้',c:['natal'],p:[],go:'#ageBadge'},
  {v:'140.3',d:'2026-11-02',k:'u',t:'สัญลักษณ์ลัคนาแบบ perfect circle',x:'วาดสัญลักษณ์ลัคนาใหม่ด้วยวงกลมสมบูรณ์ทั้งหมด: ส่วนโค้งบนและท้องล่างรัศมีเท่ากัน (r60) ต่อด้วยเส้นตรงแนวดิ่งให้แนวสัมผัสต่อเนื่อง · บ่วงบนเป็นวงกลม r34 · หางเป็นส่วนโค้ง r80 ตัดผ่านเส้นตั้งขวา · หัวม้วนซ้อนวงกลม r30 กับ r12 ปิดด้วยจุดกลม · เส้นหนาเท่ากันตลอด สีแดง ไม่มีเงา ใช้ทุกผังดวงและในป๊อปอัปอัตราดาวโคจร',c:['natal'],p:[],go:'#ageBadge'},
- {v:'140.4',d:'2026-11-02',k:'u',t:'ปรับสัญลักษณ์ลัคนาให้สวยขึ้น — กลับไปใกล้ต้นฉบับแต่ยังเป็นวงกลมสมบูรณ์',x:'แก้จุดที่ทำให้แบบ v140.3 ดูแข็ง: เส้นกลางกลับเป็นแนวทแยงพาดสัมผัสร่วมระหว่างโค้งบนกับท้องล่าง (ไหลแบบลายมือ) · เส้นหนาขึ้น (30) ใกล้น้ำหนักต้นฉบับ · หัวม้วนเป็นวง r28 ปลายจุดกลมใหญ่ r21 เห็นช่องว่างชัด ไม่เป็นก้อน · ฐานหัวม้วนกับท้องล่างอยู่ระดับเดียวกัน · บ่วงบนกับหางวางให้หางพุ่งเฉียงขึ้นขวาแบบต้นฉบับ · ทุกช่วงเป็นส่วนโค้งของวงกลมจริงต่อกันแบบแนวสัมผัส',c:['natal'],p:[],go:'#ageBadge'}];
+ {v:'140.4',d:'2026-11-02',k:'u',t:'ปรับสัญลักษณ์ลัคนาให้สวยขึ้น — กลับไปใกล้ต้นฉบับแต่ยังเป็นวงกลมสมบูรณ์',x:'แก้จุดที่ทำให้แบบ v140.3 ดูแข็ง: เส้นกลางกลับเป็นแนวทแยงพาดสัมผัสร่วมระหว่างโค้งบนกับท้องล่าง (ไหลแบบลายมือ) · เส้นหนาขึ้น (30) ใกล้น้ำหนักต้นฉบับ · หัวม้วนเป็นวง r28 ปลายจุดกลมใหญ่ r21 เห็นช่องว่างชัด ไม่เป็นก้อน · ฐานหัวม้วนกับท้องล่างอยู่ระดับเดียวกัน · บ่วงบนกับหางวางให้หางพุ่งเฉียงขึ้นขวาแบบต้นฉบับ · ทุกช่วงเป็นส่วนโค้งของวงกลมจริงต่อกันแบบแนวสัมผัส',c:['natal'],p:[],go:'#ageBadge'},
+ {v:'140.5',d:'2026-11-02',k:'f',t:'แสดงเลขเวอร์ชันบนเมนู และลดปัญหาเบราว์เซอร์จำหน้าเก่า',x:'ปุ่ม "อัปเดตระบบ" บนเมนูแสดงเลขเวอร์ชันล่าสุด (เช่น v140.5) ให้ตรวจได้ทันทีว่าเปิดหน้าล่าสุดอยู่หรือไม่ · เพิ่มคำสั่งไม่ให้เบราว์เซอร์เก็บแคชหน้าเว็บ',c:['natal'],p:[],go:'#ageBadge'}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
@@ -9263,8 +9266,8 @@ document.addEventListener('click',e=>{ const g=e.target.closest&&e.target.closes
 function seen129(){ try{ return parseFloat(localStorage.getItem('suriyayatra.upd129')||'0')||0; }catch(e){ return 0; } }
 function nav129(){ const sv=seen129(), nF=CHG110.filter(e=>e.k!=='f'&&e.d&&vnum110(e.v)>sv&&now110()-new Date(e.d+'T23:59:59+07:00')<=WIN110).length, b=nF?`<i class="nb129">${nF>9?'9+':nF}</i>`:'';
   document.querySelectorAll('.up129 .nb129').forEach(x=>{ if(!nF) x.remove(); else x.textContent=nF>9?'9+':nF; });
-  const pl=document.querySelector('.pl76'); if(pl&&!pl.querySelector('[data-n="upd"]')) pl.insertAdjacentHTML('beforeend',`<a href="#catP29" data-n="upd" class="up129">${IC129.upd}อัปเดตระบบ${b}</a>`);
-  const mn=document.getElementById('mnav'); if(mn&&!mn.querySelector('[data-upd129]')) mn.insertAdjacentHTML('beforeend',`<a href="#catP29" data-upd129="1" class="up129">อัปเดต${b}</a>`); }
+  const pl=document.querySelector('.pl76'); if(pl&&!pl.querySelector('[data-n="upd"]')) pl.insertAdjacentHTML('beforeend',`<a href="#catP29" data-n="upd" class="up129">${IC129.upd}อัปเดตระบบ <small class="vv140">v${CHG110[CHG110.length-1].v}</small>${b}</a>`);
+  const mn=document.getElementById('mnav'); if(mn&&!mn.querySelector('[data-upd129]')) mn.insertAdjacentHTML('beforeend',`<a href="#catP29" data-upd129="1" class="up129">อัปเดต <small class="vv140">v${CHG110[CHG110.length-1].v}</small>${b}</a>`); }
 document.addEventListener('click',e=>{ const a=e.target.closest&&e.target.closest('a[data-n="upd"],a[data-upd129]'); if(!a) return; e.preventDefault(); e.stopPropagation(); try{ cat29Show('upd110',false); }catch(_){} try{ localStorage.setItem('suriyayatra.upd129',String(Math.max(...CHG110.map(x=>vnum110(x.v))))); }catch(_){} nav129(); const c=document.getElementById('catP29'); if(c) c.scrollIntoView({behavior:'smooth',block:'start'}); },true);
 setTimeout(nav129,0); window.addEventListener('load',nav129); document.addEventListener('DOMContentLoaded',nav129); setTimeout(nav129,1500);
 
