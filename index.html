@@ -146,6 +146,9 @@ header{flex-wrap:wrap}.brand{flex:0 0 100%;width:100%;font-size:14px;font-weight
 :root[data-theme="dark"] #tpop{background:rgba(13,26,38,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--edge75b);border-radius:18px;box-shadow:0 24px 60px -16px rgba(0,0,0,.85)}
 :root[data-theme="dark"] *{scrollbar-color:#244055 transparent;scrollbar-width:thin}
 ::selection{background:rgba(156,203,232,.35)}
+.pdh122{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin:14px 0 6px;padding-top:10px;border-top:1px dashed var(--line)}.pdy122{display:inline-flex;gap:4px}
+#pd122 .pdy122 button{width:auto!important;margin:0!important;min-height:0!important;border:1px solid var(--line);background:transparent;color:inherit;border-radius:7px;padding:3px 10px!important;font:inherit;font-size:12px;cursor:pointer;opacity:.65}#pd122 .pdy122 button.on{opacity:1;background:rgba(156,203,232,.16);border-color:#9ccbe8}
+.pdc122{border:1px solid var(--line);border-radius:12px;padding:10px;margin:8px 0}.pdn122 ul{margin-top:4px}.pdg122{width:100%;height:auto;margin-top:6px}.pdt122 .ac28 ul{margin:4px 0 0 16px;padding:0;font-size:12.5px}.pdt122 .ac28 li{margin:2px 0}
 .tlc121{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:4px 0}.tlc121 .tlr121{flex:1 1 140px;min-width:100px;padding:0!important;border:0!important;background:transparent!important;accent-color:#3fa96b;height:26px}
 .tl71w .tlc121 button{width:auto!important;flex:0 0 auto!important;margin:0!important;min-height:0!important;border:1px solid var(--line);background:rgba(156,203,232,.08);color:inherit;border-radius:7px;padding:4px 9px!important;font:inherit;font-size:12px;cursor:pointer}.tl71w .tlc121 .tln121{border-color:#d9a400}
 .tl71w svg.tl71{cursor:grab;touch-action:pan-y;user-select:none}.tl71w.drag121 svg.tl71{cursor:grabbing}.tld121{margin-bottom:4px}
@@ -8090,7 +8093,8 @@ const CHG110=[
  {v:'119',d:'2026-11-02',k:'u',t:'ทางเดินดาวจรบนจักรราศี',x:'ลูกศรบอกทิศดาวจร (เดินหน้า/ถอย/หยุดนิ่ง) และเส้นประระยะที่ดาวจะเดินไปในช่วงเวลาข้างหน้า'},
  {v:'119.1',d:'2026-11-02',k:'u',t:'เส้นทางดาวจรหดตามจุดเปลี่ยนสถานะ',x:'เส้นประวิ่งถึงจุดที่จะเริ่ม/พ้นพักร์ มนท์ เสริด และสั้นลงเมื่อลากดาวเข้าใกล้ · สีตามสถานะ · บอกจำนวนวันที่เหลือ'},
  {v:'120',d:'2026-11-02',k:'u',t:'กดลัคนาจรดูเวลาย้ายนวางค์ ฤกษ์ ราศี',x:'แตะลัคนาจรบนจักรราศี จะบอกเวลาเริ่มและเวลาย้ายถัดไปของลูกนวางค์ ฤกษ์ และราศี (ถึงวินาที) พร้อมรายการลัคนาย้ายราศีใน ๒๔ ชั่วโมง และปุ่มเลื่อนวันจรไปจุดนั้น'},
- {v:'121',d:'2026-11-02',k:'u',t:'กราฟกำลังภพตามดวงจรเลื่อนได้',x:'เลื่อนช่วง ๒๔ เดือนย้อนหลัง/ล่วงหน้าได้ด้วยปุ่ม แถบเลื่อน หรือลากบนกราฟ',c:['bhava']}];
+ {v:'121',d:'2026-11-02',k:'u',t:'กราฟกำลังภพตามดวงจรเลื่อนได้',x:'เลื่อนช่วง ๒๔ เดือนย้อนหลัง/ล่วงหน้าได้ด้วยปุ่ม แถบเลื่อน หรือลากบนกราฟ',c:['bhava']},
+ {v:'122',d:'2026-11-02',k:'u',t:'วินิจฉัยเรื่องพ่อแม่เชิงลึก + ระบุช่วงเวลา',x:'รวมหลายสูตร: ดาวแทนพ่อแม่หลายสำนัก ภพจากภพ (ภพ ๖/๘ จากภพพ่อแม่) ราศีกาลบุรุษ ธรรมชาติดาว และดาวจรเสาร์ ราหู เกตุ อังคาร พฤหัส → บอกระบบร่างกาย/เรื่องที่ต้องดูแล ช่วงเสี่ยงซ้อน ช่วงดี และวันพีค ใน ๒/๕/๑๐ ปี',c:['parents']}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
@@ -8612,6 +8616,49 @@ document.addEventListener('click',e=>{ const b=e.target.closest('.tl71w .tlc121 
 document.addEventListener('input',e=>{ if(!e.target.classList||!e.target.classList.contains('tlr121')) return; tlSet121(e.target.closest('.tl71w'),+e.target.value); });
 document.addEventListener('pointerdown',e=>{ const sv=e.target.closest('.tl71w svg.tl71'); if(!sv) return; const w=sv.closest('.tl71w'), x0=e.clientX, o0=window.TL71OFF||0, wd=sv.getBoundingClientRect().width; e.preventDefault(); w.classList.add('drag121');
   const mv=ev=>{ const dm=-(ev.clientX-x0)/wd*24; tlSet121(w,o0+dm); }, up=()=>{ window.removeEventListener('pointermove',mv); window.removeEventListener('pointerup',up); window.removeEventListener('pointercancel',up); w.classList.remove('drag121'); }; window.addEventListener('pointermove',mv); window.addEventListener('pointerup',up); window.addEventListener('pointercancel',up); });
+// ===== v122: วินิจฉัยเรื่องพ่อแม่เชิงลึก — แนวโน้มเรื่องที่ต้องดูแล (ระบบร่างกาย/ชีวิต) + จุดเวลาแบบระบุวันพีค จากหลายสูตรรวมกัน
+const PD122={SU:'หัวใจ ความดัน สายตา กระดูก ไข้',MO:'ของเหลวในร่างกาย ความเครียด การนอน ทางเดินอาหาร',MA:'อักเสบ ติดเชื้อ ความดันเลือด อุบัติเหตุ แผลผ่าตัด',ME:'ระบบประสาท ผิวหนัง ทางเดินหายใจ',JU:'ตับ ไขมัน น้ำตาล น้ำหนัก',VE:'ไต ฮอร์โมน ระบบสืบพันธุ์ น้ำตาล',SA:'กระดูก ข้อ ฟัน โรคเรื้อรัง ความเสื่อมตามวัย',RA:'สารพิษ อาหาร/ยาไม่เข้ากัน อาการหาสาเหตุยาก',KE:'อาการเฉียบพลัน ผื่น ภูมิแพ้',UR:'อาการแปลก เกิดฉับพลัน หายช้า'};
+const TH122={SA:'ภาระ ความเหนื่อยล้า โรคเรื้อรังกำเริบ',MA:'อักเสบ อุบัติเหตุ อาจต้องทำหัตถการ',RA:'ตรวจพบสิ่งผิดปกติ เรื่องยา/อาหาร ความกังวล',KE:'เรื่องเฉียบพลัน เปลี่ยนแผนกะทันหัน',JU:'ฟื้นตัว ได้รับการดูแลดี มีโชค'};
+const W122={SA:3,RA:2.4,KE:1,MA:1.3,JU:2.2}, ORB122={SA:3,RA:3,KE:2,MA:2,JU:3};
+const ST122={y:5};
+function pdSet122(nat){ const L=sgn(nat.pos.LA), hS=houseOf(nat.pos.SU,L), day=hS>=7&&hS<=12, lk=n=>PNUM2K[LORD[(L+n-1)%12]];
+  const seven=['SU','MO','MA','ME','JU','VE','SA'], mk=seven.map(k=>[k,nat.pos[k]%30]).sort((a,b)=>b[1]-a[1])[4][0];
+  return {L,day,P:[{who:'พ่อ',h:9,S:[...new Set(['SU',lk(9),lk(10),day?'SU':'SA'])]},{who:'แม่',h:4,S:[...new Set(['MO',lk(4),day?'VE':'MO',mk])]}]}; }
+function pdNatal122(nat,p,L){ const hp=(L+p.h-1)%12, h6=(hp+5)%12, h8=(hp+7)%12, out=[], body=new Set();
+  const occ=s=>ORDER.filter(k=>sgn(nat.pos[k])===s); const l6=PNUM2K[LORD[h6]], l8=PNUM2K[LORD[h8]];
+  out.push({t:`ภพที่ ๖ จากภพ${p.who} = ราศี${SIGNS[h6]} (เรื่องสุขภาพของ${p.who}) เจ้าเรือนคือ${TH[l6]}`,d:PD122[l6],b:BODY27[h6]?BODY27[h6].r:''});
+  occ(h6).forEach(k=>out.push({t:`${TH[k]}อยู่ในภพสุขภาพของ${p.who}`,d:PD122[k]}));
+  occ(h8).filter(k=>['SA','MA','RA','KE','UR'].includes(k)).forEach(k=>out.push({t:`${TH[k]}อยู่ภพที่ ๘ จากภพ${p.who} (ช่วงเปลี่ยนผ่านสำคัญ)`,d:PD122[k]}));
+  p.S.forEach(k=>{ const s=sgn(nat.pos[k]), st=std(k,nat.pos[k])||'', h=houseOf(nat.pos[k],L), ml=ORDER.filter(q=>['SA','MA','RA','KE','UR'].includes(q)&&q!==k&&(sgn(nat.pos[q])===s||sgn(nat.pos[q])===(s+6)%12));
+    if(/นิจ|ประ/.test(st)||[6,8,12].includes(h)||ml.length) out.push({t:`ดาว${p.who} ${TH[k]} ${[/นิจ|ประ/.test(st)?st:'',[6,8,12].includes(h)?'อยู่ภพ'+HOUSES[h-1]:'',ml.length?'ถูก'+ml.map(q=>TH[q]).join(' ')+'กุม/เล็ง':''].filter(Boolean).join(' · ')}`,d:PD122[k]+(ml.length?' · '+ml.map(q=>PD122[q]).join(' · '):''),b:BODY27[s]?BODY27[s].r:''}); });
+  return {out,h6,h8,hp}; }
+function pdScan122(nat,p,N,days){ const T0=getTransit(), h0=horaOf(T0), K=['SA','RA','KE','MA','JU'], risk=new Float32Array(days), good=new Float32Array(days), hits=[];
+  const open={}; const sig=p.S.map(k=>[k,nat.pos[k]]);
+  for(let d=0;d<days;d++){ const h=h0+d; for(const k of K){ const x=posH(h,k), s=sgn(x);
+      for(const [q,nx] of sig){ for(const ang of k==='JU'?[0,120,240]:[0,180]){ const df=Math.abs(((x-nx-ang)%360+540)%360-180); const key=k+q+ang; if(df<=ORB122[k]){ const w=W122[k]*(1-df/ORB122[k]*.6); if(k==='JU') good[d]+=w; else risk[d]+=w*(ang?0.75:1); const o=open[key]||(open[key]={k,q,ang,a:d,pk:d,pd:df,kind:'sig'}); o.b=d; if(df<o.pd){ o.pd=df; o.pk=d; } } else if(open[key]){ hits.push(open[key]); delete open[key]; } } }
+      for(const [hs,lab,kind] of [[N.h6,'ภพสุขภาพ','h6'],[N.h8,'ภพเปลี่ยนผ่าน','h8'],[N.hp,'ภพ'+p.who,'hp']]){ if(k==='MA') continue; const key=k+kind; const on=s===hs&&(k!=='JU'||kind==='hp');
+        if(on){ const w=(k==='SA'?2:k==='JU'?1.6:1.4)*(kind==='h8'?1.1:1); if(k==='JU') good[d]+=w; else risk[d]+=w; const o=open[key]||(open[key]={k,kind,lab,a:d,pk:d,b:d}); o.b=d; } else if(open[key]){ hits.push(open[key]); delete open[key]; } } } }
+  Object.values(open).forEach(o=>hits.push(o)); return {risk,good,hits,T0}; }
+function pdWin122(arr,th,minLen){ const w=[]; let a=null, pk=0, pv=0; for(let i=0;i<=arr.length;i++){ const v=i<arr.length?arr[i]:0; if(v>=th){ if(a==null){ a=i; pv=-1; } if(v>pv){ pv=v; pk=i; } } else if(a!=null){ if(i-a>=minLen) w.push({a,b:i-1,pk,pv}); a=null; } } return w; }
+function pdHTML122(nat){ const D=pdSet122(nat), days=Math.round(ST122.y*365.25), T0=getTransit(), dd=i=>{ const t=new Date(T0.getTime()+i*864e5); return `${t.getDate()} ${MONTHS_TH[t.getMonth()].slice(0,3)} ${String(t.getFullYear()+543).slice(2)}`; };
+  let html=`<div class="pdh122"><b>วินิจฉัยเชิงลึก — เรื่องที่น่าจะเกิดกับพ่อแม่ และช่วงเวลา</b><span class="pdy122">${[2,5,10].map(y=>`<button type="button" data-y="${y}" class="${ST122.y===y?'on':''}">${y} ปี</button>`).join('')}</span></div>`;
+  for(const p of D.P){ const N=pdNatal122(nat,p,D.L), S=pdScan122(nat,p,N,days), R=S.risk, G=S.good;
+    const wr=pdWin122(R,2.6,3).sort((a,b)=>b.pv-a.pv).slice(0,6).sort((a,b)=>a.a-b.a), wg=pdWin122(G,2,5).sort((a,b)=>b.pv-a.pv).slice(0,4).sort((a,b)=>a.a-b.a);
+    const why=(a,b)=>S.hits.filter(h=>h.b>=a&&h.a<=b).map(h=>h.kind==='sig'?`${TH[h.k]}จร${h.ang?'เล็ง':'ทับ'}${TH[h.q]}เดิม (ดาว${p.who}) · พีค ${dd(h.pk)} → ${TH122[h.k]||''}`:`${TH[h.k]}จรเข้า${h.lab}ของ${p.who} (ราศี${SIGNS[h.kind==='h6'?N.h6:h.kind==='h8'?N.h8:N.hp]})${h.kind==='h6'&&BODY27[N.h6]?' → ระวังบริเวณ '+BODY27[N.h6].r:h.kind==='h8'?' → ช่วงเปลี่ยนผ่าน อาจย้ายที่อยู่ เข้ารับการรักษา หรือปรับวิถีชีวิต':''}`);
+    const W=640,H=120,pl=26,pb=20, mx=Math.max(4,...R,...G), x=i=>pl+(W-pl-6)*i/(days-1), y=v=>H-pb-(v/mx)*(H-pb-8);
+    const ln=(A)=>{ let d='', st=Math.max(1,Math.floor(days/320)); for(let i=0;i<days;i+=st) d+=(i?'L':'M')+x(i).toFixed(1)+' '+y(A[i]).toFixed(1); return d; };
+    let ticks=''; for(let yy=0;yy<=ST122.y;yy++){ const i=Math.min(days-1,Math.round(yy*365.25)); const t=new Date(T0.getTime()+i*864e5); ticks+=`<line x1="${x(i)}" x2="${x(i)}" y1="8" y2="${H-pb}" stroke="var(--line)" stroke-width=".5"/><text x="${x(i)}" y="${H-6}" font-size="9" text-anchor="middle" fill="var(--muted)">${t.getFullYear()+543}</text>`; }
+    const sh=wr.map(w=>`<rect x="${x(w.a)}" y="8" width="${Math.max(2,x(w.b)-x(w.a))}" height="${H-pb-8}" fill="#d9534f" opacity=".12"/><circle cx="${x(w.pk)}" cy="${y(w.pv)}" r="3" fill="#d9534f"/>`).join('');
+    html+=`<div class="pdc122"><div class="bh70st">${p.who} <span class="note">ดาวแทน${p.who}ที่ใช้: ${p.S.map(k=>TH[k]).join(' · ')}</span></div>
+     <div class="pdn122"><b>แนวโน้มจากดวงเดิม</b><ul class="lb88l">${N.out.map(o=>`<li>${o.t}${o.d?` <span class="note">→ ${o.d}</span>`:''}${o.b?` <span class="note">· บริเวณ ${o.b}</span>`:''}</li>`).join('')}</ul></div>
+     <svg viewBox="0 0 ${W} ${H}" class="pdg122">${ticks}${sh}<path d="${ln(G)}" fill="none" stroke="#3fa96b" stroke-width="1.6"/><path d="${ln(R)}" fill="none" stroke="#d9534f" stroke-width="1.8"/></svg>
+     <div class="nk72lg note"><span><i style="background:#d9534f"></i>แรงกดดัน (ควรดูแล)</span><span><i style="background:#3fa96b"></i>แรงหนุน (ฟื้นตัว/โชค)</span></div>
+     <div class="pdt122">${wr.length?wr.map(w=>`<div class="ac28 ${w.pv>=4?'as26b':'as26m'}">${B36(w.pv>=4?'b':'m',w.pv>=4?'ช่วงเสี่ยงซ้อน':'ควรดูแล')} <b>${dd(w.a)} – ${dd(w.b)}</b> · พีคราว <b>${dd(w.pk)}</b><ul>${[...new Set(why(w.a,w.b).filter(t=>!/^พฤหัส/.test(t)))].slice(0,4).map(t=>`<li>${t}</li>`).join('')}</ul></div>`).join(''):'<p class="note">ไม่มีช่วงแรงกดดันเด่นในระยะนี้</p>'}
+     ${wg.map(w=>`<div class="ac28 as26g">${B36('g','ช่วงดี')} <b>${dd(w.a)} – ${dd(w.b)}</b> · ${[...new Set(why(w.a,w.b).filter(t=>/^พฤหัสจร/.test(t)))].slice(0,2).join(' · ')||'พฤหัสจรหนุน'}</div>`).join('')}</div></div>`; }
+  html+=`<p class="note">วิธีรวมสูตร: (๑) ดาวแทนพ่อแม่หลายสำนัก (ธรรมชาติ ภารตะ เจ้าเรือนที่ ๙/๑๐/๔ มาตรุการก) (๒) ภพจากภพ — ภพที่ ๖ จากภพพ่อแม่ = สุขภาพ ภพที่ ๘ = ช่วงเปลี่ยนผ่าน (๓) ราศีกาลบุรุษบอกบริเวณร่างกาย และธรรมชาติดาวบอกระบบ (๔) ดาวจรเสาร์ ราหู เกตุ อังคาร ทับ/เล็งดาวแทนพ่อแม่ หรือเข้าภพสุขภาพ/ภพเปลี่ยนผ่าน = แรงกดดัน · พฤหัสทับหรือตรีโกณ = แรงหนุน · คะแนนรายวันรวมทุกสูตร ช่วงที่หลายสูตรซ้อนกันเรียก "ช่วงเสี่ยงซ้อน" · ใช้เป็นสัญญาณเตือนให้พาไปตรวจสุขภาพและดูแลใกล้ชิด ไม่ใช่การวินิจฉัยทางการแพทย์ และไม่ได้ทำนายอายุขัย</p>`;
+  return `<div id="pd122">${html}</div>`; }
+{ const _p=parentHTML43; parentHTML43=function(nat){ let r=_p.apply(this,arguments); try{ r+=pdHTML122(nat); }catch(e){ console.error(e); r+='<p class="note">⚠ '+e.message+'</p>'; } return r; }; }
+document.addEventListener('click',e=>{ const b=e.target.closest('#pd122 .pdy122 button'); if(!b) return; ST122.y=+b.dataset.y; const box=document.getElementById('pd122'); box.style.opacity='.5'; setTimeout(()=>{ try{ box.outerHTML=pdHTML122(WSTATE.nat); }catch(err){ console.error(err); } },20); });
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
   try{ rhythm77(); }catch(e){ console.error(e); document.getElementById('rh77Out').innerHTML='<p class="note">⚠ '+e.message+'</p>'; } }
