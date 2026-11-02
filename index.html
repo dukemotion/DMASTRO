@@ -147,6 +147,18 @@ header{flex-wrap:wrap}.brand{flex:0 0 100%;width:100%;font-size:14px;font-weight
 :root[data-theme="dark"] *{scrollbar-color:#244055 transparent;scrollbar-width:thin}
 ::selection{background:rgba(156,203,232,.35)}
 svg.lag140{display:inline-block;overflow:visible}
+.orb140 .so140{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 10px;font-size:12px;color:var(--muted)} .orb140 .so140>span{display:inline-flex;align-items:center;gap:5px;margin-right:2px}
+.orb140 .so140 button,.orb140 .tlh140 button{display:inline-flex!important;align-items:center;gap:5px;width:auto!important;margin:0!important;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:99px;padding:4px 11px;font:inherit;font-size:12px;cursor:pointer}
+.orb140 .so140 button.on,.orb140 .tlh140 button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.orb140 .lg140 i.dt{width:8px;height:8px;border-radius:50%;border:1.5px solid var(--ink);background:transparent;opacity:1}
+.orb140 .tlh140{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin:16px 0 8px} .orb140 .tlh140 h4{margin:0;font-size:14px;display:flex;align-items:center;gap:6px;flex-wrap:wrap} .orb140 .tlh140 h4 small{color:var(--muted);font-weight:400;font-size:12px}
+.orb140 .tv140{position:relative;padding-left:66px} .orb140 .tv140:before{content:'';position:absolute;left:84px;top:4px;bottom:4px;width:2px;background:linear-gradient(var(--gold2),var(--line));border-radius:2px}
+.orb140 .td140{position:absolute;left:0;width:56px;text-align:right;display:flex;flex-direction:column;line-height:1.1;margin-top:6px} .orb140 .td140 b{font-size:17px;color:var(--gold2)} .orb140 .td140 small{font-size:10.5px;color:var(--muted)}
+.orb140 .ti140{position:relative;display:flex;align-items:center;gap:8px;padding:6px 8px 6px 34px;margin:4px 0;border-radius:10px} .orb140 .ti140:hover{background:rgba(127,127,127,.08)}
+.orb140 .ti140>i{position:absolute;left:12px;top:50%;width:12px;height:12px;margin-top:-6px;border-radius:50%;background:var(--c);box-shadow:0 0 0 3px var(--panel)}
+.orb140 .ti140>div{display:flex;flex-direction:column;font-size:13px;gap:2px} .orb140 .ti140>div small{color:var(--muted);font-size:11.5px} .orb140 .ti140.past{opacity:.55}
+.orb140 .ti140 .sg140{font-size:11.5px;padding:0 7px}
+.orb140 .ti140 .ln140{display:flex;flex-wrap:wrap;align-items:center;gap:5px}
 div.agebadge .mw140 button.ab.orb140b{border:1px solid rgba(236,220,180,.45)!important;border-radius:12px!important;background:rgba(255,255,255,.04)!important;padding:6px 9px!important;min-width:62px}
 div.agebadge .mw140 button.ab.orb140b:hover{border-color:var(--gold2)!important}
 .mw140{display:flex;align-items:center;gap:8px;min-width:0;max-width:100%}
@@ -8288,7 +8300,8 @@ const CHG110=[
  {v:'137',d:'2026-11-02',k:'n',t:'ดาวศุกร์ ๓ มิติ — การวางแผน การเงิน ความรัก',x:'แผงใหม่ในหมวดคู่ครองและการเงิน: ความหมายศุกร์ทั้ง ๑๒ ราศีแยก ๓ ด้าน (การวางแผน/ความคิด · การเงิน · ความรัก) พร้อมไอคอน SVG และป้ายเด่น/กลาง/ระวัง · รวมความหมายราศีกับภพที่ศุกร์สถิตตามหลักบทความ · อาชีพที่ศุกร์ส่งเสริม (ศิลปะ การแสดง พิธีกร ที่ปรึกษา การเงิน) ตามภพและเรือนที่ศุกร์ครอง · ศุกร์จรตอนนี้ · ตารางศุกร์ทั้ง ๑๒ ราศี · ขั้นศุกร์ในวิเคราะห์ความรัก ๗ ขั้นมีสรุปศุกร์ตามราศีเพิ่ม',c:['love','money'],p:['ve137P']},
  {v:'138',d:'2026-11-02',k:'n',t:'ปฏิทินโหราศาสตร์รายเดือน (ปฏิทินดาราศาสตร์) — นิรายนะ ลาหิรี / สุริยยาตร์',x:'แผงใหม่ในหมวดปฏิทินดวง: ตารางสมผุสดาวทุกวันของเดือน ณ เวลาที่เลือก (ค่าเริ่ม 07:00 น.) ครบ อาทิตย์ จันทร์ อังคาร พุธ พฤหัส ศุกร์ เสาร์ ราหูกลาง/ราหูจริง เกตุไทย/เกตุจริง มฤตยู เนปจูน พลูโต · เครื่องหมาย พ.(พักร์) ม.(มนท์) ส.(เสริด) · เวลาจันทร์ยกราศี · ฤกษ์และดิถีพร้อมเวลาเต็ม · ข้างขึ้นแรม เดือนจันทรคติ · หัวตารางบอกปีนักษัตร จ.ศ. ม.ศ. ร.ศ. และค่าอายนางศะลาหิรี · สรุปเหตุการณ์ประจำเดือน (ข้างจันทร์ ๔ ช่วง ดาวย้ายราศี ดาวหยุดเปลี่ยนทิศ) · สลับระบบลาหิรีกับสุริยยาตร์ · แตะแถวเพื่อตั้งเป็นวันจร · ดาวน์โหลด CSV',c:['cal'],p:['eph138P'],go:'#eph138P'},
  {v:'139',d:'2026-11-02',k:'n',t:'ปฏิทินดาราศาสตร์ สายนะวิธี (Tropical) + ปรากฏการณ์ท้องฟ้า · นามศาสตร์เพิ่มเลขรหัสชีวิตและอักษรเทพเจ้า ผีหลวง หลาวเหล็ก',x:'ปฏิทินรายเดือนเพิ่มโหมดที่ ๓ "สายนะ": Sid.Time · อาทิตย์และเดคลิเนชัน · จันทร์ ละติจูด เดคลิเนชัน · ราหูเฉลี่ย · ดาวเคราะห์ ๘ · ดาวเคราะห์น้อย อีริส ไครอน จูโน เวสต้า พาลลาส เซเรส · แบล็คมูน · ดาวยูเรเนียน ๘ (เปิดปิดกลุ่มคอลัมน์ได้) · เครื่องหมาย R/S · การ์ดค่าดาราศาสตร์ (Julian Date, Delta T, Obliquity, Nutation, อายนางศะลาหิรีและฟาแกน) · ข้างจันทร์และอุปราคา · ดาวยก · จันทร์ยก · ปรากฏการณ์ท้องฟ้าคำนวณเอง (จันทร์ใกล้ดาวเคราะห์และดาวฤกษ์ ดาวเคราะห์ใกล้กัน จุดราหูเกตุ จันทร์ปัดเหนือใต้ ใกล้ไกลโลก พุธศุกร์ทิศห่างสุด ร่วมทิศ ดาวเพ็ญ ฝนดาวตก) · ดาวน์โหลด CSV · หมวดนามศาสตร์เพิ่มหัวข้อ ๘ เลขรหัสชีวิต และ ๙ อักษรเทพเจ้า-เทวดา อักษรผีหลวง อักษรหลาวเหล็ก รวมทั้งในแนวทางตั้งชื่อตามวันเกิด',c:['cal','name94'],p:['eph138P','nm94P','nm94GP'],go:'#eph138P'},
- {v:'140',d:'2026-11-02',k:'n',t:'สัญลักษณ์ลัคนาแบบตำรา และป๊อปอัปอัตราดาวโคจร',x:'เปลี่ยนตัวอักษร "ล" ในผังดวงทุกผัง (ราศีจักร นวางค์ ตรียางค์ ภพ ฯลฯ) เป็นสัญลักษณ์ลัคนาแบบเส้นเขียนม้วนหัว สีแดง ไม่มีเงา · หน้าแรกเพิ่มปุ่มไอคอน "อัตราดาวโคจร" ข้างการ์ดดวงจันทร์ เปิดป๊อปอัป ๒ มุมมอง: (๑) ภาพรวมรายเดือน — แถบเวลาทุกดาวทั้งเดือน แยกสีตามธาตุราศี ขีดพักร์/มนท์ เส้นวันจร และตาราง ราศีต้นเดือน มาตรฐาน การเดิน ย้ายราศีในเดือน (๒) ดูรายดาว — ลัคนาจร จันทร์ อังคาร พุธ พฤหัส ศุกร์ เสาร์ อาทิตย์ ราหู เกตุ มฤตยู แบ่งหมวดดาวเร็ว กลาง ช้า: อยู่ราศีปัจจุบันมาแล้วกี่วัน เหลืออีกกี่วัน ย้ายเมื่อไร ไปราศีใด มาตรฐานดาว การเดินและความเร็วเทียบค่าเฉลี่ย พร้อมลำดับการย้ายราศีถัดไป',c:['natal'],p:[],go:'#ageBadge'}];
+ {v:'140',d:'2026-11-02',k:'n',t:'สัญลักษณ์ลัคนาแบบตำรา และป๊อปอัปอัตราดาวโคจร',x:'เปลี่ยนตัวอักษร "ล" ในผังดวงทุกผัง (ราศีจักร นวางค์ ตรียางค์ ภพ ฯลฯ) เป็นสัญลักษณ์ลัคนาแบบเส้นเขียนม้วนหัว สีแดง ไม่มีเงา · หน้าแรกเพิ่มปุ่มไอคอน "อัตราดาวโคจร" ข้างการ์ดดวงจันทร์ เปิดป๊อปอัป ๒ มุมมอง: (๑) ภาพรวมรายเดือน — แถบเวลาทุกดาวทั้งเดือน แยกสีตามธาตุราศี ขีดพักร์/มนท์ เส้นวันจร และตาราง ราศีต้นเดือน มาตรฐาน การเดิน ย้ายราศีในเดือน (๒) ดูรายดาว — ลัคนาจร จันทร์ อังคาร พุธ พฤหัส ศุกร์ เสาร์ อาทิตย์ ราหู เกตุ มฤตยู แบ่งหมวดดาวเร็ว กลาง ช้า: อยู่ราศีปัจจุบันมาแล้วกี่วัน เหลืออีกกี่วัน ย้ายเมื่อไร ไปราศีใด มาตรฐานดาว การเดินและความเร็วเทียบค่าเฉลี่ย พร้อมลำดับการย้ายราศีถัดไป',c:['natal'],p:[],go:'#ageBadge'},
+ {v:'140.1',d:'2026-11-02',k:'u',t:'อัตราดาวโคจร: เรียงลำดับดาวได้ และเส้นไทม์ไลน์เหตุการณ์',x:'ภาพรวมรายเดือนเพิ่มปุ่มเรียงตาม ลำดับดาว / เหตุการณ์ก่อน → หลัง / ย้ายหรือเปลี่ยนบ่อยสุด / เดินเร็ว → ช้า (ใช้ทั้งแถบเวลาและตาราง) · แถบเวลามีเส้นกริดรายวัน เส้นหนาวันอาทิตย์ จุดบอกเวลาย้ายราศี · เพิ่มไทม์ไลน์แนวตั้งเรียงเหตุการณ์ตามเวลา ทั้งย้ายราศีและเปลี่ยนการเดิน (พักร์ มนท์ เสริด) จัดกลุ่มตามวัน เหตุการณ์ที่ผ่านแล้วจางลง เลือกรวมหรือซ่อนจันทร์ย้ายราศีได้',c:['natal'],p:[],go:'#ageBadge'}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
@@ -9189,7 +9202,7 @@ function sv128init(){ const nb=document.querySelector('#rasi')&&document.querySe
     if(k==='all') sv128save(['rasi','nav','tri','taksa'].map(part128),'จักรราศี นวางค์ ตรียางค์ ทักษา'); else { const p=part128(k); sv128save([p],SVB128.find(x=>x[0]===k)[1]); } }); }
 setTimeout(sv128init,0);
 
-const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v139','v140','v1_20','v21','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
+const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v139','v140','v140.1','v1_20','v21','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
 // ───────── v129: หน้าอัปเดตระบบแบบบทความ — หัวข้อ · อัปเดตอะไร · รายละเอียด · ภาพหน้าจอ · ปุ่มลัดไปหน้านั้น · ปุ่มอัปเดตบนเมนูบน ─────────
 // ภาพหน้าจอสร้างอัตโนมัติด้วยสคริปต์ tools/shots129.js (ไล่ทุกรายการใน CHG110 ที่ยังไม่มีภาพ) แล้วบันทึกเป็น shots/<v>.webp — SHOTS129 คือรายชื่อไฟล์ที่มีอยู่
 // เป้าหมายของแต่ละรายการ: e.go (selector ที่อยู่นอกหมวด) → e.p[0] (แผงในหมวด) → หมวด e.c[0]
@@ -10192,6 +10205,54 @@ function render140(){ const P=document.getElementById('orb140'); if(!P) return; 
   setTimeout(()=>{ const B=P.querySelector(".bdy140"); try{ B.innerHTML=ST140.tab==='m'?monthHTML140():oneHTML140(); }catch(e){ console.error(e); B.innerHTML='<p class="note">คำนวณไม่สำเร็จ</p>'; } },10); }
 { const _ab=ageBadge; ageBadge=function(){ const h=_ab.apply(this,arguments), i=h.lastIndexOf('<div class="ab abMoon"'); const btn=`<button type="button" class="ab orb140b" data-orb140 title="อัตราดาวโคจร — ดาวอยู่ราศีใด มาตรฐาน การเดิน ย้ายราศีเมื่อไร">${i140(IC140.orb,24)}<span>อัตรา<br>ดาวโคจร</span></button>`; return i>=0?h.slice(0,i)+'<div class="mw140">'+h.slice(i)+btn+'</div>':h+btn; }; }
 document.addEventListener('click',e=>{ const b=e.target.closest&&e.target.closest('[data-orb140]'); if(!b) return; e.preventDefault(); e.stopPropagation(); open140(); },true);
+
+// ───────── v140.1: ภาพรวมรายเดือน — จัดเรียงดาว (ลำดับดาว / เหตุการณ์ก่อน-หลัง / ย้ายบ่อย / เร็ว-ช้า) + เส้นไทม์ไลน์เหตุการณ์ตามเวลา
+ST140.sort='std'; ST140.moon=0;
+const MCN140={'พ.':'พักร์ (ถอยหลัง)','ม.':'มนท์ (เดินช้า)','ส.':'เสริด (เดินเร็ว)','':'เดินปกติ'};
+function evts140(y,m){ const R=month140(y,m), L=[];
+  for(const k of Object.keys(R.out)){ const o=R.out[k];
+    o.ev.forEach(e=>L.push({k,t:e.t,ty:'in',s:e.s,mc:e.mc}));
+    if(!/RA|KE/.test(k)) for(let i=1;i<o.days.length;i++){ const a=o.days[i-1].mc, b=o.days[i].mc; if(a!==b) L.push({k,t:new Date(y,m,i+1,12),ty:'mv',from:a,to:b}); } }
+  return L.sort((a,b)=>a.t-b.t); }
+function order140(y,m){ const R=month140(y,m), K=Object.keys(R.out), E=evts140(y,m), s=ST140.sort;
+  if(s==='first'){ const f=k=>{ const e=E.find(x=>x.k===k); return e?e.t.getTime():Infinity; }; return K.slice().sort((a,b)=>f(a)-f(b)||K.indexOf(a)-K.indexOf(b)); }
+  if(s==='count'){ const c=k=>E.filter(x=>x.k===k).length; return K.slice().sort((a,b)=>c(b)-c(a)||K.indexOf(a)-K.indexOf(b)); }
+  if(s==='speed'){ const v=k=>Math.abs(R.out[k].days.reduce((a,q)=>a+q.v,0)/R.out[k].days.length); return K.slice().sort((a,b)=>v(b)-v(a)); }
+  return K; }
+monthHTML140=function(){ const now=getTransit(); if(ST140.y==null){ ST140.y=now.getFullYear(); ST140.m=now.getMonth(); }
+  const {y,m}=ST140, R=month140(y,m), nd=R.nd, W=640, LX=76, cw=(W-LX-6)/nd, rh=28, K=order140(y,m), E=evts140(y,m), H=26+K.length*rh+10;
+  const tdx=(now.getFullYear()===y&&now.getMonth()===m)?LX+cw*(now.getDate()-1)+cw*((now.getHours()+now.getMinutes()/60)/24):null;
+  const xOf=d=>LX+cw*((d.getDate()-1)+(d.getHours()+d.getMinutes()/60)/24);
+  let svg=`<svg class="tl140" viewBox="0 0 ${W} ${H}" width="100%" preserveAspectRatio="xMinYMin meet">`;
+  // เส้นกริดไทม์ไลน์รายวัน (เข้มทุกวันอาทิตย์) + เลขวันที่
+  for(let i=0;i<=nd;i++){ const x=LX+cw*i, d=new Date(y,m,i+1), sun=i<nd&&d.getDay()===0; svg+=`<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="20" y2="${H-6}" stroke="var(--line)" stroke-opacity="${sun?.9:.35}" stroke-width="${sun?1:.6}"/>`; }
+  svg+=`<g font-size="9.5" fill="var(--muted)">${Array.from({length:nd},(_,i)=>{ const d=new Date(y,m,i+1); return `<text x="${(LX+cw*i+cw/2).toFixed(1)}" y="13" text-anchor="middle"${d.getDay()===0?' fill="var(--ret)"':''}>${i+1}</text>`; }).join('')}</g>`;
+  K.forEach((k,j)=>{ const yy=24+j*rh, D=R.out[k].days; svg+=`<text x="4" y="${yy+16}" font-size="11.5" fill="var(--ink)">${TH[k]}</text>`;
+    let i0=0; for(let i=1;i<=nd;i++){ if(i===nd||D[i].s!==D[i0].s){ const x0=LX+cw*i0, w=cw*(i-i0); svg+=`<rect x="${(x0+.5).toFixed(1)}" y="${yy+3}" width="${(w-1).toFixed(1)}" height="${rh-10}" rx="4" fill="${SIGC140[D[i0].s]}" fill-opacity=".26" stroke="${SIGC140[D[i0].s]}" stroke-opacity=".6"/>${w>34?`<text x="${(x0+w/2).toFixed(1)}" y="${yy+16}" font-size="10" text-anchor="middle" fill="var(--ink)">${SIGNS[D[i0].s]}</text>`:w>14?`<text x="${(x0+w/2).toFixed(1)}" y="${yy+16}" font-size="9" text-anchor="middle" fill="var(--ink)">${SIGNS[D[i0].s].slice(0,2)}</text>`:''}`; i0=i; } }
+    D.forEach((q,i)=>{ if(q.mc==='พ.'&&!/RA|KE/.test(k)) svg+=`<rect x="${(LX+cw*i).toFixed(1)}" y="${yy+rh-7}" width="${(cw-0.6).toFixed(1)}" height="3" fill="var(--ret)"/>`; else if(q.mc==='ม.') svg+=`<rect x="${(LX+cw*i).toFixed(1)}" y="${yy+rh-7}" width="${(cw-0.6).toFixed(1)}" height="3" fill="#c98a1b"/>`; });
+    R.out[k].ev.forEach(e=>{ const x=xOf(e.t); svg+=`<circle cx="${x.toFixed(1)}" cy="${yy+3+(rh-10)/2}" r="3" fill="var(--panel)" stroke="var(--ink)" stroke-width="1.2"><title>${TH[k]} ย้ายเข้า${SIGNS[e.s]} ${dtf140(e.t)}</title></circle>`; }); });
+  if(tdx!=null) svg+=`<line x1="${tdx.toFixed(1)}" x2="${tdx.toFixed(1)}" y1="18" y2="${H-6}" stroke="var(--gold)" stroke-width="1.6" stroke-dasharray="3 2"/><text x="${tdx.toFixed(1)}" y="${H-1}" font-size="9" text-anchor="middle" fill="var(--gold)">วันจร</text>`;
+  svg+='</svg>';
+  const SO=[['std','ลำดับดาว'],['first','เหตุการณ์ก่อน → หลัง'],['count','ย้าย/เปลี่ยนบ่อยสุด'],['speed','เดินเร็ว → ช้า']];
+  const sortBar=`<div class="so140"><span>${i140('<path d="M7 4v16M4 17l3 3 3-3M17 20V4M14 7l3-3 3 3"/>',14)} เรียงตาม</span>${SO.map(([v,t])=>`<button type="button" data-s140="${v}" class="${ST140.sort===v?'on':''}">${t}</button>`).join('')}</div>`;
+  const rows=K.map(k=>{ const o=R.out[k], x=o.x0, M=motion(k,o.days[0].v);
+    const evs=o.ev.length>6?`<details><summary>ย้ายราศี ${o.ev.length} ครั้ง</summary>${o.ev.map(e=>`<div class="ev140">${i140(IC140.in,12)} ${SIGNS[e.s]} <small>${dtf140(e.t)}</small></div>`).join('')}</details>`:o.ev.map(e=>`<div class="ev140">${i140(IC140.in,12)} <b>${SIGNS[e.s]}</b>${e.mc?` <span class="bd140 ${e.mc==='พ.'?'b':'m'}">${e.mc}</span>`:''} <small>${dtf140(e.t)}</small></div>`).join('')||'<small class="note">อยู่ราศีเดิมตลอดเดือน</small>';
+    const rr=o.days.filter(q=>q.mc==='พ.').length;
+    return `<tr><td>${ico140(k,24)}<b>${TH[k]}</b></td><td><span class="sg140" style="--s:${SIGC140[sgn(x)]}">${SIGNS[sgn(x)]}</span> <small>${fmt(x).split(' ')[0]}</small></td><td>${stdB140(k,x)}</td><td><span class="bd140 ${M.code==='พ.'?'b':M.code==='ม.'?'m':M.code==='ส.'?'g':'n'}">${M.code?M.code+' ':''}${M.name}</span>${rr&&!/RA|KE/.test(k)?`<small class="note"> · พักร์ ${rr} วัน</small>`:''}</td><td>${evs}</td></tr>`; }).join('');
+  // ไทม์ไลน์ตามเวลา (แนวตั้ง)
+  const TE=E.filter(e=>ST140.moon||e.k!=='MO'); let lastD='';
+  const tl=TE.map(e=>{ const dk=e.t.getDate(), head=dk!==lastD?`<div class="td140"><b>${dk}</b><small>${['อา.','จ.','อ.','พ.','พฤ.','ศ.','ส.'][e.t.getDay()]} ${MONTHS_TH[m].slice(0,3)}.</small></div>`:''; lastD=dk;
+    const past=e.t<now, txt=e.ty==='in'?`<b>${TH[e.k]}</b> ย้ายเข้า <span class="sg140" style="--s:${SIGC140[e.s]}">${SIGNS[e.s]}</span>${e.mc?` <span class="bd140 ${e.mc==='พ.'?'b':'m'}">ขณะ${MCN140[e.mc]}</span>`:''}`
+      :`<b>${TH[e.k]}</b> ${e.to==='พ.'?'เริ่ม':e.from==='พ.'?'พ้นพักร์ →':'เปลี่ยนเป็น'} <span class="bd140 ${e.to==='พ.'?'b':e.to==='ม.'?'m':e.to==='ส.'?'g':'n'}">${MCN140[e.to]}</span>`;
+    return `${head}<div class="ti140${past?' past':''}" style="--c:${COL140[e.k]}"><i></i>${ico140(e.k,22)}<div><span class="ln140">${txt}</span><small>${e.ty==='in'?dtf140(e.t):'ราววันที่ '+e.t.getDate()+' (ตรวจรายวันเวลาเที่ยง)'}</small></div></div>`; }).join('');
+  return `<div class="mn140"><button type="button" class="nb140" data-o140="prev">${i140(IC140.prev)}</button><b>${MONTHS_TH[m]} ${y+543}</b><button type="button" class="nb140" data-o140="next">${i140(IC140.next)}</button><button type="button" class="nb140 t" data-o140="now">${i140(IC140.cal,14)} เดือนของวันจร</button></div>
+   ${sortBar}
+   <div class="tlw140">${svg}<div class="lg140"><span><i style="background:#e0644f"></i>ไฟ</span><span><i style="background:#6aa84f"></i>ดิน</span><span><i style="background:#e8b33d"></i>ลม</span><span><i style="background:#5b8def"></i>น้ำ</span><span><i class="ln" style="background:var(--ret)"></i>พักร์</span><span><i class="ln" style="background:#c98a1b"></i>มนท์</span><span><i class="dt"></i>จุดย้ายราศี</span>${tdx!=null?'<span><i class="ln" style="background:var(--gold)"></i>วันจร</span>':''}<span><i class="ln" style="background:var(--line)"></i>เส้นหนาคือวันอาทิตย์</span></div></div>
+   <div class="tw140"><table class="t140"><thead><tr><th>ดาว</th><th>ราศีต้นเดือน</th><th>มาตรฐาน</th><th>การเดิน (ต้นเดือน)</th><th>ย้ายราศีในเดือน</th></tr></thead><tbody>${rows}</tbody></table></div>
+   <div class="tlh140"><h4>${i140(IC140.clock,16)} ไทม์ไลน์เหตุการณ์ ${MONTHS_TH[m]} ${y+543} <small>${TE.length} เหตุการณ์ · เรียงก่อน → หลัง</small></h4><button type="button" data-m140 class="${ST140.moon?'on':''}">${i140(IC140.one,13)} รวมจันทร์ย้ายราศี</button></div>
+   <div class="tv140">${tl||'<p class="note">ไม่มีเหตุการณ์ในเดือนนี้</p>'}</div>`; };
+document.addEventListener('click',e=>{ const b=e.target.closest&&e.target.closest('#orb140 [data-s140],#orb140 [data-m140]'); if(!b) return; e.stopPropagation(); if(b.dataset.s140) ST140.sort=b.dataset.s140; else ST140.moon=ST140.moon?0:1;
+  const B=document.querySelector('#orb140 .bdy140'); if(B){ const st=B.scrollTop; B.innerHTML=monthHTML140(); B.scrollTop=st; } },true);
 
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
