@@ -6794,7 +6794,7 @@ function trHTML89(){ const nat=WSTATE.nat, L=sgn(nat.pos.LA), t0=getTransit(), D
    ${vr?'<div class="ds74f">มีช่วงศุกร์พักรในระยะนี้ — เรื่องรักเก่าอาจย้อนกลับ ไม่ควรตัดสินใจเรื่องสำคัญของความสัมพันธ์ ใช้ทบทวนและปรับความเข้าใจ</div>':''}
    <p class="note">คิดจากศุกร์จรทำมุมกับศุกร์ อังคาร และลัคนาเดิม (เสน่ห์) · อังคารจรทำมุมกับศุกร์และลัคนาเดิม (ความเร่าร้อน) · จันทร์จรผ่านภพตนุ ปุตตะ ปัตนิ ลาภะ หรือเชื่อมศุกร์เดิม (บรรยากาศคืนนั้น) · สีประจำวันของคืนนั้นตามทักษา ถ้าเป็นสีกาลกิณีจะเตือนให้เลี่ยง</p>`; }
 function sxRun89(){ if(!WSTATE||!WSTATE.nat) return; const set=(id,f)=>{ const e=document.getElementById(id); if(e) try{ e.innerHTML=f(); }catch(err){ console.error(err); e.innerHTML='<p class="note">⚠ '+err.message+'</p>'; } };
-  set('sxn89Out',natHTML89); set('sxc89Out',coupleHTML89); set('sxt89Out',trHTML89); const b=document.getElementById('sxB'); if(b){ b.value=SX89.b; b.onchange=()=>{ SX89.b=b.value; set('sxc89Out',coupleHTML89); const b2=document.getElementById('sxB'); if(b2){ b2.value=SX89.b; b2.onchange=b.onchange; } }; } }
+  set('sxn89Out',natHTML89); set('sxc89Out',coupleHTML89); set('sxt89Out',trHTML89); const b=document.getElementById('sxB'); if(b) b.value=SX89.b; const box=document.getElementById('sxc89Out'); if(box&&!box._d89){ box._d89=1; box.addEventListener('change',e=>{ const t=e.target; if(!t||t.id!=='sxB') return; SX89.b=t.value; box.style.opacity='.55'; setTimeout(()=>{ set('sxc89Out',coupleHTML89); const n=document.getElementById('sxB'); if(n) n.value=SX89.b; box.style.opacity=''; },20); }); } }
 { const _s89=cat29Show; cat29Show=function(id,sc){ const r=_s89.apply(this,arguments); if(id==='desire'||id==='love') setTimeout(sxRun89,0); return r; }; }
 { const _c89=compute; compute=function(){ const r=_c89.apply(this,arguments); const p=document.getElementById('sxn89P'); if(p&&p.style.display!=='none'){ const k=WSTATE.bt.getTime()+'|'+getTransit().toDateString(); if(k!==window._s89k){ window._s89k=k; setTimeout(sxRun89,40); } } return r; }; }
 
@@ -8011,7 +8011,8 @@ const CHG110=[
  {v:'108',d:'2026-11-02',k:'u',t:'พยากรณ์จรระบบหมอเถา',x:'เกณฑ์ชันษาจร · ภพจร · ตนุเศษจรปี/เดือน · ตรีเทพ · ดาวเทียม · จรวัย',c:['tm106'],p:['mt108P']},
  {v:'109',d:'2026-11-02',k:'u',t:'ดาวผสมดาว · บุตร · ตั้งชื่อแบบโหร',x:'พจนานุกรมดาวผสมดาว · ปุตตะจรและเพศบุตร · กฎตั้งชื่อ ๕ ข้อ',c:['natal','kids','name94'],p:['dm109P','kid109P','nm109P']},
  {v:'110',d:'2026-11-02',k:'n',t:'หน้าอัปเดตระบบ',x:'ประวัติเวอร์ชันทั้งหมด · badge NEW/อัปเดต บนเมนูและแผง',c:['upd110']},
- {v:'111',d:'2026-11-02',k:'n',t:'โหราศาสตร์แผนที่ (Astro*Carto*Graphy)',x:'เส้น AC MC DC IC ของดาว ๑๑ ดวงบนแผนที่โลก · จุดตัด · ดาวจรเทียบแผนที่ · จัดอันดับเมืองตามเรื่อง · ลัคนาย้ายถิ่นแบบราศีไทย',c:['acg111']}];
+ {v:'111',d:'2026-11-02',k:'n',t:'โหราศาสตร์แผนที่ (Astro*Carto*Graphy)',x:'เส้น AC MC DC IC ของดาว ๑๑ ดวงบนแผนที่โลก · จุดตัด · ดาวจรเทียบแผนที่ · จัดอันดับเมืองตามเรื่อง · ลัคนาย้ายถิ่นแบบราศีไทย',c:['acg111']},
+ {v:'111.1',d:'2026-11-02',k:'f',t:'แก้เมนูเลือกดวงคู่รักในเคมีคู่รัก',x:'เลือกดวงคู่ได้ทุกครั้ง ไม่ค้างที่ดวงแรก · แสดงสถานะกำลังคำนวณ',c:['desire','love']}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
