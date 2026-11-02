@@ -146,6 +146,16 @@ header{flex-wrap:wrap}.brand{flex:0 0 100%;width:100%;font-size:14px;font-weight
 :root[data-theme="dark"] #tpop{background:rgba(13,26,38,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--edge75b);border-radius:18px;box-shadow:0 24px 60px -16px rgba(0,0,0,.85)}
 :root[data-theme="dark"] *{scrollbar-color:#244055 transparent;scrollbar-width:thin}
 ::selection{background:rgba(156,203,232,.35)}
+.evt118{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}#ev118P .evt118 button,#ev118P .tc118 button{width:auto!important;flex:0 0 auto;margin:0!important;border:1px solid var(--line);background:transparent;color:inherit;border-radius:8px;padding:5px 12px;font:inherit;font-size:13px;cursor:pointer;opacity:.65;min-height:0!important}
+#ev118P .evt118 button.on,#ev118P .tc118 button.on{opacity:1;background:rgba(156,203,232,.16);border-color:#9ccbe8}
+.evf118{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:flex-end}.evf118 label{display:flex;flex-direction:column;gap:3px;font-size:12px;color:var(--muted)}.evf118 label:has(select){flex-direction:row;align-items:center;flex-wrap:wrap;gap:6px;color:var(--muted)}
+.evf118 input,.evf118 select{width:auto!important;min-width:0;font-size:13.5px!important;padding:6px 10px!important;min-height:36px;box-sizing:border-box}.evf118 select{max-width:200px}.evf118 select option{color:#e8f0f6;background:#0d1a26}
+#ev118P .go118{width:auto!important;margin:0!important;border:1px solid #ffd166;background:rgba(255,209,102,.14);color:inherit;border-radius:8px;padding:7px 14px;font:inherit;font-size:13px;cursor:pointer}#ev118P .rs118{width:auto!important;margin:0!important;border:1px solid var(--line);background:transparent;color:inherit;border-radius:8px;padding:7px 12px;font:inherit;font-size:12.5px;cursor:pointer;opacity:.8}
+#ev118out{margin-top:10px}.tc118{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0}
+.term118{background:#050c08;border:1px solid #1d3a2a;border-radius:10px;padding:10px 12px;height:320px;overflow:auto;font-family:"SFMono-Regular",Menlo,Consolas,"Courier New",monospace,Kanit;font-size:12.5px;line-height:1.6;color:#8ef0a8;box-shadow:inset 0 0 30px rgba(0,255,120,.05)}
+.ln118{cursor:pointer;padding:1px 4px;border-radius:4px;white-space:pre-wrap;word-break:break-word}.ln118:hover{background:rgba(142,240,168,.08)}.ln118.sel{background:rgba(255,209,102,.15)}
+.ln118.g{color:#7CFC9A}.ln118.b{color:#ff8a80}.ln118.m{color:#ffd88a}.ln118.d{color:#6fb7c9;opacity:.85}.ln118.h{color:#e8f0f6;font-weight:600}.ts118{color:#4f8a66}.gt118{color:#3fd17a}
+.cur118{display:inline-block;width:8px;height:15px;background:#8ef0a8;vertical-align:-2px;animation:cb118 1s steps(1) infinite;margin-left:4px}@keyframes cb118{50%{opacity:0}}
 #tkFloat117{position:fixed;right:12px;bottom:84px;z-index:9000;width:min(360px,calc(100vw - 24px));max-height:70vh;overflow:auto;background:rgba(10,24,36,.96);border:1px solid rgba(255,209,102,.55);border-radius:14px;padding:8px;box-shadow:0 12px 36px rgba(0,0,0,.5);opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .2s,transform .2s;color:#e8f0f6}
 #tkFloat117.on{opacity:1;transform:none;pointer-events:auto}.tkfh117{display:flex;align-items:center;gap:8px;font-size:12.5px;margin-bottom:6px}.tkfh117 b{flex:1;font-weight:500}
 #tkFloat117 .tkfx117{width:26px!important;height:26px;padding:0!important;display:flex!important;align-items:center;justify-content:center;border-radius:6px;border:1px solid var(--line);background:transparent;color:inherit;cursor:pointer;flex:0 0 auto;margin:0!important;min-height:0!important}
@@ -797,6 +807,7 @@ img,svg{max-width:100%}
 <input type="range" id="agR" min="0" max="100" step="1" value="0"><input type="number" id="agY" min="0" max="120" value="0"><span class="abl">ปี</span><select id="agM"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option></select><span class="abl">เดือน</span>
 <button type="button" class="ag" data-ag="1" title="ถัดไป 1 เดือน">เดือน ▶</button><button type="button" class="ag" data-ag="12" title="ถัดไป 1 ปี">ปี ▶</button><span id="agInfo" class="abl"></span></div><div id="hoverInfo" class="note" style="min-height:18px;text-align:center"></div>
     <div class="legend">วงใน→นอก: ดวงกำเนิด (อีแปะ · <b style="color:var(--gold)">เลขทองในสุด = ดาวเกษตรเจ้าเรือน</b> · เลขเทาริมวง = เรือนลัคนา) · ดวงจร (เขียว) · <b>ตรียางค์</b> (เจ้าตรียางค์ · สีแดง = ลูกพิษ นาค/ครุฑ/สุนัข) · <b>ฤกษ์ 27</b> (ชื่อ · หมวด · ลำดับ, ขีดบาท) · <b>นวางค์</b> (เจ้านวางค์ · เขียวขีด = วรโคตม · แดง = นวางค์ขาด) · องศา · ดาว: <b class="n">ดำ</b> กำเนิด <b class="t">เขียว</b> จร <b class="r">แดง</b> พักร์/ลัคนา · ตัวเลขรอบนอก = เรือนลัคนา · ✚ ตนุเศษ · <b>ป้ายวงกลม:</b> <span style="color:var(--accent)">ฟ้า = ดาวกำเนิด/ลัคนา (ล)</span> · <span style="color:var(--tr)">เขียว = ดาวจร (คลิกดูวันย้ายราศี)</span> · ขอบ<span style="color:var(--ret)">แดง</span> + พ. = พักร์ · ชี้ที่วงกลมเพื่อดูเส้นนำและตรียางค์/นวางค์</div></div>
+   <div class="panel" id="ev118P" style="margin-top:14px"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">วันจร · นัดหมาย · ช่วงเดินทาง <span style="font-weight:300;color:var(--muted);font-size:12px">ใส่วัน เวลา สถานที่ แล้วดูว่าช่วงนั้นดาวเปลี่ยนแปลงอะไรบ้าง</span></h3><div id="ev118b"></div></div>
    <div class="panel" style="margin-top:14px"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">ตรีวัย <span id="triwaiInfo" style="font-weight:300;color:var(--muted);font-size:12px"></span></h3><div class="grid4" id="triwai"></div><div id="triwaiRead" class="twread"></div>
     <div class="note">นับตรีวัยจากราศีที่<b>ตนุเศษ</b>สถิต (ตามโปรแกรม) ช่องละ 8⅓ ปี ไล่ภพ 1·2·10 (วัยต้น) 3·9·11 (วัยกลาง) 4·5·7 (วัยปลาย) 6·8·12 (วัยเทียบ) · <b>กดช่องไหนก็ได้ เพื่อเลื่อนเวลาจรทั้งหมดไปช่วงวัยนั้น</b> · ตัวเลขใหญ่ = เจ้าเรือนของภพนั้น · ตัวเล็ก = ดาวกำเนิดในภพ · ช่องสีคืออายุปัจจุบัน</div></div>
    </div>
@@ -2187,7 +2198,7 @@ function bindWheel(svg,tt){
   svg.onpointerdown=ev=>{ const g=ev.target.closest('g.trg'); const geo=WGEO.wsvg;
     if(g&&LAY.tr&&!(CMP.show&&CMP.chart)){ ev.preventDefault(); stopLive(false); const k=g.dataset.k; let h=horaOf(getTransit()); let moved=false, raf=0, lastT=getTransit(); svg.setPointerCapture(ev.pointerId); svg.style.cursor='grabbing';
       const mv=e2=>{ const p=svgPt(svg,e2); const sa=norm(Math.atan2(-(p.y-geo.cy),p.x-geo.cx)*D-90); const target=geo.Ainv(sa); h=solveLon(k,target,h); moved=true; lastT=fromHora(h);
-        if(!raf) raf=requestAnimationFrame(()=>{ raf=0; setTransit(lastT); const tr=chartAt(lastT,WSTATE.lat,WSTATE.lon); const tr2={LA:tr.pos.LA,...Object.fromEntries(ORDER.map(z=>[z,tr.pos[z]]))}; const rT={}; for(const z of ORDER) if(z!=='RA'&&z!=='KE'&&tr.spd[z]<0) rT[z]=1;
+        if(!raf) raf=requestAnimationFrame(()=>{ raf=0; setTransit(lastT); const tr=chartAt(lastT,window._trLoc?window._trLoc.lat:WSTATE.lat,window._trLoc?window._trLoc.lon:WSTATE.lon); const tr2={LA:tr.pos.LA,...Object.fromEntries(ORDER.map(z=>[z,tr.pos[z]]))}; const rT={}; for(const z of ORDER) if(z!=='RA'&&z!=='KE'&&tr.spd[z]<0) rT[z]=1;
           const vb=svg.getAttribute('viewBox'); const tmp=document.createElement('div'); WSTATE.mark=markOf(WSTATE.bt,lastT); tmp.innerHTML=wheelF({id:'wsvg',activeT:k,mark:WSTATE.mark,natal:WSTATE.nat2,transit:tr2,retro:WSTATE.retroN,retroT:rT,lagSign:WSTATE.lagS,center:WSTATE.center,tanu:WSTATE.tanu,L:LAY});
           const ns=tmp.firstChild; svg.innerHTML=ns.innerHTML; svg.setAttribute('viewBox',vb); HLPIN={k,t:1}; applyHL(svg); renderTaksa(WSTATE.bt,lastT); $('ageBadge').innerHTML=ageBadge(readForm(),WSTATE.bt,lastT); $('wstatus').innerHTML=wheelStatus(lastT)+` <span class="note">· กำลังลาก ${PN[k]} ${TH[k]} → ${fmt(tr.pos[k])}</span>`+hitTxt(k); }); };
       const up=()=>{ svg.removeEventListener('pointermove',mv); svg.removeEventListener('pointerup',up); svg.style.cursor=''; if(moved){ setTransit(lastT); compute(); } else { HLPIN={k,t:1}; applyHL(svg); if(k!=='LA') showPop(k,ev); } };
@@ -8068,7 +8079,8 @@ const CHG110=[
  {v:'115',d:'2026-11-02',k:'u',t:'แบ่งทวีป · กดธงดูเมือง · วัน-เวลาเด่นเทียบบ้านเกิด',x:'ประเทศที่เส้นพาดผ่านจัดกลุ่มตามทวีป กดธงเพื่อดูรายชื่อเมืองตามแนวเส้น · กรองอันดับเมืองตามทวีป · คำนวณวันและเวลาที่ดีที่สุดเมื่อปักเมือง พร้อมกราฟเทียบจังหวะบ้านเกิด',c:['acg111']},
  {v:'116',d:'2026-11-02',k:'u',t:'วาดภาพลักษณะคู่ครอง',x:'ภาพเต็มตัวของคู่ตามดาวที่เล็งลัคนา/กุมลัคนา/เจ้าเรือนปัตนิ · ภาพผสมเมื่อมีหลายดาว · ดูครบทั้ง ๑๐ แบบ',c:['love'],p:['sp105P']},
  {v:'117',d:'2026-11-02',k:'u',t:'ทักษาประจำวัน + กระพริบเมื่อลากดาวจร',x:'หน้าแรกมีตารางทักษาประจำวันตามวันจร · ลากดาวจรไปกระทบลูกนวางค์ใด เลขทักษาของเจ้าเรือนนวางค์นั้นจะกระพริบทั้งในทักษากำเนิดและทักษาประจำวัน'},
- {v:'117.4',d:'2026-11-02',k:'u',t:'ทักษาลอยข้างจักรราศีขณะลากดาวจร',x:'แผงทักษาคู่ลอยขึ้นมุมจอขณะลากดาวจร เห็นเลขกระพริบได้ทันทีโดยไม่ต้องเลื่อนหา · บอกเจ้าเรือนภพ ดาวเดิมสถิตภพ และดาวจรอยู่ภพใด'}];
+ {v:'117.4',d:'2026-11-02',k:'u',t:'ทักษาลอยข้างจักรราศีขณะลากดาวจร',x:'แผงทักษาคู่ลอยขึ้นมุมจอขณะลากดาวจร เห็นเลขกระพริบได้ทันทีโดยไม่ต้องเลื่อนหา · บอกเจ้าเรือนภพ ดาวเดิมสถิตภพ และดาวจรอยู่ภพใด'},
+ {v:'118',d:'2026-11-02',k:'n',t:'วันจร · นัดหมาย · ช่วงเดินทาง (timeline แบบ terminal)',x:'ใต้จักรราศี ใส่วัน เวลา จังหวัด/เมือง สำหรับนัดหมาย หรือช่วงไป–กลับ แล้วรัน timeline เหตุการณ์ดาว: ย้ายราศี พักร์ ทับ/เล็งดาวเดิม วันใหม่ ข้างขึ้นข้างแรม วันพระ ทักษาประจำวัน · แตะบรรทัดเพื่อตั้งวันจร'}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
@@ -8478,6 +8490,70 @@ function tkDay117(bt,tt){ const box=document.getElementById('tkDay117'); if(!box
     F.innerHTML=`<div class="tkfh117"><b>ทักษา · ${TH[hit.k]}จรกระทบลูกนวางค์ของ ${THN[hit.p]} ${TH[PNUM2K[hit.p]]}</b><button type="button" class="tkfx117" aria-label="ปิด"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><div class="tkpair117"><div class="tkc117"><div class="tkt117">ทักษากำเนิด · จร</div><div class="grid3">${tk?tk.innerHTML:''}</div></div><div class="tkc117"><div class="tkt117">ทักษาประจำวัน</div><div class="grid3">${grid}</div></div></div><div class="tkfi117">${(document.getElementById('tkHit117')||{}).innerHTML||''}</div>`;
     F.querySelectorAll('.tkfi117 > .note').forEach(n=>n.remove()); F.classList.add('on'); clearTimeout(F._t); const hide=()=>{ if(F._hov) F._t=setTimeout(hide,1500); else F.classList.remove('on'); }; F._t=setTimeout(hide,9000); }catch(e){ console.error(e); } }
 { const _r=renderTaksa; renderTaksa=function(bt,tt){ const r=_r.apply(this,arguments); try{ tkDay117(bt,tt); }catch(e){ console.error(e); } return r; }; }
+// ===== v118: วันจร · นัดหมาย · ช่วงเดินทาง ใต้จักรราศี — ใส่วัน เวลา สถานที่ · รัน timeline แบบ terminal
+const EV118={mode:'one',cc:'TH',pi:0,run:null,lines:[],shown:0,spd:4};
+const nd118=(d)=>`${d.getDate()} ${MONTHS_TH[d.getMonth()].slice(0,3)} ${String(d.getFullYear()+543).slice(2)} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;
+const NPT118=['LA','SU','MO','MA','ME','JU','VE','SA','RA','KE','UR'];
+function loc118(){ const cc=document.getElementById('ev118cc'), ci=document.getElementById('ev118ci'); if(!cc) return null; const L=cc.value==='TH'?PROV:(WORLD.c[cc.value]||[]), r=L[+ci.value]; if(!r) return null; return {cc:cc.value,name:r[0],lat:r[1],lon:r[2]}; }
+function lun118(t){ const L=thaiLunar(t); if(!L) return ''; const pra=(L.k===8||L.k===15||(!L.wax&&L.last&&L.k===14)); return `${L.wax?'ขึ้น':'แรม'} ${THN[L.k]||L.k} ค่ำ เดือน${L.leap?'แปดหลัง':THN[L.mon]||L.mon}${pra?' · วันพระ':''}`; }
+function ev118(t1,t2,lat,lon){ const nat=WSTATE.nat, L=sgn(nat.pos.LA), hs=x=>((x-L+12)%12)+1, span=(t2-t1)/864e5, stepH=span<=120?1:6, out=[]; const K=ORDER.filter(k=>k!=='KE'||span<200);
+  const at=t=>{ const h=horaOf(t), p={}; for(const k of ORDER) p[k]=posH(h,k); return p; };
+  const toneIn=(k,lon)=>{ const st=std(k,lon)||''; return /อุจ|เกษตร|ราชาโชค|มหาจักร/.test(st)?'g':/นิจ|ประ/.test(st)?'b':'m'; };
+  const bis=(a,b,f)=>{ for(let i=0;i<14;i++){ const m=new Date((a.getTime()+b.getTime())/2); if(f(m)) b=m; else a=m; } return b; };
+  let t=new Date(t1), P=at(t), V={}; for(const k of ORDER) V[k]=speedH(horaOf(t),k);
+  // จุดเริ่มต้น
+  out.push({t:new Date(t1),c:'h',x:`เริ่ม · ลัคนาจร ณ ที่นี่: ราศี${SIGNS[sgn(chartAt(t1,lat,lon).pos.LA)]} · จันทร์จรราศี${SIGNS[sgn(P.MO)]} (ภพ${HOUSES[hs(sgn(P.MO))-1]}) · ${lun118(t1)}`});
+  let lastDay=null;
+  while(t<t2&&out.length<700){ const t2s=new Date(Math.min(t.getTime()+stepH*3600e3,t2.getTime())), Q=at(t2s), W={};
+    const dk=t2s.toDateString(); if(dk!==lastDay&&t2s.getHours()>=6){ lastDay=dk; const d6=new Date(t2s); d6.setHours(6,0,0,0); if(d6>=t1&&d6<=t2){ const T=taksaNatal(d6).m, inv={}; Object.keys(T).forEach(n=>inv[n]=T[n]); out.push({t:d6,c:'d',x:`วันใหม่ ${['เสาร์','อาทิตย์','จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์'][thaiWeekday(d6)]} · ${lun118(d6)} · ศรี ${TH[PNUM2K[inv['ศรี']]]} · กาลกิณี ${TH[PNUM2K[inv['กาลกิณี']]]}`}); } }
+    for(const k of K){ if(k==='MO'&&span>45) { } const a=P[k], b=Q[k];
+      if(sgn(a)!==sgn(b)&&(k!=='MO'||span<=45)){ const tm=bis(t,t2s,m=>sgn(posH(horaOf(m),k))===sgn(b)); const s=sgn(b); out.push({t:tm,c:toneIn(k,b),k,x:`${TH[k]}ย้ายเข้าราศี${SIGNS[s]} → ภพ${HOUSES[hs(s)-1]}ของดวงเดิม${std(k,b)?' ('+std(k,b)+')':''}`}); }
+      if(!['RA','KE','SU','MO'].includes(k)){ W[k]=speedH(horaOf(t2s),k); if(V[k]*W[k]<0){ const tm=bis(t,t2s,m=>speedH(horaOf(m),k)*V[k]<0); out.push({t:tm,c:W[k]<0?'b':'g',k,x:`${TH[k]}${W[k]<0?'เริ่มพักร์ (ถอยหลัง) — เรื่องของดาวนี้ควรทบทวน ชะลอ':'พ้นพักร์ เดินหน้า — เรื่องที่ค้างเริ่มขยับ'}`}); } }
+      if(k==='MO'&&span>45) continue;
+      for(const n of NPT118){ if(n===k&&false) continue; const np=nat.pos[n]; for(const [ang,nm] of [[0,'ทับ'],[180,'เล็ง']]){ if(ang===180&&!['JU','SA','RA','UR','MA'].includes(k)) continue; const d1=((a-np-ang)%360+540)%360-180, d2=((b-np-ang)%360+540)%360-180; if(Math.sign(d1)!==Math.sign(d2)&&Math.abs(d1-d2)<30){ const tm=bis(t,t2s,m=>{ const d=((posH(horaOf(m),k)-np-ang)%360+540)%360-180; return Math.sign(d)===Math.sign(d2); }); const tone=['JU','VE'].includes(k)?(ang?'m':'g'):['SA','MA','RA','KE','UR'].includes(k)?'b':'m'; out.push({t:tm,c:tone,k,x:`${TH[k]}จร${nm}${n==='LA'?'ลัคนา':TH[n]+'เดิม'} (ภพ${HOUSES[hs(sgn(np))-1]})`}); } } } }
+    for(const k of ORDER) if(W[k]!=null) V[k]=W[k]; P=Q; t=t2s; }
+  out.push({t:new Date(t2),c:'h',x:`สิ้นสุด · ลัคนาจร ณ ที่นี่: ราศี${SIGNS[sgn(chartAt(t2,lat,lon).pos.LA)]} · ${lun118(t2)}`});
+  out.sort((a,b)=>a.t-b.t); return out; }
+function sum118(E){ const g=E.filter(e=>e.c==='g').length, b=E.filter(e=>e.c==='b').length, ev=E.filter(e=>'gbm'.includes(e.c));
+  const v=g-b; return `${bdg98(v>1?'g':v<-1?'b':'m',v>1?'ช่วงนี้เป็นใจ':v<-1?'ช่วงนี้ควรระวัง':'ช่วงนี้กลาง ๆ')} เหตุการณ์ดาว ${ev.length} รายการ · ส่งเสริม ${g} · ต้องระวัง ${b}`; }
+function one118(t,lc){ const nat=WSTATE.nat, L=sgn(nat.pos.LA), hs=x=>((x-L+12)%12)+1, c=chartAt(t,lc.lat,lc.lon), ls=sgn(c.pos.LA), ms=sgn(c.pos.MO), T=taksaNatal(t).m;
+  const near=ev118(new Date(t.getTime()-2*864e5),new Date(t.getTime()+2*864e5),lc.lat,lc.lon).filter(e=>'gbm'.includes(e.c));
+  const hit=NPT118.flatMap(n=>ORDER.filter(k=>k!=='KE').map(k=>{ const d=Math.abs(((c.pos[k]-nat.pos[n])%360+540)%360-180); return d<=2?{k,n,d}:null; }).filter(Boolean));
+  return `<div class="c98"><div class="bh70st">${nd118(t)} น. · ${lc.cc==='TH'?lc.name:cityL114(lc.name,lc.cc)+' · '+cnm112(lc.cc)}</div>
+   <ul class="lb88l"><li>ลัคนาจร ณ ที่นัด: <b>ราศี${SIGNS[ls]}</b> = ภพ${HOUSES[hs(ls)-1]}ของดวงเดิม ${[1,4,7,10,5,9,11].includes(hs(ls))?bdg98('g','ลัคนาจรตกภพดี'):[6,8,12].includes(hs(ls))?bdg98('b','ลัคนาจรตกทุสถาน'):''}</li>
+   <li>จันทร์จรราศี${SIGNS[ms]} = ภพ${HOUSES[hs(ms)-1]} · ${lun118(t)}</li>
+   <li>ทักษาประจำวัน: ศรี ${TH[PNUM2K[T['ศรี']]]} · เดช ${TH[PNUM2K[T['เดช']]]} · กาลกิณี ${TH[PNUM2K[T['กาลกิณี']]]}</li>
+   ${hit.length?`<li>ดาวจรทับดาวเดิมพอดี (≤๒°): ${hit.map(h=>`${TH[h.k]}จรทับ${h.n==='LA'?'ลัคนา':TH[h.n]+'เดิม'}`).join(' · ')}</li>`:''}</ul>
+   <div class="note">เหตุการณ์ดาว ±๒ วัน: ${near.length?near.slice(0,6).map(e=>`${nd118(e.t)} ${e.x}`).join(' · '):'ไม่มีดาวย้ายราศีหรือทับดาวเดิม'}</div></div>`; }
+function term118(E){ EV118.lines=E; EV118.shown=0; const box=document.getElementById('ev118term'); if(!box) return; box.innerHTML='<div class="tl118"></div><span class="cur118"></span>'; play118(true); }
+function line118(e,i){ const cls={g:'g',b:'b',m:'m',d:'d',h:'h'}[e.c]||'m'; return `<div class="ln118 ${cls}" data-i="${i}"><span class="ts118">[${nd118(e.t)}]</span> <span class="gt118">&gt;</span> ${e.x}</div>`; }
+function play118(on){ clearInterval(EV118.run); EV118.run=null; const btn=document.getElementById('ev118pp'); if(btn) btn.innerHTML=on?'หยุด':'เล่นต่อ'; if(!on) return;
+  EV118.run=setInterval(()=>{ const box=document.querySelector('#ev118term .tl118'); if(!box){ clearInterval(EV118.run); return; } for(let n=0;n<EV118.spd&&EV118.shown<EV118.lines.length;n++){ box.insertAdjacentHTML('beforeend',line118(EV118.lines[EV118.shown],EV118.shown)); EV118.shown++; }
+    const tw=document.getElementById('ev118term'); tw.scrollTop=tw.scrollHeight; if(EV118.shown>=EV118.lines.length){ clearInterval(EV118.run); EV118.run=null; const b=document.getElementById('ev118pp'); if(b) b.innerHTML='เล่นซ้ำ'; } },120); }
+function ev118HTML(){ const today=new Date(), ds=dstr112(today), tm=`${String(today.getHours()).padStart(2,'0')}:${String(today.getMinutes()).padStart(2,'0')}`, ccs=['TH'].concat(Object.keys(WORLD.c).filter(c=>/^[A-Z]{2}$/.test(c)).sort((a,b)=>cnm112(a).localeCompare(cnm112(b),'th')));
+  return `<div class="evt118"><button type="button" data-m="one" class="${EV118.mode==='one'?'on':''}">นัดหมาย (ครั้งเดียว)</button><button type="button" data-m="rng" class="${EV118.mode==='rng'?'on':''}">ช่วงเวลา / เดินทาง (ไป–กลับ)</button></div>
+   <div class="evf118"><label>${EV118.mode==='one'?'วันที่':'ไปวันที่'} <input type="date" id="ev118d1" value="${ds}"></label><label>เวลา <input type="time" id="ev118t1" value="${tm}"></label>
+    ${EV118.mode==='rng'?`<label>ถึงวันที่ <input type="date" id="ev118d2" value="${dstr112(new Date(today.getTime()+6*864e5))}"></label><label>เวลา <input type="time" id="ev118t2" value="20:00"></label>`:''}
+    <label>สถานที่ <span class="fp112" id="ev118fl">${fl112(EV118.cc,18)}</span><select id="ev118cc">${ccs.map(c=>`<option value="${c}"${c===EV118.cc?' selected':''}>${cnm112(c)}</option>`).join('')}</select><select id="ev118ci"></select></label>
+    <button type="button" id="ev118go" class="go118">${EV118.mode==='one'?'ตั้งเป็นวันจรและดูคำทำนาย':'รัน timeline'}</button><button type="button" id="ev118rs" class="rs118">กลับเวลาปัจจุบัน · ที่เกิด</button></div>
+   <div id="ev118out"></div>`; }
+function evBind118(){ const P=document.getElementById('ev118P'); if(!P) return; const B=P.querySelector('#ev118b'); B.innerHTML=ev118HTML();
+  const cc=B.querySelector('#ev118cc'), ci=B.querySelector('#ev118ci'), fill=()=>{ const L=cc.value==='TH'?PROV:(WORLD.c[cc.value]||[]); ci.innerHTML=L.map((r,i)=>`<option value="${i}">${cc.value==='TH'?r[0]:cityL114(r[0],cc.value)+(LANG114()==='en'?'':' — '+r[0])}</option>`).join(''); if(cc.value===EV118.cc) ci.value=EV118.pi; B.querySelector('#ev118fl').innerHTML=fl112(cc.value,18); };
+  fill(); cc.onchange=()=>{ EV118.cc=cc.value; EV118.pi=0; fill(); }; ci.onchange=()=>{ EV118.pi=+ci.value; };
+  B.querySelectorAll('.evt118 button').forEach(b=>b.onclick=()=>{ EV118.mode=b.dataset.m; evBind118(); });
+  const dt=(d,t)=>{ const [y,m,dd]=d.split('-').map(Number), [h,mi]=(t||'12:00').split(':').map(Number); return new Date(y,m-1,dd,h,mi); };
+  B.querySelector('#ev118rs').onclick=()=>{ window._trLoc=null; setTransit(new Date()); compute(); B.querySelector('#ev118out').innerHTML=''; };
+  B.querySelector('#ev118go').onclick=()=>{ const lc=loc118(); if(!lc) return; window._trLoc=lc; const out=B.querySelector('#ev118out'), t1=dt(B.querySelector('#ev118d1').value,B.querySelector('#ev118t1').value);
+    if(EV118.mode==='one'){ setTransit(t1); compute(); out.innerHTML=one118(t1,lc); return; }
+    let t2=dt(B.querySelector('#ev118d2').value,B.querySelector('#ev118t2').value); if(t2<=t1) t2=new Date(t1.getTime()+864e5); if(t2-t1>366*864e5) t2=new Date(t1.getTime()+366*864e5);
+    out.innerHTML='<p class="note">กำลังคำนวณ…</p>'; setTimeout(()=>{ const E=ev118(t1,t2,lc.lat,lc.lon); out.innerHTML=`<div class="c98"><div class="bh70st">${nd118(t1)} – ${nd118(t2)} · ${lc.cc==='TH'?lc.name:cityL114(lc.name,lc.cc)}</div><p>${sum118(E)}</p></div>
+      <div class="tc118"><button type="button" id="ev118pp">หยุด</button>${[1,4,12].map(v=>`<button type="button" data-s="${v}" class="${EV118.spd===v?'on':''}">${v===1?'ช้า':v===4?'ปกติ':'เร็ว'}</button>`).join('')}<button type="button" id="ev118all">แสดงทั้งหมด</button><span class="note">แตะบรรทัดเพื่อตั้งวันจรไปที่เวลานั้น</span></div><div id="ev118term" class="term118"></div>`;
+      term118(E); setTransit(t1); compute();
+      out.querySelector('#ev118pp').onclick=()=>{ if(EV118.run) play118(false); else { if(EV118.shown>=EV118.lines.length) term118(EV118.lines); else play118(true); } };
+      out.querySelector('#ev118all').onclick=()=>{ play118(false); EV118.shown=EV118.lines.length; out.querySelector('.tl118').innerHTML=EV118.lines.map(line118).join(''); const b=out.querySelector('#ev118pp'); if(b) b.innerHTML='เล่นซ้ำ'; };
+      out.querySelectorAll('.tc118 button[data-s]').forEach(b=>b.onclick=()=>{ EV118.spd=+b.dataset.s; out.querySelectorAll('.tc118 button[data-s]').forEach(x=>x.classList.toggle('on',x===b)); });
+      out.querySelector('#ev118term').onclick=e=>{ const l=e.target.closest('.ln118'); if(!l) return; const ev=EV118.lines[+l.dataset.i]; out.querySelectorAll('.ln118.sel').forEach(x=>x.classList.remove('sel')); l.classList.add('sel'); setTransit(ev.t); compute(); }; },20); }; }
+setTimeout(evBind118,600);
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
   try{ rhythm77(); }catch(e){ console.error(e); document.getElementById('rh77Out').innerHTML='<p class="note">⚠ '+e.message+'</p>'; } }
@@ -9565,7 +9641,7 @@ function kenHTML(nat,tr){ const K=kenOf(nat), O=KEN_ONG[K.c], U=KEN_UDOM[K.c]; c
     h+=`<div class="twnow" style="margin-top:6px"><div class="tht">ดาวฆาฏจรประจำราศีเกณฑ์: ${kn} = ${PN[kk]} ${TH[kk]}</div><p>ตอนนี้${TH[kk]}จรอยู่ราศี${SIGNS[sgn(x)]} ${hb(hs)} · ทักษาจรปีนี้เป็น <b style="color:${rj==='กาลกิณี'?'var(--ret)':['ศรี','เดช','มนตรี'].includes(rj)?'var(--tr)':'inherit'}">${rj}</b>${over.length||lag?` · <b style="color:var(--ret)">ทับ${lag?'ลัคนา ':''}${over.map(z=>PN[z]).join(' ')}</b>`:' · ไม่ได้ทับดาวเดิม'}</p>${[...over,...(lag?['LA']:[])].map(z=>{ const m=tabMeaning(kk,z); return m?`<div class="bk">📒 ${PN[kk]} ทับ ${z==='LA'?'ลัคนา':PN[z]}: ${m.join(' · ')}</div>`:''; }).join('')}<p class="note">ดาวฆาฏ = ดาวที่ให้โทษหนัก (๔ ๖ อ่อน · ๓ ๕ ๗ ๘ แรง · ๑ แรงรองลงมา · ๒ แรงที่สุด) · ฆาฏจรต้องดูว่าปีนั้นจรมามีทักษาเป็นอะไร และทับดาวเดิมดวงใด เหตุการณ์จึงต่างกัน</p></div>`; }
   return h; }
 function compute(){ const f=readForm(); const [pn,lat,lon]=placeOf(f); const bt=birthDate(f); const tt=getTransit(); const showTr=LAY.tr;
-  const nat=chartAt(bt,lat,lon), tr=chartAt(tt,lat,lon); if(f.la!=null) nat.pos.LA=f.la;
+  const nat=chartAt(bt,lat,lon), tr=chartAt(tt,window._trLoc?window._trLoc.lat:lat,window._trLoc?window._trLoc.lon:lon); if(f.la!=null) nat.pos.LA=f.la;
   const retroN={},retroT={}; for(const k of ORDER){ if(k!=='RA'&&k!=='KE'){ if(nat.spd[k]<0)retroN[k]=1; if(tr.spd[k]<0)retroT[k]=1; } }
   const lagS=sgn(nat.pos.LA); const tanu=tanuKey(nat); const nat2={LA:nat.pos.LA,...Object.fromEntries(ORDER.map(k=>[k,nat.pos[k]]))}; const tr2={LA:tr.pos.LA,...Object.fromEntries(ORDER.map(k=>[k,tr.pos[k]]))};
   const center=[fmt(nat.pos.LA).replace(/ .*$/,''),`${f.name}`];
