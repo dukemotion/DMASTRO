@@ -8135,7 +8135,8 @@ const CHG110=[
  {v:'131',d:'2026-11-02',k:'u',t:'หน้าเจ้าเรือนใช้ไอคอน SVG ทั้งหมด',x:'เปลี่ยนอีโมจิบ้าน ดาวเคราะห์ และหนังสือในหัวข้อเจ้าเรือนสถิตภพ ดาวสถิตภพ และลิงก์ห้องสมุดเป็นไอคอน SVG · ลูกศรตัวอักษรในทุกแผงของหน้าเจ้าเรือนเปลี่ยนเป็นลูกศร SVG สีทอง · สามเหลี่ยมเปิดปิดหัวข้อเปลี่ยนเป็นไอคอน SVG ที่หมุนเมื่อเปิด',c:['lord'],p:['lhP']},
  {v:'132',d:'2026-11-02',k:'n',t:'ปี ค.ศ. และแชร์โลเคชั่น',x:'ช่องปีเกิดและปีของวันจรเลือกได้ทั้ง พ.ศ. และ ค.ศ. (พิมพ์ปีน้อยกว่า ๒๓๐๐ ระบบถือเป็น ค.ศ. ให้อัตโนมัติ และจำค่าที่เลือก) · ปุ่มใช้ตำแหน่งปัจจุบันเป็นที่เกิด หรือเป็นสถานที่วันจร · วางลิงก์แชร์โลเคชั่นจาก Google Maps / Apple Maps / LINE หรือพิมพ์พิกัด ระบบหาจังหวัดหรือเมืองที่ใกล้ที่สุดให้',c:['natal','transit'],p:[],go:'#qf76'},
  {v:'132.1',d:'2026-11-02',k:'f',t:'ภพตามลัคนาจร: ราศีอยู่กับที่ เปลี่ยนเฉพาะภพ',x:'ป๊อปอัปตอนลากหรือกดลัคนาจรใช้จักรแบบเดียวกับจักรราศีหลัก ราศีและดาวอยู่ตำแหน่งเดิม เปลี่ยนเฉพาะชื่อภพ เลขภพ และภพทุสถานที่แรเงา โดยนับจากลัคนาจร · รูปที่บันทึกจากปุ่มภพตามลัคนาจรเป็นแบบเดียวกัน',c:['natal'],p:[],go:'#rasi'},
- {v:'133',d:'2026-11-02',k:'u',t:'เพิ่มดวงตัวอย่าง โอปอร์ AF6',x:'เพิ่มดวง โอปอร์ AF6 เกิดวันศุกร์ที่ ๒๓ ธันวาคม ๒๕๓๑ เวลา ๑๔:๒๖ น. อ.เมือง จ.แพร่ (18.145°N 100.142°E) เข้ารายการดวงที่บันทึกไว้ · ระบบเพิ่มให้ครั้งเดียว ถ้าลบหรือแก้แล้วจะไม่เพิ่มซ้ำ',c:[],p:[],go:'#sv76'}];
+ {v:'133',d:'2026-11-02',k:'u',t:'เพิ่มดวงตัวอย่าง โอปอร์ AF6',x:'เพิ่มดวง โอปอร์ AF6 เกิดวันศุกร์ที่ ๒๓ ธันวาคม ๒๕๓๑ เวลา ๑๔:๒๖ น. อ.เมือง จ.แพร่ (18.145°N 100.142°E) เข้ารายการดวงที่บันทึกไว้ · ระบบเพิ่มให้ครั้งเดียว ถ้าลบหรือแก้แล้วจะไม่เพิ่มซ้ำ',c:[],p:[],go:'#sv76'},
+ {v:'133.1',d:'2026-11-02',k:'u',t:'เพิ่มดวงตัวอย่าง กันโตน่า',x:'เพิ่มดวง กันโตน่า เกิดวันพุธที่ ๑๙ ตุลาคม ๒๕๓๗ เวลา ๑๕:๒๓ น. เขตพระนคร กรุงเทพฯ (13.7526°N 100.4941°E) · ระบบจำทีละชื่อว่าเพิ่มดวงไหนไปแล้ว ดวงตัวอย่างใหม่จึงเข้ารายการเองโดยไม่เพิ่มซ้ำดวงที่ลบไป',c:[],p:[],go:'#sv76'}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
@@ -9290,8 +9291,11 @@ setTimeout(eraInit132,0); window.addEventListener('load',eraInit132); setTimeout
 
 
 // ===== v133: ดวงตัวอย่างเพิ่ม (ชุด ๓) — เพิ่มเข้ารายการดวงที่บันทึกครั้งเดียว ไม่ทับดวงที่ผู้ใช้แก้ไว้
-const PRESETS3=[{name:'โอปอร์ AF6',d:23,m:12,y:2531,h:14,mi:26,prov:40,lat:18.145,lon:100.142,la:null,sex:'F'}];
-{ const _lp=loadProfiles; loadProfiles=function(){ const a=_lp.apply(this,arguments); let d=false; try{ d=localStorage.getItem(LS+'.presets3')==='1'; }catch(e){} if(!d){ for(const p of PRESETS3) if(!a.some(x=>x.name===p.name)) a.push({...p}); try{ localStorage.setItem(LS,JSON.stringify(a)); localStorage.setItem(LS+'.presets3','1'); }catch(e){} } return a; }; }
+const PRESETS3=[{name:'โอปอร์ AF6',d:23,m:12,y:2531,h:14,mi:26,prov:40,lat:18.145,lon:100.142,la:null,sex:'F'},{name:'กันโตน่า',d:19,m:10,y:2537,h:15,mi:23,prov:0,lat:13.752555,lon:100.494066,la:null,sex:''}];
+// จำรายชื่อที่เคยเพิ่มให้แล้ว (ทีละชื่อ) — ดวงที่เพิ่มในอนาคตจะเข้ารายการอัตโนมัติ และถ้าผู้ใช้ลบไปแล้วจะไม่เพิ่มซ้ำ
+{ const _lp=loadProfiles; loadProfiles=function(){ const a=_lp.apply(this,arguments); let done=[]; try{ done=JSON.parse(localStorage.getItem(LS+'.presetNames')||'[]')||[]; if(localStorage.getItem(LS+'.presets3')==='1'&&!done.includes('โอปอร์ AF6')) done.push('โอปอร์ AF6'); }catch(e){}
+  let ch=false; for(const p of PRESETS3){ if(done.includes(p.name)) continue; if(!a.some(x=>x.name===p.name)) a.push({...p}); done.push(p.name); ch=true; }
+  if(ch){ try{ localStorage.setItem(LS,JSON.stringify(a)); localStorage.setItem(LS+'.presetNames',JSON.stringify(done)); }catch(e){} } return a; }; }
 setTimeout(()=>{ try{ if(window._cmpFill) window._cmpFill(); }catch(e){} },300);
 
 let KEY77='';
