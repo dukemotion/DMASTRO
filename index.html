@@ -8117,7 +8117,8 @@ const CHG110=[
  {v:'123',d:'2026-11-02',k:'u',t:'ภาพร่างกายชี้บริเวณที่ควรดูแลของพ่อแม่',x:'วาดร่างกายพร้อมจุดเรืองแสงตามราศีกาลบุรุษและอวัยวะตามธรรมชาติดาว มีเส้นชี้และป้ายบอกเหตุผลกับช่วงเวลา',c:['parents']},
  {v:'124',d:'2026-11-02',k:'u',t:'จะเจอคู่เมื่อไหร่ (๒ วิธี)',x:'ดาวพฤหัส เสาร์ ราหูจรทับ/เล็งลัคนา และทับ/เล็งตนุลัคน์ แสดงเป็นแถบเวลา ๓/๕/๑๐ ปี จุดตรงองศา ช่วงที่หลายเกณฑ์ซ้อน และเกณฑ์ยืนยันจากเจ้าเรือนปัตนิ',c:['love'],p:['mt124P']},
  {v:'125',d:'2026-11-02',k:'f',t:'ตารางดาวละเอียดอ่านง่ายบนมือถือ',x:'บนมือถือแสดงเป็นการ์ดรายดาว จัดกลุ่ม ตำแหน่ง · ตรียางค์/นวางค์ · ฤกษ์ · มาตรฐาน/ธาตุ · มุมสัมพันธ์ และสลับกลับเป็นตารางได้'},
- {v:'126',d:'2026-11-02',k:'u',t:'วิเคราะห์ความรัก ๗ ขั้น — ป้ายภพ·ดาว และเทียบดวงคู่',x:'ทุกขั้นมีป้ายภพและดาว (เขียวดี แดงระวัง) พร้อมหลักอ่านและคำอธิบายเฉพาะดวง · สรุปภาพรวม ช่วงอายุรักสำคัญพร้อม พ.ศ. · เลือกดวงคู่เพื่อตรวจว่าตรงกับภาพคู่ในดวงไหม และจังหวะรักซ้อนกันปีใด',c:['love'],p:['lv53P']}];
+ {v:'126',d:'2026-11-02',k:'u',t:'วิเคราะห์ความรัก ๗ ขั้น — ป้ายภพ·ดาว และเทียบดวงคู่',x:'ทุกขั้นมีป้ายภพและดาว (เขียวดี แดงระวัง) พร้อมหลักอ่านและคำอธิบายเฉพาะดวง · สรุปภาพรวม ช่วงอายุรักสำคัญพร้อม พ.ศ. · เลือกดวงคู่เพื่อตรวจว่าตรงกับภาพคู่ในดวงไหม และจังหวะรักซ้อนกันปีใด',c:['love'],p:['lv53P']},
+ {v:'127',d:'2026-11-02',k:'u',t:'สมพงศ์ ๓ ตำรับในการเทียบดวงคู่',x:'เทียบดวงคู่ในวิเคราะห์ความรักใช้ลัคนาสมพงศ์ (๓ ๕ ๗ ๙ ๑๑) จันทร์สมพงศ์แยกชาย/หญิง และทวาทศจักร (ตนุลัคน์ร่วมลัคนา = รักมาก · เจ้ากดุมภะ = ใครเก็บเงิน) ถ่วงน้ำหนักมากกว่าองค์ประกอบอื่น · เพิ่มองค์ประกอบเจ้าลัคน์ เจ้าปัตนิ ศุกร์ ธาตุ ในดวงคู่ · สมพงศ์ · แก้จันทร์ ๖/๘ ให้เป็นดีตามจันทร์สมพงศ์ · มีโหมดคู่ที่อยู่ด้วยกันแล้ว (ไม่ให้คะแนน แสดงทางประคอง)',c:['love'],p:['lv53P','cmpP']}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
@@ -8836,6 +8837,95 @@ document.addEventListener('change',e=>{ const t=e.target; if(!t||t.id!=='lv126B'
   try{ localStorage.setItem('suriyayatra.lv126b',t.value===''?'-':lvKey126(ps[+t.value])); }catch(_){}
   const el=document.getElementById('lv53Out'); if(el&&WSTATE&&WSTATE.nat){ try{ el.innerHTML=love53(WSTATE.nat); }catch(err){ console.error(err); } } });
 
+// ───────── v127: เทียบดวงคู่ตามหลักสมพงศ์ ๓ ตำรับ (ลัคนา · จันทร์ · ทวาทศจักร) + องค์ประกอบ (เจ้าลัคน์ เจ้าปัตนิ ศุกร์ ธาตุ) ─────────
+// หลัก: ลัคนาเป็น ๓ ๕ ๗ ๙ ๑๑ แก่กัน = ดี · จันทร์ร่วมราศี/ฤกษ์/นวางค์ = ประเสริฐ, เล็ง = ดีนัก, ๖/๘ = ดี, ชาย→หญิง ๓ ไม่ดี ๔ ๕ ดี, หญิง→ชาย ๓ ดี ๔ ดี (หญิงแพ้ชาย) ๕ ไม่ดี
+// ทวาทศจักร: ตนุลัคน์ฝ่ายหนึ่งร่วมลัคนาอีกฝ่าย = อีกฝ่ายรักมาก ทั้งสองทาง = เนื้อคู่แท้ · เจ้ากดุมภะร่วมลัคนาอีกฝ่าย = ให้อีกฝ่ายเก็บเงิน
+// จรรยาบรรณ: คู่ที่อยู่ด้วยกันแล้วไม่ทายให้ร้าวฉาน — โหมด "อยู่ด้วยกันแล้ว" แสดงเฉพาะจุดเกื้อกูลและวิธีประคอง
+const LVST127={d:'กำลังคบหาดูใจ / ยังไม่ตัดสินใจ',m:'อยู่ด้วยกันแล้ว (แต่งงาน/ใช้ชีวิตคู่)'};
+function lvStat127(){ try{ return localStorage.getItem('suriyayatra.lv127s')||'d'; }catch(e){ return 'd'; } }
+lvMatchBox126=function(nat){ let ps=[]; try{ ps=loadProfiles(); }catch(e){}
+  let key=''; try{ key=localStorage.getItem('suriyayatra.lv126b')||''; }catch(e){}
+  let idx=ps.findIndex(p=>lvKey126(p)===key); if(idx<0&&!key){ const cb=document.getElementById('cmpB'); if(cb&&cb.value!=='') idx=+cb.value; }
+  const stt=lvStat127();
+  const opt=`<option value="">— เลือกดวงคู่ที่บันทึกไว้ —</option>`+ps.map((p,i)=>`<option value="${i}"${i===idx?' selected':''}>${p.name} (${p.d}/${p.m}/${p.y})</option>`).join('');
+  const so=Object.entries(LVST127).map(([k,v])=>`<option value="${k}"${k===stt?' selected':''}>${v}</option>`).join('');
+  let body='<p class="note">เลือกดวงคู่จากรายชื่อที่บันทึกไว้ ระบบจะตรวจตามหลักสมพงศ์ ๓ ตำรับ (ลัคนา · จันทร์ · ทวาทศจักร) ประกอบเจ้าเรือนลัคน์ เจ้าเรือนปัตนิ ศุกร์ ธาตุ และจังหวะรักของทั้งสองฝ่าย</p>';
+  if(idx>=0&&ps[idx]){ try{ let sx='M'; try{ sx=readForm().sex||'M'; }catch(e){} const A=lvCore126(nat,WSTATE.bt,'เรา'), Bc=profChart(ps[idx]), B=lvCore126(Bc,Bc.bt,ps[idx].name); A.sex=sx; B.sex=ps[idx].sex||'M'; body=lvMatch126(A,B,stt); }catch(e){ console.error(e); body='<p class="note">คำนวณดวงคู่ไม่สำเร็จ: '+e.message+'</p>'; } }
+  return `<div class="lv126mt"><div class="popSub" style="margin-top:0">เทียบกับดวงคู่ — ตรงกันไหม (สมพงศ์ ๓ ตำรับ)</div><div style="display:flex;flex-wrap:wrap;gap:8px"><label class="note">ดวงคู่ <select id="lv126B">${opt}</select></label><label class="note">สถานะ <select id="lv127S">${so}</select></label></div>${body}</div>`; };
+
+lvMatch126=function(A,B,stt){ const tn=TN126, ck=[], married=stt==='m', P=A.nat.pos, Q=B.nat.pos, nB=B.name;
+  const add=(grp,c,t,d,w)=>ck.push({grp,c,t,d,w:w==null?1:w});
+  const rel=(x,y)=>((y-x+12)%12)+1;
+  // ๑ ลัคนาสมพงศ์
+  const lr=rel(A.L,B.L), lr2=rel(B.L,A.L), LN={3:'ลาภะ–สหัชชะ (๓/๑๑)',11:'ลาภะ–สหัชชะ (๓/๑๑)',5:'ตรีโกณ (๕/๙)',9:'ตรีโกณ (๕/๙)',7:'เล็ง (๗)'};
+  if([3,5,7,9,11].includes(lr)) add(1,'g',`ลัคนา${SIGNS[A.L]} กับ${SIGNS[B.L]} เป็น ${tn(lr)}/${tn(lr2)} แก่กัน — ${LN[lr]}`,'อยู่ในเกณฑ์ ๓ ๕ ๗ ๙ ๑๑ ตำราว่าเข้าใจกัน แนวคิดคล้ายกันหรือส่งเสริมกัน อยู่ร่วมกันได้อย่างมีความสุข',3);
+  else if(lr===1) add(1,'m',`ลัคนาราศีเดียวกัน (${SIGNS[A.L]})`,'นิสัยพื้นฐานเหมือนกันมาก เข้าใจง่าย แต่เมื่อขัดกันต่างคนต่างยืนจุดเดิม',3);
+  else add(1,lr===6||lr===8?'b':'m',`ลัคนาเป็น ${tn(lr)}/${tn(lr2)} แก่กัน — ไม่อยู่ในเกณฑ์ ๓ ๕ ๗ ๙ ๑๑`,lr===2||lr===12?'เกื้อกันเรื่องทรัพย์ แต่จุกจิกในรายละเอียด':lr===4||lr===10?'จังหวะชีวิตต่างกัน ต้องปรับเข้าหากัน':'มุมมองชีวิตต่างกันมาก ต้องอาศัยความเข้าใจและการให้เกียรติ',3);
+  // ๒ จันทร์สมพงศ์
+  const nk=x=>Math.floor(norm(x)/(360/27)), same=[]; if(A.M===B.M) same.push('ร่วมราศี'); if(nk(P.MO)===nk(Q.MO)) same.push('ร่วมนักษัตรฤกษ์'); try{ if(navInfo(P.MO).sign===navInfo(Q.MO).sign) same.push('ร่วมนวางค์'); }catch(e){}
+  if(same.length) add(2,'g',`จันทร์${same.join(' · ')}`,'โบราณว่าอยู่ด้วยกันประเสริฐนัก',2+same.length*0.5);
+  const het=A.sex!==B.sex, Mc=het?(A.sex==='M'?A:B):A, Fc=het?(A.sex==='M'?B:A):B, mN=Mc===A?'เรา':nB, fN=Fc===A?'เรา':nB;
+  const mf=rel(Fc.M,Mc.M), fm=rel(Mc.M,Fc.M);
+  if(mf===7) add(2,'g','จันทร์เล็งกัน','ตำราว่าดีนัก — เติมเต็มกันในชีวิตคู่',3);
+  else if(mf===6||mf===8) add(2,'g',`จันทร์เป็น ${tn(mf)}/${tn(fm)} แก่กัน`,'ตามเกณฑ์จันทร์สมพงศ์ถือว่าดีเช่นกัน (ต่างจากมุมฉัฏฐะ–อัฏฐะของลัคนา)',3);
+  else if(mf!==1){ const T={3:['b','ไม่ดี — ใจไม่ค่อยไปทางเดียวกัน'],4:['g','ดี — ฝ่ายชายเป็นที่พึ่งทางใจให้ฝ่ายหญิง'],5:['g','ดี — ใจเกื้อหนุนกัน คิดไปทางเดียวกัน']}, U={3:['g','ดี — ฝ่ายหญิงช่วยเติมกำลังใจให้ฝ่ายชาย'],4:['g','ดี แต่ฝ่ายหญิงมักยอมฝ่ายชาย'],5:['b','ไม่ดี — ความคาดหวังต่างกัน']};
+    const x=T[mf], y=U[fm]; const ml=het?'ชาย':'', fl=het?'หญิง':'';
+    if(x) add(2,x[0],`จันทร์${ml}(${mN}) เป็น ${tn(mf)} แก่จันทร์${fl}(${fN})`,x[1],3);
+    else if(y) add(2,y[0],`จันทร์${fl}(${fN}) เป็น ${tn(fm)} แก่จันทร์${ml}(${mN})`,y[1],3);
+    else add(2,'n',`จันทร์เป็น ${tn(mf)}/${tn(fm)} แก่กัน`,'ไม่อยู่ในเกณฑ์จันทร์สมพงศ์',0); }
+  if(!het) add(2,'n','ทั้งสองดวงระบุเพศเดียวกัน','เกณฑ์จันทร์ชาย/หญิงใช้ดวงเราเป็นฝ่ายแรก',0);
+  // ๓ ทวาทศจักรสมพงศ์
+  const tAB=spAspect(P[A.tl],Q.LA), tBA=spAspect(Q[B.tl],P.LA);
+  if(tAB.k==='ทับ'&&tBA.k==='ทับ') add(3,'g','ตนุลัคน์ของทั้งสองต่างร่วมลัคนาของอีกฝ่าย',`${TH[A.tl]}ของเราร่วมลัคนา${nB} และ${TH[B.tl]}ของ${nB}ร่วมลัคนาเรา — ตำราว่าเป็นเนื้อคู่แท้ รักใคร่ปรองดอง ครองคู่ยืนยาว`,4);
+  else { const one=(X,Y,a,xn,yn)=>{ if(a.k==='ทับ') add(3,'g',`ตนุลัคน์ของ${xn} (${TH[X.tl]}) ร่วมลัคนา${yn}`,`${yn}จะรัก${xn}มาก`,3);
+      else { const t=SP_TXT[a.k], txt=typeof t==='object'?t[SP_BEN.includes(X.tl)?'g':'b']:t; add(3,a.dus?'b':['ตรีโกณ','โยค'].includes(a.k)?'g':a.k==='เล็ง'?'m':a.k==='จตุโกณ'?'m':'n',`ตนุลัคน์ของ${xn} (${TH[X.tl]}) ตกภพ${HOUSES[a.h-1]}ของ${yn}${a.k!=='—'?' · '+a.k:''}`,txt||'ไม่สัมพันธ์ถึงลัคนาโดยตรง',a.k==='—'?0:2); } };
+    one(A,B,tAB,'เรา',nB); one(B,A,tBA,nB,'เรา'); }
+  const k2A=spLord({pos:P},2), k2B=spLord({pos:Q},2), cA=spAspect(P[k2A],Q.LA).k==='ทับ', cB=spAspect(Q[k2B],P.LA).k==='ทับ';
+  if(cA&&cB) add(3,'g','เจ้าเรือนกดุมภะของทั้งสองร่วมลัคนาอีกฝ่าย','ให้ช่วยกันเก็บทรัพย์ เงินทองจะอยู่ถาวร',1);
+  else if(cA) add(3,'n',`เจ้ากดุมภะของเรา (${TH[k2A]}) ร่วมลัคนา${nB}`,`ตำราว่าให้${nB}เป็นผู้เก็บรักษาเงินและทรัพย์สินจะดี`,0);
+  else if(cB) add(3,'n',`เจ้ากดุมภะของ${nB} (${TH[k2B]}) ร่วมลัคนาเรา`,'ตำราว่าให้เราเป็นผู้เก็บรักษาเงินและทรัพย์สินจะดี',0);
+  // ๔ องค์ประกอบ
+  const pr=(a,b)=>a===b?'ดาวเดียวกัน':(PAIR[[Math.min(PNUM[a],PNUM[b]),Math.max(PNUM[a],PNUM[b])].join('-')]||'เป็นกลาง'), pc=p=>/มิตร|ธาตุ|สมพล|เดียวกัน/.test(p)?'g':/ศัตรู/.test(p)?'b':'n';
+  const p1=pr(A.tl,B.tl); add(4,pc(p1),`เจ้าเรือนลัคน์ ${TH[A.tl]} – ${TH[B.tl]}: ${p1}`,pc(p1)==='g'?'ดาวประจำตัวส่งเสริมกัน':pc(p1)==='b'?'มีแรงปะทะทางความคิด ต้องให้เกียรติความต่าง':'ไม่ส่งเสริมหรือขัดกันชัดเจน',1.5);
+  const p7=pr(A.l7,B.l7); add(4,pc(p7),`เจ้าเรือนปัตนิ ${TH[A.l7]} – ${TH[B.l7]}: ${p7}`,pc(p7)==='g'?'ภาพคู่ที่ต่างฝ่ายต้องการไปทางเดียวกัน':pc(p7)==='b'?'ความคาดหวังต่อชีวิตคู่ต่างกัน ควรคุยให้ชัด':'ความคาดหวังต่อชีวิตคู่ไม่ขัดกัน',1.5);
+  const vA=spAspect(P.VE,Q.LA), vB=spAspect(Q.VE,P.LA), vc=a=>['ทับ','ตรีโกณ'].includes(a.k)?'g':a.k==='โยค'||a.k==='เล็ง'?'m':a.dus?'b':'n';
+  [[vA,'เรา',nB],[vB,nB,'เรา']].forEach(([a,x,y])=>add(4,vc(a),`ศุกร์ของ${x}ตกภพ${HOUSES[a.h-1]}ของ${y}${a.k!=='—'?' · '+a.k+'ลัคนา':''}`,vc(a)==='g'?`${y}รู้สึกถึงเสน่ห์ของ${x}ได้ชัด`:vc(a)==='b'?'เสน่ห์ไปตกทุสถาน ความหวานอาจมาพร้อมเงื่อนไข':'แรงดึงดูดปานกลาง',a.k==='—'?0:1));
+  const ea=ELEM[A.L%4], eb=ELEM[B.L%4]; add(4,ea===eb?'g':(A.L%2)===(B.L%2)?'g':'m',`ธาตุลัคนา ${ea} – ${eb}`,ea===eb?'ธาตุเดียวกัน (ธาตุชั้นหนึ่ง) เข้าใจกันง่าย':(A.L%2)===(B.L%2)?'ธาตุส่งเสริมกัน (ธาตุชั้นสอง)':'ธาตุต่างกลุ่ม ต้องปรับจังหวะ',1);
+  const fit=(X,Y,xn,yn)=>{ if(Y.L===X.s7||Y.M===X.s7) add(4,'g',`${Y.L===X.s7?'ลัคนา':'จันทร์'}ของ${yn}ตกราศีปัตนิของ${xn}`,`ราศี${SIGNS[X.s7]} — ตรงภาพคู่ในดวง${xn}`,1.5); };
+  fit(A,B,'เรา',nB); fit(B,A,nB,'เรา');
+  // ๕ จังหวะรัก
+  const ov=[]; A.G.forEach(a=>B.G.forEach(b=>{ const s=Math.max(a.d0,b.d0), e=Math.min(a.d1,b.d1); if(e>s) ov.push({s:new Date(s),e:new Date(e)}); }));
+  const tt=getTransit(), ovNow=ov.find(o=>o.s<=tt&&tt<=o.e);
+  if(ov.length) add(5,'g',`จังหวะรักซ้อนกัน ${tn(ov.length)} ช่วง`,ov.map(o=>`พ.ศ. ${BE126(o.s)}–${BE126(o.e)}${o===ovNow?' (ตอนนี้)':''}`).join(' · ')+' — ทั้งสองฝ่ายพร้อมรักพร้อมกัน',1);
+  else add(5,'m','จังหวะรักไม่ซ้อนกันโดยตรง','ช่วงรักเด่นของสองคนไม่ตรงปี — ความสัมพันธ์อาศัยความตั้งใจมากกว่าจังหวะดวง',1);
+  // คะแนน (ถ่วงน้ำหนัก ๓ ตำรับหลักมากกว่า)
+  const W=ck.filter(c=>c.w>0), sc=Math.round(100*W.reduce((t,c)=>t+c.w*(c.c==='g'?1:c.c==='b'?0:0.5),0)/Math.max(1,W.reduce((t,c)=>t+c.w,0)));
+  const g=ck.filter(c=>c.c==='g').length, b=ck.filter(c=>c.c==='b').length;
+  const core=[1,2,3].map(k=>{ const xs=ck.filter(c=>c.grp===k&&c.w>0); const v=xs.length?xs.reduce((t,c)=>t+c.w*(c.c==='g'?1:c.c==='b'?0:0.5),0)/xs.reduce((t,c)=>t+c.w,0):0.5; return v>=0.75?'g':v>=0.45?'m':'b'; });
+  const vd=sc>=75?['g','ตรงกันมาก']:sc>=60?['g','ตรงกันพอสมควร']:sc>=45?['m','ตรงกันบางส่วน']:['b','ต่างกันมาก — ต้องใช้ความเข้าใจ'];
+  const GN={1:'๑. ลัคนาสมพงศ์',2:'๒. จันทร์สมพงศ์',3:'๓. ทวาทศจักรสมพงศ์',4:'องค์ประกอบ — เจ้าลัคน์ · เจ้าปัตนิ · ศุกร์ · ธาตุ',5:'จังหวะรักของสองดวง'};
+  const lab=c=>married?(c.c==='g'?'เกื้อกูล':c.c==='b'?'ประคอง':c.c==='m'?'ปรับเข้าหากัน':'ข้อมูล'):(c.c==='g'?'ตรง':c.c==='b'?'ระวัง':c.c==='m'?'บางส่วน':'ข้อมูล');
+  const col=c=>married&&c.c==='b'?'m':c.c;
+  const adv=c=>married&&c.c==='b'?' — <i>ทางประคอง: ตกลงวิธีคุยตอนไม่พอใจ ให้พื้นที่ส่วนตัว และชื่นชมจุดเด่นของกันและกันให้บ่อย</i>':'';
+  // ไทม์ไลน์
+  const y0=Math.min(A.bt.getFullYear(),B.bt.getFullYear())+15, y1=Math.max(A.bt.getFullYear(),B.bt.getFullYear())+60, SW=640, X=d=>40+((d.getFullYear()+d.getMonth()/12)-y0)/(y1-y0)*(SW-52);
+  let sv=`<text x="4" y="24" font-size="10" fill="var(--muted)">เรา</text><text x="4" y="48" font-size="10" fill="var(--muted)">เขา</text><text x="4" y="72" font-size="10" fill="#3fa96b">ซ้อน</text>`;
+  [20,44,68].forEach(y=>sv+=`<line x1="40" x2="${SW-12}" y1="${y}" y2="${y}" stroke="var(--line)"/>`);
+  for(let y=Math.ceil(y0/5)*5;y<=y1;y+=5){ const x=X(new Date(y,0,1)); sv+=`<line x1="${x}" x2="${x}" y1="12" y2="76" stroke="var(--line)" stroke-dasharray="1 3"/><text x="${x}" y="90" font-size="9.5" text-anchor="middle" fill="var(--muted)">${tn(y+543)}</text>`; }
+  const bar=(G,y,c)=>G.forEach(g=>sv+=`<rect x="${X(g.d0)}" y="${y-7}" width="${Math.max(3,X(g.d1)-X(g.d0))}" height="14" rx="7" fill="${c}" opacity="${(0.4+g.v*0.1).toFixed(2)}"><title>พ.ศ. ${BE126(g.d0)}–${BE126(g.d1)}: ${g.w.join(' · ')}</title></rect>`);
+  bar(A.G,20,'#e0567f'); bar(B.G,44,'#8a6bd1'); ov.forEach(o=>sv+=`<rect x="${X(o.s)}" y="61" width="${Math.max(3,X(o.e)-X(o.s))}" height="14" rx="7" fill="#3fa96b"/>`);
+  if(tt.getFullYear()>=y0&&tt.getFullYear()<=y1){ const x=X(tt); sv+=`<line x1="${x}" x2="${x}" y1="8" y2="78" stroke="var(--accent)" stroke-width="1.5"/><text x="${x}" y="7" font-size="9.5" text-anchor="middle" fill="var(--accent)">ตอนนี้</text>`; }
+  const one=(C,l)=>{ const nx=C.G.find(g=>g.d1>tt); return `<div><b>${l}</b> · ลัคนา${SIGNS[C.L]} · จันทร์${SIGNS[C.M]} · ปัตนิ${SIGNS[C.s7]} (เจ้า ${TH[C.l7]})<br>รักแบบ${LVEL53[ELEM[C.L%4]].split(' ')[0]} · ภาพคู่: ${C.ideal}<br><span class="note">ช่วงรักเด่น: ${C.G.slice(0,6).map(g=>`${tn(g.a)}${g.b!==g.a?'–'+tn(g.b):''} ปี (พ.ศ. ${BE126(g.d0)})`).join(' · ')||'—'}${nx?' · ถัดไป พ.ศ. '+BE126(nx.d0):''}</span></div>`; };
+  const head=married?`<div style="margin:8px 0">${bdg98('n','โหมดคู่ที่อยู่ด้วยกันแล้ว')} <span class="note">ตามจรรยาบรรณโหร ไม่ทายคู่ที่ใช้ชีวิตร่วมกันแล้วให้ร้าวฉาน — แสดงเฉพาะจุดเกื้อกูลและแนวทางประคอง ไม่ให้คะแนน</span></div>`
+    :`<div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0">ผลเทียบ: ${bdg98(vd[0],vd[1]+' · '+tn(sc)+'%')} ${['ลัคนา','จันทร์','ทวาทศจักร'].map((t,i)=>bdg98(core[i],t+(core[i]==='g'?' ดี':core[i]==='b'?' ระวัง':' กลาง'))).join(' ')} ${bdg98('g','ตรง '+tn(g)+' ข้อ')} ${bdg98(b?'b':'n','ขัด '+tn(b)+' ข้อ')}</div>`;
+  return `${head}<div class="lv126two">${one(A,'ดวงเรา')}${one(B,nB)}</div>
+   ${[1,2,3,4,5].map(k=>{ const xs=ck.filter(c=>c.grp===k); if(!xs.length) return ''; return `<div class="popSub" style="margin-top:8px">${GN[k]}${k<=3&&!married?' '+bdg98(core[k-1],core[k-1]==='g'?'ดี':core[k-1]==='b'?'ระวัง':'กลาง'):''}</div><div class="lv126ck">${xs.map(c=>`<div>${bdg98(col(c),lab(c))}</div><div><b>${c.t}</b><br><span class="note">${c.d}${adv(c)}</span></div>`).join('')}</div>`; }).join('')}
+   <svg viewBox="0 0 ${SW} 96" style="width:100%;max-width:680px;height:auto" role="img" aria-label="จังหวะรักของสองดวง">${sv}</svg>
+   <p class="note">แถบชมพู = ช่วงรักเด่นของเรา · ม่วง = ของคู่ · เขียว = ปีที่ซ้อนกัน · คะแนนถ่วงน้ำหนักให้สมพงศ์ ๓ ตำรับ (ลัคนา จันทร์ ทวาทศจักร) มากกว่าองค์ประกอบอื่น เพราะโบราณให้ความสำคัญ ๓ ตำรับนี้มาก · ใช้ประกอบพื้นดวงเดิมเรื่องคู่ครอง ไม่ใช่คำตัดสิน · ตรวจละเอียดเพิ่ม (หลักครูห้ามสมรส ดาวข้ามดวง) ได้ที่ "ดวงคู่ · สมพงศ์"</p>`; };
+
+document.addEventListener('change',e=>{ const t=e.target; if(!t||t.id!=='lv127S') return; try{ localStorage.setItem('suriyayatra.lv127s',t.value); }catch(_){}
+  const el=document.getElementById('lv53Out'); if(el&&WSTATE&&WSTATE.nat){ try{ el.innerHTML=love53(WSTATE.nat); }catch(err){ console.error(err); } } });
+
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
   try{ rhythm77(); }catch(e){ console.error(e); document.getElementById('rh77Out').innerHTML='<p class="note">⚠ '+e.message+'</p>'; } }
@@ -8956,6 +9046,16 @@ function sompong(A,B){ const nA=A.p&&A.p.name||'A', nB=B.p&&B.p.name||'B'; let d
   if(!hetero) h+=`<p class="note">ทั้งคู่ระบุเพศเดียวกัน — เกณฑ์จันทร์ชาย/หญิงใช้ ${nA} เป็นฝ่ายแรก</p>`;
   const st=(c,k)=>std(k,c.pos[k])||'—'; const tk=c=>taksaNatal(c.bt).m, role=(c,k)=>Object.keys(tk(c)).find(r=>tk(c)[r]===PNUM[k]);
   h+=`<p class="note">ประกอบ: ดาว ๑ ๓ ๖ และเจ้าเรือนปัตนิ — ${[[A,nA],[B,nB]].map(([c,n])=>{ const l7=spLord(c,7); return `${n}: ${['SU','MA','VE'].map(k=>`${PN[k]} ${st(c,k)}`).join(' · ')} · เจ้าปัตนิ ${PN[l7]} ${st(c,l7)} ภพ ${houseOf(c.pos[l7],sgn(c.pos.LA))}`; }).join(' | ')}</p>`;
+  { const PR=(a,b)=>a===b?'ดาวเดียวกัน':(PAIR[[Math.min(PNUM[a],PNUM[b]),Math.max(PNUM[a],PNUM[b])].join('-')]||'เป็นกลาง'), ok=p=>/มิตร|ธาตุ|สมพล|เดียวกัน/.test(p), bd=p=>/ศัตรู/.test(p)&&!/สมพล/.test(p);
+    const l1a=spLord(A,1), l1b=spLord(B,1), l7a=spLord(A,7), l7b=spLord(B,7), p1=PR(l1a,l1b), p7=PR(l7a,l7b), va=spAspect(A.pos.VE,B.pos.LA), vb=spAspect(B.pos.VE,A.pos.LA), ea=ELEM[LA%4], eb=ELEM[LB%4];
+    const c=x=>x>0?'var(--tr)':x<0?'var(--ret)':'inherit', d1=ok(p1)?3:bd(p1)?-3:0, d7=ok(p7)?3:bd(p7)?-3:0, dv=v=>['ทับ','ตรีโกณ'].includes(v.k)?2:v.dus?-2:0, de=ea===eb?3:(LA%2)===(LB%2)?2:-1;
+    h+=`<h4 class="cmpH">องค์ประกอบสมพงศ์ — เจ้าเรือนลัคน์ · เจ้าเรือนปัตนิ · ศุกร์ · ธาตุ</h4><ul>
+     <li style="color:${c(d1)}">เจ้าเรือนลัคน์ ${PN[l1a]} ${TH[l1a]} × ${PN[l1b]} ${TH[l1b]}: ${p1}${d1>0?' — ส่งเสริมกัน':d1<0?' — ไม่ควรขัดกัน ต้องให้เกียรติความต่าง':''}</li>
+     <li style="color:${c(d7)}">เจ้าเรือนปัตนิ ${PN[l7a]} ${TH[l7a]} × ${PN[l7b]} ${TH[l7b]}: ${p7}${d7>0?' — ภาพชีวิตคู่ที่ต้องการไปทางเดียวกัน':d7<0?' — ความคาดหวังต่อชีวิตคู่ต่างกัน':''}</li>
+     <li style="color:${c(dv(va))}">ศุกร์ของ${nA}ตกภพ ${va.h} ${HOUSES[va.h-1]} ของ${nB}${va.k!=='—'?' ('+va.k+'ลัคน์)':''}</li>
+     <li style="color:${c(dv(vb))}">ศุกร์ของ${nB}ตกภพ ${vb.h} ${HOUSES[vb.h-1]} ของ${nA}${vb.k!=='—'?' ('+vb.k+'ลัคน์)':''}</li>
+     <li style="color:${c(de)}">ธาตุลัคน์ ${ea} × ${eb}: ${ea===eb?'ธาตุชั้นหนึ่ง (เดียวกัน)':(LA%2)===(LB%2)?'ธาตุชั้นสอง (ส่งเสริม)':'ธาตุต่างกลุ่ม'}</li></ul>`;
+    delta+=d1+d7+dv(va)+dv(vb)+de; }
   // ๓ ทวาทศจักรสมพงศ์
   h+=`<h4 class="cmpH">๓. ทวาทศจักรสมพงศ์ (เจ้าเรือนของฝ่ายหนึ่ง → ลัคนาอีกฝ่าย)</h4>`;
   const row=(X,nX,Y,nY)=>{ let o=''; const rows=[];
@@ -9581,7 +9681,7 @@ function cmpHTML(A,B){ const a=cmpPersonInfo(A), b=cmpPersonInfo(B); let sc=50; 
   const rel=(x,y)=>((y-x+12)%12)+1; const lr=rel(a.lagS,b.lagS); const RT={1:'กุม (ลัคน์เดียวกัน) เหมือนกันมาก',2:'2-12 ช่วยเรื่องทรัพย์แต่จุกจิก',3:'3-11 เป็นมิตร ช่วยเหลือกัน',4:'4-10 จตุโกณ ต้องปรับ',5:'5-9 ตรีโกณ ส่งเสริมกันดีมาก',6:'6-8 ฉัฏฐะ-อัฏฐะ ขัดแย้ง/ทุกข์ใจ',7:'1-7 เล็ง ดึงดูดแบบคู่ครอง',8:'6-8 ฉัฏฐะ-อัฏฐะ ขัดแย้ง/ทุกข์ใจ',9:'5-9 ตรีโกณ ส่งเสริมกันดีมาก',10:'4-10 จตุโกณ ต้องปรับ',11:'3-11 เป็นมิตร ช่วยเหลือกัน',12:'2-12 ช่วยเรื่องทรัพย์แต่จุกจิก'};
   const RS={1:4,2:0,3:5,4:-3,5:10,6:-10,7:6,8:-10,9:10,10:-3,11:5,12:0};
   sc+=RS[lr]; pts.push(`ลัคน์${nm(B)}อยู่ภพ ${lr} ของ${nm(A)}: ${RT[lr]}`);
-  const mr=rel(sgn(A.pos.MO),sgn(B.pos.MO)); sc+=RS[mr]*0.6; pts.push(`จันทร์ (จิตใจ) ${SIGNS[sgn(A.pos.MO)]} × ${SIGNS[sgn(B.pos.MO)]}: ${RT[mr]}`);
+  const mr=rel(sgn(A.pos.MO),sgn(B.pos.MO)); const MT127={1:'ร่วมราศี — โบราณว่าประเสริฐ',7:'เล็งกัน — ตำราว่าดีนัก',6:'๖/๘ แก่กัน — ตามจันทร์สมพงศ์ถือว่าดี (ต่างจากลัคนา)',8:'๖/๘ แก่กัน — ตามจันทร์สมพงศ์ถือว่าดี (ต่างจากลัคนา)'}; pts.push(`จันทร์ (จิตใจ) ${SIGNS[sgn(A.pos.MO)]} × ${SIGNS[sgn(B.pos.MO)]}: ${MT127[mr]||mr+'/'+(((12-mr+1)%12)+1)+' แก่กัน — ดูเกณฑ์ชาย/หญิงในจันทร์สมพงศ์ด้านล่าง'}`);
   const key=[a.day,b.day].sort((x,y)=>x-y).join('-'); const pr=PAIR[key]; if(pr){ const g=/มิตร|ธาตุ|สมพล/.test(pr)&&!/^คู่ศัตรู$/.test(pr); sc+=/คู่ศัตรู/.test(pr)&&!/สมพล/.test(pr)?-6:g?5:0; pts.push(`ดาววันเกิด ${THN[a.day]} × ${THN[b.day]}: ${pr}`); } else pts.push(`ดาววันเกิด ${THN[a.day]} × ${THN[b.day]}: ${a.day===b.day?'วันเดียวกัน':'ไม่มีในตารางคู่'}`);
   // กุม/เล็ง ดาวสำคัญข้ามดวง
   const KP=[['VE','MA','ความรัก-แรงดึงดูด'],['MO','SU','ใจ-ตัวตน (เข้ากันลึก)'],['SU','MO','ตัวตน-ใจ'],['VE','VE','รสนิยม'],['MO','MO','อารมณ์'],['LA','VE','เสน่ห์ต่อกัน'],['VE','LA','เสน่ห์ต่อกัน'],['SA','MO','เสาร์ทับจันทร์: กดดันใจ'],['MO','SA','เสาร์ทับจันทร์: กดดันใจ'],['MA','MA','ปะทะกัน']];
