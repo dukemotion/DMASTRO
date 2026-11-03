@@ -256,6 +256,10 @@ svg.lag140{display:inline-block;overflow:visible}
 .rd141 .rk141{display:grid;grid-template-columns:190px 200px 1fr;gap:8px;align-items:start;padding:8px 10px;border-bottom:1px dashed rgba(127,127,127,.2);border-left:3px solid transparent;font-size:12.5px} .rd141 .rk141.g{border-left-color:#3fa96b} .rd141 .rk141.b{border-left-color:#d9534f} .rd141 .rk141.m{border-left-color:#c98a00}
 .rd141 .rk141>div{display:flex;flex-direction:column} .rd141 .rk141 small{color:var(--muted);font-size:11px} .rd141 .rk141 p{margin:0;line-height:1.6;color:var(--ink)}
 @media (max-width:640px){.rd141 .rk141{grid-template-columns:1fr}}
+.mv141{margin-top:5px;padding:5px 9px;border-radius:8px;border-left:3px solid;font-size:11.5px;line-height:1.5;display:flex;flex-direction:column;gap:1px;text-align:left;font-weight:400}
+.mv141 b{font-weight:600} .mv141 span{color:var(--muted)} .mv141 em{font-style:normal;font-weight:700}
+.mv141.b{border-color:#d9534f;background:rgba(217,83,79,.08)} .mv141.b b,.mv141.b em{color:#d9534f} .mv141.m{border-color:#c98a00;background:rgba(217,164,0,.08)} .mv141.m b,.mv141.m em{color:#c98a00} .mv141.g{border-color:#3fa96b;background:rgba(63,169,107,.08)} .mv141.g b,.mv141.g em{color:#3fa96b}
+.mvl141{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:8px;margin:6px 0} .mvr141{display:flex;gap:8px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:8px} .mvr141>div{flex:1;min-width:0}
 div.agebadge .mw140 button.ab.orb140b{border:1px solid rgba(236,220,180,.45)!important;border-radius:12px!important;background:rgba(255,255,255,.04)!important;padding:6px 9px!important;min-width:62px}
 div.agebadge .mw140 button.ab.orb140b:hover{border-color:var(--gold2)!important}
 .mw140{display:flex;align-items:center;gap:8px;min-width:0;max-width:100%}
@@ -2326,7 +2330,7 @@ function detailTable(ch,f,pn,wd,tak){ const lagS=sgn(ch.pos.LA), tanu=tanuKey(ch
     s+=`<tr><td${rt?' class="r"':''}>${PN[k]}.${TH[k]}${mo.code?' '+mo.code:''}</td><td>${String(si).padStart(2,'0')} : ${SIGNS[si].slice(0,2)}</td><td>${D_}</td><td>${String(M_).padStart(2,'0')}</td><td>${HOUSES[houseOf(x,lagS)-1]}</td><td>${ti.n} : ${THN[ti.lord]} : ${SIGNS[ti.sign].slice(0,2)}</td><td>${ti.pis}</td><td>${ni.n} : ${THN[ni.lord]} : ${SIGNS[ni.sign].slice(0,2)}</td><td>${ni.got}${ni.khad?' ขาด':''}</td><td>${String(nk.i).padStart(2,'0')} : ${String(nk.minu).padStart(2,'0')}</td><td>${nk.name}</td><td>${nk.pada}</td><td>${nk.type}</td><td>${nk.cls}</td><td>${k==='LA'?'':rulesHouses(k,lagS)}</td><td>${k==='LA'?'':stdFull(k,x,lagS,tanu,ch)}</td><td>${HOUSES[((si-tanuS)%12+12)%12]}</td><td>${THN[LORD[si]]}</td><td>${el}</td><td>${shp}</td><td>${takName}</td><td>${asp.กุม.join(', ')}</td><td>${asp.เล็ง.join(', ')}</td><td>${asp.โยค.join(', ')}</td><td>${asp.ฉาก.join(', ')}</td><td>${asp.ตรีโกณ.join(', ')}</td></tr>`; }
   return s+'</table></div>'; }
 function rowTable(ch,withSpeed){ let s='<div class="tw"><table><tr><th>ดาว</th><th>ตำแหน่ง</th><th>ฤกษ์</th><th>นวางค์</th><th>ตรียางค์</th><th>มาตรฐาน</th>'+(withSpeed?'<th>เดิน °/วัน</th>':'')+'</tr>';
-  for(const k of ['LA',...ORDER]){ const x=ch.pos[k]; const [nn,cl,ni]=nak(x); const rt=k!=='LA'&&ch.spd[k]<0&&k!=='RA'&&k!=='KE'; const mo=k==='LA'?{code:''}:motion(k,ch.spd[k]); s+=`<tr><td${rt?' class="r"':''}>${PN[k]} ${TH[k]}${mo.code?' '+mo.code:''}</td><td>${fmt(x)}</td><td>${nn} ${ni} (${cl})</td><td>${SIGNS[nav(x)]}</td><td>${SIGNS[tri(x)]}</td><td>${k==='LA'?'':std(k,x)}</td>${withSpeed?`<td>${k==='LA'?'':ch.spd[k].toFixed(3)}</td>`:''}</tr>`; }
+  for(const k of ['LA',...ORDER]){ const x=ch.pos[k]; const [nn,cl,ni]=nak(x); const rt=k!=='LA'&&ch.spd[k]<0&&k!=='RA'&&k!=='KE'; const mo=k==='LA'?{code:''}:motion(k,ch.spd[k]); s+=`<tr><td${rt?' class="r"':''}>${PN[k]} ${TH[k]}${mo.code?' '+mo.code:''}${withSpeed&&mo.code&&k!=='LA'?mvBox141(k,getTransit()):''}</td><td>${fmt(x)}</td><td>${nn} ${ni} (${cl})</td><td>${SIGNS[nav(x)]}</td><td>${SIGNS[tri(x)]}</td><td>${k==='LA'?'':std(k,x)}</td>${withSpeed?`<td>${k==='LA'?'':ch.spd[k].toFixed(3)}</td>`:''}</tr>`; }
   return s+'</table></div>'; }
 const ASP={0:'กุม',60:'โยค',90:'ฉาก',120:'ตรีโกณ',180:'เล็ง'};
 function aspTable(nat,tr){ const rows=[]; for(const k of ORDER){ for(const n of ['LA',...ORDER]){ const d=norm(tr.pos[k]-nat.pos[n]); for(const [a,nm] of Object.entries(ASP)){ const diff=Math.min(Math.abs(d-a),Math.abs(d-(360-a))); if(diff<=3) rows.push([diff,`${PN[k]} ${TH[k]}จร`,nm,`${PN[n]} ${TH[n]}กำเนิด`,`${fmt(tr.pos[k])} ↔ ${fmt(nat.pos[n])}`,diff]); } } }
@@ -5167,7 +5171,7 @@ function orbHTML57(tr,tt,lagS){ const ht=horaOf(tt); let o='<div class="tw"><tab
     const sg=segs57(k,ht,hout); const cur=sg[0]; const sum={}; sg.forEach(s=>sum[s.c]=(sum[s.c]||0)+(s.b-s.a));
     const dir=node?`${arr57('cw')} ตามเข็ม <span class="note">(ราหู–เกตุถอยเป็นปกติ)</span>`:(v<0?`<span class="bk57">${arr57('cw')} ถอยหลัง ${arr57('back')}</span>`:`<span class="fw57">${arr57('ccw')} ทวนเข็ม · เดินหน้า ${arr57('fwd')}</span>`);
     const M=MC57[mo.code]||MC57[''];
-    const nowTxt=node?mo.name:`<span class="mb57" style="--c:${M.c}">${mo.code?mo.code+' ':''}${mo.name}</span><div class="note">อีก ${dd57(cur.b-cur.a)}${sg.length>1?` → ${(MC57[sg[1].c]||MC57['']).n}`:' (จนออกราศี)'}</div>`;
+    const nowTxt=node?mo.name:`<span class="mb57" style="--c:${M.c}">${mo.code?mo.code+' ':''}${mo.name}</span>${mo.code&&!node?mvBox141(k,tt):''}<div class="note">อีก ${dd57(cur.b-cur.a)}${sg.length>1?` → ${(MC57[sg[1].c]||MC57['']).n}`:' (จนออกราศี)'}</div>`;
     o+=`<tr><td${v<0&&!node?' class="r"':''}><a href="#" data-mv="${k}" style="color:inherit">${PN[k]} ${TH[k]}</a></td><td>${fmt(tr.pos[k])}</td><td>${HOUSES[houseOf(tr.pos[k],lagS)-1]}</td><td class="dir57">${dir}</td><td>${nowTxt}</td><td>${v.toFixed(3)}</td><td class="nw57">${fdT(hin)} น.</td><td class="nw57">${fdT(hout)} น.</td>
       <td><div class="st57"><b>${dd57(tot)}</b> · ผ่าน ${dd57(past)} · <b class="lf57">เหลือ ${dd57(left)}</b></div><div class="pb57"><i style="width:${pc.toFixed(1)}%"></i></div></td></tr>`;
     if(!node){ const bar=sg.map(s=>`<i style="flex:${Math.max(.002,(s.b-s.a)/left)};background:${(MC57[s.c]||MC57['']).c}" title="${(MC57[s.c]||MC57['']).n} ${fdT(s.a)} – ${fdT(s.b)} (${dd57(s.b-s.a)})"></i>`).join('');
@@ -8412,7 +8416,8 @@ const CHG110=[
  {v:'141.4',d:'2026-11-03',k:'u',t:'อ่านดวง: แท็บอ่านแบบเสียบปลั๊ก (สายเจ้าเรือนต่อกัน)',x:'แท็บเสียบปลั๊ก: ตามสายเจ้าเรือนต่อกันเป็นทอด ภพ → เจ้าเรือนไปอยู่ภพไหน → เจ้าเรือนภพนั้นไปอยู่ไหน จนสุดสายที่ดาวเกษตร ดาวแลกเรือน หรือวนกลับเป็นวงจร · แกนของดวง (เต้ารับหลักที่สายไปสิ้นสุด และปลายทางของสายลัคนา) · สายครบ ๑๒ ภพพร้อมแผนผังลูกศรและคำอธิบายเป็นย่อหน้า บอกกำลังของดาวแต่ละทอด · สายของดาวแต่ละดวง · เสียบปลั๊กดวงจร: ดาวจรเข้าภพใด นำเรื่องของภพที่ตนเป็นเจ้าเรือนมาด้วย แล้วลามต่อตามสายเจ้าเรือนเดิม พร้อมเวลาที่สายนี้ทำงาน',c:['natal'],p:[],go:'#ageBadge'},
  {v:'141.5',d:'2026-11-03',k:'u',t:'อ่านดวงและอัตราดาวโคจร: ปรับวันจรได้ในป๊อปอัป',x:'แถบวันจรด้านบนของป๊อปอัปอ่านดวงและอัตราดาวโคจร: ย้อน/ถัดไปทีละปี เดือน วัน · เลือกวันเวลาเองได้ (แสดงปี พ.ศ. กำกับ) · ปุ่มกลับเป็นเวลาปัจจุบัน · เปลี่ยนแล้วคำพยากรณ์ทุกแท็บ ดาวจรกระทบดาวเดิม % ผลกระทบ เสียบปลั๊กดวงจร และอัตราดาวโคจรคำนวณใหม่ทันที พร้อมอัปเดตวันจรของทั้งแอป',c:['natal'],p:[],go:'#ageBadge'},
  {v:'141.6',d:'2026-11-03',k:'u',t:'ทักษาละเอียด: เจ้าเรือน ดาวเดิม ดาวจร และจะไปจรต่อที่ไหน',x:'แท็บทักษาในอ่านดวง ทุกภูมิ (ทั้งทักษาเดิมและทักษาจรปีนี้) แสดงแถบ เป็นเจ้าเรือนภพใด → ดาวเดิมอยู่ภพใด → ตอนนี้จรอยู่ภพใด → จะไปจรต่อภพใด พร้อมคำแปลเป็นย่อหน้า: บทบาททักษาผูกกับเรื่องของภพที่ดาวเป็นเจ้าเรือนอย่างไร ผลของศรี เดช มนตรี หรืออุปสรรคของกาลกิณีจะไปเกิดที่เรื่องใดตอนนี้ ดาวจรทับดาวเดิมหรือกลับเข้าบ้านตัวเองหรือไม่ และเมื่อย้ายราศีวันไหน ผลจะเปลี่ยนไปเกิดที่เรื่องใด',c:['natal'],p:[],go:'#ageBadge'},
- {v:'141.7',d:'2026-11-03',k:'u',t:'อ่านดวง: นวางค์·ตรียางค์บอก + เพิ่มกำลัง / − ลดทอน และแท็บฤกษ์',x:'นวางค์·ตรียางค์: ดาวทุกดวงมีป้าย + (เพิ่มกำลัง) และ − (ลดทอน) พร้อมคะแนน เช่น วรโคตม +2 นวางค์นิจ −2 เจ้านวางค์เกื้อหนุน +1 ลูกพิษ −1 เรือนเกณฑ์ +1 และกำลังสุทธิ · หัวข้อสรุปกำลังดาวเรียงจากมากไปน้อย · แท็บฤกษ์: ฤกษ์กำเนิดของจันทร์ (ชื่อฤกษ์ ดาวไทย บาท หมู่ฤกษ์ บูรณ/ฉินท/ภินท ลักษณะนิสัย ตำรา เจ้าหมู่ฤกษ์ในดวง) ฤกษ์ลัคนา ฤกษ์ของดาวทุกดวง · ฤกษ์จรตอนนี้ (เริ่ม-สิ้นสุด หมู่ฤกษ์เหมาะทำอะไร และเทียบฤกษ์เกิดเป็น ชนม์ สัมปัต วิปัต เกษม ปรัตยรี สาธก วธ มิตร ปรมมิตร) · ฤกษ์จรถัดไป ๙ ช่วงสำหรับเลือกวันเวลาทำการ · ดาวจรผ่านฤกษ์ต่าง ๆ และดาวจรทับฤกษ์เกิด',c:['natal'],p:[],go:'#ageBadge'}];
+ {v:'141.7',d:'2026-11-03',k:'u',t:'อ่านดวง: นวางค์·ตรียางค์บอก + เพิ่มกำลัง / − ลดทอน และแท็บฤกษ์',x:'นวางค์·ตรียางค์: ดาวทุกดวงมีป้าย + (เพิ่มกำลัง) และ − (ลดทอน) พร้อมคะแนน เช่น วรโคตม +2 นวางค์นิจ −2 เจ้านวางค์เกื้อหนุน +1 ลูกพิษ −1 เรือนเกณฑ์ +1 และกำลังสุทธิ · หัวข้อสรุปกำลังดาวเรียงจากมากไปน้อย · แท็บฤกษ์: ฤกษ์กำเนิดของจันทร์ (ชื่อฤกษ์ ดาวไทย บาท หมู่ฤกษ์ บูรณ/ฉินท/ภินท ลักษณะนิสัย ตำรา เจ้าหมู่ฤกษ์ในดวง) ฤกษ์ลัคนา ฤกษ์ของดาวทุกดวง · ฤกษ์จรตอนนี้ (เริ่ม-สิ้นสุด หมู่ฤกษ์เหมาะทำอะไร และเทียบฤกษ์เกิดเป็น ชนม์ สัมปัต วิปัต เกษม ปรัตยรี สาธก วธ มิตร ปรมมิตร) · ฤกษ์จรถัดไป ๙ ช่วงสำหรับเลือกวันเวลาทำการ · ดาวจรผ่านฤกษ์ต่าง ๆ และดาวจรทับฤกษ์เกิด',c:['natal'],p:[],go:'#ageBadge'},
+ {v:'141.8',d:'2026-11-03',k:'u',t:'ดาวจรพักร์ · มนท์ · เสริด บอกถึงวันไหน และเหลืออีกกี่วัน',x:'ดาวจรที่พักร์ มนท์ หรือเสริด บอกวันเริ่ม วันสิ้นสุด (วัน วันที่ เดือน ปี เวลา) จำนวนวันที่เหลือจากวันจร ระยะรวม และสถานะถัดไป · แสดงในหน้าอ่านดวงแท็บดาวจร (หัวข้อใหม่ ดาวพักร์ มนท์ เสริด และในคำอ่านรายดาว) การ์ดรายดาวในอัตราดาวโคจร ตารางดาวจร และตารางอัตราโคจร',c:['transit'],p:[],go:'#ageBadge'}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
@@ -9313,7 +9318,7 @@ function sv128init(){ const nb=document.querySelector('#rasi')&&document.querySe
     if(k==='all') sv128save(['rasi','nav','tri','taksa'].map(part128),'จักรราศี นวางค์ ตรียางค์ ทักษา'); else { const p=part128(k); sv128save([p],SVB128.find(x=>x[0]===k)[1]); } }); }
 setTimeout(sv128init,0);
 
-const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v139','v140','v140.1','v140.2','v140.3','v140.4','v140.6','v140.7','v141','v141.1','v141.2','v141.3','v141.4','v141.5','v141.6','v141.7','v1_20','v21','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
+const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v139','v140','v140.1','v140.2','v140.3','v140.4','v140.6','v140.7','v141','v141.1','v141.2','v141.3','v141.4','v141.5','v141.6','v141.7','v141.8','v1_20','v21','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
 // ───────── v129: หน้าอัปเดตระบบแบบบทความ — หัวข้อ · อัปเดตอะไร · รายละเอียด · ภาพหน้าจอ · ปุ่มลัดไปหน้านั้น · ปุ่มอัปเดตบนเมนูบน ─────────
 // ภาพหน้าจอสร้างอัตโนมัติด้วยสคริปต์ tools/shots129.js (ไล่ทุกรายการใน CHG110 ที่ยังไม่มีภาพ) แล้วบันทึกเป็น shots/<v>.webp — SHOTS129 คือรายชื่อไฟล์ที่มีอยู่
 // เป้าหมายของแต่ละรายการ: e.go (selector ที่อยู่นอกหมวด) → e.p[0] (แผงในหมวด) → หมวด e.c[0]
@@ -10277,7 +10282,7 @@ function card140(k,t){ const x=posAt140(k,t), s=sgn(x), p=ing140(k,t,-1), n=ing1
    ${k==='LA'?'':`<div class="st140"><small>เจ้าเรือน</small>${lordB140(k,x)}</div>`}
    <div class="st140"><small>มาตรฐาน</small>${stdB140(k,x)}</div>${k==='LA'?'':meanLine140(k,x)}
    ${ns!=null?`<div class="st140"><small>ราศีถัดไป</small>${stdB140(k,ns*30+1)}</div>`:''}
-   <div class="st140"><small>การเดิน</small><span class="bd140 ${M.cls}">${M.code?M.code+' ':''}${M.name}</span><em>${M.txt}</em></div></div>`; }
+   <div class="st140"><small>การเดิน</small><span class="bd140 ${M.cls}">${M.code?M.code+' ':''}${M.name}</span><em>${M.txt}</em>${k==='LA'?'':mvBox141(k,t)}</div></div>`; }
 
 function month140(y,m){ const key=y+'|'+m; if(month140.c&&month140.c.key===key) return month140.c;
   const nd=new Date(y,m+1,0).getDate(), K=['SU','MO','MA','ME','JU','VE','SA','RA','KE','UR'], out={};
@@ -10574,9 +10579,10 @@ function transit141(){ const N=WSTATE.nat, P=N.pos, L=sgn(P.LA), hs=x=>houseOf(x
     tx+=goodH?(BEN141[k]?' ดาวศุภเคราะห์ผ่านภพนี้ช่วยให้เรื่องเหล่านี้ราบรื่น มีผู้ช่วยหรือโอกาสเข้ามา':' ตามตำราดาวบาปเคราะห์ผ่านภพ ๓ ๖ ๑๑ กลับให้คุณ ได้แรงสู้ เอาชนะคู่แข่งหรืออุปสรรคได้')
       :(MAL141[k]?' ดาวบาปเคราะห์ผ่านภพนี้ เรื่องเหล่านี้จึงอาจหนัก ล่าช้า หรือมีแรงกดดัน ควรใส่ใจดูแลเป็นพิเศษ':' ดาวผ่านภพนี้ทำให้เรื่องเหล่านี้ต้องใช้ความใส่ใจมากขึ้น');
     if(st) tx+=` · ดาว${TN141(k)}จรเป็น${st}: ${stdTerm48(st.split(' ')[0])||''}`;
-    if(mc.code) tx+=` · กำลัง${mc.name}${MOTION_MEAN[mc.name.split(' ')[0]]?' — '+MOTION_MEAN[mc.name.split(' ')[0]]:''}`;
+    if(mc.code) tx+=` · กำลัง${mc.name}${MOTION_MEAN[mc.name.split(' ')[0]]?' — '+MOTION_MEAN[mc.name.split(' ')[0]]:''}`+mvSent141(k,t);
     if(n) tx+=` · จะย้ายเข้าราศี${SIGNS[ns]} (ภพ${HOUSES[houseOf(ns*30+1,L)-1]}) ${dtf140(n)} หรืออีก ${dur140(n-t)}`;
-    return item141(`ดาว${TN141(k)} (${NUM141(k)}) จร${mc.code==='พ.'?' พักร์':''} ราศี${SIGNS[sgn(x)]} → ภพ${HOUSES[h-1]}`,`${HOUSES[h-1]}: ${HM141(h)}`,tx,goodH?'g':MAL141[k]?'m':''); });
+    return item141(`ดาว${TN141(k)} (${NUM141(k)}) จร${mc.code?' '+MVN141[mc.code]:''} ราศี${SIGNS[sgn(x)]} → ภพ${HOUSES[h-1]}`,`${HOUSES[h-1]}: ${HM141(h)}`,tx,goodH?'g':MAL141[k]?'m':''); });
+  out.push(sec141('ดาวพักร์ · มนท์ · เสริด — ถึงวันไหน เหลืออีกกี่วัน','<path d="M20 12a8 8 0 1 1-3-6.2"/><path d="M20 4v5h-5"/>',mvList141(t),true,K141.filter(k=>{const r=mvSpan141(k,t);return r&&r.code;}).length+' ดวง'));
   out.push(sec141('ดาวจรผ่านภพของดวงเดิม',IC141.house,trH.join(''),false,'๑๐ ดวง'));
   // ย้ายราศีเร็ว ๆ นี้
   const soon=[]; for(const k of K141){ if(k==='MO') continue; const n=ing140(k,t,1); if(n&&n-t<45*864e5){ const ns=sgn(posAt140(k,new Date(n.getTime()+3600000))); soon.push({k,n,ns}); } }
@@ -10920,6 +10926,31 @@ function rerk141(){ const N=WSTATE.nat, P=N.pos, L=sgn(P.LA), t=getTransit(), h0
   return soft141(out.join('')); }
 { const _r=render141; render141=function(){ _r.apply(this,arguments); const P=document.getElementById('rd141'); if(!P) return; const tb=P.querySelector('.tb140'), a=tb&&tb.querySelector('[data-t141="a"]'); if(!a) return;
   a.insertAdjacentHTML('beforebegin',`<button type="button" data-t141="r" class="${ST141.tab==='r'?'on':''}">${i141(IC141.tan,15)} ฤกษ์</button>`); tb.querySelectorAll('[data-t141]').forEach(b=>b.classList.toggle('on',b.dataset.t141===ST141.tab)); const on=tb.querySelector('.on'); if(on) tb.scrollLeft=Math.max(0,on.offsetLeft-tb.clientWidth/2+on.offsetWidth/2); }; }
+
+// ───────── v141.8: ดาวจรที่พักร์ / มนท์ / เสริด — บอกช่วงเริ่ม–สิ้นสุด (วัน วันที่ เดือน ปี เวลา) และเหลืออีกกี่วัน
+const DAYN141=['อาทิตย์','จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์','เสาร์'];
+const MVSTEP141={MO:.25,SU:2,ME:.5,VE:1,MA:1,JU:2,SA:2,UR:2}, MVHZ141={MO:30,SU:400,ME:200,VE:650,MA:850,JU:500,SA:500,UR:500};
+const MVN141={'พ.':'พักร์','ม.':'มนท์','ส.':'เสริด','':'เดินปกติ'};
+const fullD141=d=>`วัน${DAYN141[d.getDay()]}ที่ ${d.getDate()} ${MONTHS_TH[d.getMonth()]} พ.ศ. ${d.getFullYear()+543} เวลา ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')} น.`;
+const shortD141=d=>`${['อา.','จ.','อ.','พ.','พฤ.','ศ.','ส.'][d.getDay()]} ${d.getDate()} ${MONTHS_TH[d.getMonth()].slice(0,3)}. ${d.getFullYear()+543}`;
+function left141(ms){ const d=ms/86400000; if(d<1) return `${Math.max(1,Math.round(d*24))} ชั่วโมง`; const D=Math.floor(d), H=Math.round((d-D)*24); return `${D} วัน${H&&D<10?` ${H} ชม.`:''}`; }
+function mvSpan141(k,date){ if(!MVSTEP141[k]) return null; const t0=date.getTime(), key=k+'|'+Math.round(t0/3600000); mvSpan141.c=mvSpan141.c||{}; if(mvSpan141.c[key]!==undefined) return mvSpan141.c[key];
+  const cl=ms=>motion(k,speedH(horaOf(new Date(ms)),k)).code, c0=cl(t0), st=MVSTEP141[k]*86400000, N=Math.ceil(MVHZ141[k]/MVSTEP141[k]);
+  const edge=(a,b,ca)=>{ for(let i=0;i<22;i++){ const m=(a+b)/2; if(cl(m)===ca) a=m; else b=m; } return b; };
+  let end=null, nx=null; for(let i=1,a=t0;i<=N;i++){ const b=t0+st*i, cb=cl(b); if(cb!==c0){ end=edge(a,b,c0); nx=cl(end+3600000); break; } a=b; }
+  let start=null; for(let i=1,b=t0;i<=N;i++){ const a=t0-st*i, ca=cl(a); if(ca!==c0){ start=edge(b,a,c0); break; } b=a; }
+  const r={code:c0,name:MVN141[c0],start:start?new Date(start):null,end:end?new Date(end):null,next:nx,left:end?end-t0:null,tot:end&&start?end-start:null};
+  mvSpan141.c[key]=r; return r; }
+// ข้อความเต็ม (ใช้ในหน้าอ่านดวง)
+function mvSent141(k,date){ const r=mvSpan141(k,date); if(!r||!r.code) return ''; const nm=r.name;
+  return ` · ดาว${TH[k]}${nm}${r.start?`มาตั้งแต่${fullD141(r.start)}`:''}${r.end?` และจะ${nm}ไปจนถึง${fullD141(r.end)} เหลืออีก ${left141(r.left)} จากวันจร${r.tot?` (${nm}รวมราว ${Math.round(r.tot/86400000)} วัน)`:''} จากนั้นจะ${r.next==='พ.'?'เริ่มพักร์':r.next==='ม.'?'เปลี่ยนเป็นมนท์':r.next==='ส.'?'เปลี่ยนเป็นเสริด':'กลับมาเดินปกติ'}`:` และยัง${nm}ต่อไปอีกนาน`}`; }
+// กล่องย่อ (ใช้ในตาราง/การ์ด)
+function mvBox141(k,date){ const r=mvSpan141(k,date); if(!r||!r.code) return ''; const c=r.code==='พ.'?'b':r.code==='ม.'?'m':'g';
+  return `<div class="mv141 ${c}"><b>${r.code} ${r.name}ถึง ${r.end?fullD141(r.end):'—'}</b>${r.end?`<span>เหลืออีก <em>${left141(r.left)}</em>${r.start?` · เริ่ม ${shortD141(r.start)}`:''}${r.tot?` · รวม ${Math.round(r.tot/86400000)} วัน`:''}</span>`:''}</div>`; }
+// แถบสรุปในแท็บดาวจร
+function mvList141(date){ const K=['ME','VE','MA','JU','SA','UR'].filter(k=>{ const r=mvSpan141(k,date); return r&&r.code; });
+  if(!K.length) return '<p class="note">ขณะนี้ไม่มีดาวพักร์ มนท์ หรือเสริด — ดาวทุกดวงเดินปกติ</p>';
+  return `<div class="mvl141">${K.map(k=>`<div class="mvr141">${ico140(k,24)}<div><b>${TH[k]}</b>${mvBox141(k,date)}</div></div>`).join('')}</div>`; }
 
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
