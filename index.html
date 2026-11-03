@@ -290,6 +290,13 @@ svg.lag140{display:inline-block;overflow:visible}
 .rd141 .gp141{display:grid;grid-template-columns:110px 210px 1fr;gap:10px;align-items:start;padding:9px 10px;border-bottom:1px dashed rgba(127,127,127,.2);border-left:3px solid transparent;font-size:12.5px} .rd141 .gp141>div{display:flex;flex-direction:column;gap:2px;min-width:0} .rd141 .gp141 small{font-size:11px;color:var(--muted)} .rd141 .gp141 .fz141{margin:0} .rd141 .gp141 .fq141 b,.rd141 .gs141~.fz141 .fq141 b,.rd141 .ri141x .fq141 b{min-width:30px;padding:0 4px}
 .rd141 .gp141.m{border-left-color:#c98a00} .rd141 .gp141.m>div:first-child b{color:#c98a00} .rd141 .gp141.b{border-left-color:#d9534f} .rd141 .gp141.b>div:first-child b{color:#d9534f}
 @media (max-width:640px){.rd141 .gp141{grid-template-columns:1fr}}
+.rd141 .pnw141{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px;margin:4px 0 6px} .rd141 .pnw141 h5{margin:0 0 6px;font-size:13px}
+.rd141 .pn141{display:grid;grid-template-columns:230px 1fr;gap:10px;align-items:start;margin:6px 0 2px;padding:9px 11px;border-radius:10px;border:1px solid;font-size:12px}
+.rd141 .gp141>.pn141{grid-column:1/-1} .rd141 .pn141.big{grid-template-columns:1fr}
+.rd141 .pn141.m{border-color:rgba(217,164,0,.5);background:rgba(217,164,0,.06)} .rd141 .pn141.b{border-color:rgba(217,83,79,.55);background:rgba(217,83,79,.07)}
+.rd141 .pt141{display:flex;flex-direction:column;gap:1px} .rd141 .pt141 small{display:flex;align-items:center;gap:4px;font-size:11px;color:var(--muted)} .rd141 .pt141 b{font-size:14.5px} .rd141 .pt141 em{font-style:normal;font-size:20px;font-weight:700;font-variant-numeric:tabular-nums} .rd141 .pn141.b .pt141 em{color:#d9534f} .rd141 .pn141.m .pt141 em{color:#c98a00} .rd141 .pt141 span{font-size:11px;color:var(--muted)}
+.rd141 .pn141 ol{margin:0;padding-left:18px;line-height:1.6;color:var(--ink)} .rd141 .pn141 li{margin:1px 0}
+@media (max-width:640px){.rd141 .pn141{grid-template-columns:1fr}}
 div.agebadge .mw140 button.ab.orb140b{border:1px solid rgba(236,220,180,.45)!important;border-radius:12px!important;background:rgba(255,255,255,.04)!important;padding:6px 9px!important;min-width:62px}
 div.agebadge .mw140 button.ab.orb140b:hover{border-color:var(--gold2)!important}
 .mw140{display:flex;align-items:center;gap:8px;min-width:0;max-width:100%}
@@ -8450,7 +8457,8 @@ const CHG110=[
  {v:'141.8',d:'2026-11-03',k:'u',t:'ดาวจรพักร์ · มนท์ · เสริด บอกถึงวันไหน และเหลืออีกกี่วัน',x:'ดาวจรที่พักร์ มนท์ หรือเสริด บอกวันเริ่ม วันสิ้นสุด (วัน วันที่ เดือน ปี เวลา) จำนวนวันที่เหลือจากวันจร ระยะรวม และสถานะถัดไป · แสดงในหน้าอ่านดวงแท็บดาวจร (หัวข้อใหม่ ดาวพักร์ มนท์ เสริด และในคำอ่านรายดาว) การ์ดรายดาวในอัตราดาวโคจร ตารางดาวจร และตารางอัตราโคจร',c:['transit'],p:[],go:'#ageBadge'},
  {v:'141.9',d:'2026-11-03',k:'u',t:'ทักษาจร: เข้ามาแล้วกี่วัน อีกกี่ปี เดือน วันจะเปลี่ยน และจะเปลี่ยนเป็นอะไร',x:'ในส่วนทักษาหน้าหลักและแท็บทักษาในหน้าอ่านดวง บอกว่าทักษาจรปัจจุบันเข้ามาแล้วกี่ปี เดือน วัน (นับจากวันเกิดล่าสุด) อีกกี่ปี เดือน วันจะเปลี่ยน พร้อมวันเวลาที่เปลี่ยน แถบความคืบหน้า ตารางดาวแต่ละดวงเปลี่ยนบทบาทจากอะไรเป็นอะไร และทักษาจรปีถัด ๆ ไป ๘ ปี (ศรี เดช กาลกิณี)',c:['natal'],p:[],go:'#taksaP'},
  {v:'141.10',d:'2026-11-03',k:'u',t:'อัตราดาวโคจร: เวลาอ่านชัดขึ้น การ์ดรายดาวเรียงแถวตรงกัน',x:'การ์ดรายดาวแสดงวันเข้าราศีและวันย้ายออกเป็นกล่องคู่ บอกวันในสัปดาห์ วันที่ และเวลาตัวใหญ่ แถบความคืบหน้าบอกอยู่มาแล้ว เหลืออีก และรวม · หัวข้อในการ์ด (เจ้าเรือน มาตรฐาน ราศีถัดไป การเดิน) เรียงแถวตรงกันทุกการ์ดทั้งแนวตั้งและแนวนอน · ลำดับการย้ายราศีถัดไปแสดงเป็นตาราง ๖ ครั้ง พร้อมนับถอยหลัง',c:['transit'],p:[],go:'#ageBadge'},
- {v:'141.11',d:'2026-11-03',k:'n',t:'โหมดใหม่: เกณฑ์ฆาต — หาช่วงที่ควรระวังหนักตามหลักดาวฆาต',x:'แท็บเกณฑ์ฆาตในหน้าอ่านดวง: หาดาวฆาตจากประเภทราศีลัคนา (นระ = เสาร์, ปัศวะ = พฤหัส, อัมพุ = อังคาร, กีฏะ = ราหู) · ตรวจ ๔ เด้ง คือ ดาวฆาตจรทับหรือเล็งลัคนาและตนุลัคน์ (ยิ่งใกล้องศาลัคนา ๓–๗° ยิ่งหนัก, จันทร์หรือตนุเศษเล็งดาวฆาตคูณ ๒), ดาวอายุเดิมหรือจรตกทุสถานะ, ตนุลัคน์ตกทุสถานะหรือถูกดาวร้ายทับเล็ง, และพฤหัสผู้รักษาประตู · เกณฑ์เสริม: ดาวฆาตเป็นอายุหรือกาลกิณีจร, กาลกิณีกุมลัคน์ อาทิตย์ จันทร์, ดาวเสวยอายุหรือดาวตรีวัยตกกาลกิณีจร, ดาวบาปเคราะห์ทำมุมกับลัคน์ · สแกนล่วงหน้า ๑ ๓ ๑๐ หรือ ๓๐ ปี แสดงกราฟและรายการช่วงพร้อมวันเริ่ม สิ้นสุด และวันที่หนักที่สุด · อ่านเป็นแนวโน้มช่วงที่ควรระวัง',c:['natal','transit'],p:[],go:'#ageBadge'}];
+ {v:'141.11',d:'2026-11-03',k:'n',t:'โหมดใหม่: เกณฑ์ฆาต — หาช่วงที่ควรระวังหนักตามหลักดาวฆาต',x:'แท็บเกณฑ์ฆาตในหน้าอ่านดวง: หาดาวฆาตจากประเภทราศีลัคนา (นระ = เสาร์, ปัศวะ = พฤหัส, อัมพุ = อังคาร, กีฏะ = ราหู) · ตรวจ ๔ เด้ง คือ ดาวฆาตจรทับหรือเล็งลัคนาและตนุลัคน์ (ยิ่งใกล้องศาลัคนา ๓–๗° ยิ่งหนัก, จันทร์หรือตนุเศษเล็งดาวฆาตคูณ ๒), ดาวอายุเดิมหรือจรตกทุสถานะ, ตนุลัคน์ตกทุสถานะหรือถูกดาวร้ายทับเล็ง, และพฤหัสผู้รักษาประตู · เกณฑ์เสริม: ดาวฆาตเป็นอายุหรือกาลกิณีจร, กาลกิณีกุมลัคน์ อาทิตย์ จันทร์, ดาวเสวยอายุหรือดาวตรีวัยตกกาลกิณีจร, ดาวบาปเคราะห์ทำมุมกับลัคน์ · สแกนล่วงหน้า ๑ ๓ ๑๐ หรือ ๓๐ ปี แสดงกราฟและรายการช่วงพร้อมวันเริ่ม สิ้นสุด และวันที่หนักที่สุด · อ่านเป็นแนวโน้มช่วงที่ควรระวัง',c:['natal','transit'],p:[],go:'#ageBadge'},
+ {v:'141.12',d:'2026-11-03',k:'u',t:'เกณฑ์ฆาต: ฟันธงวันและเวลาจุดพีค',x:'ทุกช่วงที่เข้าเกณฑ์มีกล่องฟันธงจุดพีค บอกวัน วันที่ เดือน ปี และเวลาเป็นนาที พร้อมช่วงเฝ้าระวัง ±๒ ชั่วโมง · วิธีหา: ๑) เวลาที่ดาวฆาตเดินตรงองศาลัคนาหรือตนุลัคน์ (ทับหรือเล็ง) ๒) เวลาที่จันทร์จรทับหรือเล็งดาวฆาตเป็นจุดชนวน ๓) เวลาที่ลัคนาจรขึ้นตรงลัคนาเดิมหรือตรงดาวฆาต · ด้านบนสรุปจุดที่หนักที่สุดและจุดที่ใกล้ที่สุดในช่วงที่เลือก',c:['transit'],p:[],go:'#ageBadge'}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
@@ -9351,7 +9359,7 @@ function sv128init(){ const nb=document.querySelector('#rasi')&&document.querySe
     if(k==='all') sv128save(['rasi','nav','tri','taksa'].map(part128),'จักรราศี นวางค์ ตรียางค์ ทักษา'); else { const p=part128(k); sv128save([p],SVB128.find(x=>x[0]===k)[1]); } }); }
 setTimeout(sv128init,0);
 
-const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v139','v140','v140.1','v140.2','v140.3','v140.4','v140.6','v140.7','v141','v141.1','v141.10','v141.11','v141.2','v141.3','v141.4','v141.5','v141.6','v141.7','v141.8','v141.9','v1_20','v21','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
+const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v139','v140','v140.1','v140.2','v140.3','v140.4','v140.6','v140.7','v141','v141.1','v141.10','v141.11','v141.12','v141.2','v141.3','v141.4','v141.5','v141.6','v141.7','v141.8','v141.9','v1_20','v21','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
 // ───────── v129: หน้าอัปเดตระบบแบบบทความ — หัวข้อ · อัปเดตอะไร · รายละเอียด · ภาพหน้าจอ · ปุ่มลัดไปหน้านั้น · ปุ่มอัปเดตบนเมนูบน ─────────
 // ภาพหน้าจอสร้างอัตโนมัติด้วยสคริปต์ tools/shots129.js (ไล่ทุกรายการใน CHG110 ที่ยังไม่มีภาพ) แล้วบันทึกเป็น shots/<v>.webp — SHOTS129 คือรายชื่อไฟล์ที่มีอยู่
 // เป้าหมายของแต่ละรายการ: e.go (selector ที่อยู่นอกหมวด) → e.p[0] (แผงในหมวด) → หมวด e.c[0]
@@ -11113,6 +11121,43 @@ const IC141G={sk:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d=
 document.addEventListener('click',e=>{ const b=e.target.closest&&e.target.closest('[data-gy141]'); if(!b) return; e.preventDefault(); ST141.gy=+b.dataset.gy141; render141(); });
 { const _r=render141; render141=function(){ _r.apply(this,arguments); const P=document.getElementById('rd141'); if(!P) return; const tb=P.querySelector('.tb140'), a=tb&&tb.querySelector('[data-t141="a"]'); if(!a||tb.querySelector('[data-t141="g"]')) return;
   a.insertAdjacentHTML('beforebegin',`<button type="button" data-t141="g" class="${ST141.tab==='g'?'on':''}">${i141(IC141G.sk,15)} เกณฑ์ฆาต</button>`); tb.querySelectorAll('[data-t141]').forEach(b=>b.classList.toggle('on',b.dataset.t141===ST141.tab)); const on=tb.querySelector('.on'); if(on) tb.scrollLeft=Math.max(0,on.offsetLeft-tb.clientWidth/2+on.offsetWidth/2); }; }
+
+// ───────── v141.12: เกณฑ์ฆาต — ฟันธงวันและเวลาจุดพีค (ดาวฆาตตรงองศา → จันทร์จรจุดชนวน → ลัคนาจรขึ้นตรงจุด)
+const sdiff141=(a,b)=>((a-b)%360+540)%360-180;
+function root141(f,a,b,step){ const out=[]; let ta=a, fa=f(ta); for(let tb=a+step;tb<=b+1;tb+=step){ const fb=f(tb); if(fa!=null&&fb!=null&&Math.sign(fa)!==Math.sign(fb)&&Math.abs(fa-fb)<90){ let lo=ta,hi=tb,flo=fa; for(let i=0;i<30;i++){ const m=(lo+hi)/2, fm=f(m); if(Math.sign(fm)===Math.sign(flo)){ lo=m; flo=fm; } else hi=m; } out.push((lo+hi)/2); } ta=tb; fa=fb; } return out; }
+const pG141=(k,ms)=>norm(posH(horaOf(new Date(ms)),k));
+const tDay141=d=>`${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')} น.`;
+function pin141(B,p){ const D=86400000, A=p.a.getTime()-3*D, Z=p.b.getTime()+3*D, G=B.G, P=B.P, core=p.pk.r.core, steps=[];
+  // ๑) ดาวฆาตตรงองศาลัคนา/ตนุลัคน์ (ทับหรือเล็ง)
+  const tg=core?[[P.LA,'ทับองศาลัคนาเดิม'],[norm(P.LA+180),'เล็งองศาลัคนาเดิม'],[P[B.TL],`ทับองศาตนุลัคน์เดิม`],[norm(P[B.TL]+180),'เล็งองศาตนุลัคน์เดิม']]:[];
+  let hits=[]; for(const [x,lab] of tg){ if(G===B.TL&&/ตนุลัคน์/.test(lab)) continue; root141(ms=>{ const d=sdiff141(pG141(G,ms),x); return Math.abs(d)<30?d:null; },A,Z,D/2).forEach(ms=>hits.push({ms,lab})); }
+  const pk=p.pk.d.getTime(); hits.sort((u,v)=>Math.abs(u.ms-pk)-Math.abs(v.ms-pk));
+  let anc=pk; if(hits.length){ anc=hits[0].ms; steps.push(`${TN141(G)}จร (ดาวฆาต) ${hits[0].lab}ตรงองศา ${shortD141(new Date(anc))} ${tDay141(new Date(anc))}${hits.length>1?` (ตรงองศาทั้งหมด ${hits.length} ครั้งเพราะดาวเดินถอยหน้าถอยหลัง)`:''}`); }
+  else if(tg.length){ let bm=null; for(let ms=Math.max(A,p.a.getTime());ms<=Math.min(Z,p.b.getTime());ms+=D/4){ const g=pG141(G,ms); for(const [x,lab] of tg){ if(G===B.TL&&/ตนุลัคน์/.test(lab)) continue; const o=Math.abs(sdiff141(g,x)); if(!bm||o<bm.o) bm={ms,o,lab}; } }
+    if(bm){ anc=bm.ms; steps.push(`${TN141(G)}จร (ดาวฆาต) เข้าใกล้${bm.lab.replace('ตรงองศา','')}ที่สุด ห่าง ${bm.o.toFixed(1)}° ราว ${shortD141(new Date(anc))}`); } else steps.push(`องค์ประกอบร้ายรวมกันมากที่สุดราว ${shortD141(new Date(pk))}`); }
+  else steps.push(`องค์ประกอบร้ายรวมกันมากที่สุดราว ${shortD141(new Date(pk))}`);
+  // ๒) จันทร์จรจุดชนวน — จันทร์ทับ/เล็งดาวฆาตจร (หรือลัคนาเดิม) ใกล้วันพีคที่สุด
+  const mt=core?ms=>{ const g=pG141(G,ms), m=pG141('MO',ms); const d0=sdiff141(m,g), d1=sdiff141(m,g+180); return Math.abs(d0)<Math.abs(d1)?d0:d1; }:ms=>{ const m=pG141('MO',ms); const d0=sdiff141(m,P.LA), d1=sdiff141(m,P.LA+180); return Math.abs(d0)<Math.abs(d1)?d0:d1; };
+  const mr=root141(ms=>{ const v=mt(ms); return Math.abs(v)<40?v:null; },anc-8*D,anc+8*D,D/8).sort((u,v)=>Math.abs(u-anc)-Math.abs(v-anc)); { const inP=mr.filter(x=>x>=p.a.getTime()-D/2&&x<=p.b.getTime()+D); if(inP.length) mr.splice(0,mr.length,...inP); }
+  let mm=mr.length?mr[0]:anc; if(mr.length){ const g=pG141(G,mm), m=pG141('MO',mm); steps.push(`จันทร์จร${Math.abs(sdiff141(m,core?g:P.LA))<90?'ทับ':'เล็ง'}${core?`${TN141(G)}จร`:'ลัคนาเดิม'} เป็นจุดชนวน ${shortD141(new Date(mm))} ${tDay141(new Date(mm))}`); }
+  // ๓) ลัคนาจรขึ้นตรงลัคนาเดิม หรือตรงดาวฆาต ภายในวันชนวน
+  const lx=core?[[P.LA,'ลัคนาเดิม'],[pG141(G,mm),`${TN141(G)}จร`]]:[[P.LA,'ลัคนาเดิม']];
+  let best=null; for(const [x,lab] of lx){ root141(ms=>sdiff141(lagAt140(new Date(ms)),x),mm-3*3600000,mm+21*3600000,600000).forEach(ms=>{ if(!best||Math.abs(ms-mm)<Math.abs(best.ms-mm)) best={ms,lab}; }); }
+  let pin=mm; if(best){ pin=best.ms; steps.push(`ลัคนาจรขึ้นตรง${best.lab} ${tDay141(new Date(pin))}`); }
+  const d=new Date(pin), r=ghAt141(B,horaOf(d),d);
+  return {d,a:new Date(pin-2*3600000),b:new Date(pin+2*3600000),steps,r,hits}; }
+function pinHTML141(x,big){ const L2=GLV141[Math.max(x.r.lv,1)];
+  return `<div class="pn141 ${L2[1]}${big?' big':''}"><div class="pt141"><small>${i141('<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 1v4M12 19v4M1 12h4M19 12h4"/>',12)} ฟันธงจุดพีค</small><b>${fullD141(x.d).replace(/ เวลา .*/,'')}</b><em>เวลา ${tDay141(x.d)}</em><span>ช่วงระวังที่สุด ${tDay141(x.a)} – ${tDay141(x.b)}</span></div><ol>${x.steps.map(s=>`<li>${s}</li>`).join('')}</ol></div>`; }
+{ const _g=ghat141; ghat141=function(){ let h=_g.apply(this,arguments); try{
+  const B=ghBase141(), t=getTransit(), yrs=ST141.gy||10, R=ghScan141(B,t,yrs), PP=R.P.filter(p=>p.lv>=1).slice(0,24);
+  const pins=PP.map(p=>{ try{ return pin141(B,p); }catch(e){ console.error(e); return null; } });
+  // ใส่กล่องฟันธงในแต่ละช่วง (ตามลำดับ .gp141)
+  let i=0; h=h.replace(/<div class="gp141 ([a-z])">([\s\S]*?)<small class="note">([^<]*)<\/small><\/div><\/div>/g,(m0,c,body,g)=>{ const x=i<pins.length?pins[i]:null; i++; return `<div class="gp141 ${c}">${body}<small class="note">${g}</small></div>${x?pinHTML141(x,false):''}</div>`; });
+  // สรุปฟันธงด้านบน: ช่วงที่หนักที่สุดและช่วงใกล้ที่สุด
+  const idx=pins.map((x,j)=>x?j:-1).filter(j=>j>=0); if(idx.length){ const hv=idx.reduce((a,j)=>PP[j].lv>PP[a].lv||(PP[j].lv===PP[a].lv&&PP[j].pk.sc>PP[a].pk.sc)?j:a,idx[0]), nx=idx[0];
+    const top=`<div class="pnw141"><div><h5>จุดที่เกณฑ์ประจวบแรงที่สุดใน ${yrs} ปี — ${GLV141[PP[hv].lv][0]}</h5>${pinHTML141(pins[hv],true)}</div>${nx!==hv?`<div><h5>จุดพีคที่ใกล้ที่สุด — ${GLV141[PP[nx].lv][0]}</h5>${pinHTML141(pins[nx],true)}</div>`:''}</div><p class="note">วิธีฟันธง: หาวันที่ดาวฆาตเดินตรงองศาลัคนาหรือตนุลัคน์ แล้วหาเวลาที่จันทร์จรมาทับหรือเล็งดาวฆาตเป็นจุดชนวน และเวลาที่ลัคนาจร (ตามสถานที่ของวันจร) ขึ้นตรงลัคนาเดิมหรือตรงดาวฆาตในวันนั้น ผลคือเวลาที่เกณฑ์ประจวบกันมากที่สุด ใช้เป็นช่วงเฝ้าระวัง งดเสี่ยง ไม่ใช่วันที่เหตุต้องเกิดแน่นอน</p>`;
+    h=h.replace(/(<div class="gr141b">)/,top+'$1'); }
+  }catch(e){ console.error(e); } return h; }; }
 
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
