@@ -319,6 +319,10 @@ svg.lag140{display:inline-block;overflow:visible}
 @keyframes pp141{0%{opacity:0;transform:scale(.55)}100%{opacity:1;transform:scale(1)}}
 @keyframes ct141{to{opacity:1}}
 @media (prefers-reduced-motion:reduce){.hd75 .ring75.rv141 .pp141,.hd75 .ring75.rv141 .ct141{animation:none;opacity:1}}
+.hd75 .ring75 .sp141{transform-origin:170px 170px;transform-box:view-box;animation:sp141 240s linear infinite}
+.hd75 .ring75 .up141{transform-box:view-box;animation:sp141r 240s linear infinite}
+@keyframes sp141{to{transform:rotate(360deg)}} @keyframes sp141r{to{transform:rotate(-360deg)}}
+@media (prefers-reduced-motion:reduce){.hd75 .ring75 .sp141,.hd75 .ring75 .up141{animation:none}}
 div.agebadge .mw140 button.ab.orb140b{border:1px solid rgba(236,220,180,.45)!important;border-radius:12px!important;background:rgba(255,255,255,.04)!important;padding:6px 9px!important;min-width:62px}
 div.agebadge .mw140 button.ab.orb140b:hover{border-color:var(--gold2)!important}
 .mw140{display:flex;align-items:center;gap:8px;min-width:0;max-width:100%}
@@ -8482,7 +8486,8 @@ const CHG110=[
  {v:'141.11',d:'2026-11-03',k:'n',t:'โหมดใหม่: เกณฑ์ฆาต — หาช่วงที่ควรระวังหนักตามหลักดาวฆาต',x:'แท็บเกณฑ์ฆาตในหน้าอ่านดวง: หาดาวฆาตจากประเภทราศีลัคนา (นระ = เสาร์, ปัศวะ = พฤหัส, อัมพุ = อังคาร, กีฏะ = ราหู) · ตรวจ ๔ เด้ง คือ ดาวฆาตจรทับหรือเล็งลัคนาและตนุลัคน์ (ยิ่งใกล้องศาลัคนา ๓–๗° ยิ่งหนัก, จันทร์หรือตนุเศษเล็งดาวฆาตคูณ ๒), ดาวอายุเดิมหรือจรตกทุสถานะ, ตนุลัคน์ตกทุสถานะหรือถูกดาวร้ายทับเล็ง, และพฤหัสผู้รักษาประตู · เกณฑ์เสริม: ดาวฆาตเป็นอายุหรือกาลกิณีจร, กาลกิณีกุมลัคน์ อาทิตย์ จันทร์, ดาวเสวยอายุหรือดาวตรีวัยตกกาลกิณีจร, ดาวบาปเคราะห์ทำมุมกับลัคน์ · สแกนล่วงหน้า ๑ ๓ ๑๐ หรือ ๓๐ ปี แสดงกราฟและรายการช่วงพร้อมวันเริ่ม สิ้นสุด และวันที่หนักที่สุด · อ่านเป็นแนวโน้มช่วงที่ควรระวัง',c:['natal','transit'],p:[],go:'#ageBadge'},
  {v:'141.12',d:'2026-11-03',k:'u',t:'เกณฑ์ฆาต: ฟันธงวันและเวลาจุดพีค',x:'ทุกช่วงที่เข้าเกณฑ์มีกล่องฟันธงจุดพีค บอกวัน วันที่ เดือน ปี และเวลาเป็นนาที พร้อมช่วงเฝ้าระวัง ±๒ ชั่วโมง · วิธีหา: ๑) เวลาที่ดาวฆาตเดินตรงองศาลัคนาหรือตนุลัคน์ (ทับหรือเล็ง) ๒) เวลาที่จันทร์จรทับหรือเล็งดาวฆาตเป็นจุดชนวน ๓) เวลาที่ลัคนาจรขึ้นตรงลัคนาเดิมหรือตรงดาวฆาต · ด้านบนสรุปจุดที่หนักที่สุดและจุดที่ใกล้ที่สุดในช่วงที่เลือก',c:['transit'],p:[],go:'#ageBadge'},
  {v:'141.13',d:'2026-11-03',k:'n',t:'คลังโยค·เกณฑ์ทั้งระบบ กดหาวันได้ทันที + ความรู้ใหม่ ฆาตสามเกลียว โชคคเชนทร์',x:'แท็บโยค·เกณฑ์ในหน้าอ่านดวง: รวมโยคและเกณฑ์ทุกตัวในระบบ (ดวงมาตรฐาน ดาวคู่กุม โทษภารตะ มาตรฐานดาว และโยคใหม่) ค้นชื่อได้ กรองมีในดวงเดิม ให้คุณ ให้โทษ · ปุ่มหาวัน ค้นช่วงที่ดาวจรทำโยคนั้นพร้อมวันเวลาเริ่ม สิ้นสุด และตั้งเป็นวันจรได้ เลือกโหมดดาวจรกับลัคนาเดิม หรือฟ้าจริงกับลัคนาจรสำหรับหาฤกษ์ · โยคใหม่: สรัสวตีโยค จันทราธิโยค/ฤทธิโยค มหาปริวรรตนเกษตร มหาบุรุษ ๔ ดวงกัลยาณี ดวงร่มฉัตร สมบัตินาคราช อังคารอุปจยะ จันทร์พฤหัส คชเกสรี มาลัยโยค เกตุกุมกาลกิณี มฤตยูและเกตุในราศีให้คุณ ดวงวาจาสิทธิ์ ศุภเคราะห์ในภพมรณะ ดวงหักลูกบาศก์ ทุระทุราโยค คู่อาถรรพ์จันทร์อังคาร พุธศุกร์ธาตุน้ำ ดวงเกรงคู่ ราหูกุมดาว ๙ แบบ · แท็บดวงเดิม: คีย์เวิร์ดดาวในเรือน ภพมรณะกับทรัพย์ ราหูขยายดาว ปัญญาพุธพฤหัส · แท็บเกณฑ์ฆาต: ฆาตสามเกลียวบอกเดือนและวัน และติดในกล่องฟันธง · ดวงหักลูกบาศก์เป็นปัจจัยพื้นดวง · แท็บทักษา: โชคคเชนทร์ประจำปี',c:['natal','transit'],p:[],go:'#ageBadge'},
- {v:'141.14',d:'2026-11-03',k:'u',t:'หน้าแรก: กดผูกดวงแล้วจักรราศีหมุนและดาวประจำดวงปรากฏ',x:'จักรราศีพื้นหลังหน้าแรกแสดงดาวกำเนิดของเจ้าชะตา (เลขดาว ๑–๐ และลัคนาสีแดง) พร้อมชื่อและราศีลัคนาตรงกลาง · เมื่อกดผูกดวงหรือเลือกดวงที่บันทึก จักรราศีหมุน ๒ รอบแบบเร่งแล้วผ่อน (ease-in-out) และหยุดให้ลัคนาอยู่ทางซ้ายตามแบบดวงไทย จากนั้นดาวปรากฏทีละดวงแบบเด้งขึ้น · ผู้ที่ตั้งค่าลดการเคลื่อนไหวจะเห็นผลทันทีโดยไม่หมุน',c:['natal'],p:[],go:'#top76'}];
+ {v:'141.14',d:'2026-11-03',k:'u',t:'หน้าแรก: กดผูกดวงแล้วจักรราศีหมุนและดาวประจำดวงปรากฏ',x:'จักรราศีพื้นหลังหน้าแรกแสดงดาวกำเนิดของเจ้าชะตา (เลขดาว ๑–๐ และลัคนาสีแดง) พร้อมชื่อและราศีลัคนาตรงกลาง · เมื่อกดผูกดวงหรือเลือกดวงที่บันทึก จักรราศีหมุน ๒ รอบแบบเร่งแล้วผ่อน (ease-in-out) และหยุดให้ลัคนาอยู่ทางซ้ายตามแบบดวงไทย จากนั้นดาวปรากฏทีละดวงแบบเด้งขึ้น · ผู้ที่ตั้งค่าลดการเคลื่อนไหวจะเห็นผลทันทีโดยไม่หมุน',c:['natal'],p:[],go:'#top76'},
+ {v:'141.15',d:'2026-11-03',k:'u',t:'หน้าแรก: จักรราศีหมุนช้า ๆ ตลอด มีวง ๒๗ ฤกษ์เป็นพื้นหลัง ดาวขึ้นเมื่อกดผูกดวง',x:'จักรราศีพื้นหลังหมุนช้า ๆ ตลอดเวลา (รอบละ ๔ นาที) · เพิ่มวงนอก ๒๗ นักษัตรฤกษ์ พร้อมชื่อฤกษ์และจุดดาว · ตอนเปิดหน้ายังไม่มีดาว เมื่อกดผูกดวงหรือเลือกดวงที่บันทึก วงจะหมุนแบบเร่งแล้วผ่อน หยุดให้ลัคนาอยู่ซ้าย และดาวประจำดวงเด้งขึ้นทีละดวง จากนั้นหมุนช้าต่อโดยเลขดาวยังตั้งตรงอ่านได้',c:['natal'],p:[],go:'#top76'}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
@@ -9383,7 +9388,7 @@ function sv128init(){ const nb=document.querySelector('#rasi')&&document.querySe
     if(k==='all') sv128save(['rasi','nav','tri','taksa'].map(part128),'จักรราศี นวางค์ ตรียางค์ ทักษา'); else { const p=part128(k); sv128save([p],SVB128.find(x=>x[0]===k)[1]); } }); }
 setTimeout(sv128init,0);
 
-const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v139','v140','v140.1','v140.2','v140.3','v140.4','v140.6','v140.7','v141','v141.1','v141.10','v141.11','v141.12','v141.13','v141.14','v141.2','v141.3','v141.4','v141.5','v141.6','v141.7','v141.8','v141.9','v1_20','v21','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
+const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v139','v140','v140.1','v140.2','v140.3','v140.4','v140.6','v140.7','v141','v141.1','v141.10','v141.11','v141.12','v141.13','v141.14','v141.15','v141.2','v141.3','v141.4','v141.5','v141.6','v141.7','v141.8','v141.9','v1_20','v21','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
 // ───────── v129: หน้าอัปเดตระบบแบบบทความ — หัวข้อ · อัปเดตอะไร · รายละเอียด · ภาพหน้าจอ · ปุ่มลัดไปหน้านั้น · ปุ่มอัปเดตบนเมนูบน ─────────
 // ภาพหน้าจอสร้างอัตโนมัติด้วยสคริปต์ tools/shots129.js (ไล่ทุกรายการใน CHG110 ที่ยังไม่มีภาพ) แล้วบันทึกเป็น shots/<v>.webp — SHOTS129 คือรายชื่อไฟล์ที่มีอยู่
 // เป้าหมายของแต่ละรายการ: e.go (selector ที่อยู่นอกหมวด) → e.p[0] (แผงในหมวด) → หมวด e.c[0]
@@ -11342,6 +11347,35 @@ ring75=function(){ const el=document.getElementById('ring75'); if(!el||!WSTATE||
   RING141.rot=rot; el.style.opacity='.42'; };
 document.addEventListener('click',e=>{ const t=e.target.closest&&e.target.closest('#calc,li.svc76'); if(!t||(e.target.closest&&e.target.closest('.svx'))) return; RING141.anim=true; setTimeout(()=>{ if(RING141.anim) try{ ring75(); }catch(_){ } },80);
   const hd=document.getElementById('top76')||document.querySelector('header.hd75'); if(hd&&t.id==='calc'){ const r=hd.getBoundingClientRect(); if(r.bottom<120) hd.scrollIntoView({behavior:'smooth',block:'start'}); } },true);
+
+// ───────── v141.15: จักรราศีหน้าแรก — หมุนช้า ๆ ตลอด, วงนอกเป็น ๒๗ นักษัตรฤกษ์, ดาวประจำดวงขึ้นเมื่อกดผูกดวงเท่านั้น
+RING141.shown=false;
+ring75=function(){ const el=document.getElementById('ring75'); if(!el||!WSTATE||!WSTATE.nat) return; el.setAttribute('viewBox','-32 -32 404 404');
+  const P=WSTATE.nat.pos, c=170, R1=150, R2=118, Rp=96, RN=186, f=n=>n.toFixed(1), pt=(deg,r)=>{ const a=(deg-90)*Math.PI/180; return [c+r*Math.cos(a), c+r*Math.sin(a)]; };
+  const show=RING141.shown||RING141.anim, rot=show?((270-P.LA)%360+360)%360:0, TD='๐๑๒๓๔๕๖๗๘๙', K=['SU','MO','MA','ME','JU','VE','SA','RA','KE','UR'];
+  let g=`<defs><radialGradient id="rg75" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ecdcb4" stop-opacity=".25"/><stop offset="1" stop-color="#ecdcb4" stop-opacity="0"/></radialGradient></defs><circle cx="${c}" cy="${c}" r="64" fill="url(#rg75)"/>`;
+  g+=`<g class="sp141"><g class="rw141" style="transform:rotate(${rot}deg)">`;
+  // วงนอก ๒๗ ฤกษ์
+  g+=`<circle cx="${c}" cy="${c}" r="${R1+3}" fill="none" stroke="#cfe6f5" stroke-opacity=".18"/><circle cx="${c}" cy="${c}" r="${RN+12}" fill="none" stroke="#cfe6f5" stroke-opacity=".14"/>`;
+  for(let i=0;i<27;i++){ const a0=i*40/3, am=a0+20/3, [x1,y1]=pt(a0,R1+3), [x2,y2]=pt(a0,RN+12), [tx,ty]=pt(am,RN-2), [sx,sy]=pt(am,R1+11);
+    g+=`<line x1="${f(x1)}" y1="${f(y1)}" x2="${f(x2)}" y2="${f(y2)}" stroke="#cfe6f5" stroke-opacity=".16"/><circle cx="${f(sx)}" cy="${f(sy)}" r="${i%3===0?1.6:1.1}" fill="#ecdcb4" fill-opacity="${i%3===0?.8:.5}"/>`;
+    const up=am>90&&am<270; g+=`<text x="${f(tx)}" y="${f(ty)}" font-size="7.2" fill="#d6e4ee" fill-opacity=".62" text-anchor="middle" dominant-baseline="middle" transform="rotate(${f(up?am+180:am)} ${f(tx)} ${f(ty)})">${NAK[i]}</text>`; }
+  // วงราศี
+  g+=`<circle cx="${c}" cy="${c}" r="${R1}" fill="none" stroke="#cfe6f5" stroke-opacity=".45"/><circle cx="${c}" cy="${c}" r="${R2}" fill="none" stroke="#9ccbe8" stroke-opacity=".25"/><circle cx="${c}" cy="${c}" r="60" fill="none" stroke="#9ccbe8" stroke-opacity=".12" stroke-dasharray="2 5"/>`;
+  for(let i=0;i<12;i++){ const [x1,y1]=pt(i*30,R2), [x2,y2]=pt(i*30,R1), am=i*30+15, [tx,ty]=pt(am,(R1+R2)/2), up=am>90&&am<270; g+=`<line x1="${f(x1)}" y1="${f(y1)}" x2="${f(x2)}" y2="${f(y2)}" stroke="#cfe6f5" stroke-opacity=".35"/><text x="${f(tx)}" y="${f(ty)}" text-anchor="middle" dominant-baseline="middle" font-size="11" fill="#d6e4ee" fill-opacity=".78" transform="rotate(${up?am+180:am} ${f(tx)} ${f(ty)})">${SIGNS[i]}</text>`; }
+  if(show){ const L=K.filter(k=>isFinite(P[k])).map(k=>({k,x:norm(P[k])})).sort((a,b)=>a.x-b.x); L.forEach((o,i)=>{ o.r=Rp; const pv=L[i-1]; if(pv&&o.x-pv.x<9) o.r=pv.r===Rp?Rp-22:Rp; });
+    const up=(x,y,inner)=>`<g class="up141" style="transform-origin:${f(x)}px ${f(y)}px"><g transform="rotate(${-rot} ${f(x)} ${f(y)})">${inner}</g></g>`;
+    { const [x,y]=pt(P.LA,Rp), [ox,oy]=pt(P.LA,R1+2); g+=`<g class="pp141" style="--i:0"><line x1="${f(ox)}" y1="${f(oy)}" x2="${f(x)}" y2="${f(y)}" stroke="#e5484d" stroke-opacity=".75" stroke-width="1.4"/><circle cx="${f(x)}" cy="${f(y)}" r="11" fill="#1a0f12" stroke="#e5484d"/>${up(x,y,`<g transform="translate(${f(x-6)} ${f(y-6)})">${typeof lagGlyph140==='function'?lagGlyph140('#ff6b6b',12):''}</g>`)}</g>`; }
+    L.forEach((o,i)=>{ const [x,y]=pt(o.x,o.r), [lx,ly]=pt(o.x,R2-3);
+      g+=`<g class="pp141" style="--i:${i+1}"><line x1="${f(lx)}" y1="${f(ly)}" x2="${f(x)}" y2="${f(y)}" stroke="#ecdcb4" stroke-opacity=".4"/><circle cx="${f(x)}" cy="${f(y)}" r="10" fill="#0d1a26" stroke="${o.k==='SU'?'#ecdcb4':'#d6b46a'}" stroke-opacity=".95"/>${up(x,y,`<text x="${f(x)}" y="${f(y+4)}" text-anchor="middle" font-size="12" fill="#f2deae">${TD[PNUM[o.k]]}</text>`)}</g>`; }); }
+  g+='</g></g>';
+  if(show){ const nm=(document.getElementById('name')||{}).value||''; g+=`<g class="ct141"><text x="${c}" y="${c-2}" text-anchor="middle" font-size="15" fill="#f3f7fa" fill-opacity=".9" font-family="Kanit,sans-serif">${nm.replace(/[<>&]/g,'')}</text><text x="${c}" y="${c+15}" text-anchor="middle" font-size="10" fill="#ecdcb4" fill-opacity=".85">ลัคนา${SIGNS[sgn(P.LA)]}</text></g>`; }
+  el.innerHTML=g; el.classList.toggle('on141',show);
+  if(RING141.anim){ RING141.anim=false; RING141.shown=true; const red=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches, w=el.querySelector('.rw141');
+    el.classList.remove('rv141'); void el.getBoundingClientRect(); el.classList.add('rv141');
+    if(!red&&w&&w.animate) w.animate([{transform:`rotate(${rot-720}deg)`},{transform:`rotate(${rot}deg)`}],{duration:2600,easing:'cubic-bezier(.65,0,.35,1)'});
+    if(el.animate) el.animate([{opacity:.22},{opacity:.7,offset:.55},{opacity:.42}],{duration:3600,easing:'ease-in-out'}); }
+  el.style.opacity=show?'.42':''; };
 
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
