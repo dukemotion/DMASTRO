@@ -323,6 +323,14 @@ svg.lag140{display:inline-block;overflow:visible}
 .hd75 .ring75 .up141{transform-box:view-box;animation:sp141r 240s linear infinite}
 @keyframes sp141{to{transform:rotate(360deg)}} @keyframes sp141r{to{transform:rotate(-360deg)}}
 @media (prefers-reduced-motion:reduce){.hd75 .ring75 .sp141,.hd75 .ring75 .up141{animation:none}}
+#nd141{position:fixed;z-index:9999;overflow:auto;padding:6px;border-radius:16px;background:rgba(12,24,36,.97);border:1px solid rgba(190,220,240,.22);box-shadow:0 24px 60px -18px rgba(0,0,0,.75);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);text-align:left;font-size:13px;color:#e6edf2}
+#nd141[hidden]{display:none}
+#nd141 .ndh141{font-size:11px;color:#9fb3c2;padding:4px 10px 6px}
+#nd141 .ndi141{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:11px;cursor:pointer}
+#nd141 .ndi141:hover,#nd141 .ndi141.on{background:rgba(156,203,232,.14)} #nd141 .ndi141.cur{box-shadow:inset 3px 0 0 #ecdcb4}
+#nd141 .nda141{width:32px;height:32px;flex:none;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#dbe9f3,#9ccbe8);color:#0d1a26;font-weight:600}
+#nd141 .ndt141{display:flex;flex-direction:column;min-width:0} #nd141 .ndt141 b{font-weight:500;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis} #nd141 .ndt141 small{font-size:11.5px;color:#9fb3c2}
+#nd141 .nde141{padding:12px;color:#9fb3c2;font-size:12.5px}
 div.agebadge .mw140 button.ab.orb140b{border:1px solid rgba(236,220,180,.45)!important;border-radius:12px!important;background:rgba(255,255,255,.04)!important;padding:6px 9px!important;min-width:62px}
 div.agebadge .mw140 button.ab.orb140b:hover{border-color:var(--gold2)!important}
 .mw140{display:flex;align-items:center;gap:8px;min-width:0;max-width:100%}
@@ -8487,7 +8495,8 @@ const CHG110=[
  {v:'141.12',d:'2026-11-03',k:'u',t:'เกณฑ์ฆาต: ฟันธงวันและเวลาจุดพีค',x:'ทุกช่วงที่เข้าเกณฑ์มีกล่องฟันธงจุดพีค บอกวัน วันที่ เดือน ปี และเวลาเป็นนาที พร้อมช่วงเฝ้าระวัง ±๒ ชั่วโมง · วิธีหา: ๑) เวลาที่ดาวฆาตเดินตรงองศาลัคนาหรือตนุลัคน์ (ทับหรือเล็ง) ๒) เวลาที่จันทร์จรทับหรือเล็งดาวฆาตเป็นจุดชนวน ๓) เวลาที่ลัคนาจรขึ้นตรงลัคนาเดิมหรือตรงดาวฆาต · ด้านบนสรุปจุดที่หนักที่สุดและจุดที่ใกล้ที่สุดในช่วงที่เลือก',c:['transit'],p:[],go:'#ageBadge'},
  {v:'141.13',d:'2026-11-03',k:'n',t:'คลังโยค·เกณฑ์ทั้งระบบ กดหาวันได้ทันที + ความรู้ใหม่ ฆาตสามเกลียว โชคคเชนทร์',x:'แท็บโยค·เกณฑ์ในหน้าอ่านดวง: รวมโยคและเกณฑ์ทุกตัวในระบบ (ดวงมาตรฐาน ดาวคู่กุม โทษภารตะ มาตรฐานดาว และโยคใหม่) ค้นชื่อได้ กรองมีในดวงเดิม ให้คุณ ให้โทษ · ปุ่มหาวัน ค้นช่วงที่ดาวจรทำโยคนั้นพร้อมวันเวลาเริ่ม สิ้นสุด และตั้งเป็นวันจรได้ เลือกโหมดดาวจรกับลัคนาเดิม หรือฟ้าจริงกับลัคนาจรสำหรับหาฤกษ์ · โยคใหม่: สรัสวตีโยค จันทราธิโยค/ฤทธิโยค มหาปริวรรตนเกษตร มหาบุรุษ ๔ ดวงกัลยาณี ดวงร่มฉัตร สมบัตินาคราช อังคารอุปจยะ จันทร์พฤหัส คชเกสรี มาลัยโยค เกตุกุมกาลกิณี มฤตยูและเกตุในราศีให้คุณ ดวงวาจาสิทธิ์ ศุภเคราะห์ในภพมรณะ ดวงหักลูกบาศก์ ทุระทุราโยค คู่อาถรรพ์จันทร์อังคาร พุธศุกร์ธาตุน้ำ ดวงเกรงคู่ ราหูกุมดาว ๙ แบบ · แท็บดวงเดิม: คีย์เวิร์ดดาวในเรือน ภพมรณะกับทรัพย์ ราหูขยายดาว ปัญญาพุธพฤหัส · แท็บเกณฑ์ฆาต: ฆาตสามเกลียวบอกเดือนและวัน และติดในกล่องฟันธง · ดวงหักลูกบาศก์เป็นปัจจัยพื้นดวง · แท็บทักษา: โชคคเชนทร์ประจำปี',c:['natal','transit'],p:[],go:'#ageBadge'},
  {v:'141.14',d:'2026-11-03',k:'u',t:'หน้าแรก: กดผูกดวงแล้วจักรราศีหมุนและดาวประจำดวงปรากฏ',x:'จักรราศีพื้นหลังหน้าแรกแสดงดาวกำเนิดของเจ้าชะตา (เลขดาว ๑–๐ และลัคนาสีแดง) พร้อมชื่อและราศีลัคนาตรงกลาง · เมื่อกดผูกดวงหรือเลือกดวงที่บันทึก จักรราศีหมุน ๒ รอบแบบเร่งแล้วผ่อน (ease-in-out) และหยุดให้ลัคนาอยู่ทางซ้ายตามแบบดวงไทย จากนั้นดาวปรากฏทีละดวงแบบเด้งขึ้น · ผู้ที่ตั้งค่าลดการเคลื่อนไหวจะเห็นผลทันทีโดยไม่หมุน',c:['natal'],p:[],go:'#top76'},
- {v:'141.15',d:'2026-11-03',k:'u',t:'หน้าแรก: จักรราศีหมุนช้า ๆ ตลอด มีวง ๒๗ ฤกษ์เป็นพื้นหลัง ดาวขึ้นเมื่อกดผูกดวง',x:'จักรราศีพื้นหลังหมุนช้า ๆ ตลอดเวลา (รอบละ ๔ นาที) · เพิ่มวงนอก ๒๗ นักษัตรฤกษ์ พร้อมชื่อฤกษ์และจุดดาว · ตอนเปิดหน้ายังไม่มีดาว เมื่อกดผูกดวงหรือเลือกดวงที่บันทึก วงจะหมุนแบบเร่งแล้วผ่อน หยุดให้ลัคนาอยู่ซ้าย และดาวประจำดวงเด้งขึ้นทีละดวง จากนั้นหมุนช้าต่อโดยเลขดาวยังตั้งตรงอ่านได้',c:['natal'],p:[],go:'#top76'}];
+ {v:'141.15',d:'2026-11-03',k:'u',t:'หน้าแรก: จักรราศีหมุนช้า ๆ ตลอด มีวง ๒๗ ฤกษ์เป็นพื้นหลัง ดาวขึ้นเมื่อกดผูกดวง',x:'จักรราศีพื้นหลังหมุนช้า ๆ ตลอดเวลา (รอบละ ๔ นาที) · เพิ่มวงนอก ๒๗ นักษัตรฤกษ์ พร้อมชื่อฤกษ์และจุดดาว · ตอนเปิดหน้ายังไม่มีดาว เมื่อกดผูกดวงหรือเลือกดวงที่บันทึก วงจะหมุนแบบเร่งแล้วผ่อน หยุดให้ลัคนาอยู่ซ้าย และดาวประจำดวงเด้งขึ้นทีละดวง จากนั้นหมุนช้าต่อโดยเลขดาวยังตั้งตรงอ่านได้',c:['natal'],p:[],go:'#top76'},
+ {v:'141.16',d:'2026-11-03',k:'u',t:'ช่องชื่อเจ้าชะตา: กดแล้วเลือกดวงที่บันทึกไว้ได้ทันที',x:'แตะช่องชื่อเจ้าชะตาแล้วจะมีรายการดวงที่บันทึกไว้ทั้งหมด (ชื่อ วันเวลาเกิด อายุ ลัคนา) · พิมพ์เพื่อกรองชื่อ · ใช้ลูกศรขึ้นลงและ Enter เลือกได้ · เลือกแล้วผูกดวงทันทีพร้อมแอนิเมชันจักรราศี · ถ้าพิมพ์ชื่อใหม่ที่ไม่มีในรายการ ยังกรอกเพื่อผูกดวงใหม่ได้ตามปกติ',c:['natal'],p:[],go:'#qf76'}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
@@ -9388,7 +9397,7 @@ function sv128init(){ const nb=document.querySelector('#rasi')&&document.querySe
     if(k==='all') sv128save(['rasi','nav','tri','taksa'].map(part128),'จักรราศี นวางค์ ตรียางค์ ทักษา'); else { const p=part128(k); sv128save([p],SVB128.find(x=>x[0]===k)[1]); } }); }
 setTimeout(sv128init,0);
 
-const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v139','v140','v140.1','v140.2','v140.3','v140.4','v140.6','v140.7','v141','v141.1','v141.10','v141.11','v141.12','v141.13','v141.14','v141.15','v141.2','v141.3','v141.4','v141.5','v141.6','v141.7','v141.8','v141.9','v1_20','v21','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
+const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v139','v140','v140.1','v140.2','v140.3','v140.4','v140.6','v140.7','v141','v141.1','v141.10','v141.11','v141.12','v141.13','v141.14','v141.15','v141.16','v141.2','v141.3','v141.4','v141.5','v141.6','v141.7','v141.8','v141.9','v1_20','v21','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
 // ───────── v129: หน้าอัปเดตระบบแบบบทความ — หัวข้อ · อัปเดตอะไร · รายละเอียด · ภาพหน้าจอ · ปุ่มลัดไปหน้านั้น · ปุ่มอัปเดตบนเมนูบน ─────────
 // ภาพหน้าจอสร้างอัตโนมัติด้วยสคริปต์ tools/shots129.js (ไล่ทุกรายการใน CHG110 ที่ยังไม่มีภาพ) แล้วบันทึกเป็น shots/<v>.webp — SHOTS129 คือรายชื่อไฟล์ที่มีอยู่
 // เป้าหมายของแต่ละรายการ: e.go (selector ที่อยู่นอกหมวด) → e.p[0] (แผงในหมวด) → หมวด e.c[0]
@@ -11376,6 +11385,32 @@ ring75=function(){ const el=document.getElementById('ring75'); if(!el||!WSTATE||
     if(!red&&w&&w.animate) w.animate([{transform:`rotate(${rot-720}deg)`},{transform:`rotate(${rot}deg)`}],{duration:2600,easing:'cubic-bezier(.65,0,.35,1)'});
     if(el.animate) el.animate([{opacity:.22},{opacity:.7,offset:.55},{opacity:.42}],{duration:3600,easing:'ease-in-out'}); }
   el.style.opacity=show?'.42':''; };
+
+// ───────── v141.16: ช่องชื่อเจ้าชะตา — กดแล้วเป็นรายการดวงที่บันทึกไว้ (พิมพ์กรองได้ · ลูกศรขึ้นลง · Enter เลือก)
+const ND141={i:-1,list:[]};
+function ndBox141(){ let b=document.getElementById('nd141'); if(!b){ b=document.createElement('div'); b.id='nd141'; b.setAttribute('role','listbox'); b.setAttribute('aria-label','ดวงที่บันทึกไว้'); document.body.appendChild(b);
+  b.addEventListener('mousedown',e=>e.preventDefault()); b.addEventListener('click',e=>{ const it=e.target.closest('[data-nd141]'); if(it) ndPick141(+it.dataset.nd141); }); } return b; }
+function ndPos141(){ const i=document.getElementById('name'), b=document.getElementById('nd141'); if(!i||!b||b.hidden) return; const f=i.closest('.f76')||i, r=f.getBoundingClientRect();
+  b.style.left=Math.max(8,Math.min(r.left,innerWidth-Math.min(innerWidth-16,Math.max(380,r.width))-8))+'px'; b.style.top=(r.bottom+6)+'px'; b.style.width=Math.min(innerWidth-16,Math.max(380,r.width))+"px"; b.style.maxHeight=Math.max(160,innerHeight-r.bottom-20)+'px'; }
+function ndShow141(){ const i=document.getElementById('name'); if(!i) return; const all=loadProfiles(), q=(i.dataset.typed==='1'?i.value:'').trim().toLowerCase();
+  ND141.list=all.map((p,k)=>({p,k})).filter(o=>!q||String(o.p.name||'').toLowerCase().includes(q)); const b=ndBox141(), cur=i.value;
+  if(!all.length){ b.innerHTML='<div class="nde141">ยังไม่มีดวงที่บันทึก — กรอกข้อมูลแล้วกด "บันทึก" ในแผงตั้งค่า</div>'; }
+  else if(!ND141.list.length){ b.innerHTML=`<div class="nde141">ไม่พบชื่อ "${q.replace(/[<>&]/g,'')}" ในดวงที่บันทึก — กดผูกดวงเพื่อใช้ชื่อนี้</div>`; }
+  else b.innerHTML=`<div class="ndh141">ดวงที่บันทึกไว้ ${ND141.list.length} ดวง</div>`+ND141.list.map((o,j)=>{ const p=o.p, I=typeof profInfo80==='function'?profInfo80(p):{}, ini=String(p.name||'?').trim().charAt(0);
+    return `<div class="ndi141${j===ND141.i?' on':''}${p.name===cur?' cur':''}" role="option" data-nd141="${j}"><span class="nda141">${ini}</span><span class="ndt141"><b>${p.name}</b><small>เกิด ${p.d}/${p.m}/${p.y} · ${String(p.h).padStart(2,'0')}:${String(p.mi).padStart(2,'0')} น.${I.age!==''&&I.age!=null?' · อายุ '+I.age+' ปี':''}${I.lag?' · ลัคน์'+I.lag:''}</small></span></div>`; }).join('');
+  b.hidden=false; ndPos141(); const on=b.querySelector('.on'); if(on) on.scrollIntoView({block:'nearest'}); }
+function ndHide141(){ const b=document.getElementById('nd141'); if(b) b.hidden=true; ND141.i=-1; }
+function ndPick141(j){ const o=ND141.list[j]; if(!o) return; const i=document.getElementById('name'); i.dataset.typed='0'; ndHide141(); fillForm(o.p); RING141.anim=true; compute(); try{ ring75(); }catch(_){ }
+  try{ document.querySelectorAll('#saved .svc76').forEach(x=>x.classList.toggle('on',x.dataset.i==String(o.k))); }catch(_){ } i.blur(); }
+(function(){ const i=document.getElementById('name'); if(!i) return; i.setAttribute('autocomplete','off'); i.setAttribute('aria-autocomplete','list'); i.setAttribute('aria-controls','nd141');
+  i.addEventListener('focus',()=>{ i.dataset.typed='0'; ND141.i=-1; ndShow141(); setTimeout(()=>i.select(),0); });
+  i.addEventListener('click',()=>{ if(document.getElementById('nd141')?.hidden!==false) ndShow141(); });
+  i.addEventListener('input',()=>{ i.dataset.typed='1'; ND141.i=0; ndShow141(); });
+  i.addEventListener('blur',()=>setTimeout(ndHide141,120));
+  i.addEventListener('keydown',e=>{ const b=document.getElementById('nd141'); if(!b||b.hidden){ if(e.key==='ArrowDown'){ ndShow141(); e.preventDefault(); } return; } const n=ND141.list.length;
+    if(e.key==='ArrowDown'){ ND141.i=Math.min(n-1,ND141.i+1); ndShow141(); e.preventDefault(); } else if(e.key==='ArrowUp'){ ND141.i=Math.max(0,ND141.i-1); ndShow141(); e.preventDefault(); }
+    else if(e.key==='Enter'){ if(ND141.i>=0&&ND141.i<n){ e.preventDefault(); ndPick141(ND141.i); } else ndHide141(); } else if(e.key==='Escape') ndHide141(); });
+  addEventListener('scroll',ndPos141,{passive:true}); addEventListener('resize',ndPos141); })();
 
 let KEY77='';
 function rhTry77(force){ const p=document.getElementById('rh77P'); if(!p||p.style.display==='none'||!WSTATE||!WSTATE.nat) return; const t=getTransit(), k=[ST77.v,ST77.day&&ST77.day.toDateString(),t.toDateString(),WSTATE.bt&&WSTATE.bt.getTime(),WSTATE.lat].join('|'); if(!force&&k===KEY77) return; KEY77=k;
