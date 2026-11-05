@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs>
+<radialGradient id="bg" cx="50%" cy="38%" r="72%"><stop offset="0" stop-color="#1d2a5c"/><stop offset=".6" stop-color="#101839"/><stop offset="1" stop-color="#070b1d"/></radialGradient>
+<linearGradient id="au" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff3c8"/><stop offset=".45" stop-color="#f1cf72"/><stop offset="1" stop-color="#b8862c"/></linearGradient>
+<linearGradient id="ar" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#b8862c"/><stop offset=".5" stop-color="#f6dc8e"/><stop offset="1" stop-color="#c99b3e"/></linearGradient>
+<clipPath id="fr"><rect x="0" y="292" width="512" height="220"/></clipPath>
+</defs>
+<rect width="512" height="512" rx="112" fill="url(#bg)"/>
+<g fill="#fff"><circle cx="118" cy="120" r="3.2" opacity=".55"/><circle cx="402" cy="150" r="2.4" opacity=".45"/><circle cx="96" cy="372" r="2.2" opacity=".35"/><circle cx="430" cy="404" r="2.8" opacity=".4"/></g>
+<g transform="rotate(-16 256 292)"><ellipse cx="256" cy="292" rx="182" ry="56" fill="none" stroke="url(#ar)" stroke-width="12" opacity=".55"/></g>
+<path d="M256 86C266 196 296 232 398 246C296 260 266 296 256 406C246 296 216 260 114 246C216 232 246 196 256 86Z" fill="url(#au)" stroke="#0c1331" stroke-width="10" paint-order="stroke"/>
+<g transform="rotate(-16 256 292)" clip-path="url(#fr)"><ellipse cx="256" cy="292" rx="182" ry="56" fill="none" stroke="url(#ar)" stroke-width="12"/></g>
+<circle cx="431" cy="242" r="15" fill="url(#au)"/>
+<path d="M392 96l5 15 15 5-15 5-5 15-5-15-15-5 15-5z" fill="#f6dc8e"/>
+</svg>
