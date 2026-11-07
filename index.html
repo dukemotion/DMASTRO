@@ -3730,6 +3730,36 @@ html.lv170o{overflow:hidden}
 @media(max-width:860px){#lv170 .hr{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){#lv170 .wr{padding:0 12px 90px}#lv170 .hr b{font-size:16px}#lv170 .ws{grid-template-columns:1fr}#lv170 .bars{height:100px}}
 
+/* v171.0 อ่านดาวจร ๔ ขั้น */
+.k171{display:grid;gap:10px}
+.k171 svg{width:15px!important;height:15px!important;flex:0 0 15px!important}
+.k171 .fl171{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.k171 .fl171 span{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:99px;border:1px solid rgba(217,180,90,.4);background:rgba(217,180,90,.06);font-size:12px}
+.k171 .fl171 span:not(:last-child):after{content:"→";margin-left:4px;color:#d9b45a}
+.k171 .fl171 i{font-style:normal;display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:#d9b45a;color:#1a1408;font-size:11px;font-weight:700}
+.k171 .ax171{padding:11px 13px;border-radius:12px;border:1px solid;display:grid;gap:5px}
+.k171 .ax171.r{border-color:rgba(226,99,99,.5);background:rgba(226,99,99,.07)}.k171 .ax171.y{border-color:rgba(217,180,90,.5);background:rgba(217,180,90,.06)}
+.k171 .ax171 b{display:flex;gap:7px;align-items:center;font-size:13.5px}.k171 .ax171.r b{color:#e26363}.k171 .ax171.y b{color:#d9b45a}
+.k171 .ax171 p{margin:0;font-size:12.8px;line-height:1.7}.k171 .ax171 small{font-size:10.8px;color:var(--muted)}
+.k171 .sm171{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.k171 .sm171>div{padding:8px 10px;border-radius:12px;border:1px solid var(--line)}.k171 .sm171 b{display:block;font-size:20px;font-weight:600}.k171 .sm171 small{font-size:11.5px;color:var(--muted)}
+.k171 .sm171 .g b{color:#3fb37a}.k171 .sm171 .g2 b{color:#8fd16a}.k171 .sm171 .y b{color:#d9b45a}.k171 .sm171 .r b{color:#e26363}
+.k171 .gr171{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:9px}
+@media(max-width:600px){.k171 .gr171{grid-template-columns:1fr}.k171 .sm171{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.k171 article{min-width:0;padding:11px 12px;border-radius:12px;border:1px solid var(--line);display:grid;gap:6px;border-left:3px solid}
+.k171 article.g{border-left-color:#3fb37a;background:linear-gradient(160deg,rgba(63,179,122,.08),transparent 70%)}.k171 article.g2{border-left-color:#8fd16a}.k171 article.y{border-left-color:#d9b45a}.k171 article.r{border-left-color:#e26363;background:linear-gradient(160deg,rgba(226,99,99,.07),transparent 70%)}
+.k171 article header{display:flex;gap:9px;align-items:center}
+.k171 .pn{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#2a2740;color:#e8d9a8;font-size:12.5px;font-weight:700;border:1px solid rgba(217,180,90,.45);flex:0 0 auto}
+.k171 article header div{flex:1;min-width:0}.k171 article header b{display:block;font-size:13.5px;font-weight:600}.k171 article header small{font-size:11px;color:var(--muted)}
+.k171 article header em{font-style:normal;font-size:11px;padding:2px 9px;border-radius:99px;font-weight:600;white-space:nowrap}
+.k171 article.g header em{background:rgba(63,179,122,.16);color:#3fb37a}.k171 article.g2 header em{background:rgba(143,209,106,.14);color:#8fd16a}.k171 article.y header em{background:rgba(217,180,90,.15);color:#d9b45a}.k171 article.r header em{background:rgba(226,99,99,.15);color:#e26363}
+.k171 article p{margin:0;font-size:12.6px;line-height:1.7}.k171 article p b{color:#d9b45a;font-weight:600;margin-right:4px}
+.k171 article p.rc{padding:5px 8px;border-radius:8px;background:rgba(140,160,255,.07);border:1px dashed rgba(140,160,255,.3)}.k171 article p.rc b{color:#9fb0ff}
+.k171 details summary{cursor:pointer;font-size:12px;color:#c79bff;font-weight:600}
+.k171 details ul{margin:6px 0 0;padding:0;list-style:none;display:grid;gap:3px}.k171 details li{font-size:11.8px;line-height:1.55;display:flex;gap:6px;color:var(--muted)}
+.k171 details li i{font-style:normal;min-width:34px;font-family:ui-monospace,monospace;font-weight:600}.k171 details li.g i{color:#3fb37a}.k171 details li.r i{color:#e26363}
+.k171 .nt{margin:0;font-size:11.5px;color:var(--muted);line-height:1.65}
+
 div.agebadge .mw140 button.ab.orb140b{border:1px solid rgba(236,220,180,.45)!important;border-radius:12px!important;background:rgba(255,255,255,.04)!important;padding:6px 9px!important;min-width:62px}
 div.agebadge .mw140 button.ab.orb140b:hover{border-color:var(--gold2)!important}
 .mw140{display:flex;align-items:center;gap:8px;min-width:0;max-width:100%}
@@ -4589,6 +4619,7 @@ img,svg{max-width:100%}
   <div class="panel" style="margin-bottom:14px" id="tr45P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">ดาวจรคู่สำคัญ ๑๒ เดือน — อุบัติเหตุ · รักฉับพลัน · ศุกร์ดับ</h3><div id="tr45Out"></div></div>
 <div class="panel" style="margin-bottom:14px" id="dy165P"><h3 style="margin:0 0 8px;font-size:15px;font-weight:500">ปฏิทินมงคลประจำวัน · สีเสื้อมงคล</h3><div id="dy165T"></div></div>
 <div class="panel" style="margin-bottom:14px" id="tl158P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">ตั้งวันอ่านดวงจร · ไทม์ไลน์ดาวย้ายรายเดือน</h3><div id="tl158Out"></div></div>
+<div class="panel" style="margin-bottom:14px" id="tr171P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">อ่านดาวจร ๔ ขั้น — ผสมภพ · ดาวกระทบดาว · แรงเอื้อม · ชั่งน้ำหนัก</h3><div id="tr171Out"></div></div>
 <div class="panel" style="margin-bottom:14px" id="lt169P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">จังหวะพบคู่แท้จากดาวจร (พฤหัส · เสาร์ · ราหู)</h3><div id="lt169Out"></div></div>
 <div class="panel" style="margin-bottom:14px" id="kt164P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">ตำราครูโหร — ราหูจรทับ · เสาร์จรทับดาวเดิม</h3><div id="kt164Out"></div></div>
 <div class="panel" style="margin-bottom:14px" id="rh77P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">จังหวะชะตา — กราฟขาขึ้น ขาลง รายปี รายเดือน รายวัน พร้อมเหตุผล</h3><div id="rh77Out"></div></div>
@@ -6306,7 +6337,7 @@ const CAT29=[
  {id:'nava',t:'ฤกษ์·นวางค์',d:'ฤกษ์กำเนิด · ไส้ชะตา',ic:'<circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/>',p:['nak72P','bnakP','legP','nvq54P','navaP','nv90P']},
  {id:'spec',t:'เกณฑ์พิเศษ',d:'องค์เกณฑ์ · ดาวดับ · ยงยศ · คู่ดาว · นิจแก้ · ดวงนักโหร',ic:'<circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/><path d="M11 8v6M8 11h6"/>',p:['spec62P','kPlusP','fourP','standP','thao55P','nijP','jupP','ruP','specP','astP','shadP']},
  {id:'ved',t:'ภารตะ',d:'ปัญจางคะ · ทศา · โยค',ic:'<path d="M12 3c3 4 3 8 0 12c-3-4-3-8 0-12z"/><path d="M4 21h16"/><path d="M7 18c2-2 8-2 10 0"/>',p:['vedP']},
- {id:'transit',t:'ดวงจร',d:'ดาวจรกระทบดาวเดิม · ตำราดาวจรทับ',ic:'<path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 7v5l3 2"/>',p:['dy165P','tl158P','lt169P','kt164P','rh77P','trReadP','vik59P','tr45P','mtP','outP','eclP','elt92P','ch98P']},
+ {id:'transit',t:'ดวงจร',d:'ดาวจรกระทบดาวเดิม · ตำราดาวจรทับ',ic:'<path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 7v5l3 2"/>',p:['dy165P','tl158P','tr171P','lt169P','kt164P','rh77P','trReadP','vik59P','tr45P','mtP','outP','eclP','elt92P','ch98P']},
  {id:'career',t:'อาชีพ·การงาน',d:'ภพกัมมะ · สายอาชีพ · จังหวะเปลี่ยนงาน',ic:'<rect x=\"3\" y=\"7\" width=\"18\" height=\"13\" rx=\"2\"/><path d=\"M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18\"/>',p:['careerP','cr105P']},
  {id:'money',t:'การเงิน',d:'ธนโยค · ปฏิทินเงินเข้าออก ๑๒ เดือน',ic:'<rect x=\"3\" y=\"6\" width=\"18\" height=\"12\" rx=\"2\"/><circle cx=\"12\" cy=\"12\" r=\"2.8\"/><path d=\"M6 9v.01M18 15v.01\"/>',p:['ve137P','moneyP']},
  {id:'mongkol',t:'มงคล·แก้เคล็ด',d:'สี ทิศ ชื่อ เลข บูชาดาว',ic:'<path d=\"M12 3c2 3 5 4 5 8a5 5 0 0 1-10 0c0-4 3-5 5-8z\"/><path d=\"M12 14v7M9 21h6\"/>',p:['colorP','nameP','remedyP']},
@@ -11923,7 +11954,8 @@ const CHG110=[
 {v:'167.1',d:'2026-11-07',k:'u',t:'ใส่คำแปล: เคราะห์ทุกข้อมีบรรทัด "แปลว่า" ภาษาง่าย + คำแปลศัพท์โหร + คำอ่านอักษรจีนในปฏิทิน',m:'ทุกการ์ดเคราะห์มีคำอธิบายภาษาง่ายว่าหมายถึงอะไรและควรทำอย่างไร · ชื่อภพมีคำแปลกำกับ เช่น กดุมภะ (การเงิน) · กล่องคำแปลศัพท์โหร ๒๓ คำ · ปฏิทินมงคลมีคำอ่านกานจือ ฤกษ์ ๒๘ ดาว และฤกษ์ตังกง พร้อมคำแปลศัพท์',c:[],p:[],go:''},
 {v:'168.0',d:'2026-11-08',k:'n',t:'COSMIC SCAN: คำอธิบายและพยากรณ์ทุกภพ',m:'การ์ด ๑๒ ภพมีบทพยากรณ์ประจำวัน: ระดับภาพรวม ช่วงที่ควรใช้และเหมาะทำอะไร ช่วงที่ควรระวังและผลที่อาจเกิด ถ้าวันนี้ไม่มีฤกษ์ดีจะแนะนำวันที่ใกล้ที่สุดภายใน ๗ วัน และเชื่อมเคราะห์ที่อยู่ในภพนั้น · เพิ่ม "ทำไมจึงเป็นเวลานี้" บอกเหตุผลของทุกช่วง (ลัคน์ฤกษ์ ดาวเข้าภพ เจ้าภพ ยาม ฤกษ์ตังกง ฯลฯ)',c:[],p:[],go:''},
 {v:'169.0',d:'2026-11-08',k:'n',t:'ตำราคู่ครอง · นวางค์ · ดาวอริ/วินาศ · หยินหยาง · จังหวะพบคู่แท้',m:'ดวงเดิม: ข้อดีของดาวเจ้าเรือนอริ (อาชีพ) · สิ่งที่ซ่อนไว้จากเจ้าเรือนวินาศเทียบกดุมภะ · พินทุบาทว์ศุกร์/เสาร์เล็งลัคน์ พร้อมตัวลด (วันเกิด ตรีโกณ ฤกษ์สมโณ ศุกร์กุมพฤหัส) และตัวเพิ่ม · เจ้าเรือนปัตนิในนวางค์ ๑๒ ราศี + ภพในนวางค์ + วรโคตม · อุจ/นิจกลับขั้วในนวางค์ · ดวงท้าครู · ดวงรักเดียวใจเดียว · มาตรวัดหยินหยาง (อ.ธีรพร) · ดวงจร: ราหูเล็งลัคน์ เสาร์+ราหู พฤหัสทับ/เล็งลัคน์ จันทร์ อาทิตย์ แยกตามสถานะพฤหัส และพฤหัสทับดาวต่าง ๆ พร้อมช่วงพบคู่ ๓–๕ ปีข้างหน้า',c:['natal','transit'],p:['lv169P','lt169P'],go:'#lv169P'},
-{v:'170.0',d:'2026-11-08',k:'n',t:'LOVE SCAN: โหมดสแกนช่วงพบรักแท้ล่วงหน้า ๑๐ ปี',m:'สแกนรายเดือน ๑๒๐ เดือน รวมเกณฑ์คู่แท้ (พฤหัสทับ/เล็งลัคน์ จันทร์ อาทิตย์ + สถานะพฤหัส · พฤหัสทับดาวเดิมบอกสถานที่พบ · ราหูเล็งลัคน์ · เสาร์+ราหู) กับหลักภารตะ (พฤหัสจรภพ ๗ · Double Transit · ทศา/อันตรทศาศุกร์หรือเจ้าเรือนปัตนิ) · จัดระดับ ดีที่สุด ดีรอง ดี · กราฟ Love Spectrum ๑๐ ปี · การ์ดแต่ละช่วงบอกเหตุผลและลักษณะการพบ · เปิดได้จากแถบปฏิทินโหรา เมนูข้าง และแผงจังหวะพบคู่',c:[],p:[],go:''}];
+{v:'170.0',d:'2026-11-08',k:'n',t:'LOVE SCAN: โหมดสแกนช่วงพบรักแท้ล่วงหน้า ๑๐ ปี',m:'สแกนรายเดือน ๑๒๐ เดือน รวมเกณฑ์คู่แท้ (พฤหัสทับ/เล็งลัคน์ จันทร์ อาทิตย์ + สถานะพฤหัส · พฤหัสทับดาวเดิมบอกสถานที่พบ · ราหูเล็งลัคน์ · เสาร์+ราหู) กับหลักภารตะ (พฤหัสจรภพ ๗ · Double Transit · ทศา/อันตรทศาศุกร์หรือเจ้าเรือนปัตนิ) · จัดระดับ ดีที่สุด ดีรอง ดี · กราฟ Love Spectrum ๑๐ ปี · การ์ดแต่ละช่วงบอกเหตุผลและลักษณะการพบ · เปิดได้จากแถบปฏิทินโหรา เมนูข้าง และแผงจังหวะพบคู่',c:[],p:[],go:''},
+{v:'171.0',d:'2026-11-08',k:'n',t:'อ่านดาวจร ๔ ขั้น: ผสมภพ · ดาวกระทบดาว · แรงเอื้อม · ชั่งน้ำหนัก ๕ ข้อ',m:'ดาวจรทุกดวงอ่านตามผังเทคนิคของโหรสยาม: เรือนเปล่าใช้ผสมภพ + ดาวผสมภพ · มีดาวกำเนิดตั้งรับใช้ผสมภพ (เหตุ → ผล → ภพรับผล) + ดาวกระทบดาว (คู่ธาตุ สมพล มิตร ศัตรู + จักรทีปนีจร) · แรงเอื้อมพิเศษ อังคาร ๔ ๘ พฤหัส ๕ ๙ เสาร์ ๓ ๑๐ ราหู ๔ ๑๐ ถอยหลัง เฉพาะเมื่อปลายทางมีดาว · ชั่งน้ำหนัก ๕ ข้อ → ดีมาก ดีมีเงื่อนไข กลาง ร้าย พร้อมรายละเอียด · แจ้งเตือนพฤหัสเล็งราหูระดับนวางค์ · เป็นชั้นสัญญาณใน Mission Control',c:['transit'],p:['tr171P'],go:'#tr171P'}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
@@ -12824,7 +12856,7 @@ function sv128init(){ const nb=document.querySelector('#rasi')&&document.querySe
     if(k==='all') sv128save(['rasi','nav','tri','taksa'].map(part128),'จักรราศี นวางค์ ตรียางค์ ทักษา'); else { const p=part128(k); sv128save([p],SVB128.find(x=>x[0]===k)[1]); } }); }
 setTimeout(sv128init,0);
 
-const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v139','v140','v140.1','v140.2','v140.3','v140.4','v140.6','v140.7','v141','v141.1','v141.10','v141.11','v141.12','v141.13','v141.14','v141.15','v141.16','v141.17','v141.18','v141.19','v141.2','v141.20','v141.21','v141.22','v141.23','v141.24','v141.25','v141.26','v141.27','v141.28','v141.29','v141.3','v141.30','v141.31','v141.32','v141.33','v141.34','v141.35','v141.36','v141.37','v141.38','v141.39','v141.4','v141.40','v141.41','v141.42','v141.43','v141.44','v141.45','v141.46','v141.47','v141.48','v141.49','v141.5','v141.50','v141.51','v141.52','v141.53','v141.54','v141.55','v141.56','v141.57','v141.58','v141.59','v141.6','v141.60','v141.61','v141.62','v141.63','v141.64','v141.65','v141.66','v141.67','v141.68','v141.69','v141.7','v141.70','v141.71','v141.72','v141.73','v141.74','v141.75','v141.76','v141.77','v141.78','v141.79','v141.8','v141.80','v141.81','v141.82','v141.83','v141.84','v141.85','v141.86','v141.87','v141.88','v141.89','v141.9','v141.90','v141.91','v141.91r','v141.92','v141.93','v141.94','v141.95','v141.96','v141.97','v141.98','v141.98b','v141.99','v141.99b','v142.0','v142.0b','v142.0c','v142.1','v142.1b','v142.2','v142.3','v142.4','v142.4b','v142.5','v142.6','v142.8','v142.8b','v142.9','v142.9b','v143.0','v143.1','v143.2','v143.3','v143.4','v143.5','v144.0','v144.1','v144.2','v144.3','v144.4','v144.5','v144.6','v145.0','v145.1','v145.2','v145.3','v145.4','v145.5','v145.6','v146.0','v146.0a','v146.1','v146.2','v146.2a','v146.3','v147.0','v147.0a','v148.0','v149.0','v150.0','v151.0','v151.1','v152.0','v152.1','v152.2','v153.0','v153.1','v154.0','v155.0','v156.0','v157.0','v157.1','v158.0','v159.0','v160.0','v161.0','v162.0','v163.0','v164.0','v165.0','v166.0','v167.0','v167.1','v168.0','v169.0','v170.0','v1_20','v21','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
+const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v139','v140','v140.1','v140.2','v140.3','v140.4','v140.6','v140.7','v141','v141.1','v141.10','v141.11','v141.12','v141.13','v141.14','v141.15','v141.16','v141.17','v141.18','v141.19','v141.2','v141.20','v141.21','v141.22','v141.23','v141.24','v141.25','v141.26','v141.27','v141.28','v141.29','v141.3','v141.30','v141.31','v141.32','v141.33','v141.34','v141.35','v141.36','v141.37','v141.38','v141.39','v141.4','v141.40','v141.41','v141.42','v141.43','v141.44','v141.45','v141.46','v141.47','v141.48','v141.49','v141.5','v141.50','v141.51','v141.52','v141.53','v141.54','v141.55','v141.56','v141.57','v141.58','v141.59','v141.6','v141.60','v141.61','v141.62','v141.63','v141.64','v141.65','v141.66','v141.67','v141.68','v141.69','v141.7','v141.70','v141.71','v141.72','v141.73','v141.74','v141.75','v141.76','v141.77','v141.78','v141.79','v141.8','v141.80','v141.81','v141.82','v141.83','v141.84','v141.85','v141.86','v141.87','v141.88','v141.89','v141.9','v141.90','v141.91','v141.91r','v141.92','v141.93','v141.94','v141.95','v141.96','v141.97','v141.98','v141.98b','v141.99','v141.99b','v142.0','v142.0b','v142.0c','v142.1','v142.1b','v142.2','v142.3','v142.4','v142.4b','v142.5','v142.6','v142.8','v142.8b','v142.9','v142.9b','v143.0','v143.1','v143.2','v143.3','v143.4','v143.5','v144.0','v144.1','v144.2','v144.3','v144.4','v144.5','v144.6','v145.0','v145.1','v145.2','v145.3','v145.4','v145.5','v145.6','v146.0','v146.0a','v146.1','v146.2','v146.2a','v146.3','v147.0','v147.0a','v148.0','v149.0','v150.0','v151.0','v151.1','v152.0','v152.1','v152.2','v153.0','v153.1','v154.0','v155.0','v156.0','v157.0','v157.1','v158.0','v159.0','v160.0','v161.0','v162.0','v163.0','v164.0','v165.0','v166.0','v167.0','v167.1','v168.0','v169.0','v170.0','v171.0','v1_20','v21','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
 // ───────── v129: หน้าอัปเดตระบบแบบบทความ — หัวข้อ · อัปเดตอะไร · รายละเอียด · ภาพหน้าจอ · ปุ่มลัดไปหน้านั้น · ปุ่มอัปเดตบนเมนูบน ─────────
 // ภาพหน้าจอสร้างอัตโนมัติด้วยสคริปต์ tools/shots129.js (ไล่ทุกรายการใน CHG110 ที่ยังไม่มีภาพ) แล้วบันทึกเป็น shots/<v>.webp — SHOTS129 คือรายชื่อไฟล์ที่มีอยู่
 // เป้าหมายของแต่ละรายการ: e.go (selector ที่อยู่นอกหมวด) → e.p[0] (แผงในหมวด) → หมวด e.c[0]
@@ -22502,6 +22534,68 @@ var LS170=(function(){
   setInterval(entries,1500); entries();
   { const _c=compute; compute=function(){ const r=_c.apply(this,arguments); CACHE=null; const m=document.getElementById('lv170'); if(m&&!m.hidden) setTimeout(paint,0); return r; }; }
   return {scan,open,close};
+})();
+
+// v171.0 — เทคนิคอ่านดาวจร ๔ ขั้น (ถอดความจากผังของโหรสยาม · Siam Astrology Thailand)
+// ๑ เรือนเปล่า: ผสมภพ + ดาวผสมภพ · ๒ มีดาวกำเนิดตั้งรับ: ผสมภพ (เหตุ→ผล→ภพรับผล) + ดาวกระทบดาว (คู่ดาว + จักรทีปนีจร)
+// ๓ แรงเอื้อมพิเศษ ๓/๕/๗/๘ (ใช้เมื่อปลายทางมีดาวรับเท่านั้น) · ๔ ชั่งน้ำหนัก ๕ ข้อ → ดีมาก · ดีมีเงื่อนไข · กลาง · ร้าย
+var TR171=(function(){
+  const TD='๐๑๒๓๔๕๖๗๘๙', tn=n=>String(n).replace(/\d/g,d=>TD[d]);
+  const NK=['','SU','MO','MA','ME','JU','VE','SA','RA'], NUM={SU:1,MO:2,MA:3,ME:4,JU:5,VE:6,SA:7,RA:8,KE:9,UR:0};
+  const TP=['SU','MO','MA','ME','JU','VE','SA','RA','KE','UR'], NP=['SU','MO','MA','ME','JU','VE','SA','RA','KE','UR'];
+  const BEN={MO:1,ME:1,JU:1,VE:1}, MAL={SU:1,MA:1,SA:1,RA:1,KE:1};
+  const HM=['ตัวตน สุขภาพ','การเงิน ทรัพย์','พี่น้อง การติดต่อ เดินทางใกล้','บ้าน ครอบครัว ทรัพย์สิน','บุตร บริวาร ความรัก','ศัตรู อุปสรรค สุขภาพ','คู่ครอง หุ้นส่วน','การสูญเสีย การเปลี่ยนแปลง','ผู้อุปถัมภ์ บุญ','การงาน ตำแหน่ง','ลาภ รายได้ มิตร','รายจ่าย ความเสื่อมเสีย สิ่งซ่อนเร้น'];
+  const REACH={MA:[4,8],JU:[5,9],SA:[3,10],RA:[4,10]};
+  const TH_M=['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'], fd=d=>`${tn(d.getDate())} ${TH_M[d.getMonth()]} ${tn(d.getFullYear()+543)}`;
+  const HN=h=>`ภพ${tn(h)} ${HOUSES[h-1]}`;
+  const dig=(k,lon)=>{ try{ const s=std(k,lon)||''; return {t:s,v:/อุจ|เกษตร|ราชาโชค|มหาจักร|เทวีโชค/.test(s)?1:/นิจ|ประ/.test(s)?-1:0}; }catch(e){ return {t:'',v:0}; } };
+  const pairOf=(a,b)=>{ const x=NUM[a],y=NUM[b]; if(x==null||y==null||!x||!y) return ''; const k=Math.min(x,y)+'-'+Math.max(x,y); try{ return PAIR[k]||''; }catch(e){ return ''; } };
+  const pairV=p=>!p?0:/ศัตรู/.test(p)&&/ธาตุ|สมพล/.test(p)?0:/ศัตรู/.test(p)?-1:/มิตร/.test(p)?1:/สมพล/.test(p)?.7:/ธาตุ/.test(p)?.4:0;
+  const BADW=/โทษ|ร้าย|เสีย|ทุกข์|โรค|ศัตรู|คดี|วิบัติ|ฉิบหาย|เคราะห์|ระวัง|อันตราย|กล่าวหา|ขัดข้อง|โจร/, GOODW=/โชค|ลาภ|ดี|สุข|สำเร็จ|ยศ|เจริญ|มิตร/;
+  const tvTx=(k,n)=>{ try{ const x=(typeof TR2!=='undefined'&&TR2[k]&&TR2[k][n])||''; return x?softTx(x):''; }catch(e){ return ''; } };
+  const tvV=s=>!s?0:BADW.test(s)&&!/ไม่มีโทษ/.test(s)?(GOODW.test(s)?-.3:-.8):GOODW.test(s)?.8:0;
+  function read(t){ const N=WSTATE.nat.pos, L=sgn(N.LA), h=horaOf(t), T={}; TP.forEach(k=>{ try{ T[k]=k==='KE'?norm(posH(h,'RA')+180):norm(posH(h,k)); }catch(e){} });
+    const ns=k=>sgn(N[k]), hs=si=>((si-L+12)%12)+1, rules=k=>{ const r=[]; for(let i=1;i<=12;i++) if(NK[LORD[(L+i-1)%12]]===k) r.push(i); return r; };
+    const occN=si=>NP.filter(k=>N[k]!=null&&ns(k)===si), occT=(si,ex)=>TP.filter(k=>k!==ex&&T[k]!=null&&sgn(T[k])===si);
+    const out=[];
+    TP.forEach(k=>{ if(T[k]==null) return; const si=sgn(T[k]), H=hs(si), R=rules(k), occ=occN(si), lag=si===L, D=dig(k,T[k]), W=[]; let sc=0; const w=(v,x)=>{ sc+=v; W.push([v,x]); };
+      // ชั่งน้ำหนัก ๕ ข้อ (ส่วนของดาวจร)
+      w(D.v,`มาตรฐานดาวจร: ${TH[k]}${D.t?' '+D.t:' ไม่มีมาตรฐานพิเศษ'}`);
+      w(BEN[k]?1:MAL[k]?-.5:0,`ประเภท: ${TH[k]}เป็น${BEN[k]?'ศุภเคราะห์':MAL[k]?'บาปเคราะห์':'ดาวกลาง'}`);
+      if([6,8,12].includes(H)) w(-1,`ภพที่ดาวจรเข้าเป็นทุสถานะ (${HN(H)})`); else w(0,`ภพที่ดาวจรเข้าไม่ใช่ทุสถานะ (${HN(H)})`);
+      const dl=R.filter(x=>[6,8,12].includes(x)); if(dl.length) w(-.6,`${TH[k]}เป็นเจ้าเรือนทุสถานะ (${dl.map(x=>HOUSES[x-1]).join(' ')}) ผลดีจะมีเงื่อนไขหรือมีรายจ่ายตามมา`);
+      const card={k,si,H,R,D,occ,lag,W,tech:occ.length||lag?2:1,reach:[]};
+      if(card.tech===1){ card.mix=R.length?`เรื่องของ${R.map(x=>HN(x)+' ('+HM[x-1]+')').join(' และ ')} ซึ่ง${TH[k]}เป็นเจ้าเรือนในดวงกำเนิด จะมาเกิดในเรื่องของ${HN(H)} (${HM[H-1]})`:`${TH[k]}ไม่ได้เป็นเจ้าเรือนใดในดวงนี้ จึงอ่านเฉพาะธรรมชาติของดาว`; card.nat=`${TRN25[k]||''} ลงในเรื่อง${HM[H-1]}`; }
+      else { const tg=[...occ,...(lag?['LA']:[])]; card.hits=tg.map(n=>{ const nd=n==='LA'?{t:'',v:0}:dig(n,N[n]), nr=n==='LA'?[1]:rules(n), p=n==='LA'?'':pairOf(k,n), tv=tvTx(k,n);
+          return {n,nd,nr,p,tv,mix:`เหตุจากเรื่อง${R.length?R.map(x=>HOUSES[x-1]).join(' '):TH[k]} → ไปออกที่${n==='LA'?'ตัวเจ้าชะตาโดยตรง':TH[n]+'เดิม'+(nr.length?' (เจ้าเรือน '+nr.map(x=>HOUSES[x-1]).join(' ')+')':'')} → ภพรับผลคือ${HN(H)} (${HM[H-1]})`}; });
+        card.hits.forEach(x=>{ if(x.n!=='LA') w(x.nd.v*.5,`มาตรฐานดาวกำเนิด: ${TH[x.n]}${x.nd.t?' '+x.nd.t:' ไม่มีมาตรฐานพิเศษ'}`); if(x.p) w(pairV(x.p),`ดาวคู่: ${TH[k]}–${x.n==='LA'?'ลัคนา':TH[x.n]} เป็น${x.p}`); if(x.tv) w(tvV(x.tv),`จักรทีปนีจร: ${x.tv.slice(0,60)}${x.tv.length>60?'…':''}`); const ndl=x.nr.filter(r=>[6,8,12].includes(r)); if(ndl.length&&x.n!=='LA') w(-.4,`${TH[x.n]}เดิมเป็นเจ้าเรือนทุสถานะ (${ndl.map(r=>HOUSES[r-1]).join(' ')})`); }); }
+      // แรงเอื้อม
+      (REACH[k]||[]).forEach(n=>{ const ts=k==='RA'?(si-(n-1)+24)%12:(si+n-1)%12, on=occN(ts), lg=ts===L, tr=occT(ts,k); if(!on.length&&!lg&&!tr.length) return;
+        const tgt=on[0]||(lg?'LA':null), p=tgt&&tgt!=='LA'?pairOf(k,tgt):'', tv=tgt?tvTx(k,tgt):'';
+        card.reach.push({n,ts,H:hs(ts),on,lg,tr,p,tv}); if(p) w(pairV(p)*.5,`แรงเอื้อมที่ ${tn(n)}: ดาวคู่ ${TH[k]}–${TH[tgt]} ${p}`); if(tv) w(tvV(tv)*.5,`แรงเอื้อมที่ ${tn(n)}: จักรทีปนีจร ${tv.slice(0,50)}…`); });
+      const cond=W.some(x=>/ทุสถานะ \(/.test(x[1])&&x[1].indexOf('เจ้าเรือน')>=0);
+      card.sc=sc; card.res=sc>=2.2?(cond?'ดีมาก มีรายจ่าย':'ดีมาก'):sc>=.5?'ดีมีเงื่อนไข':sc>=-1.55?'กลาง':'ร้าย'; card.tone=sc>=2.2?'g':sc>=.5?'g2':sc>=-1.55?'y':'r';
+      card.e=null; try{ card.e=ing140(k==='KE'?'RA':k,t,1); }catch(e){}
+      out.push(card); });
+    // พฤหัส–ราหูเล็งกันระดับนวางค์
+    const nv=x=>Math.floor((x%30)/(10/3)); let ax=null; if(T.JU!=null&&T.RA!=null&&(sgn(T.JU)-sgn(T.RA)+12)%12===6&&nv(T.JU)===nv(T.RA)){ const jH=hs(sgn(T.JU)), rH=hs(sgn(T.RA)), nj=((ns('JU')-L+12)%12)+1; ax={jH,rH,nj,bad:[6,8,12].includes(jH)||[2,8,12].includes(rH)}; }
+    return {t,out,ax,L}; }
+  const ic=d=>`<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="${d}"/></svg>`;
+  function html(R){ const C=R.out, ord={g:0,g2:1,y:2,r:3};
+    const ax=R.ax?`<div class="ax171 ${R.ax.bad?'r':'y'}"><b>${ic('M12 3l9 16H3zM12 10v4M12 17v.5')}พฤหัส (๕) จรเล็งราหู (๘) ในระดับลูกนวางค์</b><p>พฤหัสคือครู ความถูกต้อง กฎหมาย ส่วนราหูคือความลุ่มหลง สิ่งปกปิด เมื่อเล็งกันตรงระดับนวางค์ เรื่องที่ซ่อนอยู่มักเริ่มเผยออกมา แต่การสะสางจริงจังมักรอให้ราหูย้ายราศีก่อน · สำหรับดวงนี้ พฤหัสจรอยู่${HN(R.ax.jH)} และราหูจรอยู่${HN(R.ax.rH)}${R.ax.bad?' ซึ่งเป็นตำแหน่งที่ต้องระวัง: จะลงเงินก้อน เซ็นสัญญา หรือค้ำประกันใคร ควรอ่านให้ครบก่อน':' ผลกระทบไม่รุนแรงนัก'}${[6,8,12].includes(R.ax.nj)?` · พฤหัสกำเนิดอยู่ภพ${tn(R.ax.nj)} ${HOUSES[R.ax.nj-1]} ซึ่งเป็นพื้นดวงที่พฤหัสไม่ค่อยหนุน ช่วงนี้จึงควรรอบคอบเป็นพิเศษ`:''}</p><small>ถอดความจากบทความ "มารราหูจรในนวางค์ลูกสุดท้ายของราศีกุมภ์" (ผู้เขียนไม่ได้ระบุชื่อ)</small></div>`:'';
+    return `<div class="k171"><div class="fl171">${['ดาวจร = เหตุ','ภพที่ดาวจรเข้า = ภพที่เกิดเรื่อง','เรือนเปล่า: ผสมภพ + ดาวผสมภพ · มีดาวรับ: ผสมภพ + ดาวกระทบดาว','แรงเอื้อม ๓ ๕ ๗ ๘ (เฉพาะปลายทางมีดาว)','ชั่งน้ำหนัก ๕ ข้อ','ออกคำพยากรณ์'].map((x,i)=>`<span><i>${tn(i+1)}</i>${x}</span>`).join('')}</div>${ax}
+      <div class="sm171">${['ดีมาก','ดีมีเงื่อนไข','กลาง','ร้าย'].map((n,i)=>{ const c=C.filter(x=>x.tone===['g','g2','y','r'][i]).length; return `<div class="${['g','g2','y','r'][i]}"><b>${tn(c)}</b><small>${n}</small></div>`; }).join('')}</div>
+      <div class="gr171">${[...C].sort((a,b)=>ord[a.tone]-ord[b.tone]||b.sc-a.sc).map(c=>`<article class="${c.tone}"><header><span class="pn">${tn(NUM[c.k])}</span><div><b>${TH[c.k]}จรราศี${SIGNS[c.si]} · ${HN(c.H)}</b><small>${c.tech===1?'ภาพที่ ๑ เรือนเปล่า':'ภาพที่ ๒ มีดาวกำเนิดตั้งรับ'}${c.e?' · ย้ายราศี '+fd(c.e):''}</small></div><em>${c.res}</em></header>
+        ${c.tech===1?`<p><b>ผสมภพ</b> ${c.mix}</p><p><b>ดาวผสมภพ</b> ${c.nat}</p>`:c.hits.map(x=>`<p><b>ผสมภพ</b> ${x.mix}</p>${x.n!=='LA'?`<p><b>ดาวกระทบดาว</b> ${TH[c.k]}ทับ${TH[x.n]}เดิม${x.p?' · '+x.p:''}${x.tv?' · จักรทีปนีจร: '+x.tv:''}</p>`:`<p><b>ดาวกระทบดาว</b> ${TH[c.k]}ทับลัคนา${tvTx(c.k,'LA')?' · '+tvTx(c.k,'LA'):''}</p>`}`).join('')}
+        ${c.reach.map(r=>`<p class="rc"><b>แรงเอื้อมที่ ${tn(r.n)}${c.k==='RA'?' (นับถอยหลัง)':''}</b> ถึงราศี${SIGNS[r.ts]} ${HN(r.H)} ซึ่งมี${[...r.on.map(x=>TH[x]+'เดิม'),...(r.lg?['ลัคนา']:[]),...r.tr.map(x=>TH[x]+'จร')].join(' ')}${r.p?' · '+r.p:''}${r.tv?' · จักรทีปนีจร: '+r.tv:''} (ใช้เป็นตัวเสริม ไม่ใช่ความหมายหลัก)</p>`).join('')}
+        <details><summary>ชั่งน้ำหนัก (${c.sc>=0?'+':''}${tn(c.sc.toFixed(1))})</summary><ul>${c.W.map(([v,x])=>`<li class="${v>0?'g':v<0?'r':''}"><i>${v>0?'+':''}${tn(v.toFixed(1))}</i>${x}</li>`).join('')}</ul></details></article>`).join('')}</div>
+      <p class="nt">หลักนี้อ่านเฉพาะดาว ยังไม่รวมทักษา ตรีวัย และปัจจัยอื่น (ผู้เขียนผังย้ำไว้) · "ทับ" ใช้เกณฑ์ราศีเดียวกัน · เจ้าเรือนใช้ระบบไทย · ดาวคู่ (ธาตุ สมพล มิตร ศัตรู) ตามตารางมาตรฐานในระบบ · ข้อความจักรทีปนีจรจากตำราในระบบ เรียบเรียงให้นุ่มนวล · ถอดความเทคนิคจากผัง "เทคนิคการอ่านดาวจร" ของโหรสยาม (Siam Astrology Thailand) · ค่าน้ำหนักแต่ละข้อเป็นค่าที่ระบบกำหนด</p></div>`; }
+  function run(){ const e=document.getElementById('tr171Out'); if(!e||typeof WSTATE==='undefined'||!WSTATE||!WSTATE.nat) return; let t=new Date(); try{ t=getTransit(); }catch(x){} try{ e.innerHTML=html(read(t)); }catch(x){ console.error(x); } }
+  { const _s=cat29Show; cat29Show=function(id){ const r=_s.apply(this,arguments); if(id==='transit') setTimeout(run,0); return r; }; }
+  { const _c=compute; compute=function(){ const r=_c.apply(this,arguments); setTimeout(()=>{ const p=document.getElementById('tr171P'); if(p&&p.offsetParent) run(); },0); return r; }; }
+  setTimeout(run,1500);
+  if(window.MC159){ const M=window.MC159, _sn=M.snap; M.snap=function(t){ const S=_sn(t); try{ if(S.L2){ const R=read(S.t||t), pts=R.out.reduce((a,c)=>a+Math.max(-2,Math.min(3,c.sc))*({JU:.5,SA:.5,RA:.4,KE:.3,MA:.3}[c.k]||.15),0)*.35; S.L2.push({id:'tr4',name:'อ่านดาวจร ๔ ขั้น (ชั่งน้ำหนัก)',src:'thai.tr171',pts,read:R.out.filter(c=>['JU','SA','RA'].includes(c.k)).map(c=>`${TH[c.k]} ${c.res}`).join(' · '),why:'ผสมภพ ดาวกระทบดาว แรงเอื้อม และชั่งน้ำหนัก ๕ ข้อ',area:[]}); let w=1; try{ const u=((window.DM150||{}).user||{}).u||'guest', o=JSON.parse(localStorage.getItem('dm163.cal.'+u)||'{}'); w=(o.w&&o.w.tr4)||1; }catch(e){} if(typeof S.score==='number') S.score=Math.max(0,Math.min(100,S.score+pts*w)); } }catch(e){ console.error(e); } return S; }; }
+  return {read,run};
 })();
 
 let KEY77='';
