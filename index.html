@@ -4182,6 +4182,94 @@ html.orc-open,html.orc-open body{overflow:hidden}button.orc-tb{display:inline-gr
 #orc215 .ostory{margin:14px 0;padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.035);border:1px solid rgba(233,196,106,.22)}
 #orc215 .ostory p{margin:0 0 10px;font-size:14px;line-height:1.8}#orc215 .ostory p:last-child{margin:0}
 #orc215 .ostory b{display:block;color:#f3d98c;font-size:13.5px;margin-bottom:2px}
+#rd216Out.rdbusy{opacity:.55}
+.rd216{display:grid;gap:14px}
+.rd216 .nt{font-size:12px;color:var(--muted);line-height:1.6;margin:6px 0 0}
+.rd216 .rdtop{display:grid;grid-template-columns:minmax(260px,380px) 1fr;gap:16px;align-items:start}
+.rd216 .rdrad{text-align:center}
+.rd216 svg.rdsvg{width:100%!important;max-width:380px;height:auto!important;display:block;margin:0 auto;border-radius:50%;box-shadow:0 0 0 3px #10261b,0 0 0 4px #2f6a4b,0 10px 30px rgba(10,40,25,.35)}
+.rdsvg .rg{fill:none;stroke:#2f6a4b;stroke-width:.8;stroke-dasharray:2 3}
+.rdsvg .rl{fill:#5fb88a;font-size:8px}
+.rdsvg .tk{fill:#9fe0bd;font-size:8.5px;text-anchor:middle}
+.rdsvg .dt{fill:#4be39a;opacity:.38}
+.rdsvg .me{fill:#f3d36b;stroke:#08140f;stroke-width:1}
+.rdsvg .ct{fill:#f3d36b}
+.rdsvg .sw{transform-origin:170px 170px;animation:rdsw 3.2s linear infinite}
+@keyframes rdsw{to{transform:rotate(360deg)}}
+.rdsvg .bl{cursor:pointer;opacity:0;animation:rdin .5s ease forwards}
+@keyframes rdin{from{opacity:0;transform-origin:center;transform:scale(.3)}to{opacity:1}}
+.rdsvg .bl .bp{fill:#e9c46a;stroke:#08140f;stroke-width:1}
+.rdsvg .bl .hl{fill:none;stroke:#e9c46a;stroke-width:1.2;opacity:.6;transform-box:fill-box;transform-origin:center;animation:rdpl 1.8s ease-out infinite}
+.rdsvg .bl.on .bp{fill:#ff8fb8}.rdsvg .bl.on .hl{stroke:#ff8fb8}
+.rdsvg .bl text{font-size:8.5px;font-weight:700;fill:#08140f;text-anchor:middle;pointer-events:none}
+@keyframes rdpl{0%{transform:scale(.7);opacity:.9}100%{transform:scale(1.8);opacity:0}}
+.rd216 .rdctl{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.rd216 .rdctl span{font-size:13px;color:var(--muted);margin-right:4px}
+.rd216 .rdctl button{width:auto!important;padding:5px 12px!important;border-radius:99px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font-size:13px;cursor:pointer}
+.rd216 .rdctl button.on{background:#1f7a4a;border-color:#1f7a4a;color:#fff}
+.rd216 .rdsum{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.rd216 .rdsum div{border:1px solid var(--line);border-radius:12px;padding:8px 10px;background:var(--hl)}
+.rd216 .rdsum b{display:block;font-size:20px;color:var(--ink)}.rd216 .rdsum span{font-size:11.5px;color:var(--muted)}
+.rd216 .rdsum .g b{color:#1f7a3a}.rd216 .rdsum .y b{color:#9a7b2f}.rd216 .rdsum .r b{color:#b9402a}
+.rd216 .rdlist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
+.rd216 .rdlist button{width:100%!important;display:grid;grid-template-columns:24px 1fr;grid-template-rows:auto auto;gap:0 8px;text-align:left;padding:7px 9px!important;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
+.rd216 .rdlist button span{grid-row:1/3;align-self:center;width:22px;height:22px;border-radius:50%;background:#e9c46a;color:#1b1f3a;font-size:11px;font-weight:700;display:grid;place-items:center}
+.rd216 .rdlist button b{font-size:13px;font-weight:600}.rd216 .rdlist button em{font-style:normal;font-size:11.5px;color:var(--muted)}
+.rd216 .rdlist button.on{border-color:#d6457a;box-shadow:0 0 0 2px rgba(214,69,122,.2)}.rd216 .rdlist button.on span{background:#ff8fb8}
+.rd216 .rdc{border:1px solid var(--line);border-radius:16px;padding:14px;background:linear-gradient(160deg,var(--hl),var(--panel) 45%);animation:rdup .4s ease}
+@keyframes rdup{from{opacity:0;transform:translateY(8px)}}
+.rd216 .rdc header{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center}
+.rd216 .rdn{width:34px;height:34px;border-radius:50%;background:#ff8fb8;color:#1b1f3a;display:grid;place-items:center;font-weight:700}
+.rd216 .rdc h4{margin:0;font-size:16px}.rd216 .rdc header p{margin:2px 0 0;font-size:13px;color:var(--muted)}
+.rd216 .rds{text-align:center;min-width:72px;padding:6px 8px;border-radius:12px;border:1px solid}
+.rd216 .rds b{display:block;font-size:24px;line-height:1.1}.rd216 .rds span{font-size:11px}
+.rd216 .rds.g{border-color:#1f7a3a;color:#1f7a3a;background:rgba(31,122,58,.07)}.rd216 .rds.y{border-color:#9a7b2f;color:#9a7b2f;background:rgba(154,123,47,.07)}.rd216 .rds.r{border-color:#b9402a;color:#b9402a;background:rgba(185,64,42,.07)}
+.rd216 .rdbars{display:grid;grid-template-columns:repeat(2,1fr);gap:6px 16px;margin:12px 0}
+.rd216 .rdb{display:grid;grid-template-columns:64px 1fr 28px;gap:8px;align-items:center;font-size:12.5px}
+.rd216 .rdb i{height:8px;border-radius:9px;background:rgba(0,0,0,.08);overflow:hidden}.rd216 .rdb i b{display:block;height:100%;border-radius:9px}
+.rd216 .rdb b.g{background:#2f9a5a}.rd216 .rdb b.y{background:#d4a73c}.rd216 .rdb b.r{background:#d0604a}
+.rd216 .rdb em{font-style:normal;text-align:right;font-weight:600}
+.rd216 em{font-style:normal;font-weight:600;color:var(--gold);font-size:13px;display:block;margin-bottom:4px}
+.rd216 .rdgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.rd216 .rdpl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.rd216 .rdpl li{font-size:12.5px;padding:4px 8px;border-radius:8px;background:rgba(0,0,0,.035);display:grid}
+.rd216 .rdpl li b{font-weight:600}.rd216 .rdpl small{color:var(--muted);font-size:11px}
+.rd216 .rdl{margin:3px 0;font-size:13px;padding:5px 9px;border-radius:9px;border:1px solid transparent}
+.rd216 .rdl.on{border-color:var(--gold2);background:var(--hl)}
+.rd216 .rdl span,.rd216 .rdtr span.g{font-weight:700}.rd216 span.g{color:#1f7a3a}.rd216 span.y{color:#9a7b2f}.rd216 span.r{color:#b9402a}
+.rd216 .rdwhy ul,.rd216 .rdwl{list-style:none;margin:0;padding:0;display:grid;gap:5px}
+.rd216 .rdwhy{margin-top:12px}
+.rd216 .rdwhy li,.rd216 .rdwl li{font-size:13px;line-height:1.6;padding:6px 10px;border-radius:9px;border-left:3px solid #2f9a5a;background:rgba(47,154,90,.06)}
+.rd216 .rdwhy li.r,.rd216 .rdwl li.r{border-left-color:#d0604a;background:rgba(208,96,74,.06)}
+.rd216 .rdwhy li span,.rd216 .rdwl li span{display:inline-block;font-size:11px;font-weight:600;padding:0 7px;border-radius:9px;margin-right:6px;background:rgba(0,0,0,.06)}
+.rd216 .rdmeet{margin-top:12px;padding:10px 12px;border-radius:12px;background:rgba(214,69,122,.06);border:1px solid rgba(214,69,122,.25)}
+.rd216 .rdmeet em{color:#b8336a}
+.rd216 .rdmeet ul{margin:0;padding-left:18px}.rd216 .rdmeet li{font-size:13px;line-height:1.65}
+.rd216 .rdid{border:1px solid var(--line);border-radius:16px;padding:14px;background:var(--panel)}
+.rd216 h4{margin:0 0 10px;font-size:15px;font-weight:600}
+.rd216 .rdid h4+.rdk{margin-bottom:12px}
+.rd216 .rdk{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin-bottom:12px}
+.rd216 .rdk div{padding:9px 11px;border-radius:12px;background:var(--hl);border:1px solid var(--line)}
+.rd216 .rdk span{display:block;font-size:11.5px;color:var(--muted)}.rd216 .rdk b{display:block;font-size:15px;margin:2px 0}.rd216 .rdk small{font-size:11.5px;color:var(--muted);line-height:1.5;display:block}
+.rd216 .rdyr{display:flex;align-items:flex-end;gap:2px;height:84px;padding:4px 0 16px;margin-bottom:14px;border-bottom:1px solid var(--line);overflow-x:auto}
+.rd216 .rdyr div{flex:1;min-width:12px;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;position:relative}
+.rd216 .rdyr i{display:block;width:70%;border-radius:4px 4px 0 0;background:#9fd0b4}.rd216 .rdyr div.on i{background:#d6457a}
+.rd216 .rdyr span{position:absolute;bottom:-15px;font-size:9px;color:var(--muted)}
+.rd216 .rdz{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+.rd216 .rdz>div{padding:10px 12px;border-radius:12px;border:1px solid var(--line)}
+.rd216 .rdz>div.bad{border-color:rgba(185,64,42,.35);background:rgba(185,64,42,.04)}
+.rd216 .rdz b{font-size:14px}.rd216 .rdz small{display:block;font-size:11.5px;color:var(--muted);margin-bottom:4px}
+.rd216 .rdz ul{margin:0;padding-left:16px}.rd216 .rdz li{font-size:12.5px;line-height:1.6}.rd216 .rdz li span{color:var(--muted);margin-left:6px;font-size:11.5px}
+.rd216 .rdtest{border:1px dashed var(--gold2);border-radius:16px;padding:14px}
+.rd216 .rdf{display:flex;gap:8px;flex-wrap:wrap}
+.rd216 .rdf input{width:auto!important;padding:7px 10px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:inherit}
+.rd216 .rdf button{width:auto!important;padding:7px 18px!important;border-radius:10px;border:0;background:#1f7a4a;color:#fff;cursor:pointer;font:inherit}
+.rd216 .rdtr{display:grid;grid-template-columns:auto 1fr;gap:14px;margin-top:12px;align-items:start}
+.rd216 .rdtr p{margin:0 0 6px;font-size:13.5px}
+.rd216 .rdhow summary{cursor:pointer;font-size:13.5px;font-weight:600}
+.rd216 .rdhow li{font-size:12.5px;line-height:1.7;margin-bottom:4px}
+@media(max-width:760px){.rd216 .rdtop,.rd216 .rdgrid{grid-template-columns:1fr}.rd216 .rdbars{grid-template-columns:1fr}.rd216 .rdc header{grid-template-columns:auto 1fr}.rd216 .rdc header .rds{grid-column:1/3;display:flex;gap:10px;align-items:baseline;justify-content:center}.rd216 .rdsum b{font-size:17px}.rd216 .rdtr{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.rdsvg .sw,.rdsvg .bl .hl{animation:none}.rdsvg .bl{animation:none;opacity:1}}
 div.agebadge .mw140 button.ab.orb140b{border:1px solid rgba(236,220,180,.45)!important;border-radius:12px!important;background:rgba(255,255,255,.04)!important;padding:6px 9px!important;min-width:62px}
 div.agebadge .mw140 button.ab.orb140b:hover{border-color:var(--gold2)!important}
 .mw140{display:flex;align-items:center;gap:8px;min-width:0;max-width:100%}
@@ -5170,6 +5258,7 @@ img,svg{max-width:100%}
   <div class="panel" style="margin-bottom:14px" id="su210P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">ดาวอาทิตย์ (๑) ๑๒ ราศี · ดาวเกตุ (๙) คุ้มภัย · ดาวบุญ ๕ ๙</h3><div id="su210Out"></div></div>
   <div class="panel" style="margin-bottom:14px" id="nv211P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">อ่านนวางค์ ๒ ชั้น — สิ่งที่เกิดจริง กับไส้ใน (ภพนับจากลัคนาเดิม)</h3><div id="nv211Out"></div></div>
   <div class="panel" style="margin-bottom:14px" id="lv201P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">ถอดรหัสความรัก ๗ ขั้น — คู่รักแบบไหน สมหวังเมื่อไหร่</h3><div id="lv201Out"></div></div>
+  <div class="panel" style="margin-bottom:14px" id="rd216P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">เรดาร์คู่ชีวิต — สแกนหาวันเกิด ลัคนา และดาวของคนที่เข้ากับดวงเรามากที่สุด</h3><div id="rd216Out"></div></div>
   <div class="panel" style="margin-bottom:14px" id="sm202P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">คู่แท้ คู่จร คู่บุพกรรม — และจังหวะเจอคู่</h3><div id="sm202Out"></div></div>
   <div class="panel" style="margin-bottom:14px" id="cr202P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">ถอดรหัสอาชีพ ๗ ขั้น — เกิดมาทำงานแบบไหน ทำอะไรแล้วรวย</h3><div id="cr202Out"></div></div>
   <div class="panel" style="margin-bottom:14px" id="cr204P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">อาชีพตามระบบธาตุ — จันทร์ พุธ ราหู และจังหวะเปลี่ยนงาน</h3><div id="cr204Out"></div></div>
@@ -6786,7 +6875,7 @@ function trReadHTML(){ const W=WSTATE; if(!W||!W.nat) return ''; const h=horaOf(
     o+=`<details class="tr29"><summary><a href="#" class="tr29k" data-k="${k}"><b>${PN[k]} ${TH[k]}จร</b></a> ${SIGNS[sgn(lon)]} ${fmt(lon)} ${hb(houseOf(lon,L))}${st?' '+stdB25(st):''} ${mvB26(mvt)} ${trElem33(k,W.nat,h)} <span class="note">${hS?`· อีก ${dhm25(hS-h)} ย้ายราศี`:''}${nS?` · กระทบดาวเดิม ${nS} ราศี`:''}</span></summary><div>${k==='RA'?`<div class="ac28 as26m"><b>ราหูจรภพ${HOUSES[houseOf(lon,L)-1]}</b> — ${RATR33[houseOf(lon,L)-1]} <span class="note">(ราหูคือดาวแห่งการเปลี่ยนแปลง ทับลัคน์ผล ๑๐๐% เล็งลัคน์ ๗๕%)</span></div>`:''}${PEL33[k]?`<div class="note">ธาตุชั้นดาวจร: เดิมราศี${SIGNS[sgn(W.nat.pos[k])]} (${ELEM[sgn(W.nat.pos[k])%4]}) → จรราศี${SIGNS[sgn(lon)]} (${ELEM[sgn(lon)%4]}) = ${ELC33[elCls33(ELEM[sgn(W.nat.pos[k])%4],ELEM[sgn(lon)%4])]} — ให้ผลต่อเรื่องที่${TH[k]}เป็นเจ้าเรือน</div>`:''}${aspHTML25(k,h)}${tr2HTML(k,lon)}</div></details>`; }
   return o; }
 const CAT29=[
- {id:'natal',t:'ดวงเดิม',d:'ธาตุ · ลัคนา · ตนุลัคน์ · ตนุเศษ · มาตรฐาน · ดาวรายดวง · ภพ',ic:'<circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/>',p:['elem','stdread','pread','hread','lagChkP','s93P','pl207P','mo208P','su210P','nv211P','lv201P','sm202P','cr202P','cr204P','tb203P','sx205P','in206P','pv191P','pet193P','vy186P','mj188P','tr189P','ju184P','dj179P','nv179P','bk177P','pn175P','mr176P','ex194P','lv169P','kr164P','ra155P','ps98P','dm109P']},
+ {id:'natal',t:'ดวงเดิม',d:'ธาตุ · ลัคนา · ตนุลัคน์ · ตนุเศษ · มาตรฐาน · ดาวรายดวง · ภพ',ic:'<circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/>',p:['elem','stdread','pread','hread','lagChkP','s93P','pl207P','mo208P','su210P','nv211P','rd216P','lv201P','sm202P','cr202P','cr204P','tb203P','sx205P','in206P','pv191P','pet193P','vy186P','mj188P','tr189P','ju184P','dj179P','nv179P','bk177P','pn175P','mr176P','ex194P','lv169P','kr164P','ra155P','ps98P','dm109P']},
  {id:'bhava',t:'๑๒ ภพ',d:'แยกดูทีละภพ — ดาวสถิต เจ้าเรือน มุม ดาวการกะ ดวงจร และตำราที่เกี่ยวข้อง',ic:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>',p:['bh70P']},
  {id:'tree',t:'ต้นไม้ชะตา',d:'เปรียบดวงกับต้นไม้ · ส่วนไหนแข็งแรง ส่วนไหนอ่อนแอ',ic:'<path d="M12 22v-7"/><path d="M12 15c-4 0-7-2.5-7-6a5 5 0 0 1 4-4.9A4 4 0 0 1 12 2a4 4 0 0 1 3 2.1A5 5 0 0 1 19 9c0 3.5-3 6-7 6z"/><path d="M12 15l-3-3M12 13l3-3"/><path d="M8 22h8"/>',p:['treeP']},
  {id:'lord',t:'เจ้าเรือน',d:'ภพซ้อน เหตุ→ผล · รุมกัน · มหาจักร · อนุเกษตร · ดาวสถิตภพ',ic:'<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>',p:['rd107P','lordMapP','rum147P','lhP','tn90P']},
@@ -6835,7 +6924,7 @@ const CAT29=[
  {id:'eros',t:'รัก·กามารมณ์',d:'แรงปรารถนา · รสนิยม · ปฏิทินอารมณ์ · เทียบดวงหาวันตรงกัน',ic:'<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/><path d="M15 4l3-2M18 5h3"/>',p:['loveP']},
  {id:'luck',t:'โชคใหญ่',d:'พื้นดวงโชค · ๕ กรณี · หน้าต่างโอกาส',ic:'<circle cx="12" cy="12" r="8"/><path d="M12 7v10M9.5 9.5c0-1 1-1.5 2.5-1.5s2.5.6 2.5 1.7c0 2.6-5 1.6-5 4.3 0 1.1 1 1.8 2.5 1.8s2.5-.6 2.5-1.5"/>',p:['pl150P','luckP']},
  {id:'rerk',t:'ฤกษ์·เวลา',d:'นาฬิกาฤกษ์ · หาฤกษ์',ic:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M9 15l2 2 4-4"/>',p:['muhP','clockP','rerkP']},
- {id:'love',t:'คู่ครอง',d:'การสมรส · ดวงคู่ สมพงศ์',ic:'<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>',p:['mt124P','lv53P','ve137P','marrP','pat59P','inter65P','lv45P','mangP','winP','cmpP','ovP','sxc89P','sp98P','sp105P']},
+ {id:'love',t:'คู่ครอง',d:'การสมรส · ดวงคู่ สมพงศ์',ic:'<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>',p:['rd216P','mt124P','lv53P','ve137P','marrP','pat59P','inter65P','lv45P','mangP','winP','cmpP','ovP','sxc89P','sp98P','sp105P']},
  {id:'health',t:'สุขภาพ',d:'กายวิภาค อายุรเวช',ic:'<circle cx="12" cy="4.5" r="2.2"/><path d="M12 7v7M7 9l5 1 5-1M9 22l3-8 3 8"/>',p:['hl149P','bodyP','hageP']},
  {id:'lib',t:'คลังความรู้',d:'เคล็ดลับ · สมุดโหร',ic:'<path d="M4 4h6a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h6z"/>',p:['tipsP','bookP']}];
 function cat29Show(id,scroll){ const C=CAT29.find(c=>c.id===id)||CAT29[0]; document.querySelectorAll('.crail29 button').forEach(b=>b.classList.toggle('on',b.dataset.c===C.id));
@@ -12438,7 +12527,8 @@ const CHG110=[
 {v:'215.1',d:'2026-11-13',k:'u',t:'ปุ่มเข้าโหมดจับไพ่ให้เห็นชัด',m:'เดสก์ท็อป: ปุ่มไพ่กลมสีม่วงทองบนแถบเครื่องมือด้านบน ถัดจากปุ่มลำโพง · มือถือ: ปุ่มลอย "จับไพ่" มุมซ้ายล่าง เหนือสวิตช์ภาษา · ทุกอุปกรณ์: เมนูอวาตาร์ → จับไพ่ · ไพ่ญาณ ณ โลก',c:[],p:[],go:''},
 {v:'215.2',d:'2026-11-13',k:'u',t:'จับไพ่: คำทำนายละเอียดและอ่านรวมเป็นเรื่องเดียว',m:'คำทำนายใหม่: บอกทิศทางของเรื่องทั้งชุด (เริ่มติดขัดแล้วคลี่คลาย / เริ่มดีแต่ท้ายต้องระวัง ฯลฯ) · อ่านทีละตำแหน่งเป็นประโยคต่อเนื่อง (ที่ผ่านมา… ตอนนี้… แนวโน้มข้างหน้า… / สถานการณ์ อุปสรรค ทางออก) โดยอ่านไพ่ดีในตำแหน่งอุปสรรคและไพ่เตือนในตำแหน่งทางออกต่างจากปกติ · ชี้จุดกลับตัวเมื่อไพ่เตือนตามด้วยไพ่ดี · สรุป "สิ่งที่ควรทำตอนนี้" · เพิ่มคำแนะนำรายใบครบ ๑๔๕ ใบ',c:[],p:[],go:''},
 {v:'215.3',d:'2026-11-13',k:'u',t:'ไพ่ญาณ: ตีความด้านความรู้สึก',m:'เพิ่มหัวข้อ “ความรู้สึก” และเส้นทางความรู้สึกในทุกคำทำนาย',c:['หัวข้อใหม่ “ความรู้สึก” — อ่านว่าใจเรา/ใจเขารู้สึกอย่างไร ไล่ตามตำแหน่งไพ่','กล่อง “ความรู้สึกในเรื่องนี้” เรียงเป็นลำดับ เคย → ตอนนี้ → ต่อไป พร้อมสีบอกทิศทางใจ','ไพ่ทั้ง 145 ใบมีความหมายด้านความรู้สึกเพิ่ม แสดงในการ์ดรายใบและหน้าดูทั้งสำรับ','ไพ่เตือนในหัวข้อความรู้สึกมีประโยคประคองใจ ไม่ตัดสินความรู้สึก'],p:['ORC215'],go:''},
-{v:'215.4',d:'2026-11-13',k:'u',t:'ไพ่ญาณ: สรุปไพ่ ๓ ใบละเอียดขึ้น',m:'คำทำนายแบบ ๓ ใบมีบทสรุปเป็นเรื่องเล่าต่อเนื่อง ๗ ช่วง',c:['ภาพรวม · จากอดีตสู่ปัจจุบัน · จากปัจจุบันสู่อนาคต (หรือ ตัวปัญหาจริง · ทางที่ควรเดิน สำหรับชุดสถานการณ์)','จุดแข็งที่มีอยู่ และจุดที่ต้องระวัง จากสีของไพ่','ด้านใจ และสรุปคำแนะนำที่ร้อยคำแนะนำของไพ่เข้าด้วยกัน','เชื่อมไพ่แต่ละคู่ตามโทน ดี→ดี / เตือน→ดี / ดี→เตือน / เตือน→เตือน / สายความเชื่อ'],p:['ORC215'],go:''}];
+{v:'215.4',d:'2026-11-13',k:'u',t:'ไพ่ญาณ: สรุปไพ่ ๓ ใบละเอียดขึ้น',m:'คำทำนายแบบ ๓ ใบมีบทสรุปเป็นเรื่องเล่าต่อเนื่อง ๗ ช่วง',c:['ภาพรวม · จากอดีตสู่ปัจจุบัน · จากปัจจุบันสู่อนาคต (หรือ ตัวปัญหาจริง · ทางที่ควรเดิน สำหรับชุดสถานการณ์)','จุดแข็งที่มีอยู่ และจุดที่ต้องระวัง จากสีของไพ่','ด้านใจ และสรุปคำแนะนำที่ร้อยคำแนะนำของไพ่เข้าด้วยกัน','เชื่อมไพ่แต่ละคู่ตามโทน ดี→ดี / เตือน→ดี / ดี→เตือน / เตือน→เตือน / สายความเชื่อ'],p:['ORC215'],go:''},
+{v:'216.0',d:'2026-11-13',k:'n',t:'เรดาร์คู่ชีวิต',m:'สแกนวันเกิดทุกวันย้อนหลังและล่วงหน้า ๕–๑๕ ปี หาคนที่เข้ากับดวงเราทั้งความรัก นิสัย แรงดึงดูด และการเกื้อหนุน',c:['เรดาร์วงกลม: ยิ่งใกล้กลางยิ่งเข้ากัน · ๑๒ ช่วงวันเกิดที่ดีที่สุด พร้อมวัน ปีนักษัตร อายุตอนนี้','รายละเอียดแต่ละช่วง: ดาวของเขาอยู่ราศี องศา และตกภพไหนของเรา · ลัคนาและเวลาเกิดที่ควรเป็น','เหตุผลจากเกณฑ์ในระบบ: ภพปัตนิ อาทิตย์–จันทร์ ศุกร์–อังคาร (องศาคลาด) จันทร์–จันทร์ นทิ โยนิ คู่ดาววันเกิด ทักษา พฤหัส เสาร์ ราหู','ภาพคนที่ใช่: ลัคนา วันเกิด ราศีจันทร์ ศุกร์ ปีเกิดเด่น และโซนองศาที่ดาวของเขาควรกระทบดวงเรา','โอกาสพบ: ช่วงดาวจรกระตุ้นความรัก พร้อมอายุของเขาในปีนั้น · ช่องเช็กวันเกิดคนในใจ'],p:['RD216'],go:''}];
 const WIN110=7*86400000;
 const vnum110=v=>parseFloat(String(v).split('–').pop());
 function now110(){ return new Date(); }
@@ -13339,7 +13429,7 @@ function sv128init(){ const nb=document.querySelector('#rasi')&&document.querySe
     if(k==='all') sv128save(['rasi','nav','tri','taksa'].map(part128),'จักรราศี นวางค์ ตรียางค์ ทักษา'); else { const p=part128(k); sv128save([p],SVB128.find(x=>x[0]===k)[1]); } }); }
 setTimeout(sv128init,0);
 
-const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v139','v140','v140.1','v140.2','v140.3','v140.4','v140.6','v140.7','v141','v141.1','v141.10','v141.11','v141.12','v141.13','v141.14','v141.15','v141.16','v141.17','v141.18','v141.19','v141.2','v141.20','v141.21','v141.22','v141.23','v141.24','v141.25','v141.26','v141.27','v141.28','v141.29','v141.3','v141.30','v141.31','v141.32','v141.33','v141.34','v141.35','v141.36','v141.37','v141.38','v141.39','v141.4','v141.40','v141.41','v141.42','v141.43','v141.44','v141.45','v141.46','v141.47','v141.48','v141.49','v141.5','v141.50','v141.51','v141.52','v141.53','v141.54','v141.55','v141.56','v141.57','v141.58','v141.59','v141.6','v141.60','v141.61','v141.62','v141.63','v141.64','v141.65','v141.66','v141.67','v141.68','v141.69','v141.7','v141.70','v141.71','v141.72','v141.73','v141.74','v141.75','v141.76','v141.77','v141.78','v141.79','v141.8','v141.80','v141.81','v141.82','v141.83','v141.84','v141.85','v141.86','v141.87','v141.88','v141.89','v141.9','v141.90','v141.91','v141.91r','v141.92','v141.93','v141.94','v141.95','v141.96','v141.97','v141.98','v141.98b','v141.99','v141.99b','v142.0','v142.0b','v142.0c','v142.1','v142.1b','v142.2','v142.3','v142.4','v142.4b','v142.5','v142.6','v142.8','v142.8b','v142.9','v142.9b','v143.0','v143.1','v143.2','v143.3','v143.4','v143.5','v144.0','v144.1','v144.2','v144.3','v144.4','v144.5','v144.6','v145.0','v145.1','v145.2','v145.3','v145.4','v145.5','v145.6','v146.0','v146.0a','v146.1','v146.2','v146.2a','v146.3','v147.0','v147.0a','v148.0','v149.0','v150.0','v151.0','v151.1','v152.0','v152.1','v152.2','v153.0','v153.1','v154.0','v155.0','v156.0','v157.0','v157.1','v158.0','v159.0','v160.0','v161.0','v162.0','v163.0','v164.0','v165.0','v166.0','v167.0','v167.1','v168.0','v169.0','v170.0','v171.0','v172.0','v173.0','v174.0','v175.0','v176.0','v177','v178','v179','v180','v181','v182','v182_1','v183','v184','v185','v186','v187','v188','v189','v190','v191','v192','v192_1','v193','v194','v195','v196','v197','v198','v199','v1_20','v200','v201','v202','v203','v204','v205','v206','v207','v208','v209','v21','v210','v211','v212','v213','v214','v214-1','v215','v215-1','v215-2','v215.3','v215.4','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
+const SHOTS129=['v100','v101','v104','v105','v106','v107','v108','v109','v110','v111','v111.1','v112','v112.1','v113','v114','v115','v116','v117','v117.4','v118','v119','v119.1','v120','v121','v122','v123','v124','v125','v126','v127','v128','v128.1','v129','v130','v130.1','v130.2','v130.3','v131','v132','v132.1','v134','v135','v135.1','v135.2','v136','v136.1','v136.2','v137','v138','v139','v140','v140.1','v140.2','v140.3','v140.4','v140.6','v140.7','v141','v141.1','v141.10','v141.11','v141.12','v141.13','v141.14','v141.15','v141.16','v141.17','v141.18','v141.19','v141.2','v141.20','v141.21','v141.22','v141.23','v141.24','v141.25','v141.26','v141.27','v141.28','v141.29','v141.3','v141.30','v141.31','v141.32','v141.33','v141.34','v141.35','v141.36','v141.37','v141.38','v141.39','v141.4','v141.40','v141.41','v141.42','v141.43','v141.44','v141.45','v141.46','v141.47','v141.48','v141.49','v141.5','v141.50','v141.51','v141.52','v141.53','v141.54','v141.55','v141.56','v141.57','v141.58','v141.59','v141.6','v141.60','v141.61','v141.62','v141.63','v141.64','v141.65','v141.66','v141.67','v141.68','v141.69','v141.7','v141.70','v141.71','v141.72','v141.73','v141.74','v141.75','v141.76','v141.77','v141.78','v141.79','v141.8','v141.80','v141.81','v141.82','v141.83','v141.84','v141.85','v141.86','v141.87','v141.88','v141.89','v141.9','v141.90','v141.91','v141.91r','v141.92','v141.93','v141.94','v141.95','v141.96','v141.97','v141.98','v141.98b','v141.99','v141.99b','v142.0','v142.0b','v142.0c','v142.1','v142.1b','v142.2','v142.3','v142.4','v142.4b','v142.5','v142.6','v142.8','v142.8b','v142.9','v142.9b','v143.0','v143.1','v143.2','v143.3','v143.4','v143.5','v144.0','v144.1','v144.2','v144.3','v144.4','v144.5','v144.6','v145.0','v145.1','v145.2','v145.3','v145.4','v145.5','v145.6','v146.0','v146.0a','v146.1','v146.2','v146.2a','v146.3','v147.0','v147.0a','v148.0','v149.0','v150.0','v151.0','v151.1','v152.0','v152.1','v152.2','v153.0','v153.1','v154.0','v155.0','v156.0','v157.0','v157.1','v158.0','v159.0','v160.0','v161.0','v162.0','v163.0','v164.0','v165.0','v166.0','v167.0','v167.1','v168.0','v169.0','v170.0','v171.0','v172.0','v173.0','v174.0','v175.0','v176.0','v177','v178','v179','v180','v181','v182','v182_1','v183','v184','v185','v186','v187','v188','v189','v190','v191','v192','v192_1','v193','v194','v195','v196','v197','v198','v199','v1_20','v200','v201','v202','v203','v204','v205','v206','v207','v208','v209','v21','v210','v211','v212','v213','v214','v214-1','v215','v215-1','v215-2','v215.3','v215.4','v216.0','v22','v23','v24','v25_26','v27','v28','v30','v31_32','v33_34','v35','v36_38','v39','v40','v41','v42_43','v44_46','v47_53','v54','v55','v58','v59','v60_64','v65_66','v70_71','v74','v77_79','v80','v86','v87','v88','v89','v90_91','v92','v93','v94_95','v96','v97','v98'];
 // ───────── v129: หน้าอัปเดตระบบแบบบทความ — หัวข้อ · อัปเดตอะไร · รายละเอียด · ภาพหน้าจอ · ปุ่มลัดไปหน้านั้น · ปุ่มอัปเดตบนเมนูบน ─────────
 // ภาพหน้าจอสร้างอัตโนมัติด้วยสคริปต์ tools/shots129.js (ไล่ทุกรายการใน CHG110 ที่ยังไม่มีภาพ) แล้วบันทึกเป็น shots/<v>.webp — SHOTS129 คือรายชื่อไฟล์ที่มีอยู่
 // เป้าหมายของแต่ละรายการ: e.go (selector ที่อยู่นอกหมวด) → e.p[0] (แผงในหมวด) → หมวด e.c[0]
@@ -24970,6 +25060,195 @@ var ORC215=(function(){
       const m=document.querySelector('#acct150 .adm150'); if(m&&!m.querySelector('[data-orc215]')){ const b=document.createElement('button'); b.type='button'; b.className='hi'; b.dataset.orc215='1'; b.innerHTML=IC(I.card)+'จับไพ่ · ไพ่ญาณ ณ โลก'; const h=m.querySelector('[data-ac213o]')||m.querySelector('.adh150'); h?h.after(b):m.prepend(b); } },1200);
   document.addEventListener('click',e=>{ if(e.target.closest('[data-orc215]')){ e.preventDefault(); e.stopPropagation(); open(); } },true);
   return {open,CARDS,face};
+})();
+
+// v216.0 — เรดาร์คู่ชีวิต · สแกนวันเกิดของคนที่เข้ากับดวงเดิมทั้งความรัก นิสัย แรงดึงดูด และการเกื้อหนุน
+// ใช้เกณฑ์ที่มีในระบบ: ภพปัตนิ/เจ้าเรือนปัตนิ (lvMatch126), จันทร์–จันทร์ ภะกูฏะ นทิ (couple74), ธาตุ (elPair86), คู่ดาววันเกิด (PAIR), ทักษา กาลกิณี,
+// ศุกร์–อังคาร, อาทิตย์–จันทร์, พฤหัส/เสาร์/ราหู ของอีกฝ่ายที่ตกบนพื้นดวงเรา, โยนิ (ภารตะ) และช่วงพบคู่จาก LV201/SM202
+var RD216=(function(){
+  const TD='๐๑๒๓๔๕๖๗๘๙', tn=n=>String(n).replace(/\d/g,d=>TD[d]);
+  const MTH=['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+  const WDN=['เสาร์','อาทิตย์','จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์'], WDP=[7,1,2,3,4,5,6];
+  const NKY=['ชวด','ฉลู','ขาล','เถาะ','มะโรง','มะเส็ง','มะเมีย','มะแม','วอก','ระกา','จอ','กุน'];
+  const YONI=[0,1,2,3,3,4,5,2,5,6,6,7,8,9,8,9,10,10,4,11,12,11,13,0,13,7,1];
+  const YN=['ม้า','ช้าง','แพะ','งู','สุนัข','แมว','หนู','วัว','ควาย','เสือ','กวาง','ลิง','พังพอน','สิงห์'];
+  const YEN=['0-8','1-13','2-11','3-12','4-10','5-6','7-9'];
+  const CAT={love:'ความรัก',nat:'นิสัย',sex:'แรงดึงดูด',sup:'เกื้อหนุน'};
+  const ASPN={conj:'กุม (ร่วมองศา)',opp:'เล็ง (๑๘๐°)',tri:'ตรีโกณ (๑๒๐°)',sq:'จตุโกณ (๙๐°)',sex:'โยค (๖๐°)'};
+  const S={R:10,res:null,sel:0,busy:false,test:null};
+  const sep=(a,b)=>{ const x=Math.abs(norm(a-b)); return x>180?360-x:x; };
+  function asp(a,b){ const d=sep(a,b); if(d<=8) return {k:'conj',o:d}; if(Math.abs(d-180)<=8) return {k:'opp',o:Math.abs(d-180)}; if(Math.abs(d-120)<=8) return {k:'tri',o:Math.abs(d-120)}; if(Math.abs(d-90)<=6) return {k:'sq',o:Math.abs(d-90)}; if(Math.abs(d-60)<=5) return {k:'sex',o:Math.abs(d-60)}; return null; }
+  const dg=x=>{ const s=sgn(norm(x)), d=norm(x)-s*30; return `${SIGNS[s]} ${tn(Math.floor(d))}°`; };
+  const zone=(c,o)=>`${dg(c-o)} ถึง ${dg(c+o)}`;
+  const fd=t=>`${tn(t.getDate())} ${MTH[t.getMonth()]} ${tn(t.getFullYear()+543)}`;
+  const bkk=(y,m,d,h,mi)=>new Date(Date.UTC(y,m,d,h-7,mi||0));
+  const wdn=p=>p===8?'พุธกลางคืน':WDN[WDP.indexOf(p)]||'—';
+  const yNk=y=>NKY[((y-4)%12+12)%12];
+
+  function ctx(c,bt){ const P=c.pos, L=sgn(P.LA), s7=(L+6)%12, tk=taksaNatal(bt).m, wd=WDP[thaiWeekday(bt)];
+    const role={}; Object.keys(tk).forEach(r=>role[tk[r]]=r);
+    return {P,L,s7,l7:PNUM2K[LORD[s7]],l1:PNUM2K[LORD[L]],wd,role,kal:tk['กาลกิณี'],mN:nakInfo(P.MO).i,bt}; }
+
+  function dayChart(t){ const h=horaOf(t), pos={}; for(const k of ['SU','MO','MA','ME','JU','VE','SA','RA']) pos[k]=norm(posH(h,k)); return {t,pos,wd:WDP[thaiWeekday(t)]}; }
+
+  function score(A,B){ const P=A.P, Q=B.pos, W=[], V={love:50,nat:50,sex:50,sup:50}; let karmic=0;
+    const add=(c,d,t)=>{ V[c]+=d; if(t) W.push({c,d,t}); }, sQ=k=>sgn(Q[k]);
+    // ── ความรัก
+    [['VE',12],['MO',10],['SU',6]].forEach(([k,v])=>{ if(sQ(k)===A.s7) add('love',v,`${TH[k]}ของเขาอยู่ราศี${SIGNS[A.s7]} ตรงภพปัตนิของเรา — เขาคือ “ภาพคู่” ในดวงเรา`); });
+    let x=asp(P.SU,Q.MO); if(x&&['conj','tri','opp'].includes(x.k)) add('love',10,`อาทิตย์เรา ${ASPN[x.k]} จันทร์เขา (คลาด ${tn(x.o.toFixed(0))}°) — เกณฑ์คู่ครองคลาสสิก เข้าขากันแบบสามีภรรยา`);
+    x=asp(P.MO,Q.SU); if(x&&['conj','tri','opp'].includes(x.k)) add('love',10,`จันทร์เรา ${ASPN[x.k]} อาทิตย์เขา (คลาด ${tn(x.o.toFixed(0))}°) — เขาเป็นหลักให้ใจเราได้`);
+    x=asp(P.MO,Q.VE); if(x&&['conj','tri','sex'].includes(x.k)) add('love',7,`จันทร์เรา ${ASPN[x.k]} ศุกร์เขา — เขาเอาใจเก่ง อยู่ด้วยแล้วใจอ่อนโยน`);
+    x=asp(P.VE,Q.MO); if(x&&['conj','tri','sex'].includes(x.k)) add('love',7,`ศุกร์เรา ${ASPN[x.k]} จันทร์เขา — ความรักของเราเข้าไปถึงใจเขาง่าย`);
+    x=asp(P.VE,Q.VE); if(x) add('love',['conj','tri','sex'].includes(x.k)?5:-3,['conj','tri','sex'].includes(x.k)?`ศุกร์ทั้งคู่ ${ASPN[x.k]}  — รสนิยมและความสุขแบบเดียวกัน`:`ศุกร์ทั้งคู่ ${ASPN[x.k]}  — รสนิยมต่างกัน ต้องเปิดใจให้กัน`);
+    if(sQ('JU')===A.s7) add('love',5,`พฤหัสของเขาอยู่ราศีปัตนิของเรา — รักแบบมีหลัก ผู้ใหญ่ยอมรับ`);
+    else if(sQ('JU')===sgn(P.VE)) add('love',5,`พฤหัสของเขาทับศุกร์เรา — ทำให้ความรักของเรามั่นคงขึ้น`);
+    if(B.wd===PNUM[A.l7]) add('love',8,`เขาเกิดวัน${WDN[WDP.indexOf(B.wd)]} = วันของ${TH[A.l7]} เจ้าเรือนปัตนิของเรา`);
+    // ── นิสัย
+    const mm=((sQ('MO')-sgn(P.MO)+12)%12)+1, MM={1:[8,'จันทร์ราศีเดียวกัน ใจคล้ายกันมาก'],5:[12,'จันทร์ตรีโกณ (๕/๙) อารมณ์ไปทางเดียวกัน เข้าใจกันโดยไม่ต้องพูดมาก'],9:[12,'จันทร์ตรีโกณ (๕/๙) อารมณ์ไปทางเดียวกัน เข้าใจกันโดยไม่ต้องพูดมาก'],3:[6,'จันทร์ ๓/๑๑ เป็นเพื่อนใจกัน'],11:[6,'จันทร์ ๓/๑๑ เป็นเพื่อนใจกัน'],7:[6,'จันทร์เล็งกัน เติมเต็มส่วนที่อีกฝ่ายขาด'],4:[-3,'จันทร์ ๔/๑๐ จังหวะชีวิตต่างกัน ต้องปรับเข้าหากัน'],10:[-3,'จันทร์ ๔/๑๐ จังหวะชีวิตต่างกัน ต้องปรับเข้าหากัน'],6:[-12,'จันทร์ ๖/๘ (ภะกูฏะโทษ) อารมณ์สวนกันง่าย'],8:[-12,'จันทร์ ๖/๘ (ภะกูฏะโทษ) อารมณ์สวนกันง่าย'],2:[-6,'จันทร์ ๒/๑๒ เรื่องเงินและความคาดหวังจุกจิก'],12:[-6,'จันทร์ ๒/๑๒ เรื่องเงินและความคาดหวังจุกจิก']}[mm];
+    add('nat',MM[0],`${MM[1]} (จันทร์เรา${SIGNS[sgn(P.MO)]} · จันทร์เขา${SIGNS[sQ('MO')]})`);
+    const [ev,et]=elPair86(sgn(P.MO),sQ('MO')); add('nat',Math.round((ev-62)/6),ev>=80||ev<50?'ธาตุใจ: '+et:'');
+    const nb=nakInfo(Q.MO).i; if(NADI74(nb)===NADI74(A.mN)&&sQ('MO')!==sgn(P.MO)) add('nat',-6,`นทิเดียวกัน (${NADIN74[NADI74(nb)]}) — ตำราภารตะเตือนเรื่องสุขภาพและความกลมเกลียว`);
+    x=asp(P.ME,Q.ME); if(x) add('nat',['conj','tri','sex'].includes(x.k)?4:-3,['conj','tri','sex'].includes(x.k)?`พุธทั้งคู่ ${ASPN[x.k]}  — คุยกันรู้เรื่อง ความคิดไปทางเดียวกัน`:`พุธทั้งคู่ ${ASPN[x.k]}  — มุมคิดต่าง ต้องฟังกันให้จบ`);
+    if(B.wd===A.wd) add('nat',3,'เกิดวันเดียวกัน พื้นนิสัยคล้ายกัน');
+    else { const pk=PAIR[[Math.min(A.wd,B.wd),Math.max(A.wd,B.wd)].join('-')]||'', nm=`${tn(A.wd)}–${tn(B.wd)}`;
+      if(/คู่ธาตุ/.test(pk)) add('nat',8,`ดาววันเกิด ${nm} เป็นคู่ธาตุ — ส่งเสริมกันอย่างสูง`);
+      else if(/^คู่มิตร/.test(pk)) add('nat',6,`ดาววันเกิด ${nm} เป็นคู่มิตร — เมตตา ไว้ใจกัน`);
+      else if(/^คู่สมพล/.test(pk)) add('nat',6,`ดาววันเกิด ${nm} เป็นคู่สมพล — หนุนกันให้เข้มแข็ง`);
+      else if(/ศัตรูคู่สมพล/.test(pk)) add('nat',2,`ดาววันเกิด ${nm} เป็นศัตรูคู่สมพล — ขัดกันบ้างแต่ช่วยกันได้`);
+      else if(/คู่ศัตรู/.test(pk)) add('nat',-8,`ดาววันเกิด ${nm} เป็นคู่ศัตรู — ต่างคนต่างแรง ต้องมีกติกาคุยกัน`); }
+    // ── แรงดึงดูด
+    const VM=(a,b,t1)=>{ const y=asp(a,b); if(!y) return; const v={conj:14,tri:10,sex:6,opp:9,sq:3}[y.k]; add('sex',v,`${t1} ${ASPN[y.k]} (คลาด ${tn(y.o.toFixed(0))}°) — ${y.k==='opp'?'ดึงดูดแบบขั้วตรงข้าม ร้อนแรง':y.k==='sq'?'ตึงแต่ดึงดูด มีแรงเสียดทานผสม':'เคมีทางกายเข้ากันลื่นไหล'}`); };
+    VM(P.VE,Q.MA,'ศุกร์เรากับอังคารเขา'); VM(P.MA,Q.VE,'อังคารเรากับศุกร์เขา');
+    x=asp(P.MA,Q.MA); if(x) add('sex',['conj','tri','sex'].includes(x.k)?5:-5,['conj','tri','sex'].includes(x.k)?`อังคารทั้งคู่ ${ASPN[x.k]}  — จังหวะพลังพอ ๆ กัน`:`อังคารทั้งคู่ ${ASPN[x.k]}  — แรงพอกันจนปะทะง่าย`);
+    x=asp(P.MO,Q.MA); if(x&&['conj','tri'].includes(x.k)) add('sex',4,'จันทร์เรากับอังคารเขาเข้ากัน — เขาปลุกอารมณ์เราได้');
+    x=asp(P.MA,Q.MO); if(x&&['conj','tri'].includes(x.k)) add('sex',4,'อังคารเรากับจันทร์เขาเข้ากัน — เราปลุกอารมณ์เขาได้');
+    const ya=YONI[A.mN], yb=YONI[nb], yk=[Math.min(ya,yb),Math.max(ya,yb)].join('-');
+    if(ya===yb) add('sex',8,`โยนิเดียวกัน (${YN[ya]}) — จังหวะทางกายและสัญชาตญาณตรงกัน`); else if(YEN.includes(yk)) add('sex',-8,`โยนิเป็นศัตรูกัน (${YN[ya]}–${YN[yb]}) — ความต้องการคนละจังหวะ`);
+    // ── เกื้อหนุน
+    const jh=((sQ('JU')-A.L+12)%12)+1; if(jh===1) add('sup',8,'พฤหัสของเขาทับลัคนาเรา — เขาเป็นผู้ให้ คุ้มครอง ทำให้เราดีขึ้น'); else if(jh===5||jh===9) add('sup',5,'พฤหัสของเขาตรีโกณลัคนาเรา — หนุนทางความคิดและโอกาส');
+    x=asp(P.MO,Q.JU); if(x&&x.k==='conj') add('sup',5,'พฤหัสของเขากุมจันทร์เรา — อยู่ด้วยแล้วใจสงบ');
+    x=asp(P.JU,Q.MO); if(x&&['conj','tri'].includes(x.k)) add('sup',5,'พฤหัสเราหนุนจันทร์เขา — เราเป็นที่พึ่งทางใจให้เขาได้');
+    x=asp(P.MO,Q.SA); if(x&&x.k==='conj') add('sup',-8,'เสาร์ของเขากุมจันทร์เรา — ความรักหนัก จริงจังจนกดดันใจ');
+    x=asp(P.VE,Q.SA); if(x&&x.k==='conj') add('sup',-6,'เสาร์ของเขากุมศุกร์เรา — ความสุขถูกจำกัด ต้องอดทนสูง');
+    x=asp(P.SA,Q.MO); if(x&&x.k==='conj') add('sup',-6,'เสาร์เรากุมจันทร์เขา — เราอาจกดดันเขาโดยไม่รู้ตัว');
+    [['VE','ศุกร์'],['MO','จันทร์'],['LA','ลัคนา']].forEach(([k,n])=>{ const y=asp(P[k],Q.RA); if(y&&y.k==='conj'){ karmic++; add('sex',4,''); add('sup',-3,`ราหูของเขากุม${n}เรา — คู่บุพกรรม ดึงดูดแรง ติดใจมาก แต่ชีวิตวุ่นวายขึ้น`); } });
+    [['VE','ศุกร์'],['MO','จันทร์']].forEach(([k,n])=>{ const y=asp(Q[k],P.RA); if(y&&y.k==='conj'){ karmic++; add('sex',4,''); add('sup',-3,`ราหูของเรากุม${n}เขา — เขาหลงใหลเรามาก แต่ต้องระวังความหวง`); } });
+    const r=A.role[B.wd]; if(B.wd===A.kal) add('sup',-12,`เขาเกิดวัน${WDN[WDP.indexOf(B.wd)]} ซึ่งเป็นกาลกิณีของเรา (ทักษา) — ตำราไม่ให้ใช้เป็นคู่ครอง`);
+    else if(['ศรี','เดช','มนตรี'].includes(r)) add('sup',6,`วันเกิดของเขาเป็น “${r}” ในทักษาของเรา — เขาเป็นคนเสริม${r==='ศรี'?'โชคและเสน่ห์':r==='เดช'?'อำนาจและความกล้า':'คนอุปถัมภ์'}ให้เรา`);
+    Object.keys(V).forEach(k=>V[k]=Math.max(0,Math.min(100,Math.round(V[k]))));
+    const wsum=V.love*.3+V.nat*.25+V.sex*.2+V.sup*.25, mn=Math.min(V.love,V.nat,V.sex,V.sup), tot=Math.round(wsum*.8+mn*.2);
+    const kind=karmic?'คู่บุพกรรม':(V.love>=70&&V.nat>=62&&V.sup>=55)?'คู่แท้':(V.sex>=70&&V.nat<58)?'คู่จร':'คู่เติมเต็ม';
+    return {V,tot,W,kind,karmic}; }
+
+  function lagScore(A,Lb,Q){ const W=[]; let v=0; const add=(d,t)=>{ v+=d; W.push({d,t}); };
+    if(Lb===A.s7) add(12,`ลัคนาของเขาตรงราศีปัตนิของเรา (${SIGNS[A.s7]}) — ตำราถือว่าตรงคู่ที่สุด`);
+    const h=((Lb-A.L+12)%12)+1; if(h===5||h===9) add(8,'ลัคนาตรีโกณกัน (๕/๙) ส่งเสริมกันดีมาก'); else if(h===1) add(4,'ลัคนาเดียวกัน นิสัยคล้ายกัน'); else if(h===3||h===11) add(4,'ลัคนา ๓/๑๑ เป็นมิตร ช่วยเหลือกัน'); else if(h===6||h===8) add(-8,'ลัคนา ๖/๘ ขัดแย้ง ทุกข์ใจ'); else if(h===2||h===12) add(-3,'ลัคนา ๒/๑๒ ช่วยทรัพย์แต่จุกจิก');
+    const b7=(Lb+6)%12; if(sgn(A.P.VE)===b7) add(8,'ศุกร์ของเราตกภพปัตนิของเขา — เราคือสเปกของเขาเช่นกัน'); else if(sgn(A.P.MO)===b7) add(6,'จันทร์ของเราตกภพปัตนิของเขา — เขาจะรู้สึกว่าเราคือคนที่ตามหา');
+    if(Lb!==A.s7&&ELEM[Lb%4]===ELEM[A.s7%4]) add(3,`ธาตุลัคนาของเขา (${ELEM[Lb%4]}) ตรงธาตุภพปัตนิของเรา`);
+    if(Q){ const lb=PNUM2K[LORD[Lb]]; if(Q[lb]!=null&&sgn(Q[lb])===A.s7) add(4,`ตนุลัคน์ของเขา (${TH[lb]}) อยู่ราศีปัตนิของเรา`); if(lb===A.l7) add(5,`ตนุลัคน์ของเขาคือ${TH[lb]} = เจ้าเรือนปัตนิของเรา`); }
+    return {v,W}; }
+
+  function lagRanges(y,m,d,A,Q){ const R=[]; let cur=null;
+    for(let i=0;i<=48;i++){ const h=i/2, t=bkk(y,m,d,Math.floor(h),(h%1)*60); let s; try{ s=sgn(lagna(t,13.75,100.5)); }catch(e){ continue; }
+      if(cur&&cur.s===s) cur.b=i; else { cur={s,a:i,b:i}; R.push(cur); } }
+    const fm=i=>{ const h=Math.floor(i/2)%24; return `${tn(String(h).padStart(2,'0'))}:${i%2?'๓๐':'๐๐'}`; };
+    return R.filter(r=>r.b>r.a||R.length===1).map(r=>{ const L=lagScore(A,r.s,Q); return {s:r.s,t:`${fm(r.a)}–${fm(r.b+1)} น.`,v:L.v,W:L.W}; }).sort((a,b)=>b.v-a.v); }
+
+  function meetWins(c,bt,age){ const out=[]; try{ LV201.windows(c,bt).forEach(w=>out.push({a:w.a,b:w.b,t:`พฤหัสจรผ่าน${w.k}${w.k==='ปัตนิ'?' — โอกาสพบคนจริงจัง':' — เสน่ห์แรง ความรักเบ่งบาน'}`,w:w.k==='ปัตนิ'?3:2})); }catch(e){}
+    try{ SM202.meet(c,bt).forEach(w=>out.push({a:w.ya,b:w.yb,t:`${TH[w.k]}จร${w.r}${w.n}${w.k==='JU'?' — โอกาสเจอคนดีที่เปิดใจได้':w.k==='SA'?' — เจอคนจริงจัง หรือความสัมพันธ์ที่ต้องรับผิดชอบ':' — เจอคนแปลกใหม่ ดึงดูดเร็ว'}`,w:w.k==='JU'?2:1})); }catch(e){}
+    return out.filter(w=>w.b>=Math.floor(age)&&w.a<=Math.floor(age)+15).sort((a,b)=>a.a-b.a); }
+
+  function scan(){ const c=WSTATE.nat, bt=WSTATE.bt instanceof Date?WSTATE.bt:new Date(WSTATE.bt), A=ctx(c,bt), y0=bt.getFullYear();
+    const D=[]; const t0=bkk(y0-S.R,bt.getMonth(),bt.getDate(),12), t1=bkk(y0+S.R,bt.getMonth(),bt.getDate(),12);
+    for(let t=new Date(t0);t<=t1;t=new Date(t.getTime()+864e5)){ const B=dayChart(t), s=score(A,B); D.push({t,B,s}); }
+    const vs=D.map(d=>d.s.tot).sort((a,b)=>a-b), thr=Math.max(68,vs[Math.floor(vs.length*.96)]);
+    const Wn=[]; let cur=null; D.forEach((d,i)=>{ if(d.s.tot>=thr){ if(cur&&i-cur.j<=1){ cur.j=i; if(d.s.tot>cur.best.s.tot) cur.best=d; } else { cur={i,j:i,best:d}; Wn.push(cur); } } });
+    Wn.sort((a,b)=>b.best.s.tot-a.best.s.tot); const top=Wn.slice(0,12);
+    top.forEach(w=>{ const t=w.best.t, l=new Date(t.getTime()+7*36e5); w.lag=lagRanges(l.getUTCFullYear(),l.getUTCMonth(),l.getUTCDate(),A,w.best.B.pos); w.a=D[w.i].t; w.b=D[w.j].t; });
+    const Y={}; D.forEach(d=>{ const y=new Date(d.t.getTime()+7*36e5).getUTCFullYear(), o=Y[y]=Y[y]||{y,n:0,best:0,sum:0,c:0}; o.c++; o.sum+=d.s.tot; if(d.s.tot>=thr) o.n++; if(d.s.tot>o.best) o.best=d.s.tot; });
+    const hot=D.filter(d=>d.s.tot>=thr), cnt=(f,n)=>{ const m={}; hot.forEach(d=>{ const k=f(d); m[k]=(m[k]||0)+1; }); return Object.entries(m).sort((a,b)=>b[1]-a[1]).slice(0,n); };
+    const lagRank=SIGNS.map((_,s)=>({s,...lagScore(A,s,null)})).sort((a,b)=>b.v-a.v);
+    const age=(Date.now()-bt)/3.15576e10, M=meetWins(c,bt,age);
+    const l7s=(()=>{ try{ return stdScore(std(A.l7,A.P[A.l7])); }catch(e){ return 0; } })(), ves=(()=>{ try{ return stdScore(std('VE',A.P.VE)); }catch(e){ return 0; } })();
+    const near=M.filter(w=>w.a<=Math.floor(age)+10).reduce((a,w)=>a+w.w,0), chance=Math.max(20,Math.min(92,Math.round(48+near*5+l7s*6+ves*4)));
+    return {A,D,thr,top,Y:Object.values(Y).sort((a,b)=>a.y-b.y),wd:cnt(d=>d.B.wd,3),mo:cnt(d=>sgn(d.B.pos.MO),4),ve:cnt(d=>sgn(d.B.pos.VE),3),lagRank,age,M,chance,bt,y0,hotN:hot.length}; }
+
+  // ── วาด ──
+  const bar=(k,v)=>`<div class="rdb"><span>${CAT[k]}</span><i><b class="${v>=70?'g':v>=55?'y':'r'}" style="width:${v}%"></b></i><em>${tn(v)}</em></div>`;
+  function radar(R){ const N=R.D.length, C=170, RR=150, pt=(i,v)=>{ const a=i/N*2*Math.PI-Math.PI/2, r=RR*(1-Math.max(0,Math.min(1,(v-55)/24))); return [C+Math.cos(a)*r,C+Math.sin(a)*r]; };
+    let dots=''; R.D.forEach((d,i)=>{ if(d.s.tot<R.thr-12||i%2) return; const [x,y]=pt(i,d.s.tot); dots+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="1.6" class="dt"/>`; });
+    let ticks=''; R.Y.forEach(o=>{ const i=R.D.findIndex(d=>new Date(d.t.getTime()+7*36e5).getUTCFullYear()===o.y); if(i<0||(o.y-R.y0)%(S.R>10?5:2)) return; const a=i/N*2*Math.PI-Math.PI/2, x=C+Math.cos(a)*(RR+11), y=C+Math.sin(a)*(RR+11); ticks+=`<text x="${x.toFixed(0)}" y="${(y+3).toFixed(0)}" class="tk">${tn(o.y+543)}</text>`; });
+    const me=R.D.findIndex(d=>d.t>=R.bt), [mx,my]=(()=>{ const a=me/N*2*Math.PI-Math.PI/2; return [C+Math.cos(a)*(RR+2),C+Math.sin(a)*(RR+2)]; })();
+    const blips=R.top.map((w,j)=>{ const i=R.D.indexOf(w.best), [x,y]=pt(i,w.best.s.tot); return `<g class="bl ${j===S.sel?'on':''}" data-rd216="${j}" style="animation-delay:${(.15*j+1.2).toFixed(2)}s"><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="11" class="hl"/><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="7.5" class="bp"/><text x="${x.toFixed(1)}" y="${(y+3.2).toFixed(1)}">${tn(j+1)}</text></g>`; }).join('');
+    return `<svg viewBox="0 0 340 340" class="rdsvg" role="img" aria-label="เรดาร์คู่ชีวิต"><defs><radialGradient id="rdg216"><stop offset="0" stop-color="#1e3a2c"/><stop offset="1" stop-color="#08140f"/></radialGradient><linearGradient id="rds216" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4be39a" stop-opacity="0"/><stop offset="1" stop-color="#4be39a" stop-opacity=".55"/></linearGradient></defs>
+      <circle cx="${C}" cy="${C}" r="${RR}" fill="url(#rdg216)"/>${[75,70,65,60].map(v=>{ const r=RR*(1-(v-55)/24); return `<circle cx="${C}" cy="${C}" r="${r}" class="rg"/><text x="${C+3}" y="${C-r+10}" class="rl">${tn(v)}</text>`; }).join('')}
+      <line x1="${C-RR}" y1="${C}" x2="${C+RR}" y2="${C}" class="rg"/><line x1="${C}" y1="${C-RR}" x2="${C}" y2="${C+RR}" class="rg"/>
+      <g class="sw"><path d="M${C} ${C} L${C} ${C-RR} A${RR} ${RR} 0 0 1 ${(C+RR*Math.sin(Math.PI/5)).toFixed(1)} ${(C-RR*Math.cos(Math.PI/5)).toFixed(1)} Z" fill="url(#rds216)"/><line x1="${C}" y1="${C}" x2="${(C+RR*Math.sin(Math.PI/5)).toFixed(1)}" y2="${(C-RR*Math.cos(Math.PI/5)).toFixed(1)}" stroke="#7dffc0" stroke-width="1.4"/></g>
+      <g class="dts">${dots}</g>${ticks}<circle cx="${mx.toFixed(1)}" cy="${my.toFixed(1)}" r="4" class="me"/><circle cx="${C}" cy="${C}" r="5" class="ct"/>${blips}</svg>`; }
+
+  function card(R,w,j){ const B=w.best.B, s=w.best.s, Q=B.pos, yb=new Date(w.best.t.getTime()+7*36e5).getUTCFullYear(), ageNow=Math.floor((Date.now()-w.best.t)/3.15576e10), diff=yb-R.y0;
+    const pos=s.W.filter(x=>x.d>0).sort((a,b)=>b.d-a.d), neg=s.W.filter(x=>x.d<0).sort((a,b)=>a.d-b.d), L=w.lag[0];
+    const meet=R.M.slice(0,4).map(m=>{ const yA=R.y0+m.a, yB=R.y0+m.b; return `<li><b>อายุเรา ${tn(m.a)}${m.b>m.a?'–'+tn(m.b):''} (พ.ศ. ${tn(yA+543)}${yB>yA?'–'+tn(yB+543):''})</b> เขาจะอายุราว ${tn(Math.max(0,yA-yb))}${yB>yA?'–'+tn(yB-yb):''} ปี · ${m.t}</li>`; }).join('');
+    const pc=Math.max(15,Math.min(95,Math.round(R.chance+(Math.abs(diff)<=3?6:Math.abs(diff)>8?-10:0)+(s.tot-75)/2)));
+    return `<article class="rdc"><header><span class="rdn">${tn(j+1)}</span><div><h4>เกิด ${w.a.getTime()===w.b.getTime()?fd(w.best.t):`${fd(w.a)} – ${fd(w.b)}`}</h4><p>ดีที่สุดคือ <b>${fd(w.best.t)}</b> วัน${WDN[WDP.indexOf(B.wd)]} · ปี${yNk(yb)} · ${diff===0?'ปีเดียวกับเรา':diff>0?`อ่อนกว่าเรา ${tn(diff)} ปี`:`แก่กว่าเรา ${tn(-diff)} ปี`} · ตอนนี้อายุ ${tn(ageNow)} ปี</p></div><div class="rds ${s.tot>=R.thr+3?'g':'y'}"><b>${tn(s.tot)}</b><span>${s.kind}</span></div></header>
+      <div class="rdbars">${['love','nat','sex','sup'].map(k=>bar(k,s.V[k])).join('')}</div>
+      <div class="rdgrid"><div><em>ดาวของเขา</em><ul class="rdpl">${['SU','MO','VE','MA','ME','JU','SA','RA'].map(k=>`<li><b>${tn(PNUM[k])} ${TH[k]}</b>${dg(Q[k])}<small>ภพ${HOUSES[((sgn(Q[k])-R.A.L+12)%12)]}ของเรา</small></li>`).join('')}</ul></div>
+        <div><em>ลัคนาที่ควรเป็น (ถ้าเกิดวันนั้น)</em>${w.lag.slice(0,3).map((l,i)=>`<p class="rdl ${i?'':'on'}"><b>ลัคนา${SIGNS[l.s]}</b> เกิดเวลา ${l.t} <span class="${l.v>=10?'g':l.v>=4?'y':'r'}">${l.v>0?'+':''}${tn(l.v)}</span></p>`).join('')}${L&&L.W.length?`<p class="nt">${L.W.map(x=>x.t).join(' · ')}</p>`:''}</div></div>
+      <div class="rdwhy"><em>ดาวเขากระทบพื้นดวงเราอย่างไร</em><ul>${pos.slice(0,6).map(x=>`<li class="g"><span>${CAT[x.c]}</span>${x.t}</li>`).join('')}${neg.slice(0,2).map(x=>`<li class="r"><span>${CAT[x.c]}</span>${x.t}</li>`).join('')}</ul></div>
+      <div class="rdmeet"><em>โอกาสพบคนแบบนี้ · ${tn(pc)}%</em>${meet?`<ul>${meet}</ul>`:'<p class="nt">ไม่พบช่วงดาวจรกระตุ้นใน ๑๕ ปีข้างหน้า — ความรักจะมาจากการเปิดโอกาสเอง มากกว่ารอจังหวะดาว</p>'}</div></article>`; }
+
+  function ideal(R){ const A=R.A, P=A.P;
+    const Z=[['ศุกร์ของเขา',[[P.MA,8,'กุมอังคารเรา'],[P.MA+120,8,'ตรีโกณอังคารเรา'],[P.MA-120,8,'ตรีโกณอังคารเรา'],[P.MO,8,'กุมจันทร์เรา']],'แรงดึงดูดทางกายและความอ่อนโยน'],
+      ['อังคารของเขา',[[P.VE,8,'กุมศุกร์เรา'],[P.VE+120,8,'ตรีโกณศุกร์เรา'],[P.VE-120,8,'ตรีโกณศุกร์เรา']],'เขาเป็นฝ่ายรุก ทำให้เรารู้สึกเป็นที่ต้องการ'],
+      ['จันทร์ของเขา',[[P.SU,10,'กุมอาทิตย์เรา'],[P.SU+180,8,'เล็งอาทิตย์เรา'],[P.SU+120,8,'ตรีโกณอาทิตย์เรา'],[P.SU-120,8,'ตรีโกณอาทิตย์เรา']],'เกณฑ์คู่ครองคลาสสิก อาทิตย์–จันทร์'],
+      ['อาทิตย์ของเขา',[[P.MO,10,'กุมจันทร์เรา'],[P.MO+180,8,'เล็งจันทร์เรา']],'เขาเป็นหลักให้ใจเรา']];
+    const mt=((sgn(P.MO)+4)%12), mt2=((sgn(P.MO)+8)%12);
+    const avoid=[`จันทร์ของเขาอยู่ราศี${SIGNS[(sgn(P.MO)+5)%12]} หรือ${SIGNS[(sgn(P.MO)+7)%12]} (๖/๘ จากจันทร์เรา)`,`เสาร์ของเขาอยู่ ${zone(P.MO,8)} (กุมจันทร์เรา)`,`เกิดวัน${wdn(A.kal)} (กาลกิณีของเรา)`,`ลัคนาของเขาเป็นราศี${SIGNS[(A.L+5)%12]} หรือ${SIGNS[(A.L+7)%12]} (๖/๘ จากลัคนาเรา)`];
+    const yrs=R.Y.slice().sort((a,b)=>b.n-a.n||b.best-a.best).slice(0,3), maxN=Math.max(1,...R.Y.map(o=>o.n));
+    return `<div class="rdid"><h4>ภาพคนที่ใช่ของดวงนี้</h4>
+      <div class="rdk"><div><span>ลัคนาที่ควรเป็น</span><b>${R.lagRank.slice(0,3).map(l=>SIGNS[l.s]).join(' · ')}</b><small>${R.lagRank[0].W.slice(0,2).map(x=>x.t).join(' · ')}</small></div>
+        <div><span>วันเกิดที่เข้าทาง</span><b>${R.wd.map(([w])=>'วัน'+WDN[WDP.indexOf(+w)]).join(' · ')}</b><small>นับจากวันที่ได้คะแนนสูงสุด ${tn(R.hotN)} วันในช่วงที่สแกน</small></div>
+        <div><span>จันทร์ (ราศีใจ) ของเขา</span><b>${R.mo.map(([s])=>SIGNS[s]).join(' · ')}</b><small>ตรีโกณจันทร์เราคือ${SIGNS[mt]}และ${SIGNS[mt2]}</small></div>
+        <div><span>ศุกร์ของเขา</span><b>${R.ve.map(([s])=>SIGNS[s]).join(' · ')}</b><small>ภพปัตนิของเราคือราศี${SIGNS[A.s7]} · เจ้าเรือนปัตนิคือ${TH[A.l7]}</small></div>
+        <div><span>ปีเกิดที่โดดเด่น</span><b>${yrs.map(o=>`${tn(o.y+543)} (${yNk(o.y)})`).join(' · ')}</b><small>ปีที่มีวันเข้าเกณฑ์มากที่สุด</small></div></div>
+      <div class="rdyr">${R.Y.map(o=>`<div class="${yrs.includes(o)?'on':''}" title="${o.y+543}"><i style="height:${Math.max(3,o.n/maxN*100)}%"></i><span>${(o.y+543)%100<10?'๐':''}${tn((o.y+543)%100)}</span></div>`).join('')}</div>
+      <h4>ดาวของเขาต้องกระทบพื้นดวงเราแบบนี้ (องศาที่ควรเป็น)</h4><div class="rdz">${Z.map(([n,L,t])=>`<div><b>${n}</b><small>${t}</small><ul>${L.map(([c,o,d])=>`<li>${zone(c,o)}<span>${d}</span></li>`).join('')}</ul></div>`).join('')}
+        <div><b>พฤหัสของเขา</b><small>คนที่เข้ามาแล้วชีวิตเราดีขึ้น</small><ul><li>ราศี${SIGNS[A.L]}<span>ทับลัคนาเรา</span></li><li>ราศี${SIGNS[A.s7]}<span>อยู่ภพปัตนิเรา</span></li><li>ราศี${SIGNS[sgn(P.VE)]}<span>ทับศุกร์เรา</span></li></ul></div>
+        <div class="bad"><b>ควรเลี่ยง</b><small>ไม่ได้แปลว่าเป็นไปไม่ได้ แต่ต้องปรับตัวมาก</small><ul>${avoid.map(a=>`<li>${a}</li>`).join('')}</ul></div></div></div>`; }
+
+  function testBox(R){ const T=S.test; let out='';
+    if(T){ const B=dayChart(T.t), s=score(R.A,B), L=T.h!=null?(()=>{ const s0=sgn(lagna(T.t,13.75,100.5)); return {s:s0,...lagScore(R.A,s0,B.pos)}; })():null;
+      out=`<div class="rdtr"><div class="rds ${s.tot>=R.thr?'g':s.tot>=60?'y':'r'}"><b>${tn(s.tot)}</b><span>${s.kind}</span></div><div><p>${s.tot>=R.thr?'อยู่ในกลุ่มคะแนนสูงสุดของเรดาร์ — เข้ากันได้ดีมาก':s.tot>=60?'เข้ากันได้ในระดับดี มีบางจุดต้องปรับ':'มีจุดที่ต้องปรับตัวหลายเรื่อง ถ้ารักกันจริงก็ไปต่อได้ด้วยความเข้าใจ'}</p>${L?`<p>ลัคนาของเขา: <b>${SIGNS[L.s]}</b> ${L.W.length?`${L.v>0?'+':''}${tn(L.v)} · ${L.W.map(x=>x.t).join(' · ')}`:'— ไม่มีเกณฑ์ลัคนาเด่นทั้งดีและเสีย'}</p>`:'<p class="nt">ใส่เวลาเกิดเพื่อดูลัคนาของเขาด้วย</p>'}<div class="rdbars">${['love','nat','sex','sup'].map(k=>bar(k,s.V[k])).join('')}</div>
+        <ul class="rdwl">${s.W.filter(x=>x.d).sort((a,b)=>b.d-a.d).map(x=>`<li class="${x.d>0?'g':'r'}"><span>${CAT[x.c]}</span>${x.t}</li>`).join('')}</ul></div></div>`; }
+    return `<div class="rdtest"><h4>มีคนในใจแล้ว? ใส่วันเกิดเขาเพื่อเช็กกับเรดาร์</h4><div class="rdf"><input type="date" id="rd216d" value="${T?T.v:''}"><input type="time" id="rd216t" value="${T&&T.tv||''}"><button type="button" data-rd216x="test">เช็ก</button></div>${out}</div>`; }
+
+  function render(e){ const R=S.res; if(!R) return; const w=R.top[S.sel];
+    const ch=R.chance>=70?['g','สูง']:R.chance>=50?['y','ปานกลาง']:['r','ต้องสร้างโอกาสเอง'];
+    e.innerHTML=`<div class="rd216">
+      <div class="rdtop"><div class="rdrad">${radar(R)}<p class="nt">จุดกลาง = ดวงเรา · ยิ่งใกล้กลางยิ่งเข้ากัน · รอบวง = วันเกิดย้อนหลังและล่วงหน้า ${tn(S.R)} ปี · จุดเหลืองคือวันเกิดของเรา</p></div>
+        <div class="rdside"><div class="rdctl"><span>ช่วงอายุคู่</span>${[5,10,15].map(r=>`<button type="button" data-rd216r="${r}" class="${S.R===r?'on':''}">±${tn(r)} ปี</button>`).join('')}</div>
+          <div class="rdsum"><div><b>${tn(R.top.length)}</b><span>ช่วงวันเกิดที่เข้าเป้า</span></div><div><b>${tn(R.thr)}+</b><span>เกณฑ์คะแนน (สูงสุด ๔%)</span></div><div class="${ch[0]}"><b>${tn(R.chance)}%</b><span>โอกาสพบคู่ใน ๑๐ ปี · ${ch[1]}</span></div></div>
+          <ol class="rdlist">${R.top.map((t,j)=>`<li><button type="button" data-rd216="${j}" class="${j===S.sel?'on':''}"><span>${tn(j+1)}</span><b>${fd(t.best.t)}</b><em>${tn(t.best.s.tot)} · ${t.best.s.kind}</em></button></li>`).join('')}</ol></div></div>
+      ${w?card(R,w,S.sel):'<p class="nt">ยังไม่พบวันที่เข้าเกณฑ์ ลองขยายช่วงอายุ</p>'}
+      ${ideal(R)}${testBox(R)}
+      <details class="rdhow"><summary>เรดาร์คิดอย่างไร</summary><ol>
+        <li><b>ความรัก ๓๐%</b> ศุกร์/จันทร์/อาทิตย์ของเขาตกภพปัตนิเรา · อาทิตย์–จันทร์ไขว้กัน · จันทร์–ศุกร์ · ศุกร์–ศุกร์ · พฤหัสเขาบนปัตนิหรือศุกร์เรา · วันเกิดเขาเป็นวันของเจ้าเรือนปัตนิเรา</li>
+        <li><b>นิสัย ๒๕%</b> ระยะจันทร์–จันทร์ (ตรีโกณดี ๖/๘ และ ๒/๑๒ ระวัง) · ธาตุจันทร์ · นทิ · พุธ–พุธ · คู่ดาววันเกิด (คู่ธาตุ คู่มิตร คู่สมพล คู่ศัตรู)</li>
+        <li><b>แรงดึงดูด ๒๐%</b> ศุกร์–อังคารไขว้กัน (กุม ตรีโกณ เล็ง จตุโกณ โยค พร้อมองศาคลาด) · อังคาร–อังคาร · จันทร์–อังคาร · โยนิของนักษัตรจันทร์</li>
+        <li><b>เกื้อหนุน ๒๕%</b> พฤหัสเขาบนลัคนา/จันทร์เรา · เสาร์ที่กุมจันทร์หรือศุกร์ · ราหูที่กุมศุกร์ จันทร์ ลัคนา (คู่บุพกรรม) · ทักษา: วันเกิดเขาเป็นศรี เดช มนตรี หรือกาลกิณีของเรา</li>
+        <li>คะแนนรวมให้น้ำหนักด้านที่ต่ำสุด ๒๐% เพื่อให้คู่ที่ได้ต้องดีครบทุกด้าน ไม่ใช่เด่นด้านเดียว · ประเภทคู่: คู่แท้ คู่จร คู่บุพกรรม (แนวโหราเวสม์) และคู่เติมเต็ม</li>
+        <li>สแกนทุกวันเวลา ๑๒:๐๐ น. (กรุงเทพฯ) · จันทร์เดินวันละราว ๑๓° ผลจริงจึงขยับได้ตามเวลาเกิด · ลัคนาของเขาคำนวณจากวันที่ดีที่สุดของแต่ละช่วง · โอกาสพบคิดจากพฤหัสจรผ่านปัตนิ/ศุกร์ (ขั้นที่ ๗ ของแผงความรัก) และพฤหัส เสาร์ ราหูจรทับหรือเล็งลัคนาและตนุลัคน์ (แผงคู่แท้) ร่วมกับกำลังของเจ้าเรือนปัตนิและศุกร์</li>
+      </ol><p class="nt">เรดาร์บอก “แนวโน้มของคนที่เข้ากัน” ไม่ได้บอกว่าต้องเป็นคนนี้เท่านั้น ความสัมพันธ์จริงขึ้นกับการเลือกและการดูแลกันของทั้งสองคน</p></details></div>`; }
+
+  function run(){ const e=document.getElementById('rd216Out'); if(!e||typeof WSTATE==='undefined'||!WSTATE||!WSTATE.nat) return;
+    try{ e.classList.add('rdbusy'); S.res=scan(); S.sel=Math.min(S.sel,Math.max(0,S.res.top.length-1)); render(e); setTimeout(()=>e.classList.remove('rdbusy'),60); }catch(x){ console.error(x); e.innerHTML='<p class="nt">สแกนไม่สำเร็จ ลองผูกดวงใหม่อีกครั้ง</p>'; } }
+  document.addEventListener('click',ev=>{ const t=ev.target.closest&&ev.target.closest('[data-rd216],[data-rd216r],[data-rd216x]'); if(!t||!t.closest('#rd216P')) return; const e=document.getElementById('rd216Out');
+    if(t.dataset.rd216r){ S.R=+t.dataset.rd216r; S.sel=0; run(); return; }
+    if(t.dataset.rd216x==='test'){ const v=document.getElementById('rd216d').value, tv=document.getElementById('rd216t').value; if(!v) return; const [y,m,d]=v.split('-').map(Number), [h,mi]=tv?tv.split(':').map(Number):[12,0]; S.test={v,tv,t:bkk(y,m-1,d,h,mi),h:tv?h:null}; render(e); const b=e.querySelector('.rdtest'); if(b) b.scrollIntoView({block:'nearest'}); return; }
+    S.sel=+t.dataset.rd216; render(e); const c=e.querySelector('.rdc'); if(c&&t.tagName==='BUTTON'&&window.innerWidth<760) c.scrollIntoView({behavior:'smooth',block:'start'}); });
+  { const _s=cat29Show; cat29Show=function(id){ const r=_s.apply(this,arguments); if(id==='natal'||id==='love') setTimeout(run,0); return r; }; }
+  { const _c=compute; compute=function(){ S.test=null; S.sel=0; const r=_c.apply(this,arguments); setTimeout(()=>{ const p=document.getElementById('rd216P'); if(p&&p.offsetParent) run(); },0); return r; }; }
+  return {scan,score,run,S};
 })();
 
 let KEY77='';
