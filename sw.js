@@ -1,5 +1,5 @@
 // Walking Star Academy — ใช้งานออฟไลน์: เก็บไฟล์หลักไว้ในเครื่อง แล้วอัปเดตเบื้องหลังเมื่อมีเน็ต
-const V='ws-v210.0', CORE=['./','./index.html','./manifest.json','./icon-192.png','./icon-512.png','./icon-180.png','./logo-96.png','./logo.svg','./favicon-32.png','./pay/qr199.jpg','./pay/qr1590.jpg','./audio/interstellar.mp3'];
+const V='ws-v211.0', CORE=['./','./index.html','./manifest.json','./icon-192.png','./icon-512.png','./icon-180.png','./logo-96.png','./logo.svg','./favicon-32.png','./pay/qr199.jpg','./pay/qr1590.jpg','./audio/interstellar.mp3'];
 self.addEventListener('install',e=>{ e.waitUntil(caches.open(V).then(c=>Promise.all(CORE.map(u=>c.add(u).catch(()=>null)))).then(()=>self.skipWaiting())); });
 self.addEventListener('activate',e=>{ e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==V).map(k=>caches.delete(k)))).then(()=>self.clients.claim())); });
 self.addEventListener('fetch',e=>{ const r=e.request; if(r.method!=='GET') return; const u=new URL(r.url); if(/supabase\.co$/.test(u.hostname)) return;
