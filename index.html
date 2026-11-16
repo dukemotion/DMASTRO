@@ -6726,6 +6726,62 @@ img,svg{max-width:100%}
    <div id="rlist"></div><div id="rday"></div>
    <div class="note">คะแนนเริ่ม 50 · ✕ = ข้อห้ามเด็ดขาด (วันดับ แรม ๑๔–๑๕ · วันอาทิตย์ยกราศี · ±7 วันอุปราคา · อัคนิโรธของงานนั้น · วันห้ามตามงาน · เรียงหมอน · กาลกิณีวันของเจ้าชะตา) · ✓/△ = บวก/ลบคะแนน · ข้างขึ้น/แรมและเดือนตามปฏิทินจันทรคติไทย (หรคุณ–อวมาน รวมอธิกมาส/อธิกวาร · ตรวจกับวันพระใหญ่ 2568–2569 ตรงทุกวัน) · กาลโยคคำนวณจาก จ.ศ. (ตรวจกับปฏิทิน 2566–2569) · อุปราคาเป็นค่าประมาณจากราหูไทย ควรตรวจกับปฏิทินโหรก่อนใช้จริง</div>
   </div>
+  <div class="panel" style="margin-top:0;margin-bottom:14px" id="silaP"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">ป้ายดวงฤกษ์ · ดวงศิลาฤกษ์ — แผ่นประกาศฤกษ์แบบโบราณ (แก้ข้อความบนป้ายได้โดยตรง)</h3>
+   <div class="rerkbar">
+    <label>ดวงที่บันทึก <select id="sila66prof"></select></label><button type="button" class="chip" id="sila66use">ดึงมาคำนวณ</button>
+    <label>วันพิธี <input type="date" id="sila66d"></label>
+    <label>ปฐมฤกษ์ <input type="time" id="sila66t1"></label>
+    <label>ปัจฉิมฤกษ์ <input type="time" id="sila66t2"></label><button type="button" class="chip" id="sila66auto" title="เว้นว่างแล้วกด = ระบบหาเวลาสิ้นสุดฤกษ์ให้ (ลัคนาพ้นนวางค์เดิม)">สิ้นฤกษ์อัตโนมัติ</button>
+    <label>จังหวัด <select id="sila66prov"></select></label>
+    <label>ฟอนต์ป้าย <select id="sila66font"><option value="sri">ศรีศักดิ์ — อาลักษณ์โบราณ</option><option value="chm">จามรมาน — ลายมือหวัด</option><option value="chr">ชาร์ม — ลายมือ</option><option value="pri">ปรีดิ — เรียบหรู</option><option value="kan">คานิต — สมัยใหม่</option></select></label>
+    <button type="button" class="primary" id="sila66calc" style="width:auto;padding:6px 18px">✦ คำนวณฤกษ์จากระบบ</button>
+   </div>
+   <div class="rerkbar">
+    <label class="chip" style="cursor:pointer;margin:0">🏵 ใส่ตรา/โลโก้กลางบน<input type="file" id="sila66logo" accept="image/*" style="display:none"></label>
+    <label class="chip" style="cursor:pointer;margin:0">✍ ใส่ภาพลายเซ็น<input type="file" id="sila66sigf" accept="image/*" style="display:none"></label>
+    <button type="button" class="chip" id="sila66print">🖨 พิมพ์ / บันทึก PDF</button>
+    <button type="button" class="chip" id="sila66full">⛶ เต็มจอ (สำหรับแคปหน้าจอ)</button>
+   </div>
+   <div id="sila66chips"></div>
+   <div id="sila66wrap">
+    <button type="button" class="chip s66x" id="sila66close">✕ ปิดเต็มจอ</button>
+    <div id="sila66sheet">
+     <div class="s66bd"></div>
+     <div class="s66c s66c1"><svg viewBox="0 0 150 150"><defs><linearGradient id="s66g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6d685"/><stop offset=".5" stop-color="#d8a63c"/><stop offset="1" stop-color="#a9741d"/></linearGradient></defs><path d="M4,4 C66,0 118,12 147,5 C112,24 82,20 60,31 C86,35 110,30 128,40 C100,52 74,45 56,58 C72,66 88,64 98,73 C76,81 58,72 46,87 C54,99 64,103 66,115 C52,107 42,99 36,109 C40,123 38,135 31,148 C25,119 20,89 13,61 C9,41 4,23 4,4 Z" fill="url(#s66g)"/><circle cx="34" cy="34" r="9" fill="none" stroke="url(#s66g)" stroke-width="4"/><circle cx="58" cy="18" r="5" fill="url(#s66g)"/><circle cx="20" cy="60" r="5" fill="url(#s66g)"/></svg></div>
+     <div class="s66c s66c2"><svg viewBox="0 0 150 150"><path d="M4,4 C66,0 118,12 147,5 C112,24 82,20 60,31 C86,35 110,30 128,40 C100,52 74,45 56,58 C72,66 88,64 98,73 C76,81 58,72 46,87 C54,99 64,103 66,115 C52,107 42,99 36,109 C40,123 38,135 31,148 C25,119 20,89 13,61 C9,41 4,23 4,4 Z" fill="url(#s66g)"/><circle cx="34" cy="34" r="9" fill="none" stroke="url(#s66g)" stroke-width="4"/><circle cx="58" cy="18" r="5" fill="url(#s66g)"/><circle cx="20" cy="60" r="5" fill="url(#s66g)"/></svg></div>
+     <div class="s66c s66c3"><svg viewBox="0 0 150 150"><path d="M4,4 C66,0 118,12 147,5 C112,24 82,20 60,31 C86,35 110,30 128,40 C100,52 74,45 56,58 C72,66 88,64 98,73 C76,81 58,72 46,87 C54,99 64,103 66,115 C52,107 42,99 36,109 C40,123 38,135 31,148 C25,119 20,89 13,61 C9,41 4,23 4,4 Z" fill="url(#s66g)"/><circle cx="34" cy="34" r="9" fill="none" stroke="url(#s66g)" stroke-width="4"/><circle cx="58" cy="18" r="5" fill="url(#s66g)"/><circle cx="20" cy="60" r="5" fill="url(#s66g)"/></svg></div>
+     <div class="s66c s66c4"><svg viewBox="0 0 150 150"><path d="M4,4 C66,0 118,12 147,5 C112,24 82,20 60,31 C86,35 110,30 128,40 C100,52 74,45 56,58 C72,66 88,64 98,73 C76,81 58,72 46,87 C54,99 64,103 66,115 C52,107 42,99 36,109 C40,123 38,135 31,148 C25,119 20,89 13,61 C9,41 4,23 4,4 Z" fill="url(#s66g)"/><circle cx="34" cy="34" r="9" fill="none" stroke="url(#s66g)" stroke-width="4"/><circle cx="58" cy="18" r="5" fill="url(#s66g)"/><circle cx="20" cy="60" r="5" fill="url(#s66g)"/></svg></div>
+     <div class="s66sb s66sbl"><svg viewBox="0 0 16 440" preserveAspectRatio="none"><polygon points="8,0 13,14 13,426 8,440 3,426 3,14" fill="url(#s66g)"/></svg></div>
+     <div class="s66sb s66sbr"><svg viewBox="0 0 16 440" preserveAspectRatio="none"><polygon points="8,0 13,14 13,426 8,440 3,426 3,14" fill="url(#s66g)"/></svg></div>
+     <div class="s66in">
+      <div class="s66emb" id="sila66emb"><svg viewBox="0 0 110 110"><circle cx="55" cy="55" r="53" fill="#b3261e" stroke="#e9bc57" stroke-width="3"/><g fill="#f3cf7a" stroke="#8a5c12" stroke-width="1"><path d="M55,22 C60,34 60,42 55,50 C50,42 50,34 55,22 Z"/><path d="M38,32 C48,38 52,45 53,52 C44,50 39,42 38,32 Z"/><path d="M72,32 C71,42 66,50 57,52 C58,45 62,38 72,32 Z"/><path d="M30,55 C40,52 50,54 55,58 C50,64 38,64 30,55 Z"/><path d="M80,55 C72,64 60,64 55,58 C60,54 70,52 80,55 Z"/><path d="M55,58 C66,62 70,72 68,84 C60,80 50,80 42,84 C40,72 44,62 55,58 Z"/><circle cx="55" cy="60" r="4.5"/></g></svg></div>
+      <div class="s66t1" id="sila66L1" contenteditable="true" spellcheck="false">๏ ดวงฤกษ์พิธีมงคล ๚</div>
+      <div class="s66t2" id="sila66L2" contenteditable="true" spellcheck="false">สถานที่ประกอบพิธี</div>
+      <div class="s66mid">
+       <div class="s66deva"><svg viewBox="0 0 120 170"><g stroke="#9a6c17" stroke-width="1.4" fill="url(#s66g)" stroke-linejoin="round"><ellipse cx="60" cy="152" rx="40" ry="10"/><path d="M34,150 C30,138 38,128 48,124 L72,124 C82,128 90,138 86,150 Z"/><path d="M48,124 C44,106 48,92 60,86 C72,92 76,106 72,124 Z"/><path d="M60,92 C52,86 50,78 54,70 L66,70 C70,78 68,86 60,92 Z"/><path d="M45,96 C50,88 56,84 60,84 L60,92 C56,98 50,102 45,106 Z"/><path d="M75,96 C70,88 64,84 60,84 L60,92 C64,98 70,102 75,106 Z"/><circle cx="60" cy="58" r="12"/><path d="M60,18 C64,28 64,38 60,46 C56,38 56,28 60,18 Z"/><path d="M48,40 C52,34 56,32 60,32 C56,40 54,44 52,48 Z"/><path d="M72,40 C68,34 64,32 60,32 C64,40 66,44 68,48 Z"/><path d="M57,70 L63,70 L60,60 Z"/></g></svg></div>
+       <div class="s66wheel" id="sila66wheel"></div>
+       <div class="s66deva s66dvr"><svg viewBox="0 0 120 170"><g stroke="#9a6c17" stroke-width="1.4" fill="url(#s66g)" stroke-linejoin="round"><ellipse cx="60" cy="152" rx="40" ry="10"/><path d="M34,150 C30,138 38,128 48,124 L72,124 C82,128 90,138 86,150 Z"/><path d="M48,124 C44,106 48,92 60,86 C72,92 76,106 72,124 Z"/><path d="M60,92 C52,86 50,78 54,70 L66,70 C70,78 68,86 60,92 Z"/><path d="M45,96 C50,88 56,84 60,84 L60,92 C56,98 50,102 45,106 Z"/><path d="M75,96 C70,88 64,84 60,84 L60,92 C64,98 70,102 75,106 Z"/><circle cx="60" cy="58" r="12"/><path d="M60,18 C64,28 64,38 60,46 C56,38 56,28 60,18 Z"/><path d="M48,40 C52,34 56,32 60,32 C56,40 54,44 52,48 Z"/><path d="M72,40 C68,34 64,32 60,32 C64,40 66,44 68,48 Z"/><path d="M57,70 L63,70 L60,60 Z"/></g></svg></div>
+      </div>
+      <div class="s66b s66blue" id="sila66L3" contenteditable="true" spellcheck="false">ศุภดิถีมงคลวาร — กดปุ่ม “คำนวณฤกษ์จากระบบ”</div>
+      <div class="s66b s66blue" id="sila66L4" contenteditable="true" spellcheck="false">ตรงกับสุริยคติกาล …</div>
+      <div class="s66b s66pink" id="sila66L5" contenteditable="true" spellcheck="false">พระจันทร์ สถิตราศี… เสวยฤกษ์ที่ …</div>
+      <div class="s66b s66red s66sp" id="sila66L6" contenteditable="true" spellcheck="false">ปฐมฤกษ์ เวลา … นาฬิกา … นาที</div>
+      <div class="s66b s66red s66sp" id="sila66L7" contenteditable="true" spellcheck="false">ปัจฉิมฤกษ์ เวลา … นาฬิกา … นาที</div>
+      <div class="s66b s66green" id="sila66L8" contenteditable="true" spellcheck="false">ลัคนาฤกษ์ สถิตราศี… เกาะนวางค์ที่ … ตรียางค์ที่ …</div>
+      <div class="s66b s66green" id="sila66L9" contenteditable="true" spellcheck="false">เสวยฤกษ์ที่ … นักษัตร …แห่งฤกษ์</div>
+      <div class="s66sig">
+       <div class="s66sigimg" id="sila66sig">(พื้นที่ลายเซ็น — กดปุ่ม “ใส่ภาพลายเซ็น” ด้านบน)</div>
+       <div class="s66name" id="sila66N1" contenteditable="true" spellcheck="false">ผู้คำนวณและถวายฤกษ์</div>
+       <div class="s66pos" id="sila66N2" contenteditable="true" spellcheck="false">Walking Star Academy by DM INTELLIGENCE</div>
+       <div class="s66pos" id="sila66N3" contenteditable="true" spellcheck="false">สถาบันโหราศาสตร์</div>
+       <div class="s66date" id="sila66N4" contenteditable="true" spellcheck="false"></div>
+      </div>
+      <div class="s66foot" id="sila66L10" contenteditable="true" spellcheck="false">คำนวณสมผุสดาวและลัคนาตามคัมภีร์สุริยยาตร์ · ฤกษ์จันทร์–นวางค์–ตรียางค์ตามตำราโหรไทย</div>
+     </div>
+    </div>
+   </div>
+   <p class="note">ทุกบรรทัดบนป้ายกดแก้ได้โดยตรง · ปุ่ม “คำนวณฤกษ์จากระบบ” จะใส่ วัน–ดิถี–ปีนักษัตร–จ.ศ. · จันทร์เสวยฤกษ์และหมวดฤกษ์ (ทลิทโท–สมโณ) · ปฐมฤกษ์/ปัจฉิมฤกษ์ · ลัคนาฤกษ์ ธาตุ นวางค์ ตรียางค์ ให้อัตโนมัติ และวาดดวงอีแปะกลางป้ายจากสมผุสจริง · ปัจฉิมฤกษ์เว้นว่างไว้ ระบบจะหาเวลาที่ลัคนาพ้นนวางค์เดิมให้ (ช่วงฤกษ์ราว ๘–๑๔ นาที) · เลือกดวงที่บันทึกไว้เพื่อดึง วัน เวลา จังหวัด มาคำนวณได้ทันที</p>
+  </div>
   <div class="panel" style="margin-bottom:14px" id="lv45P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">ความรักเชิงลึก — รักมั่นคง · รักจนหลง · รักฉับพลัน · ศุกร์ดับ</h3><div id="lv45Out"></div></div>
 <div class="panel" style="margin-bottom:14px" id="lv53P"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">วิเคราะห์ความรัก ๗ ขั้น — รักแบบไหน · ควรเจอใคร · สมหวังเมื่อไร · กรรมในความรัก</h3><div id="lv53Out"></div></div>
 <div class="panel" style="margin-top:0;margin-bottom:14px" id="marrP"><h3 style="margin:0 0 6px;font-size:15px;font-weight:500">คู่ครอง · การสมรส (ดวงเดี่ยว) — เจ้าเรือนปัตนิ · เวลาสมรส · ทิศคู่ครอง · ราหูจรหาคู่</h3><div id="marrOut"></div></div>
@@ -8553,7 +8609,8 @@ const CAT29=[
  {id:'ghat',t:'จังหวะฆาต',d:'ฆาตขัย ๑๕ ข้อ · สมาสัปต์ · คราสทับดาวเดิม · อุบาทว์พระยม',ic:'<path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M12 8v5"/><circle cx="12" cy="16.5" r=".6"/>',p:['ghatP','ubatP']},
  {id:'eros',t:'รัก·กามารมณ์',d:'แรงปรารถนา · รสนิยม · ปฏิทินอารมณ์ · เทียบดวงหาวันตรงกัน',ic:'<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/><path d="M15 4l3-2M18 5h3"/>',p:['loveP']},
  {id:'luck',t:'โชคใหญ่',d:'พื้นดวงโชค · ๕ กรณี · หน้าต่างโอกาส',ic:'<circle cx="12" cy="12" r="8"/><path d="M12 7v10M9.5 9.5c0-1 1-1.5 2.5-1.5s2.5.6 2.5 1.7c0 2.6-5 1.6-5 4.3 0 1.1 1 1.8 2.5 1.8s2.5-.6 2.5-1.5"/>',p:['pl150P','luckP']},
- {id:'rerk',t:'ฤกษ์·เวลา',d:'นาฬิกาฤกษ์ · หาฤกษ์',ic:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M9 15l2 2 4-4"/>',p:['muhP','clockP','rerkP']},
+ {id:'rerk',t:'ฤกษ์·เวลา',d:'นาฬิกาฤกษ์ · หาฤกษ์',ic:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M9 15l2 2 4-4"/>',p:['muhP','clockP','rerkP','silaP']},
+ {id:'sila',t:'ป้ายดวงฤกษ์',d:'แผ่นประกาศดวงฤกษ์ · ดวงศิลาฤกษ์ · คำนวณจากระบบ · พิมพ์ได้',ic:'<rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="10" r="3.5"/><path d="M8 16h8M8 19h5"/>',p:['silaP']},
  {id:'radar',t:'เรดาร์คู่ชีวิต',d:'สแกนวันเกิด ลัคนา และดาวของคนที่เข้ากับดวงเรามากที่สุด',ic:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="M12 12l6.2-6.2"/><circle cx="16.5" cy="9" r="1.3"/><circle cx="8" cy="15" r="1"/>',p:['rd216P']},
 {id:'love',t:'คู่ครอง',d:'การสมรส · ดวงคู่ สมพงศ์',ic:'<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>',p:['mt226P','kt233P','me234P','rd216P','mt124P','lv53P','ve137P','marrP','pat59P','inter65P','lv45P','mangP','winP','cmpP','ovP','sxc89P','sp98P','sp105P']},
  {id:'health',t:'สุขภาพ',d:'กายวิภาค อายุรเวช',ic:'<circle cx="12" cy="4.5" r="2.2"/><path d="M12 7v7M7 9l5 1 5-1M9 22l3-8 3 8"/>',p:['dc225P','hl149P','bodyP','hageP']},
@@ -19356,7 +19413,7 @@ const MNU141=[
  {g:'ความรักและครอบครัว',ic:'love',it:[['love','คู่ครอง·เสน่ห์',['love','desire','eros']],['radar','เรดาร์คู่ชีวิต',['radar']],['kids','ลูก',['kids']],['parents','พ่อแม่',['parents']]]},
  {g:'งานและการเงิน',ic:'career',it:[['rkbz','ฤกษ์ธุรกิจ',['rkbz']],['career','อาชีพ',['career']],['money','การเงิน',['money']],['biz','หุ้นส่วน',['biz']],['enemy','อริ·คดีความ',['enemy']]]},
  {g:'สุขภาพและรูปลักษณ์',ic:'health',it:[['health','สุขภาพ',['health']],['look','หน้าตา·รูปร่าง',['look']],['sarira','สรีระ·ตำหนิ',['sarira','marks']]]},
- {g:'จังหวะเวลา',ic:'transit',it:[['transit','ดวงจร',['transit']],['tm106','ทศา·กาลจักร',['tm106']],['life','เส้นชีวิต',['life']],['ghat','จังหวะฆาต',['ghat']],['cal','ฤกษ์·ปฏิทินดวง',['cal','rerk']]]},
+ {g:'จังหวะเวลา',ic:'transit',it:[['transit','ดวงจร',['transit']],['tm106','ทศา·กาลจักร',['tm106']],['life','เส้นชีวิต',['life']],['ghat','จังหวะฆาต',['ghat']],['cal','ฤกษ์·ปฏิทินดวง',['cal','rerk']],['sila','ป้ายดวงฤกษ์',['sila']]]},
  {g:'ทักษาและตำราไทย',ic:'taksa',it:[['taksa','ทักษา',['taksa']],['old98','สมพงศ์·ปีหลวง',['old98']],['kam','ตำราโบราณ·อินทภาส',['kam','ib104']],['name94','ชื่อ·มงคล·ทิศ',['name94','mongkol','dir']]]},
  {g:'เครื่องมือ',ic:'sky',it:[['acg111','แผนที่โหราศาสตร์',['acg111']],['sky','ท้องฟ้า 3D',['sky']],['city','ดวงบ้านเมือง',['city']],['report','รายงาน PDF',['report']],['path','เส้นทางตำรา·คลังความรู้',['path','lib']],['upd110','อัปเดตระบบ',['upd110']]]}];
 const MNI141=id=>{ const c=CAT29.find(x=>x.id===id); return c?`<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${c.ic.replace(/\\"/g,'"')}</svg>`:''; };
@@ -33922,5 +33979,183 @@ if(window.DM150&&!window.DM150.owner&&typeof loadProfiles==='function'){ loadPro
   if(D) D.install=install;
 })();
 </script>
+<style>
+/* v147.0 ป้ายดวงฤกษ์ · ดวงศิลาฤกษ์ */
+#sila66wrap{position:relative;overflow:hidden;margin-top:8px}
+#sila66sheet{--s66f:'Srisakdi',serif;width:820px;background:#fffdf7;color:#1c2026;position:relative;transform-origin:top left;box-shadow:0 10px 36px rgba(0,0,0,.28);font-family:var(--s66f);border:4px solid #cda33a;border-radius:4px}
+#sila66sheet .s66bd{position:absolute;inset:9px;border:2px solid #d8ae45;border-radius:2px;pointer-events:none;z-index:1}
+#sila66sheet .s66c{position:absolute;width:150px;height:150px;z-index:1;pointer-events:none}
+.s66c1{left:14px;top:14px}.s66c2{right:14px;top:14px;transform:scaleX(-1)}.s66c3{left:14px;bottom:14px;transform:scaleY(-1)}.s66c4{right:14px;bottom:14px;transform:scale(-1,-1)}
+#sila66sheet .s66sb{position:absolute;top:50%;transform:translateY(-50%);width:16px;height:40%;z-index:1;pointer-events:none}
+.s66sbl{left:26px}.s66sbr{right:26px}
+#sila66sheet .s66in{position:relative;z-index:2;padding:46px 96px 40px;text-align:center}
+.s66emb{width:104px;height:104px;margin:0 auto 8px;border-radius:50%;overflow:hidden;box-shadow:0 4px 14px rgba(179,38,30,.3)}
+.s66t1{color:#b3261e;font-size:31px;font-weight:700;line-height:1.5}
+.s66t2{color:#b3261e;font-size:22px;margin-top:2px;line-height:1.5}
+.s66mid{display:flex;align-items:center;justify-content:center;gap:0;margin:8px 0 4px}
+.s66deva{width:112px;flex:none;opacity:.95}
+.s66dvr{transform:scaleX(-1)}
+.s66wheel{width:330px;flex:none;font-family:var(--s66f)}
+#sila66sheet .s66b{font-size:21px;line-height:1.8;min-height:1em}
+.s66sp{letter-spacing:.04em}
+.s66blue{color:#1f3f9b}.s66pink{color:#c2187c}#sila66sheet .s66red{color:#c62f22}.s66green{color:#15803c}
+.s66sig{margin-top:14px}
+.s66sigimg{min-height:58px;display:flex;align-items:flex-end;justify-content:center;color:#b9b2a4;font-size:12px;font-family:Kanit,sans-serif}
+.s66name{font-size:23px;font-weight:700;line-height:1.6}
+.s66pos{font-size:17px;line-height:1.6}
+.s66date{font-size:17px;margin-top:4px}
+.s66foot{margin-top:14px;font-size:14.5px;color:#4c4336;line-height:1.7}
+#sila66sheet [contenteditable]:focus{outline:2px dashed rgba(201,153,43,.65);outline-offset:3px;border-radius:4px}
+#sila66chips{display:flex;flex-direction:column;gap:5px;margin:6px 0 10px}
+#sila66chips .s66chh{font-size:13px;color:var(--muted)}
+#sila66chips .s66chip{display:flex;align-items:center;gap:8px;padding:6px 10px;border:1px dashed var(--line);border-radius:10px;font-size:13px}
+#sila66chips .s66chip small{flex:none;color:var(--gold);font-weight:600;min-width:118px;text-align:left}
+#sila66chips .s66chip span{flex:1;text-align:left}
+#sila66chips .s66chip .chip{flex:none;width:auto}
+#sila66chips .s66all{width:auto;align-self:flex-start;border-color:var(--gold);color:var(--gold)}
+.s66x{display:none;position:fixed;top:14px;right:14px;z-index:10095;width:auto}
+body.s66fs #sila66wrap{position:fixed;inset:0;z-index:10090;background:#241c12;overflow:auto;padding:22px;margin:0}
+body.s66fs .s66x{display:inline-flex}
+@media print{
+ body.s66pr *{visibility:hidden!important}
+ body.s66pr #sila66sheet,body.s66pr #sila66sheet *{visibility:visible!important}
+ body.s66pr #sila66wrap{position:static;overflow:visible;height:auto!important}
+ body.s66pr #sila66sheet{position:absolute;left:0;top:0;transform:none!important;box-shadow:none;margin:0}
+ body.s66pr #sila66sheet [contenteditable]:focus{outline:none}
+}
+</style>
+<script>
+// v147.0 — ป้ายดวงฤกษ์ · ดวงศิลาฤกษ์ (แบบแผ่นประกาศฤกษ์โบราณ) — คำนวณจากเอนจินสุริยยาตร์ของระบบ
+(function(){
+try{
+var g66=function(id){ return document.getElementById(id); };
+var TN66=function(n){ return String(n).replace(/\d/g,function(d){ return '๐๑๒๓๔๕๖๗๘๙'[d]; }); };
+var DHATU66=['เตโชธาตุ','ปฐวีธาตุ','วาโยธาตุ','อาโปธาตุ'];
+var GLY66={SU:'๑',MO:'๒',MA:'๓',ME:'๔',JU:'๕',VE:'๖',SA:'๗',RA:'๘',KE:'๙',UR:'๐'};
+var ST66={}; try{ ST66=JSON.parse(localStorage.getItem('suriyayatra.sila66')||'{}')||{}; }catch(e){}
+function stSave66(){ try{ var o={}; ['sila66L1','sila66L2','sila66L3','sila66L4','sila66L5','sila66L6','sila66L7','sila66L8','sila66L9','sila66L10','sila66N1','sila66N2','sila66N3','sila66N4'].forEach(function(id){ var el=g66(id); if(el) o[id]=el.innerHTML; });
+  o.d=g66('sila66d').value; o.t1=g66('sila66t1').value; o.t2=g66('sila66t2').value; o.prov=g66('sila66prov').value; o.font=g66('sila66font').value;
+  localStorage.setItem('suriyayatra.sila66',JSON.stringify(o)); }catch(e){} }
+try{ if(!document.getElementById('sila66fonts')){ var lf=document.createElement('link'); lf.id='sila66fonts'; lf.rel='stylesheet';
+  lf.href='https://fonts.googleapis.com/css2?family=Srisakdi:wght@400;700&family=Charmonman:wght@400;700&family=Charm:wght@400;700&family=Pridi:wght@300;400;500&display=swap'; document.head.appendChild(lf); } }catch(e){}
+function monN66(m){ try{ return monTH98(m); }catch(e){ return 'เดือน '+TN66(m); } }
+var CELL66=[[200,126],[112,100],[108,152],[98,205],[108,258],[112,312],[200,292],[288,312],[292,258],[302,205],[292,152],[288,100]];
+function wheel66(byS,lagS){
+  var h='<svg viewBox="0 0 400 410" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">';
+  h+='<defs><radialGradient id="s66pg" cx=".5" cy=".3" r="1"><stop offset="0" stop-color="#ffd98a"/><stop offset="1" stop-color="#eaa83f"/></radialGradient></defs>';
+  for(var i=0;i<32;i++){ h+='<g transform="rotate('+(i*11.25)+' 200 205)"><path d="M200,31 C209,44 209,59 200,63 C191,59 191,44 200,31 Z" fill="url(#s66pg)" stroke="#d2952c" stroke-width="1.1"/></g>'; }
+  h+='<circle cx="200" cy="205" r="148" fill="#fffdf6" stroke="#dfa83c" stroke-width="2.6"/>';
+  var L='stroke="#cfa14a" stroke-width="2" stroke-linecap="round"';
+  h+='<line x1="56" y1="177" x2="344" y2="177" '+L+'/><line x1="56" y1="233" x2="344" y2="233" '+L+'/>';
+  h+='<line x1="145" y1="68" x2="145" y2="177" '+L+'/><line x1="255" y1="68" x2="255" y2="177" '+L+'/>';
+  h+='<line x1="145" y1="233" x2="145" y2="342" '+L+'/><line x1="255" y1="233" x2="255" y2="342" '+L+'/>';
+  h+='<line x1="79" y1="122" x2="145" y2="122" '+L+'/><line x1="255" y1="122" x2="321" y2="122" '+L+'/>';
+  h+='<line x1="79" y1="288" x2="145" y2="288" '+L+'/><line x1="255" y1="288" x2="321" y2="288" '+L+'/>';
+  for(var s=0;s<12;s++){ var arr=(byS&&byS[s])?byS[s].slice():[]; if(lagS===s) arr.push('ลั'); if(!arr.length) continue;
+    var fs=arr.length>3?19:24, cx=CELL66[s][0], cy=CELL66[s][1];
+    if(arr.length>3){ var half=Math.ceil(arr.length/2), r1=arr.slice(0,half), r2=arr.slice(half);
+      h+='<text x="'+cx+'" y="'+(cy-4)+'" text-anchor="middle" font-size="'+fs+'" font-weight="700" style="font-family:inherit">'+r1.map(t66sp).join('')+'</text>';
+      h+='<text x="'+cx+'" y="'+(cy+18)+'" text-anchor="middle" font-size="'+fs+'" font-weight="700" style="font-family:inherit">'+r2.map(t66sp).join('')+'</text>';
+    } else h+='<text x="'+cx+'" y="'+(cy+8)+'" text-anchor="middle" font-size="'+fs+'" font-weight="700" style="font-family:inherit">'+arr.map(t66sp).join('')+'</text>';
+  }
+  return h+'</svg>';
+}
+function t66sp(t,i){ return '<tspan fill="'+(t==='ลั'?'#b3261e':'#20242c')+'"'+(i?' dx="5"':'')+'>'+t+'</tspan>'; }
+function provLL66(){ var i=+g66('sila66prov').value||0; var p=(typeof PROV!=='undefined'&&PROV[i])?PROV[i]:['กรุงเทพมหานคร',13.75,100.5]; return {name:p[0],lat:p[1],lon:p[2]}; }
+function when66(){ var dv=g66('sila66d').value, t1=g66('sila66t1').value; if(!dv||!t1) return null;
+  var a=dv.split('-').map(Number), b=t1.split(':').map(Number); return new Date(a[0],a[1]-1,a[2],b[0],b[1]); }
+function navIdx66(la){ return Math.floor(((la%30)+30)%30/(10/3)); }
+function autoEnd66(t,lat,lon){ var la0=lagna(t,lat,lon), s0=Math.floor(la0/30), n0=navIdx66(la0), u=t.getTime(), last=u;
+  for(var i=1;i<=150;i++){ var tt=new Date(u+i*60000), la=lagna(tt,lat,lon); if(Math.floor(la/30)!==s0||navIdx66(la)!==n0) break; last=tt.getTime(); }
+  return new Date(last); }
+function calc66(fill){
+  var t=when66(); if(!t){ g66('sila66chips').innerHTML='<p class="note">กรอกวันที่และเวลาปฐมฤกษ์ก่อน</p>'; return; }
+  var P=provLL66(), C;
+  try{ C=chartAt(t,P.lat,P.lon); }catch(e){ console.error(e); g66('sila66chips').innerHTML='<p class="note">คำนวณไม่สำเร็จ — '+e.message+'</p>'; return; }
+  var t2v=g66('sila66t2').value, t2;
+  if(t2v){ var bb=t2v.split(':').map(Number); t2=new Date(t.getFullYear(),t.getMonth(),t.getDate(),bb[0],bb[1]); }
+  else { t2=autoEnd66(t,P.lat,P.lon); g66('sila66t2').value=String(t2.getHours()).padStart(2,'0')+':'+String(t2.getMinutes()).padStart(2,'0'); }
+  var TL=null; try{ TL=thaiLunar(t); }catch(e){}
+  var LI=null; try{ LI=lunarInfo(t); }catch(e){}
+  var wax=TL?!!TL.wax:(LI?LI.kham.indexOf('ขึ้น')===0:true), k=TL?TL.k:(LI?+(LI.kham.match(/\d+/)||[1])[0]:1), mon=TL?TL.mon:null;
+  var yi=null; try{ yi=yearInfo(t); }catch(e){}
+  var cs=null; try{ cs=csOf(t); }catch(e){}
+  var MO=C.pos.MO, LA=C.pos.LA;
+  var sM=Math.floor(MO/30), nkM=Math.floor(MO/(360/27))%27;
+  var sL=Math.floor(LA/30), nkL=Math.floor(LA/(360/27))%27, nv=navIdx66(LA)+1, tri=Math.floor(((LA%30)+30)%30/10)+1;
+  var byS={}; (typeof ORDER!=='undefined'?ORDER:['SU','MO','MA','ME','JU','VE','SA','RA','KE','UR']).forEach(function(kk){ var v=C.pos[kk]; if(v==null||!isFinite(v)) return; var s=Math.floor(((v%360)+360)%360/30); (byS[s]=byS[s]||[]).push(GLY66[kk]||'·'); });
+  var R={
+    L3:'ศุภดิถีมงคลวาร ณ วัน'+WDN[t.getDay()]+' '+(wax?'ขึ้น':'แรม')+' '+TN66(k)+' ค่ำ '+monN66(mon||'—')+(yi?' ปี'+yi.nak:'')+(cs?' จ.ศ. '+TN66(cs):''),
+    L4:'ตรงกับสุริยคติกาล วันที่ '+TN66(t.getDate())+' '+MONTHS_TH[t.getMonth()]+' พ.ศ. '+TN66(t.getFullYear()+543)+' ณ จังหวัด'+P.name,
+    L5:'พระจันทร์ สถิตราศี'+SIGNS[sM]+' เสวยฤกษ์ที่ '+TN66(nkM+1)+' '+NAK[nkM]+'นักษัตร '+FUEK[nkM%9]+'แห่งฤกษ์',
+    L6:'ปฐมฤกษ์ เวลา '+TN66(t.getHours())+' นาฬิกา '+TN66(String(t.getMinutes()).padStart(2,'0'))+' นาที',
+    L7:'ปัจฉิมฤกษ์ เวลา '+TN66(t2.getHours())+' นาฬิกา '+TN66(String(t2.getMinutes()).padStart(2,'0'))+' นาที',
+    L8:'ลัคนาฤกษ์ สถิตราศี'+SIGNS[sL]+' ('+DHATU66[sL%4]+') เกาะนวางค์ที่ '+TN66(nv)+' ตรียางค์ที่ '+TN66(tri),
+    L9:'เสวยฤกษ์ที่ '+TN66(nkL+1)+' '+NAK[nkL]+'นักษัตร '+FUEK[nkL%9]+'แห่งฤกษ์',
+    L10:'คำนวณสมผุสดาวและลัคนาตามคัมภีร์สุริยยาตร์ · ฤกษ์จันทร์–นวางค์–ตรียางค์ตามตำราโหรไทย'
+  };
+  window._sila66R=R; window._sila66W={byS:byS,lagS:sL};
+  g66('sila66wheel').innerHTML=wheel66(byS,sL);
+  if(fill){ ['L3','L4','L5','L6','L7','L8','L9','L10'].forEach(function(key){ var el=g66('sila66'+key); if(el) el.textContent=R[key]; }); }
+  var CH=[['วัน · ดิถี · ปี','L3'],['สุริยคติกาล','L4'],['จันทร์เสวยฤกษ์','L5'],['ปฐมฤกษ์','L6'],['ปัจฉิมฤกษ์ (สิ้นนวางค์)','L7'],['ลัคนาฤกษ์ · นวางค์ · ตรียางค์','L8'],['ลัคน์เสวยฤกษ์','L9']];
+  g66('sila66chips').innerHTML='<div class="s66chh"><b>ผลคำนวณจากระบบ</b> — กด “ใส่” เพื่อวางลงป้ายทีละบรรทัด หรือแก้ข้อความบนป้ายได้โดยตรง</div>'+
+    CH.map(function(c){ return '<div class="s66chip"><small>'+c[0]+'</small><span>'+R[c[1]]+'</span><button type="button" class="chip" data-s66put="'+c[1]+'">ใส่</button></div>'; }).join('')+
+    '<button type="button" class="chip s66all" data-s66put="ALL">⬇ ใส่ทุกบรรทัดลงป้าย</button>';
+  stSave66();
+}
+function initProf66(){ var sel=g66('sila66prof'); if(!sel) return; var ps=[]; try{ ps=loadProfiles(); }catch(e){}
+  sel.innerHTML='<option value="">— เลือกดวงที่บันทึกไว้ —</option>'+ps.map(function(p,i){ return '<option value="'+i+'">'+p.name+' · '+p.d+'/'+p.m+'/'+p.y+' '+String(p.h).padStart(2,'0')+':'+String(p.mi).padStart(2,'0')+'</option>'; }).join(''); }
+function initProv66(){ var sel=g66('sila66prov'); if(!sel) return; var L=(typeof PROV!=='undefined')?PROV:[['กรุงเทพมหานคร',13.75,100.5]];
+  sel.innerHTML=L.map(function(p,i){ return '<option value="'+i+'">'+p[0]+'</option>'; }).join(''); }
+function useProf66(){ var i=g66('sila66prof').value; if(i==='') return; var p; try{ p=loadProfiles()[+i]; }catch(e){} if(!p) return;
+  g66('sila66d').value=(p.y-543)+'-'+String(p.m).padStart(2,'0')+'-'+String(p.d).padStart(2,'0');
+  g66('sila66t1').value=String(p.h).padStart(2,'0')+':'+String(p.mi).padStart(2,'0'); g66('sila66t2').value='';
+  if(p.prov!=null) g66('sila66prov').value=p.prov;
+  var l2=g66('sila66L2'); if(l2) l2.textContent=p.name;
+  calc66(true); fit66(); }
+function fit66(){ var w=g66('sila66wrap'), sh=g66('sila66sheet'); if(!w||!sh) return; var cw=w.clientWidth; if(!cw) return;
+  var sc=Math.min(1,cw/820); sh.style.transform='scale('+sc+')'; w.style.height=(sh.offsetHeight*sc+10)+'px'; }
+function font66(){ var v=g66('sila66font').value, sh=g66('sila66sheet');
+  var map={sri:"'Srisakdi',serif",chm:"'Charmonman',cursive",chr:"'Charm',cursive",pri:"'Pridi',serif",kan:"'Kanit',sans-serif"};
+  sh.style.setProperty('--s66f',map[v]||map.sri); stSave66(); }
+function init66(){ var P=g66('silaP'); if(!P||P._i66) return; P._i66=1;
+  initProf66(); initProv66();
+  var now=new Date();
+  g66('sila66d').value=ST66.d||now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');
+  g66('sila66t1').value=ST66.t1||'09:09'; g66('sila66t2').value=ST66.t2||'';
+  if(ST66.prov!=null&&ST66.prov!=='') g66('sila66prov').value=ST66.prov;
+  if(ST66.font){ g66('sila66font').value=ST66.font; }
+  Object.keys(ST66).forEach(function(id){ if(/^sila66[LN]/.test(id)){ var el=g66(id); if(el&&ST66[id]) el.innerHTML=ST66[id]; } });
+  try{ if(window.DM150&&DM150.user&&DM150.user.name&&!ST66.sila66N1) g66('sila66N1').textContent='อาจารย์'+DM150.user.name; }catch(e){}
+  font66();
+  g66('sila66calc').onclick=function(){ calc66(true); };
+  g66('sila66auto').onclick=function(){ g66('sila66t2').value=''; calc66(true); };
+  g66('sila66use').onclick=useProf66;
+  g66('sila66font').onchange=font66;
+  ['sila66d','sila66t1','sila66t2','sila66prov'].forEach(function(id){ g66(id).onchange=function(){ calc66(true); }; });
+  g66('sila66chips').addEventListener('click',function(e){ var b=e.target.closest('[data-s66put]'); if(!b||!window._sila66R) return; var k=b.dataset.s66put;
+    if(k==='ALL'){ ['L3','L4','L5','L6','L7','L8','L9','L10'].forEach(function(key){ var el=g66('sila66'+key); if(el) el.textContent=_sila66R[key]; }); }
+    else { var el=g66('sila66'+k); if(el) el.textContent=_sila66R[k]; } stSave66(); });
+  P.addEventListener('input',function(e){ if(e.target.closest('[contenteditable]')) stSave66(); });
+  g66('sila66print').onclick=function(){ document.body.classList.add('s66pr'); setTimeout(function(){ window.print(); },60); };
+  window.addEventListener('afterprint',function(){ document.body.classList.remove('s66pr'); });
+  g66('sila66full').onclick=function(){ document.body.classList.toggle('s66fs'); fit66(); window.scrollTo(0,0); };
+  g66('sila66close').onclick=function(){ document.body.classList.remove('s66fs'); fit66(); };
+  g66('sila66logo').onchange=function(){ var f=this.files&&this.files[0]; if(!f) return; var r=new FileReader();
+    r.onload=function(){ g66('sila66emb').innerHTML='<img src="'+r.result+'" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:50%">'; }; r.readAsDataURL(f); };
+  g66('sila66sigf').onchange=function(){ var f=this.files&&this.files[0]; if(!f) return; var r=new FileReader();
+    r.onload=function(){ g66('sila66sig').innerHTML='<img src="'+r.result+'" alt="" style="max-height:64px;max-width:220px">'; }; r.readAsDataURL(f); };
+  try{ var d=new Date(); g66('sila66N4').textContent=ST66.sila66N4?g66('sila66N4').textContent:TN66(d.getDate())+' '+MONTHS_TH[d.getMonth()]+' '+TN66(d.getFullYear()+543); }catch(e){}
+  window.addEventListener('resize',fit66);
+  calc66(!ST66.sila66L3); fit66(); setTimeout(fit66,400);
+  document.addEventListener('click',function(e){ if(e.target.closest&&e.target.closest('[data-mn141="sila"],[data-c="sila"]')){ initProf66(); setTimeout(fit66,80); } },true);
+}
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',function(){ setTimeout(init66,600); });
+else setTimeout(init66,600);
+}catch(e){ console.error('sila66',e); }
+})();
+</script>
 </body>
 </html>
+
+</body></html>
