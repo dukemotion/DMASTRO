@@ -4266,3 +4266,126 @@ if(!document.getElementById('kn364css')){ const st=document.createElement('style
 st.textContent=(kc?kc.textContent.split('#kh358Out ').join('#kn364Out '):'')+'\n'+(rc?rc.textContent.split('#rt359Out ').join('#kn364Out '):'')+`\n#kn364Out .kh8two{grid-template-columns:minmax(0,340px) minmax(0,1fr)}@media(max-width:720px){#kn364Out .kh8two{grid-template-columns:1fr}}`; document.head.appendChild(st); }
 return {render,scan};
 })();
+window.TS365=(()=>{
+const td=n=>String(n).replace(/\d/g,c=>'๐๑๒๓๔๕๖๗๘๙'[c]);
+const G='#2faa5a', B='#e0453a', Y='#e8b90f', A='#4aa3ff', O='#f08a24', P='#9a6bd1', GD='var(--gold,#c9a227)', GR='#8a8f98', LG='#8cc63f';
+const SN=['เมษ','พฤษภ','มิถุน','กรกฎ','สิงห์','กันย์','ตุลย์','พิจิก','ธนู','มกร','กุมภ์','มีน'];
+const SYM=['แกะ','วัว','คนคู่','ปู','สิงห์','หญิงสาว','คนถือตาชั่ง','แมงป่อง','คนครึ่งม้าถือธนู','มังกร','คนแบกหม้อน้ำ','ปลาคู่'];
+const HN=['ตนุ','กดุมภะ','สหัชชะ','พันธุ','ปุตตะ','อริ','ปัตนิ','มรณะ','ศุภะ','กัมมะ','ลาภะ','วินาศ'];
+const NUM={SU:1,MO:2,MA:3,ME:4,JU:5,VE:6,SA:7,RA:8,KE:9,UR:0};
+const TN={SU:'อาทิตย์',MO:'จันทร์',MA:'อังคาร',ME:'พุธ',JU:'พฤหัสบดี',VE:'ศุกร์',SA:'เสาร์',RA:'ราหู',KE:'เกตุ',UR:'มฤตยู',LA:'ลัคนา'};
+const PCL={SU:'#e8743b',MO:'#b9a33e',MA:'#e05f8a',ME:'#2faa5a',JU:'#f08a24',VE:'#4aa3ff',SA:'#7a5ab8',RA:'#8a6e4b',KE:'#5d8aa8',UR:'#3aa6a0',LA:'#c9a227'};
+const LORD=['MA','VE','ME','MO','SU','ME','VE','MA','JU','SA','RA','JU'];
+const GOOD=['มหาอุจจ์','เกษตร','มหาจักร','ราชาโชค'], BAD=['นิจ','ประ'];
+const I={book:'<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M8 7h7M8 11h7"/>',cal:'<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',ok:'<circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/>',wn:'<path d="M12 3.5l9 16H3z"/><path d="M12 10v4.5M12 17.2h.01"/>',dot:'<circle cx="12" cy="12" r="3.5"/>',user:'<circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/>',
+baby:'<circle cx="12" cy="7.5" r="3.5"/><path d="M7 21v-4.5a5 5 0 0 1 10 0V21"/><path d="M10.5 7.3h.01M13.5 7.3h.01"/><path d="M10.8 9.2c.7.5 1.7.5 2.4 0"/>',tree:'<circle cx="12" cy="5" r="2.2"/><circle cx="5.5" cy="13" r="2.2"/><circle cx="18.5" cy="13" r="2.2"/><circle cx="9" cy="20" r="1.8"/><circle cx="15" cy="20" r="1.8"/><path d="M12 7.2V10M12 10H5.5v.8M12 10h6.5v.8M5.5 15.2l3 3M18.5 15.2l-3 3"/>',
+med:'<rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/>',heart:'<path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.3 4.3 4.3 0 0 1 19.5 10C19.5 15.4 12 20 12 20z"/>',clock:'<circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/>',chart:'<path d="M4 20V4M4 20h16"/><path d="M7 16l4-5 3 3 5-7"/>',
+people:'<circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="9" r="2.5"/><path d="M2.5 20c.8-3.6 3-5.5 5.5-5.5s4.7 1.9 5.5 5.5M13.5 15c.9-.9 1.9-1.4 3-1.4 2.2 0 3.9 1.7 4.5 4.4"/>',scale:'<path d="M12 4v16M5 20h14M4 8h16"/><path d="M6.5 8L3.5 14h6zM17.5 8l-3 6h6z"/>',star:'<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>',orbit:'<circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="10" ry="4.5"/>',
+link:'<path d="M9.5 14.5l5-5"/><path d="M11 6.5l1.5-1.5a4 4 0 0 1 5.6 5.6L16.6 12M13 17.5l-1.5 1.5a4 4 0 0 1-5.6-5.6L7.4 12"/>',grid:'<rect x="3.5" y="3.5" width="17" height="17" rx="2"/><path d="M3.5 9.2h17M3.5 14.8h17M9.2 3.5v17M14.8 3.5v17"/>'};
+const ic=(n,c,s)=>`<svg viewBox="0 0 24 24" width="${s||18}" height="${s||18}" style="width:${s||18}px!important;height:${s||18}px!important;flex:none" fill="none" stroke="${c||'currentColor'}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${I[n]||I.dot}</svg>`;
+const tag=(t,c)=>`<span class="kh8t" style="--c:${c}">${t}</span>`;
+const pl=(k,tr)=>`<span class="kh8pl${tr?' t':''}" style="--c:${PCL[k]||GR}">${k==='LA'?'ล':td(NUM[k])}</span>`;
+const card=(c,icn,t,b)=>`<div class="kh8c" style="border-left-color:${c}"><h4>${ic(icn,c)} ${t}</h4>${b}</div>`;
+const nrm=x=>((x%360)+360)%360, sg=x=>Math.floor(nrm(x)/30), cnt=(a,b)=>((b-a)%12+12)%12+1;
+const fmtD=d=>`${td(Math.floor(d))}°${td(String(Math.floor((d%1)*60)).padStart(2,'0'))}′`;
+const MO_=['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+const fdt=t=>`${td(t.getDate())} ${MO_[t.getMonth()]} ${td(t.getFullYear()+543)}`;
+const sd=(k,lon)=>{ try{ return std(k,lon)||''; }catch(_){ return ''; } };
+const ymd=(a,b)=>{ let y=b.getFullYear()-a.getFullYear(), m=b.getMonth()-a.getMonth(), d=b.getDate()-a.getDate(); if(d<0){ m--; d+=new Date(b.getFullYear(),b.getMonth(),0).getDate(); } if(m<0){ y--; m+=12; } return [y,m,d]; };
+const ymdT=([y,m,d])=>[y?`${td(y)} ปี`:'',m?`${td(m)} เดือน`:'',`${td(d)} วัน`].filter(Boolean).join(' ');
+const ageAt=(bt,t)=>ymdT(ymd(bt,t)).replace(/ ๐ วัน$/,'');
+const until=(t,now)=>{ const n=Math.round((t-now)/864e5); if(Math.abs(n)<1) return 'วันนี้'; return n>0?`อีก ${ymdT(ymd(now,t))}`:`ผ่านมา ${ymdT(ymd(t,now))}`; };
+const totD=(t,now)=>td(Math.abs(Math.round((t-now)/864e5)).toLocaleString('en-US'));
+const grade=s=>GOOD.includes(s)?1:BAD.includes(s)?-1:0;
+const stTag=s=>s?tag(s,GOOD.includes(s)?G:BAD.includes(s)?B:GR):tag('ปกติ',GR);
+let TAB='nat', RNG=20, WC=null;
+const BADP=['SU','MA','SA','RA','KE'], GOODK=['MO','ME','JU','VE'];
+const pairOf=(a,b)=>{ const x=Math.min(NUM[a],NUM[b]), y=Math.max(NUM[a],NUM[b]); let p=''; try{ p=PAIR[x+'-'+y]||''; }catch(_){ } return p; };
+const pairCol=p=>!p?GR:/ศัตรู/.test(p)&&!/สมพล|ธาตุ/.test(p)?B:/ศัตรู/.test(p)?O:G;
+const TS_TXT={1:'มีความรับผิดชอบในตัวเอง โกรธง่ายหายเร็ว ใฝ่สูง ให้ความสำคัญกับเกียรติและชื่อเสียง มุ่งความก้าวหน้า รักอิสระ และมักชอบแสดงอำนาจ',
+2:'สงบเสงี่ยม ละเอียดอ่อน รักความสวยงามและสิ่งอ่อนหวาน ใจเย็น เก็บความรู้สึกเก่ง เปลี่ยนใจง่ายบางครั้งไม่มีเหตุผล มีเสน่ห์ดึงดูดใจคน',
+3:'กระตือรือร้น เอาการเอางาน พูดน้อย ต้องการอะไรแล้วต้องได้ เด็ดเดี่ยวว่องไว แต่ดื้อ ทิฐิสูง ขี้งอน ใช้จ่ายไม่คิดหน้าหลัง โกรธแรงและขาดความยั้งคิด ระวังความพยาบาทและริษยา',
+4:'อ่อนโยน อารมณ์ดี ไม่โกรธใครง่าย ความคิดสงบ ไม่ค่อยกระตือรือร้น ยึดความเที่ยงธรรมแต่โอนเอียงง่าย ไม่ทะเยอทะยาน มักใฝ่ทางศาสนาและการทำบุญ',
+5:'มีสติ มีศีลธรรม ท่าทีสงบหนักแน่น ซื่อสัตย์ ใฝ่รู้ เมตตา มีหลักคิดแบบผู้ใหญ่ เหมาะเป็นหัวหน้า ผู้นำ หรือครูบาอาจารย์',
+6:'สนุกสนานร่าเริง ขี้เล่น ชอบดนตรีและความบันเทิง ชอบของหอม ใจอ่อนต่อความรักความเสน่หา จิตใจปลอดโปร่ง ไม่ค่อยทุกข์',
+7:'วิตกกังวล คิดมาก หวาดระแวง ใจน้อย หงุดหงิดง่ายโดยไม่มีเหตุ แต่บึกบึนอดทน ชอบความสงบ สันโดษ และเรื่องธรรมชาติ ระวังความพยาบาท'};
+const TS_H=['ร่วมลัคนา: จิตใจกับตัวตนเป็นหนึ่งเดียว เปิดเผย จริงใจ คิดอย่างไรทำอย่างนั้น และคิดถึงเรื่องของตัวเองก่อน',
+'คิดเรื่องสร้างฐานะ หารายได้ และผลประโยชน์ที่เป็นเงินทองเสมอ ฉลาดและพอใจในการหาเงิน',
+'ใส่ใจการคบหามิตร อยากมีชื่อเสียงและมีที่ยืนในสังคม',
+'ผูกพันกับญาติพี่น้อง บ้าน และวงศ์ตระกูลเป็นพิเศษ',
+'รักเด็ก รักความสนุก ชอบริเริ่มและแสวงหาสิ่งใหม่ในชีวิต',
+'ระแวงอุปสรรคมากกว่าปกติ คิดถึงปัญหาก่อนเสมอ วิตกกังวลจนเป็นนิสัย',
+'รักครอบครัว ใส่ใจคู่ครอง และพอใจในเรื่องเพศตรงข้าม',
+'มักประมาท คิดไม่รอบคอบ แต่ห่วงสุขภาพและกลัวเจ็บป่วยมาก',
+'พอใจชีวิตที่สงบ ยึดคุณธรรม รู้ผิดชอบชั่วดี พอใจในความเป็นอยู่ของตน',
+'มุ่งมั่นกับงาน รักงาน รับผิดชอบดี ขยันในหน้าที่',
+'คิดแต่ความสำเร็จและผลที่จะได้ มองข้ามอุปสรรค ดิ้นรนแสวงหาไม่หยุด จึงเสี่ยงประมาท',
+'เก็บและซ่อนความรู้สึก ทั้งรัก เกลียด สุข ทุกข์ ไม่แสดงออก คนอ่านใจได้ยาก'];
+const TL_TBL=[[[0,7],'MA'],[[1,6],'VE'],[[2,5],'ME'],[[3],'MO'],[[4],'SU'],[[8,11],'JU'],[[9],'SA'],[[10],'RA']];
+function ctx(){ const W=typeof WSTATE!=='undefined'?WSTATE:null; let T; try{ T=getTransit(); }catch(_){} if(!T||isNaN(T)) T=new Date(); const lat=W&&W.lat||13.75, lon=W&&W.lon||100.5; let TP=null; try{ TP=chartAt(T,lat,lon).pos; }catch(_){ } const o={T,TP,lat,lon};
+if(W&&W.nat&&W.nat.pos){ o.N=W.nat2||W.nat.pos; o.L=sg(o.N.LA); o.bt=new Date(+W.bt); o.TL=LORD[o.L]; try{ const r=tanusetCh({pos:o.N}); o.TS=r.key; o.TSr=r; }catch(_){ } } return o; }
+const keysIn=(P,si)=>P?Object.keys(P).filter(k=>k!=='LA'&&k!=='UR'&&P[k]!=null&&sg(P[k])===si):[];
+function anal(X,k,P,tr){ const lon=P[k], si=sg(lon), h=cnt(X.L,si), s=sd(k,lon), co=keysIn(P,si).filter(x=>x!==k);
+const rows=co.map(c=>{ const p=pairOf(k,c); return {c,p,good:GOODK.includes(c),pc:pairCol(p)}; }); let v=grade(s); rows.forEach(r=>{ v+=r.good?.4:-.4; if(/สมพล|ธาตุ|มิตร/.test(r.p)&&!/ศัตรู/.test(r.p)) v+=.4; else if(/ศัตรู/.test(r.p)) v-=.4; }); if([6,8,12].includes(h)) v-=.6;
+return {k,lon,si,h,s,rows,v,lab:v>=.6?'ดี':v<=-.6?'ต้องระวัง':'กลาง',col:v>=.6?G:v<=-.6?B:Y}; }
+function wheel(X){ const cx=170, cy=170, R1=150, R2=96, L=X.L, ang=h=>Math.PI+(h-1)*Math.PI/6, P=(r,a)=>[cx+r*Math.cos(a),cy-r*Math.sin(a)]; let g='';
+const hTL=cnt(L,sg(X.N[X.TL])), hTS=X.TS?cnt(L,sg(X.N[X.TS])):0;
+for(let h=1;h<=12;h++){ const a0=ang(h)+Math.PI/12, a1=ang(h)-Math.PI/12, [x1,y1]=P(R1,a0), [x2,y2]=P(R1,a1), [x3,y3]=P(R2,a1), [x4,y4]=P(R2,a0); const c=h===hTS&&h===hTL?P_:h===hTS?P_:h===hTL?A:h===1?GD:null;
+g+=`<path d="M${x1.toFixed(1)} ${y1.toFixed(1)}A${R1} ${R1} 0 0 1 ${x2.toFixed(1)} ${y2.toFixed(1)}L${x3.toFixed(1)} ${y3.toFixed(1)}A${R2} ${R2} 0 0 0 ${x4.toFixed(1)} ${y4.toFixed(1)}Z" fill="${c||'transparent'}" fill-opacity="${c?.2:0}" stroke="${c||'currentColor'}" stroke-opacity="${c?.9:.22}" stroke-width="${c?2:1}"/>`;
+const [tx,ty]=P((R1+R2)/2+14,ang(h)), [sx,sy]=P((R1+R2)/2-12,ang(h)); g+=`<text x="${tx.toFixed(1)}" y="${ty.toFixed(1)}" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="600" fill="currentColor">${HN[h-1]}</text><text x="${sx.toFixed(1)}" y="${sy.toFixed(1)}" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="currentColor" opacity=".6">${SN[(L+h-1)%12]}</text>`; }
+const mark=(k,lon,r,tr,lab)=>{ if(lon==null) return ''; const h=cnt(L,sg(lon)), a=ang(h)+((nrm(lon)%30)-15)*Math.PI/180*.9, [x,y]=P(r,a); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="11" fill="${tr?'var(--panel,#111)':PCL[k]}" stroke="${PCL[k]}" stroke-width="2"/><text x="${x.toFixed(1)}" y="${(y+.5).toFixed(1)}" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="700" fill="${tr?PCL[k]:'#fff'}">${td(NUM[k])}</text>${lab?`<text x="${x.toFixed(1)}" y="${(y-17).toFixed(1)}" text-anchor="middle" font-size="9.5" font-weight="700" fill="${lab[1]}">${lab[0]}</text>`:''}`; };
+g+=mark(X.TL,X.N[X.TL],R2-24,0,['ตนุลัคน์',A]); if(X.TS) g+=mark(X.TS,X.N[X.TS],R2-50,0,['ตนุเศษ',P_]);
+if(X.TP){ [...new Set([X.TL,X.TS,'SA','RA'].filter(Boolean))].forEach(k=>{ g+=mark(k,X.TP[k],R1+15,1); }); }
+g+=`<text x="${cx}" y="${cy+4}" text-anchor="middle" font-size="12" fill="currentColor" opacity=".7">ลัคนา ${SN[L]}</text>`;
+return `<svg class="kh8svg kh8wh" viewBox="-14 -14 368 368" role="img" aria-label="วงภพ">${g}</svg><p class="sm" style="text-align:center;margin:2px 0 8px">${tag('ตนุลัคน์',A)} ${tag('ตนุเศษ',P_)} ${tag('ลัคนา',Y)} · วงในดาวเดิม · วงนอกดาวจร (ตนุลัคน์ ตนุเศษ เสาร์ ราหู)</p>`; }
+const P_=P;
+const coTbl=(a,tr)=>a.rows.length?`<div class="kh8tw"><table class="kh8tb"><tr><th>ดาวที่อยู่ด้วย</th><th>ฝ่าย</th><th>ความสัมพันธ์</th><th>ผล</th></tr>${a.rows.map(r=>`<tr><td>${pl(r.c,tr)} ${TN[r.c]}</td><td>${r.good?tag('ศุภเคราะห์',G):tag('บาปเคราะห์',B)}</td><td>${r.p?tag(r.p,r.pc):'<span class="sm">ไม่เป็นคู่</span>'}</td><td class="sm">${r.p?(()=>{ const m=Object.keys(typeof PAIR_MEAN!=='undefined'?PAIR_MEAN:{}).find(x=>r.p.includes(x.replace('คู่',''))&&!(/ศัตรู/.test(r.p)&&x!=='คู่ศัตรู')); return m?PAIR_MEAN[m]:''; })():(r.good?'ดาวฝ่ายบุญเข้าร่วม ช่วยหนุน':'ดาวฝ่ายบาปเข้าร่วม เพิ่มแรงกดดัน')}</td></tr>`).join('')}</table></div>`:'<p class="sm">ไม่มีดาวอื่นอยู่ร่วมราศี</p>';
+function tNat(X){ const a=anal(X,X.TL,X.N), b=X.TS?anal(X,X.TS,X.N):null, same=X.TS===X.TL;
+let s=`<div class="kh8two"><div>${wheel(X)}</div><div>`;
+s+=card(A,'user',`ตนุลัคน์ ${pl(X.TL)} ${TN[X.TL]} · ตัวตนภายนอก วาสนา`,`<p>ลัคนา${SN[X.L]} เจ้าเรือนคือ${TN[X.TL]} จึงเป็นดาวตนุลัคน์ บอกรูปกาย บุคลิก ฐานะ และเส้นทางชีวิตหลัก</p><p>สถิตราศี${SN[a.si]} ${stTag(a.s)} ภพ${HN[a.h-1]} → ${tag(a.lab,a.col)}</p>`);
+if(b) s+=card(P,'heart',`ตนุเศษ ${pl(X.TS)} ${TN[X.TS]} · ตัวตนภายใน จิตใจ`,`<p>${TS_TXT[NUM[X.TS]]||''}</p><p>สถิตราศี${SN[b.si]} ${stTag(b.s)} ภพ${HN[b.h-1]}</p><p class="sm"><b>ตนุเศษอยู่ภพ${HN[b.h-1]}:</b> ${TS_H[b.h-1]}</p>${same?`<p>${tag('ตนุลัคน์กับตนุเศษเป็นดาวดวงเดียวกัน',G)} กายกับใจไปทางเดียวกัน</p>`:''}`);
+s+='</div></div>';
+s+=`<h4 style="display:flex;gap:6px;align-items:center;margin:10px 0 4px">${ic('people',A)} ดาวที่อยู่ร่วมกับตนุลัคน์ (ราศี${SN[a.si]})</h4>${coTbl(a)}`;
+if(b&&!same) s+=`<h4 style="display:flex;gap:6px;align-items:center;margin:10px 0 4px">${ic('people',P)} ดาวที่อยู่ร่วมกับตนุเศษ (ราศี${SN[b.si]})</h4>${coTbl(b)}`;
+s+=`<div class="kh8q" style="--c:${A}"><b>คำพยากรณ์</b><p style="margin:4px 0 0">${natPred(X,a,b)}</p></div>`;
+return s; }
+function natPred(X,a,b){ const t=[]; t.push(a.lab==='ดี'?`ดาวตนุลัคน์ (${TN[a.k]}) มีกำลังและได้ดาวช่วย ฐานะ บุคลิก และวาสนามีแรงหนุน`:a.lab==='ต้องระวัง'?`ดาวตนุลัคน์ (${TN[a.k]}) ถูกกดดัน ชีวิตต้องอาศัยความเพียรมากกว่าคนอื่น ระวังเรื่องตามภพ${HN[a.h-1]}`:`ดาวตนุลัคน์ (${TN[a.k]}) กำลังกลาง ๆ ผลขึ้นกับจังหวะดาวจร`);
+t.push(`เส้นทางชีวิตหลักผูกกับเรื่องของภพ${HN[a.h-1]}`); if(b){ t.push(`ส่วนลึกในใจเป็นคน${(TS_TXT[NUM[b.k]]||'').split(' ').slice(0,3).join(' ')}`); t.push(`และใจมักจดจ่อเรื่องภพ${HN[b.h-1]}`); }
+return t.join(' · '); }
+const TRK=['SA','RA','KE','MA','JU'];
+function scan(X){ const key=[+X.bt,X.N.LA,RNG].join('|'); if(WC&&WC.key===key) return WC; let h0; try{ h0=horaOf(new Date()); }catch(_){ return {ev:[]}; } const targets=[['ตนุลัคน์',sg(X.N[X.TL])]]; if(X.TS&&X.TS!==X.TL) targets.push(['ตนุเศษ',sg(X.N[X.TS])]); const ev=[];
+for(const k of TRK){ const st=k==='MA'?.5:2; for(const [nm,si] of targets){ const inS=h=>{ try{ return sg(posH(h,k))===si; }catch(_){ return false; } }; let on=inS(h0-st), start=on?h0:null;
+for(let h=h0;h<=h0+RNG*365.25;h+=st){ const v=inS(h); if(v!==on){ let a=h-st, b2=h; for(let i=0;i<18;i++){ const c=(a+b2)/2; if(inS(c)===v) b2=c; else a=c; } if(v) start=b2; else if(start!=null){ ev.push({k,nm,si,a:start,b:b2}); start=null; } on=v; } }
+if(start!=null) ev.push({k,nm,si,a:start,b:h0+RNG*365.25,open:1}); } }
+ev.forEach(e=>{ e.ta=fromHora(e.a); e.tb=fromHora(e.b); }); ev.sort((x,y)=>x.a-y.a); WC={key,ev,targets}; return WC; }
+function tTr(X){ const now=new Date(); let s='';
+if(X.TP){ const lines=[['ตนุลัคน์',X.TL],['ตนุเศษ',X.TS]].filter(x=>x[1]).map(([nm,k])=>{ const si=sg(X.N[k]), here=keysIn(X.TP,si); const bad=here.filter(x=>BADP.includes(x)), good=here.filter(x=>GOODK.includes(x));
+return card(bad.length?B:good.length?G:GR,bad.length?'wn':good.length?'ok':'dot',`ดาวจรที่ทับ${nm} (${TN[k]}เดิม ราศี${SN[si]})`,`<p>${here.length?here.map(x=>pl(x,1)+' '+TN[x]).join(' '):'ไม่มีดาวจรทับในตอนนี้'}</p><p>${bad.length?`ดาวบาปเคราะห์จรทับ${nm} ${nm==='ตนุเศษ'?'จิตใจถูกกระทบ เครียด หงุดหงิด ตัดสินใจพลาดง่าย':'ร่างกายและฐานะถูกกดดัน ระวังสุขภาพและการเงิน'}`:good.length?`ดาวศุภเคราะห์จรหนุน${nm} ${nm==='ตนุเศษ'?'ใจสบาย คิดการได้ดี':'ฐานะและบุคลิกดีขึ้น'}`:'ยังไม่เข้าเกณฑ์เด่น'}</p>`); });
+const tk=X.TP[X.TL]!=null?X.TP[X.TL]:null; s+=`<div class="kh8two" style="grid-template-columns:1fr 1fr">${lines.join('')}</div>`;
+if(tk!=null){ const hs=cnt(X.L,sg(tk)), st=sd(X.TL,tk); s+=card(A,'orbit',`ตนุลัคน์จร ${pl(X.TL,1)} ${TN[X.TL]}จร ณ ${fdt(X.T)}`,`<p>อยู่ราศี${SN[sg(tk)]} ภพ${HN[hs-1]} ${stTag(st)} · ช่วงนี้ใจและแรงของชีวิตไปอยู่ที่เรื่องของภพ${HN[hs-1]}</p>`); } }
+const W=scan(X); s+=`<div class="kh8f">${[10,20,40].map(r=>`<button type="button" data-tsg="${r}" class="${RNG===r?'on':''}">${td(r)} ปีข้างหน้า</button>`).join('')}</div>`;
+s+=timeline(X,W);
+const nx=W.ev.filter(e=>e.tb>now&&BADP.includes(e.k)).slice(0,1)[0]; if(nx) s+=card(B,'clock',nx.ta<=now?`ตอนนี้ ${TN[nx.k]}จรทับ${nx.nm}`:`ครั้งถัดไป: ${TN[nx.k]}จรทับ${nx.nm} ${fdt(nx.ta)}`,nx.ta<=now?`<p>ถึง ${fdt(nx.tb)} · เหลือ ${until(nx.tb,now).replace('อีก ','')}</p>`:`<p>${until(nx.ta,now)} (${totD(nx.ta,now)} วัน) · อายุ ${ageAt(X.bt,nx.ta)} · ถึง ${fdt(nx.tb)}</p>`);
+s+=`<div class="kh8tw"><table class="kh8tb"><tr><th>ดาวจร</th><th>ทับ</th><th>เริ่ม</th><th>สิ้นสุด</th><th>อายุตอนเริ่ม</th><th>นับจากวันนี้</th><th>คำทำนาย</th></tr>${W.ev.filter(e=>e.tb>now).slice(0,40).map(e=>{ const bad=BADP.includes(e.k); return `<tr><td>${pl(e.k,1)} ${TN[e.k]}</td><td>${e.nm} <span class="sm">(${SN[e.si]})</span></td><td>${fdt(e.ta)}</td><td>${e.open?'หลังช่วงที่คำนวณ':fdt(e.tb)}</td><td>${ageAt(X.bt,e.ta)}</td><td class="sm">${e.ta<=now?'กำลังอยู่ในช่วง':until(e.ta,now)}</td><td class="sm" style="color:${bad?B:G}">${bad?(e.nm==='ตนุเศษ'?'ใจถูกกระทบ เครียด คิดมาก':'กาย ฐานะ ถูกกดดัน'):(e.nm==='ตนุเศษ'?'ใจเปิด มีกำลังใจ':'ฐานะ วาสนาได้แรงหนุน')}</td></tr>`; }).join('')||'<tr><td colspan="7" class="sm">ไม่พบในช่วงที่เลือก</td></tr>'}</table></div>`;
+return s; }
+function timeline(X,W){ const now=new Date(), t0=+now, t1=t0+RNG*365.25*864e5, w=720, x=t=>70+(t-t0)/(t1-t0)*(w-80); let g=''; const rows=TRK.map((k,i)=>[k,14+i*22]);
+rows.forEach(([k,y])=>{ g+=`<text x="0" y="${y+11}" font-size="11" fill="${PCL[k]}" font-weight="700">${TN[k]}</text><line x1="70" x2="${w-10}" y1="${y+8}" y2="${y+8}" stroke="currentColor" stroke-opacity=".08"/>`; });
+W.ev.forEach(e=>{ const r=rows.find(q=>q[0]===e.k); if(!r) return; const a=Math.max(+e.ta,t0), b=Math.min(+e.tb,t1); if(b<=a) return; const c=BADP.includes(e.k)?B:G; g+=`<rect x="${x(a).toFixed(1)}" y="${r[1]+(e.nm==='ตนุเศษ'?9:1)}" width="${Math.max(1.5,x(b)-x(a)).toFixed(1)}" height="7" rx="2" fill="${c}" fill-opacity="${e.nm==='ตนุเศษ'?.95:.55}"><title>${TN[e.k]}ทับ${e.nm} ${fdt(e.ta)} – ${fdt(e.tb)}</title></rect>`; });
+const yy=14+TRK.length*22; const y0=now.getFullYear(); for(let y=y0;y<=y0+RNG;y+=RNG>20?5:RNG>10?2:1){ const t=+new Date(y,0,1); if(t<t0) continue; g+=`<line x1="${x(t)}" x2="${x(t)}" y1="8" y2="${yy}" stroke="currentColor" stroke-opacity=".12"/><text x="${x(t)}" y="${yy+12}" font-size="10" text-anchor="middle" fill="currentColor" opacity=".7">${td(y+543)}</text>${X.bt?`<text x="${x(t)}" y="${yy+24}" font-size="9" text-anchor="middle" fill="currentColor" opacity=".5">อายุ ${td(ymd(X.bt,new Date(t))[0])}</text>`:''}`; }
+g+=`<line x1="${x(t0)}" x2="${x(t0)}" y1="4" y2="${yy}" stroke="${GD}" stroke-width="2"/>`;
+return `<div class="kh8w"><svg class="kh8svg" viewBox="0 0 ${w} ${yy+30}">${g}</svg></div><p class="sm">แถบบาง = ทับตนุลัคน์ · แถบหนา = ทับตนุเศษ · ${tag('บาปเคราะห์',B)} ${tag('ศุภเคราะห์',G)}</p>`; }
+function tHouse(X){ const h=X.TS?cnt(X.L,sg(X.N[X.TS])):0; return `<p class="note">ตนุเศษสถิตภพใด ความนึกคิดจะวนอยู่กับเรื่องของภพนั้น</p><div class="kh8g">${HN.map((n,i)=>`<div class="kh8c" style="border-left-color:${i+1===h?P:'var(--line)'};${i+1===h?'background:color-mix(in srgb,'+P+' 10%,var(--panel))':''}"><h4>${ic(i+1===h?'star':'dot',i+1===h?P:GR)} ภพ${n} ${i+1===h?tag('ดวงนี้',P):''}</h4><p class="sm">${TS_H[i]}</p></div>`).join('')}</div>
+<h4 style="margin:12px 0 4px;display:flex;gap:6px;align-items:center">${ic('heart',P)} ความหมายตนุเศษตามดาว</h4><div class="kh8g">${[1,2,3,4,5,6,7].map(n=>{ const k=Object.keys(NUM).find(x=>NUM[x]===n); return `<div class="kh8c" style="border-left-color:${X.TS===k?P:PCL[k]}"><h4>${pl(k)} ${TN[k]} ${X.TS===k?tag('ดวงนี้',P):''}</h4><p class="sm">${TS_TXT[n]}</p></div>`; }).join('')}</div>`; }
+function tRule(X){ return `${card(A,'user','ตนุลัคน์: ตัวตนภายนอก','<p>รูปกาย บุคลิก ฐานะความเป็นอยู่ และเส้นทางชีวิตหลัก ดาวตนุลัคน์คือเจ้าเรือนของราศีลัคนา</p>')}
+<div class="kh8tw"><table class="kh8tb"><tr><th>ลัคนา</th><th>ดาวตนุลัคน์</th></tr>${TL_TBL.map(([ss,k])=>`<tr${X.L!=null&&ss.includes(X.L)?' style="background:color-mix(in srgb,'+A+' 14%,transparent)"':''}><td>${ss.map(i=>SN[i]).join(' · ')}</td><td>${pl(k)} ${TN[k]}</td></tr>`).join('')}</table></div>
+${card(P,'heart','ตนุเศษ: ตัวตนภายใน','<p>จิตใจภายใน นิสัยส่วนลึก ความปรารถนา แรงจูงใจ และสิ่งที่คิดวนอยู่เสมอ ในผังดวงมักทำเครื่องหมายดอกจันไว้ที่ดาวตนุเศษ และใช้ดูผลเมื่อดาวร้ายจรมาทับ</p><p class="sm">วิธีคำนวณในแอป: นับจากลัคนาถึงราศีที่ดาวตนุลัคน์สถิต คูณด้วยจำนวนที่นับจากราศีนั้นถึงราศีที่เจ้าเรือนของราศีนั้นสถิต แล้วหารด้วย ๗ เศษคือเลขดาวตนุเศษ (เศษ ๐ = ๗)</p>')}
+${card(Y,'grid','ขั้นตอนดูดวงด้วยตนเอง','<p>๑) ดาวอะไรเป็นตนุลัคน์ ๒) ได้มาตรฐานอะไร อยู่ภพไหน ๓) มีดาวอะไรอยู่ด้วย เป็นศุภเคราะห์หรือบาปเคราะห์ ๔) เป็นคู่มิตร คู่ธาตุ คู่สมพล หรือคู่ศัตรูกับตนุลัคน์</p>')}
+<div class="kh8q" style="--c:${GR}"><b>ที่มาและสมมติฐาน</b><p class="sm" style="margin:4px 0 0">ถอดความจากบทความเรื่องตนุลัคน์และตนุเศษที่อาจารย์ส่งมา (โพสต์ร่วมกับ Puttipat Jaiinphol) · ศุภเคราะห์ = จันทร์ พุธ พฤหัส ศุกร์ · บาปเคราะห์ = อาทิตย์ อังคาร เสาร์ ราหู เกตุ · ดาวจรที่ใช้ดูการทับ: เสาร์ ราหู เกตุ อังคาร (บาป) และพฤหัส (บุญ) · การทับนับเมื่อดาวจรอยู่ราศีเดียวกับดาวเดิม</p></div>`; }
+const TABS=[['nat','user','ดวงเดิม'],['tr','orbit','ดวงจร เวลาเข้าเกณฑ์'],['house','grid','ตนุเศษ ๑๒ ภพ'],['rule','book','หลักวิชา']];
+function render(){ const out=document.getElementById('ts365Out'); if(!out) return; let X={}; try{ X=ctx(); }catch(e){ console.error(e); } let b='';
+if(!X.N&&TAB!=='rule') b='<p class="note">ผูกดวงก่อน แล้วกลับมาที่หน้านี้</p>'; else try{ b=({nat:tNat,tr:tTr,house:tHouse,rule:tRule})[TAB](X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; }
+out.innerHTML=`<h3 class="kh8H">${ic('user',GD,22)} ตนุลัคน์ และ ตนุเศษ</h3><p class="note">ตัวตนภายนอก (กาย วาสนา) กับตัวตนภายใน (จิตใจ) ดูทั้งดวงเดิมและดวงจร ดาวที่อยู่ร่วม คู่มิตร คู่ธาตุ คู่สมพล คู่ศัตรู และวันที่ดาวจรเข้ามาทับ พร้อมอายุและเวลาที่เหลือ</p><div class="kh8tabs">${TABS.map(([k,i,t])=>`<button type="button" data-tst="${k}" class="${TAB===k?'on':''}">${ic(i,TAB===k?GD:null,20)}<span>${t}</span></button>`).join('')}</div>${b}`; }
+document.addEventListener('click',ev=>{ const t=ev.target.closest&&ev.target.closest('#ts365Out [data-tst],#ts365Out [data-tsg]'); if(!t) return; if(t.dataset.tst) TAB=t.dataset.tst; if(t.dataset.tsg) RNG=+t.dataset.tsg; render(); });
+if(!document.getElementById('ts365css')){ const st=document.createElement('style'); st.id='ts365css'; const kc=document.getElementById('kh358css'); st.textContent=(kc?kc.textContent.split('#kh358Out ').join('#ts365Out '):'')+`\n#ts365Out .kh8two{grid-template-columns:minmax(0,340px) minmax(0,1fr)}@media(max-width:720px){#ts365Out .kh8two{grid-template-columns:1fr!important}}`; document.head.appendChild(st); }
+return {render};
+})();
