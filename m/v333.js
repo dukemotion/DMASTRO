@@ -4108,3 +4108,161 @@ if(!document.getElementById('vd363css')){ const st=document.createElement('style
 .vd3d{display:flex;gap:6px;align-items:center;justify-content:center;margin-top:6px;padding:10px;border-radius:12px;border:1px dashed var(--gold);color:var(--gold);text-decoration:none;font-size:14px}`; document.head.appendChild(st); }
 return {render};
 })();
+window.KN364=(()=>{
+const td=n=>String(n).replace(/\d/g,c=>'๐๑๒๓๔๕๖๗๘๙'[c]);
+const G='#2faa5a', B='#e0453a', Y='#e8b90f', A='#4aa3ff', O='#f08a24', P='#9a6bd1', GD='var(--gold,#c9a227)', GR='#8a8f98', LG='#8cc63f';
+const SN=['เมษ','พฤษภ','มิถุน','กรกฎ','สิงห์','กันย์','ตุลย์','พิจิก','ธนู','มกร','กุมภ์','มีน'];
+const SYM=['แกะ','วัว','คนคู่','ปู','สิงห์','หญิงสาว','คนถือตาชั่ง','แมงป่อง','คนครึ่งม้าถือธนู','มังกร','คนแบกหม้อน้ำ','ปลาคู่'];
+const HN=['ตนุ','กดุมภะ','สหัชชะ','พันธุ','ปุตตะ','อริ','ปัตนิ','มรณะ','ศุภะ','กัมมะ','ลาภะ','วินาศ'];
+const NUM={SU:1,MO:2,MA:3,ME:4,JU:5,VE:6,SA:7,RA:8,KE:9,UR:0};
+const TN={SU:'อาทิตย์',MO:'จันทร์',MA:'อังคาร',ME:'พุธ',JU:'พฤหัสบดี',VE:'ศุกร์',SA:'เสาร์',RA:'ราหู',KE:'เกตุ',UR:'มฤตยู',LA:'ลัคนา'};
+const PCL={SU:'#e8743b',MO:'#b9a33e',MA:'#e05f8a',ME:'#2faa5a',JU:'#f08a24',VE:'#4aa3ff',SA:'#7a5ab8',RA:'#8a6e4b',KE:'#5d8aa8',UR:'#3aa6a0',LA:'#c9a227'};
+const LORD=['MA','VE','ME','MO','SU','ME','VE','MA','JU','SA','RA','JU'];
+const NARA_S=[2,5,6,10], HALF_S=8, NARA_H=[1,3,4,7,11];
+const GOOD=['มหาอุจจ์','เกษตร','มหาจักร','ราชาโชค'], BAD=['นิจ','ประ'];
+const I={book:'<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M8 7h7M8 11h7"/>',cal:'<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',ok:'<circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/>',wn:'<path d="M12 3.5l9 16H3z"/><path d="M12 10v4.5M12 17.2h.01"/>',dot:'<circle cx="12" cy="12" r="3.5"/>',user:'<circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/>',
+baby:'<circle cx="12" cy="7.5" r="3.5"/><path d="M7 21v-4.5a5 5 0 0 1 10 0V21"/><path d="M10.5 7.3h.01M13.5 7.3h.01"/><path d="M10.8 9.2c.7.5 1.7.5 2.4 0"/>',tree:'<circle cx="12" cy="5" r="2.2"/><circle cx="5.5" cy="13" r="2.2"/><circle cx="18.5" cy="13" r="2.2"/><circle cx="9" cy="20" r="1.8"/><circle cx="15" cy="20" r="1.8"/><path d="M12 7.2V10M12 10H5.5v.8M12 10h6.5v.8M5.5 15.2l3 3M18.5 15.2l-3 3"/>',
+med:'<rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/>',heart:'<path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.3 4.3 4.3 0 0 1 19.5 10C19.5 15.4 12 20 12 20z"/>',clock:'<circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/>',chart:'<path d="M4 20V4M4 20h16"/><path d="M7 16l4-5 3 3 5-7"/>',
+people:'<circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="9" r="2.5"/><path d="M2.5 20c.8-3.6 3-5.5 5.5-5.5s4.7 1.9 5.5 5.5M13.5 15c.9-.9 1.9-1.4 3-1.4 2.2 0 3.9 1.7 4.5 4.4"/>',scale:'<path d="M12 4v16M5 20h14M4 8h16"/><path d="M6.5 8L3.5 14h6zM17.5 8l-3 6h6z"/>',star:'<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>',orbit:'<circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="10" ry="4.5"/>',
+link:'<path d="M9.5 14.5l5-5"/><path d="M11 6.5l1.5-1.5a4 4 0 0 1 5.6 5.6L16.6 12M13 17.5l-1.5 1.5a4 4 0 0 1-5.6-5.6L7.4 12"/>',grid:'<rect x="3.5" y="3.5" width="17" height="17" rx="2"/><path d="M3.5 9.2h17M3.5 14.8h17M9.2 3.5v17M14.8 3.5v17"/>'};
+const ic=(n,c,s)=>`<svg viewBox="0 0 24 24" width="${s||18}" height="${s||18}" style="width:${s||18}px!important;height:${s||18}px!important;flex:none" fill="none" stroke="${c||'currentColor'}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${I[n]||I.dot}</svg>`;
+const tag=(t,c)=>`<span class="kh8t" style="--c:${c}">${t}</span>`;
+const pl=(k,tr)=>`<span class="kh8pl${tr?' t':''}" style="--c:${PCL[k]||GR}">${k==='LA'?'ล':td(NUM[k])}</span>`;
+const card=(c,icn,t,b)=>`<div class="kh8c" style="border-left-color:${c}"><h4>${ic(icn,c)} ${t}</h4>${b}</div>`;
+const nrm=x=>((x%360)+360)%360, sg=x=>Math.floor(nrm(x)/30), cnt=(a,b)=>((b-a)%12+12)%12+1;
+const fmtD=d=>`${td(Math.floor(d))}°${td(String(Math.floor((d%1)*60)).padStart(2,'0'))}′`;
+const MO_=['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+const fdt=t=>`${td(t.getDate())} ${MO_[t.getMonth()]} ${td(t.getFullYear()+543)}`;
+const sd=(k,lon)=>{ try{ return std(k,lon)||''; }catch(_){ return ''; } };
+const ymd=(a,b)=>{ let y=b.getFullYear()-a.getFullYear(), m=b.getMonth()-a.getMonth(), d=b.getDate()-a.getDate(); if(d<0){ m--; d+=new Date(b.getFullYear(),b.getMonth(),0).getDate(); } if(m<0){ y--; m+=12; } return [y,m,d]; };
+const ymdT=([y,m,d])=>[y?`${td(y)} ปี`:'',m?`${td(m)} เดือน`:'',`${td(d)} วัน`].filter(Boolean).join(' ');
+const ageAt=(bt,t)=>ymdT(ymd(bt,t)).replace(/ ๐ วัน$/,'');
+const until=(t,now)=>{ const n=Math.round((t-now)/864e5); if(Math.abs(n)<1) return 'วันนี้'; return n>0?`อีก ${ymdT(ymd(now,t))}`:`ผ่านมา ${ymdT(ymd(t,now))}`; };
+const totD=(t,now)=>td(Math.abs(Math.round((t-now)/864e5)).toLocaleString('en-US'));
+const grade=s=>GOOD.includes(s)?1:BAD.includes(s)?-1:0;
+const stTag=s=>s?tag(s,GOOD.includes(s)?G:BAD.includes(s)?B:GR):tag('ปกติ',GR);
+function ctx(){ const W=typeof WSTATE!=='undefined'?WSTATE:null; let T; try{ T=getTransit(); }catch(_){} if(!T||isNaN(T)) T=new Date(); const lat=W&&W.lat||13.75, lon=W&&W.lon||100.5; let TP=null; try{ TP=chartAt(T,lat,lon).pos; }catch(_){ } const o={T,TP,lat,lon};
+if(W&&W.nat&&W.nat.pos){ o.N=W.nat2||W.nat.pos; o.L=sg(o.N.LA); o.bt=new Date(+W.bt); }
+let sx='M'; try{ sx=readForm().sex||'M'; }catch(_){ } o.sex=SEX||sx; return o; }
+function judge(X,k){ const n=X.N[k]; if(n==null) return {v:0,why:[]}; const s=sd(k,n), h=cnt(X.L,sg(n)), why=[]; let v=grade(s)*1.2; if(s) why.push(`เป็น${s}`);
+if([6,8,12].includes(h)){ v-=1; why.push(`อยู่ภพ${HN[h-1]}`); } else if([1,4,5,7,9,10,11].includes(h)){ v+=.4; why.push(`อยู่ภพ${HN[h-1]}`); } else why.push(`อยู่ภพ${HN[h-1]}`);
+return {v,s,h,why,lab:v>=.6?'ดี':v<=-.6?'เสีย':'กลาง',c:v>=.6?G:v<=-.6?B:Y}; }
+const lordOf=(X,h)=>LORD[(X.L+h-1)%12];
+let TAB='child', RNG=20, SEX=null, WC=null, KIDS=null, ROLE='kid';
+function state(X,h){ const k5=lordOf(X,5); let a,j; try{ a=posH(h,k5); j=posH(h,'JU'); }catch(_){ return null; }
+const ha=cnt(X.L,sg(a)), hj=cnt(X.L,sg(j)), sa=sd(k5,a), sj=sd('JU',j);
+const s1=grade(sa)>0, n1=NARA_H.includes(ha), bindu=ha===5, s2=grade(sj)>0, jb=grade(sj)<0, lb=grade(sa)<0;
+let lv=0; if(s1&&n1&&s2&&!bindu) lv=3; else if((s1&&n1&&!jb)||(s2&&!bindu&&!lb)) lv=2; else if(jb||bindu||lb) lv=-1;
+return {lv,ha,hj,sa,sj,bj:NARA_H.includes(hj)}; }
+const LV={3:['ช่วงดีที่สุด',G,'star'],2:['ช่วงดี',LG,'ok'],0:['ช่วงปกติ',GR,'dot'],'-1':['ช่วงระวัง',B,'wn']};
+function scan(X){ const key=[+X.bt,X.N.LA,RNG].join('|'); if(WC&&WC.key===key) return WC; let h0; try{ h0=horaOf(new Date()); }catch(_){ return {seg:[],bs:[]}; }
+const k5=lordOf(X,5), st=['MO'].includes(k5)?.25:['ME','VE','SU','MA'].includes(k5)?.5:1, a1=h0+RNG*365.25, S=[];
+for(let h=h0-st;h<=a1;h+=st) S.push([h,state(X,h)]);
+const seg=[], bs=[]; let cur=null, cb=null; const edge=(a,b,f,va)=>{ for(let i=0;i<20;i++){ const c=(a+b)/2; if(f(c)===va) a=c; else b=c; } return (a+b)/2; };
+for(let i=0;i<S.length;i++){ const [h,s]=S[i]; if(!s) continue; if(!cur){ cur={a:h,lv:s.lv,s}; } else if(s.lv!==cur.lv){ const e=edge(S[i-1][0],h,x=>{ const q=state(X,x); return q?q.lv:0; },cur.lv); cur.b=e; seg.push(cur); cur={a:e,lv:s.lv,s}; }
+if(!cb){ cb={a:h,on:s.bj,s}; } else if(s.bj!==cb.on){ const e=edge(S[i-1][0],h,x=>{ const q=state(X,x); return q?q.bj:false; },cb.on); cb.b=e; bs.push(cb); cb={a:e,on:s.bj,s}; } }
+if(cur){ cur.b=a1; cur.open=1; seg.push(cur); } if(cb){ cb.b=a1; cb.open=1; bs.push(cb); }
+const toD=x=>{ try{ return fromHora(x); }catch(_){ return null; } };
+seg.forEach(x=>{ x.ta=toD(x.a); x.tb=toD(x.b); }); bs.forEach(x=>{ x.ta=toD(x.a); x.tb=toD(x.b); });
+WC={key,seg:seg.filter(x=>x.b-x.a>=.5),bs:bs.filter(x=>x.on),k5}; return WC; }
+function houseWheel(X,mode){ const cx=170, cy=170, R1=150, R2=96, L=X.L; const ang=h=>Math.PI+(h-1)*Math.PI/6, P=(r,a)=>[cx+r*Math.cos(a),cy-r*Math.sin(a)];
+let g=''; for(let h=1;h<=12;h++){ const a0=ang(h)+Math.PI/12, a1=ang(h)-Math.PI/12, [x1,y1]=P(R1,a0), [x2,y2]=P(R1,a1), [x3,y3]=P(R2,a1), [x4,y4]=P(R2,a0);
+const nara=NARA_H.includes(h), kid=h===5, fam=mode==='fam'&&[3,4,9].includes(h), fill=mode==='fam'?(fam?(h===3?P_:h===4?A:O):'transparent'):(nara?G:'transparent');
+g+=`<path d="M${x1.toFixed(1)} ${y1.toFixed(1)}A${R1} ${R1} 0 0 1 ${x2.toFixed(1)} ${y2.toFixed(1)}L${x3.toFixed(1)} ${y3.toFixed(1)}A${R2} ${R2} 0 0 0 ${x4.toFixed(1)} ${y4.toFixed(1)}Z" fill="${fill}" fill-opacity="${fill==='transparent'?0:.18}" stroke="${kid&&mode!=='fam'?Y:'currentColor'}" stroke-opacity="${kid&&mode!=='fam'?1:.25}" stroke-width="${kid&&mode!=='fam'?2.4:1}"/>`;
+const [tx,ty]=P((R1+R2)/2+14,ang(h)), [sx,sy]=P((R1+R2)/2-12,ang(h));
+g+=`<text x="${tx.toFixed(1)}" y="${ty.toFixed(1)}" text-anchor="middle" dominant-baseline="middle" font-size="11" fill="currentColor" font-weight="600">${HN[h-1]}</text><text x="${sx.toFixed(1)}" y="${sy.toFixed(1)}" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="currentColor" opacity=".6">${SN[(L+h-1)%12]}</text>`; }
+const mark=(k,lon,r,tr)=>{ if(lon==null) return ''; const h=cnt(L,sg(lon)), a=ang(h)+((nrm(lon)%30)-15)*Math.PI/180*.9, [x,y]=P(r,a); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="10" fill="${tr?'var(--panel,#111)':PCL[k]}" stroke="${PCL[k]}" stroke-width="2"/><text x="${x.toFixed(1)}" y="${(y+.5).toFixed(1)}" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="700" fill="${tr?PCL[k]:'#fff'}">${k==='LA'?'ล':td(NUM[k])}</text>`; };
+const ks=mode==='fam'?[lordOf(X,3),lordOf(X,4),lordOf(X,9)]:[lordOf(X,5),'JU'];
+[...new Set(ks)].forEach(k=>{ g+=mark(k,X.N[k],R2-22); if(X.TP) g+=mark(k,X.TP[k],R1+14,1); });
+g+=`<circle cx="${cx}" cy="${cy}" r="${R2-36}" fill="none" stroke="currentColor" stroke-opacity=".15"/><text x="${cx}" y="${cy-8}" text-anchor="middle" font-size="12" fill="currentColor" opacity=".7">ลัคนา</text><text x="${cx}" y="${cy+12}" text-anchor="middle" font-size="16" font-weight="700" fill="${GD}">${SN[L]}</text>`;
+return `<svg class="kh8svg kh8wh" viewBox="-12 -12 364 364" role="img" aria-label="วงภพ">${g}</svg><p class="sm" style="text-align:center;margin:2px 0 8px">${mode==='fam'?`${tag('สหัชชะ',P_)} ${tag('พันธุ',A)} ${tag('ศุภะ',O)}`:`${tag('เรือนนระเกณฑ์',G)} ${tag('ปุตตะ เรือนบุตร',Y)}`} · วงในดาวเดิม วงนอกดาวจร</p>`; }
+const P_=P;
+function tChild(X){ const L=X.L, k5=lordOf(X,5), s5=(L+4)%12, nara=NARA_S.includes(L), half=L===HALF_S, j5=judge(X,k5), jj=judge(X,'JU');
+const inK=Object.keys(X.N).filter(k=>k!=='LA'&&k!=='UR'&&X.N[k]!=null&&cnt(L,sg(X.N[k]))===5);
+let b=`<div class="kh8two"><div>${houseWheel(X)}</div><div>`;
+b+=card(nara?G:half?Y:GR,'user',`ลัคนา${SN[L]} · สัญลักษณ์${SYM[L]}`,`<p>${nara?`${tag('อยู่ในนระเกณฑ์',G)} ลัคนาเป็นราศีรูปคน ตำราถือว่าได้อิทธิพลของนระเกณฑ์ ซึ่งให้ผลดีหลายด้าน รวมถึงเรื่องครอบครัวและบุตร`:half?`${tag('ครึ่งคน',Y)} ราศีธนูเป็นรูปคนครึ่งม้า ได้นระเกณฑ์เพียงบางส่วน`:`${tag('ไม่ใช่นระราศี',GR)} ลัคนาไม่ใช่ราศีรูปคน ยังดูเรือนนระเกณฑ์ทั้ง ๕ เรือนประกอบได้`}</p>`);
+b+=card(j5.c,'baby',`ดาวตัวแทนบุตร ${pl(k5)} ${TN[k5]}`,`<p>เรือนปุตตะของลัคนา${SN[L]}คือราศี${SN[s5]} เจ้าเรือนคือ${TN[k5]} จึงใช้${TN[k5]}เป็นดาวตัวแทนบุตร</p><p>ดวงเดิม: ${TN[k5]}อยู่ราศี${SN[sg(X.N[k5])]} ${stTag(j5.s)} ภพ${HN[j5.h-1]} → ${tag('ดาวบุตร'+j5.lab,j5.c)}</p>${inK.length?`<p>ดาวเดิมในเรือนปุตตะ: ${inK.map(k=>pl(k)+' '+TN[k]).join(' ')}</p>`:''}`);
+b+=card(jj.c,'med',`พฤหัสบดี ดาวแห่งการแพทย์ ${pl('JU')}`,`<p>ดวงเดิม: อยู่ราศี${SN[sg(X.N.JU)]} ${stTag(jj.s)} ภพ${HN[jj.h-1]} → ${tag(jj.lab,jj.c)}</p><p class="sm">ใช้ดูการพึ่งการแพทย์ช่วยมีบุตร เช่น ทำเด็กหลอดแก้ว</p>`);
+b+='</div></div>';
+b+=`<h4 style="display:flex;gap:6px;align-items:center;margin:10px 0 4px">${ic('grid',G)} เรือนนระเกณฑ์ทั้ง ๕ ในดวงนี้</h4><div class="kh8tw"><table class="kh8tb"><tr><th>ภพ</th><th>ราศี</th><th>เจ้าเรือน</th><th>ดาวเดิมในภพ</th><th>ดาวจรในภพตอนนี้</th></tr>${NARA_H.map(h=>{ const si=(L+h-1)%12, lk=LORD[si], nn=Object.keys(X.N).filter(k=>k!=='LA'&&k!=='UR'&&X.N[k]!=null&&sg(X.N[k])===si), tt=X.TP?Object.keys(X.TP).filter(k=>k!=='LA'&&k!=='UR'&&X.TP[k]!=null&&sg(X.TP[k])===si):[];
+return `<tr><td><b>${HN[h-1]}</b></td><td>${SN[si]}</td><td>${pl(lk)} ${TN[lk]}</td><td>${nn.map(k=>pl(k)).join(' ')||'<span class="sm">–</span>'}</td><td>${tt.map(k=>pl(k,1)).join(' ')||'<span class="sm">–</span>'}</td></tr>`; }).join('')}</table></div>`;
+if(X.TP){ const s=state(X,horaOf(X.T)); if(s){ const [lt,lc,li]=LV[s.lv];
+b+=card(lc,li,`ดวงจร ณ ${fdt(X.T)} · ${lt}`,`<p>${pl(k5,1)} ${TN[k5]}จร อยู่ภพ${HN[s.ha-1]} ${stTag(s.sa)} ${NARA_H.includes(s.ha)?tag('ในเรือนนระเกณฑ์',G):''} ${s.ha===5?tag('อยู่เรือนปุตตะ: จุดด่างพร้อย',B):''}</p><p>${pl('JU',1)} พฤหัสจร อยู่ภพ${HN[s.hj-1]} ${stTag(s.sj)} ${s.bj?tag('ในเรือนนระเกณฑ์: ดีต่อการคลอด',G):''}</p><p>${pred(s,k5)}</p>`); } }
+b+=`<div class="kh8q" style="--c:${A}"><b>คำพยากรณ์จากดวงเดิม</b><p style="margin:4px 0 0">${natPred(X,k5,j5,jj,nara)}</p></div>`;
+return b; }
+function natPred(X,k5,j5,jj,nara){ const a=[]; a.push(j5.lab==='ดี'?`ดาวบุตร (${TN[k5]}) มีกำลังในดวงเดิม เรื่องบุตรมีพื้นฐานดี`:j5.lab==='เสีย'?`ดาวบุตร (${TN[k5]}) อ่อนกำลังในดวงเดิม เรื่องบุตรมีอุปสรรค ต้องอาศัยความพยายามหรือการแพทย์ช่วย และควรเลือกจังหวะเวลาให้ดี`:`ดาวบุตร (${TN[k5]}) มีกำลังกลาง ๆ ผลเรื่องบุตรขึ้นกับจังหวะดาวจร`);
+if(k5==='RA') a.push('ราหูเป็นดาวบุตร ตามทักษาหมายถึงความอุตสาหะ จึงมักต้องใช้ความพยายามมากกว่าปกติ');
+a.push(jj.lab==='ดี'?'พฤหัสบดีเดิมดี การแพทย์มีแนวโน้มช่วยได้ผล':jj.lab==='เสีย'?'พฤหัสบดีเดิมอ่อน ถ้าใช้การแพทย์ช่วย ควรรอพฤหัสจรมีกำลังก่อน':'พฤหัสบดีเดิมกลาง ๆ ใช้จังหวะพฤหัสจรช่วยเสริม');
+if(nara) a.push('ลัคนาอยู่ในนระเกณฑ์ ช่วยหนุนเรื่องครอบครัวและบุตรอีกชั้นหนึ่ง'); return a.join(' · '); }
+function pred(s,k5){ if(s.lv===3) return `ดาวบุตรจรมีกำลังในเรือนนระเกณฑ์ และพฤหัสจรมีกำลังพร้อมกัน ตำราถือเป็นจังหวะดีที่สุดในการเริ่มต้นมีบุตร รวมถึงเริ่มกระบวนการทางการแพทย์`;
+if(s.lv===2) return `มีดาวหลักฝ่ายหนึ่งหนุน เป็นช่วงดีพอสมควร แต่ยังไม่ครบทั้งดาวบุตรและพฤหัส`;
+if(s.lv===-1) return s.ha===5?`${TN[k5]}จรอยู่ในเรือนปุตตะเอง ตามบทความเป็นจุดด่างพร้อย ยังไม่ใช่ช่วงที่ดีที่สุด แม้ดาวจะมีกำลัง`:s.sj&&BAD.includes(s.sj)?`พฤหัสจรเป็น${s.sj} การพึ่งการแพทย์อาจยังไม่สำเร็จในช่วงนี้`:`ดาวบุตรจรอ่อนกำลัง ควรรอจังหวะที่ดีกว่า`;
+return 'ยังไม่เข้าเกณฑ์เด่นทั้งดีและร้าย'; }
+function tWhen(X){ const W=scan(X), now=new Date(), k5=W.k5;
+let b=`<div class="kh8f">${[10,20,40].map(r=>`<button type="button" data-kng="${r}" class="${RNG===r?'on':''}">${td(r)} ปีข้างหน้า</button>`).join('')}</div>`;
+b+=`<p class="note">เกณฑ์: ${pl(k5,1)} ${TN[k5]}จร (ดาวบุตร) มีกำลังและอยู่เรือนนระเกณฑ์ + ${pl('JU',1)} พฤหัสจรมีกำลัง = ช่วงดีที่สุดในการเริ่มต้น · ดาวบุตรจรเข้าเรือนปุตตะ หรือพฤหัสจรเป็นนิจ ประ = ช่วงระวัง</p>`;
+b+=timeline(X,W);
+const best=W.seg.filter(x=>x.lv>=2&&x.tb>now).slice(0,24), nb=best[0];
+if(nb){ const on=nb.ta<=now; b+=card(LV[nb.lv][1],'clock',on?`ตอนนี้อยู่ใน${LV[nb.lv][0]}`:`ช่วงดีถัดไป: ${fdt(nb.ta)}`,on?`<p>ถึง ${fdt(nb.tb)} · เหลือ ${until(nb.tb,now).replace('อีก ','')} (${totD(nb.tb,now)} วัน)</p>`:`<p>${until(nb.ta,now)} · รวม ${totD(nb.ta,now)} วัน · อายุตอนนั้น ${ageAt(X.bt,nb.ta)}</p><p>ยาวถึง ${fdt(nb.tb)}</p>`); }
+b+=`<div class="kh8tw"><table class="kh8tb"><tr><th>ระดับ</th><th>เริ่ม</th><th>สิ้นสุด</th><th>อายุตอนเริ่ม</th><th>นับจากวันนี้</th><th>เหตุผล</th></tr>${W.seg.filter(x=>x.lv!==0&&x.tb>now).slice(0,40).map(x=>{ const [lt,lc,li]=LV[x.lv]; return `<tr><td>${ic(li,lc,16)} <b style="color:${lc}">${lt}</b></td><td>${fdt(x.ta)}</td><td>${x.open?'หลังช่วงที่คำนวณ':fdt(x.tb)}</td><td>${ageAt(X.bt,x.ta)}</td><td class="sm">${x.ta<=now?'กำลังอยู่ในช่วง':until(x.ta,now)}</td><td class="sm">${why(x.s,k5)}</td></tr>`; }).join('')||'<tr><td colspan="6" class="sm">ไม่พบช่วงเด่นในระยะที่เลือก</td></tr>'}</table></div>`;
+b+=`<h4 style="display:flex;gap:6px;align-items:center;margin:12px 0 4px">${ic('heart',G)} ช่วงคลอดที่ดี: พฤหัสจรเข้าเรือนนระเกณฑ์</h4><p class="sm">ตามบทความ วางแผนให้คลอดช่วงพฤหัสบดีจรเข้าเรือนเกณฑ์ของลัคนา (เรือนนระเกณฑ์)</p><div class="kh8tw"><table class="kh8tb"><tr><th>เรือน</th><th>เข้า</th><th>ออก</th><th>อายุ</th><th>นับจากวันนี้</th></tr>${W.bs.filter(x=>x.tb>now).slice(0,12).map(x=>`<tr><td>${HN[x.s.hj-1]} (${SN[(X.L+x.s.hj-1)%12]}) ${stTag(x.s.sj)}</td><td>${fdt(x.ta)}</td><td>${x.open?'หลังช่วงที่คำนวณ':fdt(x.tb)}</td><td>${ageAt(X.bt,x.ta)}</td><td class="sm">${x.ta<=now?'กำลังอยู่ในช่วง':until(x.ta,now)}</td></tr>`).join('')}</table></div>`;
+return b; }
+const why=(s,k5)=>{ const a=[]; a.push(`${TN[k5]}ภพ${HN[s.ha-1]}${s.sa?' '+s.sa:''}`); a.push(`พฤหัสภพ${HN[s.hj-1]}${s.sj?' '+s.sj:''}`); return a.join(' · '); };
+function timeline(X,W){ const now=new Date(), t0=+now, t1=t0+RNG*365.25*864e5, w=720, x=t=>40+(t-t0)/(t1-t0)*(w-60); let g='';
+const rows=[['ระดับรวม',22],['พฤหัสในนระเกณฑ์',52]];
+W.seg.forEach(s=>{ if(s.lv===0) return; const a=Math.max(+s.ta,t0), b2=Math.min(+s.tb,t1); if(b2<=a) return; g+=`<rect x="${x(a).toFixed(1)}" y="16" width="${Math.max(1,x(b2)-x(a)).toFixed(1)}" height="20" rx="2" fill="${LV[s.lv][1]}" fill-opacity="${s.lv===3?.95:.7}"><title>${LV[s.lv][0]} ${fdt(s.ta)} – ${fdt(s.tb)}</title></rect>`; });
+W.bs.forEach(s=>{ const a=Math.max(+s.ta,t0), b2=Math.min(+s.tb,t1); if(b2<=a) return; g+=`<rect x="${x(a).toFixed(1)}" y="46" width="${Math.max(1,x(b2)-x(a)).toFixed(1)}" height="14" rx="2" fill="${O}" fill-opacity=".75"><title>พฤหัสจรภพ${HN[s.s.hj-1]} ${fdt(s.ta)} – ${fdt(s.tb)}</title></rect>`; });
+const y0=now.getFullYear(); for(let y=y0;y<=y0+RNG;y+=RNG>20?5:RNG>10?2:1){ const t=+new Date(y,0,1); if(t<t0) continue; g+=`<line x1="${x(t)}" x2="${x(t)}" y1="12" y2="66" stroke="currentColor" stroke-opacity=".12"/><text x="${x(t)}" y="80" font-size="10" text-anchor="middle" fill="currentColor" opacity=".7">${td(y+543)}</text>${X.bt?`<text x="${x(t)}" y="93" font-size="9" text-anchor="middle" fill="currentColor" opacity=".5">อายุ ${td(ymd(X.bt,new Date(t))[0])}</text>`:''}`; }
+g+=`<line x1="${x(t0)}" x2="${x(t0)}" y1="8" y2="68" stroke="${GD}" stroke-width="2"/><text x="${x(t0)+3}" y="9" font-size="10" fill="${GD}">วันนี้</text><text x="0" y="30" font-size="10" fill="currentColor" opacity=".7">ระดับ</text><text x="0" y="57" font-size="10" fill="currentColor" opacity=".7">คลอด</text>`;
+return `<div class="kh8w"><svg class="kh8svg" viewBox="0 0 ${w} 98">${g}</svg></div><p class="sm">${[3,2,-1].map(l=>`<span style="display:inline-flex;align-items:center;gap:4px;margin-right:10px"><i style="width:14px;height:10px;border-radius:2px;background:${LV[l][1]};display:inline-block"></i>${LV[l][0]}</span>`).join('')}<span style="display:inline-flex;align-items:center;gap:4px"><i style="width:14px;height:10px;border-radius:2px;background:${O};display:inline-block"></i>พฤหัสจรในเรือนนระเกณฑ์ (คลอด)</span></p>`; }
+const WHO=(sex,role)=>role==='kid'?(sex==='F'?{p4:'พ่อ',p9:'แม่'}:{p4:'แม่',p9:'พ่อ'}):(sex==='F'?{p4:'ปู่ย่า',p9:'ตายาย'}:{p4:'ตายาย',p9:'ปู่ย่า'});
+function nextGood(X,k){ let h0; try{ h0=horaOf(new Date()); }catch(_){ return null; } const st=k==='MO'?.25:['ME','VE','SU','MA'].includes(k)?.5:2; const ok=h=>{ try{ return grade(sd(k,posH(h,k)))>0; }catch(_){ return false; } };
+if(ok(h0)){ let h=h0; while(ok(h)&&h<h0+30*365) h+=st; return {now:1,tb:fromHora(h)}; } for(let h=h0;h<h0+30*365.25;h+=st) if(ok(h)){ let a=h-st, b=h; for(let i=0;i<20;i++){ const c=(a+b)/2; if(ok(c)) b=c; else a=c; } const t=fromHora(b); let e=b; while(ok(e)&&e<b+30*365) e+=st; return {ta:t,tb:fromHora(e)}; } return null; }
+function tFam(X){ const sex=X.sex, who=WHO(sex,ROLE), k3=lordOf(X,3), k4=lordOf(X,4), k9=lordOf(X,9), j3=judge(X,k3), j4=judge(X,k4), j9=judge(X,k9), now=new Date();
+let b=`<div class="kh8f"><button type="button" data-kns="M" class="${sex==='M'?'on':''}">${ic('user',null,14)} เจ้าชะตาชาย</button><button type="button" data-kns="F" class="${sex==='F'?'on':''}">${ic('user',null,14)} เจ้าชะตาหญิง</button><span></span><button type="button" data-knr="kid" class="${ROLE==='kid'?'on':''}">ดูในฐานะลูก</button><button type="button" data-knr="grand" class="${ROLE==='grand'?'on':''}">ดูในฐานะหลาน</button></div>`;
+b+=`<div class="kh8two"><div>${houseWheel(X,'fam')}</div><div>`;
+const one=(k,j,col,icn,t,who2,good,bad)=>{ const tr=X.TP&&X.TP[k]!=null?sd(k,X.TP[k]):'', ng=nextGood(X,k);
+return card(j.c,icn,`${t} ${pl(k)} ${TN[k]} = ${who2}`,`<p>ดวงเดิม: ราศี${SN[sg(X.N[k])]} ${stTag(j.s)} ภพ${HN[j.h-1]} → ${tag(j.lab,j.c)}</p><p>${j.lab==='ดี'?good:j.lab==='เสีย'?bad:'ผลกลาง ๆ ไม่เด่นทั้งเสริมและไม่เสริม'}</p><p class="sm">ดวงจร: ${TN[k]}จร ${X.TP?`ราศี${SN[sg(X.TP[k])]}`:''} ${stTag(tr)}${ng?` · ${ng.now?`ตอนนี้มีกำลังถึง ${fdt(ng.tb)}`:`มีกำลังครั้งถัดไป ${fdt(ng.ta)} (${until(ng.ta,now)} · อายุ ${ageAt(X.bt,ng.ta)})`}`:''}</p>`); };
+b+=one(k4,j4,A,'heart','ดาวพันธุ',who.p4,`ดวงนี้เสริม${who.p4} ความสัมพันธ์และกรรมพันธุ์ฝั่ง${who.p4}หนุนกัน`,`ดวงนี้ไม่เสริม${who.p4} เรื่องของ${who.p4}มักเป็นภาระหรือได้รับแรงหนุนน้อย`);
+b+=one(k9,j9,O,'star','ดาวศุภะ',who.p9,`ดวงนี้เสริม${who.p9} ได้บุญเก่าและแรงหนุนฝั่ง${who.p9}`,`ดวงนี้ไม่เสริม${who.p9} ฝั่ง${who.p9}มักต้องพึ่งตัวเองมากกว่า`);
+b+=one(k3,j3,P,'link','ดาวสหัชชะ','วาสนาพี่น้องคนถัดไป',`ทำนายว่าพี่น้องคนถัดไป (นับวน) วาสนาสูง`,`ทำนายว่าพี่น้องคนถัดไป (นับวน) ดวงตก`);
+b+='</div></div>';
+b+=famTable(X);
+return b; }
+function profs(){ let a=[]; try{ a=loadProfiles()||[]; }catch(_){ } return a.filter(p=>p&&p.name&&p.y); }
+function natOf(p){ try{ const t=birthDate(p), pl2=placeOf(p), c=chartAt(t,pl2[1],pl2[2]); const N=c.pos; if(p.la!=null) N.LA=p.la; return {N,L:sg(N.LA),bt:t,sex:p.sex||'M',name:p.name}; }catch(_){ return null; } }
+function famTable(X){ const P2=profs(); if(!KIDS) KIDS=['cur'];
+const opt=(v)=>`<option value="cur"${v==='cur'?' selected':''}>ดวงที่เปิดอยู่</option>${P2.map((p,i)=>`<option value="${i}"${String(v)===String(i)?' selected':''}>${p.name}</option>`).join('')}<option value=""${v===''?' selected':''}>– ไม่เลือก –</option>`;
+let b=`<h4 style="display:flex;gap:6px;align-items:center;margin:12px 0 4px">${ic('tree',GD)} ตารางกฎแห่งกรรมของครอบครัว</h4><p class="sm">เลือกลูกแต่ละคนเรียงตามลำดับเกิด จากรายชื่อดวงที่บันทึกไว้ (เพศตามที่บันทึกในดวง)</p><div class="kh8g">${[0,1,2,3,4,5].slice(0,Math.min(6,KIDS.length+1)).map(i=>`<label class="sm" style="display:flex;flex-direction:column;gap:3px">ลูกคนที่ ${td(i+1)}<select data-knk="${i}" style="font:inherit;padding:5px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--ink)">${opt(KIDS[i]==null?'':KIDS[i])}</select></label>`).join('')}</div>`;
+const C=KIDS.filter(v=>v!==''&&v!=null).map(v=>v==='cur'?{N:X.N,L:X.L,bt:X.bt,sex:X.sex,name:(()=>{ try{ return readForm().name; }catch(_){ return 'ดวงที่เปิดอยู่'; } })()}:natOf(P2[+v])).filter(Boolean);
+if(!C.length) return b;
+const R=C.map(c=>{ const j4=judge(c,lordOf(c,4)), j9=judge(c,lordOf(c,9)), j3=judge(c,lordOf(c,3)), j1=judge(c,lordOf(c,1)), w=WHO(c.sex,'kid'); return {c,j4,j9,j3,j1,w}; });
+const n=R.length; let pts=0, good=0; R.forEach(r=>{ [r.j4,r.j9].forEach(j=>{ pts++; if(j.lab!=='เสีย') good++; }); });
+const fate=R.map((r,i)=>{ if(n===1) return {src:'ตนุ',j:r.j1}; const prev=R[(i-1+n)%n]; return {src:`สหัชชะของลูกคนที่ ${td((i-1+n)%n+1)}`,j:prev.j3}; });
+const cell=j=>`<td><b style="color:${j.c}">${j.lab}</b><div class="sm">${j.s||'ปกติ'} · ภพ${HN[j.h-1]}</div></td>`;
+b+=`<div class="kh8tw"><table class="kh8tb"><tr><th>ลูก</th><th>ดาวพันธุ</th><th>ดาวศุภะ</th><th>ดาวสหัชชะ</th><th>เสริมพ่อแม่</th><th>วาสนา (ดูจาก)</th></tr>${R.map((r,i)=>{ const f=fate[i], s4=r.j4.lab!=='เสีย', s9=r.j9.lab!=='เสีย';
+return `<tr><td><b>${td(i+1)}.</b> ${r.c.name} <span class="sm">(${r.c.sex==='F'?'หญิง':'ชาย'})</span></td>${cell(r.j4)}${cell(r.j9)}${cell(r.j3)}<td class="sm">${s4&&s9?`${tag('เสริมพ่อแม่',G)}`:s4?`เสริม${r.w.p4} ไม่เสริม${r.w.p9}`:s9?`เสริม${r.w.p9} ไม่เสริม${r.w.p4}`:tag('ไม่เสริม',B)}</td><td><b style="color:${f.j.c}">${f.j.lab==='ดี'?'วาสนาสูง':f.j.lab==='เสีย'?'ดวงตก':'กลาง'}</b><div class="sm">${f.src}</div></td></tr>`; }).join('')}</table></div>`;
+const pc=Math.round(good/pts*100);
+b+=`<div class="kh8two" style="align-items:center"><div>${donut(pc,good,pts)}</div><div>${card(pc>=75?G:pc>=50?Y:B,'chart',`ครอบครัวผ่านเกณฑ์ ${td(pc)}%`,`<p>${td(good)} แต้มไม่เสีย จาก ${td(pts)} แต้ม (ดาวพันธุและดาวศุภะของลูกทุกคน)</p><p>${pc>=75?'ครอบครัวผ่านเกณฑ์ดี เมื่อมีปัญหาธุรกิจไม่ควรท้อ ลูกที่ดวงตกเมื่อถึงวัยอันควรมีครอบครัวและมีบุตร ช่วยเสริมดวงได้':pc>=50?'ครอบครัวผ่านครึ่งหนึ่ง ต้องประคองกันและอาศัยลูกที่ดวงดีช่วยหนุน':'ครอบครัวต้องสู้มาก ควรหนุนกันและใช้ความเพียรเป็นหลัก'}</p>${n===1?'<p class="sm">ลูกคนเดียว ตำราให้ทำนายวาสนาจากดาวตนุได้เลย</p>':'<p class="sm">ลูกตั้งแต่ ๒ คนขึ้นไป ใช้ดาวสหัชชะของพี่น้องคนก่อนหน้า (นับวน) ทำนายวาสนาแทนดาวตนุ</p>'}`)}</div></div>`;
+return b; }
+function donut(pc,g,t){ const r=46, c=2*Math.PI*r, a=c*pc/100; return `<svg class="kh8svg" viewBox="0 0 140 140" style="max-width:180px;margin:0 auto"><circle cx="70" cy="70" r="${r}" fill="none" stroke="${B}" stroke-opacity=".35" stroke-width="16"/><circle cx="70" cy="70" r="${r}" fill="none" stroke="${G}" stroke-width="16" stroke-dasharray="${a.toFixed(1)} ${(c-a).toFixed(1)}" transform="rotate(-90 70 70)" stroke-linecap="butt"/><text x="70" y="68" text-anchor="middle" font-size="24" font-weight="700" fill="currentColor">${td(pc)}%</text><text x="70" y="88" text-anchor="middle" font-size="11" fill="currentColor" opacity=".7">${td(g)} จาก ${td(t)} แต้ม</text></svg>`; }
+function tRule(){ const st=(n,t,d,c)=>`<div><span>${td(n)}</span>${ic('dot',c)}<b>${t}</b><span class="sm" style="position:static;color:inherit;font-weight:400;opacity:.85">${d}</span></div>`;
+return `<h4 style="display:flex;gap:6px;align-items:center;margin:6px 0">${ic('baby',G)} นระเกณฑ์กับโอกาสมีบุตร <span class="sm">(ถอดความจากบทความของ หมอนุ้ย)</span></h4>
+<div class="rt9st">${st(1,'นระเกณฑ์','ราศีที่มีสัญลักษณ์เป็นรูปคน ได้แก่ มิถุน กันย์ ตุลย์ กุมภ์ (ธนูเป็นครึ่งคน) ให้ผลดีหลายด้าน รวมถึงครอบครัวและบุตร',G)}${st(2,'เรือนนระเกณฑ์','ตนุ สหัชชะ พันธุ ปัตนิ ลาภะ นับจากลัคนา',G)}${st(3,'ดาวตัวแทนบุตร','เจ้าเรือนปุตตะ เช่น ลัคนาตุลย์ ปุตตะคือกุมภ์ ดาวบุตรคือราหู',Y)}${st(4,'ดาวแห่งการแพทย์','พฤหัสบดี ใช้ดูการพึ่งการแพทย์ช่วยมีบุตร',O)}</div>
+${card(G,'ok','จังหวะดีที่สุด','<p>ดาวบุตรจรได้ตำแหน่งดี (เช่น มหาจักร) ในเรือนนระเกณฑ์ ซึ่งหนุนการตั้งครรภ์ และพฤหัสบดีจรได้ตำแหน่งดี (เช่น มหาอุจจ์) พร้อมกัน เป็นช่วงเริ่มต้นกระบวนการที่ดี จากนั้นวางแผนคลอดช่วงพฤหัสบดีจรเข้าเรือนนระเกณฑ์ของลัคนา</p>')}
+${card(B,'wn','ช่วงที่ยังไม่ใช่','<p>ดาวบุตรจรอยู่ในเรือนปุตตะของตัวเอง แม้จะเป็นเกษตร บทความถือเป็นจุดด่างพร้อย ส่วนพฤหัสจรเป็นประ การพึ่งการแพทย์อาจยังไม่สำเร็จ</p>')}
+<h4 style="display:flex;gap:6px;align-items:center;margin:14px 0 6px">${ic('tree',GD)} หัวใจของการทำนาย: หลักกรรมพันธุ์ <span class="sm">(ถอดความจากบทความของ จิรัฏฐ์โหราศาสตร์)</span></h4>
+<div class="kh8tw"><table class="kh8tb"><tr><th>ดวงของ</th><th>ดาวพันธุ (เจ้าเรือน ๔)</th><th>ดาวศุภะ (เจ้าเรือน ๙)</th></tr><tr><td>ลูกชาย</td><td>แม่</td><td>พ่อ</td></tr><tr><td>ลูกสาว</td><td>พ่อ</td><td>แม่</td></tr><tr><td>หลานชาย</td><td>ตายาย</td><td>ปู่ย่า</td></tr><tr><td>หลานสาว</td><td>ปู่ย่า</td><td>ตายาย</td></tr></table></div>
+${card(P,'link','ดาวสหัชชะ ทำนายวาสนาพี่น้องแบบนับวน','<p>ลูกคนเดียว ทำนายวาสนาจากดาวตนุได้เลย ถ้ามีลูกตั้งแต่ ๒ คน ใช้ดาวสหัชชะของคนก่อนหน้าทำนายคนถัดไป เช่น พี่น้อง ๓ คน: สหัชชะของคนที่ ๑ ทำนายคนที่ ๒ คนที่ ๒ ทำนายคนที่ ๓ และคนที่ ๓ วนกลับมาทำนายคนที่ ๑</p><p>จะกลับไปใช้ดาวตนุได้ เมื่อพี่น้องส่วนใหญ่มีลูกแล้ว เหลือคนเดียวที่ยังโสดหรือยังไม่มีลูก</p>')}
+${card(G,'chart','ตารางกฎแห่งกรรม','<p>นับแต้มดาวพันธุและดาวศุภะของลูกทุกคน คิดเป็นร้อยละของแต้มดี ตัวอย่างในบทความ ครอบครัวมีลูก ๔ คน ได้แต้มดี ๖ จาก ๘ หรือ ๗๕% ถือว่าผ่าน ลูกที่ดวงตก เมื่อถึงวัยอันควรมีครอบครัวและมีบุตร ช่วยเสริมดวงได้</p><p class="sm">บทความย้ำว่าหลักนี้ต้องพิสูจน์กับครอบครัวจริงหลายรุ่น ไม่ใช่จำจากตำราอย่างเดียว</p>')}
+<div class="kh8q" style="--c:${GR}"><b>สมมติฐานของแอป</b><p style="margin:4px 0 0" class="sm">บทความไม่ได้ระบุวิธีตัดสินว่าดาว "ดี" หรือ "เสีย" แอปจึงใช้มาตรฐานดาว (เกษตร มหาอุจจ์ มหาจักร ราชาโชค = ดี · นิจ ประ = เสีย) ร่วมกับภพที่ดาวตั้ง (ภพ ๖ ๘ ๑๒ ลดคะแนน) · เจ้าเรือนใช้แบบไทย (กุมภ์ = ราหู) · ช่วงเวลาคำนวณจากตำแหน่งดาวจริงแบบสุริยยาตร์ของแอป เป็นแนวทางประกอบ ไม่ใช่คำแนะนำทางการแพทย์</p></div>`; }
+const TABS=[['child','baby','บุตร นระเกณฑ์'],['when','cal','จังหวะมีบุตร'],['fam','tree','กรรมพันธุ์'],['rule','book','หลักวิชา']];
+function render(){ const out=document.getElementById('kn364Out'); if(!out) return; let X={}; try{ X=ctx(); }catch(e){ console.error(e); } let b='';
+if(!X.N&&TAB!=='rule') b='<p class="note">ผูกดวงก่อน แล้วกลับมาที่หน้านี้</p>'; else try{ b=({child:tChild,when:tWhen,fam:tFam,rule:tRule})[TAB](X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; }
+out.innerHTML=`<h3 class="kh8H">${ic('baby',GD,22)} บุตรและกรรมพันธุ์</h3><p class="note">นระเกณฑ์ ดาวตัวแทนบุตร จังหวะเวลามีบุตร และหลักกรรมพันธุ์ ดาวพันธุ ดาวศุภะ ดาวสหัชชะ ดูได้ทั้งดวงเดิมและดวงจร พร้อมวันเข้าเกณฑ์ อายุ และเวลาที่เหลือ</p><div class="kh8tabs">${TABS.map(([k,i,t])=>`<button type="button" data-knt="${k}" class="${TAB===k?'on':''}">${ic(i,TAB===k?GD:null,20)}<span>${t}</span></button>`).join('')}</div>${(typeof trBar141==='function'&&TAB==='child')?trBar141('m'):''}${b}`; }
+document.addEventListener('click',ev=>{ const t=ev.target.closest&&ev.target.closest('#kn364Out [data-knt],#kn364Out [data-kng],#kn364Out [data-kns],#kn364Out [data-knr]'); if(!t) return; const d=t.dataset; if(d.knt) TAB=d.knt; if(d.kng) RNG=+d.kng; if(d.kns) SEX=d.kns; if(d.knr) ROLE=d.knr; render(); });
+document.addEventListener('change',ev=>{ const t=ev.target.closest&&ev.target.closest('#kn364Out [data-knk]'); if(!t) return; if(!KIDS) KIDS=['cur']; KIDS[+t.dataset.knk]=t.value; while(KIDS.length&&KIDS[KIDS.length-1]==='') KIDS.pop(); render(); });
+if(!document.getElementById('kn364css')){ const st=document.createElement('style'); st.id='kn364css'; const kc=document.getElementById('kh358css'), rc=document.getElementById('rt359css');
+st.textContent=(kc?kc.textContent.split('#kh358Out ').join('#kn364Out '):'')+'\n'+(rc?rc.textContent.split('#rt359Out ').join('#kn364Out '):'')+`\n#kn364Out .kh8two{grid-template-columns:minmax(0,340px) minmax(0,1fr)}@media(max-width:720px){#kn364Out .kh8two{grid-template-columns:1fr}}`; document.head.appendChild(st); }
+return {render,scan};
+})();
