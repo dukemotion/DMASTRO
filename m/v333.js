@@ -4082,7 +4082,7 @@ window.VD363=(()=>{
 const td=n=>String(n).replace(/\d/g,c=>'๐๑๒๓๔๕๖๗๘๙'[c]);
 const GD='var(--gold,#c9a227)';
 const CH=[['ภาพรวมดวง','ดวงเดิม ๑๒ ภพ เจ้าเรือน กราฟชีวิต'],['ตำราพิเศษ','ตำราจริง ๕๕ เล่ม คำนวณให้ทันที'],['ตรวจราหู','ทุกตำราราหู ราหูเสวยอายุ วันเข้าเกณฑ์'],['ความรัก','เรดาร์คู่ชีวิต สมพงศ์ สแกนรักแท้'],['ครอบครัว','พ่อแม่ ลูก คนรอบตัว'],['การงาน การเงิน','อาชีพ การเงิน หุ้นส่วน ดวงสอบ'],['ฤกษ์ ปฏิทิน','ฤกษ์ธุรกิจ สแกนฤกษ์รายวัน มุหูรตะ'],['ดวงจร','ดาวจรสด ทศา จังหวะฆาต'],['สุขภาพ','สุขภาพ หน้าตา สรีระ ไฝ'],['เดินทาง ต่างแดน','โชคต่างชาติ เดินทาง ดวงบ้านเมือง'],['ดาว โยค','องศา ตรียางค์ นวางค์ โยค'],['ทักษา ชื่อ','ทักษา อินทภาส ชื่อมงคล'],['ไพ่ เสี่ยงทาย','ไพ่ทาโรต์ ไพ่ญาณ ทายผลบอล'],['เครื่องมือ','ท้องฟ้า 3D รายงาน PDF คลังความรู้']];
-const SRC='v/dmastro-14.mp4', POS='v/dmastro-14.jpg';
+const GH='https://dukemotion.github.io/DMASTRO/', onGH=/github\.io$/.test(location.hostname)||location.hostname==='localhost', SRC=(onGH?'':GH)+'v/dmastro-14.mp4', POS=(onGH?'':GH)+'v/dmastro-14.jpg';
 const ic=(p,s)=>`<svg viewBox="0 0 24 24" width="${s||18}" height="${s||18}" style="width:${s||18}px!important;height:${s||18}px!important;flex:none" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
 const IP='<path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/>', ID='<path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/>', IV='<rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 9.5v5l4-2.5z" fill="currentColor"/>';
 const at=k=>k<0?0:5+5*k;
