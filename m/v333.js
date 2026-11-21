@@ -4078,3 +4078,25 @@ if(!document.getElementById('rx362css')){ const st=document.createElement('style
 const kc=document.getElementById('kh358css'); if(kc) st.textContent=kc.textContent.split('#kh358Out ').join('#rx362Out ')+'\n'+st.textContent; document.head.appendChild(st); }
 return {render,apply,go,SUBS:SUBS.map(s=>s[0]),sel:()=>SEL,set:v=>{ SEL=v; }};
 })();
+window.VD363=(()=>{
+const td=n=>String(n).replace(/\d/g,c=>'๐๑๒๓๔๕๖๗๘๙'[c]);
+const GD='var(--gold,#c9a227)';
+const CH=[['ภาพรวมดวง','ดวงเดิม ๑๒ ภพ เจ้าเรือน กราฟชีวิต'],['ตำราพิเศษ','ตำราจริง ๕๕ เล่ม คำนวณให้ทันที'],['ตรวจราหู','ทุกตำราราหู ราหูเสวยอายุ วันเข้าเกณฑ์'],['ความรัก','เรดาร์คู่ชีวิต สมพงศ์ สแกนรักแท้'],['ครอบครัว','พ่อแม่ ลูก คนรอบตัว'],['การงาน การเงิน','อาชีพ การเงิน หุ้นส่วน ดวงสอบ'],['ฤกษ์ ปฏิทิน','ฤกษ์ธุรกิจ สแกนฤกษ์รายวัน มุหูรตะ'],['ดวงจร','ดาวจรสด ทศา จังหวะฆาต'],['สุขภาพ','สุขภาพ หน้าตา สรีระ ไฝ'],['เดินทาง ต่างแดน','โชคต่างชาติ เดินทาง ดวงบ้านเมือง'],['ดาว โยค','องศา ตรียางค์ นวางค์ โยค'],['ทักษา ชื่อ','ทักษา อินทภาส ชื่อมงคล'],['ไพ่ เสี่ยงทาย','ไพ่ทาโรต์ ไพ่ญาณ ทายผลบอล'],['เครื่องมือ','ท้องฟ้า 3D รายงาน PDF คลังความรู้']];
+const SRC='v/dmastro-14.mp4', POS='v/dmastro-14.jpg';
+const ic=(p,s)=>`<svg viewBox="0 0 24 24" width="${s||18}" height="${s||18}" style="width:${s||18}px!important;height:${s||18}px!important;flex:none" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
+const IP='<path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/>', ID='<path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/>', IV='<rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 9.5v5l4-2.5z" fill="currentColor"/>';
+const at=k=>k<0?0:5+5*k;
+function render(){ const out=document.getElementById('vd363Out'); if(!out) return; const has=out.querySelector('video');
+if(has) return; // คงตัวเล่นไว้ ไม่โหลดใหม่ระหว่างดู
+out.innerHTML=`<h3 class="kh8H" style="display:flex;gap:8px;align-items:center">${ic(IV,24)} วิดีโอแนะนำ ๑๔ หมวด</h3><p class="note">คลิปแนวตั้ง ๘๕ วินาที เล่าว่าแต่ละหมวดของแอปทำอะไรได้บ้าง กดชื่อหมวดเพื่อข้ามไปช่วงนั้น</p>
+<div class="vd3w"><div class="vd3v"><video controls playsinline preload="metadata" poster="${POS}" src="${SRC}"></video></div>
+<div class="vd3l"><button type="button" data-vdk="-1" class="vd3c">${ic(IP,16)}<b>เริ่มต้น</b><span class="sm">๑๔ หมวด ในแอปเดียว</span><i>๐.๐๐</i></button>${CH.map(([t,d],k)=>`<button type="button" data-vdk="${k}" class="vd3c"><span class="vd3n">${td(String(k+1).padStart(2,'0'))}</span><b>${t}</b><span class="sm">${d}</span><i>${td(Math.floor(at(k)/60))}.${td(String(at(k)%60).padStart(2,'0'))}</i></button>`).join('')}
+<a class="vd3d" href="${SRC}" download="dmastro-14-categories.mp4">${ic(ID,16)} ดาวน์โหลดวิดีโอ (MP4 แนวตั้ง 1080×1920)</a></div></div>`; }
+document.addEventListener('click',ev=>{ const b=ev.target.closest&&ev.target.closest('#vd363Out [data-vdk]'); if(!b) return; const v=document.querySelector('#vd363Out video'); if(!v) return; v.currentTime=at(+b.dataset.vdk)+(+b.dataset.vdk>=0?.7:0); v.play().catch(()=>{}); document.querySelectorAll('#vd363Out .vd3c').forEach(x=>x.classList.toggle('on',x===b)); });
+if(!document.getElementById('vd363css')){ const st=document.createElement('style'); st.id='vd363css'; st.textContent=`.vd3w{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:16px;align-items:start;margin-top:8px}@media(max-width:720px){.vd3w{grid-template-columns:1fr}}
+.vd3v{position:sticky;top:80px;aspect-ratio:9/16;max-height:78vh;border-radius:18px;overflow:hidden;background:#1D2052;border:1px solid var(--line);justify-self:center;width:100%}.vd3v video{width:100%;height:100%;display:block;object-fit:contain;background:#1D2052}
+.vd3l{display:flex;flex-direction:column;gap:6px}.vd3c{display:grid;grid-template-columns:34px minmax(0,1fr) auto;grid-template-rows:auto auto;column-gap:8px;align-items:center;text-align:left;border:1px solid var(--line);background:var(--panel);color:inherit;font:inherit;border-radius:12px;padding:8px 12px;cursor:pointer}
+.vd3c>svg,.vd3c .vd3n{grid-row:1/3;color:${GD};font-weight:700}.vd3c b{font-size:14px}.vd3c .sm{grid-column:2}.vd3c i{grid-row:1/3;grid-column:3;font-style:normal;font-size:12px;opacity:.7}.vd3c:hover,.vd3c.on{border-color:var(--gold);background:color-mix(in srgb,var(--gold) 9%,var(--panel))}
+.vd3d{display:flex;gap:6px;align-items:center;justify-content:center;margin-top:6px;padding:10px;border-radius:12px;border:1px dashed var(--gold);color:var(--gold);text-decoration:none;font-size:14px}`; document.head.appendChild(st); }
+return {render};
+})();
