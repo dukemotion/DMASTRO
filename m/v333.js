@@ -4968,3 +4968,209 @@ if(!document.getElementById('bh369css')){ const st=document.createElement('style
 #bh369Out .bh9st{display:grid;gap:8px}#bh369Out .bh9st>div{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:8px 10px}#bh369Out .bh9st>div>span{width:24px;height:24px;border-radius:50%;background:var(--gold);color:#111;display:grid;place-items:center;font-weight:700;flex:none}#bh369Out .bh9st p{margin:2px 0 0;font-size:13px}`; document.head.appendChild(st); }
 return {render};
 })();
+window.QA370=(()=>{
+const td=n=>String(n).replace(/\d/g,c=>'๐๑๒๓๔๕๖๗๘๙'[c]);
+const G='#2faa5a', B='#e0453a', Y='#e8b90f', A='#4aa3ff', P='#9a6bd1', O='#f08a24', GD='var(--gold,#c9a227)', GR='#8a8f98', GO='#f3c94a';
+const SN=['เมษ','พฤษภ','มิถุน','กรกฎ','สิงห์','กันย์','ตุลย์','พิจิก','ธนู','มกร','กุมภ์','มีน'];
+const HN=['ตนุ','กดุมภะ','สหัชชะ','พันธุ','ปุตตะ','อริ','ปัตนิ','มรณะ','ศุภะ','กัมมะ','ลาภะ','วินาศ'];
+const HM=['ตัวเรา','เงิน ทรัพย์','พี่น้อง เพื่อน การติดต่อ','บ้าน ครอบครัว ที่ดิน','ความรัก บุตร การลงทุน','ศัตรู หนี้ งานประจำ สุขภาพ','คู่ครอง คู่ค้า หุ้นส่วน','ความเปลี่ยนแปลง เงินคนอื่น','ผู้ใหญ่ โชค การเรียนสูง ต่างแดน','การงาน ตำแหน่ง','ลาภ เพื่อน ความสำเร็จ','สิ่งลับ ความสูญเสีย การจากไป'];
+const K8=['SU','MO','MA','ME','JU','VE','SA','RA'], KA=['SU','MO','MA','ME','JU','VE','SA','RA','KE','UR'], NUM={SU:1,MO:2,MA:3,ME:4,JU:5,VE:6,SA:7,RA:8,KE:9,UR:0};
+const TN={SU:'อาทิตย์',MO:'จันทร์',MA:'อังคาร',ME:'พุธ',JU:'พฤหัสบดี',VE:'ศุกร์',SA:'เสาร์',RA:'ราหู',KE:'เกตุ',UR:'มฤตยู'};
+const PCL={SU:'#e8743b',MO:'#b9a33e',MA:'#e05f8a',ME:'#2faa5a',JU:'#f08a24',VE:'#4aa3ff',SA:'#7a5ab8',RA:'#8a6e4b',KE:'#5d8aa8',UR:'#3aa6a0'};
+const LRD=['MA','VE','ME','MO','SU','ME','VE','MA','JU','SA','RA','JU'], P2K={1:'SU',2:'MO',3:'MA',4:'ME',5:'JU',6:'VE',7:'SA',8:'RA'};
+const BEN=['JU','VE','ME','MO'], MAL=['SA','MA','RA','KE','SU'];
+const PERSON={SU:'คนมีอำนาจ หัวหน้า ถือศักดิ์ศรี',MO:'คนอ่อนไหว ผู้หญิง ใจดีแต่เปลี่ยนง่าย',MA:'คนใจร้อน กล้า ชอบแข่งขัน',ME:'คนช่างพูด เจรจาเก่ง คล่องตัว',JU:'ผู้ใหญ่ มีหลักการ ใจกว้าง',VE:'คนมีเสน่ห์ รักสวยรักงาม ชอบความสบาย',SA:'คนอาวุโส เข้มงวด ช้าแต่มั่นคง',RA:'คนหัวหมอ ชอบเสี่ยง มีเรื่องที่ไม่บอก',KE:'คนเก็บตัว คาดเดายาก',UR:'คนแปลกใหม่ เปลี่ยนเร็ว'};
+const THINK={SU:'ให้ความสำคัญกับเรา แต่อยากให้เราเคารพและยอมรับเขา',MO:'รู้สึกผูกพัน ห่วงใย แต่อารมณ์ขึ้นลง เปลี่ยนใจได้',MA:'ชอบความกล้าและพลังของเรา แต่ใจร้อน กระทบกันง่าย',ME:'มองเราเป็นคนคุยถูกคอ สนุก แต่ยังไม่ผูกมัด',JU:'นับถือ เห็นว่าเราน่าไว้ใจ มองอนาคตร่วมกันได้',VE:'ชื่นชอบ ถูกใจในเสน่ห์ของเรา',SA:'จริงจังแต่ช้า ระวังตัว ต้องใช้เวลาพิสูจน์',RA:'ความรู้สึกซับซ้อน มีเรื่องที่ยังไม่บอก',KE:'ห่างเหิน ยังไม่แน่ใจ',UR:'สนใจแบบไม่คาดคิด แต่คาดเดายาก'};
+const CAREER={SU:'ราชการ ผู้บริหาร ผู้นำองค์กร',MO:'อาหาร เครื่องดื่ม บริการ พยาบาล โรงแรม',MA:'วิศวกร ช่าง ทหาร ตำรวจ กีฬา ศัลยแพทย์',ME:'การค้า สื่อสาร เขียน บัญชี ไอที นายหน้า',JU:'ครู กฎหมาย แพทย์ ที่ปรึกษา ศาสนา',VE:'ศิลปะ ความงาม แฟชั่น บันเทิง การเงินธนาคาร',SA:'อสังหาริมทรัพย์ เกษตร โรงงาน งานระยะยาว',RA:'ต่างประเทศ เทคโนโลยี สื่อ งานเสี่ยงสูง การเมือง',KE:'วิจัย จิตวิญญาณ งานเบื้องหลัง',UR:'นวัตกรรม การบิน งานใหม่ๆ'};
+const INVEST={SU:'ทองคำ หุ้นรัฐวิสาหกิจ พันธบัตร',MO:'ธุรกิจอาหาร ของใช้ประจำวัน กองทุนสภาพคล่องสูง',MA:'เครื่องจักร พัฒนาอสังหา ธุรกิจที่ต้องลงแรง',ME:'ซื้อมาขายไป การค้าออนไลน์ หุ้นสื่อสาร',JU:'กองทุนระยะยาว การศึกษา ประกัน',VE:'ความงาม แฟชั่น ศิลปะ ร้านอาหารบรรยากาศดี',SA:'ที่ดิน อสังหา ถือยาว เกษตร',RA:'ต่างประเทศ เทคโนโลยี สินทรัพย์ผันผวน (เสี่ยงสูง)',KE:'ของเก่า ของสะสม',UR:'นวัตกรรม สตาร์ทอัพ (เสี่ยง)'};
+const IMPROVE={SU:'สร้างวินัย ตั้งเป้าชัด กล้าเป็นผู้นำ',MO:'ดูแลอารมณ์ พักผ่อน ใกล้ชิดครอบครัว',MA:'ออกกำลังกาย ลงมือทำทันที',ME:'เรียนรู้ทักษะใหม่ ฝึกสื่อสาร',JU:'หาครูหรือที่ปรึกษา ทำบุญ ศึกษาธรรม',VE:'ดูแลภาพลักษณ์ สร้างความสัมพันธ์ดี',SA:'อดทน วางแผนระยะยาว เก็บออม',RA:'ระวังความหลงใหล เลือกเสี่ยงอย่างมีขอบเขต',KE:'ทำสมาธิ ปล่อยวาง',UR:'เปิดรับสิ่งใหม่'};
+const DRAG={SU:'อัตตา ไม่ยอมใคร',MO:'อารมณ์แปรปรวน คิดมาก',MA:'ใจร้อน วู่วาม',ME:'พูดมาก ตัดสินใจไม่เด็ดขาด',JU:'มั่นใจในหลักการเกินไป',VE:'หลงความสบาย ใช้จ่ายเกิน',SA:'ช้า ท้อ มองแง่ร้าย',RA:'หลงผิด เสพติด เสี่ยงเกินตัว',KE:'ห่างคน ขาดเป้าหมาย',UR:'เปลี่ยนใจบ่อย'};
+const DAYC={SU:['อาทิตย์','แดง'],MO:['จันทร์','เหลือง ครีม'],MA:['อังคาร','ชมพู'],ME:['พุธ','เขียว'],JU:['พฤหัสบดี','ส้ม แสด'],VE:['ศุกร์','ฟ้า น้ำเงิน'],SA:['เสาร์','ม่วง'],RA:['พุธกลางคืน','เทา ดำ']};
+const CATS=[
+['งาน','การงาน','<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12h18"/>',[
+['ถ้าลาออกจากที่เดิม แล้วสมัครงานที่ใหม่จะดีไหม','yes',[10,12,11],['SA','JU'],365,'ภพกัมมะคืองานปัจจุบัน ภพวินาศคือการออกจากที่เดิม ภพลาภะคือผลที่ได้'],
+['โครงการที่ทำอยู่ จะเป็นไปด้วยดีหรือเปล่า','yes',[10,11],['JU','ME'],180,'ภพกัมมะคือตัวงาน ภพลาภะคือผลสำเร็จ'],
+['หัวหน้างานคิดอย่างไรกับเรา','think',[10,9],['SU'],90,'เจ้าภพกัมมะและอาทิตย์แทนหัวหน้า ภพศุภะคือผู้ใหญ่'],
+['ใน ๓ เดือนนี้ จะมีงานใหม่เข้ามาเพิ่มไหม','yes',[10,11,3],['JU','ME'],90,'พฤหัสหรือศุกร์จรเข้าภพกัมมะ ลาภะ หรือสหัชชะ บอกงานใหม่'],
+['โครงการที่จบไปแล้ว ลูกค้าคิดเห็นหรือมองเราอย่างไร','think',[7,11],['VE'],60,'ภพปัตนิคือลูกค้า คู่ค้า'],
+['งานที่ทำอยู่ตอนนี้ จะเกิดปัญหาขึ้นหรือไม่','risk',[10,6,8],['SA','MA','RA'],120,'บาปเคราะห์จรเข้าภพกัมมะ อริ มรณะ บอกปัญหา'],
+['จังหวะนี้มีเรื่องใดที่ต้องระมัดระวังในการทำงานโครงการนี้','risk',[10,6,12],['SA','MA','RA'],90,'ดูดาวร้ายที่จรผ่านภพงานและดาวกาลกิณี'],
+['อยากลาออกจากงาน เมื่อไหร่ถึงจะลาออกได้','when',[12,10],['SA','RA'],540,'จังหวะที่ดาวจรหนุนภพวินาศ (ออกไป) และภพกัมมะใหม่'],
+['หากลาออกจากงานปีนี้ จะเป็นไปได้ไหม','yes',[12,10],['SA','RA'],365,'ดูภพวินาศและภพกัมมะในปีนี้'],
+['กำลังจะรับโครงการใหม่ งานนี้จะเป็นอย่างไร','yes',[10,11,3],['JU','ME'],180,'ภพกัมมะ ลาภะ และสหัชชะ (ความพยายาม)'],
+['กำลังจะไปสัมภาษณ์งาน มีโอกาสได้งานนี้ไหม','yes',[10,11,1],['ME','JU'],60,'พุธคือการพูดสัมภาษณ์ พฤหัสคือผู้ใหญ่ให้โอกาส'],
+['จะสอบย้ายตำแหน่งได้ไหม','yes',[10,4,9],['ME','JU'],180,'ภพพันธุคือที่ใหม่ ภพศุภะคือผู้ใหญ่และการสอบ'],
+['ใครในทีมที่จะทำให้งานมีปัญหา','who',[3,6,7],[],90,'ภพสหัชชะคือเพื่อนร่วมงาน ภพอริคือผู้ขัดขวาง'],
+['อาชีพที่เหมาะกับเราที่สุด','career',[10,1],[],0,'ราศีภพกัมมะ เจ้าภพกัมมะ และดาวในภพกัมมะ'],
+['อาชีพที่เราทำแล้วรุ่งที่สุด','career2',[10,11,2],[],0,'ดาวที่แข็งที่สุดในภพทรัพย์และงาน ประกอบดาวศรี']]],
+['ตน','พัฒนาตนเอง วางแผนชีวิต','<circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/><path d="M18 3l1.5 2.5M6 3L4.5 5.5"/>',[
+['สิ่งที่ทำให้ชีวิตดีขึ้นได้ มีอะไรบ้าง','improve',[1,9],[],0,'ดาวศรี เดช มนตรี และดาวที่แข็งที่สุด'],
+['สิ่งใดบ้างที่เป็นตัวถ่วงให้ชีวิตไม่ดี','drag',[1,6,8,12],[],0,'ดาวกาลกิณี ดาวนิจ และบาปเคราะห์ในภพร้าย'],
+['มีเรื่องใดบ้างที่ละเลยไป และควรกลับมาโฟกัส','neglect',[],[],0,'ภพที่เจ้าเรือนอ่อนกำลังที่สุด'],
+['อยากปรับปรุง เปลี่ยนแปลงตัวเอง ควรเริ่มตรงไหนก่อน','start',[1],[],0,'เจ้าเรือนลัคนาอยู่ภพไหน คือจุดเริ่ม'],
+['มีสิ่งใดที่ช่วยปรับปรุงให้ชีวิตเป็นไปในทางที่ดีขึ้น','now',[1,9,11],['JU'],365,'ดาวเสวยอายุตอนนี้ และภพที่พฤหัสจรผ่าน'],
+['ควรจะเริ่มทำอะไรเพื่อเพิ่มความท้าทายในชีวิต','yes',[3,1],['MA'],180,'ภพสหัชชะคือความกล้า อังคารคือพลัง'],
+['รู้สึกไม่ค่อยมั่นใจ ควรเสริมความมั่นใจให้ตัวเองอย่างไรดี','confidence',[1],['SU'],0,'อาทิตย์และเจ้าลัคนาคือความมั่นใจ เสริมด้วยวันและสีของดาวศรี']]],
+['เงิน','หนี้สิน การเงิน การลงทุน','<circle cx="12" cy="12" r="8.5"/><path d="M14.5 9a2.5 2 0 0 0-5 0c0 2.5 5 1.5 5 4.5a2.5 2 0 0 1-5 0M12 5.5v13"/>',[
+['การเงินปีนี้จะเป็นอย่างไร','year',[2,11],['JU','VE'],365,'ภพกดุมภะคือเงินเก็บ ภพลาภะคือรายได้'],
+['ปีนี้จะปลดหนี้ได้ไหม','yes',[6,12,2],['JU','SA'],365,'ภพอริคือหนี้ ภพวินาศคือการจ่ายออก ภพกดุมภะคือเงินที่มี'],
+['มีแผนจะลงทุนเพื่อทำกำไร การลงทุนแบบไหนโอเคที่สุด','invest',[5,11,2],[],0,'ภพปุตตะคือการลงทุน ภพลาภะคือกำไร'],
+['ดวงมีเกณฑ์จะล้มละลายไหม','risk',[2,11,8,12],['SA','RA'],365,'เจ้าทรัพย์ตกภพร้ายและบาปเคราะห์จรทับภพทรัพย์'],
+['ลูกหนี้จะคืนเงินไหม','yes',[7,8,11],['JU','ME'],180,'ภพปัตนิคืออีกฝ่าย ภพมรณะคือเงินของคนอื่น'],
+['หากคิดจะลงทุนธุรกิจกับเพื่อน จะเป็นไปได้ไหม','yes',[7,11,5],['JU','ME'],365,'ภพปัตนิคือหุ้นส่วน ภพลาภะคือเพื่อน'],
+['จะมีเกณฑ์ได้เงินก้อนไหม','when',[2,11,8],['JU','VE'],540,'พฤหัสจรภพกดุมภะ ลาภะ มรณะ คือเงินก้อน'],
+['ลงทุนกับเพื่อนคนนี้ มีอะไรต้องระมัดระวังไหม','risk',[7,11,5],['RA','SA','MA'],180,'บาปเคราะห์ในภพหุ้นส่วนและเพื่อน'],
+['อยากขายที่ดิน ช่วงไหนถึงจะมีเกณฑ์ขายได้','when',[4,11,2],['JU','SA'],540,'ภพพันธุคือที่ดิน ภพลาภะคือได้เงินจากการขาย'],
+['กำลังวางแผนจะสร้างกิจการใหม่ เป็นช่วงที่เหมาะสมหรือไม่','yes',[10,1,11],['JU','SU'],365,'ภพกัมมะ ตนุ ลาภะ และดาวเสวยอายุ'],
+['อยากหาอาชีพเสริม ทำอะไร เริ่มตรงไหนดี','side',[3,11],[],0,'ภพสหัชชะคือความพยายามนอกงานหลัก ภพลาภะคือรายได้เสริม']]],
+['รัก','ความสัมพันธ์','<path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.3 4.3 4.3 0 0 1 19.5 10C19.5 15.4 12 20 12 20z"/>',[
+['คนที่เข้ามาคุยตอนนี้ คิดอย่างไรกับเรา','think',[5,7],['VE'],60,'ภพปุตตะคือความรักช่วงเริ่ม ศุกร์คือความรัก'],
+['เมื่อไหร่จะมีคนใหม่ๆ เข้ามา','when',[5,7,11],['VE','JU'],540,'ศุกร์หรือพฤหัสจรเข้าภพปุตตะ ปัตนิ หรือลาภะ'],
+['ความรักปีนี้จะเป็นอย่างไร จะมีคนเข้ามาไหม','year',[5,7],['VE','JU'],365,'ภพปุตตะและปัตนิตลอดปี'],
+['ในปีนี้วางแผนจะแต่งงาน ควรเป็นเดือนไหนดี','month',[7,2,4],['VE','JU'],365,'เดือนที่ศุกร์ พฤหัส หนุนภพปัตนิ กดุมภะ พันธุ'],
+['แฟนที่คบอยู่ตอนนี้ เขาจริงจังกับเราแค่ไหน','think',[7],['SA','VE'],90,'เจ้าภพปัตนิ และเสาร์คือความจริงจัง'],
+['เรื่องใดที่ควรรู้ที่สุดเกี่ยวกับสถานการณ์ความรักของตนเอง','risk',[7,5],['SA','RA','MA'],120,'ดาวที่กดดันภพปุตตะและปัตนิ'],
+['จะบาลานซ์ความสัมพันธ์นี้อย่างไรให้ทุกอย่างโอเค','balance',[1,7],[],0,'ความสัมพันธ์ของเจ้าลัคนากับเจ้าภพปัตนิ'],
+['คนที่เข้ามาคุยช่วงนี้ จะมีโอกาสพัฒนาความสัมพันธ์ไหม','yes',[5,7],['VE','JU'],180,'จากภพปุตตะไปสู่ภพปัตนิ'],
+['ความสัมพันธ์ไม่ก้าวหน้า มีอะไรที่ต้องปรับปรุงบ้าง','drag7',[7,5],[],0,'ดาวที่ขวางภพปัตนิ'],
+['ทำยังไงให้ความสัมพันธ์นี้ดีขึ้น','improve7',[7],[],0,'ใช้คุณของเจ้าภพปัตนิและศุกร์'],
+['ความสัมพันธ์นี้จะสนับสนุนชีวิตเราทั้งคู่ให้ดีขึ้นอย่างไร','support',[7],[],0,'เจ้าภพปัตนิไปอยู่ภพไหน คือเรื่องที่คู่ช่วยเสริม'],
+['ครอบครัวของเรา มองความสัมพันธ์ของเราเป็นอย่างไร','pair',[4,7],[],0,'เจ้าภพพันธุ (ครอบครัว) กับเจ้าภพปัตนิ'],
+['พ่อแม่ฝ่ายชาย ชอบเราไหม','pair',[10,7],[],0,'นับภพต่อภพ พ่อแม่ของคู่คือภพที่ ๔ จากภพปัตนิ (ภพกัมมะ)'],
+['พ่อแม่ฝ่ายหญิง ไม่ชอบเราหรือเปล่า','pair',[10,7],[],0,'พ่อแม่ของคู่คือภพกัมมะ นับจากภพปัตนิ'],
+['หากตัดสินใจจะอยู่ก่อนแต่ง มีเรื่องใดต้องระมัดระวัง','risk',[4,7,8],['SA','RA','MA'],180,'ภพพันธุคือบ้าน ภพปัตนิคือคู่ ภพมรณะคือการเปลี่ยนแปลง']]],
+['ใจ','ความสัมพันธ์ที่ซับซ้อน','<path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.3 4.3 4.3 0 0 1 19.5 10C19.5 15.4 12 20 12 20z"/><path d="M12 8l-2 4h4l-2 4"/>',[
+['รู้สึกว่าแฟนมีคนมาคุยด้วย ตอนนี้ความสัมพันธ์เป็นแบบไหน','risk',[7,11,12],['RA','VE'],90,'ภพลาภะคือภพที่ ๕ ของคู่ (ความรักของคู่) ภพวินาศคือเรื่องลับ'],
+['แฟนยังจริงจังกับเราไหม','think',[7],['SA','VE'],90,'เจ้าภพปัตนิ และเสาร์คือความจริงจัง'],
+['เขายังรู้สึกดีกับแฟนเก่าอยู่หรือเปล่า','risk',[11,12,7],['VE','RA'],90,'ภพลาภะคือความรักของคู่ ภพวินาศคือเรื่องที่ซ่อน'],
+['แฟนเก่าของแฟนเรา คิดยังไงกับเรา','think',[11,12],['RA'],60,'ใช้ภพลาภะและวินาศ'],
+['การที่เขามาทำดีกับเรา ทั้งที่มีคนของเขาแล้ว เพราะอะไร','think',[5,12],['VE','RA'],60,'ภพปุตตะคือความชอบ ภพวินาศคือความสัมพันธ์ลับ'],
+['แฟนเก่าคิดอย่างไรกับเราตอนนี้','think',[5,12],['VE','MO'],60,'แฟนเก่าใช้ภพปุตตะ (รักเดิม) ประกอบภพวินาศ'],
+['เขายังคิดถึงเราบ้างไหม','think',[5,12],['MO','VE'],60,'จันทร์คือความคิดถึง'],
+['เขามีคนใหม่แล้วหรือยัง','yes',[11,7],['VE'],90,'ภพลาภะคือความรักใหม่ของอีกฝ่าย'],
+['ถ้ากลับไปคบกับแฟนเก่าจะดีไหม','yes',[5,7],['JU','VE'],180,'ภพปุตตะไปสู่ปัตนิ ดาวถอยหลังบอกการกลับมา'],
+['เขาจะกลับมาไหม','back',[5,7],['VE','ME','MA'],180,'ศุกร์ พุธ อังคาร ถอยหลัง หรือพฤหัสจรภพปัตนิ บอกคนเก่ากลับมา'],
+['แฟนเก่ากลับมาคุย ตอนนี้เขาคิดอะไรอยู่','think',[5,7],['VE','ME'],60,'ภพปุตตะและพุธ (การติดต่อ)'],
+['ที่ผ่านมาทั้งหมดที่เกิดขึ้น คืออะไร','lesson',[5,7,12],[],0,'ดาวในภพปุตตะ ปัตนิ วินาศ ของดวงเดิม คือบทเรียนเรื่องรัก'],
+['ทำยังไงให้ตัวเอง move on ต่อไปได้','moveon',[1,12],['JU','KE'],180,'ภพวินาศคือการปล่อยวาง พฤหัสจรช่วยเยียวยา']]],
+['บ้าน','สุขภาพ ที่อยู่ การเดินทาง (หมวดเพิ่ม)','<path d="M3 11l9-7 9 7M5 10v10h14V10"/><path d="M10 20v-5h4v5"/>',[
+['สุขภาพปีนี้เป็นอย่างไร ต้องระวังอะไร','year',[1,6,8],['SU','MO'],365,'ภพตนุคือร่างกาย ภพอริคือโรค ภพมรณะคืออุบัติเหตุ'],
+['ควรระวังโรคหรือส่วนไหนของร่างกาย','body',[6,1],[],0,'ราศีของภพอริและดาวในภพอริ'],
+['ควรย้ายบ้านไหม ช่วงไหนดี','when',[4,12,9],['JU','SA'],540,'ภพพันธุคือบ้าน ภพวินาศคือการย้ายออก'],
+['จะซื้อบ้านหรือคอนโดได้เมื่อไร','when',[4,11,2],['JU','SA'],720,'พฤหัสหรือเสาร์จรหนุนภพพันธุ'],
+['จะได้เดินทางไปต่างประเทศไหม','when',[9,12,3],['RA','JU'],540,'ภพศุภะคือต่างแดน ราหูคือต่างชาติ'],
+['ไปทำงานต่างประเทศจะรุ่งไหม','yes',[9,10,12],['RA','JU'],365,'ภพศุภะ กัมมะ วินาศ (ไกลบ้าน)'],
+['มีคดีความ จะชนะไหม','yes',[6,7,9],['JU','MA'],365,'ภพอริคือคดี ภพปัตนิคือคู่กรณี ภพศุภะคือศาล'],
+['สอบหรือเรียนต่อจะได้ไหม','yes',[9,5,4],['JU','ME'],365,'ภพศุภะคือการเรียนสูง พุธคือสติปัญญา']]]];
+const I={user:'<circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/>',book:'<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M8 7h7M8 11h7"/>',clock:'<circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/>',ok:'<circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/>',no:'<circle cx="12" cy="12" r="9"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/>',wn:'<path d="M12 3.5l9 16H3z"/><path d="M12 10v4.5M12 17.2h.01"/>',q:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .8-1 1.5v.7M12 17h.01"/>',bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/>',chart:'<path d="M4 20V4M4 20h16"/><path d="M7 16l4-5 3 3 5-7"/>',star:'<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>',dot:'<circle cx="12" cy="12" r="3.5"/>',cal:'<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/>'};
+const ic=(n,c,s)=>`<svg viewBox="0 0 24 24" width="${s||18}" height="${s||18}" style="width:${s||18}px!important;height:${s||18}px!important;flex:none" fill="none" stroke="${c||'currentColor'}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${I[n]||n}</svg>`;
+const tag=(t,c)=>`<span class="kh8t" style="--c:${c}">${t}</span>`;
+const pl=(k,tr)=>`<span class="kh8pl${tr?' t':''}" style="--c:${PCL[k]||GR}">${td(NUM[k])}</span>`;
+const card=(c,icn,t,b)=>`<div class="kh8c" style="border-left-color:${c}"><h4>${ic(icn,c)} ${t}</h4>${b}</div>`;
+const nrm=x=>((x%360)+360)%360, sg=x=>Math.floor(nrm(x)/30), cnt=(a,b)=>((b-a)%12+12)%12+1;
+const MO_=['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'], MOF=['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม'];
+const fdt=t=>`${td(t.getDate())} ${MO_[t.getMonth()]} ${td(t.getFullYear()+543)}`;
+const ymd=(a,b)=>{ let y=b.getFullYear()-a.getFullYear(), m=b.getMonth()-a.getMonth(), d=b.getDate()-a.getDate(); if(d<0){ m--; d+=new Date(b.getFullYear(),b.getMonth(),0).getDate(); } if(m<0){ y--; m+=12; } return [y,m,d]; };
+const ymdT=([y,m,d])=>[y?`${td(y)} ปี`:'',m?`${td(m)} เดือน`:'',`${td(d)} วัน`].filter(Boolean).join(' ');
+const left=(t,now)=>+t<=+now?'ช่วงนี้':'อีก '+ymdT(ymd(now,t));
+const age=(bt,t)=>bt?ymdT(ymd(bt,t)):'—';
+const sd=(k,lon)=>{ try{ return std(k,lon)||''; }catch(_){ return ''; } }, good=s=>/อุจจ์|เกษตร|มหาจักร|ราชาโชค/.test(s), bad=s=>/นิจ|ประ/.test(s);
+function posAll(t){ const o={}; try{ const h=horaOf(t); KA.forEach(k=>{ try{ o[k]=posH(h,k); }catch(_){ } }); }catch(_){ } return o; }
+function ctx(){ const W=typeof WSTATE!=='undefined'?WSTATE:null; let T; try{ T=getTransit(); }catch(_){ } if(!T||isNaN(T)) T=new Date(); const o={T}; if(W&&W.nat&&W.nat.pos){ o.N=W.nat2||W.nat.pos; o.L=sg(o.N.LA); o.bt=new Date(+W.bt); try{ o.TK=taksaNatal(o.bt).m; }catch(_){ o.TK={}; } }
+o.TR=posAll(T); try{ o.SP=chartAt(T,W.lat,W.lon).spd; }catch(_){ o.SP={}; } try{ const s=sevaya(o.bt,T); o.SV=s.now?P2K[s.now.p]:null; o.SVe=s.now?s.now.e:null; }catch(_){ } return o; }
+const roleOf=(X,k)=>Object.keys(X.TK||{}).find(r=>X.TK[r]===NUM[k])||'';
+const lordOf=(X,h)=>LRD[(X.L+h-1)%12], hOf=(X,lon)=>cnt(X.L,sg(lon));
+function natH(X,h){ const k=lordOf(X,h), lh=hOf(X,X.N[k]), s=sd(k,X.N[k]), r=roleOf(X,k), inH=KA.filter(q=>X.N[q]!=null&&hOf(X,X.N[q])===h), why=[]; let sc=0;
+if([6,8,12].includes(lh)){ sc-=2; why.push([-1,`เจ้าภพ${HN[h-1]} (${TN[k]}) ตกภพ${HN[lh-1]} เรื่องนี้มีอุปสรรค`]); } else if([1,4,5,7,9,10,11].includes(lh)){ sc+=2; why.push([1,`เจ้าภพ${HN[h-1]} (${TN[k]}) อยู่ภพ${HN[lh-1]} ซึ่งเป็นภพดี`]); }
+if(good(s)){ sc+=2; why.push([1,`${TN[k]}เป็น${s} มีกำลัง`]); } else if(bad(s)){ sc-=2; why.push([-1,`${TN[k]}เป็น${s} อ่อนกำลัง`]); }
+if(['ศรี','เดช','มนตรี'].includes(r)){ sc+=1; why.push([1,`${TN[k]}เป็น${r}ของเจ้าชะตา`]); } else if(r==='กาลกิณี'){ sc-=2; why.push([-1,`${TN[k]}เป็นกาลกิณีของเจ้าชะตา`]); }
+inH.forEach(q=>{ if(BEN.includes(q)){ sc+=1; why.push([1,`${TN[q]}เดิมอยู่ภพ${HN[h-1]} ช่วยหนุน`]); } else if(MAL.includes(q)&&q!=='SU'){ sc-=1; why.push([-1,`${TN[q]}เดิมอยู่ภพ${HN[h-1]} ทำให้มีแรงกดดัน`]); } });
+return {sc,why,k,lh,s,r,inH}; }
+function trH(X,P,h,sp){ let sc=0; const why=[], s0=(X.L+h-1)%12, opp=(s0+6)%12; KA.forEach(k=>{ if(P[k]==null) return; const s=sg(P[k]);
+if(s===s0){ const v={JU:3,VE:1.2,ME:1,MO:.3,SA:-2,RA:-1.5,MA:-1,KE:-1,SU:-.3,UR:-.3}[k]||0; sc+=v; if(Math.abs(v)>=1) why.push([v>0?1:-1,`${TN[k]}จรเข้าภพ${HN[h-1]}`]); }
+else if(s===opp&&k==='JU'){ sc+=1.5; why.push([1,`พฤหัสจรเล็งภพ${HN[h-1]} ส่งแสงหนุน`]); } else if(s===opp&&k==='SA'){ sc-=.8; } });
+const k=lordOf(X,h); if(P[k]!=null){ const lh=hOf(X,P[k]); if([6,8,12].includes(lh)){ sc-=.8; } else if([1,5,9,10,11].includes(lh)){ sc+=.8; } if(sp&&sp[k]<0&&!['RA','KE'].includes(k)){ why.push([0,`${TN[k]} เจ้าภพ${HN[h-1]} กำลังเดินถอยหลัง เรื่องเก่าวนกลับมา ทบทวนก่อนตัดสินใจ`]); } }
+return {sc,why}; }
+const scoreAt=(X,H,t)=>{ const P=posAll(t); return H.reduce((a,h,i)=>a+trH(X,P,h).sc*(i===0?1:.6),0); };
+const WC={}; function windows(X,H,from,days){ const key=H.join(',')+'|'+days+'|'+Math.floor(+from/864e5); if(WC[key]) return WC[key]; const step=days>200?3:1, pts=[];
+for(let d=0;d<=days;d+=step){ const t=new Date(+from+d*864e5); pts.push([t,scoreAt(X,H,t)]); }
+const mx=Math.max(...pts.map(p=>p[1])), th=Math.max(1,mx*.65), w=[]; let cur=null;
+pts.forEach(([t,s])=>{ if(s>=th){ if(!cur) cur={a:t,b:t,s}; else { cur.b=t; cur.s=Math.max(cur.s,s); } } else if(cur){ w.push(cur); cur=null; } }); if(cur) w.push(cur);
+const r={pts,w:w.sort((a,b)=>b.s-a.s).slice(0,4).sort((a,b)=>a.a-b.a),mx}; WC[key]=r; return r; }
+function spark(pts,T){ const W=640, H=70, n=pts.length, mn=Math.min(0,...pts.map(p=>p[1])), mx=Math.max(1,...pts.map(p=>p[1])), x=i=>8+i/(n-1)*(W-16), y=v=>H-10-(v-mn)/(mx-mn)*(H-22);
+const d=pts.map((p,i)=>`${i?'L':'M'}${x(i).toFixed(1)} ${y(p[1]).toFixed(1)}`).join(''); let g=`<line x1="8" y1="${y(0)}" x2="${W-8}" y2="${y(0)}" stroke="currentColor" stroke-opacity=".2" stroke-dasharray="3 3"/><path d="${d}L${x(n-1)} ${y(mn)}L8 ${y(mn)}Z" fill="rgba(243,201,74,.15)"/><path d="${d}" fill="none" stroke="${GO}" stroke-width="2"/>`;
+const span=+pts[n-1][0]-+pts[0][0]; for(let i=0;i<n;i+=Math.max(1,Math.round(n/6))){ g+=`<text x="${x(i)}" y="${H}" font-size="9.5" text-anchor="middle" fill="currentColor" opacity=".65">${span>200*864e5?MO_[pts[i][0].getMonth()]:fdt(pts[i][0]).replace(/ ๒๕\S+$/,'')}</text>`; }
+return `<div class="kh8w"><svg class="kh8svg" viewBox="0 0 ${W} ${H+4}">${g}</svg></div>`; }
+function gauge(v){ const p=Math.max(0,Math.min(1,(v+6)/12)), a=Math.PI*(1-p), cx=60, cy=58, r=46, x=cx+r*Math.cos(a), y=cy-r*Math.sin(a), c=v>=2.5?G:v<=-2?B:Y;
+return `<svg viewBox="0 0 120 70" width="120" height="70" style="width:120px!important;height:70px!important;flex:none"><path d="M14 58A46 46 0 0 1 106 58" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="10" stroke-linecap="round"/><path d="M14 58A46 46 0 0 1 ${x.toFixed(1)} ${y.toFixed(1)}" fill="none" stroke="${c}" stroke-width="10" stroke-linecap="round"/><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="5" fill="#fff"/></svg>`; }
+const bullet=w=>`<ul class="qa0w">${w.map(([s,t])=>`<li>${ic(s>0?'ok':s<0?'no':'q',s>0?G:s<0?B:Y,16)}<span>${t}</span></li>`).join('')}</ul>`;
+function answer(X,Q){ const [txt,kind,H,K,win,why]=Q, T=X.T; let html='', verdict=null;
+const nat=H.map(h=>natH(X,h)), tr=H.map(h=>trH(X,X.TR,h,X.SP)), nS=nat.reduce((a,o,i)=>a+o.sc*(i===0?1:.6),0), tS=tr.reduce((a,o,i)=>a+o.sc*(i===0?1:.6),0);
+const sv=X.SV, svR=sv?roleOf(X,sv):''; let svT=''; if(sv){ const hs=hOf(X,X.N[sv]); const hit=H.includes(hs)||H.some(h=>lordOf(X,h)===sv); svT=`ตอนนี้${TN[sv]}เสวยอายุ (${svR||'—'})${hit?' และเกี่ยวกับเรื่องนี้โดยตรง':''}`; }
+const svS=sv?((['ศรี','เดช','มนตรี','มูละ'].includes(svR)?1:svR==='กาลกิณี'?-1.5:0)+((H.includes(hOf(X,X.N[sv]))||H.some(h=>lordOf(X,h)===sv))?.5:0)):0;
+const total=nS*.55+tS*.8+svS, lvl=total>=2.5?'g':total<=-2?'b':'y', LV={g:['แนวโน้มดี',G],y:['ปานกลาง ต้องเลือกจังหวะ',Y],b:['ยังไม่เป็นใจ ควรระวัง',B]}[lvl];
+const facts=[...nat.flatMap(o=>o.why).slice(0,4),...tr.flatMap(o=>o.why).slice(0,4)]; if(svT) facts.push([svS>0?1:svS<0?-1:0,svT]);
+const head=(label)=>`<div class="qa0h">${gauge(total)}<div><b style="color:${LV[1]}">${label||LV[0]}</b><small>ดวงเดิม ${td(nS.toFixed(1))} · ดวงจร ${td(tS.toFixed(1))} · เสวยอายุ ${td(svS.toFixed(1))}</small><div class="qa0hs">${H.map(h=>`<span>${td(h)} ${HN[h-1]}</span>`).join('')}</div></div></div>`;
+const timing=(days,lab)=>{ const W=windows(X,H,T,days); return `<p class="qa0t">${ic('cal',GO,16)} <b>${lab||'ช่วงเวลาที่ดาวจรหนุนเรื่องนี้'}</b></p>${spark(W.pts,T)}${W.w.length?`<div class="qa0win">${W.w.map(w=>`<div><b>${fdt(w.a)}${+w.b-+w.a>2*864e5?' – '+fdt(w.b):''}</b><small>${left(w.a,T)} · อายุ ${age(X.bt,w.a)}</small></div>`).join('')}</div>`:'<p class="note">ไม่พบช่วงที่เด่นชัดในระยะที่ค้น</p>'}`; };
+const strongest=(list)=>list.filter(k=>X.N[k]!=null).map(k=>{ const s=sd(k,X.N[k]), h=hOf(X,X.N[k]), r=roleOf(X,k); return {k,v:(good(s)?2:bad(s)?-2:0)+([1,4,7,10,5,9,11].includes(h)?1:[6,8,12].includes(h)?-1:0)+(['ศรี','มนตรี','เดช'].includes(r)?1.5:r==='กาลกิณี'?-2:0),h,s,r}; }).sort((a,b)=>b.v-a.v);
+const plist=(arr,map,lab)=>`<div class="qa0p">${arr.map(o=>`<div style="--c:${PCL[o.k]}">${pl(o.k)}<div><b>${TN[o.k]}${o.note?' · '+o.note:''}</b><p>${map[o.k]}</p></div></div>`).join('')}</div>`;
+switch(kind){
+case 'yes': case 'risk': { const lab=kind==='risk'?(total<=-2?'มีเกณฑ์ปัญหา ควรระวังมาก':total>=2.5?'ความเสี่ยงต่ำ':'มีเรื่องต้องระวังบางจุด'):null; html=head(lab)+bullet(facts)+timing(win||180,kind==='risk'?'ช่วงที่คลี่คลายหรือดาวหนุน':null);
+if(kind==='risk'){ const m=KA.filter(k=>MAL.includes(k)&&X.TR[k]!=null&&H.includes(hOf(X,X.TR[k]))); if(m.length) html+=`<p class="qa0t">${ic('wn',B,16)} <b>สิ่งที่ต้องระวังจากดาวจร</b></p>`+plist(m.map(k=>({k,note:'จรภพ'+HN[hOf(X,X.TR[k])-1]})),DRAG); }
+break; }
+case 'when': case 'month': case 'year': { const W=windows(X,H,T,win||365); html=head()+bullet(facts.slice(0,5));
+if(kind==='month'||kind==='year'){ const mon={}; W.pts.forEach(([t,s])=>{ const k=t.getFullYear()*12+t.getMonth(); (mon[k]=mon[k]||[]).push(s); }); const ms=Object.keys(mon).slice(0,12).map(k=>[+k,mon[k].reduce((a,b)=>a+b,0)/mon[k].length]); const mx=Math.max(...ms.map(m=>Math.abs(m[1])),1);
+html+=`<p class="qa0t">${ic('chart',GO,16)} <b>คะแนนรายเดือน ๑๒ เดือน</b></p><div class="qa0m">${ms.map(([k,v])=>`<div><i style="height:${8+Math.abs(v)/mx*60}px;background:${v>=1?G:v<=-1?B:Y}"></i><small>${MO_[k%12]}</small></div>`).join('')}</div>`;
+const best=ms.slice().sort((a,b)=>b[1]-a[1]).slice(0,2), worst=ms.slice().sort((a,b)=>a[1]-b[1])[0]; html+=`<p>${tag('เดือนเด่น',G)} ${best.map(([k])=>MOF[k%12]+' '+td(Math.floor(k/12)+543)).join(' และ ')} · ${tag('เดือนที่ควรระวัง',B)} ${MOF[worst[0]%12]} ${td(Math.floor(worst[0]/12)+543)}</p>`; }
+html+=timing(win||365,kind==='when'?'ช่วงที่มีเกณฑ์':null); break; }
+case 'think': { const kk=[lordOf(X,H[0]),...K].filter((v,i,a)=>a.indexOf(v)===i); const tTr=KA.filter(k=>X.TR[k]!=null&&hOf(X,X.TR[k])===H[0]);
+html=head(total>=2.5?'ความรู้สึกเป็นบวก':total<=-2?'ยังมีระยะห่าง':'รู้สึกดีแต่ยังลังเล')+`<p class="qa0t">${ic('user',GO,16)} <b>ภาพความคิดของอีกฝ่ายจากดาวที่เกี่ยวข้อง</b></p>`+plist(kk.map(k=>({k,note:k===kk[0]?'เจ้าภพ'+HN[H[0]-1]:''})),THINK)+(tTr.length?`<p class="qa0t">${ic('clock',GO,16)} <b>ตอนนี้ดาวจรในภพ${HN[H[0]-1]}</b></p>`+plist(tTr.map(k=>({k,note:'จร'})),THINK):'')+bullet(facts.slice(0,5)); break; }
+case 'who': { const ks=[...new Set(H.flatMap(h=>[lordOf(X,h),...KA.filter(k=>X.N[k]!=null&&hOf(X,X.N[k])===h&&MAL.includes(k))]))]; html=head('ลักษณะคนที่อาจสร้างปัญหา')+plist(ks.map(k=>({k,note:roleOf(X,k)==='กาลกิณี'?'กาลกิณีของคุณ':''})),PERSON)+`<p class="note">ดูคนในทีมที่มีลักษณะตรงกับดาวเหล่านี้ โดยเฉพาะดาวกาลกิณีของคุณ (${TN[P2K[X.TK['กาลกิณี']]]||'—'}) คนที่เกิดวัน${(DAYC[P2K[X.TK['กาลกิณี']]]||['—'])[0]}มักขัดกับเรา</p>`; break; }
+case 'career': case 'career2': { const base=kind==='career'?[lordOf(X,10),...KA.filter(k=>X.N[k]!=null&&hOf(X,X.N[k])===10)]:strongest([lordOf(X,10),lordOf(X,11),lordOf(X,2),P2K[X.TK['ศรี']]]).map(o=>o.k); const ks=[...new Set(base)].slice(0,4);
+html=head(kind==='career'?`ราศีภพกัมมะ: ${SN[(X.L+9)%12]}`:'อาชีพที่ดาวหนุนมากที่สุด')+plist(ks.map(k=>({k,note:k===lordOf(X,10)?'เจ้าภพกัมมะ':roleOf(X,k)})),CAREER)+bullet(nat[0].why); break; }
+case 'invest': case 'side': { const ks=strongest([lordOf(X,5),lordOf(X,11),lordOf(X,2),lordOf(X,3),...KA.filter(k=>X.N[k]!=null&&H.includes(hOf(X,X.N[k])))]).slice(0,3).map(o=>o.k);
+html=head()+plist(ks.map(k=>({k,note:roleOf(X,k)})),kind==='invest'?INVEST:CAREER)+bullet(facts.slice(0,5))+timing(365,'จังหวะที่ดาวจรหนุน'); break; }
+case 'improve': case 'start': case 'now': case 'confidence': case 'improve7': case 'support': { let ks;
+if(kind==='improve') ks=strongest(['ศรี','เดช','มนตรี'].map(r=>P2K[X.TK[r]]).filter(Boolean)).slice(0,3).map(o=>o.k);
+else if(kind==='start'){ const k=lordOf(X,1), lh=hOf(X,X.N[k]); ks=[k]; html=`<p class="qa0big">${ic('bulb',GO,22)} เริ่มที่เรื่อง<b>${HM[lh-1]}</b> (ภพ${HN[lh-1]}) เพราะเจ้าลัคนา ${TN[k]} ไปอยู่ภพนั้น</p>`; }
+else if(kind==='now') ks=[sv,X.TR.JU!=null?'JU':null].filter(Boolean);
+else if(kind==='confidence') ks=['SU',lordOf(X,1),P2K[X.TK['ศรี']]].filter((v,i,a)=>v&&a.indexOf(v)===i);
+else ks=[lordOf(X,7),'VE'].filter((v,i,a)=>a.indexOf(v)===i);
+html=head()+(html||'')+plist(ks.map(k=>({k,note:roleOf(X,k)})),IMPROVE);
+if(kind==='now'&&X.TR.JU!=null){ const jh=hOf(X,X.TR.JU); html+=`<p>${ic('star',GO,16)} พฤหัสจรอยู่ภพ${HN[jh-1]} เรื่อง<b>${HM[jh-1]}</b>ได้รับการหนุนช่วงนี้${X.SVe?` · ดาวเสวยอายุเปลี่ยน ${fdt(X.SVe)} (${left(X.SVe,T)})`:''}</p>`; }
+if(kind==='confidence'){ const s=P2K[X.TK['ศรี']]; if(s&&DAYC[s]) html+=`<p>${ic('star',GO,16)} เสริมด้วยวัน<b>${DAYC[s][0]}</b> สี<b>${DAYC[s][1]}</b> ซึ่งเป็นศรีของคุณ เริ่มเรื่องสำคัญในวันนี้ และใช้สีนี้</p>`; }
+if(kind==='support'){ const k=lordOf(X,7), lh=hOf(X,X.N[k]); html+=`<p class="qa0big">${ic('star',GO,22)} คู่จะช่วยเสริมเรื่อง<b>${HM[lh-1]}</b> (เจ้าภพปัตนิอยู่ภพ${HN[lh-1]})</p>`; }
+html+=bullet(facts.slice(0,4)); break; }
+case 'drag': case 'drag7': { const kal=P2K[X.TK['กาลกิณี']], nij=KA.filter(k=>X.N[k]!=null&&bad(sd(k,X.N[k]))), malH=KA.filter(k=>X.N[k]!=null&&MAL.includes(k)&&(kind==='drag7'?[7,5]:[1,6,8,12]).includes(hOf(X,X.N[k])));
+const ks=[...new Set([kal,...nij,...malH].filter(Boolean))].slice(0,4); html=head('ตัวถ่วงที่ควรรู้')+plist(ks.map(k=>({k,note:k===kal?'กาลกิณี':nij.includes(k)?'อ่อนกำลัง':'อยู่ภพ'+HN[hOf(X,X.N[k])-1]})),DRAG)+`<p class="note">แก้ด้วยการเลี่ยงพฤติกรรมตามดาว และหลีกเลี่ยงวันและสีของดาวกาลกิณี (${kal?DAYC[kal].join(' สี'):'—'})</p>`; break; }
+case 'neglect': { const all=[2,3,4,5,7,9,10,11].map(h=>({h,o:natH(X,h)})).sort((a,b)=>a.o.sc-b.o.sc).slice(0,3); html=`<p class="qa0big">${ic('bulb',GO,22)} เรื่องที่ควรกลับมาโฟกัส</p><div class="qa0p">${all.map(({h,o})=>`<div style="--c:${o.sc<0?B:Y}"><span class="qa0n">${td(h)}</span><div><b>${HM[h-1]} (ภพ${HN[h-1]})</b><p>${o.why.map(w=>w[1]).join(' · ')||'เจ้าภพไม่มีแรงหนุน'}</p></div></div>`).join('')}</div>`; break; }
+case 'balance': case 'pair': { const a=lordOf(X,H[0]), b=lordOf(X,H[1]); let pr=''; try{ const x=Math.min(NUM[a],NUM[b]), y=Math.max(NUM[a],NUM[b]); pr=PAIR[x+'-'+y]||''; }catch(_){ } const same=a===b, sa=sg(X.N[a]), sb=sg(X.N[b]), d=cnt(sa,sb), rel=same?'ดาวดวงเดียวกัน':d===1?'อยู่ร่วมราศี':d===7?'เล็งกัน':[5,9].includes(d)?'ตรีโกณ ส่งเสริม':[4,10].includes(d)?'ทำมุมฉาก ขัดกัน':'ไม่ได้สัมพันธ์ตรง';
+const ok=same||/มิตร|ธาตุ|สมพล/.test(pr)&&!/ศัตรู/.test(pr)||[1,5,9].includes(d), c=ok?G:/ศัตรู/.test(pr)||[4,10].includes(d)?B:Y;
+html=`<div class="qa0h">${gauge(ok?4:c===B?-3:0)}<div><b style="color:${c}">${ok?'เข้ากันได้ดี':c===B?'มีความขัดแย้งที่ต้องปรับ':'ปานกลาง'}</b><small>เจ้าภพ${HN[H[0]-1]} ${TN[a]} กับเจ้าภพ${HN[H[1]-1]} ${TN[b]} · ${rel}${pr?' · คู่'+pr:''}</small></div></div>`+plist([{k:a,note:'เจ้าภพ'+HN[H[0]-1]},{k:b,note:'เจ้าภพ'+HN[H[1]-1]}].filter((v,i,x)=>x.findIndex(z=>z.k===v.k)===i),kind==='balance'?IMPROVE:THINK)+bullet(facts.slice(0,4)); break; }
+case 'back': { const rv=['VE','ME','MA'].filter(k=>X.SP&&X.SP[k]<0); html=head(rv.length?'มีเกณฑ์คนเก่าวนกลับมา':total>=2.5?'มีโอกาสกลับมา':'ยังไม่เห็นเกณฑ์ชัด')+(rv.length?`<p>${rv.map(k=>tag(TN[k]+'ถอยหลัง',A)).join(' ')} ดาวถอยหลังบอกเรื่องเก่าวนกลับ</p>`:'')+bullet(facts.slice(0,5))+timing(win,'ช่วงที่มีเกณฑ์กลับมาติดต่อ'); break; }
+case 'lesson': { const ks=KA.filter(k=>X.N[k]!=null&&H.includes(hOf(X,X.N[k]))); html=`<p class="qa0big">${ic('bulb',GO,22)} บทเรียนเรื่องความรักจากดวงเดิม</p>`+(ks.length?plist(ks.map(k=>({k,note:'อยู่ภพ'+HN[hOf(X,X.N[k])-1]})),DRAG):`<p>ภพปุตตะ ปัตนิ วินาศ ไม่มีดาวเดิม เรื่องที่ผ่านมาเป็นไปตามจังหวะดาวจร ไม่ใช่กรรมเก่าของดวง</p>`)+bullet(nat.flatMap(o=>o.why).slice(0,4)); break; }
+case 'moveon': { html=head('ทางออกและการเยียวยา')+plist([{k:'JU',note:'ผู้เยียวยา'},{k:lordOf(X,1),note:'เจ้าลัคนา'}],IMPROVE)+timing(win,'ช่วงที่ใจเบาและเริ่มใหม่ได้'); break; }
+case 'body': { const s6=(X.L+5)%12, ks=KA.filter(k=>X.N[k]!=null&&hOf(X,X.N[k])===6); const BODY=['ศีรษะ ใบหน้า','คอ ไหล่ แขน','ทรวงอก ปอด','กระเพาะอาหาร อก','หลัง หัวใจ เอว','ท้อง ลำไส้','ท้องน้อย ไต','อวัยวะสืบพันธุ์','ตะโพก โคนขา','เข่า','น่อง ข้อเท้า','เท้า'];
+html=`<p class="qa0big">${ic('wn',B,22)} ภพอริอยู่ราศี${SN[s6]} ระวัง<b>${BODY[s6]}</b></p>`+(ks.length?plist(ks.map(k=>({k,note:'อยู่ภพอริ'})),DRAG):'')+`<p>เจ้าภพอริ ${TN[lordOf(X,6)]} อยู่ราศี${SN[sg(X.N[lordOf(X,6)])]} ระวัง${BODY[sg(X.N[lordOf(X,6)])]}ด้วย</p>`; break; }
+default: html=head()+bullet(facts); }
+return `<div class="qa0a">${html}<p class="qa0why">${ic('book',GD,15)} หลักพยากรณ์: ${Q[5]}</p></div>`; }
+let CAT=0, OPEN={};
+function tAsk(X){ const C=CATS[CAT]; return `<div class="qa0c">${CATS.map((c,i)=>`<button type="button" data-qac="${i}" class="${i===CAT?'on':''}">${ic(c[2],i===CAT?GD:null,20)}<span>${c[1]}</span></button>`).join('')}</div>`+`<div class="qa0l">${C[3].map((q,i)=>{ const k=CAT+'-'+i, op=OPEN[k]; let body=''; if(op){ try{ body=answer(X,q); }catch(e){ console.error(e); body='<p class="note">คำนวณไม่สำเร็จ</p>'; } } return `<div class="qa0q ${op?'on':''}"><button type="button" data-qaq="${k}">${ic('q',op?GD:null,18)}<span>${td(i+1)}. ${q[0]}</span>${ic(op?'<path d="M6 15l6-6 6 6"/>':'<path d="M6 9l6 6 6-6"/>',null,16)}</button>${body}</div>`; }).join('')}</div><p class="note">กดคำถามเพื่อดูคำตอบ ระบบคำนวณจากดวงเดิม ดวงจร ณ เวลาที่ตั้งไว้ และดาวเสวยอายุ</p>`; }
+function tRule(){ const map=CATS.map(c=>`<div class="kh8tw"><table class="kh8tb"><tr><th colspan="2">${ic(c[2],GD,16)} ${c[1]}</th></tr>${c[3].map(q=>`<tr><td>${q[0]}</td><td>${q[2].map(h=>HN[h-1]).join(' ')||'—'}</td></tr>`).join('')}</table></div>`).join('');
+const st=[['ดวงเดิม (พื้นดวง)','เจ้าภพที่เกี่ยวข้องตกภพดี (๑ ๔ ๕ ๗ ๙ ๑๐ ๑๑) +๒ ตกภพร้าย (๖ ๘ ๑๒) −๒ · มาตรฐานอุจจ์ เกษตร มหาจักร ราชาโชค +๒ นิจ ประ −๒ · เป็นศรี เดช มนตรี +๑ กาลกิณี −๒ · ศุภเคราะห์ในภพ +๑ บาปเคราะห์ −๑'],['ดวงจร (จังหวะ)','พฤหัสจรเข้าภพ +๓ เล็งภพ +๑.๕ · ศุกร์ +๑.๒ พุธ +๑ · เสาร์ −๒ ราหู −๑.๕ อังคาร เกตุ −๑ · เจ้าภพจรเข้าภพดี +๐.๘ ภพร้าย −๐.๘ · เจ้าภพถอยหลัง เรื่องเก่าวนกลับ'],['เสวยอายุ','ดาวเสวยอายุเป็นศรี เดช มนตรี มูละ +๑ กาลกิณี −๑.๕ ถ้าเกี่ยวกับภพในคำถาม +๐.๕'],['รวมผล','ดวงเดิม × ๐.๕๕ + ดวงจร × ๐.๘ + เสวยอายุ · ≥ ๒.๕ แนวโน้มดี · ≤ −๒ ควรระวัง · ภพแรกในคำถามน้ำหนักเต็ม ภพรองน้ำหนัก ๐.๖'],['ช่วงเวลา','ไล่คะแนนดวงจรรายวันตามระยะของคำถาม (๓ เดือนถึง ๒ ปี) ช่วงที่คะแนนเกิน ๖๕% ของค่าสูงสุดคือจังหวะดี บอกวัน อายุ และเวลาที่เหลือ'],['คำถามเรื่องบุคคล','ใช้ภพต่อภพ เช่น พ่อแม่ของคู่ = ภพที่ ๔ จากภพปัตนิ (ภพกัมมะ) · ความรักของคู่ = ภพที่ ๕ จากภพปัตนิ (ภพลาภะ) · ลักษณะคนดูจากเจ้าภพและดาวในภพ']];
+return card(GD,'book','หลักพยากรณ์ของโหมดนี้',`<div class="qa0r">${st.map(([a,b],i)=>`<div><span>${td(i+1)}</span><div><b>${a}</b><p>${b}</p></div></div>`).join('')}</div>`)+card(GO,'q','ภพที่ใช้ในแต่ละคำถาม',map)+card(Y,'wn','ข้อควรรู้',`<p>คำตอบเป็นแนวโน้มจากหลักโหราศาสตร์ ใช้ประกอบการตัดสินใจ ไม่ใช่คำตัดสินชะตา · คำถามเกี่ยวกับความคิดของผู้อื่นตอบจากดาวที่แทนบุคคลนั้นในดวงของเรา ไม่ได้อ่านใจคนจริง · หมวดที่ ๖ สุขภาพ ที่อยู่ การเดินทาง ออกแบบเพิ่มตามหลักภพเดียวกัน</p>`); }
+let TAB='ask'; const TABS=[['ask','q','ถามดวง ๖ หมวด'],['rule','book','หลักพยากรณ์']];
+function render(){ const out=document.getElementById('qa370Out'); if(!out) return; let X={}; try{ X=ctx(); }catch(e){ console.error(e); } let b='';
+if(!X.N&&TAB==='ask') b='<p class="note">ผูกดวงก่อน แล้วกลับมาที่หน้านี้</p>'; else try{ b=TAB==='ask'?tAsk(X):tRule(); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; }
+out.innerHTML=`<h3 class="kh8H">${ic('q',GD,22)} ถามดวง ๖ หมวด</h3><p class="note">ตอบคำถามยอดนิยมทีละข้อ จากดวงเดิม ดวงจร และดาวเสวยอายุ พร้อมเหตุผล ช่วงเวลา อายุ และเวลาที่เหลือ</p><div class="kh8tabs">${TABS.map(([k,i,t])=>`<button type="button" data-qab="${k}" class="${TAB===k?'on':''}">${ic(i,TAB===k?GD:null,20)}<span>${t}</span></button>`).join('')}</div>${b}`; }
+document.addEventListener('click',ev=>{ const t=ev.target.closest&&ev.target.closest('#qa370Out [data-qab],#qa370Out [data-qac],#qa370Out [data-qaq]'); if(!t) return; if(t.dataset.qab) TAB=t.dataset.qab; if(t.dataset.qac){ CAT=+t.dataset.qac; } if(t.dataset.qaq){ OPEN[t.dataset.qaq]=!OPEN[t.dataset.qaq]; } const y=scrollY; render(); scrollTo(0,y); });
+if(!document.getElementById('qa370css')){ const st=document.createElement('style'); st.id='qa370css'; const kc=document.getElementById('kh358css'); st.textContent=(kc?kc.textContent.split('#kh358Out ').join('#qa370Out '):'')+`
+#qa370Out .qa0c{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:8px 0 12px}#qa370Out .qa0c button{display:flex;gap:8px;align-items:center;justify-content:flex-start;border:1px solid var(--line);background:var(--panel);color:inherit;border-radius:12px;padding:10px 12px;font:inherit;font-size:13.5px;cursor:pointer;width:auto!important;margin:0!important}#qa370Out .qa0c button.on{border-color:var(--gold);color:var(--gold);background:color-mix(in srgb,var(--gold) 10%,var(--panel))}
+#qa370Out .qa0q{border:1px solid var(--line);border-radius:12px;margin:6px 0;overflow:hidden}#qa370Out .qa0q.on{border-color:var(--gold)}#qa370Out .qa0q>button{display:flex;gap:10px;align-items:center;width:100%!important;margin:0!important;text-align:left;background:none;border:0;color:inherit;font:inherit;font-size:14.5px;padding:10px 12px;cursor:pointer}#qa370Out .qa0q>button span{flex:1}
+#qa370Out .qa0a{padding:4px 14px 12px;border-top:1px dashed var(--line)}#qa370Out .qa0h{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:8px 0}#qa370Out .qa0h b{font-size:17px;display:block}#qa370Out .qa0h small{opacity:.7;font-size:12px}#qa370Out .qa0hs{display:flex;gap:4px;flex-wrap:wrap;margin-top:4px}#qa370Out .qa0hs span{font-size:11.5px;border:1px solid var(--line);border-radius:999px;padding:1px 8px}
+#qa370Out .qa0w{list-style:none;padding:0;margin:6px 0}#qa370Out .qa0w li{display:flex;gap:8px;align-items:flex-start;padding:4px 0;font-size:13.5px}#qa370Out .qa0t{display:flex;gap:6px;align-items:center;margin:10px 0 4px}#qa370Out .qa0win{display:flex;flex-wrap:wrap;gap:6px}#qa370Out .qa0win>div{border:1px solid ${GO};border-radius:10px;padding:5px 10px;display:flex;flex-direction:column;background:rgba(243,201,74,.08)}#qa370Out .qa0win small{opacity:.75;font-size:11.5px}
+#qa370Out .qa0p{display:grid;gap:6px;margin:6px 0}#qa370Out .qa0p>div{display:flex;gap:10px;align-items:center;border:1px solid var(--line);border-left:4px solid var(--c);border-radius:10px;padding:7px 10px}#qa370Out .qa0p p{margin:2px 0 0;font-size:13px}#qa370Out .qa0n{width:26px;height:26px;border-radius:50%;background:var(--c);color:#111;display:grid;place-items:center;font-weight:700;flex:none}
+#qa370Out .qa0big{display:flex;gap:8px;align-items:center;font-size:15px;margin:8px 0}#qa370Out .qa0m{display:flex;gap:4px;align-items:flex-end;height:90px;margin:6px 0}#qa370Out .qa0m>div{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:3px}#qa370Out .qa0m i{display:block;width:70%;border-radius:4px 4px 1px 1px}#qa370Out .qa0m small{font-size:10px;opacity:.7}
+#qa370Out .qa0why{font-size:12.5px;opacity:.8;display:flex;gap:6px;align-items:flex-start;margin-top:10px;border-top:1px solid var(--line);padding-top:6px}#qa370Out .qa0r{display:grid;gap:8px}#qa370Out .qa0r>div{display:flex;gap:10px;border:1px solid var(--line);border-radius:10px;padding:8px 10px}#qa370Out .qa0r>div>span{width:24px;height:24px;border-radius:50%;background:var(--gold);color:#111;display:grid;place-items:center;font-weight:700;flex:none}#qa370Out .qa0r p{margin:2px 0 0;font-size:13px}#qa370Out .kh8tb td{white-space:normal!important}`; document.head.appendChild(st); }
+return {render};
+})();
