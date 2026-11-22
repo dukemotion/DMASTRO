@@ -5407,7 +5407,64 @@ JU:[
 ['2017-08-25','w','w','เริ่มวิกฤตชาวโรฮีนจาในรัฐยะไข่ ผู้คนหลายแสนอพยพไปบังกลาเทศ'],
 ['2017-09-03','w','w','เกาหลีเหนือทดสอบนิวเคลียร์ครั้งที่ ๖'],
 ['2017-09-19','w','d','แผ่นดินไหวรุนแรงในเม็กซิโก'],
-['2017-09-20','w','d','พายุเฮอริเคนมาเรียถล่มเปอร์โตริโก']],
+['2017-09-20','w','d','พายุเฮอริเคนมาเรียถล่มเปอร์โตริโก'],
+["2003-08-11", "t", "s", "จับกุมฮัมบาลี แกนนำเจมาห์ อิสลามิยาห์ ที่อยุธยา"],
+["2003-08-14", "w", "d", "ไฟฟ้าดับครั้งใหญ่ทั่วภาคตะวันออกเฉียงเหนือของสหรัฐและแคนาดา"],
+["2003-10-15", "w", "x", "จีนส่งมนุษย์อวกาศคนแรกขึ้นสู่อวกาศ (เสินโจว ๕)"],
+["2003-10-20", "t", "p", "ไทยเป็นเจ้าภาพประชุมผู้นำเอเปคที่กรุงเทพฯ"],
+["2003-12-13", "w", "w", "กองทัพสหรัฐจับกุมซัดดัม ฮุสเซน"],
+["2003-12-26", "w", "d", "แผ่นดินไหวที่เมืองบัม อิหร่าน"],
+["2004-01-04", "t", "w", "ปล้นปืนค่ายทหารที่นราธิวาส จุดเริ่มความไม่สงบระลอกใหม่ในชายแดนใต้"],
+["2004-02-04", "w", "x", "ก่อตั้งเฟซบุ๊ก"],
+["2004-03-11", "w", "w", "ระเบิดรถไฟในกรุงมาดริด"],
+["2004-03-12", "t", "s", "ทนายสมชาย นีละไพจิตร ถูกบังคับให้หายตัว"],
+["2004-04-28", "t", "w", "เหตุการณ์มัสยิดกรือเซะ ปัตตานี"],
+["2004-05-01", "w", "p", "สหภาพยุโรปรับสมาชิกใหม่ ๑๐ ประเทศ"],
+["2004-07-03", "t", "s", "เปิดให้บริการรถไฟฟ้ามหานคร (MRT) สายเฉลิมรัชมงคล"],
+["2004-08-13", "w", "g", "เปิดโอลิมปิกเกมส์ที่เอเธนส์"],
+["2004-08-15", "t", "g", "อุดมพร พลศักดิ์ ได้เหรียญทองโอลิมปิก นักกีฬาหญิงไทยคนแรกที่ได้เหรียญทอง"],
+["1991-08-19", "w", "p", "ความพยายามรัฐประหารในสหภาพโซเวียตล้มเหลว"],
+["1991-10-23", "w", "p", "ข้อตกลงสันติภาพปารีส ยุติสงครามกัมพูชา"],
+["1991-12-09", "t", "p", "ประกาศใช้รัฐธรรมนูญ พ.ศ. ๒๕๓๔"],
+["1991-12-25", "w", "p", "สหภาพโซเวียตล่มสลาย"],
+["1992-02-07", "w", "p", "ลงนามสนธิสัญญามาสทริชต์ ก่อตั้งสหภาพยุโรป"],
+["1992-03-22", "t", "p", "เลือกตั้งทั่วไป"],
+["1992-04-06", "w", "w", "สงครามบอสเนียเริ่มขึ้น"],
+["1992-04-07", "t", "p", "พล.อ.สุจินดา คราประยูร เป็นนายกรัฐมนตรี"],
+["1992-04-29", "w", "s", "จลาจลในลอสแอนเจลิส"],
+["1992-05-17", "t", "p", "เหตุการณ์พฤษภาทมิฬ (๑๗–๒๐ พ.ค.)"],
+["1992-06-10", "t", "p", "นายอานันท์ ปันยารชุน เป็นนายกรัฐมนตรีสมัยที่ ๒"],
+["1992-07-25", "w", "g", "เปิดโอลิมปิกเกมส์ที่บาร์เซโลนา"],
+["1992-09-13", "t", "p", "เลือกตั้งทั่วไป ๑๓ กันยายน"],
+["1979-10-26", "w", "r", "ประธานาธิบดีปัก จุง-ฮี ของเกาหลีใต้ถูกลอบสังหาร"],
+["1979-11", "t", "s", "ตั้งศูนย์ผู้อพยพเขาอีด่าง รับชาวกัมพูชาหนีภัยสงคราม"],
+["1979-11-04", "w", "w", "วิกฤตจับตัวประกันที่สถานทูตสหรัฐในเตหะราน"],
+["1979-12-27", "w", "w", "สหภาพโซเวียตบุกอัฟกานิสถาน"],
+["1980-02-29", "t", "p", "พล.อ.เกรียงศักดิ์ ชมะนันทน์ ลาออกจากนายกรัฐมนตรี"],
+["1980-03-03", "t", "p", "พล.อ.เปรม ติณสูลานนท์ เป็นนายกรัฐมนตรี"],
+["1980-04-23", "t", "p", "คำสั่งสำนักนายกรัฐมนตรีที่ ๖๖/๒๕๒๓ นโยบายการเมืองนำการทหาร"],
+["1980-05-04", "w", "r", "จอมพลตีโต ผู้นำยูโกสลาเวีย ถึงแก่อสัญกรรม"],
+["1980-05-18", "w", "d", "ภูเขาไฟเซนต์เฮเลนส์ระเบิด"],
+["1980-06-23", "t", "w", "ทหารเวียดนามรุกล้ำชายแดนไทยที่บ้านโนนหมากมุ่น"],
+["1980-07-19", "w", "g", "โอลิมปิกมอสโก หลายประเทศรวมทั้งไทยคว่ำบาตร"],
+["1980-08-31", "w", "p", "ข้อตกลงกดัญสก์ ก่อตั้งสหภาพแรงงานโซลิดาริตีในโปแลนด์"],
+["1967-08-08", "t", "p", "ปฏิญญากรุงเทพฯ ก่อตั้งสมาคมประชาชาติแห่งเอเชียตะวันออกเฉียงใต้ (อาเซียน)"],
+["1967-09", "t", "w", "ไทยส่งกองพลอาสาสมัครไปร่วมรบในเวียดนามใต้"],
+["1967-10-09", "w", "r", "เช เกวารา ถูกประหารในโบลิเวีย"],
+["1967-12-03", "w", "x", "ปลูกถ่ายหัวใจมนุษย์สำเร็จครั้งแรกในแอฟริกาใต้"],
+["1968-01-30", "w", "w", "การรุกใหญ่ช่วงตรุษญวน"],
+["1968-03-16", "w", "w", "การสังหารหมู่ที่หมีลาย เวียดนาม"],
+["1968-04-04", "w", "r", "มาร์ติน ลูเทอร์ คิง จูเนียร์ ถูกลอบสังหาร"],
+["1968-05", "w", "s", "เหตุการณ์ประท้วงและนัดหยุดงานครั้งใหญ่ในฝรั่งเศส"],
+["1968-06-05", "w", "r", "โรเบิร์ต เอฟ. เคนเนดี ถูกลอบยิง"],
+["1968-06-20", "t", "p", "ประกาศใช้รัฐธรรมนูญ พ.ศ. ๒๕๑๑"],
+["1968-08-20", "w", "w", "สหภาพโซเวียตและพันธมิตรบุกเชโกสโลวาเกีย"],
+["1968-10-12", "w", "g", "เปิดโอลิมปิกเกมส์ที่เม็กซิโกซิตี"],
+["2014-10-10", "w", "s", "มาลาลา ยูซาฟไซ และไกลาศ สัตยาร์ถี ได้รับรางวัลโนเบลสาขาสันติภาพ"],
+["2015-07-20", "w", "p", "สหรัฐและคิวบาเปิดสถานทูตในกันและกันอีกครั้งหลังห่างกว่า ๕๐ ปี"],
+["2016-01", "t", "p", "ไทยรับตำแหน่งประธานกลุ่ม ๗๗ ที่สหประชาชาติ"],
+["2016-11-24", "w", "p", "รัฐบาลโคลอมเบียลงนามข้อตกลงสันติภาพกับกลุ่ม FARC ยุติสงครามกลางเมืองกว่า ๕๐ ปี"],
+["2004-01-04", "w", "x", "ยานสปิริตลงจอดบนดาวอังคารสำเร็จ"]],
 SA:[
 ['1995-06-29','w','d','ห้างซัมพุงในกรุงโซลถล่ม เสียชีวิตกว่า ๕๐๐ ราย'],
 ['1995-07-02','t','p','เลือกตั้งทั่วไป พรรคชาติไทยได้ที่นั่งมากที่สุด'],
@@ -5481,7 +5538,45 @@ SA:[
 ['1998-12-16','w','w','สหรัฐและอังกฤษโจมตีอิรัก (ปฏิบัติการ Desert Fox)'],
 ['1998-12-19','w','p','สภาผู้แทนราษฎรสหรัฐลงมติถอดถอนประธานาธิบดีคลินตัน'],
 ['1999-01-01','w','e','เงินสกุลยูโรเริ่มใช้ในระบบการเงิน'],
-['1999-02-12','w','p','วุฒิสภาสหรัฐลงมติให้คลินตันพ้นข้อกล่าวหา']],
+['1999-02-12','w','p','วุฒิสภาสหรัฐลงมติให้คลินตันพ้นข้อกล่าวหา'],
+["1966-05-16", "w", "p", "จีนเริ่มการปฏิวัติวัฒนธรรม"],
+["1966-12-09", "t", "g", "เอเชียนเกมส์ครั้งที่ ๕ ที่กรุงเทพฯ"],
+["1967-06-05", "w", "w", "สงครามหกวันในตะวันออกกลาง"],
+["1967-08-08", "t", "p", "ปฏิญญากรุงเทพฯ ก่อตั้งอาเซียน"],
+["1968-01-30", "w", "w", "การรุกใหญ่ช่วงตรุษญวน"],
+["1968-04-04", "w", "r", "มาร์ติน ลูเทอร์ คิง จูเนียร์ ถูกลอบสังหาร"],
+["1968-06-20", "t", "p", "ประกาศใช้รัฐธรรมนูญ พ.ศ. ๒๕๑๑"],
+["1968-08-20", "w", "w", "สหภาพโซเวียตบุกเชโกสโลวาเกีย"],
+["1968-12-24", "w", "x", "ยานอะพอลโล ๘ โคจรรอบดวงจันทร์เป็นครั้งแรก"],
+["1969-02-10", "t", "p", "เลือกตั้งทั่วไปครั้งแรกในรอบ ๑๑ ปี"],
+["1969-03-02", "w", "w", "ปะทะชายแดนจีน–โซเวียตที่เกาะเจิ้นเป่า"],
+["1969-03", "t", "p", "จอมพลถนอม กิตติขจร เป็นนายกรัฐมนตรีต่อหลังการเลือกตั้ง"],
+["1937", "t", "p", "สยามแก้ไขสนธิสัญญาไม่เสมอภาคกับนานาประเทศสำเร็จ"],
+["1937-05-06", "w", "d", "เรือเหาะฮินเดนบวร์กไฟไหม้"],
+["1937-07-07", "w", "w", "เหตุการณ์สะพานมาร์โคโปโล จุดเริ่มสงครามจีน–ญี่ปุ่น"],
+["1937-12-13", "w", "w", "การสังหารหมู่ที่นานกิง"],
+["1938-03-12", "w", "w", "เยอรมนีผนวกออสเตรีย"],
+["1938-09-30", "w", "p", "ข้อตกลงมิวนิก"],
+["1938-11-09", "w", "s", "เหตุการณ์คืนกระจกแตกในเยอรมนี"],
+["1938-12-16", "t", "p", "จอมพล ป. พิบูลสงคราม เป็นนายกรัฐมนตรีครั้งแรก"],
+["1939-06-24", "t", "p", "เปลี่ยนชื่อประเทศจากสยามเป็นไทย (รัฐนิยมฉบับที่ ๑)"],
+["1939-06-24", "t", "s", "วางศิลาฤกษ์อนุสาวรีย์ประชาธิปไตย"],
+["1939-08-23", "w", "p", "กติกาสัญญาโมโลตอฟ–ริบเบนทรอพ"],
+["1939-09-01", "w", "w", "เยอรมนีบุกโปแลนด์ เริ่มสงครามโลกครั้งที่ ๒"],
+["1939-11-30", "w", "w", "สงครามฤดูหนาว สหภาพโซเวียตบุกฟินแลนด์"],
+["1907-11-17", "t", "r", "รัชกาลที่ ๕ เสด็จกลับจากประพาสยุโรปครั้งที่ ๒"],
+["1908-06-01", "t", "p", "ประกาศใช้กฎหมายลักษณะอาญา ร.ศ. ๑๒๗ ประมวลกฎหมายสมัยใหม่ฉบับแรก"],
+["1908-06-30", "w", "d", "เหตุการณ์ทังกุสกา ระเบิดในไซบีเรีย"],
+["1908-10-01", "w", "x", "ฟอร์ดวางจำหน่ายรถยนต์โมเดลที"],
+["1908-11-11", "t", "r", "เปิดพระบรมรูปทรงม้า"],
+["1908-12-28", "w", "d", "แผ่นดินไหวที่เมสซีนา อิตาลี"],
+["1909-03-10", "t", "p", "สนธิสัญญาสยาม–อังกฤษ สยามเสียไทรบุรี กลันตัน ตรังกานู ปะลิส"],
+["1909-07-25", "w", "x", "หลุยส์ เบลริโอ บินข้ามช่องแคบอังกฤษ"],
+["1878-06-13", "w", "p", "การประชุมสภาคองเกรสแห่งเบอร์ลิน"],
+["1879-01-22", "w", "w", "ยุทธการอิซานด์ลวานา สงครามอังกฤษ–ซูลู"],
+["1879-10-21", "w", "x", "เอดิสันทดลองหลอดไฟฟ้าแบบไส้คาร์บอนสำเร็จ"],
+["1880-05-31", "t", "r", "สมเด็จพระนางเจ้าสุนันทากุมารีรัตน์ สิ้นพระชนม์จากเรือล่ม ที่ตำบลบางพูด"],
+["1998-12-20", "t", "g", "ไทยได้ ๒๔ เหรียญทองในเอเชียนเกมส์ที่กรุงเทพฯ"]],
 RA:[
 ['2006-10-01','t','p','พล.อ.สุรยุทธ์ จุลานนท์ เป็นนายกรัฐมนตรี และประกาศใช้รัฐธรรมนูญชั่วคราว ๒๕๔๙'],
 ['2006-10','t','d','น้ำท่วมใหญ่ภาคเหนือและภาคกลาง'],
@@ -5553,7 +5648,43 @@ RA:[
 ['2009-09-29','t','e','ศาลปกครองสั่งระงับ ๗๖ โครงการในนิคมมาบตาพุด'],
 ['2009-09-30','w','d','แผ่นดินไหวที่ปาดัง อินโดนีเซีย'],
 ['2009-10-09','w','p','โอบามาได้รับรางวัลโนเบลสาขาสันติภาพ'],
-['2009-11-05','t','p','ไทยเรียกเอกอัครราชทูตกลับจากกัมพูชา หลังกัมพูชาแต่งตั้งทักษิณเป็นที่ปรึกษา']],
+['2009-11-05','t','p','ไทยเรียกเอกอัครราชทูตกลับจากกัมพูชา หลังกัมพูชาแต่งตั้งทักษิณเป็นที่ปรึกษา'],
+["1989-09-26", "w", "w", "เวียดนามถอนทหารออกจากกัมพูชา"],
+["1989-11-04", "t", "d", "พายุไต้ฝุ่นเกย์ถล่มชุมพร"],
+["1989-11-09", "w", "p", "กำแพงเบอร์ลินพังทลาย"],
+["1989-12-22", "w", "p", "การปฏิวัติในโรมาเนีย"],
+["1990-02-11", "w", "p", "เนลสัน แมนเดลา ได้รับการปล่อยตัว"],
+["1990-04-24", "w", "x", "ส่งกล้องโทรทรรศน์อวกาศฮับเบิลขึ้นสู่วงโคจร"],
+["1990-08-02", "w", "w", "อิรักบุกคูเวต"],
+["1990-09-24", "t", "d", "รถบรรทุกแก๊สระเบิดบนถนนเพชรบุรีตัดใหม่"],
+["1990-10-03", "w", "p", "การรวมประเทศเยอรมนี"],
+["1991-01-17", "w", "w", "สงครามอ่าวเปอร์เซีย"],
+["1991-02-23", "t", "p", "คณะรักษาความสงบเรียบร้อยแห่งชาติ (รสช.) ยึดอำนาจ"],
+["1991-03-02", "t", "p", "นายอานันท์ ปันยารชุน เป็นนายกรัฐมนตรี"],
+["1971-03-26", "w", "w", "บังกลาเทศประกาศเอกราช"],
+["1971-10-25", "w", "p", "สาธารณรัฐประชาชนจีนได้ที่นั่งในสหประชาชาติ"],
+["1971-11-17", "t", "p", "จอมพลถนอม กิตติขจร ยึดอำนาจรัฐบาลตนเอง"],
+["1971-12-16", "w", "w", "สงครามอินเดีย–ปากีสถานยุติ บังกลาเทศเป็นเอกราช"],
+["1972-02-21", "w", "p", "ประธานาธิบดีนิกสันเยือนจีน"],
+["1972-06-17", "w", "p", "เหตุบุกรุกอาคารวอเตอร์เกต"],
+["1952-07-23", "w", "p", "การปฏิวัติในอียิปต์"],
+["1952-11-01", "w", "x", "สหรัฐทดสอบระเบิดไฮโดรเจนครั้งแรก"],
+["1952-11-10", "t", "p", "กบฏสันติภาพ จับกุมผู้เรียกร้องสันติภาพจำนวนมาก"],
+["1953-03-05", "w", "r", "สตาลิน ถึงแก่อสัญกรรม"],
+["1953-04-25", "w", "x", "ตีพิมพ์โครงสร้างเกลียวคู่ของ DNA"],
+["1953-05-29", "w", "x", "ฮิลลารีและเทนซิงพิชิตยอดเอเวอเรสต์"],
+["1953-06-02", "w", "r", "พระราชพิธีบรมราชาภิเษกสมเด็จพระราชินีนาถเอลิซาเบธที่ ๒"],
+["1953-07-27", "w", "w", "ลงนามสงบศึกสงครามเกาหลี"],
+["1953-11-09", "w", "p", "กัมพูชาได้รับเอกราชจากฝรั่งเศส"],
+["1933-12-05", "w", "s", "สหรัฐยกเลิกกฎหมายห้ามจำหน่ายสุรา"],
+["1934-06-27", "t", "s", "ก่อตั้งมหาวิทยาลัยวิชาธรรมศาสตร์และการเมือง"],
+["1934-06-30", "w", "w", "คืนมีดยาวในเยอรมนี"],
+["1934-08-02", "w", "p", "ฮิตเลอร์รวมตำแหน่งเป็นฟือเรอร์"],
+["1934-10-16", "w", "w", "กองทัพแดงจีนเริ่มการเดินทัพทางไกล"],
+["1935-03-02", "t", "r", "พระบาทสมเด็จพระปกเกล้าเจ้าอยู่หัว สละราชสมบัติ"],
+["1935-03-02", "t", "r", "พระบาทสมเด็จพระเจ้าอยู่หัวอานันทมหิดล ขึ้นครองราชย์"],
+["2008-05-25", "w", "x", "ยานฟีนิกซ์ลงจอดบริเวณขั้วเหนือของดาวอังคารสำเร็จ"],
+["2009-03-07", "w", "x", "ส่งกล้องโทรทรรศน์อวกาศเคปเลอร์เพื่อค้นหาดาวเคราะห์นอกระบบสุริยะ"]],
 NE:[
 ['1856-05-29','t','p','สยามลงนามสนธิสัญญาทางไมตรีและพาณิชย์กับสหรัฐอเมริกา'],
 ['1856-08-15','t','p','สยามลงนามสนธิสัญญาทางไมตรีและพาณิชย์กับฝรั่งเศส'],
@@ -5623,7 +5754,21 @@ NE:[
 ['1871-10-08','w','d','ไฟไหม้ใหญ่ชิคาโก'],
 ['1871-11-10','w','s','สแตนลีย์พบดร.ลิฟวิงสโตนในแอฟริกา'],
 ['1871','t','s','ตั้งโรงเรียนทหารมหาดเล็ก การศึกษาแบบใหม่ในราชสำนัก'],
-['1871-12','t','p','รัชกาลที่ ๕ เสด็จประพาสพม่าและอินเดีย ศึกษาการปกครองแบบตะวันตก']],
+['1871-12','t','p','รัชกาลที่ ๕ เสด็จประพาสพม่าและอินเดีย ศึกษาการปกครองแบบตะวันตก'],
+["1703", "t", "r", "สมเด็จพระเจ้าเสือ ขึ้นครองราชย์กรุงศรีอยุธยา"],
+["1700", "w", "w", "มหาสงครามเหนือเริ่มขึ้น"],
+["1701", "w", "w", "สงครามสืบราชบัลลังก์สเปน"],
+["1703-05-27", "w", "s", "พระเจ้าปีเตอร์มหาราชสร้างนครเซนต์ปีเตอร์สเบิร์ก"],
+["1704-08-13", "w", "w", "ยุทธการเบลนไฮม์"],
+["1526-04-21", "w", "w", "ยุทธการปานีปัตครั้งที่ ๑ จุดเริ่มจักรวรรดิโมกุล"],
+["1529", "w", "w", "จักรวรรดิออตโตมันล้อมเวียนนา"],
+["1532-11-16", "w", "w", "ปิซาร์โรจับจักรพรรดิอาตาวัลปาแห่งอินคา"],
+["1534", "t", "r", "สมเด็จพระไชยราชาธิราช ขึ้นครองราชย์กรุงศรีอยุธยา"],
+["1534", "w", "p", "อังกฤษออกพระราชบัญญัติอำนาจสูงสุด แยกจากโรม"],
+["1368", "w", "p", "สถาปนาราชวงศ์หมิงในจีน"],
+["1370", "t", "r", "สมเด็จพระบรมราชาธิราชที่ ๑ (ขุนหลวงพะงั่ว) ขึ้นครองราชย์กรุงศรีอยุธยา"],
+["1204", "w", "w", "กองทัพครูเสดปล้นกรุงคอนสแตนติโนเปิล"],
+["1206", "w", "r", "เตมูจินได้รับการสถาปนาเป็นเจงกีสข่าน"]],
 PL:[
 ['1770','t','w','สมเด็จพระเจ้าตากสินปราบชุมนุมเจ้าพระฝาง รวบรวมแผ่นดินฝ่ายเหนือ'],
 ['1770','w','d','ทุพภิกขภัยครั้งใหญ่ในเบงกอล ผู้คนเสียชีวิตหลายล้าน'],
@@ -5674,7 +5819,22 @@ PL:[
 ['1789-08-26','w','p','ประกาศสิทธิมนุษยชนและพลเมืองของฝรั่งเศส'],
 ['1791-06-20','w','r','พระเจ้าหลุยส์ที่ ๑๖ หลบหนีไม่สำเร็จที่วาแรนส์'],
 ['1791-08-22','w','w','การปฏิวัติเฮติเริ่มขึ้น'],
-['1791-12-15','w','p','สหรัฐรับรองบทบัญญัติสิทธิ (Bill of Rights)']]};
+['1791-12-15','w','p','สหรัฐรับรองบทบัญญัติสิทธิ (Bill of Rights)'],
+["1521-08-13", "w", "w", "เอร์นัน กอร์เตสยึดเตนอชติตลันของแอซเท็ก"],
+["1522-09-06", "w", "x", "เรือของคณะมาเจลลันกลับถึงสเปน เดินเรือรอบโลกสำเร็จครั้งแรก"],
+["1526-04-21", "w", "w", "ยุทธการปานีปัตครั้งที่ ๑ จุดเริ่มจักรวรรดิโมกุล"],
+["1529", "w", "w", "จักรวรรดิออตโตมันล้อมเวียนนา"],
+["1534", "t", "r", "สมเด็จพระไชยราชาธิราช ขึ้นครองราชย์กรุงศรีอยุธยา"],
+["1271", "w", "r", "กุบไลข่านสถาปนาราชวงศ์หยวน"],
+["1274", "w", "w", "มองโกลบุกญี่ปุ่นครั้งแรก"],
+["1279", "w", "w", "ราชวงศ์ซ่งล่มสลายที่ยุทธการแหยไหม"],
+["1279", "t", "r", "พ่อขุนรามคำแหงมหาราชขึ้นครองกรุงสุโขทัย (ตามที่นักประวัติศาสตร์ส่วนใหญ่ประมาณ)"],
+["1281", "w", "w", "มองโกลบุกญี่ปุ่นครั้งที่สอง กองเรือถูกพายุทำลาย"],
+["1283", "t", "s", "ประดิษฐ์ลายสือไทย ตามศิลาจารึกพ่อขุนรามคำแหง"],
+["1287", "w", "w", "อาณาจักรพุกามล่มสลายจากการรุกรานของมองโกล"],
+["1025", "w", "w", "กองทัพโจฬะโจมตีอาณาจักรศรีวิชัย"],
+["778", "w", "w", "ยุทธการช่องเขารอนเซอโวซ์"],
+["787", "w", "s", "สังคายนาแห่งไนเซียครั้งที่ ๒"]]};
 window.EV372=(()=>{
 const td=n=>String(n).replace(/\d/g,c=>'๐๑๒๓๔๕๖๗๘๙'[c]);
 const G='#2faa5a', B='#e0453a', GO='#f3c94a', TC='#4aa3ff', WC='#e8743b';
@@ -5684,45 +5844,70 @@ const CYC={JU:11.86,SA:29.46,RA:18.6,NE:164.8,PL:248.1}, HALF={JU:1.6,SA:4,RA:2.
 const SN=['เมษ','พฤษภ','มิถุน','กรกฎ','สิงห์','กันย์','ตุลย์','พิจิก','ธนู','มกร','กุมภ์','มีน'];
 const MS=['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
 const CAT={p:['การเมือง','#9a6bd1'],e:['เศรษฐกิจ','#2faa5a'],d:['ภัยพิบัติ อุบัติเหตุ','#e0453a'],w:['สงคราม ความขัดแย้ง','#c0504d'],s:['สังคม','#4aa3ff'],x:['วิทยาศาสตร์ เทคโนโลยี','#3aa6a0'],r:['ราชวงศ์ ผู้นำ','#f3c94a'],g:['กีฬา วัฒนธรรม','#e8743b']};
-const IC={th:'<path d="M4 21V4M4 4h13l-2 4 2 4H4"/>',w:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',x:'<path d="M6 6l12 12M18 6L6 18"/>',cal:'<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',rep:'<path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/>',info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/>'};
+const IC={all:'<path d="M4 6h16M4 12h16M4 18h16"/>',up:'<path d="M7 14l5-5 5 5"/><circle cx="12" cy="12" r="9"/>',dn:'<path d="M7 10l5 5 5-5"/><circle cx="12" cy="12" r="9"/>',tgt:'<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>',th:'<path d="M4 21V4M4 4h13l-2 4 2 4H4"/>',w:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',x:'<path d="M6 6l12 12M18 6L6 18"/>',cal:'<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',rep:'<path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/>',info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/>'};
 const ic=(k,c,s)=>`<svg viewBox="0 0 24 24" width="${s||16}" height="${s||16}" style="width:${s||16}px!important;height:${s||16}px!important;flex:none" fill="none" stroke="${c||'currentColor'}" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${IC[k]}</svg>`;
 const posF=k=>{ if(typeof CAL141!=='undefined'&&CAL141==='L'&&window.LH371) return t=>LH371.posW(t+7*36e5,k); return t=>posH(horaOf(new Date(t)),k); };
-function span(k,s,c){ const f=posF(k), st=(k==='NE'||k==='PL'?10:2)*D; let a=null,b=null; for(let t=c-HALF[k]*YR;t<=c+HALF[k]*YR;t+=st){ if(Math.floor(f(t)/30)===s){ if(a==null) a=t; b=t; } } return a==null?null:[a,b]; }
+const RC={};
+function rounds(k,lo,hi,T){ const key=[k,lo,hi,Math.floor(T/D),typeof CAL141!=='undefined'?CAL141:''].join('|'); if(RC[key]) return RC[key]; const f=posF(k), whole=hi-lo>=30;
+const st=(whole?{JU:2,SA:3,RA:2,NE:15,PL:20}:{JU:1,SA:2,RA:1,NE:8,PL:12})[k]*D, gap=CYC[k]*0.4*YR, lim=T-(5.4*CYC[k]+2)*YR, inb=t=>{ const x=f(t); return x>=lo&&x<hi; };
+let cur=null, cl=[], c=null;
+for(let t=T;t<=T+CYC[k]*0.45*YR;t+=st){ if(inb(t)){ if(!c) c=[t,t]; else c[1]=t; } }
+for(let t=T;t>=lim;t-=st){ if(inb(t)){ if(c&&c[0]-t<=gap) c[0]=t; else { if(c) cl.push(c); c=[t,t]; } } }
+if(c) cl.push(c); if(cl.length&&cl[0][1]>=T-gap&&(cl[0][0]<=T||cl[0][0]-T<gap)) cur=cl.shift();
+const r={cur,list:cl.slice(0,5)}; RC[key]=r; return r; }
 const pd=s=>{ const m=String(s).split('-').map(Number); return Date.UTC(m[0],(m[1]||1)-1,m[2]||1); };
 const fdt=s=>{ const m=String(s).split('-').map(Number); return (m[2]?td(m[2])+' ':'')+(m[1]?MS[m[1]-1]+' ':'')+td(m[0]+543); };
 const fd=t=>{ const d=new Date(t); return `${td(d.getUTCDate())} ${MS[d.getUTCMonth()]} ${td(d.getUTCFullYear()+543)}`; };
 const dur=ms=>{ const y=Math.floor(ms/YR), m=Math.floor((ms-y*YR)/(YR/12)); return [y?td(y)+' ปี':'',m?td(m)+' เดือน':''].filter(Boolean).join(' ')||'ไม่ถึงเดือน'; };
-let ST={k:null,f:'all',c:'',q:'',wide:false};
-function body(){ const k=ST.k; let T; try{ T=+getTransit(); }catch(_){ T=Date.now(); } const f=posF(k), s=Math.floor(f(T)/30); const cur=span(k,s,T), prev=span(k,s,T-CYC[k]*YR);
+let ST={k:null,f:'all',c:'',q:'',wide:false,n:1,s:null,dg:-1,tn:''};
+const GS=/ยุติ|สงบศึก|เอกราช|ปล่อยตัว|สันติภาพ|เหรียญทอง|ชนะเลิศ|ค้นพบ|สำเร็จ|พิชิต|เลิกทาส|ฟื้นฟูความสัมพันธ์|เปิดสถานทูต|ฉลอง|รวมประเทศ|รวมชาติ|พังทลาย.*กำแพง|กำแพงเบอร์ลิน|ได้รับรางวัล|เพื่อแม่|เพื่อพ่อ|ร่วมใจ/;
+const BS=/ล่ม|ตก(?!ลง)|ระเบิด|ลอบ|สังหาร|จลาจล|รัฐประหาร|ยึดอำนาจ|สวรรคต|สิ้นพระชนม์|ถึงแก่|เสียชีวิต|วิกฤต|ผิดนัด|ล้มละลาย|ระงับ|ถอดถอน|ยุบ|ปะทะ|บุก|โจมตี|ไฟไหม้|ไฟฟ้าดับ|น้ำท่วม|แผ่นดินไหว|พายุ|ระบาด|หายตัว|ค้ามนุษย์|ลดระดับ|ธงแดง|ไม่มาฟัง|จำคุก|สลายการชุมนุม|ไม่รับ|ปล้น|ประหาร|ทุพภิกขภัย|เผา|ล้อม|ผนวก|หลบหนี|ถูกยิง|กราดยิง|ทดลองนิวเคลียร์|ทดสอบนิวเคลียร์|ทดสอบขีปนาวุธ|ทดสอบระเบิด|กบฏ|เจาะระบบ|มัลแวร์|ดิ่ง|ร่วงหนัก|ยึด|เสีย[ไท]|ร้องเรียน|อพยพ|ซุกทรัพย์|กักกัน|คว่ำบาตร|สงคราม|หนีภัย|รุกล้ำ|แตกหัก|ปิดล้อม|ปิดบริษัท|ปิดกิจการ/;
+const GW=/เปิด|ก่อตั้ง|ครั้งแรก|ประกาศใช้|บรมราชาภิเษก|ขึ้นครองราชย์|เสด็จขึ้นทรงราชย์|สถาปนา|ตีพิมพ์|ประดิษฐ์|เข้าเป็นสมาชิก|รับรอง|เริ่มใช้|เดินเครื่อง|ส่งกล้อง|ลงจอด|ค้นหา|แก้ไขสนธิสัญญา|ประธาน|มีผล|รับตำแหน่ง|เสด็จกลับ|เสด็จประพาส|สร้าง|ขุด|ตั้ง/;
+const tone=e=>GS.test(e.x)?'g':BS.test(e.x)?'b':GW.test(e.x)?'g':(e.c==='d'||e.c==='w')?'b':'n';
+const TN={g:['ข่าวดี','#2faa5a'],b:['ข่าวร้าย','#e0453a'],n:['ทั่วไป','#8a8f98']};
+const CM=[['TH',/ไทย|สยาม/],['US',/สหรัฐ|อเมริกา|คลินตัน|โอบามา|ทรัมป์|ลินคอล์น|วอชิงตัน|นิกสัน|วอเตอร์เกต|ฮัดสัน|เท็กซัส|ชิคาโก|นิวยอร์ก|ลอสแอนเจลิส|เวอร์จิเนีย|เพนซิลเวเนีย|เซนต์เฮเลนส์|อะแลสกา|ยอร์กทาวน์|บอสตัน|เลห์แมน|แบร์ สเติร์นส์|Google|iPhone|เฟซบุ๊ก|ไมโครซอฟท์|ฟอร์ด|เอดิสัน|อะพอลโล|LTCM|TARP|แฟนนี|ฮาวาย|เปอร์โตริโก|มาร์ติน ลูเทอร์|เคนเนดี|TWA|US Airways|เฮอริเคน|LIGO|ซับไพรม์|สปิริต|ฟีนิกซ์|เคปเลอร์|ฮับเบิล|Pathfinder/],['CN',/จีน|ปักกิ่ง|เสฉวน|เทียนจิน|นานกิง|ราชวงศ์หมิง|หยวน|ราชวงศ์ซ่ง|ไท่ผิง|เติ้ง|ทิเบต|ลาซา|ซินเจียง|อุรุมชี|เสินโจว|กุบไลข่าน/],['HK',/ฮ่องกง/],['JP',/ญี่ปุ่น|เมจิ/],['RU',/รัสเซีย|โซเวียต|สตาลิน|ไซบีเรีย|ปีเตอร์|ปูกาชอฟ|ทังกุสกา|เมโทรเจ็ต|รูเบิล/],['GB',/อังกฤษ|สหราชอาณาจักร|ลอนดอน|แบลร์|บราวน์|เอลิซาเบธ|ไดอานา|ไอร์แลนด์เหนือ|เกรนเฟลล์|แมนเชสเตอร์|วิกตอเรีย|ดาร์วิน|กัปตันคุก|เจมส์ คุก|เฮอร์เชล|เจมส์ วัตต์|อดัม สมิธ|บาวน์ตี|Brexit|สกอตแลนด์|มาตรา ๕๐|วัวบ้า|ดอลลี|ลิฟวิงสโตน|เฮสติงส์/],['FR',/ฝรั่งเศส|ปารีส|นโปเลียน|หลุยส์ที่|มาครง|นีซ|บาสตีย์|ชาร์ลี|แอร์ฟรานซ์|มงกอลฟิเยร์|เบลริโอ|BNP/],['DE',/เยอรมนี|ปรัสเซีย|เบอร์ลิน|ฮิตเลอร์|บิสมาร์ก|เยอรมันวิงส์|ฮินเดนบวร์ก|คืนกระจกแตก|คืนมีดยาว|มาร์กซ์|เซดาน|ซีดาน/],['IT',/อิตาลี|กรุงโรม|เมสซีนา/],['IN',/อินเดีย|มุมไบ|โมกุล|ปานีปัต|ซีปอย|เบงกอล|โปขราน|โจฬะ/],['PK',/ปากีสถาน|บุตโต/],['BD',/บังกลาเทศ/],['IQ',/อิรัก|ซัดดัม|โมซุล/],['IR',/อิหร่าน|เตหะราน|เมืองบัม/],['IL',/อิสราเอล|ราบิน|กาซา|สงครามหกวัน/],['EG',/อียิปต์|ไซนาย|ลักซอร์|สุเอซ/],['TR',/ตุรกี|อังการา|ออตโตมัน|คอนสแตนติโนเปิล/],['KR',/เกาหลีใต้|ปัก จุง-ฮี|กรุงโซล|ซัมพุง|ลี เซดล|AlphaGo/],['VN',/เวียดนาม|ตรุษญวน|หมีลาย|ไตเซิน|กวางจุง|ฮาเตียน|พุทไธมาศ|ทังลอง/],['KH',/กัมพูชา|ฮุน เซน|พล พต|พระวิหาร|นโรดม|พระตะบอง|เขาอีด่าง|เสียมราฐ/],['MM',/เมียนมา|พม่า|นาร์กีส|พุกาม|อองซาน|โรฮีนจา|ยะไข่|อะแซหวุ่นกี้|ชายจีวร/],['LA',/ลาว|เวียงจันทน์|จำปาศักดิ์/],['MY',/มาเลเซีย|กัวลาลัมเปอร์|MH17|ไทรบุรี|ปีนัง|เคดาห์|กลันตัน|ตรังกานู|ปะลิส/],['SG',/สิงคโปร์/],['ID',/อินโดนีเซีย|จาการ์ตา|ซูฮาร์โต|ปาดัง|ชวา|QZ8501|ศรีวิชัย|เจมาห์/],['PH',/ฟิลิปปินส์|มะนิลา|ดูแตร์เต|ทะเลจีนใต้/],['NP',/เนปาล/],['AF',/อัฟกานิสถาน|ตาลีบัน|คาบูล/],['AU',/ออสเตรเลีย|พอร์ตอาเธอร์|ซิดนีย์|โบทานี/],['CA',/แคนาดา/],['MX',/เม็กซิโก|แอซเท็ก|เตนอชติตลัน|กอร์เตส/],['CU',/คิวบา|คาสโตร/],['PE',/อินคา|อาตาวัลปา|ปิซาร์โร/],['BR',/บราซิล|ริโอ/],['ZA',/แอฟริกาใต้|แมนเดลา|ซูลู|อิซานด์ลวานา/],['KE',/เคนยา/],['ES',/สเปน|มาดริด|มาเจลลัน/],['PL',/โปแลนด์|โซลิดาริตี|กดัญสก์/],['RS',/ยูโกสลาเวีย|ตีโต|เซอร์เบีย/],['IS',/ไอซ์แลนด์|ลากี/],['GR',/กรีซ|เอเธนส์/],['MN',/มองโกล|เจงกีส/],['TW',/ไต้หวัน/],['SA',/ซาอุ/],['NZ',/นิวซีแลนด์/],['MA',/โมร็อกโก/],['NG',/ไนจีเรีย/],['LK',/ศรีลังกา|ลังกา/]];
+const ctry=e=>{ const o=[]; if(e.r==='t') o.push('TH'); CM.forEach(([c,re])=>{ if(!o.includes(c)&&re.test(e.x)) o.push(c); }); return o.slice(0,4); };
+let FLQ=0; const flag=c=>{ const F=window.FLAG282; if(F&&F[c]) return `<img class="e372fl" src="${F[c]}" alt="${c}" title="${c}">`; if(!F&&!FLQ){ FLQ=1; const sc=document.createElement('script'); sc.src='fx/flags282.js'; sc.onload=()=>{ try{ draw(); }catch(_){ } }; document.head.appendChild(sc); } return `<span class="e372cc">${c}</span>`; };
+const ageAt=t=>{ let bt=null; try{ bt=+WSTATE.bt; }catch(_){ } if(!bt) return ''; const d=t-bt; if(d<0){ const y=Math.floor(-d/YR); return y>=1?`ก่อนเจ้าชะตาเกิด ${td(y)} ปี`:'ก่อนเจ้าชะตาเกิด'; } const y=Math.floor(d/YR), m=Math.floor((d-y*YR)/(YR/12)); return `เจ้าชะตาอายุ ${td(y)} ปี${m?' '+td(m)+' เดือน':''}`; };
+const evT=s=>{ const m=String(s).split('-').map(Number); return {t:Date.UTC(m[0],m[1]?m[1]-1:6,m[2]||(m[1]?15:1),5,0),p:m[2]?'':m[1]?'กลางเดือน':'กลางปี'}; };
+const NO=['','๑','๒','๓','๔','๕','๖','๗','๘','๙'];
+const pinfo=(k,t)=>{ const x=posF(k)(t), si=Math.floor(x/30), dd=x-si*30, dg=Math.floor(dd), mn=Math.floor((dd-dg)*60), nv=nav(x), tr=tri(x), nn=Math.floor(dd/(10/3))+1, tn=Math.floor(dd/10)+1; return {x,si,txt:`${SN[si]} ${td(dg)}°${td(String(mn).padStart(2,'0'))}′`,nv,tr,nn,tn}; };
+function body(){ const k=ST.k; let T; try{ T=+getTransit(); }catch(_){ T=Date.now(); } const f=posF(k), x0=f(T); if(ST.s==null) ST.s=Math.floor(x0/30); const s=ST.s, lo=s*30+(ST.dg>=0?ST.dg:0), hi=ST.dg>=0?lo+1:lo+30; const RR=rounds(k,lo,hi,T), cur=RR.cur, prev=RR.list[ST.n-1];
+const band=ST.dg>=0?`ราศี${SN[s]} ${td(ST.dg)}°–${td(ST.dg+1)}°`:`ราศี${SN[s]} (ทั้งราศี)`;
+const ctl=`<div class="e372c"><label>ราศี <select data-e372s>${SN.map((n,i)=>`<option value="${i}"${i===s?' selected':''}>${n}</option>`).join('')}</select></label><label>องศา <select data-e372d><option value="-1">ทั้งราศี</option>${Array.from({length:30},(_,i)=>`<option value="${i}"${i===ST.dg?' selected':''}>${td(i)}° – ${td(i+1)}°</option>`).join('')}</select></label><button type="button" data-e372now>${ic('tgt')} ตำแหน่งดาวจรตอนนี้ (${SN[Math.floor(x0/30)]} ${td(Math.floor(x0%30))}°)</button></div>`;
 const L=(EVD372[k]||[]).map((e,i)=>({d:e[0],t:pd(e[0]),r:e[1],c:e[2],x:e[3],i}));
-if(!prev) return '<p class="note">คำนวณช่วงรอบที่แล้วไม่สำเร็จ</p>';
-const [a,b]=prev, a2=ST.wide?a-YR/2:a, b2=ST.wide?b+YR/2:b+D*31;
-let list=L.filter(e=>e.t>=a2-D*31&&e.t<=b2).sort((x,y)=>x.t-y.t); const all=list.length, nT=list.filter(e=>e.r==='t').length, nW=all-nT;
-if(ST.f!=='all') list=list.filter(e=>e.r===ST.f); if(ST.c) list=list.filter(e=>e.c===ST.c); if(ST.q) list=list.filter(e=>e.x.includes(ST.q));
+if(!prev) return ctl+'<p class="note">ไม่พบช่วงที่ดาวผ่านตำแหน่งนี้ในรอบที่เลือก</p>';
+const [a,b]=prev; const RN=[1,2,3,4,5].map(n=>({n,q:RR.list[n-1]})); const a2=ST.wide?a-YR/2:a-D, b2=ST.wide?b+YR/2:b+D;
+let list=L.filter(e=>{ const v=evT(e.d).t; return v>=a2&&v<=b2; }).sort((x,y)=>x.t-y.t); const all=list.length, nT=list.filter(e=>e.r==='t').length, nW=all-nT;
+list.forEach(e=>{ e.tn=tone(e); }); const nG=list.filter(e=>e.tn==='g').length, nB=list.filter(e=>e.tn==='b').length; if(ST.tn) list=list.filter(e=>e.tn===ST.tn); if(ST.f!=='all') list=list.filter(e=>e.r===ST.f); if(ST.c) list=list.filter(e=>e.c===ST.c); if(ST.q) list=list.filter(e=>e.x.includes(ST.q));
 const W=720, H=74, X=t=>14+(t-a2)/(b2-a2)*(W-28); let g=`<line x1="14" x2="${W-14}" y1="38" y2="38" stroke="currentColor" stroke-opacity=".25" stroke-width="2"/><rect x="${X(a)}" y="30" width="${Math.max(2,X(b)-X(a))}" height="16" rx="8" fill="${GO}" opacity=".28"/>`;
 for(let y=new Date(a2).getUTCFullYear();y<=new Date(b2).getUTCFullYear()+1;y++){ const t=Date.UTC(y,0,1); if(t<a2||t>b2) continue; g+=`<line x1="${X(t)}" x2="${X(t)}" y1="26" y2="50" stroke="currentColor" stroke-opacity=".3"/><text x="${X(t)}" y="66" font-size="11" text-anchor="middle" fill="currentColor" opacity=".75">${td(y+543)}</text>`; }
 list.forEach(e=>{ g+=`<circle cx="${X(Math.min(b2,Math.max(a2,e.t)))}" cy="${e.r==='t'?32:44}" r="4" fill="${e.r==='t'?TC:WC}" opacity=".9"><title>${fdt(e.d)} ${e.x}</title></circle>`; });
 g+=`<text x="14" y="14" font-size="11" fill="${TC}">● ไทย</text><text x="70" y="14" font-size="11" fill="${WC}">● โลก</text>`;
 const byY={}; list.forEach(e=>{ const y=e.d.slice(0,4); (byY[y]=byY[y]||[]).push(e); });
-let n=0; const items=Object.keys(byY).map(y=>`<div class="e372y"><h5>พ.ศ. ${td(+y+543)} <small>ค.ศ. ${td(y)}</small></h5>${byY[y].map(e=>{ n++; return `<div class="e372i"><span class="e372n">${td(n)}</span><div><p><b>${fdt(e.d)}</b> ${e.x}</p><small><i style="background:${e.r==='t'?TC:WC}">${e.r==='t'?'ไทย':'โลก'}</i><i style="background:${CAT[e.c][1]}">${CAT[e.c][0]}</i></small></div></div>`; }).join('')}</div>`).join('');
+let n=0; const items=Object.keys(byY).map(y=>`<div class="e372y"><h5>พ.ศ. ${td(+y+543)} <small>ค.ศ. ${td(y)}</small></h5>${byY[y].map(e=>{ n++; const v=evT(e.d), P=pinfo(k,v.t); return `<div class="e372i" style="--tc:${TN[e.tn][1]}"><span class="e372n">${td(n)}</span><div><p><span class="e372fls">${ctry(e).map(flag).join('')}</span><b>${fdt(e.d)}</b> ${e.x}</p><div class="e372pp"><span><b>${PNO[k]}</b> ${P.txt}</span><span>นวางค์ <b>${SN[P.nv]}</b> (ลูกที่ ${td(P.nn)})${P.nv===P.si?' <em>วรโคตตมะ</em>':''}</span><span>ตรียางค์ <b>${SN[P.tr]}</b> (ส่วนที่ ${td(P.tn)})</span><span>สมผุส ณ ${v.p?v.p+' ':''}๑๒:๐๐ น.</span><span class="ag">${ageAt(v.t)}</span>${P.x>=lo&&P.x<hi?'':'<span class="ob">ดาวอยู่นอกตำแหน่งที่เลือก</span>'}</div><small><i style="background:${TN[e.tn][1]};color:#fff">${TN[e.tn][0]}</i><i style="background:${e.r==='t'?TC:WC}">${e.r==='t'?'ไทย':'โลก'}</i><i style="background:${CAT[e.c][1]}">${CAT[e.c][0]}</i></small></div></div>`; }).join('')}</div>`).join('');
 const curT=cur?`${fd(cur[0])} – ${fd(cur[1])}`:'—';
-return `<div class="e372h"><span class="e372p">${PNO[k]}</span><div><b>${PNM[k]}จรราศี${SN[s]} · เหตุการณ์รอบที่แล้ว</b><small>รอบนี้ ${curT} · รอบที่แล้ว <b style="color:${GO}">${fd(a)} – ${fd(b)}</b> (${dur(b-a)}) · รอบโคจรราว ${td(CYC[k])} ปี</small></div></div>
-<div class="e372s"><div><b>${td(all)}</b><small>เหตุการณ์ในช่วงนี้</small></div><div style="--c:${TC}"><b>${td(nT)}</b><small>ในประเทศไทย</small></div><div style="--c:${WC}"><b>${td(nW)}</b><small>รอบโลก</small></div></div>
+return `<div class="e372h"><span class="e372p">${PNO[k]}</span><div><b>${PNM[k]} ${band} · ย้อนรอบที่ ${td(ST.n)}</b><small>ช่วงปัจจุบัน ${curT} · ช่วงที่เลือก <b style="color:${GO}">${fd(a)} – ${fd(b)}</b> (${dur(b-a)}) · รอบโคจรราว ${td(CYC[k])} ปี<br>ต้นรอบ ${PNM[k]}อยู่ ${pinfo(k,a).txt} · ปลายรอบ ${pinfo(k,b).txt} · ${ageAt(a)} ถึง ${ageAt(b).replace('เจ้าชะตา','')}</small></div></div>
+${ctl}<div class="e372r">${RN.map(({n,q})=>`<button type="button" data-e372n="${n}" class="${ST.n===n?'on':''}"><b>${ic('rep',null,13)} รอบที่ ${td(n)}</b><small>${q?fd(q[0]).replace(/^\S+ /,'')+' – '+fd(q[1]).replace(/^\S+ /,''):'—'}</small><small class="ag">${q?ageAt(q[0]).replace('เจ้าชะตา',''):''}</small></button>`).join('')}</div>
+<div class="e372s"><div><b>${td(all)}</b><small>เหตุการณ์ในช่วงนี้</small></div><div style="--c:${TC}"><b>${td(nT)}</b><small>ในประเทศไทย</small></div><div style="--c:${WC}"><b>${td(nW)}</b><small>รอบโลก</small></div><div style="--c:${TN.g[1]}"><b>${td(nG)}</b><small>ข่าวดี</small></div><div style="--c:${TN.b[1]}"><b>${td(nB)}</b><small>ข่าวร้าย</small></div></div>
 <div class="kh8w"><svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto">${g}</svg></div>
-<div class="e372f">${[['all','ทั้งหมด'],['t','ไทย'],['w','โลก']].map(([v,t])=>`<button type="button" data-e372f="${v}" class="${ST.f===v?'on':''}">${v==='t'?ic('th'):v==='w'?ic('w'):''}${t}</button>`).join('')}<select data-e372c><option value="">ทุกหมวด</option>${Object.entries(CAT).map(([c,[t]])=>`<option value="${c}"${ST.c===c?' selected':''}>${t}</option>`).join('')}</select><input data-e372q placeholder="ค้นหา" value="${ST.q.replace(/"/g,'')}"><label><input type="checkbox" data-e372w${ST.wide?' checked':''}> ขยายช่วงก่อน/หลัง ๖ เดือน</label></div>
+<div class="e372f">${[['all','ทั้งหมด','all'],['t','ไทย','th'],['w','โลก','w']].map(([v,t,i])=>`<button type="button" data-e372f="${v}" class="${ST.f===v?'on':''}">${ic(i)}${t}</button>`).join('')}<span class="e372sep"></span>${[['','ดีและร้าย','all'],['g','ข่าวดี','up'],['b','ข่าวร้าย','dn']].map(([v,t,i])=>`<button type="button" data-e372t="${v}" class="${ST.tn===v?'on':''}" style="${v?'--tc:'+TN[v][1]:''}">${ic(i,v?TN[v][1]:null)}${t}</button>`).join('')}<select data-e372c><option value="">ทุกหมวด</option>${Object.entries(CAT).map(([c,[t]])=>`<option value="${c}"${ST.c===c?' selected':''}>${t}</option>`).join('')}</select><input data-e372q placeholder="ค้นหา" value="${ST.q.replace(/"/g,'')}"><label><input type="checkbox" data-e372w${ST.wide?' checked':''}> ขยายช่วงก่อน/หลัง ๖ เดือน</label></div>
 ${items||'<p class="note">ไม่พบเหตุการณ์ตามตัวกรอง</p>'}
-<p class="note">${ic('info')} ช่วงรอบที่แล้วคำนวณจากระบบที่ใช้ผูกดวงตอนนี้ (${typeof CAL141!=='undefined'&&CAL141==='L'?'นิรายนะ ลาหิรี':'สุริยยาตร์'}) เหตุการณ์รวบรวมจากบันทึกประวัติศาสตร์และข่าวสำคัญ เลือกเฉพาะเหตุการณ์ที่วันเวลาชัดเจน บางรายการระบุได้ระดับเดือนหรือปี ใช้เพื่อเทียบเคียงเชิงโหราศาสตร์ ไม่ได้หมายความว่าเหตุการณ์จะเกิดซ้ำ</p>`; }
+<p class="note">${ic('info')} ช่วงแต่ละรอบ ตำแหน่งดาว นวางค์ ตรียางค์ คำนวณจากระบบที่ใช้ผูกดวงตอนนี้ ณ เวลา ๑๒:๐๐ น. ของวันเหตุการณ์ (ถ้ารู้แค่เดือนหรือปี ใช้กลางเดือนหรือกลางปี) รอบที่เก่ามากของเนปจูนและพลูโตเป็นค่าประมาณ · ช่วงรอบที่แล้วคำนวณจากระบบที่ใช้ผูกดวงตอนนี้ (${typeof CAL141!=='undefined'&&CAL141==='L'?'นิรายนะ ลาหิรี':'สุริยยาตร์'}) เหตุการณ์รวบรวมจากบันทึกประวัติศาสตร์และข่าวสำคัญ เลือกเฉพาะเหตุการณ์ที่วันเวลาชัดเจน บางรายการระบุได้ระดับเดือนหรือปี ใช้เพื่อเทียบเคียงเชิงโหราศาสตร์ ไม่ได้หมายความว่าเหตุการณ์จะเกิดซ้ำ</p>`; }
 function draw(){ const m=document.getElementById('e372'); if(!m) return; m.querySelector('.e372b').innerHTML=body(); }
-function open(k){ ST={k,f:'all',c:'',q:'',wide:false}; let m=document.getElementById('e372'); if(!m){ m=document.createElement('div'); m.id='e372'; m.innerHTML=`<div class="e372bg"></div><div class="e372w"><button type="button" class="e372x" aria-label="ปิด">${ic('x',null,20)}</button><div class="e372b"></div></div>`; document.body.appendChild(m);
-m.addEventListener('click',ev=>{ const t=ev.target; if(t.closest('.e372x')||t.classList.contains('e372bg')){ m.style.display='none'; return; } const f=t.closest('[data-e372f]'); if(f){ ST.f=f.dataset.e372f; draw(); } });
-m.addEventListener('change',ev=>{ const t=ev.target; if(t.matches('[data-e372c]')){ ST.c=t.value; draw(); } if(t.matches('[data-e372w]')){ ST.wide=t.checked; draw(); } });
+function open(k){ ST={k,f:'all',c:'',q:'',wide:false,n:1,s:null,dg:-1,tn:''}; let m=document.getElementById('e372'); if(!m){ m=document.createElement('div'); m.id='e372'; m.innerHTML=`<div class="e372bg"></div><div class="e372w"><button type="button" class="e372x" aria-label="ปิด">${ic('x',null,20)}</button><div class="e372b"></div></div>`; document.body.appendChild(m);
+m.addEventListener('click',ev=>{ const t=ev.target; if(t.closest('.e372x')||t.classList.contains('e372bg')){ m.style.display='none'; return; } const f=t.closest('[data-e372f]'); if(f){ ST.f=f.dataset.e372f; draw(); } const tq=t.closest('[data-e372t]'); if(tq){ ST.tn=tq.dataset.e372t; draw(); } if(t.closest('[data-e372now]')){ let T; try{ T=+getTransit(); }catch(_){ T=Date.now(); } const x=posF(ST.k)(T); ST.s=Math.floor(x/30); ST.dg=Math.floor(x%30); ST.n=1; draw(); return; } const r=t.closest('[data-e372n]'); if(r){ ST.n=+r.dataset.e372n; draw(); m.querySelector('.e372w').scrollTop=0; } });
+m.addEventListener('change',ev=>{ const t=ev.target; if(t.matches('[data-e372c]')){ ST.c=t.value; draw(); } if(t.matches('[data-e372w]')){ ST.wide=t.checked; draw(); } if(t.matches('[data-e372s]')){ ST.s=+t.value; ST.n=1; draw(); } if(t.matches('[data-e372d]')){ ST.dg=+t.value; ST.n=1; draw(); } });
 m.addEventListener('input',ev=>{ const t=ev.target; if(t.matches('[data-e372q]')){ ST.q=t.value.trim(); const pos=t.selectionStart; draw(); const q=m.querySelector('[data-e372q]'); if(q){ q.focus(); try{ q.setSelectionRange(pos,pos); }catch(_){ } } } });
 const st=document.createElement('style'); st.textContent=`#e372{position:fixed;inset:0;z-index:2147483000;display:none}#e372 .e372bg{position:absolute;inset:0;background:rgba(0,0,0,.55)}#e372 .e372w{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(860px,calc(100vw - 20px));max-height:calc(100vh - 40px);overflow:auto;background:var(--panel,#121a24);color:var(--ink,#e8e8e8);border:1px solid var(--gold,#c9a227);border-radius:16px;padding:16px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
 #e372 .e372x{position:sticky;top:0;float:right;width:36px!important;height:36px;border-radius:50%;border:1px solid var(--line,#334);background:var(--panel,#121a24);color:inherit;display:grid;place-items:center;cursor:pointer;margin:0!important;padding:0;z-index:2}
 #e372 .e372h{display:flex;gap:12px;align-items:center;margin:0 44px 10px 0}#e372 .e372h b{font-size:17px;display:block}#e372 .e372h small{opacity:.8;font-size:12.5px;line-height:1.6}#e372 .e372p{width:40px;height:40px;border-radius:50%;background:var(--gold,#c9a227);color:#111;font-weight:800;font-size:20px;display:grid;place-items:center;flex:none}
 #e372 .e372s{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:8px 0}#e372 .e372s>div{border:1px solid var(--line,#334);border-top:3px solid var(--c,${GO});border-radius:10px;padding:6px 10px}#e372 .e372s b{font-size:22px;color:var(--c,${GO});display:block}#e372 .e372s small{opacity:.75;font-size:12px}
 #e372 .e372f{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0 12px}#e372 .e372f button{display:inline-flex;gap:4px;align-items:center;border:1px solid var(--line,#334);background:none;color:inherit;border-radius:999px;padding:5px 12px;font:inherit;font-size:13px;cursor:pointer;width:auto!important;margin:0!important;flex:none!important}#e372 .e372f button.on{border-color:var(--gold,#c9a227);color:var(--gold,#c9a227)}#e372 .e372f select,#e372 .e372f input[data-e372q]{border:1px solid var(--line,#334);background:var(--bg,#0d1520);color:inherit;border-radius:8px;padding:5px 8px;font:inherit;font-size:13px;width:auto!important;max-width:160px}#e372 .e372f label{font-size:12.5px;display:flex;gap:4px;align-items:center;white-space:nowrap;width:auto!important}#e372 .e372f input[type=checkbox]{width:16px!important;height:16px;margin:0!important;flex:none}
-#e372 .e372y h5{margin:14px 0 6px;font-size:14px;color:var(--gold,#c9a227);border-bottom:1px solid var(--line,#334);padding-bottom:4px}#e372 .e372y h5 small{opacity:.6;font-weight:400}#e372 .e372i{display:flex;gap:8px;padding:5px 0;border-bottom:1px dashed rgba(127,127,127,.15)}#e372 .e372i p{margin:0;font-size:13.5px;line-height:1.55}#e372 .e372n{min-width:26px;height:22px;border-radius:6px;background:rgba(127,127,127,.18);font-size:11.5px;display:grid;place-items:center;flex:none}#e372 .e372i small{display:flex;gap:4px;margin-top:3px}#e372 .e372i small i{font-style:normal;font-size:11px;color:#111;border-radius:5px;padding:0 6px}#e372 .note{font-size:12.5px;opacity:.8;display:flex;gap:6px;align-items:flex-start;margin-top:12px}`; document.head.appendChild(st); }
+#e372 .e372y h5{margin:14px 0 6px;font-size:14px;color:var(--gold,#c9a227);border-bottom:1px solid var(--line,#334);padding-bottom:4px}#e372 .e372y h5 small{opacity:.6;font-weight:400}#e372 .e372i{display:flex;gap:8px;padding:5px 0;border-bottom:1px dashed rgba(127,127,127,.15)}#e372 .e372i p{margin:0;font-size:13.5px;line-height:1.55}#e372 .e372n{min-width:26px;height:22px;border-radius:6px;background:rgba(127,127,127,.18);font-size:11.5px;display:grid;place-items:center;flex:none}#e372 .e372i small{display:flex;gap:4px;margin-top:3px}#e372 .e372i small i{font-style:normal;font-size:11px;color:#111;border-radius:5px;padding:0 6px}#e372 .e372c{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:4px 0 8px;padding:8px 10px;border:1px dashed var(--gold,#c9a227);border-radius:10px}#e372 .e372c label{display:flex;gap:6px;align-items:center;font-size:13px;width:auto!important}#e372 .e372c select{border:1px solid var(--line,#334);background:var(--bg,#0d1520);color:inherit;border-radius:8px;padding:5px 8px;font:inherit;font-size:13px;width:auto!important}#e372 .e372c button{border:1px solid var(--gold,#c9a227);background:none;color:var(--gold,#c9a227);border-radius:999px;padding:5px 12px;font:inherit;font-size:12.5px;cursor:pointer;width:auto!important;margin:0!important}
+#e372 .e372r{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:6px 0 8px}@media(max-width:640px){#e372 .e372r{grid-template-columns:repeat(3,1fr)}}#e372 .e372r button{display:flex;flex-direction:column;align-items:flex-start;gap:1px;border:1px solid var(--line,#334);background:none;color:inherit;border-radius:10px;padding:6px 8px;font:inherit;cursor:pointer;width:auto!important;margin:0!important;text-align:left}#e372 .e372r button.on{border-color:var(--gold,#c9a227);background:color-mix(in srgb,var(--gold,#c9a227) 12%,transparent)}#e372 .e372r b{font-size:13px}#e372 .e372r small{font-size:11px;opacity:.8}#e372 .ag{color:#8fd19e}
+#e372 .e372pp{display:flex;flex-wrap:wrap;gap:4px 10px;margin:3px 0 2px;font-size:12px;opacity:.92}#e372 .e372pp span{background:rgba(127,127,127,.12);border-radius:6px;padding:1px 7px}#e372 .e372i{border-left:3px solid var(--tc);padding-left:8px!important}#e372 .e372fls{display:inline-flex;gap:3px;margin-right:6px;vertical-align:-3px}#e372 .e372fl{width:22px!important;height:15px!important;object-fit:cover;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.3)}#e372 .e372cc{font-size:10px;border:1px solid rgba(127,127,127,.4);border-radius:3px;padding:0 3px}#e372 .e372sep{width:1px;height:22px;background:rgba(127,127,127,.3)}#e372 .e372f button[data-e372t].on{border-color:var(--tc,var(--gold));color:var(--tc,var(--gold))}#e372 .e372s{grid-template-columns:repeat(5,1fr)!important}@media(max-width:640px){#e372 .e372s{grid-template-columns:repeat(3,1fr)!important}}#e372 .e372r b,#e372 .e372c button{display:inline-flex;gap:4px;align-items:center}
+#e372 .e372pp .ob{color:#e8b90f}#e372 .e372pp em{font-style:normal;color:#2faa5a;font-weight:700}#e372 .note{font-size:12.5px;opacity:.8;display:flex;gap:6px;align-items:flex-start;margin-top:12px}`; document.head.appendChild(st); }
 m.style.display='block'; draw(); m.querySelector('.e372w').scrollTop=0; }
 return {open};
 })();
