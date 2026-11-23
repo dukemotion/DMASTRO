@@ -5080,7 +5080,7 @@ function ctx(){ const W=typeof WSTATE!=='undefined'?WSTATE:null; let T; try{ T=g
 o.TR=posAll(T); try{ o.SP=chartAt(T,W.lat,W.lon).spd; }catch(_){ o.SP={}; } try{ const s=sevaya(o.bt,T); o.SV=s.now?P2K[s.now.p]:null; o.SVe=s.now?s.now.e:null; }catch(_){ } return o; }
 const roleOf=(X,k)=>Object.keys(X.TK||{}).find(r=>X.TK[r]===NUM[k])||'';
 const lordOf=(X,h)=>LRD[(X.L+h-1)%12], hOf=(X,lon)=>cnt(X.L,sg(lon));
-function natH(X,h){ const k=lordOf(X,h), lh=hOf(X,X.N[k]), s=sd(k,X.N[k]), r=roleOf(X,k), inH=KA.filter(q=>X.N[q]!=null&&hOf(X,X.N[q])===h), why=[]; let sc=0;
+function natH(X,h){ const k=lordOf(X,h), lh=hOf(X,X.N[k]), s=sd(k,X.N[k]), r=roleOf(X,k), inH=KA.filter(q=>X.N[q]!=null&&hOf(X,X.N[q])===h), why=[]; let sc=0; { const sp=window.JR373&&JR373.spec(h,lh); if(sp){ sc+=sp[0]; why.push([sp[0]>=0?1:-1,`เจ้าภพ${HN[h-1]}ไปอยู่ภพ${HN[lh-1]}: ${sp[1]} (${sp[2]})`]); } }
 if([6,8,12].includes(lh)){ sc-=2; why.push([-1,`เจ้าภพ${HN[h-1]} (${TN[k]}) ตกภพ${HN[lh-1]} เรื่องนี้มีอุปสรรค`]); } else if([1,4,5,7,9,10,11].includes(lh)){ sc+=2; why.push([1,`เจ้าภพ${HN[h-1]} (${TN[k]}) อยู่ภพ${HN[lh-1]} ซึ่งเป็นภพดี`]); }
 const nb=/นิจ/.test(s)&&typeof NB356==='function'&&NB356(k,X.N).ok; if(good(s)){ const kb=typeof KB357==='function'?KB357(k,X.N):{}; if(kb.ken){ sc+=3; why.push([1,`${TN[k]}เป็น${s} และอยู่เรือนมุม (${kb.from.join(' ')}) ให้คุณเต็มกำลัง`]); } else { sc+=2; why.push([1,`${TN[k]}เป็น${s} มีกำลัง แต่ไม่อยู่เรือนมุม ยังไม่เต็มกำลัง`]); } } else if(nb){ why.push([1,`${TN[k]}นิจแต่เป็นนิจภังค์ (เจ้าเกษตร/ดาวอุจจ์เป็นเกณฑ์) ไม่ส่งผลร้าย`]); } else if(bad(s)){ sc-=2; why.push([-1,`${TN[k]}เป็น${s} อ่อนกำลัง`]); }
 if(['ศรี','เดช','มนตรี'].includes(r)){ sc+=1; why.push([1,`${TN[k]}เป็น${r}ของเจ้าชะตา`]); } else if(r==='กาลกิณี'){ sc-=2; why.push([-1,`${TN[k]}เป็นกาลกิณีของเจ้าชะตา`]); }
@@ -6122,4 +6122,126 @@ const st=document.createElement('style'); st.textContent=`#e372{position:fixed;i
 #e372 .e372src{font-style:normal;font-size:11px;opacity:.6;margin-left:4px}#e372 .e372pp .ob{color:#e8b90f}#e372 .e372pp em{font-style:normal;color:#2faa5a;font-weight:700}#e372 .note{font-size:12.5px;opacity:.8;display:flex;gap:6px;align-items:flex-start;margin-top:12px}`; document.head.appendChild(st); }
 m.style.display='block'; draw(); m.querySelector('.e372w').scrollTop=0; }
 return {open};
+})();
+
+window.JR373=(()=>{
+const td=n=>String(n).replace(/\d/g,c=>'๐๑๒๓๔๕๖๗๘๙'[c]);
+const G='#2faa5a',B='#e0453a',Y='#e8b90f',GD='var(--gold,#c9a227)',GR='#8a8f98',A='#4aa3ff';
+const SN=['เมษ','พฤษภ','มิถุน','กรกฎ','สิงห์','กันย์','ตุลย์','พิจิก','ธนู','มกร','กุมภ์','มีน'];
+const HN=['ตนุ','กดุมภะ','สหัชชะ','พันธุ','ปุตตะ','อริ','ปัตนิ','มรณะ','ศุภะ','กัมมะ','ลาภะ','วินาศ'];
+const HM=['ตัวเรา สุขภาพ','เงิน ทรัพย์','พี่น้อง การติดต่อ การเดินทางใกล้','บ้าน พ่อแม่ ที่ดิน','บุตร ความรัก การลงทุน สัตว์เลี้ยง','ศัตรู โรค หนี้ ลูกน้อง','คู่ครอง หุ้นส่วน','ความเปลี่ยนแปลง มรดก เงินคนอื่น','ผู้ใหญ่ โชค การศึกษา ต่างแดน','การงาน ตำแหน่ง','ลาภ ความสำเร็จ เพื่อน','สิ่งลับ ความสูญเสีย การจากไป'];
+const LRD=['MA','VE','ME','MO','SU','ME','VE','MA','JU','SA','RA','JU'], P2K={1:'SU',2:'MO',3:'MA',4:'ME',5:'JU',6:'VE',7:'SA',8:'RA'};
+const KA=['SU','MO','MA','ME','JU','VE','SA','RA','KE','UR'];
+const TN={SU:'อาทิตย์',MO:'จันทร์',MA:'อังคาร',ME:'พุธ',JU:'พฤหัสบดี',VE:'ศุกร์',SA:'เสาร์',RA:'ราหู',KE:'เกตุ',UR:'มฤตยู'};
+const PN={SU:'๑',MO:'๒',MA:'๓',ME:'๔',JU:'๕',VE:'๖',SA:'๗',RA:'๘',KE:'๙',UR:'๐'};
+const MO_=['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+const nrm=x=>((x%360)+360)%360, sg=x=>Math.floor(nrm(x)/30), cnt=(a,b)=>((b-a)%12+12)%12+1;
+const sd=(k,lon)=>{ try{ return std(k,lon)||''; }catch(_){ return ''; } }, good=s=>/อุจจ์|เกษตร|มหาจักร|ราชาโชค/.test(s), bad=s=>/นิจ|ประ/.test(s);
+const nbOk=(k,P)=>{ try{ return typeof NB356==='function'&&NB356(k,P).ok; }catch(_){ return false; } };
+const DUS=[6,8,12];
+const I={home:'<path d="M3 11l9-7 9 7M5 10v10h14V10"/>',link:'<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M10 6.5h4a3 3 0 0 1 3 3V14"/>',bolt:'<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',q:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .8-1 1.5v.7M12 17h.01"/>',book:'<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M8 7h7M8 11h7"/>',ok:'<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>',no:'<circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/>',mid:'<circle cx="12" cy="12" r="9"/><path d="M8 12h8"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',key:'<circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3"/>',down:'<path d="M6 9l6 6 6-6"/>',med:'<rect x="4" y="9" width="16" height="7" rx="3.5"/><path d="M12 9v7"/>',run:'<circle cx="14" cy="4.5" r="2"/><path d="M8 21l3-6 3 2v4M6 12l3-4h5l3 4"/>'};
+const ic=(n,c,s)=>`<svg viewBox="0 0 24 24" width="${s||18}" height="${s||18}" style="width:${s||18}px!important;height:${s||18}px!important;flex:none" fill="none" stroke="${c||'currentColor'}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${I[n]||n}</svg>`;
+const tag=(t,c)=>`<span class="jr3t" style="--c:${c}">${t}</span>`;
+const pl=k=>`<b class="jr3p">${PN[k]} ${TN[k]}</b>`;
+const fmt=d=>`${td(d.getDate())} ${MO_[d.getMonth()]} ${td(d.getFullYear()+543)} เวลา ${td(String(d.getHours()).padStart(2,'0'))}:${td(String(d.getMinutes()).padStart(2,'0'))} น.`;
+// คู่ภพที่ตำรากล่าวไว้ (สรุปความใหม่) [น้ำหนัก, ความหมาย, ที่มา, เคล็ด]
+const S1='ตำราภพต่อภพ (ภาพหน้าตำราที่ อ.ดุ๊ก ส่งมา)', S2='ส.ไชยนันทน์ · สถิติดวงชาตา', S0='หลักเจ้าเรือนทั่วไป';
+const SPEC={
+'5-8':[-2,'บุตรน้อย บุตรสุขภาพอ่อน เลี้ยงยาก มักห่างเหินหรืออยู่ไกลกับลูก ควรระวังเรื่องการตั้งครรภ์ สัตว์เลี้ยงไม่ค่อยถูกโชค (ภพปุตตะใช้ดูการเลี้ยงดูด้วย)',S1,'ฝากบุตรเป็นลูกบุญธรรมของพระพุทธรูปหรือพระผู้ใหญ่ ให้อาหารสัตว์ที่พิการ และทำทานกับผู้พิการทางสายตา'],
+'8-12':[0,'มีโอกาสได้รับมรดกหรือทรัพย์จากผู้ล่วงลับ แต่มักมีการฟ้องร้องหรือโต้แย้งตามมา ถ้าดาวอื่นหนุน สุดท้ายเจ้าชะตาได้ครอง',S2],
+'1-8':[-1,'ตัวเจ้าชะตาผูกกับความเปลี่ยนแปลง ต้องดูแลสุขภาพ ในดวงที่ผูกเมื่อมีคนมาถามมักเป็นเรื่องการสูญเสียหรือผู้สูงวัยในบ้าน',S2],
+'4-12':[-1,'ห่างบ้านเกิดหรือย้ายถิ่น ในเรื่องเจ็บป่วยภพพันธุถือเป็นเรือนยา ยาหรือการรักษาไม่ค่อยได้ผล',S2],
+'10-6':[-1,'งานหนัก คู่แข่งมาก ในดวงถามเรื่องผู้ป่วย (ภพกัมมะ) ไปอยู่ภพอริ อาการค่อนข้างหนัก',S2],
+'6-12':[0,'ศัตรู โรค หรือหนี้ไปจบในที่ลับ ถ้าดาวมีกำลัง ปัญหาสลายไปเอง ถ้าดาวเป็นประหรือนิจ โรคหรือปัญหาลากยาวและซ่อนเร้น',S2],
+'2-12':[-1,'เงินรั่ว ใช้จ่ายเกินตัว หรือเงินหมดไปกับเรื่องไกลบ้านและเรื่องลับ',S0],
+'2-11':[1,'เงินงอกเงย มีลาภเข้ามาต่อเนื่อง',S0],
+'11-2':[1,'ลาภเข้ากระเป๋า รายได้เสริมเก็บได้จริง',S0],
+'9-10':[1,'ผู้ใหญ่หนุนการงาน ได้ตำแหน่งจากความรู้',S0],
+'10-1':[1,'การงานมาหาถึงตัว เป็นคนของงาน',S0],
+'1-10':[1,'ทุ่มเทให้การงาน มีชื่อเสียงจากงาน',S0],
+'7-6':[-1,'คู่ครองสุขภาพไม่แข็งแรง หรือมีเรื่องขัดแย้งกับคู่และหุ้นส่วน',S0],
+'7-8':[-1,'ชีวิตคู่เปลี่ยนแปลงบ่อย อาจได้ทรัพย์ผ่านคู่ครอง',S0],
+'5-12':[-1,'บุตรอยู่ไกล มีค่าใช้จ่ายเรื่องบุตรหรือความรักที่ต้องเก็บเป็นความลับ',S0],
+'3-9':[1,'เดินทางไกล ได้ศึกษาต่อ พี่น้องได้ดีต่างถิ่น',S0],
+'12-6':[0,'ความสูญเสียไปจบที่ศัตรูหรือโรค ถ้าดาวดี ศัตรูแพ้ภัยตัวเอง',S0]};
+const spec=(h,lh)=>SPEC[h+'-'+lh]||null;
+function place(N,L,TR){ const out=[]; for(let h=1;h<=12;h++){ const k=LRD[(L+h-1)%12]; if(N[k]==null) continue; const lh=cnt(L,sg(N[k])), s=sd(k,N[k]), why=[]; let sc=0;
+if(lh===h){ sc+=1; why.push([1,'เจ้าภพอยู่บ้านตัวเอง เรื่องนี้มั่นคง ไม่ต้องพึ่งใคร']); }
+else if(DUS.includes(lh)){ sc-=1; why.push([-1,`ไปอยู่ภพ${HN[lh-1]} ซึ่งเป็นภพทุกข์ (๖ ๘ ๑๒)`]); }
+else if([1,4,7,10].includes(lh)){ sc+=1; why.push([1,`ไปอยู่ภพ${HN[lh-1]} ซึ่งเป็นเรือนมุม (๑ ๔ ๗ ๑๐)`]); }
+else if([5,9].includes(lh)){ sc+=1; why.push([1,`ไปอยู่ภพ${HN[lh-1]} ซึ่งเป็นตรีโกณ (๕ ๙)`]); }
+else if([2,11].includes(lh)){ sc+=.5; why.push([1,`ไปอยู่ภพ${HN[lh-1]} ภพทรัพย์และลาภ`]); }
+else why.push([0,`ไปอยู่ภพ${HN[lh-1]} ภพกลาง`]);
+if(good(s)){ sc+=1; why.push([1,`${TN[k]}เป็น${s} มีกำลังส่งผลเต็มที่`]); }
+else if(/นิจ/.test(s)&&nbOk(k,N)){ why.push([1,`${TN[k]}นิจแต่เป็นนิจภังค์ ไม่ส่งผลร้าย`]); }
+else if(bad(s)){ sc-=1; why.push([-1,`${TN[k]}เป็น${s} อ่อนกำลัง ผลของเรื่องนี้ด้อยลง`]); }
+if(DUS.includes(h)&&DUS.includes(lh)&&h!==lh){ sc+=.5; why.push([1,'เจ้าภพทุกข์ไปอยู่ภพทุกข์ ร้ายซ้อนร้าย บางสำนักถือว่าผลร้ายหักล้างกันลง (แนวคิดเสริม)']); }
+const sp=spec(h,lh); if(sp) sc+=sp[0];
+const tr=TR?KA.filter(q=>TR[q]!=null&&sg(TR[q])===sg(N[k])):[];
+out.push({h,k,lh,s,sc,why,sp,tr,si:sg(N[k])}); } return out; }
+const tone=sc=>sc>=1?[G,'ok','ส่งผลดี']:sc<=-1?[B,'no','มีอุปสรรค']:[Y,'mid','กลาง ๆ'];
+function posAll(t){ const o={}; try{ const h=horaOf(t); KA.forEach(k=>{ try{ o[k]=posH(h,k); }catch(_){ } }); }catch(_){ } return o; }
+function ctx(){ const W=typeof WSTATE!=='undefined'?WSTATE:null; let T; try{ T=getTransit(); }catch(_){ } if(!T||isNaN(T)) T=new Date(); const o={T,lat:13.75,lon:100.5};
+if(W){ if(W.lat!=null){ o.lat=W.lat; o.lon=W.lon; } if(W.nat&&W.nat.pos){ o.N=W.nat2||W.nat.pos; o.L=sg(o.N.LA); o.bt=new Date(+W.bt); try{ o.TK=taksaNatal(o.bt).m; }catch(_){ o.TK={}; } } }
+o.TR=posAll(T); return o; }
+let TAB='nat', OPEN={};
+const TABS=[['nat','link','เจ้าเรือน ๑๒ ภพ'],['lazy','run','ขยันหรือขี้เกียจ'],['ask','q','ดวงเมื่อมีคนมาหา'],['rule','book','หลักตำรา']];
+function card(o,id,ctxNote){ const [c,i,t]=tone(o.sc), on=OPEN[id];
+return `<div class="jr3c${on?' on':''}" style="--c:${c}"><button type="button" data-jro="${id}">${ic(i,c,20)}<span class="jr3x"><b>ภพ${HN[o.h-1]} → ภพ${HN[o.lh-1]}</b><small>เจ้าภพ ${pl(o.k)} อยู่ภพที่ ${td(o.lh)} ราศี${SN[o.si]}${o.s?' · '+o.s:''}</small></span>${tag(t,c)}${ic('down',GR,16)}</button>
+<div class="jr3b"><p>เรื่อง<b>${HM[o.h-1]}</b> ไปผูกอยู่กับเรื่อง<b>${HM[o.lh-1]}</b>${ctxNote||''}</p>
+${o.sp?`<div class="jr3s" style="--c:${o.sp[0]>0?G:o.sp[0]<0?B:Y}">${ic('book',o.sp[0]>0?G:o.sp[0]<0?B:Y,16)}<div>${o.sp[1]}<em>ที่มา ${o.sp[2]}</em>${o.sp[3]?`<div class="jr3k">${ic('key',G,15)} เคล็ด: ${o.sp[3]}</div>`:''}</div></div>`:''}
+<ul>${o.why.map(([g,w])=>`<li>${ic(g>0?'ok':g<0?'no':'mid',g>0?G:g<0?B:Y,15)}<span>${w}</span></li>`).join('')}</ul>
+${o.tr&&o.tr.length?`<p class="jr3n">${ic('clock',A,15)} ตอนนี้ดาวจร ${o.tr.map(q=>`<b style="color:${q==='JU'?G:['SA','RA','KE','MA'].includes(q)?B:'inherit'}">${TN[q]}</b>`).join(' ')} ทับเจ้าภพนี้ เรื่องนี้กำลังถูกกระตุ้น${o.tr.includes('JU')?' พฤหัสบดีจรมาทับมักให้ผลดีของเรื่องนี้ออกมา':''}${o.tr.some(q=>['SA','RA'].includes(q))?' เสาร์หรือราหูจรทับมักนำความยุ่งยากหรือคดีความมาก่อน':''}</p>`:''}</div></div>`; }
+function tNat(X){ const P=place(X.N,X.L,X.TR), g=P.filter(o=>o.sc>=1).length, b=P.filter(o=>o.sc<=-1).length, sp=P.filter(o=>o.sp);
+return `<div class="jr3sum"><div style="--c:${G}">${ic('ok',G,20)}<b>${td(g)}</b><small>ภพส่งผลดี</small></div><div style="--c:${Y}">${ic('mid',Y,20)}<b>${td(12-g-b)}</b><small>ภพกลาง ๆ</small></div><div style="--c:${B}">${ic('no',B,20)}<b>${td(b)}</b><small>ภพมีอุปสรรค</small></div><div style="--c:${A}">${ic('book',A,20)}<b>${td(sp.length)}</b><small>คู่ภพที่ตำราระบุ</small></div></div>
+<p class="note">ลัคนาราศี${SN[X.L]} นับภพแบบราศีละภพ เจ้าเรือนใช้ดาวเกษตรแบบไทย (กุมภ์ใช้ราหู) กดแต่ละภพเพื่อดูเหตุผล</p>${P.map(o=>card(o,'n'+o.h)).join('')}`; }
+function tLazy(X){ const N=X.N, L=X.L, TK=X.TK||{}, R=[]; let sc=0;
+const ma=sd('MA',N.MA), mh=cnt(L,sg(N.MA));
+if(good(ma)){ sc+=2; R.push([1,`อังคาร (ดาวแห่งความขยัน) เป็น${ma} แรงขับดี กล้าลงมือ`]); } else if(/นิจ/.test(ma)&&nbOk('MA',N)){ R.push([1,'อังคารนิจแต่เป็นนิจภังค์ ความขยันไม่เสีย']); } else if(bad(ma)){ sc-=2; R.push([-1,`อังคารเป็น${ma} ตำราว่าความขยันหายไป ทำอะไรช้า ผัดวันประกันพรุ่ง`]); } else R.push([0,'อังคารไม่มีตำแหน่งพิเศษ ความขยันปานกลาง']);
+if(DUS.includes(mh)){ sc-=1; R.push([-1,`อังคารตกภพ${HN[mh-1]} แรงขยันมักหมดไปกับเรื่องจุกจิก`]); } else if([1,10].includes(mh)){ sc+=1; R.push([1,`อังคารอยู่ภพ${HN[mh-1]} มีแรงลงมือทำงาน`]); }
+const uk=P2K[TK['อุตสาหะ']], kk=P2K[TK['กาลกิณี']];
+if(uk&&N[uk]!=null){ const us=sd(uk,N[uk]), uh=cnt(L,sg(N[uk]));
+if(good(us)){ sc+=2; R.push([1,`ดาวอุตสาหะตามทักษาคือ ${TN[uk]} เป็น${us} ความพากเพียรสูง`]); } else if(/นิจ/.test(us)&&nbOk(uk,N)){ R.push([1,`ดาวอุตสาหะ ${TN[uk]} นิจแต่เป็นนิจภังค์`]); } else if(bad(us)){ sc-=2; R.push([-1,`ดาวอุตสาหะตามทักษาคือ ${TN[uk]} เป็น${us} ตำราว่าเกียจคร้านมาก`]); } else R.push([0,`ดาวอุตสาหะตามทักษาคือ ${TN[uk]} ไม่มีตำแหน่งพิเศษ`]);
+if(DUS.includes(uh)){ sc-=1; R.push([-1,`ดาวอุตสาหะตกภพ${HN[uh-1]}`]); }
+if(kk&&N[kk]!=null&&kk!==uk&&sg(N[kk])===sg(N[uk])){ sc-=2; R.push([-1,`ดาวกาลกิณี ${TN[kk]} กุมดาวอุตสาหะ ${TN[uk]} ทำให้อุตสาหะเสีย ความขยันลดลง`]); } }
+const tri=[['MA','ความขยัน แข็งขัน'],['ME','ความอ่อนหวาน การพูด'],['JU','ปัญญา ความบริสุทธิ์ใจ']].map(([k,t])=>{ const s=sd(k,N[k]), nb=/นิจ/.test(s)&&nbOk(k,N), c=good(s)||nb?G:bad(s)?B:Y; return `<div style="--c:${c}">${pl(k)}<small>ดู${t}</small>${tag(s?(nb?'นิจภังค์':s):'ปกติ',c)}</div>`; }).join('');
+const v=sc>=2?[G,'ok','ขยัน มีแรงสู้งาน']:sc<=-2?[B,'no','แรงขับต่ำ ต้องมีคนหรือเป้าหมายกระตุ้น']:[Y,'mid','ขยันเป็นช่วง ๆ ขึ้นกับอารมณ์'];
+let now=''; try{ const ts=sd('MA',X.TR.MA); now=`<p class="jr3n">${ic('clock',A,15)} ตอนนี้อังคารจรอยู่ราศี${SN[sg(X.TR.MA)]}${ts?' เป็น'+ts:''} ${good(ts)?'ช่วงนี้แรงขยันมาเต็ม เหมาะเริ่มงานใหม่':bad(ts)?'ช่วงนี้แรงขับตก ควรตั้งเป้าเล็ก ๆ':'แรงขยันช่วงนี้ปกติ'}</p>`; }catch(_){ }
+return `<div class="jr3v" style="--c:${v[0]}">${ic(v[1],v[0],28)}<div><b>${v[2]}</b><small>คะแนนความขยัน ${sc>0?'+':''}${td(sc)}</small></div></div>
+<div class="jr3tri">${tri}</div><ul class="jr3l">${R.map(([g,w])=>`<li>${ic(g>0?'ok':g<0?'no':'mid',g>0?G:g<0?B:Y,15)}<span>${w}</span></li>`).join('')}</ul>${now}
+<p class="note">หลัก: ดูความขยันที่อังคาร ดูความอ่อนหวานที่พุธ ดูปัญญาที่พฤหัสบดี และตามคัมภีร์ทักษา ถ้าดาวอุตสาหะเป็นประหรือนิจ หรือถูกดาวกาลกิณีกุม ความขยันจะเสีย</p>`; }
+let HQT=null;
+function tAsk(X){ const T=HQT||X.T; let ch; try{ ch=chartAt(T,X.lat,X.lon); }catch(e){ return '<p class="note">คำนวณดวงเวลาไม่สำเร็จ</p>'; }
+const N=ch.pos, L=sg(N.LA), P=place(N,L,null), f=h=>P.find(o=>o.h===h);
+const l1=f(1), l4=f(4), l10=f(10);
+let mc=''; try{ const m0=sg(N.MO); for(let i=1;i<=150;i++){ const t=new Date(+T+i*30*60000); const m=sg(posH(horaOf(t),'MO')); if(m!==m0){ mc=`จันทร์จะย้ายเข้าราศี${SN[m]} ราว ${fmt(t)}`; break; } } }catch(_){ }
+const sick=[[l1,'หมอ (ภพตนุ)'],[l4,'ยา (ภพพันธุ)'],[l10,'ผู้ป่วย (ภพกัมมะ)']].map(([o,t])=>{ const bd=DUS.includes(o.lh)||(bad(o.s)&&!nbOk(o.k,N)), c=bd?B:G; return `<div style="--c:${c}">${ic('med',c,18)}<b>${t}</b><small>${TN[o.k]} อยู่ภพ${HN[o.lh-1]}${o.s?' · '+o.s:''}</small>${tag(bd?'อ่อน':'ดี',c)}</div>`; }).join('');
+const toLocal=d=>new Date(+d-d.getTimezoneOffset()*60000).toISOString().slice(0,16);
+return `<div class="jr3q"><label>${ic('clock',GD,16)} เวลาที่มีคนมาถาม <input type="datetime-local" data-jrt value="${toLocal(T)}"></label><button type="button" data-jrnow>${ic('clock',null,16)} ตอนนี้</button></div>
+<div class="jr3v" style="--c:${tone(l1.sc)[0]}">${ic('q',tone(l1.sc)[0],28)}<div><b>มาด้วยเรื่อง${HM[l1.lh-1]}</b><small>ลัคนาราศี${SN[L]} เจ้าเรือนลัคนา ${TN[l1.k]} ไปอยู่ภพ${HN[l1.lh-1]} ตำราให้อ่านเรื่องที่มาถามจากภพที่เจ้าเรือนลัคนาไปอยู่</small></div></div>
+${mc?`<p class="jr3n">${ic('clock',A,15)} ${mc} ใช้เป็นจุดเวลาที่เรื่องจะเปลี่ยน</p>`:''}
+<h4 class="jr3h">${ic('med',GD,18)} ถ้าถามเรื่องผู้ป่วย</h4><div class="jr3tri">${sick}</div>
+<p class="note">หลัก ส.ไชยนันทน์: ภพตนุเป็นหมอ ภพพันธุเป็นยา ภพกัมมะเป็นผู้ป่วย ถ้าเจ้าเรือนเหล่านี้ไปอยู่ภพ ๖ ๘ ๑๒ หรือเป็นประ นิจ ถือว่าอ่อน</p>
+<h4 class="jr3h">${ic('link',GD,18)} เจ้าเรือนทั้ง ๑๒ ภพ ณ เวลาที่ถาม</h4>${P.map(o=>card(o,'a'+o.h)).join('')}`; }
+function tRule(){ const rows=[['เจ้าเรือนไปอยู่ภพไหน','เรื่องของภพเจ้าของ ไปผูกกับเรื่องของภพที่ดาวไปอยู่ เช่น เจ้าภพปุตตะไปอยู่ภพมรณะ เรื่องบุตรผูกกับความเปลี่ยนแปลงและการสูญเสีย'],['ภพที่ไปอยู่','เรือนมุม ๑ ๔ ๗ ๑๐ และตรีโกณ ๕ ๙ หนุน ภพ ๒ ๑๑ ให้ทรัพย์ ภพทุกข์ ๖ ๘ ๑๒ ให้อุปสรรค'],['กำลังดาว','อุจจ์ เกษตร มหาจักร ราชาโชค เพิ่มผล ประ นิจ ลดผล เว้นนิจภังค์ตามตำรา อ.เทพย์ สาริกบุตร'],['ดาวจรทับเจ้าเรือน','เมื่อดาวจรเข้าราศีของเจ้าเรือน เรื่องนั้นถูกกระตุ้น พฤหัสบดีจรมักให้ผลดีออกมา ราหูหรือเสาร์จรมักนำคดีความหรือความยุ่งยากมาก่อน (ตัวอย่างเรื่องมรดก ส.ไชยนันทน์)'],['ความขยัน','ดูความขยันที่อังคาร ดูความอ่อนหวานที่พุธ ดูปัญญาที่พฤหัสบดี ทักษาดูดาวอุตสาหะ ถ้าเป็นประ นิจ หรือถูกกาลกิณีกุม ความขยันเสีย'],['ดวงเมื่อมีคนมาหา','ผูกดวง ณ เวลาที่มีคนมาถาม อ่านเรื่องที่มาจากภพที่เจ้าเรือนลัคนาไปอยู่ ถ้าถามเรื่องผู้ป่วย ภพ ๑ หมอ ภพ ๔ ยา ภพ ๑๐ ผู้ป่วย จันทร์ย้ายราศีใช้กะเวลาเปลี่ยน']];
+return `<div class="kh8tw"><table class="kh8tb">${rows.map(r=>`<tr><td><b>${r[0]}</b></td><td>${r[1]}</td></tr>`).join('')}</table></div>
+<h4 class="jr3h">${ic('book',GD,18)} คู่ภพที่ตำราระบุ</h4><div class="kh8tw"><table class="kh8tb"><tr><th>คู่ภพ</th><th>ความหมาย (สรุปความใหม่)</th><th>ที่มา</th></tr>${Object.entries(SPEC).map(([k,v])=>{ const [a,b]=k.split('-').map(Number); return `<tr><td style="color:${v[0]>0?G:v[0]<0?B:Y};white-space:nowrap">${HN[a-1]} → ${HN[b-1]}</td><td>${v[1]}</td><td><small>${v[2]}</small></td></tr>`; }).join('')}</table></div>
+<p class="note">ที่มา: หน้าตำราภพปุตตะกับมรณะ และบทสนทนาเรื่องดวงขี้เกียจ (ภาพที่ อ.ดุ๊ก ส่งมา ไม่ปรากฏชื่อผู้เขียนในภาพ) · สถิติดวงชาตา ดวงตัวอย่างที่ ๑๗๖ และ ๑๘๐ โดย ส.ไชยนันทน์ · นิจภังค์และดาวดีในเรือนมุม ตำรา อ.เทพย์ สาริกบุตร · ระบบสรุปความใหม่ทั้งหมด ไม่ได้คัดลอกต้นฉบับ และไม่แสดงดวงของบุคคลจริงในตำรา</p>`; }
+function render(){ const out=document.getElementById('jr373Out'); if(!out) return; let X={}; try{ X=ctx(); }catch(e){ console.error(e); } let b='';
+try{ if((TAB==='nat'||TAB==='lazy')&&!X.N) b='<p class="note">ผูกดวงก่อน แล้วกลับมาที่หน้านี้</p>'; else b=TAB==='nat'?tNat(X):TAB==='lazy'?tLazy(X):TAB==='ask'?tAsk(X):tRule(); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; }
+out.innerHTML=`<h3 class="kh8H">${ic('link',GD,22)} เจ้าเรือนไปอยู่ภพ</h3><p class="note">อ่านว่าเจ้าเรือนแต่ละภพไปอยู่ภพไหน เรื่องหนึ่งไปผูกกับอีกเรื่องอย่างไร พร้อมความขยัน ดวงเมื่อมีคนมาหา และดาวจรที่กระตุ้น</p><div class="kh8tabs">${TABS.map(([k,i,t])=>`<button type="button" data-jrb="${k}" class="${TAB===k?'on':''}">${ic(i,TAB===k?GD:null,20)}<span>${t}</span></button>`).join('')}</div>${b}`; }
+document.addEventListener('click',ev=>{ const t=ev.target.closest&&ev.target.closest('#jr373Out [data-jrb],#jr373Out [data-jro],#jr373Out [data-jrnow]'); if(!t) return; if(t.dataset.jrb) TAB=t.dataset.jrb; if(t.dataset.jro) OPEN[t.dataset.jro]=!OPEN[t.dataset.jro]; if(t.hasAttribute('data-jrnow')) HQT=new Date(); const y=scrollY; render(); scrollTo(0,y); });
+document.addEventListener('change',ev=>{ const t=ev.target; if(!t.matches||!t.matches('#jr373Out [data-jrt]')) return; const d=new Date(t.value); if(!isNaN(d)){ HQT=d; render(); } });
+if(!document.getElementById('jr373css')){ const st=document.createElement('style'); st.id='jr373css'; const kc=document.getElementById('kh358css'); st.textContent=(kc?kc.textContent.split('#kh358Out ').join('#jr373Out '):'')+`
+#jr373Out .jr3t{display:inline-flex;align-items:center;padding:2px 9px;border-radius:999px;font-size:12px;color:var(--c);border:1px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 12%,transparent);white-space:nowrap}
+#jr373Out .jr3p{white-space:nowrap}
+#jr373Out .jr3c{border:1px solid var(--line);border-left:4px solid var(--c);border-radius:12px;margin:6px 0;overflow:hidden;background:var(--panel)}#jr373Out .jr3c>button{display:flex;gap:10px;align-items:center;width:100%!important;margin:0!important;text-align:left;background:none;border:0;color:inherit;font:inherit;padding:10px 12px;cursor:pointer}#jr373Out .jr3c>button>.jr3x{flex:1;min-width:0}#jr373Out .jr3x>b{display:block;font-size:14.5px}#jr373Out .jr3x small b{display:inline;font-size:inherit}#jr373Out .jr3c>button>.jr3t{flex:none}#jr373Out .jr3c>button small{opacity:.75;font-size:12.5px}
+#jr373Out .jr3b{display:none;padding:4px 14px 12px;border-top:1px dashed var(--line)}#jr373Out .jr3c.on .jr3b{display:block}#jr373Out .jr3b ul,#jr373Out .jr3l{list-style:none;padding:0;margin:8px 0}#jr373Out li{display:flex;gap:8px;align-items:flex-start;margin:5px 0;font-size:13.5px}
+#jr373Out .jr3s{display:flex;gap:8px;align-items:flex-start;padding:9px 11px;border-radius:10px;background:color-mix(in srgb,var(--c) 10%,transparent);border:1px solid color-mix(in srgb,var(--c) 35%,transparent);font-size:13.5px;margin:8px 0}#jr373Out .jr3s em{display:block;font-style:normal;font-size:11.5px;opacity:.65;margin-top:3px}#jr373Out .jr3k{display:flex;gap:6px;align-items:flex-start;margin-top:6px;color:${G}}
+#jr373Out .jr3n{display:flex;gap:6px;align-items:flex-start;font-size:13px;margin:8px 0}
+#jr373Out .jr3sum,#jr373Out .jr3tri{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin:10px 0}#jr373Out .jr3sum>div,#jr373Out .jr3tri>div{border:1px solid color-mix(in srgb,var(--c) 40%,var(--line));border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:4px;align-items:flex-start;background:color-mix(in srgb,var(--c) 7%,var(--panel))}#jr373Out .jr3sum b{font-size:22px;color:var(--c)}#jr373Out .jr3sum small,#jr373Out .jr3tri small{opacity:.75;font-size:12px}
+#jr373Out .jr3v{display:flex;gap:12px;align-items:center;padding:12px 14px;border-radius:14px;border:1px solid color-mix(in srgb,var(--c) 45%,var(--line));background:color-mix(in srgb,var(--c) 10%,var(--panel));margin:10px 0}#jr373Out .jr3v b{display:block;font-size:17px;color:var(--c)}#jr373Out .jr3v small{opacity:.8;font-size:12.5px}
+#jr373Out .jr3h{display:flex;gap:8px;align-items:center;margin:16px 0 6px;font-weight:500}
+#jr373Out .jr3q{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:8px 0}#jr373Out .jr3q label{display:flex;gap:6px;align-items:center;flex-wrap:wrap;font-size:13.5px}#jr373Out .jr3q input{font:inherit;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:inherit;width:auto!important}#jr373Out .jr3q button{display:inline-flex;gap:6px;align-items:center;width:auto!important;margin:0!important;padding:6px 12px;border-radius:999px}`; document.head.appendChild(st); }
+return {render,spec,place};
 })();
