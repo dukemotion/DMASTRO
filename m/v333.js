@@ -4176,7 +4176,60 @@ ${sup(tOk,'ดาวตนุลัคน์มีกำลัง',tk?`ดาว
 ${sup(sOk,'เสาร์มีกำลังในเรือนเกณฑ์',N.SA!=null?`เสาร์อยู่ภพที่ ${td(sh)}${ss?' เป็น'+ss:' ไม่มีมาตรฐานพิเศษ'} ตำราต้องการเกษตร อุจจ์ หรือมูลตรีโกณ ในภพ ๑ ๔ ๗ ๑๐`:'—')}</ul>
 <p class="sm" style="margin-top:10px">หลัก: บาปเคราะห์ไม่ได้ให้โทษเสมอไป ตำรากำหนดราศีเมษ พฤษภ กรกฎ ผู้เขียนบทความสันนิษฐานว่าเพราะเป็นราศีอุจจ์ของอาทิตย์ จันทร์ และพฤหัสบดี ซึ่งเป็นดาวฝ่ายเทพ ความร้ายของราหูจึงถูกกำราบ และกลับให้คุณด้านการคุ้มครอง</p>
 <p class="note">ที่มา: คัมภีร์ชาตกปาริชาต อัธยายะที่ ๔ โศลกที่ ๘๐ (ไวทยนาถ ทีกษิต) · เรียบเรียงใหม่จากบทความของโหรชัยวัฒน์ สดชื่น (๒๓ พ.ย. ๒๕๖๙) โปรดติดตามต้นฉบับที่เพจของผู้เขียน</p></div>`; }
-{ const _ov=overview; overview=X=>_ov(X)+(X&&X.N?arish(X):''); }
+function rqual(X){ const N=X.N, L=sg(N.LA), rs=sg(N.RA), h=cnt(L,rs), LR=['MA','VE','ME','MO','SU','ME','VE','MA','JU','SA','RA','JU'], C7=['SU','MO','MA','ME','JU','VE','SA'];
+const sd_=k=>{ try{ return std(k,N[k])||''; }catch(_){ return ''; } }, hs=k=>N[k]!=null?cnt(L,sg(N[k])):0, lordOf=n=>LR[(L+n-1)%12];
+const rst=sd_('RA'), good=s=>/อุจจ์|เกษตร|มหาจักร|ราชาโชค|มูลตรีโกณ/.test(s), bad=s=>/นิจ|ประ/.test(s);
+const withR=C7.filter(k=>N[k]!=null&&sg(N[k])===rs), KT=[1,4,5,7,9,10];
+const lordsOf=k=>[1,2,3,4,5,6,7,8,9,10,11,12].filter(n=>lordOf(n)===k);
+const disp=LR[rs], dh=disp==='RA'?h:hs(disp), dst=disp==='RA'?rst:sd_(disp);
+const YG=[]; const add=(on,side,name,en,why)=>YG.push({on,side,name,en,why});
+add(KT.includes(h)&&disp!=='RA'&&KT.includes(dh)&&!bad(dst),'g','ราหูโยคการกะ','Rahu Yogakaraka',`ราหูอยู่ภพ${HN[h-1]} และเจ้าเรือนราศี${SN[rs]}คือ${TN[disp]}อยู่ภพ${dh?HN[dh-1]:'—'}${dst?' เป็น'+dst:''} (ระบบใช้เกณฑ์: ราหูและเจ้าเรือนที่ราหูอยู่ต่างอยู่เกณฑ์หรือตรีโกณ และเจ้าเรือนไม่เสีย)`);
+const kl=withR.filter(k=>lordsOf(k).some(n=>[1,4,7,10].includes(n))), tl=withR.filter(k=>lordsOf(k).some(n=>[5,9].includes(n)));
+add(kl.length&&tl.length&&KT.includes(h),'g','ราหูร่วมราชโยค','Rahu-associated Raja Yoga',kl.length&&tl.length?`ราหูร่วมกับเจ้าเรือนเกณฑ์ (${kl.map(k=>TN[k]).join(' ')}) และเจ้าเรือนตรีโกณ (${tl.map(k=>TN[k]).join(' ')}) ในภพ${HN[h-1]}`:'ต้องมีเจ้าเรือนเกณฑ์และเจ้าเรือนตรีโกณร่วมราศีกับราหู ในภพเกณฑ์หรือตรีโกณ');
+const dl=withR.filter(k=>lordsOf(k).some(n=>[2,11].includes(n)));
+add(dl.length>0||([2,11].includes(h)&&withR.some(k=>lordsOf(k).some(n=>[5,9].includes(n)))),'g','ราหูร่วมธนโยค','Rahu-associated Dhana Yoga',dl.length?`ราหูร่วมกับ${dl.map(k=>TN[k]).join(' ')} ซึ่งเป็นเจ้าเรือนกดุมภะหรือลาภะ`:'ต้องมีเจ้าเรือนภพ ๒ หรือ ๑๑ ร่วมราศีกับราหู');
+const l9=lordOf(9), l10=lordOf(10), dk=(withR.includes(l9)&&withR.includes(l10))||([9,10].includes(h)&&(withR.includes(l9)||withR.includes(l10)));
+add(dk,'g','ราหูร่วมธรรมกรรมาธิปติโยค','Rahu-associated Dharma-Karmadhipati Yoga',`เจ้าเรือนศุภะคือ${TN[l9]} เจ้าเรือนกัมมะคือ${TN[l10]} ${dk?'สัมพันธ์กับราหูตามเกณฑ์':'ยังไม่สัมพันธ์กับราหูตามเกณฑ์'}`);
+add(withR.includes('JU'),'b','คุรุจัณฑาลโยค','Guru Chandal Yoga','ราหูกุมพฤหัสบดี ความรู้ คุณธรรม หรือครูถูกบดบังด้วยความทะเยอทะยาน');
+const gr=withR.filter(k=>k==='SU'||k==='MO'); add(gr.length>0,'b','กรหณโยค','Grahan Yoga',gr.length?`ราหูกุม${gr.map(k=>TN[k]).join(' ')} (คราส)`:'ราหูกุมอาทิตย์หรือจันทร์');
+add(withR.includes('SA'),'b','ศราปิตโยค','Shrapit Yoga','ราหูกุมเสาร์ ภาระหนัก ความล่าช้า สิ่งที่ต้องชดใช้');
+add(withR.includes('MA'),'b','อังคารกโยค','Angarak Yoga','ราหูกุมอังคาร ใจร้อน แรงปะทะ อุบัติเหตุ');
+const side=C7.filter(k=>N[k]!=null).map(k=>nrm(N[k]-N.RA)<180), ks=side.length&&(side.every(x=>x)||side.every(x=>!x));
+add(ks,'b','กาลสรรปโยค','Kala Sarpa Yoga',ks?'ดาว ๗ ดวงอยู่ด้านเดียวของแกนราหูและจุดตรงข้ามราหู':'มีดาวอยู่ทั้งสองฝั่งของแกนราหู ไม่เข้าเกณฑ์');
+const up=[3,6,10,11].includes(h), gY=YG.filter(y=>y.on&&y.side==='g').length, bY=YG.filter(y=>y.on&&y.side==='b').length, jAsp=N.JU!=null&&[5,7,9].includes(cnt(rs,sg(N.JU)));
+let q=(up?1.5:[8,12].includes(h)?-1:0)+gY-bY+(jAsp?.5:0)+(good(dst)?.5:bad(dst)?-.5:0);
+const pw=good(rst)?[G,'แรง',`ราหูเป็น${rst}`]:bad(rst)?[B,'อ่อน',`ราหูเป็น${rst}`]:[Y,'ปานกลาง','ไม่มีมาตรฐานพิเศษ'];
+const vq=q>=1.5?[G,'ราหูเอียงไปทางให้คุณ']:q<=-1?[B,'ราหูเอียงไปทางให้โทษ']:[Y,'ราหูให้ทั้งคุณและโทษ ต้องดูจังหวะเวลา'];
+const GOOD=['อำนาจ บารมี อิทธิพล','ชื่อเสียง ความโดดเด่น','กล้าคิด กล้าทำ ทะเยอทะยาน','ชนะการแข่งขันและอุปสรรค','โอกาสจากต่างประเทศและสิ่งใหม่','ก้าวหน้าจากการค้า การเจรจา เครือข่าย','ทรัพย์และลาภที่คาดไม่ถึง','สำเร็จจากการเปลี่ยนแปลงครั้งใหญ่'], BAD=['โลภ หลง มัวเมา','ถูกหลอก เล่ห์เหลี่ยม การปกปิด','ประมาท ตัดสินใจผิด','ขัดแย้ง ศัตรู เรื่องอื้อฉาว','เสื่อมชื่อเสียงและความน่าเชื่อถือ','เสียหายทางทรัพย์สิน','วิตกกังวล ไม่แน่นอน วุ่นวาย','ชีวิตพลิกผันรุนแรง'];
+const hiG=[up&&h===10?0:-1,up&&h===10?1:-1,up&&h===3?2:-1,up&&h===6?3:-1,[9,12,3].includes(h)?4:-1,[3,7,11].includes(h)?5:-1,[2,11].includes(h)?6:-1,[1,8].includes(h)?7:-1].filter(i=>i>=0&&q>-1);
+const hiB=[withR.includes('JU')||withR.includes('VE')?0:-1,withR.includes('ME')||h===7?1:-1,withR.includes('MA')?2:-1,h===6||h===7?3:-1,h===10||h===1?4:-1,h===2||h===8||h===12?5:-1,withR.includes('MO')||h===4?6:-1,withR.includes('SA')||h===8?7:-1].filter(i=>i>=0&&q<1.5);
+const lst=(a,hi,c)=>`<ul style="list-style:none;padding:0;margin:4px 0">${a.map((t,i)=>`<li style="display:flex;gap:7px;align-items:center;margin:4px 0;padding:3px 8px;border-radius:8px;${hi.includes(i)?`background:color-mix(in srgb,${c} 15%,transparent);font-weight:600`:'opacity:.8'}">${ic(hi.includes(i)?'ok':'dot',hi.includes(i)?c:GR,15)}${t}</li>`).join('')}</ul>`;
+// ราหูค้นทรัพย์
+const l2=lordOf(2), l2h=hs(l2), l2s=l2==='RA'?rst:sd_(l2), in2=h===2, c2=withR.includes(l2)||l2==='RA';
+const h2=(L+1)%12, benOn2=['JU','VE'].filter(k=>N[k]!=null&&[1,5,7,9].includes(cnt(h2,sg(N[k])))), malOn2=['SA','MA'].filter(k=>N[k]!=null&&[1,7].includes(cnt(h2,sg(N[k]))));
+let w=(good(l2s)?1:bad(l2s)?-1:0)+([1,2,4,5,7,9,10,11].includes(l2h)?.5:[6,8,12].includes(l2h)?-1:0)+benOn2.length*.5-malOn2.length*.5+(good(rst)?.5:bad(rst)?-.5:0);
+const kw=w>=1?[G,'มีแนวโน้มได้ทรัพย์ก้อนใหญ่','ราหูขยายทรัพย์ ได้จากช่องทางใหม่ ต่างถิ่น หรือการค้าเครือข่าย']:w<=-.5?[B,'มีแนวโน้มทรัพย์รั่วไหล','เก็บเงินยาก ใช้จ่ายตามความอยาก ระวังการลงทุนที่หวังผลเร็วและการถูกหลอก']:[Y,'ได้มากและเสียมากพอกัน','ทรัพย์เข้าออกแรง ต้องมีวินัยและระบบเก็บเงิน'];
+const krow=(t,d,c)=>`<tr><td>${t}</td><td style="color:${c}">${d}</td></tr>`;
+return `<div class="kh8c" style="border-left-color:${vq[0]};margin-top:16px"><h4>${ic('rahu',vq[0])} ราหูดีหรือร้ายอย่างไร (วิศวกรโหรสิงโต)</h4>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin:6px 0 10px">
+<div style="padding:10px 12px;border-radius:12px;border:1px solid color-mix(in srgb,${pw[0]} 45%,transparent);background:color-mix(in srgb,${pw[0]} 9%,transparent)"><span class="sm">กำลังของราหู</span><br><b style="color:${pw[0]};font-size:16px">${pw[1]}</b><br><span class="sm">${pw[2]} · ราศี${SN[rs]}</span></div>
+<div style="padding:10px 12px;border-radius:12px;border:1px solid color-mix(in srgb,${vq[0]} 45%,transparent);background:color-mix(in srgb,${vq[0]} 9%,transparent)"><span class="sm">คุณภาพของผล</span><br><b style="color:${vq[0]};font-size:16px">${vq[1]}</b><br><span class="sm">ภพ${HN[h-1]}${up?' (อุปจยภพ)':''} · โยคให้คุณ ${td(gY)} · โยคให้โทษ ${td(bY)}</span></div></div>
+<p class="sm" style="opacity:.85">${ic('wn',Y,15)} กำลังของดาวกับคุณภาพของผลเป็นคนละเรื่อง ราหูแรงไม่ได้แปลว่าให้คุณมากเสมอ</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px"><div><p class="rx3h" style="color:${G}">ราหูด้านให้คุณ</p>${lst(GOOD,hiG,G)}</div><div><p class="rx3h" style="color:${B}">ราหูด้านให้โทษ</p>${lst(BAD,hiB,B)}</div></div>
+<p class="sm" style="opacity:.75">ข้อที่เน้นสีคือด้านที่ภพและดาวร่วมของราหูในดวงนี้ชี้ไป</p>
+<p class="rx3h">อุปจยภพ: ภพแห่งความพยายามเพื่อความสำเร็จ</p>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px">${[[3,'ความกล้า การริเริ่ม'],[6,'การแข่งขัน ชนะอุปสรรค'],[10,'การงาน ความสำเร็จ'],[11,'ลาภ ผลตอบแทน']].map(([n,t])=>`<div style="text-align:center;padding:8px 4px;border-radius:10px;border:${n===h?2:1}px solid ${n===h?G:'var(--line)'};${n===h?`background:color-mix(in srgb,${G} 14%,transparent)`:''}"><b>ภพ ${td(n)}</b><br><span class="sm">${HN[n-1]}</span><br><span class="sm" style="opacity:.75">${t}</span>${n===h?`<br>${pl('RA')}`:''}</div>`).join('')}</div>
+<p class="sm">${up?`ราหูอยู่ภพ${HN[h-1]} ซึ่งเป็นอุปจยภพ พลังทะเยอทะยานของราหูเติบโตตามเวลาและความพยายาม แต่ยังต้องดูดาวร่วมและโยคประกอบ`:`ราหูอยู่ภพ${HN[h-1]} ไม่ใช่อุปจยภพ แต่ไม่ได้แปลว่าให้โทษเสมอ ต้องดูองค์ประกอบอื่นร่วมด้วย`}</p>
+<p class="rx3h">ราหูค้นทรัพย์ (ราหูกับภพกดุมภะ)</p>
+${in2||c2?`<div style="display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:12px;background:color-mix(in srgb,${kw[0]} 10%,transparent);border:1px solid color-mix(in srgb,${kw[0]} 40%,transparent);margin:6px 0">${ic('rahu',kw[0],24)}<div><b style="color:${kw[0]}">${in2?'ราหูอยู่ภพกดุมภะ':'ราหูกุมเจ้าเรือนกดุมภะ'}: ${kw[1]}</b><br><span class="sm">${kw[2]}</span></div></div>`:`<p class="sm">ราหูไม่ได้อยู่ภพ ๒ และไม่ได้กุมเจ้าเรือนกดุมภะ จึงไม่เข้าเกณฑ์ราหูค้นทรัพย์ (ข้อมูลประกอบด้านล่างยังใช้ดูการเงินได้)</p>`}
+<div class="kh8tw"><table class="kh8tb">${krow('เจ้าเรือนกดุมภะ',`${TN[l2]} อยู่ภพ${l2h?HN[l2h-1]:'—'}${l2s?' เป็น'+l2s:''}`,good(l2s)||[1,2,4,5,7,9,10,11].includes(l2h)?G:bad(l2s)||[6,8,12].includes(l2h)?B:'inherit')}${krow('ศุภเคราะห์ส่องภพ ๒',benOn2.length?benOn2.map(k=>TN[k]).join(' '):'ไม่มี',benOn2.length?G:'inherit')}${krow('บาปเคราะห์กุมหรือเล็งภพ ๒',malOn2.length?malOn2.map(k=>TN[k]).join(' '):'ไม่มี',malOn2.length?B:G)}${krow('มาตรฐานราหู',rst||'ไม่มี',good(rst)?G:bad(rst)?B:'inherit')}</table></div>
+<p class="sm" style="opacity:.8">ราหูในภพ ๒ ให้ได้ทั้งทรัพย์ก้อนใหญ่และเสียทรัพย์ก้อนใหญ่ ราหูอยู่ภพ ๒ เพียงปัจจัยเดียวยังสรุปไม่ได้ว่าจะเสียทรัพย์ ผู้เขียนจะอธิบายองค์ประกอบอื่นในบทความต่อไป ตัวชี้วัดในตารางนี้ระบบกำหนดเองชั่วคราว</p>
+<p class="rx3h">โยคสำคัญที่เกี่ยวกับราหู</p>
+<div class="kh8tw"><table class="kh8tb"><tr><th>โยค</th><th>ฝ่าย</th><th>ในดวงนี้</th><th>เหตุผล</th></tr>${YG.map(y=>`<tr><td><b>${y.name}</b><br><span class="sm" style="opacity:.7">${y.en}</span></td><td style="color:${y.side==='g'?G:B}">${y.side==='g'?'ส่งเสริม':'ให้โทษ'}</td><td>${y.on?`<span style="color:${y.side==='g'?G:B};display:inline-flex;gap:4px;align-items:center">${ic(y.side==='g'?'ok':'wn',y.side==='g'?G:B,16)} เข้าเกณฑ์</span>`:`<span style="color:${GR}">ไม่เข้า</span>`}</td><td class="sm">${y.why}</td></tr>`).join('')}</table></div>
+<p class="sm" style="opacity:.8">ผลของโยคขึ้นกับองค์ประกอบทั้งดวงและหลักของแต่ละสำนัก ระบบใช้ลัคนาและเจ้าเรือนแบบไทย (กุมภ์ = ราหู) และใช้การร่วมราศีแทนการกุม เกณฑ์ราหูโยคการกะ ราชโยค ธนโยค และธรรมกรรมาธิปติโยคเป็นการตีความของระบบ</p>
+<div style="text-align:center;padding:10px;border-radius:12px;border:1px dashed var(--line);margin-top:8px"><b>อย่าตัดสินราหูจากชื่อเสียงของดาว และอย่าตัดสินผลของดาวจากตำแหน่งเพียงปัจจัยเดียว</b><br><span class="sm" style="opacity:.75">ถอดความจากแนวคิดของผู้เขียน</span></div>
+<p class="sm" style="opacity:.75">ที่มา: บทความ "ราหู (๘) ดีหรือร้ายอย่างไร?" โดย วิศวกรโหรสิงโต เรียบเรียงใหม่ โปรดติดตามบทความต่อไปของผู้เขียน</p></div>`; }
+{ const _ov=overview; overview=X=>_ov(X)+(X&&X.N?arish(X)+rqual(X):''); }
 function render(){ const out=document.getElementById('rx362Out'); if(!out) return; let X={}; try{ X=ctx(); }catch(e){ console.error(e); } let b=''; if(SEL==='ov'){ try{ b=overview(X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; } } else if(SEL==='nat'){ try{ b=natv(X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; } }
 out.innerHTML=`<h3 class="kh8H">${ic('rahu',GD,24)} ตรวจราหู</h3><p class="note">รวมทุกตำราเรื่องราหูไว้ที่เดียว ดูราหูเดิม ราหูจร ช่วงราหูเสวยอายุ และเลือกตำราที่ต้องการตรวจต่อจากแถบด้านล่าง</p>${nav()}${b}`; apply(); }
 function go(id,scroll){ SEL=id; render(); if(typeof MBX==='function') setTimeout(MBX,0); if(scroll!==false){ const el=document.getElementById('rx362P'); if(el) setTimeout(()=>{ const y=el.getBoundingClientRect().top+scrollY-74; scrollTo({top:y,behavior:'smooth'}); },60); } }
