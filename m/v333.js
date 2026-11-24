@@ -4229,7 +4229,39 @@ ${in2||c2?`<div style="display:flex;gap:10px;align-items:center;padding:10px 12p
 <p class="sm" style="opacity:.8">ผลของโยคขึ้นกับองค์ประกอบทั้งดวงและหลักของแต่ละสำนัก ระบบใช้ลัคนาและเจ้าเรือนแบบไทย (กุมภ์ = ราหู) และใช้การร่วมราศีแทนการกุม เกณฑ์ราหูโยคการกะ ราชโยค ธนโยค และธรรมกรรมาธิปติโยคเป็นการตีความของระบบ</p>
 <div style="text-align:center;padding:10px;border-radius:12px;border:1px dashed var(--line);margin-top:8px"><b>อย่าตัดสินราหูจากชื่อเสียงของดาว และอย่าตัดสินผลของดาวจากตำแหน่งเพียงปัจจัยเดียว</b><br><span class="sm" style="opacity:.75">ถอดความจากแนวคิดของผู้เขียน</span></div>
 <p class="sm" style="opacity:.75">ที่มา: บทความ "ราหู (๘) ดีหรือร้ายอย่างไร?" โดย วิศวกรโหรสิงโต เรียบเรียงใหม่ โปรดติดตามบทความต่อไปของผู้เขียน</p></div>`; }
-{ const _ov=overview; overview=X=>_ov(X)+(X&&X.N?arish(X)+rqual(X):''); }
+function rgood(X){ const N=X.N, L=sg(N.LA), rs=sg(N.RA), S3=[0,1,10], KS=['SU','MO','MA','ME','JU','VE','SA','KE','UR'];
+const D3={0:['เมษ','เรือนอุจจ์ของอาทิตย์ เปรียบเป็นบ่อเกิดของราหู'],1:['พฤษภ','เรือนอุจจ์ของจันทร์ เปรียบเป็นบ่อเกิดของราหู'],10:['กุมภ์','ราศีกลางธาตุลม เกษตรของเสาร์มหามิตร ราหูธาตุลมจึงได้เกษตรร่วม']};
+const in3=S3.includes(rs), lag=rs===L, withRa=KS.filter(k=>N[k]!=null&&sg(N[k])===rs), opp=(rs+6)%12, ecl=['SU','MO'].filter(k=>N[k]!=null&&(sg(N[k])===rs||sg(N[k])===opp));
+let kk=null; try{ const m=taksaNatal(X.bt).m; kk=m['กาลกิณี']===8; }catch(_){ }
+const full=in3&&lag&&!withRa.length&&!ecl.length&&kk===false;
+const vd=full?[G,'ราหูให้คุณเต็มที่','ราหูอยู่ราศีให้คุณ กุมลัคนาโดยลำพัง ไม่คราส และไม่เป็นกาลกิณี ตำราว่าเป็นผู้มีบุญวาสนา กล้าหาญ ไหวพริบฉกฉวยโอกาส ชนะศัตรูและอุปสรรค ไปสู่ความมั่งคั่งและสมความปรารถนาทางโลก']:in3?[Y,'ราหูอยู่ราศีให้คุณ','ราหูมีกำลังมาก กล้าหาญ มีบุญวาสนา จำเริญความสุข แต่ยังไม่ครบเงื่อนไขที่จะให้คุณอันยิ่งใหญ่ ดูรายการด้านล่าง']:[GR,'ราหูไม่อยู่ราศีให้คุณ',`ราหูอยู่ราศี${SN[rs]} เกณฑ์นี้ใช้เฉพาะราศีเมษ พฤษภ และกุมภ์`];
+const row=(ok,t,d)=>`<li style="display:flex;gap:8px;align-items:flex-start;margin:6px 0">${ic(ok?'ok':'wn',ok?G:B,17)}<span><b>${t}</b><br><span class="sm" style="opacity:.8">${d}</span></span></li>`;
+const cx=110,cy=110; let g=''; for(let i=0;i<12;i++){ const a0=(-105+i*30)*Math.PI/180,a1=(-75+i*30)*Math.PI/180,am=(-90+i*30)*Math.PI/180,on=S3.includes(i),p=(r,a)=>`${(cx+r*Math.cos(a)).toFixed(1)} ${(cy+r*Math.sin(a)).toFixed(1)}`;
+g+=`<path d="M${p(52,a0)} L${p(100,a0)} A100 100 0 0 1 ${p(100,a1)} L${p(52,a1)} A52 52 0 0 0 ${p(52,a0)}Z" style="fill:${on?G:'transparent'};fill-opacity:${on?.25:0};stroke:var(--line)"/><text x="${cx+78*Math.cos(am)}" y="${cy+78*Math.sin(am)+4}" text-anchor="middle" font-size="11" style="fill:currentColor">${SN[i]}</text>`;
+if(i===L) g+=`<text x="${cx+60*Math.cos(am)}" y="${cy+60*Math.sin(am)+3}" text-anchor="middle" font-size="8" style="fill:${GD}">ลัคนา</text>`; }
+const ra=(-90+rs*30)*Math.PI/180; g+=`<circle cx="${cx+104*Math.cos(ra)}" cy="${cy+104*Math.sin(ra)}" r="10" style="fill:${RC}"/><text x="${cx+104*Math.cos(ra)}" y="${cy+104*Math.sin(ra)+4}" text-anchor="middle" font-size="11" style="fill:#fff">${td(8)}</text><text x="${cx}" y="${cy+4}" text-anchor="middle" font-size="12" style="fill:${vd[0]}">ราหู</text>`;
+// ราหูจรเข้า ๓ ราศี
+const DAY=864e5, P=t=>sg(posH(horaOf(new Date(t)),'RA')), T0=+X.T||Date.now(), M=['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+const fd=t=>{ const d=new Date(t); return `${td(d.getDate())} ${M[d.getMonth()]} ${td(d.getFullYear()+543)}`; };
+const ymd=(a,b)=>{ a=new Date(a); b=new Date(b); let y=b.getFullYear()-a.getFullYear(), m=b.getMonth()-a.getMonth(), d=b.getDate()-a.getDate(); if(d<0){ m--; d+=new Date(b.getFullYear(),b.getMonth(),0).getDate(); } if(m<0){ y--; m+=12; } return [y?td(y)+' ปี':'',m?td(m)+' เดือน':'',d?td(d)+' วัน':''].filter(Boolean).join(' ')||'๐ วัน'; };
+const bis=(a,b,f)=>{ for(let i=0;i<34&&b-a>6e4;i++){ const m=(a+b)/2; if(f(P(m))) b=m; else a=m; } return b; };
+const ev=[]; try{ let t=T0, s=P(t), st=null; if(S3.includes(s)) st=T0; for(let i=0;i<2200&&ev.length<3;i++){ const t2=t+5*DAY, s2=P(t2); if(s2!==s){ const x=bis(t,t2,v=>v!==s); if(S3.includes(s)) ev.push({s,a:st,b:x,now:st===T0}); st=x; s=s2; } t=t2; } }catch(e){ console.error(e); }
+const tr=ev.map(e=>{ const lg=e.s===L; return `<tr><td><b>${SN[e.s]}</b>${lg?` <span style="color:${G}">(ลัคนาเดิม)</span>`:''}</td><td>${e.now?`<span style="color:${G}">กำลังอยู่</span>`:fd(e.a)}</td><td>${fd(e.b)}</td><td>${e.now?'ตอนนี้':'อีก '+ymd(T0,e.a)}</td><td>${X.bt?ymd(X.bt,e.now?T0:e.a):'—'}</td><td style="color:${lg?G:'inherit'}">${lg?'ราหูจรกุมลัคนาเดิมในราศีให้คุณ ช่วงเด่นด้านความกล้า โอกาส และชัยชนะ ระวังความทะเยอทะยานเกินตัว':`ราหูจรภพ${HN[cnt(L,e.s)-1]} มีกำลัง ผลดีออกทางเรื่องของภพนั้น`}</td></tr>`; }).join('');
+return `<div class="kh8c" style="border-left-color:${vd[0]};margin-top:16px"><h4>${ic('rahu',vd[0])} ราหูในราศีให้คุณ (พระคัมภีร์จักรทีปนี)</h4>
+<div style="display:grid;grid-template-columns:minmax(180px,220px) 1fr;gap:14px;align-items:center"><svg viewBox="0 0 220 220" style="width:100%;max-width:220px;height:auto;display:block;margin:auto">${g}</svg>
+<div><div style="display:flex;gap:12px;align-items:center;padding:10px 12px;border-radius:12px;background:color-mix(in srgb,${vd[0]} 10%,transparent);border:1px solid color-mix(in srgb,${vd[0]} 40%,transparent)">${ic(full?'ok':in3?'dot':'wn',vd[0],26)}<div><b style="color:${vd[0]};font-size:16px">${vd[1]}</b><br><span class="sm">${vd[2]}</span></div></div>
+<p class="sm" style="opacity:.85;margin-top:8px">สาระของคาถา: ราหูตั้งอยู่ในราศีเมษ พฤษภ หรือกุมภ์ มีกำลังมาก กล้าหาญ มีบุญวาสนา และจำเริญความสุข</p></div></div>
+<div class="kh8tw"><table class="kh8tb"><tr><th>ราศี</th><th>เหตุที่ให้คุณ</th></tr>${S3.map(s=>`<tr style="${s===rs?`background:color-mix(in srgb,${G} 12%,transparent)`:''}"><td><b>${D3[s][0]}</b>${s===rs?' '+pl('RA'):''}</td><td>${D3[s][1]}</td></tr>`).join('')}</table></div>
+<p class="rx3h">เงื่อนไขให้คุณอันยิ่งใหญ่ (ต้องครบ ๕ ข้อ)</p><ul style="list-style:none;padding:0;margin:0">
+${row(in3,'อยู่ราศีเมษ พฤษภ หรือกุมภ์',`ราหูอยู่ราศี${SN[rs]}`)}
+${row(lag,'กุมลัคนา',lag?'ราหูอยู่ราศีเดียวกับลัคนา':`ราหูอยู่ภพ${HN[cnt(L,rs)-1]}`)}
+${row(!withRa.length,'เป็นพระเคราะห์โทน',withRa.length?`มี${withRa.map(k=>TN[k]).join(' ')}ร่วมราศี`:'ไม่มีดาวอื่นร่วมราศี')}
+${row(!ecl.length,'ไม่เป็นคราส',ecl.length?`ราหูกุมหรือเล็ง${ecl.map(k=>TN[k]).join(' ')}`:'ไม่กุมหรือเล็งอาทิตย์และจันทร์')}
+${kk==null?`<li class="sm" style="margin:6px 0">${ic('dot',GR,17)} ตรวจภูมิทักษาไม่ได้</li>`:row(!kk,'ไม่เป็นกาลกิณีตามภูมิทักษากำเนิด',kk?'ราหู (๘) เป็นกาลกิณีของวันเกิด':'ราหู (๘) ไม่ใช่กาลกิณีของวันเกิด')}</ul>
+<p class="rx3h">ราหูจรเข้าราศีให้คุณครั้งถัดไป</p>
+<div class="kh8tw"><table class="kh8tb"><tr><th>ราศี</th><th>เริ่ม</th><th>ถึง</th><th>นับถอยหลัง</th><th>อายุ</th><th>คำพยากรณ์</th></tr>${tr}</table></div>
+<p class="sm" style="opacity:.75">ที่มา: พระคัมภีร์จักรทีปนี พระอุตมรามเถรรจนา รวบรวมพิมพ์โดย อ.เทพย์ สาริกบุตร หน้า ๓๕ อรรถาธิบายโดย โหรชัยวัฒน์ สดชื่น (๒๔ พ.ย. ๒๕๖๙) ระบบเรียบเรียงใหม่ ส่วนราหูจรเป็นการต่อยอดของระบบ</p></div>`; }
+{ const _ov=overview; overview=X=>_ov(X)+(X&&X.N?arish(X)+rgood(X)+rqual(X):''); }
 function render(){ const out=document.getElementById('rx362Out'); if(!out) return; let X={}; try{ X=ctx(); }catch(e){ console.error(e); } let b=''; if(SEL==='ov'){ try{ b=overview(X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; } } else if(SEL==='nat'){ try{ b=natv(X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; } }
 out.innerHTML=`<h3 class="kh8H">${ic('rahu',GD,24)} ตรวจราหู</h3><p class="note">รวมทุกตำราเรื่องราหูไว้ที่เดียว ดูราหูเดิม ราหูจร ช่วงราหูเสวยอายุ และเลือกตำราที่ต้องการตรวจต่อจากแถบด้านล่าง</p>${nav()}${b}`; apply(); }
 function go(id,scroll){ SEL=id; render(); if(typeof MBX==='function') setTimeout(MBX,0); if(scroll!==false){ const el=document.getElementById('rx362P'); if(el) setTimeout(()=>{ const y=el.getBoundingClientRect().top+scrollY-74; scrollTo({top:y,behavior:'smooth'}); },60); } }
