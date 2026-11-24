@@ -39,6 +39,15 @@ alter table public.bookings add constraint bookings_place_chk check (
   and (tz is null or char_length(tz) <= 64) and (lat is null or lat between -90 and 90) and (lon is null or lon between -180 and 180)
   and (cc = 'TH' or (city is not null and lat is not null and lon is not null and tz is not null)));
 
+-- ช่วงเวลาเกิดโดยประมาณ ช่องทางโทรกลับ และเขตเวลาของลูกค้า (v357.9)
+alter table public.bookings add column if not exists tperiod text;
+alter table public.bookings add column if not exists contact_via text not null default 'phone';
+alter table public.bookings add column if not exists ctz text;
+alter table public.bookings drop constraint if exists bookings_call_chk;
+alter table public.bookings add constraint bookings_call_chk check (
+  (tperiod is null or tperiod in ('dawn','morning','late','afternoon','evening','night'))
+  and contact_via in ('line','phone') and (ctz is null or char_length(ctz) <= 64));
+
 -- หนึ่งช่วงเวลารับได้หนึ่งคิว (นับเฉพาะคิวที่ยังมีผล)
 create unique index if not exists bookings_slot_active
   on public.bookings (slot_date, slot_time)
@@ -82,13 +91,14 @@ begin
   if (select count(*) from public.bookings where phone = p->>'phone' and status = 'slip_sent') >= 3 then
     raise exception 'too_many';
   end if;
-  insert into public.bookings (nick, phone, line_id, bd, bm, by_be, bh, bmi, no_time, prov, cc, city, region, lat, lon, tz, slot_date, slot_time, slip, note)
+  insert into public.bookings (nick, phone, line_id, bd, bm, by_be, bh, bmi, no_time, prov, cc, city, region, lat, lon, tz, tperiod, contact_via, ctz, slot_date, slot_time, slip, note)
   values (left(p->>'nick', 60), left(p->>'phone', 20), nullif(left(coalesce(p->>'line_id',''), 60), ''),
           (p->>'bd')::int, (p->>'bm')::int, (p->>'by')::int,
           nullif(p->>'bh','')::int, nullif(p->>'bmi','')::int, coalesce((p->>'no_time')::boolean, false),
           coalesce(nullif(p->>'prov','')::int, 0), upper(coalesce(nullif(p->>'cc',''), 'TH')),
           nullif(left(coalesce(p->>'city',''), 120), ''), nullif(left(coalesce(p->>'region',''), 120), ''),
           nullif(p->>'lat','')::double precision, nullif(p->>'lon','')::double precision, nullif(left(coalesce(p->>'tz',''), 64), ''),
+          nullif(p->>'tperiod',''), coalesce(nullif(p->>'contact_via',''), 'phone'), nullif(left(coalesce(p->>'ctz',''), 64), ''),
           d, t, p->>'slip', nullif(left(coalesce(p->>'note',''), 500), ''))
   returning * into r;
   return jsonb_build_object('token', r.token, 'qno', r.qno, 'created_at', r.created_at);
@@ -107,7 +117,7 @@ language sql stable security definer set search_path = public as $$
     'qno', b.qno, 'created_at', b.created_at, 'updated_at', b.updated_at, 'status', b.status,
     'nick', b.nick, 'bd', b.bd, 'bm', b.bm, 'by', b.by_be, 'bh', b.bh, 'bmi', b.bmi,
     'no_time', b.no_time, 'prov', b.prov, 'cc', b.cc, 'city', b.city, 'region', b.region,
-    'lat', b.lat, 'lon', b.lon, 'tz', b.tz, 'slot_date', b.slot_date, 'slot_time', b.slot_time,
+    'lat', b.lat, 'lon', b.lon, 'tz', b.tz, 'tperiod', b.tperiod, 'contact_via', b.contact_via, 'ctz', b.ctz, 'slot_date', b.slot_date, 'slot_time', b.slot_time,
     'ahead', (select count(*) from public.bookings x
               where x.status in ('slip_sent','confirmed')
                 and ((x.slot_date + x.slot_time::time) at time zone 'Asia/Bangkok') > now()
