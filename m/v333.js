@@ -4261,7 +4261,37 @@ ${kk==null?`<li class="sm" style="margin:6px 0">${ic('dot',GR,17)} ตรวจ�
 <p class="rx3h">ราหูจรเข้าราศีให้คุณครั้งถัดไป</p>
 <div class="kh8tw"><table class="kh8tb"><tr><th>ราศี</th><th>เริ่ม</th><th>ถึง</th><th>นับถอยหลัง</th><th>อายุ</th><th>คำพยากรณ์</th></tr>${tr}</table></div>
 <p class="sm" style="opacity:.75">ที่มา: พระคัมภีร์จักรทีปนี พระอุตมรามเถรรจนา รวบรวมพิมพ์โดย อ.เทพย์ สาริกบุตร หน้า ๓๕ อรรถาธิบายโดย โหรชัยวัฒน์ สดชื่น (๒๔ พ.ย. ๒๕๖๙) ระบบเรียบเรียงใหม่ ส่วนราหูจรเป็นการต่อยอดของระบบ</p></div>`; }
-{ const _ov=overview; overview=X=>_ov(X)+(X&&X.N?arish(X)+rgood(X)+rqual(X):''); }
+function rlag(X){ const N=X.N, L=sg(N.LA), rs=sg(N.RA), h=cnt(L,rs), LR=['MA','VE','ME','MO','SU','ME','VE','MA','JU','SA','RA','JU'], lk=LR[L], kumL=rs===L, kumT=lk!=='RA'&&N[lk]!=null&&sg(N[lk])===rs;
+const SP={0:['เมษ',G,'ราศีเมษเป็นเทวีโชคของราหู เสน่ห์เมตตามหานิยมรองจากราชาโชค เป็นตำแหน่งบุญสุระ (ผู้กล้าหาญ) และเป็นจรราศีแม่ธาตุไฟในเรือนอังคารคู่ธาตุ จึงต่อสู้ชีวิตเก่ง โลดโผน ห้าวหาญ ไม่เกรงภัย เหมาะงานทหาร ตำรวจ งานบุกเบิก'],1:['พฤษภ',G,'แม้ราหูเป็นนิจในพฤษภ แต่ลมถูกดินปิดกั้นเกิดแรงอัดเหมือนกระบอกสูบ จึงมีกำลังแรงคล้ายมหาจักร รวมกับศุกร์เจ้าเรือนทำให้ทุ่มเทเพื่อสิ่งหรือคนที่รักอย่างหนักแน่น ราหูเป็นเจ้าเรือนกัมมะของลัคนาพฤษภ จึงรักงานถึงขั้นบ้างาน แสดงออกช้า ๆ สม่ำเสมอ กัดไม่ปล่อย เหมือนนักเลงมีชั้นเชิง']};
+const sp=kumL&&SP[rs], yong=kumL&&[0,6,9].includes(rs), bhat=[0,3,6,9].includes(rs)&&![6,8,12].includes(h);
+const vd=sp?[G,`ราหูกุมลัคน์ราศี${SP[rs][0]} เข้าเกณฑ์ที่บูรพาจารย์บังคับให้คุณพิเศษ`]:kumL?[Y,'ราหูกุมลัคน์ แต่ไม่ใช่ราศีที่บังคับให้คุณพิเศษ']:kumT?[A,`ราหูกุมตนุลัคน์ (${TN[lk]}) เข้าเกณฑ์ได้ตามทัศนะของผู้เขียน`]:[GR,`ราหูไม่กุมลัคน์ (อยู่ภพ${HN[h-1]})`];
+const row=(ok,t,d)=>`<li style="display:flex;gap:8px;align-items:flex-start;margin:6px 0">${ic(ok?'ok':'dot',ok?G:GR,17)}<span><b>${t}</b><br><span class="sm" style="opacity:.8">${d}</span></span></li>`;
+// ราหูจรกุมลัคน์เดิม / ตนุลัคน์เดิม
+const DAY=864e5, P=t=>sg(posH(horaOf(new Date(t)),'RA')), T0=+X.T||Date.now(), M=['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+const fd=t=>{ const d=new Date(t); return `${td(d.getDate())} ${M[d.getMonth()]} ${td(d.getFullYear()+543)}`; };
+const ymd=(a,b)=>{ a=new Date(a); b=new Date(b); let y=b.getFullYear()-a.getFullYear(), m=b.getMonth()-a.getMonth(), d=b.getDate()-a.getDate(); if(d<0){ m--; d+=new Date(b.getFullYear(),b.getMonth(),0).getDate(); } if(m<0){ y--; m+=12; } return [y?td(y)+' ปี':'',m?td(m)+' เดือน':'',d?td(d)+' วัน':''].filter(Boolean).join(' ')||'๐ วัน'; };
+const bis=(a,b,f)=>{ for(let i=0;i<34&&b-a>6e4;i++){ const m=(a+b)/2; if(f(P(m))) b=m; else a=m; } return b; };
+const tg=[[L,'ราหูจรกุมลัคน์เดิม','อารมณ์มุทะลุ ใจถึง อยากเป็นที่หนึ่ง ระวังหูเบาเพราะคำยกยอ และอคติจากความชอบหรือไม่ชอบ']]; if(lk!=='RA'&&N[lk]!=null&&sg(N[lk])!==L) tg.push([sg(N[lk]),`ราหูจรกุมตนุลัคน์ (${TN[lk]}เดิม)`,'ความทะเยอทะยานและความหลงใหลในตัวตนสูงขึ้น ทุ่มเทแรงกับสิ่งที่รัก']);
+const ev=[]; try{ tg.forEach(([s,n,p])=>{ let t=T0, cur=P(t), st=cur===s?T0:null; for(let i=0;i<1500&&!(st!=null&&ev.some(e=>e.n===n));i++){ const t2=t+5*DAY, s2=P(t2); if(s2!==cur){ const x=bis(t,t2,v=>v!==cur); if(cur===s&&st!=null){ ev.push({n,p,s,a:st,b:x,now:st===T0}); break; } if(s2===s) st=x; cur=s2; } t=t2; } }); }catch(e){ console.error(e); }
+const tr=ev.map(e=>`<tr><td><b>${e.n}</b><br><span class="sm">ราศี${SN[e.s]}</span></td><td>${e.now?`<span style="color:${G}">กำลังอยู่</span>`:fd(e.a)}</td><td>${fd(e.b)}</td><td>${e.now?'ตอนนี้':'อีก '+ymd(T0,e.a)}</td><td>${X.bt?ymd(X.bt,e.now?T0:e.a):'—'}</td><td>${e.p}${[0,1].includes(e.s)?` · <span style="color:${G}">ราศีที่ตำราให้คุณพิเศษ</span>`:''}</td></tr>`).join('');
+const AK=[['ฉันทาคติ','ลำเอียงเพราะรัก'],['โทสาคติ','ลำเอียงเพราะโกรธหรือชัง'],['โมหาคติ','ลำเอียงเพราะหลงหรือเขลา'],['ภยาคติ','ลำเอียงเพราะกลัว เช่น กลัวเขาไม่รัก']];
+return `<div class="kh8c" style="border-left-color:${vd[0]};margin-top:16px"><h4>${ic('rahu',vd[0])} ราหูกุมลัคน์สองราศี (อ.ตากล)</h4>
+<div style="display:flex;gap:12px;align-items:center;padding:10px 12px;border-radius:12px;background:color-mix(in srgb,${vd[0]} 10%,transparent);border:1px solid color-mix(in srgb,${vd[0]} 40%,transparent)">${ic(sp?'ok':kumL||kumT?'dot':'wn',vd[0],26)}<div><b style="color:${vd[0]};font-size:16px">${vd[1]}</b><br><span class="sm">ลัคนาราศี${SN[L]} · ราหูราศี${SN[rs]} · ตนุลัคน์คือ${TN[lk]}</span></div></div>
+${sp?`<p style="margin:10px 0 0">${SP[rs][2]}</p>`:''}
+${kumL||kumT?`<p class="sm" style="margin:8px 0 0">นิสัยราหูกุมลัคน์: มุทะลุ ดุดัน ห้าวหาญ ตรงไปตรงมา ไม่นิ่มนวล ออกรูปนักเลง ใจถึงพึ่งได้ ชอบอาสา ถูกใจแล้วเท่าไรเท่ากัน แต่ชอบคำยกยอ จึงหูเบาเชื่อง่ายอยู่บ้าง</p>`:''}
+<div style="text-align:center;padding:10px;border-radius:12px;border:1px dashed var(--line);margin:10px 0"><b>อสุรินทร์มาตรแม้น กุมลัคน์ · เมษพฤษภตามจักร เลิศแล้ว</b><br><b>ชาตินั้นย่อมทรงศักดิ์ ดายิ่ง ยศนา · เป็นทหารชาญแกล้ว ยุทธกล้า กลางณรงค์</b><br><span class="sm" style="opacity:.7">โคลงบูรพาจารย์</span></div>
+<p class="rx3h">เกณฑ์ราหูให้คุณที่เกี่ยวข้อง</p><ul style="list-style:none;padding:0;margin:0">
+${row(sp,'ราหูกุมลัคน์ราศีเมษหรือพฤษภ','ทรงศักดิ์ มียศ แกล้วกล้าเหมือนทหารกลางสนามรบ')}
+${row(kumT,'ราหูกุมตนุลัคน์ (ทัศนะผู้เขียน)',`ราหูร่วมราศีกับ${TN[lk]}เจ้าเรือนลัคนา ให้ผลทำนองเดียวกัน`)}
+${row(yong,'เจ้าตำแหน่งยงยศ','ราหูกุมลัคน์ในราศีเมษ ตุลย์ หรือมังกร ครูว่า "มารเมษอีกตุลย์ในมังกรนี้ดีจริง ๆ"')}
+${row(bhat,'ภัทยาพิเศษ',`ราหูอยู่ราศีเมษ กรกฎ ตุลย์ มังกร และไม่อยู่ภพอริ มรณะ วินาศ · ตอนนี้ราหูราศี${SN[rs]} ภพ${HN[h-1]} · มีวิทยาการดี มีทรัพย์ ศัตรูแพ้ภัยตัวเอง`)}</ul>
+<p class="rx3h">อคติ ๔ ของราหู (ทายมัวเมา ให้ทายราหู)</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:6px">${AK.map(a=>`<div style="padding:8px 10px;border-radius:10px;border:1px solid var(--line)"><b>${a[0]}</b><br><span class="sm">${a[1]}</span></div>`).join('')}</div>
+<p class="sm" style="opacity:.8">คนที่ราหูแรงมักเห็นว่าสิ่งที่ตนชอบดีเสมอแม้คนอื่นค้าน และสิ่งที่ไม่ถูกจริตไม่ดีแม้คนอื่นชม ควรใช้สติกำกับเวลาตัดสินใจ</p>
+<p class="rx3h">ราหูจรกุมลัคน์และตนุลัคน์เดิมครั้งถัดไป</p>
+<div class="kh8tw"><table class="kh8tb"><tr><th>เหตุการณ์</th><th>เริ่ม</th><th>ถึง</th><th>นับถอยหลัง</th><th>อายุ</th><th>คำพยากรณ์</th></tr>${tr||'<tr><td colspan="6">ไม่พบในช่วงที่คำนวณ</td></tr>'}</table></div>
+<p class="sm" style="opacity:.75">ที่มา: บทความ "ราหูกุมลัคน์สองราศี" โดย ธนพงศ์ ศุภประเสริฐ (อ.ตากล) ระบบเรียบเรียงใหม่ ส่วนราหูจรเป็นการต่อยอดของระบบ</p></div>`; }
+{ const _ov=overview; overview=X=>_ov(X)+(X&&X.N?arish(X)+rgood(X)+rlag(X)+rqual(X):''); }
 function render(){ const out=document.getElementById('rx362Out'); if(!out) return; let X={}; try{ X=ctx(); }catch(e){ console.error(e); } let b=''; if(SEL==='ov'){ try{ b=overview(X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; } } else if(SEL==='nat'){ try{ b=natv(X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; } }
 out.innerHTML=`<h3 class="kh8H">${ic('rahu',GD,24)} ตรวจราหู</h3><p class="note">รวมทุกตำราเรื่องราหูไว้ที่เดียว ดูราหูเดิม ราหูจร ช่วงราหูเสวยอายุ และเลือกตำราที่ต้องการตรวจต่อจากแถบด้านล่าง</p>${nav()}${b}`; apply(); }
 function go(id,scroll){ SEL=id; render(); if(typeof MBX==='function') setTimeout(MBX,0); if(scroll!==false){ const el=document.getElementById('rx362P'); if(el) setTimeout(()=>{ const y=el.getBoundingClientRect().top+scrollY-74; scrollTo({top:y,behavior:'smooth'}); },60); } }
