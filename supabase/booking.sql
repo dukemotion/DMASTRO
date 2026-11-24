@@ -133,3 +133,74 @@ grant execute on function public.bk_create(jsonb) to anon, authenticated;
 grant execute on function public.bk_status(text) to anon, authenticated;
 grant execute on function public.bk_slots(date, date) to anon, authenticated;
 grant execute on function public.bk_is_admin() to authenticated;
+
+-- ─── โหมดดูหลังบ้านด้วยรหัส (v358.0) ───
+-- เก็บเฉพาะแฮช bcrypt ของรหัส ไม่เก็บรหัสจริง ตั้งรหัสจากเมนูระบบคิวดูดวง (ต้องเข้าสู่ระบบแอดมิน)
+create schema if not exists extensions;
+create extension if not exists pgcrypto with schema extensions;
+create table if not exists public.bk_secret (
+  id int primary key default 1 check (id = 1),
+  hash text not null,
+  updated_at timestamptz not null default now()
+);
+create table if not exists public.bk_tries (at timestamptz not null default now(), ok boolean not null);
+alter table public.bk_secret enable row level security;
+alter table public.bk_tries enable row level security;
+revoke all on public.bk_secret from anon, authenticated;
+revoke all on public.bk_tries from anon, authenticated;
+
+create or replace function public.bk_set_code(code text) returns boolean
+language plpgsql security definer set search_path = public, extensions as $$
+begin
+  if not public.bk_is_admin() then raise exception 'not_admin'; end if;
+  if code is null or code !~ '^[0-9A-Za-z]{6,32}$' then raise exception 'bad_code_format'; end if;
+  insert into public.bk_secret (id, hash, updated_at) values (1, extensions.crypt(code, extensions.gen_salt('bf', 10)), now())
+  on conflict (id) do update set hash = excluded.hash, updated_at = now();
+  delete from public.bk_tries;
+  return true;
+end;
+$$;
+
+-- ตรวจรหัส: ผิดเกิน 20 ครั้งใน 15 นาที ระบบล็อกชั่วคราว
+create or replace function public.bk_code_check(code text) returns text
+language plpgsql security definer set search_path = public, extensions as $$
+declare h text; ok boolean;
+begin
+  delete from public.bk_tries where at < now() - interval '1 day';
+  if (select count(*) from public.bk_tries where not bk_tries.ok and at > now() - interval '15 minutes') >= 20 then return 'locked'; end if;
+  select hash into h from public.bk_secret where id = 1;
+  if h is null then return 'no_code'; end if;
+  ok := (code is not null and char_length(code) <= 64 and extensions.crypt(code, h) = h);
+  insert into public.bk_tries (ok) values (ok);
+  return case when ok then 'ok' else 'bad_code' end;
+end;
+$$;
+
+create or replace function public.bk_view(code text) returns jsonb
+language plpgsql security definer set search_path = public as $$
+declare c text := public.bk_code_check(code);
+begin
+  if c <> 'ok' then return jsonb_build_object('ok', false, 'err', c); end if;
+  return jsonb_build_object('ok', true, 'list', coalesce((
+    select jsonb_agg(to_jsonb(b) - 'slip' order by b.slot_date, b.slot_time)
+    from public.bookings b
+    where b.slot_date >= (now() at time zone 'Asia/Bangkok')::date - 30), '[]'::jsonb));
+end;
+$$;
+
+create or replace function public.bk_view_slip(code text, bid uuid) returns jsonb
+language plpgsql security definer set search_path = public as $$
+declare c text := public.bk_code_check(code);
+begin
+  if c <> 'ok' then return jsonb_build_object('ok', false, 'err', c); end if;
+  return jsonb_build_object('ok', true, 'slip', (select slip from public.bookings where id = bid));
+end;
+$$;
+
+revoke all on function public.bk_set_code(text) from public;
+revoke all on function public.bk_code_check(text) from public;
+revoke all on function public.bk_view(text) from public;
+revoke all on function public.bk_view_slip(text, uuid) from public;
+grant execute on function public.bk_set_code(text) to authenticated;
+grant execute on function public.bk_view(text) to anon, authenticated;
+grant execute on function public.bk_view_slip(text, uuid) to anon, authenticated;
