@@ -4291,7 +4291,49 @@ ${row(bhat,'ภัทยาพิเศษ',`ราหูอยู่ราศ�
 <p class="rx3h">ราหูจรกุมลัคน์และตนุลัคน์เดิมครั้งถัดไป</p>
 <div class="kh8tw"><table class="kh8tb"><tr><th>เหตุการณ์</th><th>เริ่ม</th><th>ถึง</th><th>นับถอยหลัง</th><th>อายุ</th><th>คำพยากรณ์</th></tr>${tr||'<tr><td colspan="6">ไม่พบในช่วงที่คำนวณ</td></tr>'}</table></div>
 <p class="sm" style="opacity:.75">ที่มา: บทความ "ราหูกุมลัคน์สองราศี" โดย ธนพงศ์ ศุภประเสริฐ (อ.ตากล) ระบบเรียบเรียงใหม่ ส่วนราหูจรเป็นการต่อยอดของระบบ</p></div>`; }
-{ const _ov=overview; overview=X=>_ov(X)+(X&&X.N?arish(X)+rgood(X)+rlag(X)+rqual(X):''); }
+function rpair(X){ const N=X.N, L=sg(N.LA), H=x=>cnt(L,sg(x)), GH=h=>![6,8,12].includes(h), sdx=(k,x)=>{ try{ return std(k,x)||''; }catch(_){ return ''; } }, gd=s=>/อุจจ์|เกษตร|ราชาโชค|มหาจักร|เทวีโชค/.test(s), bd=s=>/นิจ|ประ/.test(s);
+const MEAN=['ตัวตน สุขภาพ','การเงิน ทรัพย์','พี่น้อง การติดต่อ','บ้าน ที่ดิน ครอบครัว','บุตร ความรัก การลงทุน','ศัตรู โรคภัย ลูกน้อง','คู่ครอง หุ้นส่วน','วิกฤต การเปลี่ยนแปลง','ผู้ใหญ่ โชค การเดินทางไกล','การงาน ตำแหน่ง','ลาภ รายได้ มิตร','ความลับ การสูญเสีย'];
+const DAY=864e5, T0=+X.T||Date.now(), Pp=(t,k)=>posH(horaOf(new Date(t)),k), M=['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+const fd=t=>{ const d=new Date(t); return `${td(d.getDate())} ${M[d.getMonth()]} ${td(d.getFullYear()+543)}`; };
+const ymd=(a,b)=>{ a=new Date(a); b=new Date(b); let y=b.getFullYear()-a.getFullYear(), m=b.getMonth()-a.getMonth(), d=b.getDate()-a.getDate(); if(d<0){ m--; d+=new Date(b.getFullYear(),b.getMonth(),0).getDate(); } if(m<0){ y--; m+=12; } return [y?td(y)+' ปี':'',m?td(m)+' เดือน':'',d?td(d)+' วัน':''].filter(Boolean).join(' ')||'๐ วัน'; };
+// วิธีตัดสินดีสุดหรือแย่สุดของ ๙๘ ตามบทความ
+function judge(t){ let gs=0; const det=[]; ['JU','SU','VE'].forEach(k=>{ const x=t==null?N[k]:Pp(t,k), s=sdx(k,x), h=H(x), ok=gd(s)||(!bd(s)&&[1,4,5,7,9,10,11].includes(h)); if(ok) gs++; det.push(`${TN[k]}${t==null?'':'จร'} ภพ ${td(h)}${s?' '+s:''} ${ok?'ดี':'ไม่เด่น'}`); });
+ const kh=H(N.KE), rh=H(N.RA), kg=GH(kh), rg=GH(rh); let v;
+ if(gs===3||(gs>=1&&det[0].endsWith('ดี'))) v=[G,'เจริญสุด',`พฤหัส${gs===3?' อาทิตย์ ศุกร์':''}${t==null?'':'จร'}ดี`];
+ else if(kg&&rg) v=[G,'เจริญสุด','ราหูและเกตุเดิมอยู่ภพดีทั้งคู่'];
+ else if(!kg&&!rg) v=[B,'แย่สุด','ราหูและเกตุเดิมอยู่ภพเสียทั้งคู่ และดาวศุภจรไม่หนุน'];
+ else v=[Y,'ดีครึ่งเสียครึ่ง','ราหูเกตุเดิมอยู่ภพดีหนึ่ง เสียหนึ่ง'];
+ return {v,det,kh,rh}; }
+// ดวงเดิม
+const sr=sg(N.SA)===sg(N.RA), kr=N.KE!=null&&sg(N.KE)===sg(N.RA);
+const natal=[]; if(sr) natal.push(`<div class="rpb" style="--c:${G}">${ic('ok',G,20)}<div><b>เสาร์ ราหู (๗๘) อยู่คู่กันในภพ${HN[H(N.RA)-1]}</b><br><span class="sm">เสียกับเสียเป็นดี ด้าน${MEAN[H(N.RA)-1]}มักยิ่งใหญ่ขึ้น ไม่ควรทายเสีย</span></div></div>`);
+if(kr){ const j=judge(null); natal.push(`<div class="rpb" style="--c:${j.v[0]}">${ic(j.v[0]===G?'ok':j.v[0]===B?'wn':'dot',j.v[0],20)}<div><b>เกตุ ราหู (๙๘) อยู่คู่กันในภพ${HN[H(N.RA)-1]} · ${j.v[1]}</b><br><span class="sm">ด้าน${MEAN[H(N.RA)-1]} ไม่เจริญสุดก็ตกต่ำสุด · ${j.v[2]}</span></div></div>`); }
+// ดาวจร
+const COND=[
+ ['RA','SA','g','เสาร์จรคู่ราหูจร (๗๘)',(a,b)=>a===b,'จร'],
+ ['RA','RA0','g','ราหูจรทับเสาร์เดิม (๗๘)',(a)=>a===sg(N.SA),'จรเดิม'],
+ ['SA','SA0','g','เสาร์จรทับราหูเดิม (๗๘)',(a)=>a===sg(N.RA),'จรเดิม'],
+ ['RA','KE','x','ราหูจรคู่เกตุจร (๙๘)',(a,b)=>a===b,'จร'],
+ ['RA','RA0','x','ราหูจรทับเกตุเดิม (๙๘)',(a)=>N.KE!=null&&a===sg(N.KE),'จรเดิม'],
+ ['KE','KE0','x','เกตุจรทับราหูเดิม (๙๘)',(a)=>a===sg(N.RA),'จรเดิม']];
+const EV=[]; try{ const end=T0+20*365.25*DAY; COND.forEach(([k1,k2,ty,name,f])=>{ const on=t=>f(sg(Pp(t,k1)),k2.length===2?sg(Pp(t,k2)):null); let t=T0, s=on(t), st=s?T0:null, n=0;
+ for(;t<end&&n<3;){ const t2=t+5*DAY, s2=on(t2); if(s2!==s){ let a=t,b=t2; for(let i=0;i<28&&b-a>6e4;i++){ const m=(a+b)/2; if(on(m)===s) a=m; else b=m; } if(s2) st=b; else { EV.push({name,ty,a:st,b,now:st===T0}); n++; } s=s2; } t=t2; } if(s&&st!=null) EV.push({name,ty,a:st,b:null,now:st===T0}); }); }catch(e){ console.error(e); }
+EV.sort((p,q)=>p.a-q.a);
+const rows=EV.map(e=>{ const at=e.now?T0:e.a, sign=sg(Pp(at,e.name.includes('เสาร์จรทับ')?'SA':e.name.includes('เกตุจรทับ')?'KE':'RA')), h=cnt(L,sign); let v,why;
+ if(e.ty==='g'){ v=[G,'ดี ยิ่งใหญ่']; why=`ด้าน${MEAN[h-1]}เด่นขึ้น เช่น ได้เลื่อนตำแหน่งหรือใหญ่ขึ้น`; } else { const j=judge(at); v=j.v; why=`ด้าน${MEAN[h-1]} · ${j.v[2]}`; }
+ return `<tr><td><b>${e.name}</b><br><span class="sm">ราศี${SN[sign]} ภพ${HN[h-1]}</span></td><td>${e.now?`<span style="color:${G}">กำลังอยู่</span>`:fd(e.a)}</td><td>${e.b?fd(e.b):'—'}</td><td>${e.now?'ตอนนี้':'อีก '+ymd(T0,e.a)}</td><td>${X.bt?ymd(X.bt,at):'—'}</td><td><b style="color:${v[0]}">${v[1]}</b><br><span class="sm">${why}</span></td></tr>`; }).join('');
+const jn=judge(null);
+return `<div class="kh8c" style="border-left-color:${GD};margin-top:16px"><style>.rpb{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:12px;margin:6px 0;border:1px solid color-mix(in srgb,var(--c) 40%,transparent);background:color-mix(in srgb,var(--c) 9%,transparent)}.rpg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px}</style><h4>${ic('rahu',GD)} คู่ดาว ๗๘ และ ๙๘ (ราชรามัญ โหรดวงดาว)</h4>
+<div class="rpg"><div class="rpb" style="--c:${G}"><div><b>๗๘ เสาร์คู่ราหู = เสียกับเสียเป็นดี</b><br><span class="sm">เสาร์ทุกข์โทษ ราหูมัวเมา อยู่วงล้อเดียวกันจึงเข้ากันได้ กลับให้ผลดีและยิ่งใหญ่ เช่น ๗๘ ในภพกัมมะ มักได้เลื่อนตำแหน่ง ไม่ใช่เสียงาน</span></div></div>
+<div class="rpb" style="--c:${Y}"><div><b>๙๘ เกตุคู่ราหู = สุดทางใดทางหนึ่ง</b><br><span class="sm">เกตุบุญเก่าเป็นตัวกระตุ้น ราหูวุ่นวายมัวเมา พบกันทั้งในดวงเดิม ดาวจร หรือจรทับเดิม ไม่เจริญสุดก็ตกต่ำสุด อยู่ภพไหนทายภพนั้น</span></div></div></div>
+<p class="rx3h">ในดวงเดิม</p>${natal.join('')||`<p class="sm">ดวงเดิมไม่มีเสาร์หรือเกตุร่วมราศีกับราหู (ราหูราศี${SN[sg(N.RA)]} · เสาร์ราศี${SN[sg(N.SA)]} · เกตุราศี${N.KE!=null?SN[sg(N.KE)]:'—'})</span></p>`}
+<p class="rx3h">ถ้าเกิด ๙๘ ดวงนี้เอียงไปทางไหน</p>
+<div class="kh8tw"><table class="kh8tb"><tr><th>ขั้นตรวจ</th><th>ผลในดวงเดิม</th></tr><tr><td>๑. ดาวศุภจร พฤหัส อาทิตย์ ศุกร์</td><td>${jn.det.join('<br>')}</td></tr><tr><td>๒. ราหูและเกตุเดิมอยู่ภพดีหรือไม่</td><td>ราหูภพ${HN[jn.rh-1]} ${GH(jn.rh)?'ดี':'เสีย'} · เกตุภพ${HN[jn.kh-1]} ${GH(jn.kh)?'ดี':'เสีย'}</td></tr><tr><td>สรุป</td><td><b style="color:${jn.v[0]}">${jn.v[1]}</b> · ${jn.v[2]}</td></tr></table></div>
+<p class="rx3h">ช่วงที่ ๗๘ และ ๙๘ จะเกิดในอีก ๒๐ ปี</p>
+<div class="kh8tw"><table class="kh8tb"><tr><th>เหตุการณ์</th><th>เริ่ม</th><th>ถึง</th><th>นับถอยหลัง</th><th>อายุ</th><th>คำพยากรณ์</th></tr>${rows||'<tr><td colspan="6">ไม่พบในช่วงที่คำนวณ</td></tr>'}</table></div>
+<p class="sm" style="opacity:.8">วิธีตัดสิน ๙๘: ถ้าพฤหัสจรดี หรือพฤหัส อาทิตย์ ศุกร์จรดีทั้งสาม ทายเจริญสุด ถ้าไม่ ให้ดูราหูเกตุเดิม อยู่ภพดีทั้งคู่ทายดี เสียทั้งคู่ทายแย่สุด ดีหนึ่งเสียหนึ่งทายดีครึ่งเสียครึ่ง · ระบบถือว่า "ดาวจรดี" คือได้มาตรฐานดี หรืออยู่ภพ ๑ ๔ ๕ ๗ ๙ ๑๐ ๑๑ และไม่เป็นนิจหรือประ "ภพเสีย" คือภพ ๖ ๘ ๑๒</p>
+<p class="sm" style="opacity:.75">ที่มา: บทความ "คู่ดาวที่ส่งผลดีเสีย" โดย ราชรามัญ โหรดวงดาว ระบบเรียบเรียงใหม่</p></div>`; }
+{ const _ov=overview; overview=X=>_ov(X)+(X&&X.N?arish(X)+rgood(X)+rlag(X)+rpair(X)+rqual(X):''); }
 function render(){ const out=document.getElementById('rx362Out'); if(!out) return; let X={}; try{ X=ctx(); }catch(e){ console.error(e); } let b=''; if(SEL==='ov'){ try{ b=overview(X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; } } else if(SEL==='nat'){ try{ b=natv(X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; } }
 out.innerHTML=`<h3 class="kh8H">${ic('rahu',GD,24)} ตรวจราหู</h3><p class="note">รวมทุกตำราเรื่องราหูไว้ที่เดียว ดูราหูเดิม ราหูจร ช่วงราหูเสวยอายุ และเลือกตำราที่ต้องการตรวจต่อจากแถบด้านล่าง</p>${nav()}${b}`; apply(); }
 function go(id,scroll){ SEL=id; render(); if(typeof MBX==='function') setTimeout(MBX,0); if(scroll!==false){ const el=document.getElementById('rx362P'); if(el) setTimeout(()=>{ const y=el.getBoundingClientRect().top+scrollY-74; scrollTo({top:y,behavior:'smooth'}); },60); } }
