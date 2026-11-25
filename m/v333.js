@@ -7370,9 +7370,57 @@ ${card(A,'cal','ตารางจันทร์เพ็ญ ๔๐ ครั�
 ${card(GD,'book','ขั้นตอนเสกน้ำมนต์จันทร์เพ็ญ',`<ol style="margin:0;padding-left:20px;line-height:1.7"><li>ทำตอนจันทร์เพ็ญจริงและผ่านจอมฟ้า ณ สถานที่ประกอบพิธี มักราวเที่ยงคืน</li><li>ใส่น้ำสะอาดในขันน้ำมนต์ ตั้งไว้กลางแจ้ง ไม่อยู่ใต้ชายคา ร่มไม้ หรือมีเมฆบัง</li><li>รอให้เงาดวงจันทร์สะท้อนลงในขัน</li><li>ตั้งนะโม ๓ จบ จุดเทียนขี้ผึ้งหยดลงน้ำ เพ่งเงาจันทร์ในขัน</li><li>ภาวนาคาถา "ปุณณะ จันโท วิธา นันตะ วิสุทธิ สาวะโก วะโร พุทโธ สัทธัมมะ รังสี มุนิโน มัตถะเก สุภัง" ตามกำลังวัน (วันจันทร์ ๑๕ จบ วันเสาร์ ๑๐ จบ) หรือ ๑๐๘ จบ</li><li>อธิษฐานตามปรารถนา แล้วยกขันรดศีรษะรวดเดียวจนหมด</li></ol><p class="note">ระบบใช้ตำแหน่งดาวแบบนิรายนะของระบบ นักษัตรโรหิณีคือ ๔๐°–๕๓°๒๐′ "ร่วมหรือให้แสง" นับกุมและเล็ง ระยะอุปราคาถือจันทร์ห่างจุดราหูหรือจุดตรงข้ามไม่เกิน ๑๒° เวลาผ่านจอมฟ้าเป็นค่าประมาณ ควรตรวจกับข้อมูลดาราศาสตร์ของจังหวัดอีกครั้ง · ที่มา: "ฤกษ์เสกน้ำมนต์จันทร์เพ็ญ" โดย โหรชัยวัฒน์ สดชื่น (ปรับปรุง ๕ พ.ย. ๒๕๖๘) ระบบเรียบเรียงใหม่</p>`)}`; }
 
 function tHow(){ return `<div class="kh8tw"><table class="kh8tb"><tr><td><b>พลจันทร์ ๕ ราศี</b></td><td>${P5.map(p=>`${SN[p[0]]} (${p[1]})`).join(' · ')} ตามตารางมาตรฐานดาวของระบบ</td></tr><tr><td><b>คะแนนกำลังจันทร์</b></td><td>พลจันทร์ +๓ (อุจจ์ +๓½) · จุลจักร +๑ · ประ −๒ · นิจ −๓ (นิจภังค์คืน +๒½) · จันทร์เพ็ญ +๑½ · ข้างขึ้น +½ · ข้างแรม −½ · จันทร์ดับ −๒ · บาปเคราะห์ (เสาร์ อังคาร ราหู เกตุ) กุม −๑½ เล็ง −๑ · ราหูกุม (จันทร์คราส) −๒ · กุมใกล้ภายใน ๘° −½ เพิ่ม · เสาร์หรือราหูฉาก −½ · ศุภเคราะห์กุม +¾ · พฤหัสตรีโกณหรือเล็ง +½ · เรือนเกณฑ์ +½ · ทุสถานะ −½</td></tr><tr><td><b>คำตัดสิน</b></td><td>ได้พลจันทร์: ๓ ขึ้นไปเต็มดวง · ๑ ถึง ๓ ถูกเบียนบางส่วน · ต่ำกว่า ๑ ถูกบดบัง</td></tr><tr><td><b>จันทร์จร</b></td><td>หาเวลาจันทร์จรเข้าราศีที่กุม เล็ง และตรีโกณกับจันทร์เดิม ล่วงหน้า ๙๒ วัน และดาวจรใหญ่ (เสาร์ ราหู เกตุ พฤหัสบดี) เข้าราศีที่ทำมุมกับจันทร์เดิม</td></tr></table></div><p class="note">ที่มา: แนวคิดพลจันทร์ จันทร์ถูกบดบัง จันทร์ในเรือนชะตา และจันทร์จรกระตุ้นจันทร์เดิม จากโพสต์ของ อาจารย์ปิ่ณ (TheMagic) เรียบเรียงใหม่ สูตรคะแนนและคำพยากรณ์รายละเอียดระบบกำหนดเอง</p>`; }
-const TABS=[['ov','moon','ภาพรวม'],['p5','ring','พลจันทร์ ๕ ราศี'],['af','shield','จันทร์ถูกเบียน'],['hs','home','จันทร์ในเรือนชะตา'],['tr','orbit','จันทร์จรกับจันทร์เดิม'],['self','check','ตรวจตนเอง'],['full','moon','จันทร์เพ็ญ น้ำมนต์'],['how','book','หลักและที่มา']];
+const DTN=['ปถมา','ทุติยา','ตติยา','จตุรถี','ปัญจมี','ษัษฐี','สัปตมี','อัฏฐมี','นวมี','ทศมี','เอกาทศี','ทวาทศี','ตรโยทศี','จตุรทศี','ปูรณิมา','อมาวสี'];
+const DT={1:[['ซื่อตรง','ใฝ่เรียน','ฝีมือดี งานช่าง','ศรัทธาศาสนาจริงใจ','สุขุม เยือกเย็น'],['ทำอะไรค่อนข้างช้า']],
+2:[['ศัตรูน้อย มีก็ชนะ','ใจบุญ','มีทรัพย์ ที่ดิน ยานพาหนะ','ซื่อตรง คบง่าย','มีเกียรติ คนนับหน้าถือตา'],[]],
+3:[['พูดเก่ง ชมคนเป็น','ใจบุญ','มีสมบัติ','รักการเรียนรู้','รูปงาม','ช่วยญาติมิตร'],['ถือตัว วางท่ามากไป']],
+4:[[],['งานมักสะดุด อุปสรรคมาก','ใจแข็ง เมตตาน้อย','รักง่ายหน่ายเร็ว','ตกลงอะไรยาก','ละโมบ','ทุกข์ใจง่าย']],
+5:[['ความรู้ดี','ทรัพย์และเครื่องประดับมาก','แต่งตัวทันสมัย นำหน้าคนอื่น','รูปร่างสมส่วน','มีน้ำใจ ช่วยเหลือคน'],[]],
+6:[['แข็งแรง สุขภาพดี','บริวารมาก','ความรู้ดี','ซื่อตรง สุภาพ'],['โกรธง่ายอยู่บ้าง']],
+7:[['ใจบุญ เมตตา','มีอำนาจมาก','ยั้งคิดเป็น','ร่างกายแข็งแรง'],['พูดจาแรง ไม่น่าฟัง','สุขภาพจุกจิก'],'ตำราว่าทั้งแข็งแรงและขี้โรค ซึ่งขัดกันเอง ควรดูดวงประกอบ'],
+8:[['กล้าหาญ','หญิงมักรูปงาม'],['เอาแต่ใจ','เข้ากับคนยาก','ใจร้อน อารมณ์ร้อน','อารมณ์รักแรง']],
+9:[['เงียบ ขรึม คมในฝัก'],['ใจร้อน','สนใจแต่เรื่องตัวเอง','เข้ากับคนยาก คนใกล้ตัวมักเดือดร้อน','ระวังเรื่องความซื่อตรง','ชีวิตคู่และบุตรไม่ราบรื่น'],'ผู้นำมาเผยแพร่สอบทานแล้วพบหลายรายไม่เป็นตามตำรา ควรดูดวงประกอบ'],
+10:[['ใจบุญ ขี้สงสาร','มีความสุขเสมอ','สุภาพ มีทรัพย์','พูดมีหลัก','รักญาติ','รูปงามมีเสน่ห์'],['อารมณ์รักแรง','ระวังเรื่องชู้สาว']],
+11:[['ได้เป็นหัวหน้าครอบครัวหรือชุมชน','ประณีต เรียบร้อย','นิสัยน่ายกย่อง','ความรู้ดี','บริวารมาก','อสังหาและทรัพย์มาก'],[]],
+12:[['ศรัทธาศาสนา','ร่ำรวย มีอำนาจ','คนทั่วไปชอบ มีเสน่ห์','สุภาพ ใจบุญ'],['เบื่อง่าย']],
+13:[['ศรัทธาศาสนา','จริงใจ ไว้ใจได้','สุภาพเรียบร้อย','ทรัพย์พอประมาณ'],['อารมณ์รักค่อนข้างแรง']],
+14:[['ขยันอยู่บ้าง'],['ใจร้อน โมโหง่าย','ดูน่าเกรง','เข้าสังคมยาก','เห็นแก่ตัว โลภ','ระวังเรื่องชู้สาว']],
+15:[['บุคลิกน่าชม','ร่ำรวย','ปัญญาเฉียบ','สุภาพ น่าคบ','ใฝ่เรียน'],['เจ้าชู้เกินตัว']],
+16:[['ศรัทธาศาสนา'],['ไม่ชอบสัตว์สี่เท้า','สุขภาพอ่อน','การเงินฝืด','อารมณ์รักแรง']]};
+const dkey=ph=>ph.k===15?(ph.wax?15:16):ph.k;
+function tithiRet(eN,T0,n){ const out=[]; const el=t=>nrm(P(t,'MO')-P(t,'SU')); let t=+T0;
+ for(let i=0;i<n;i++){ let d=nrm(el(t)-eN); t+=((360-d)/12.19)*864e5; for(let k=0;k<5;k++){ let e=el(t)-eN; if(e>180) e-=360; if(e<-180) e+=360; t-=e/12.19*864e5; } out.push(t); t+=2*864e5; } return out; }
+function tTithi(X){ const N=X.N, eN=el2(N), ph=phase(eN), key=dkey(ph), D=DT[key];
+ const TR=X.TR, eT=TR&&TR.MO!=null&&TR.SU!=null?nrm(TR.MO-TR.SU):null, phT=eT!=null?phase(eT):null, keyT=phT?dkey(phT):null;
+ const nm=k=>`${k===16?'แรม ๑๕ ค่ำ':k===15?'ขึ้น ๑๕ ค่ำ':td(k)+' ค่ำ'} (${DTN[k-1]})`;
+ const amp=ph.wax?[G,'เกิดข้างขึ้น (ชุณหปักษ์)','ด้านดีของดิถีนี้ให้ผลเด่นเป็นพิเศษ ส่วนด้านที่ต้องระวังเบาลง']:[B,'เกิดข้างแรม (กาฬปักษ์)','ด้านที่ต้องระวังจะหนักขึ้น ส่วนด้านดียังมีแต่เบาลง'];
+ const nG=D[0].length, nB=D[1].length, w=(ph.wax?1.3:1)*nG-(ph.wax?1:1.3)*nB, vd=w>=2?[G,'ดิถีพละดี']:w<=-1.5?[B,'ดิถีพละอ่อน']:[Y,'ดิถีพละปานกลาง'];
+ const li=(a,c,i)=>a.length?a.map(x=>`<li style="display:flex;gap:6px;align-items:flex-start;margin:4px 0">${ic(i,c,15)}<span>${x}</span></li>`).join(''):`<li class="sm" style="opacity:.7">ตำราไม่ได้ระบุ</li>`;
+ // วงดิถี ๓๐
+ const C=120, R1=104, R0=74; let g='';
+ for(let i=0;i<30;i++){ const a0=(-90+i*12)*Math.PI/180, a1=(-90+(i+1)*12)*Math.PI/180, am=(a0+a1)/2, p=(r,a)=>`${(C+r*Math.cos(a)).toFixed(1)} ${(C+r*Math.sin(a)).toFixed(1)}`, wx=i<15, k=wx?i+1:i-14, kk=k===15?(wx?15:16):k, gd=DT[kk][0].length>DT[kk][1].length, me=i===ph.ti-1, now=phT&&i===phT.ti-1;
+  g+=`<path d="M${p(R0,a0)}L${p(R1,a0)}A${R1} ${R1} 0 0 1 ${p(R1,a1)}L${p(R0,a1)}A${R0} ${R0} 0 0 0 ${p(R0,a0)}Z" fill="${gd?G:B}" fill-opacity="${me?.85:wx?.32:.16}" stroke="${me?GD:'var(--line,#333)'}" stroke-width="${me?2.5:.6}"/><text x="${(C+89*Math.cos(am)).toFixed(1)}" y="${(C+89*Math.sin(am)+3.5).toFixed(1)}" font-size="9.5" text-anchor="middle" fill="currentColor" font-weight="${me?700:400}">${td(k)}</text>`;
+  if(now) g+=`<circle cx="${(C+114*Math.cos(am)).toFixed(1)}" cy="${(C+114*Math.sin(am)).toFixed(1)}" r="4.5" fill="${MC}"/>`; }
+ g+=`<text x="${C}" y="${C-30}" text-anchor="middle" font-size="10" fill="currentColor" opacity=".7">ข้างขึ้น →</text><text x="${C}" y="${C+40}" text-anchor="middle" font-size="10" fill="currentColor" opacity=".7">← ข้างแรม</text>`;
+ const wheel=`<svg viewBox="0 0 240 240" style="width:240px;max-width:100%;flex:none">${g}<g transform="translate(${C} ${C})">${moonSvg(eN,22).replace(/^<svg[^>]*>|<\/svg>$/g,'')}</g></svg>`;
+ const RT=tithiRet(eN,X.T,8), left_=t=>{ try{ return left(t); }catch(_){ return '—'; } };
+ const rows=Object.keys(DT).map(Number).map(k=>`<tr style="${k===key?`background:color-mix(in srgb,${MC} 14%,transparent)`:''}"><td><b>${nm(k)}</b>${k===key?' '+tag('ดิถีเกิด',MC):''}${k===keyT?' '+tag('วันนี้',O):''}</td><td style="color:${G};white-space:normal;min-width:180px">${DT[k][0].join(' · ')||'—'}</td><td style="color:${B};white-space:normal;min-width:150px">${DT[k][1].join(' · ')||'—'}</td></tr>`).join('');
+ return card(MC,'moon','ดิถีพละ · ดิถีเกิดบอกนิสัย',`<div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">${wheel}<div style="flex:1;min-width:230px">
+<p class="sm">ดิถีเกิด (จันทร์ห่างอาทิตย์ ${td(Math.floor(eN))}°)</p><h3 style="margin:2px 0 6px">${ph.txt} (${DTN[key-1]})</h3>
+<p>${tag(vd[1],vd[0])} ${tag(amp[1],amp[0])}</p><p class="sm">${amp[2]}</p>
+${phT?`<p class="sm" style="margin-top:8px">ดิถีจรตอนนี้: <b>${phT.txt}</b> (${DTN[keyT-1]})${keyT===key?' '+tag('ตรงกับดิถีเกิด',G):''}</p>`:''}</div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:10px">
+<div class="mo8c" style="--c:${G};margin:0"><h4>${ic('ok',G)} ด้านเด่น${ph.wax?' (ข้างขึ้นหนุนให้เด่นยิ่งขึ้น)':''}</h4><ul style="list-style:none;padding:0;margin:0">${li(D[0],G,'ok')}</ul></div>
+<div class="mo8c" style="--c:${B};margin:0"><h4>${ic('shield',B)} ด้านที่ต้องระวัง${ph.wax?'':' (ข้างแรมทำให้หนักขึ้น)'}</h4><ul style="list-style:none;padding:0;margin:0">${li(D[1],B,'shield')}</ul></div></div>
+${D[2]?`<p class="sm" style="margin-top:8px">${ic('shield',Y,14)} ${D[2]}</p>`:''}`)
++card(O,'orbit','ดิถีเกิดเวียนกลับมา (จันทร์ห่างอาทิตย์เท่าวันเกิด)',`<p class="sm">ทุกราว ๒๙.๕ วัน จันทร์จะห่างอาทิตย์เป็นมุมเดียวกับวันเกิด ถือเป็นวันที่ดิถีเกิดถูกกระตุ้น เหมาะทบทวนจุดเด่นและจุดที่ต้องระวังของดิถีตน</p>
+<div class="kh8tw"><table class="kh8tb"><tr><th>วันเวลา</th><th>อีกกี่ปี เดือน วัน</th><th>อายุ</th></tr>${RT.map((t,i)=>`<tr style="${i===0?`background:color-mix(in srgb,${O} 10%,transparent)`:''}"><td>${fdtm(t)}</td><td>${left_(t)}</td><td>${ageAt(t)}</td></tr>`).join('')}</table></div>`)
++card(GD,'book','ตารางดิถีพละ ๑๖ ดิถี',`<div class="kh8tw"><table class="kh8tb"><tr><th>ดิถี</th><th>ด้านเด่น</th><th>ด้านที่ต้องระวัง</th></tr>${rows}</table></div>
+<p class="sm" style="margin-top:6px">หลักใหญ่: ดิถีข้างขึ้นด้านดีเด่นขึ้น ดิถีข้างแรมด้านร้ายหนักขึ้น แต่ดีและร้ายปนกันเสมอ ดิถีที่ว่าร้ายไม่ได้ร้ายเสมอไป ต้องดูดวงชะตาประกอบ</p>
+<p class="note">ที่มา: บทความ "ดิถีพละ" ของ อ.ศิวะ นามะสนธิ ถอดจากคัมภีร์นักษัตรจุฑามณี (พยากรณ์สาร มี.ค. ๒๕๐๒) เผยแพร่ต่อโดย อ.ตากล (ธนพงศ์ ศุภประเสริฐ) เรียบเรียงใหม่เป็นข้อสั้น · ดิถีคำนวณจากระยะจันทร์ห่างอาทิตย์ทีละ ๑๒ องศา อาจต่างจากวันขึ้นแรมในปฏิทินจันทรคติ ๑ วันได้</p>`); }
+const TABS=[['ov','moon','ภาพรวม'],['p5','ring','พลจันทร์ ๕ ราศี'],['af','shield','จันทร์ถูกเบียน'],['hs','home','จันทร์ในเรือนชะตา'],['tr','orbit','จันทร์จรกับจันทร์เดิม'],['self','check','ตรวจตนเอง'],['full','moon','จันทร์เพ็ญ น้ำมนต์'],['tt','ring','ดิถีพละ'],['how','book','หลักและที่มา']];
 function render(){ const out=document.getElementById('mo380Out'); if(!out) return; let X={}; try{ X=ctx(); }catch(e){ console.error(e); } let b='';
-try{ if(!X.N&&TAB!=='how') b='<p class="note">ผูกดวงก่อน แล้วกลับมาที่หน้านี้</p>'; else b=({ov:tOv,p5:tP5,af:tAf,hs:tHs,tr:tTr,self:tSelf,full:tFull,how:tHow})[TAB](X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; }
+try{ if(!X.N&&TAB!=='how') b='<p class="note">ผูกดวงก่อน แล้วกลับมาที่หน้านี้</p>'; else b=({ov:tOv,p5:tP5,af:tAf,hs:tHs,tr:tTr,self:tSelf,full:tFull,tt:tTithi,how:tHow})[TAB](X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; }
 out.innerHTML=`<h3 class="kh8H">${ic('moon',GD,24)} ตรวจดาวจันทร์ (พลจันทร์)</h3><p class="note">ดาวจันทร์ทายวาสนา: ได้พลจันทร์หรือไม่ ถูกบดบังแค่ไหน อยู่เรือนใด และจันทร์จรจะมากระตุ้นเมื่อใด</p><div class="kh8tabs">${TABS.map(([k,i,t])=>`<button type="button" data-mob="${k}" class="${TAB===k?'on':''}">${ic(i,TAB===k?GD:null,20)}<span>${t}</span></button>`).join('')}</div>${b}`; }
 document.addEventListener('click',ev=>{ const t=ev.target.closest&&ev.target.closest('#mo380Out [data-mob],#mo380Out [data-mos]'); if(!t) return; if(t.dataset.mob) TAB=t.dataset.mob; if(t.dataset.mos!=null){ try{ const s=JSON.parse(localStorage.getItem('mo380self')||'{}')||{}; s[t.dataset.mos]=!s[t.dataset.mos]; localStorage.setItem('mo380self',JSON.stringify(s)); }catch(_){ } } const y=scrollY; render(); scrollTo(0,y); });
 if(!document.getElementById('mo380css')){ const st=document.createElement('style'); st.id='mo380css'; const kc=document.getElementById('kh358css'); st.textContent=(kc?kc.textContent.split('#kh358Out ').join('#mo380Out '):'')+`
