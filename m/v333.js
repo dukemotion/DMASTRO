@@ -4361,7 +4361,44 @@ return `<div class="kh8c" style="border-left-color:${vd[0]};margin-top:16px"><h4
 <p class="rx3h">ราหูจรเข้าภพ ๒ ๔ ๑๒ จากลัคนาเดิม (๒๐ ปีข้างหน้า)</p>
 <div class="kh8tw"><table class="kh8tb"><tr><th>ช่วง</th><th>เริ่ม</th><th>ถึง</th><th>นับถอยหลัง</th><th>อายุ</th><th>ข้อควรระวัง</th></tr>${tr||'<tr><td colspan="6">ไม่พบ</td></tr>'}</table></div>
 <p class="sm" style="opacity:.75">ระบบนับ "ให้แสง" เมื่อดาวกุม เล็ง หรือตรีโกณราหู ส่วนราหูจรเป็นการต่อยอดของระบบ · ที่มา: บทความ "ตำแหน่งเบียฬของพระราหู" โดย โหรชัยวัฒน์ สดชื่น (๓๑ พ.ค. ๒๕๖๘) อ้างตำราโลกธาตุของพระสารประเสริฐ ระบบเรียบเรียงใหม่</p></div>`; }
-{ const _ov=overview; overview=X=>_ov(X)+(X&&X.N?arish(X)+rgood(X)+rlag(X)+rpair(X)+rbia(X)+rqual(X):''); }
+{ function rlabha(X){ const N=X.N, L=sg(N.LA), rs=sg(N.RA), now=new Date();
+const HM=['ตัวตน สุขภาพ บุคลิก','การเงิน รายได้ ทรัพย์สิน','พี่น้อง การติดต่อ การเดินทางใกล้','บ้าน ที่ดิน ครอบครัว ยานพาหนะ','บุตร บริวาร โครงการ ความคิดสร้างสรรค์','ศัตรู อุปสรรค คู่แข่ง สุขภาพ','คู่ครอง หุ้นส่วน คู่สัญญา','ความเปลี่ยนแปลง ความเสี่ยง มรดก','ผู้ใหญ่ โชค การศึกษา การเดินทางไกล','การงาน อาชีพ ตำแหน่ง ชื่อเสียง','โชคลาภ ผลประโยชน์ มิตร ผู้สนับสนุน','การลงทุน ความลับ ต่างแดน ความสูญเสีย'];
+const HK=['ตนุ','กดุมภะ','สหัชชะ','พันธุ','ปุตตะ','อริ','ปัตนิ','มรณะ','ศุภะ','กัมมะ','ลาภะ','วินาศ'];
+const EN=['ไฟ','ดิน','ลม','น้ำ'];
+const tierOf=(a,b)=>{ const x=a%4, y=b%4; if(x===y) return 1; const p=[x,y].sort().join(''); return p==='02'||p==='13'?2:p==='01'||p==='23'?3:4; };
+const TT={1:['ชั้น ๑ อสีติธาตุ',G,'ธาตุเดียวกับราหูเดิม ให้คุณมาก'],2:['ชั้น ๒ ธาตุคู่มิตร',G,'ธาตุส่งเสริมกัน ให้คุณ'],3:['ชั้น ๓ ธาตุเป็นกลาง',Y,'ผลขึ้นกับมาตรฐานดาวและดาวที่ส่งกำลังถึง'],4:['ชั้น ๔ ธาตุคู่ศัตรู',B,'ธาตุขัดกัน ให้ผลติดขัด']};
+const goodD=s=>/อุจจ์|เกษตร|มหาจักร|จุลจักร|ราชาโชค|เทวีโชค/.test(s||''), badD=s=>/นิจ|ประ|มรณะ/.test(s||'');
+const Lh=cnt(L,10), Nh=cnt(L,rs);
+let ra=null; try{ ra=posH(horaOf(X.T),'RA'); }catch(_){ } if(ra==null) return '';
+const ts=sg(ra), Th=cnt(L,ts), tier=tierOf(rs,ts), dg=sd('RA',ra), T1=TT[tier];
+const strong=tier<=2&&goodD(dg), weak=(tier===4&&!goodD(dg))||badD(dg);
+const vd=strong?[G,'ราหูจรให้คุณเด่น',`ธาตุ${T1[0].replace(/^ชั้น \S+ /,'')}และได้มาตรฐาน${dg} เสริมกำลังกัน`]:tier<=2?[G,'ราหูจรให้คุณ',`ได้${T1[0]} แม้มาตรฐานดาวไม่เด่น`]:tier===4?[Y,'ธาตุขัด แต่มาตรฐานดาวช่วยหนุน',`ธาตุคู่ศัตรูกับราหูเดิม แต่ราหูจรได้${dg} ยังมีกำลังพอ เหนื่อยก่อนแล้วสำเร็จ`]:weak?[B,'ราหูจรให้ผลติดขัด',`${tier===4?'ธาตุคู่ศัตรูกับราหูเดิม':''}${tier===4&&badD(dg)?' และ':''}${badD(dg)?'มาตรฐานดาวเป็น'+dg:''}`]:[Y,'ราหูจรให้ผลปานกลาง','ธาตุเป็นกลาง ต้องดูมาตรฐานดาวและดาวจรอื่นประกอบ'];
+const ret=ts===rs, RT=(()=>{ try{ return returns(X).find(t=>t>now)||null; }catch(_){ return null; } })();
+// ช่วงราหูจรแต่ละราศี ~๑๙ ปีข้างหน้า
+const per=[]; try{ let g0=rxIngress(X.T); for(let i=0;i<13&&g0&&g0.b;i++){ per.push(g0); g0=rxIngress(new Date(+g0.b+3*864e5)); } }catch(_){ }
+const rows=per.map(p=>{ const h=cnt(L,p.s), tr=tierOf(rs,p.s), d=sd('RA',p.s*30+15), on=p.a&&p.a<=now&&p.b>now, top=tr<=2&&goodD(d), t2=TT[tr];
+ return `<tr class="${on?'on':''}"><td>${top?ic('ok',G,15):(tr===4&&!goodD(d))||badD(d)?ic('wn',B,15):ic('dot',GR,12)} ราศี${SN[p.s]}</td><td>ภพ${HK[h-1]} (${td(h)})</td><td style="color:${t2[1]}">${t2[0]}</td><td>${d||'—'}</td><td>${p.a?fdt(p.a):'—'}</td><td>${fdt(p.b)}</td><td>${p.a&&p.a>now?until(p.a,now):on?'กำลังเป็นอยู่':'—'}</td><td>${p.a?ageAt(X.bt,p.a>now?p.a:now):'—'}</td></tr>`; }).join('');
+// แผนภาพสามภพ
+const bx=(x,c,h1,h2)=>`<rect x="${x}" y="22" width="112" height="62" rx="12" fill="color-mix(in srgb,${c} 12%,transparent)" stroke="${c}"/><text x="${x+56}" y="46" text-anchor="middle" font-size="13" font-weight="700" fill="${c}">${h1}</text><text x="${x+56}" y="66" text-anchor="middle" font-size="10.5" fill="currentColor" opacity=".8">${h2}</text>`;
+const ar=(x1,x2,t)=>`<path d="M${x1} 53H${x2-6}" stroke="${GD}" stroke-width="2" fill="none"/><path d="M${x2-8} 47l8 6-8 6" fill="${GD}"/><text x="${(x1+x2)/2}" y="16" text-anchor="middle" font-size="10" fill="currentColor" opacity=".75">${t}</text>`;
+const svg=`<div class="kh8w"><svg class="kh8svg" viewBox="0 0 420 100" style="max-width:520px">${bx(4,O,'ภพ'+HK[Lh-1],'ราหูเป็นเจ้าเรือน')}${ar(116,154,'ตัวเรื่อง')}${bx(154,RC,'ราหูเดิม ภพ'+HK[Nh-1],'ราศี'+SN[rs]+' ธาตุ'+EN[rs%4])}${ar(266,304,'จรไป')}${bx(304,T1[1],'ภพ'+HK[Th-1],'ราศี'+SN[ts]+' ธาตุ'+EN[ts%4])}</svg></div>`;
+const caut=['ลงทุนหรือขยายงานเกินกำลัง','รับงานหรือภาระมากจนพักผ่อนไม่พอ','แย่งชิงตำแหน่ง หรือใช้อำนาจไม่เหมาะสม','หาผลประโยชน์โดยไม่คำนึงความถูกต้อง'];
+return `<div class="kh8c" style="border-left-color:${vd[0]};margin-top:16px"><h4>${ic('orbit',vd[0])} ราหูจรนำเรื่องจากภพที่ครองไปสู่ภพที่จร (ระบบธาตุและเรือนชาตา)</h4>
+<p class="sm" style="opacity:.85">หลักคือ เรือนชาตาเป็นตัวเรื่อง ดาวเจ้าเรือนเป็นตัวแสดงเรื่อง ราหูเป็นเจ้าเรือนราศีกุมภ์ เมื่อราหูจรไปอยู่ภพใด ก็นำเรื่องของภพที่ตนครองเข้าไปสู่ภพนั้น แล้วดูกำลังจากธาตุของราศีจรเทียบกับราหูเดิม และมาตรฐานดาวของราหูจร</p>
+${svg}
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:8px;margin:8px 0">
+<div class="kh8q" style="--c:${O}"><p class="sm">ราหูครองเรือน</p><b>ภพ${HK[Lh-1]} (เรือนที่ ${td(Lh)})</b><p class="sm">${HM[Lh-1]}</p></div>
+<div class="kh8q" style="--c:${RC}"><p class="sm">ราหูเดิม</p><b>ราศี${SN[rs]} · ภพ${HK[Nh-1]}</b><p class="sm">${HM[Nh-1]}</p></div>
+<div class="kh8q" style="--c:${T1[1]}"><p class="sm">ราหูจรตอนนี้</p><b>ราศี${SN[ts]} ${fmtD(nrm(ra)%30)} · ภพ${HK[Th-1]}</b><p class="sm">${HM[Th-1]}</p></div>
+<div class="kh8q" style="--c:${vd[0]}"><p class="sm">กำลังของราหูจร</p><b>${tag(T1[0],T1[1])} ${dg?tag(dg,goodD(dg)?G:badD(dg)?B:GR):''}</b><p class="sm">${T1[2]}</p></div></div>
+<p>${tag(vd[1],vd[0])} <span class="sm">${vd[2]}</span></p>
+<p><b>คำพยากรณ์:</b> ราหูนำเรื่อง${HM[Lh-1]} เข้ามาสู่เรื่อง${HM[Th-1]} ${tier<=2?`ผลที่ได้จึงเป็น${HM[Lh-1].split(' ')[0]}ที่เกิดจาก${HM[Th-1].split(' ')[0]} มีผู้สนับสนุนและโอกาสเข้ามาในด้านนี้`:`แต่ธาตุไม่ส่งเสริม เรื่องเหล่านี้จึงต้องใช้ความพยายามมากกว่าปกติ`}${Nh!==Th?` เมื่อรวมกับราหูเดิมที่อยู่ภพ${HK[Nh-1]} ช่วงนี้จะเด่นด้าน${HM[Nh-1]}เป็นพิเศษ เพราะสามภพนี้เชื่อมกันผ่านราหู`:''}</p>
+${ret?`<p>${tag('ราหูจรกลับมาราศีเดียวกับราหูเดิม',strong?G:Y)} <span class="sm">เป็นการกระตุ้นราหูเดิมโดยตรง ผลงานและเรื่องที่สะสมมาจะปรากฏชัด${RT?` · ทับราหูเดิมตรงองศา ${fdt(RT)} (${until(RT,now)} · อายุ ${ageAt(X.bt,RT)})`:''}</span></p>`:''}
+<p class="sm" style="margin-top:8px"><b>ข้อควรระวังของราหูจร:</b> ราหูยังเป็นดาวแห่งความทะเยอทะยานและความอยากได้ ควรระวัง${caut.join(' · ')} ถ้าใช้ความสามารถคู่กับความซื่อตรงและรอบคอบ ผลดีจะมั่นคง</p>
+<h5 style="margin:12px 0 4px">ช่วงราหูจรแต่ละราศี (ประมาณ ๑๙ ปีข้างหน้า)</h5>
+<div class="kh8tw"><table class="kh8tb"><tr><th>ราหูจร</th><th>ภพ</th><th>ธาตุเทียบราหูเดิม</th><th>มาตรฐาน</th><th>เริ่ม</th><th>สิ้นสุด</th><th>อีกกี่ปี เดือน วัน</th><th>อายุ</th></tr>${rows}</table></div>
+<p class="sm" style="opacity:.75">เครื่องหมายถูกสีเขียว คือช่วงที่ได้ทั้งธาตุชั้น ๑–๒ และมาตรฐานดี ควรใช้วางแผนเรื่อง${HM[Lh-1].split(' ')[0]} · ควรดูเจ้าเรือนลัคนา เจ้าเรือนของภพที่ราหูจร ตรีวัย และดาวจรอื่นประกอบ · เรียบเรียงจากบทความระบบธาตุและเรือนชาตา (arjarnthi)</p></div>`; }
+const _ov=overview; overview=X=>_ov(X)+(X&&X.N?arish(X)+rgood(X)+rlag(X)+rpair(X)+rbia(X)+rqual(X)+rlabha(X):''); }
 function render(){ const out=document.getElementById('rx362Out'); if(!out) return; let X={}; try{ X=ctx(); }catch(e){ console.error(e); } let b=''; if(SEL==='ov'){ try{ b=overview(X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; } } else if(SEL==='nat'){ try{ b=natv(X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; } }
 out.innerHTML=`<h3 class="kh8H">${ic('rahu',GD,24)} ตรวจราหู</h3><p class="note">รวมทุกตำราเรื่องราหูไว้ที่เดียว ดูราหูเดิม ราหูจร ช่วงราหูเสวยอายุ และเลือกตำราที่ต้องการตรวจต่อจากแถบด้านล่าง</p>${nav()}${b}`; apply(); }
 function go(id,scroll){ SEL=id; render(); if(typeof MBX==='function') setTimeout(MBX,0); if(scroll!==false){ const el=document.getElementById('rx362P'); if(el) setTimeout(()=>{ const y=el.getBoundingClientRect().top+scrollY-74; scrollTo({top:y,behavior:'smooth'}); },60); } }
