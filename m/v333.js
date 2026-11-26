@@ -8419,3 +8419,110 @@ if(!document.getElementById('dc385css')){ const st=document.createElement('style
 #dc385Out .dc8tl{width:100%;height:auto;display:block}#dc385Out tr.dc8dbl td{background:color-mix(in srgb,${B} 10%,transparent)}#dc385Out tr.on td{background:color-mix(in srgb,${A} 12%,transparent)}`; document.head.appendChild(st); }
 return {render};
 })();
+window.SP386=(()=>{
+const td=n=>String(n).replace(/\d/g,c=>'๐๑๒๓๔๕๖๗๘๙'[c]);
+const G='#2faa5a',B='#e0453a',Y='#e8b90f',A='#4aa3ff',GD='var(--gold,#c9a227)',GR='#8a8f98',OR='#f08a24';
+const SN=['เมษ','พฤษภ','เมถุน','กรกฎ','สิงห์','กันย์','ตุลย์','พิจิก','ธนู','มังกร','กุมภ์','มีน'];
+const HN=['ตนุ','กดุมภะ','สหัชชะ','พันธุ','ปุตตะ','อริ','ปัตนิ','มรณะ','ศุภะ','กัมมะ','ลาภะ','วินาศ'];
+const K=['SU','MO','MA','ME','JU','VE','SA','RA'];
+const TN={SU:'อาทิตย์',MO:'จันทร์',MA:'อังคาร',ME:'พุธ',JU:'พฤหัสบดี',VE:'ศุกร์',SA:'เสาร์',RA:'ราหู'};
+const PN={SU:'๑',MO:'๒',MA:'๓',ME:'๔',JU:'๕',VE:'๖',SA:'๗',RA:'๘'};
+const PC={SU:'#e8743b',MO:'#b9a33e',MA:'#e05f8a',ME:'#2faa5a',JU:'#f08a24',VE:'#4aa3ff',SA:'#7a5ab8',RA:'#8a6e4b'};
+const LRD=['MA','VE','ME','MO','SU','ME','VE','MA','JU','SA','RA','JU'];
+const nrm=x=>((x%360)+360)%360, sg=x=>Math.floor(nrm(x)/30), cnt=(a,b)=>((b-a)%12+12)%12+1, DAY=864e5;
+const sd=(k,x)=>{ try{ return std(k,x)||''; }catch(_){ return ''; } }, top=s=>/อุจจ์|มหาจักร|ราชาโชค|เทวีโชค/.test(s), good=s=>/อุจจ์|เกษตร|มหาจักร|ราชาโชค|เทวีโชค/.test(s), bad=s=>/นิจ|ประ/.test(s);
+const MO_=['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'], WD=['อาทิตย์','จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์','เสาร์'];
+const fdt=t=>{ const d=new Date(t); return `${td(d.getDate())} ${MO_[d.getMonth()]} ${td(d.getFullYear()+543)}`; };
+const fdw=t=>`วัน${WD[new Date(t).getDay()]} ${fdt(t)}`;
+const ymd=(a,b)=>{ a=new Date(a); b=new Date(b); let y=b.getFullYear()-a.getFullYear(), m=b.getMonth()-a.getMonth(), d=b.getDate()-a.getDate(); if(d<0){ m--; d+=new Date(b.getFullYear(),b.getMonth(),0).getDate(); } if(m<0){ y--; m+=12; } return [y,m,d]; };
+const ymdT=([y,m,d])=>[y?td(y)+' ปี':'',m?td(m)+' เดือน':'',d||(!y&&!m)?td(d)+' วัน':''].filter(Boolean).join(' ');
+const left=t=>{ const n=Date.now(); if(t<=n+6e4) return 'ตอนนี้'; const dd=Math.ceil((t-n)/DAY); return `อีก ${td(dd)} วัน${dd>31?' ('+ymdT(ymd(n,t))+')':''}`; };
+const I={home:'<path d="M3 11l9-7 9 7M5 10v10h14V10"/>',orbit:'<circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="10" ry="4.5"/>',book:'<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M8 7h7M8 11h7"/>',ok:'<circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/>',no:'<circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/>',half:'<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" opacity=".35"/>',cal:'<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',
+ up:'<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>',coin:'<ellipse cx="12" cy="7" rx="7" ry="3"/><path d="M5 7v5c0 1.7 3.1 3 7 3s7-1.3 7-3V7M5 12v5c0 1.7 3.1 3 7 3s7-1.3 7-3v-5"/>',medal:'<circle cx="12" cy="15" r="5"/><path d="M8.5 11L6 3h4l2 5 2-5h4l-2.5 8"/>',link:'<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>',shield:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>',crown:'<path d="M4 18h16l-1.5-9-4.5 4-2-6-2 6-4.5-4z"/><path d="M4 21h16"/>',chart:'<path d="M4 20V4M4 20h16"/><path d="M7 15l4-5 3 3 5-7"/>',brief:'<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/>'};
+const ic=(n,c,s)=>`<svg viewBox="0 0 24 24" width="${s||18}" height="${s||18}" style="width:${s||18}px!important;height:${s||18}px!important;flex:none;vertical-align:-3px" fill="none" stroke="${c||'currentColor'}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${I[n]||n}</svg>`;
+const tag=(t,c)=>`<span class="sp8t" style="--c:${c}">${t}</span>`, pl=k=>`<b class="sp8p" style="--c:${PC[k]||GR}">${PN[k]}</b>`;
+const card=(c,icn,h,b)=>`<div class="sp8c" style="--c:${c}"><h4>${ic(icn,c)} ${h}</h4>${b}</div>`;
+let X0=null, TAB='ov', EV=null, SER=null;
+const ageAt=t=>X0&&X0.bt?ymdT(ymd(X0.bt,t)):'—';
+const P=(t,k)=>posH(horaOf(new Date(t)),k);
+function posAt(t){ const o={}; try{ const h=horaOf(new Date(t)); K.forEach(k=>{ try{ o[k]=posH(h,k); }catch(_){ } }); }catch(_){ } return o; }
+function ctx(){ const W=typeof WSTATE!=='undefined'?WSTATE:null; let T; try{ T=getTransit(); }catch(_){ } if(!T||isNaN(T)) T=new Date(); const o={T:+T}; if(W&&W.nat&&W.nat.pos){ o.N=W.nat2||W.nat.pos; o.L=sg(o.N.LA); o.bt=+W.bt; o.tanu=W.tanu; } o.E=EV||o.T; o.TR=posAt(o.E); return X0=o; }
+const REL={1:[1,'กุม'],7:[.9,'เล็ง'],5:[.8,'ตรีโกณ'],9:[.8,'ตรีโกณ']}, rel=(a,b)=>{ const r=REL[cnt(a,b)]; return r?r:[0,'']; };
+// ── ตรวจ ๕ ข้อ ── Pz=ดาวที่ตรวจ (จร), N=ดวงเดิม, L=ลัคนาเดิม
+function check(Pz,N,L){ const S=k=>sg(Pz[k]), H=k=>cnt(L,S(k)), D=k=>sd(k,Pz[k]), R=[];
+ const lord=h=>LRD[(L+h-1)%12], l9=lord(9), l11=lord(11), l10=lord(10), dus=[...new Set([lord(6),lord(8),lord(12)])];
+ // ข้อ ๑ คู่โชคใหญ่
+ const pr=[['SA','RA'],['JU','SU']].map(([a,b])=>{ const r=rel(S(a),S(b)), la=rel(S(a),L), lb=rel(S(b),L), l=la[0]>=lb[0]?[la[0],a,la[1]]:[lb[0],b,lb[1]]; return {a,b,r,l,v:r[0]*(l[0]?1:.45)}; });
+ const v1=Math.max(...pr.map(p=>p.v)); R.push({n:1,icn:'link',name:'ดาวเกณฑ์โชคใหญ่สัมพันธ์กันและส่องแสงถึงลัคนา',v:v1,w:25,items:pr.map(p=>[p.v>=.75?G:p.v>0?Y:GR,`${TN[p.a]}–${TN[p.b]}`,p.r[0]?`${p.r[1]}กัน${p.l[0]?` · ${TN[p.l[1]]}${p.l[2]}ลัคนา`:' · แต่ไม่ส่องถึงลัคนา'}`:'ไม่สัมพันธ์กัน'])});
+ // ข้อ ๒ ศุภะ ลาภะ ดีเด่น กัมมะหนุน
+
+ const in9=K.filter(k=>H(k)===9), in11=K.filter(k=>H(k)===11), in10=K.filter(k=>H(k)===10);
+ const lk9=![6,8,12].includes(H(l9))&&!bad(D(l9)), lk11=![6,8,12].includes(H(l11))&&!bad(D(l11)), ben=k=>['JU','VE','ME','MO'].includes(k)||good(D(k));
+ const s10=in10.length?in10.filter(k=>ben(k)&&!bad(D(k))).length/in10.length:.5, gIn=[...in9,...in11].filter(k=>!bad(D(k))).length;
+ const v2=Math.min(1,(lk9?.35:0)+(lk11?.35:0)+s10*.2+(gIn?.1:0));
+ R.push({n:2,icn:'coin',name:'ดาวเกษตรศุภะ ลาภะ ไม่ตกภพร้าย ไม่ประ ไม่นิจ และกัมมะหนุน',v:v2,w:30,items:[[lk9?G:B,`เจ้าเรือนศุภะ (${TN[l9]})`,`จรภพ${HN[H(l9)-1]}${D(l9)?' เป็น'+D(l9):''}`],[lk11?G:B,`เจ้าเรือนลาภะ (${TN[l11]})`,`จรภพ${HN[H(l11)-1]}${D(l11)?' เป็น'+D(l11):''}`],[s10>=.75?G:in10.length?Y:GR,'ดาวในภพกัมมะ',in10.length?in10.map(k=>TN[k]+(D(k)?`(${D(k)})`:'')).join(' '):'ว่าง (กลาง ๆ)'],[gIn?G:GR,'ดาวจรในศุภะ ลาภะ',[...in9,...in11].map(k=>`${TN[k]} ภพ${HN[H(k)-1]}${D(k)?'('+D(k)+')':''}`).join(' ')||'ไม่มี']]});
+ // ข้อ ๓ ดาวร้ายไม่จรเข้าศุภะ ลาภะ กัมมะ
+ const intr=dus.filter(k=>[9,10,11].includes(H(k))&&k!==l9&&k!==l11&&k!==l10), v3=intr.length?Math.max(0,1-intr.length*.5):1;
+ R.push({n:3,icn:'shield',name:'ไม่มีดาวอริ มรณะ วินาศ จรเข้าศุภะ ลาภะ หรือกัมมะ',v:v3,w:20,items:dus.map(k=>[[9,10,11].includes(H(k))&&k!==l9&&k!==l11&&k!==l10?B:G,`${TN[k]} (เจ้าเรือน${[6,8,12].filter(h=>lord(h)===k).map(h=>HN[h-1]).join(' ')})`,`จรภพ${HN[H(k)-1]}`])});
+ // ข้อ ๔ ดาวเกษตรศุภะ ลาภะ กัมมะ ได้มาตรฐานสูงและส่องถึงลัคนา
+ const L4=[...new Set([l9,l11,l10])].map(k=>{ const d=D(k), r=rel(S(k),L); return {k,d,r,v:top(d)?(r[0]?1:.5):good(d)&&r[0]?.4:0}; }), v4=Math.max(...L4.map(x=>x.v));
+ R.push({n:4,icn:'crown',name:'ดาวเกษตรศุภะ ลาภะ กัมมะ จรเป็นมหาอุจจ์ มหาจักร ราชาโชค เทวีโชค และส่องถึงลัคนา',v:v4,w:25,items:L4.map(x=>[x.v>=.75?G:x.v>0?Y:GR,`${TN[x.k]} (เจ้าเรือน${[9,10,11].filter(h=>lord(h)===x.k).map(h=>HN[h-1]).join(' ')})`,`${x.d||'ไม่มีมาตรฐาน'}${x.r[0]?` · ${x.r[1]}ลัคนา`:' · ไม่ส่องถึงลัคนา'}`])});
+ const sc=Math.round(R.reduce((a,r)=>a+r.v*r.w,0)/R.reduce((a,r)=>a+r.w,0)*100); return {R,sc}; }
+// ข้อ ๕ ฐานดวงเดิม
+function base(N,L){ const c=check(N,N,L); const r1=c.R[0].v, r4=c.R[3].v, r2=c.R[1].v, v=Math.round((r1*.4+r4*.35+r2*.25)*100); return {v,c,lv:v>=65?[G,'ชะตาเด่นสูง']:v>=40?[A,'ชะตาปานกลาง']:[GR,'ชะตายังไม่เด่น']}; }
+const lvT=v=>v>=70?[G,'เด่นมาก']:v>=55?[A,'ดี']:v>=40?[Y,'ปานกลาง']:[GR,'ยังไม่เด่น'];
+function wheel(X){ try{ return `<div class="sp8w">${wheelF({id:'sp8w',natal:X.N,transit:X.TR,retro:{},retroT:{},mark:{},lagSign:X.L,center:['ขึ้นเงินเดือน เลื่อนยศ',''],tanu:X.tanu,L:{}})}</div>`; }catch(e){ return ''; } }
+function gauge(v,c,lab){ const a=Math.PI*(1-v/100), x=80+62*Math.cos(a), y=78-62*Math.sin(a); return `<div class="sp8g"><svg viewBox="0 0 160 96"><path d="M18 78 A62 62 0 0 1 142 78" style="fill:none;stroke:var(--line);stroke-width:12;stroke-linecap:round"/>${v?`<path d="M18 78 A62 62 0 0 1 ${x.toFixed(1)} ${y.toFixed(1)}" style="fill:none;stroke:${c};stroke-width:12;stroke-linecap:round"/>`:''}<text x="80" y="72" text-anchor="middle" font-size="24" font-weight="600" style="fill:${c}">${td(v)}%</text></svg><b>${lab}</b></div>`; }
+function predict(b,t){ const hi=t>=70, mid=t>=55; if(b.v>=65&&hi) return [G,'ได้ขึ้นเงินเดือน เลื่อนยศอย่างแน่นอน','ฐานชะตาเด่นสูงและดาวจรเข้าเกณฑ์ครบ ตำราให้ทายว่าได้แน่นอน'];
+ if(hi||(b.v>=65&&mid)) return [A,'มีโอกาสขึ้นเงินเดือน เลื่อนยศสูง','ดาวจรหนุนดี ควรเสนอผลงานหรือยื่นเรื่องในช่วงนี้'];
+ if(mid) return [Y,'ได้พอประมาณ','ตำราให้ทายแต่พอประมาณ อาจได้ปรับตามรอบปกติ'];
+ return [GR,'ยังไม่ถึงช่วง','ดาวจรยังไม่เข้าเกณฑ์ ดูช่วงที่ดีกว่าในแท็บช่วงเวลา']; }
+const dateBox=X=>{ const d=new Date(X.E); const v=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; return `<div class="sp8date">${ic('cal',GD,18)}<span>วันที่ตรวจ (เช่นวันประเมินผลงาน)</span><input type="date" data-spd value="${v}"><button type="button" data-spn>วันนี้</button></div>`; };
+function rows(R){ return R.map(r=>{ const c=r.v>=.75?G:r.v>=.4?Y:r.v>0?OR:B; return `<div class="sp8r" style="--c:${c}"><div class="sp8n">${ic(r.icn,c,22)}<small>ข้อ ${td(r.n)}</small></div><div><b>${r.name}</b><div class="sp8it">${r.items.map(([cc,a,b])=>`<span><i style="background:${cc}"></i><b>${a}</b> ${b}</span>`).join('')}</div></div><div class="sp8bar"><i style="width:${Math.round(r.v*100)}%;background:${c}"></i></div></div>`; }).join(''); }
+function tOv(X){ const b=base(X.N,X.L), c=check(X.TR,X.N,X.L), p=predict(b,c.sc), lt=lvT(c.sc);
+ return `${dateBox(X)}${wheel(X)}<div class="sp8gg">${gauge(b.v,b.lv[0],'ฐานชะตาเดิม (ข้อ ๕) · '+b.lv[1])}${gauge(c.sc,lt[0],'ดาวจร ณ วันที่ตรวจ · '+lt[1])}</div>
+<div class="sp8hero" style="--c:${p[0]}">${ic(p[0]===G||p[0]===A?'up':'chart',p[0],40)}<div><small>${fdw(X.E)} · อายุ ${ageAt(X.E)}</small><h3>${p[1]}</h3><p>${p[2]}</p></div></div>
+${card(GD,'brief','ตรวจตามตำรา ๔ ข้อ ณ วันที่ตรวจ',rows(c.R))}
+${card(A,'medal','ฐานชะตาเดิม (ข้อ ๕: ดาวคู่ใหญ่และเกณฑ์โชคในดวงกำเนิด)',rows(b.c.R.filter(r=>r.n===1||r.n===4)))}`; }
+// ── ช่วงเวลา ๓ ปี ──
+function series(X){ if(SER&&SER.T===X.T&&SER.L===X.L) return SER; const out=[], end=X.T+3*365.25*DAY; for(let t=X.T;t<=end;t+=2*DAY){ const c=check(posAt(t),X.N,X.L); out.push([t,c.sc]); } return SER={T:X.T,L:X.L,s:out}; }
+function tTl(X){ const S=series(X).s, b=base(X.N,X.L), W=660, H=200, x=i=>40+i/(S.length-1)*(W-56), y=v=>H-24-v/100*(H-44);
+ let path=S.map(([t,v],i)=>`${i?'L':'M'}${x(i).toFixed(1)} ${y(v).toFixed(1)}`).join(''), area=path+`L${x(S.length-1)} ${y(0)}L${x(0)} ${y(0)}Z`;
+ const yr=new Date(X.T).getFullYear(); let gx='';
+ for(let k=0;k<=36;k+=3){ const t=new Date(yr,new Date(X.T).getMonth()+k,1).getTime(); const i=(t-X.T)/(2*DAY); if(i<0||i>S.length-1) continue; gx+=`<line x1="${x(i)}" x2="${x(i)}" y1="16" y2="${y(0)}" style="stroke:var(--line);opacity:.5"/><text x="${x(i)}" y="${H-6}" text-anchor="middle" font-size="9.5" style="fill:currentColor;opacity:.65">${MO_[new Date(t).getMonth()]} ${td(new Date(t).getFullYear()+543).slice(-2)}</text>`; }
+ const svg=`<svg viewBox="0 0 ${W} ${H}" class="sp8ch"><rect x="40" y="${y(100)}" width="${W-56}" height="${y(70)-y(100)}" style="fill:${G};opacity:.08"/><line x1="40" x2="${W-16}" y1="${y(70)}" y2="${y(70)}" style="stroke:${G};stroke-dasharray:4 4"/><line x1="40" x2="${W-16}" y1="${y(55)}" y2="${y(55)}" style="stroke:${A};stroke-dasharray:4 4;opacity:.7"/>${[0,25,50,75,100].map(v=>`<text x="34" y="${y(v)+4}" text-anchor="end" font-size="9.5" style="fill:currentColor;opacity:.6">${td(v)}</text>`).join('')}${gx}<path d="${area}" style="fill:${GD};opacity:.12"/><path d="${path}" style="fill:none;stroke:${GD};stroke-width:2"/></svg>`;
+ // ช่วงที่ได้ ≥ 70
+ const win=[]; let cur=null; S.forEach(([t,v])=>{ if(v>=70){ if(!cur) cur={a:t,b:t,pk:t,pv:v}; cur.b=t; if(v>cur.pv){ cur.pv=v; cur.pk=t; } } else if(cur){ win.push(cur); cur=null; } }); if(cur) win.push(cur);
+ const pr=w=>predict(b,w.pv);
+ const tb=win.length?`<div class="kh8tw"><table class="kh8tb"><tr><th>ช่วง</th><th>วันที่ดีที่สุด</th><th>คะแนนสูงสุด</th><th>นับถอยหลัง</th><th>อายุ</th><th>คำพยากรณ์</th></tr>${win.map(w=>{ const now=w.a<=X.T+2*DAY; return `<tr class="${now?'on':''}"><td>${fdt(w.a)} – ${fdt(w.b)}</td><td><button type="button" class="sp8go" data-spt="${w.pk}">${ic('cal',null,14)} ${fdw(w.pk)}</button></td><td style="color:${lvT(w.pv)[0]}">${td(w.pv)}%</td><td>${now?tag('กำลังเป็นอยู่',G):left(w.a)}</td><td>${ageAt(w.a>X.T?w.a:X.T)}</td><td>${pr(w)[1]}</td></tr>`; }).join('')}</table></div>`:'<p class="note">ในอีก ๓ ปียังไม่พบช่วงที่ดาวจรเข้าเกณฑ์ถึง ๗๐% ลองดูช่วงที่ใกล้เคียงในกราฟ</p>';
+ return `${card(GD,'chart','คะแนนดาวจรเข้าเกณฑ์ขึ้นเงินเดือน เลื่อนยศ ๓ ปีข้างหน้า',`${svg}<p class="note">กดวันที่ดีที่สุดในตารางเพื่อเปิดดูรายละเอียดของวันนั้น · เส้นเขียวประคือ ๗๐% (ช่วงเด่น) เส้นฟ้าประคือ ๕๕% (ดี) คำนวณทุก ๒ วันเทียบลัคนาเดิม ฐานชะตาเดิม ${td(b.v)}% (${b.lv[1]})</p>`)}
+${card(G,'up','ช่วงที่ดาวจรเข้าเกณฑ์เด่น (๗๐% ขึ้นไป)',tb)}`; }
+function tHow(){ return `<div class="sp8poem"><p>ถ้าอยู่ในเกณฑ์เด่นชะตาสูง ให้พยากรณ์ว่าได้ขึ้นเงินเดือน เลื่อนยศอย่างแน่นอน ถ้าดวงยังไม่ดีเด่น ก็ให้ทายแต่พอประมาณ</p><small>ภาคขยายการพยากรณ์ · บัวทอง เดือนโชติ</small></div>
+<div class="kh8tw"><table class="kh8tb"><tr><th>ข้อ</th><th>หลักตามตำรา</th><th>วิธีตรวจของระบบ</th><th>น้ำหนัก</th></tr>
+<tr><td>๑</td><td>ดาวเกณฑ์โชคใหญ่ เช่น เสาร์กับราหู พฤหัสกับอาทิตย์ สัมพันธ์กัน และส่องแสงถึงลัคนา</td><td>คู่ดาวกุม เล็ง หรือตรีโกณกัน และดาวใดดาวหนึ่งในคู่กุม เล็ง หรือตรีโกณลัคนา ถ้าสัมพันธ์กันแต่ไม่ถึงลัคนาได้ไม่ถึงครึ่ง</td><td>๒๕</td></tr>
+<tr><td>๒</td><td>ดาวจรในศุภะ ลาภะ ดีเด่น ดาวเกษตรไม่จรไปอริ มรณะ วินาศ ไม่ประไม่นิจ ดาวในกัมมะหนุน</td><td>เจ้าเรือนภพ ๙ และ ๑๑ จากลัคนาเดิม ไม่จรภพ ๖ ๘ ๑๒ และไม่ประหรือนิจ · ดาวในภพ ๑๐ เป็นศุภเคราะห์หรือมาตรฐานดี</td><td>๓๐</td></tr>
+<tr><td>๓</td><td>ไม่มีดาวจรมาจากเรือนอริ มรณะ วินาศ มาอยู่ศุภะ ลาภะ และดูกัมมะด้วย</td><td>เจ้าเรือนภพ ๖ ๘ ๑๒ ไม่จรเข้าภพ ๙ ๑๐ ๑๑ (ยกเว้นดาวที่เป็นเจ้าเรือนศุภะ ลาภะ กัมมะเองด้วย)</td><td>๒๐</td></tr>
+<tr><td>๔</td><td>ดาวเกษตรเดิมของศุภะ ลาภะ กัมมะ จรเป็นมหาอุจจ์ มหาจักร ราชาโชค เทวีโชค และส่องแสงถึงลัคนา</td><td>เจ้าเรือนภพ ๙ ๑๐ ๑๑ ได้มาตรฐานดังกล่าว และกุม เล็ง หรือตรีโกณลัคนาเดิม</td><td>๒๕</td></tr>
+<tr><td>๕</td><td>ดูดาวเกณฑ์ต่าง ๆ ในชะตาปัจจุบัน ดาวคู่ใหญ่ เกณฑ์โชคใหญ่</td><td>ฐานชะตาเดิม: ข้อ ๑ ข้อ ๔ ข้อ ๒ ตรวจกับดวงกำเนิด ถ้าฐาน ๖๕% และดาวจร ๗๐% ขึ้นไป ทายว่าได้แน่นอน</td><td>—</td></tr></table></div>
+<p class="note">ที่มา: "การขึ้นเงินเดือนเลื่อนยศ" จากหนังสือภาคขยายการพยากรณ์ ของ บัวทอง เดือนโชติ (เผยแพร่โดยเพจวิวิธโหราศาสตร์ สมุดจดดวง) ระบบเรียบเรียงใหม่ น้ำหนักคะแนนและการตีความคำว่าดาวจรมาจากเรือนร้าย ระบบกำหนดเอง ระบบไม่แสดงดวงของบุคคลจริงเป็นตัวอย่าง</p>`; }
+const TABS=[['ov','home','ภาพรวม'],['tl','chart','ช่วงเวลา ๓ ปี'],['how','book','หลักและที่มา']];
+function render(){ const out=document.getElementById('sp386Out'); if(!out) return; let X={}; try{ X=ctx(); }catch(e){ console.error(e); } let b='';
+ try{ if(!X.N&&TAB!=='how') b='<p class="note">ผูกดวงก่อน แล้วกลับมาที่หน้านี้</p>'; else b=({ov:tOv,tl:tTl,how:tHow})[TAB](X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; }
+ out.innerHTML=`<h3 class="kh8H">${ic('up',GD,24)} ขึ้นเงินเดือน เลื่อนยศ</h3><p class="note">ตรวจ ๕ หลักของ บัวทอง เดือนโชติ ทั้งฐานชะตาเดิมและดาวจร เลือกวันที่ตรวจได้ พร้อมกราฟและช่วงเวลาที่เด่น ๓ ปีข้างหน้า</p><div class="kh8tabs">${TABS.map(([k,i,t])=>`<button type="button" data-spb="${k}" class="${TAB===k?'on':''}">${ic(i,TAB===k?GD:null,20)}<span>${t}</span></button>`).join('')}</div>${b}`; }
+document.addEventListener('click',ev=>{ const t=ev.target.closest&&ev.target.closest('#sp386Out [data-spb],#sp386Out [data-spn],#sp386Out [data-spt]'); if(!t) return; if(t.dataset.spb) TAB=t.dataset.spb; if(t.dataset.spt){ EV=+t.dataset.spt; TAB='ov'; } if(t.hasAttribute('data-spn')) EV=null; const y=scrollY; render(); scrollTo(0,y); });
+document.addEventListener('change',ev=>{ const t=ev.target; if(!t.matches||!t.matches('#sp386Out [data-spd]')||!t.value) return; const [y,m,d]=t.value.split('-').map(Number); EV=new Date(y,m-1,d,12,0).getTime(); const sy=scrollY; render(); scrollTo(0,sy); });
+if(!document.getElementById('sp386css')){ const st=document.createElement('style'); st.id='sp386css'; const kc=document.getElementById('kh358css'); st.textContent=(kc?kc.textContent.split('#kh358Out ').join('#sp386Out '):'')+`
+#sp386Out .sp8t{display:inline-flex;align-items:center;padding:1px 9px;border-radius:999px;font-size:12px;color:var(--c);border:1px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 12%,transparent);white-space:nowrap}
+#sp386Out .sp8c{border:1px solid color-mix(in srgb,var(--c) 35%,var(--line));border-left:4px solid var(--c);border-radius:12px;padding:10px 14px;margin:10px 0;background:var(--panel)}#sp386Out .sp8c h4{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 8px;font-weight:500}
+#sp386Out .sp8w{max-width:520px;margin:0 auto}#sp386Out .sp8w svg{width:100%;height:auto;display:block}
+#sp386Out .sp8gg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}#sp386Out .sp8g{border:1px solid var(--line);border-radius:14px;padding:8px;text-align:center;background:var(--panel)}#sp386Out .sp8g svg{width:100%;max-width:220px;display:block;margin:auto}#sp386Out .sp8g b{font-weight:500;font-size:13px}
+#sp386Out .sp8hero{display:flex;gap:14px;align-items:center;padding:14px 16px;margin:10px 0;border-radius:14px;border:1px solid color-mix(in srgb,var(--c) 45%,var(--line));background:color-mix(in srgb,var(--c) 10%,var(--panel))}#sp386Out .sp8hero h3{margin:2px 0;color:var(--c)}#sp386Out .sp8hero p{margin:0;font-size:13.5px}#sp386Out .sp8hero small{opacity:.7}
+#sp386Out .sp8date{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0;padding:8px 12px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}#sp386Out .sp8date input{width:auto!important;margin:0!important;padding:5px 8px}#sp386Out .sp8date button{width:auto!important;margin:0!important;padding:5px 12px;border-radius:999px}
+#sp386Out .sp8r{display:grid;grid-template-columns:52px 1fr 90px;gap:10px;align-items:center;padding:9px 10px;margin:6px 0;border-radius:10px;border:1px solid color-mix(in srgb,var(--c) 35%,var(--line));background:color-mix(in srgb,var(--c) 7%,transparent)}#sp386Out .sp8n{display:flex;flex-direction:column;align-items:center;gap:2px}#sp386Out .sp8n small{font-size:11px}
+#sp386Out .sp8it{display:flex;flex-direction:column;gap:2px;margin-top:4px;font-size:12.8px}#sp386Out .sp8it span{display:flex;gap:6px;align-items:baseline}#sp386Out .sp8it i{display:inline-block;width:8px;height:8px;border-radius:50%;flex:none}#sp386Out .sp8it b{font-weight:500}
+#sp386Out .sp8bar{height:8px;border-radius:8px;background:color-mix(in srgb,var(--line) 60%,transparent);overflow:hidden}#sp386Out .sp8bar i{display:block;height:100%}
+#sp386Out .sp8ch{width:100%;height:auto;display:block}#sp386Out .sp8go{display:inline-flex;gap:5px;align-items:center;width:auto!important;margin:0!important;padding:3px 10px;border-radius:999px;font-size:12.5px}#sp386Out tr.on td{background:color-mix(in srgb,${G} 12%,transparent)}
+#sp386Out .sp8poem{border:1px solid color-mix(in srgb,${OR} 40%,var(--line));border-radius:12px;padding:10px 14px;margin-bottom:8px;background:color-mix(in srgb,${OR} 7%,transparent)}#sp386Out .sp8poem p{margin:2px 0;font-size:14.5px}#sp386Out .sp8poem small{opacity:.65}
+@media(max-width:560px){#sp386Out .sp8r{grid-template-columns:44px 1fr}#sp386Out .sp8bar{grid-column:1/-1}#sp386Out .sp8gg{grid-template-columns:1fr}}`; document.head.appendChild(st); }
+return {render};
+})();
