@@ -8304,3 +8304,118 @@ if(!document.getElementById('as384css')){ const st=document.createElement('style
 @media(max-width:520px){#as384Out .as8r{grid-template-columns:44px 1fr}#as384Out .as8r>svg{display:none}}`; document.head.appendChild(st); }
 return {render};
 })();
+window.DC385=(()=>{
+const td=n=>String(n).replace(/\d/g,c=>'๐๑๒๓๔๕๖๗๘๙'[c]);
+const G='#2faa5a',B='#e0453a',Y='#e8b90f',A='#4aa3ff',GD='var(--gold,#c9a227)',GR='#8a8f98',SC='#7a5ab8',RC='#8a6e4b',OR='#f08a24';
+const SN=['เมษ','พฤษภ','เมถุน','กรกฎ','สิงห์','กันย์','ตุลย์','พิจิก','ธนู','มังกร','กุมภ์','มีน'];
+const HN=['ตนุ','กดุมภะ','สหัชชะ','พันธุ','ปุตตะ','อริ','ปัตนิ','มรณะ','ศุภะ','กัมมะ','ลาภะ','วินาศ'];
+const K=['SU','MO','MA','ME','JU','VE','SA','RA'], OTH=['SU','MO','MA','ME','JU','VE'];
+const TN={SU:'อาทิตย์',MO:'จันทร์',MA:'อังคาร',ME:'พุธ',JU:'พฤหัสบดี',VE:'ศุกร์',SA:'เสาร์',RA:'ราหู'};
+const PN={SU:'๑',MO:'๒',MA:'๓',ME:'๔',JU:'๕',VE:'๖',SA:'๗',RA:'๘'}, N2={1:'SU',2:'MO',3:'MA',4:'ME',5:'JU',6:'VE',7:'SA',8:'RA'};
+const PC={SU:'#e8743b',MO:'#b9a33e',MA:'#e05f8a',ME:'#2faa5a',JU:'#f08a24',VE:'#4aa3ff',SA:SC,RA:RC};
+const LRD=['MA','VE','ME','MO','SU','ME','VE','MA','JU','SA','RA','JU'];
+const nrm=x=>((x%360)+360)%360, sg=x=>Math.floor(nrm(x)/30), cnt=(a,b)=>((b-a)%12+12)%12+1, DAY=864e5, YR=365.2425*DAY;
+const MO_=['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'], WD=['อาทิตย์','จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์','เสาร์'];
+const fdt=t=>{ const d=new Date(t); return `${td(d.getDate())} ${MO_[d.getMonth()]} ${td(d.getFullYear()+543)}`; };
+const fdtm=t=>{ const d=new Date(t); return `วัน${WD[d.getDay()]} ${fdt(d)} ${td(String(d.getHours()).padStart(2,'0'))}:${td(String(d.getMinutes()).padStart(2,'0'))} น.`; };
+const ymd=(a,b)=>{ a=new Date(a); b=new Date(b); let y=b.getFullYear()-a.getFullYear(), m=b.getMonth()-a.getMonth(), d=b.getDate()-a.getDate(); if(d<0){ m--; d+=new Date(b.getFullYear(),b.getMonth(),0).getDate(); } if(m<0){ y--; m+=12; } return [y,m,d]; };
+const ymdT=([y,m,d])=>[y?td(y)+' ปี':'',m?td(m)+' เดือน':'',d||(!y&&!m)?td(d)+' วัน':''].filter(Boolean).join(' ');
+const left=t=>{ const n=Date.now(); if(t<=n+6e4) return 'ตอนนี้'; const h=(t-n)/36e5; if(h<24) return `อีก ${td(Math.ceil(h))} ชั่วโมง`; const dd=Math.ceil((t-n)/DAY); return `อีก ${td(dd)} วัน${dd>31?' ('+ymdT(ymd(n,t))+')':''}`; };
+const I={home:'<path d="M3 11l9-7 9 7M5 10v10h14V10"/>',orbit:'<circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="10" ry="4.5"/>',book:'<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M8 7h7M8 11h7"/>',ok:'<circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/>',no:'<circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/>',warn:'<path d="M12 3l9.5 17h-19z"/><path d="M12 10v4.5M12 17.5v.5"/>',cal:'<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+ crack:'<circle cx="12" cy="12" r="9"/><path d="M12 3l-2 5 3 3-3 4 2 6"/>',bruise:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5" fill="currentColor" opacity=".3"/>',ember:'<path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-3 2-4 2-6 1 1 2 2 2 3 0-3 1-5 1-7z"/>',wind:'<path d="M3 8h11a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h8"/>',link:'<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>',axis:'<circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="12" r="2.5"/><path d="M7.5 12h9"/>'};
+const ic=(n,c,s)=>`<svg viewBox="0 0 24 24" width="${s||18}" height="${s||18}" style="width:${s||18}px!important;height:${s||18}px!important;flex:none;vertical-align:-3px" fill="none" stroke="${c||'currentColor'}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${I[n]||n}</svg>`;
+const tag=(t,c)=>`<span class="dc8t" style="--c:${c}">${t}</span>`, pl=k=>`<b class="dc8p" style="--c:${PC[k]||GR}">${PN[k]}</b>`;
+const card=(c,icn,h,b)=>`<div class="dc8c" style="--c:${c}"><h4>${ic(icn,c)} ${h}</h4>${b}</div>`;
+let X0=null, TAB='ov', SCAN=null, FIL='all';
+const ageAt=t=>X0&&X0.bt?ymdT(ymd(X0.bt,t)):'—';
+const P=(t,k)=>posH(horaOf(new Date(t)),k);
+function posAt(t){ const o={}; try{ const h=horaOf(new Date(t)); K.forEach(k=>{ try{ o[k]=posH(h,k); }catch(_){ } }); }catch(_){ } return o; }
+function ctx(){ const W=typeof WSTATE!=='undefined'?WSTATE:null; let T; try{ T=getTransit(); }catch(_){ } if(!T||isNaN(T)) T=new Date(); const o={T:+T}; if(W&&W.nat&&W.nat.pos){ o.N=W.nat2||W.nat.pos; o.L=sg(o.N.LA); o.bt=+W.bt; o.tanu=W.tanu; } o.TR=posAt(T); return X0=o; }
+function tDasaL(bt){ const YRS={1:6,2:15,3:8,4:17,7:10,5:19,8:12,6:21}, ORD=[1,2,3,4,7,5,8,6]; let p=1; try{ p=taksaNatal(bt).m['บริวาร']||1; }catch(_){ } let i=ORD.indexOf(p); if(i<0) i=0; let age=0; const R=[]; while(age<108){ const q=ORD[i%8]; R.push({p:q,a:age,b:age+YRS[q]}); age+=YRS[q]; i++; } return R; }
+const typ=k=>k==='SA'?['ช้ำ',SC]:['แตก',B];
+// ── วิเคราะห์ดวงเดิม ──
+function natal(X){ const N=X.N, L=X.L, S=k=>sg(N[k]), H=k=>cnt(L,S(k)), op=k=>H(k)===7;
+ const main=['SA','RA'].filter(op).map(k=>({k,t:typ(k)}));
+ const car=[]; ['SA','RA'].forEach(m=>OTH.forEach(k=>{ if(S(k)===S(m)) car.push({k,from:m,t:typ(m),h:H(k),dus:[6,8,12].includes(H(k)),op:op(m)}); }));
+ if(S('SA')===S('RA')) car.push({k:'SA',from:'RA',t:typ('RA'),h:H('SA'),dus:[6,8,12].includes(H('SA')),op:op('RA')},{k:'RA',from:'SA',t:typ('SA'),h:H('RA'),dus:[6,8,12].includes(H('RA')),op:op('SA')});
+ const trig=[]; const addT=(k,why,t,sev)=>{ const e=trig.find(x=>x.k===k); if(e){ e.why.push(why); e.sev=Math.max(e.sev,sev); if(!e.t.includes(t)) e.t.push(t); } else trig.push({k,why:[why],t:[t],sev}); };
+ main.forEach(m=>addT(m.k,`${TN[m.k]}เล็งลัคนาเดิม จะ${m.t[0]}เมื่อเข้าเสวยอายุ`,m.t[0],3));
+ car.filter(c=>c.op).forEach(c=>addT(c.k,`${TN[c.k]}กุม${TN[c.from]}ที่เล็งลัคนา รับนิสัย${TN[c.from]}ไว้`,c.t[0],2.5));
+ main.forEach(m=>{ const lo=LRD[S(m.k)]; if(lo!==m.k) addT(lo,`เป็นเจ้าเรือนเกษตรของราศี${SN[S(m.k)]}ที่${TN[m.k]}สถิตเล็งลัคนา`,m.t[0],2); });
+ return {main,car,trig,H,S}; }
+const verdict=n=>{ const s=n.main.map(m=>m.k); return s.length===2?[B,'ชาตาทั้งช้ำและแตก','เสาร์และราหูเล็งลัคนาทั้งคู่ ทั้งบั่นทอนช้า ๆ และเกิดเหตุรุนแรงฉับพลัน']:s[0]==='SA'?[SC,'ชาตาช้ำ (เสาร์เล็งลัคน์)','ให้โทษแบบค่อย ๆ บั่นทอนทีละน้อยจนถึงที่สุด เหมือนไฟถ่านที่คุอยู่']:s[0]==='RA'?[B,'ชาตาแตก (ราหูเล็งลัคน์)','ให้โทษรวดเร็ว ตึงตังโครมคราม เหมือนลมพายุ']:n.car.length?[Y,'ไม่ช้ำไม่แตกโดยตรง แต่มีดาวรับกำลังเสาร์หรือราหู','ดาวที่กุมเสาร์หรือราหูจะพาความช้ำแตกมาเมื่อโคจรมาเล็งลัคนา']:[G,'ไม่เข้าเกณฑ์ชาตาช้ำหรือแตก','เสาร์และราหูไม่เล็งลัคนา และไม่กุมดาวอื่น ระวังเพียงช่วงดาวจรตามแท็บดาวจร']; };
+function wheel(X){ try{ return `<div class="dc8w">${wheelF({id:'dc8w',natal:X.N,transit:X.TR,retro:{},retroT:{},mark:{},lagSign:X.L,center:['ดวงช้ำ ดวงแตก',''],tanu:X.tanu,L:{}})}</div>`; }catch(e){ return ''; } }
+// แผนภาพแกนลัคนา–ปัตนิ
+function axis(X,Pz,lab){ const L=X.L, s7=(L+6)%12, in1=K.filter(k=>Pz[k]!=null&&sg(Pz[k])===L), in7=K.filter(k=>Pz[k]!=null&&sg(Pz[k])===s7);
+ const dots=(ks,x)=>ks.map((k,i)=>`<g transform="translate(${x+(i%3-1)*26},${136+Math.floor(i/3)*26})"><circle r="11" style="fill:${PC[k]}"/><text y="4" text-anchor="middle" font-size="11" style="fill:#fff">${PN[k]}</text></g>`).join('');
+ const hit=in7.filter(k=>k==='SA'||k==='RA'), c=hit.length?(hit.includes('RA')?B:SC):G;
+ return `<svg viewBox="0 0 360 180" class="dc8ax"><circle cx="70" cy="70" r="46" style="fill:color-mix(in srgb,${GD} 14%,transparent);stroke:${GD}"/><text x="70" y="66" text-anchor="middle" font-size="13" style="fill:currentColor">ลัคนา</text><text x="70" y="84" text-anchor="middle" font-size="11" style="fill:currentColor;opacity:.75">ราศี${SN[L]}</text>
+<circle cx="290" cy="70" r="46" style="fill:color-mix(in srgb,${c} 16%,transparent);stroke:${c}"/><text x="290" y="66" text-anchor="middle" font-size="13" style="fill:currentColor">ภพปัตนิ (๗)</text><text x="290" y="84" text-anchor="middle" font-size="11" style="fill:currentColor;opacity:.75">ราศี${SN[s7]}</text>
+<path d="M120 70H236" style="stroke:${c};stroke-width:${hit.length?3:1.5};stroke-dasharray:${hit.length?'0':'5 5'}"/><path d="M128 63l-9 7 9 7" style="fill:none;stroke:${c};stroke-width:2"/><text x="180" y="60" text-anchor="middle" font-size="12" style="fill:${c}">${hit.length?hit.map(k=>TN[k]).join(' ')+' เล็ง':'เล็ง'}</text><text x="180" y="96" text-anchor="middle" font-size="10" style="fill:currentColor;opacity:.65">${lab}</text>${dots(in1,70)}${dots(in7,290)}</svg>`; }
+function tOv(X){ const n=natal(X), v=verdict(n), TR=X.TR, L=X.L, s7=(L+6)%12, trNow=['SA','RA'].filter(k=>TR[k]!=null&&sg(TR[k])===s7), carNow=n.car.filter(c=>TR[c.k]!=null&&sg(TR[c.k])===s7);
+ let dz=null; try{ const ag=(X.T-X.bt)/YR; const D=tDasaL(new Date(X.bt)); dz=D.find(d=>ag>=d.a&&ag<d.b); }catch(_){ }
+ const dzK=dz?N2[dz.p]:null, dzT=dzK?n.trig.find(t=>t.k===dzK):null;
+ return `${wheel(X)}<div class="dc8hero" style="--c:${v[0]}">${ic(n.main.some(m=>m.k==='RA')?'crack':n.main.length?'bruise':n.car.length?'link':'ok',v[0],44)}<div><small>พื้นดวงเดิม</small><h3>${v[1]}</h3><p>${v[2]}</p></div></div>
+${card(v[0],'axis','แกนลัคนา กับภพที่ ๗ (ตำแหน่งเล็ง)',`<div class="dc8two"><div>${axis(X,X.N,'ดวงเดิม')}</div><div>${axis(X,TR,'ดาวจรตอนนี้ เทียบลัคนาเดิม')}</div></div>`)}
+<div class="dc8g2">${card(SC,'ember','เสาร์ ธาตุไฟถ่าน → ช้ำ','<p>ให้โทษช้า ค่อย ๆ บั่นทอนทีละน้อย สะสมจนถึงที่สุด ปัญหามักเรื้อรัง ยืดเยื้อ</p>')}${card(RC,'wind','ราหู ธาตุลมพายุ → แตก','<p>ให้โทษเร็ว ตึงตังโครมคราม เหตุเกิดฉับพลัน คาดไม่ถึง แต่ลักษณะผลเหมือนกันคือแตกช้ำ</p>')}</div>
+${card(trNow.length||carNow.length||dzT?B:G,'clock','ตอนนี้เป็นอย่างไร',`<ul class="dc8l">
+<li>${ic(trNow.length?'warn':'ok',trNow.length?B:G,16)}<span>${trNow.length?`${trNow.map(k=>TN[k]+'จร').join(' และ ')}กำลังเล็งลัคนาเดิม ชาตา${trNow.map(k=>typ(k)[0]).join('และ')}จร`:'เสาร์จรและราหูจรไม่ได้เล็งลัคนาเดิม'}</span></li>
+${n.car.length?`<li>${ic(carNow.length?'warn':'ok',carNow.length?Y:G,16)}<span>${carNow.length?`${carNow.map(c=>TN[c.k]).join(' ')}ซึ่งรับกำลัง${carNow.map(c=>TN[c.from]).join(' ')}ไว้ กำลังโคจรมาเล็งลัคนา`:'ดาวที่รับกำลังเสาร์หรือราหูยังไม่โคจรมาเล็งลัคนา'}</span></li>`:''}
+<li>${ic(dzT?'warn':'ok',dzT?B:G,16)}<span>${dzK?`ตอนนี้${TN[dzK]}เสวยอายุ${dzT?` · เป็นช่วง${dzT.t.join('และ')} เพราะ${dzT.why[0]}`:' · ไม่ใช่ดาวที่ทำให้ช้ำหรือแตก'}`:'คำนวณดาวเสวยอายุไม่ได้'}</span></li></ul>`)}
+${n.car.length?card(Y,'link','ดาวที่รับกำลังจากเสาร์หรือราหู',`<div class="kh8tw"><table class="kh8tb"><tr><th>ดาว</th><th>กุม</th><th>ภพเดิม</th><th>ผล</th></tr>${n.car.map(c=>`<tr><td>${pl(c.k)} ${TN[c.k]}</td><td>${TN[c.from]}</td><td>${HN[c.h-1]} (${td(c.h)})${c.dus?' '+tag('อริ มรณะ วินาศ',B):''}</td><td>รับกำลัง${TN[c.from]} เมื่อ${TN[c.k]}โคจรมาเล็งลัคนาจะ${c.t[0]}${c.dus?' และรุนแรงขึ้นเพราะเดิมอยู่ภพร้าย':''}${c.op?' · เดิมก็เล็งลัคนาอยู่แล้ว เสวยอายุเมื่อใดก็'+c.t[0]:''}</td></tr>`).join('')}</table></div>`):''}`; }
+// ── เสวยอายุ ──
+function tDasa(X){ const n=natal(X); let D=[]; try{ D=tDasaL(new Date(X.bt)); }catch(_){ } if(!D.length) return '<p class="note">คำนวณดาวเสวยอายุไม่ได้</p>';
+ const ag=(X.T-X.bt)/YR, W=640, x=a=>20+a/108*(W-40);
+ const bars=D.map(d=>{ const k=N2[d.p], tr=n.trig.find(t=>t.k===k), c=tr?(tr.t.includes('แตก')?B:SC):'color-mix(in srgb,var(--line) 80%,transparent)'; return `<rect x="${x(d.a)}" y="30" width="${Math.max(2,x(d.b)-x(d.a)-1)}" height="26" rx="4" style="fill:${c};opacity:${tr?.85:.6}"/><text x="${(x(d.a)+x(d.b))/2}" y="48" text-anchor="middle" font-size="11" style="fill:#fff">${PN[k]}</text>`; }).join('');
+ const ticks=Array.from({length:10},(_,i)=>i*12).map(a=>`<text x="${x(a)}" y="74" text-anchor="middle" font-size="9.5" style="fill:currentColor;opacity:.6">${td(a)}</text>`).join('');
+ const svg=`<svg viewBox="0 0 ${W} 84" class="dc8tl">${bars}<line x1="${x(ag)}" x2="${x(ag)}" y1="18" y2="62" style="stroke:${A};stroke-width:2"/><text x="${x(ag)}" y="13" text-anchor="middle" font-size="10" style="fill:${A}">อายุตอนนี้</text>${ticks}</svg>`;
+ const rows=D.filter(d=>n.trig.some(t=>t.k===N2[d.p])).map(d=>{ const k=N2[d.p], tr=n.trig.find(t=>t.k===k), a=X.bt+d.a*YR, b=X.bt+d.b*YR, now=X.T>=a&&X.T<b, past=b<=X.T; return `<tr class="${now?'on':''}" style="${past?'opacity:.55':''}"><td>${pl(k)} ${TN[k]}</td><td>${tr.t.map(t=>tag(t,t==='แตก'?B:SC)).join(' ')}</td><td>${td(d.a)}–${td(d.b)} ปี</td><td>${fdt(a)} – ${fdt(b)}</td><td>${now?tag('กำลังเสวยอยู่',B):past?'ผ่านมาแล้ว':left(a)}</td><td>${tr.why.join(' · ')}</td></tr>`; }).join('');
+ return `${card(GD,'clock','มหาทักษา ดาวเสวยอายุ ๐–๑๐๘ ปี',`${svg}<p class="note">แท่งสีม่วงคือช่วงที่ทำให้ชาตาช้ำ แท่งสีแดงคือช่วงที่ทำให้ชาตาแตก แท่งสีเทาคือช่วงปกติ</p>`)}
+${card(B,'warn','ช่วงเสวยอายุที่ช้ำหรือแตก',rows?`<div class="kh8tw"><table class="kh8tb"><tr><th>ดาวเสวย</th><th>ลักษณะ</th><th>อายุ</th><th>ช่วงวันที่</th><th>นับถอยหลัง</th><th>เหตุ</th></tr>${rows}</table></div>`:'<p class="note">ดวงเดิมไม่มีเสาร์หรือราหูเล็งลัคนา จึงไม่มีช่วงเสวยอายุที่ช้ำแตกตามตำราข้อนี้</p>')}`; }
+// ── ดาวจร ──
+const HOR={SA:30,RA:19,JU:13,MA:3,SU:2,ME:2,VE:2,MO:.25}, STEP={SA:5,RA:5,JU:5,MA:1,SU:1,ME:.5,VE:.5,MO:.1};
+function scan(X,ks){ const out={}; ks.forEach(k=>{ const L=[]; let t=X.T, s=sg(P(t,k)), st=null; const end=X.T+HOR[k]*365.25*DAY; while(t<end){ const t2=t+STEP[k]*DAY, s2=sg(P(t2,k)); if(s2!==s){ let a=t,b=t2; for(let i=0;i<30&&b-a>6e4;i++){ const m=(a+b)/2; if(sg(P(m,k))===s) a=m; else b=m; } L.push({s,a:st,b}); st=b; s=s2; } t=t2; } L.push({s,a:st,b:null}); out[k]=L; }); return out; }
+function events(X){ const n=natal(X), ks=[...new Set(['SA','RA',...n.car.map(c=>c.k)])]; if(!SCAN||SCAN.T!==X.T||SCAN.L!==X.L) SCAN={T:X.T,L:X.L,d:scan(X,ks)}; const s7=(X.L+6)%12, E=[];
+ ['SA','RA'].forEach(k=>(SCAN.d[k]||[]).forEach(g=>{ if(g.s===s7) E.push({k,big:1,t:typ(k),name:`${TN[k]}จรเล็งลัคนาเดิม (ชาตา${typ(k)[0]}จร)`,txt:k==='SA'?'ระยะบั่นทอนช้า ๆ งานหนัก สุขภาพและกำลังใจถูกกัด ควรประคองตัว':'เหตุฉับพลัน เปลี่ยนแปลงแรง ควรระวังการตัดสินใจและอุบัติเหตุ',a:g.a,b:g.b,now:g.a==null}); }));
+ n.car.forEach(c=>{ if(c.k==='SA'||c.k==='RA'||c.k==='MO') return; (SCAN.d[c.k]||[]).forEach(g=>{ if(g.s===s7) E.push({k:c.k,t:c.t,dus:c.dus,name:`${TN[c.k]}จร (รับกำลัง${TN[c.from]}) เล็งลัคนาเดิม`,txt:`ช่วง${c.t[0]}ผ่าน${TN[c.k]}${c.dus?' รุนแรงขึ้นเพราะเดิมอยู่ภพ'+HN[c.h-1]:''}`,a:g.a,b:g.b,now:g.a==null}); }); });
+ // ซ้อนกับเสวยอายุ
+ let D=[]; try{ D=tDasaL(new Date(X.bt)); }catch(_){ }
+ E.forEach(e=>{ if(!e.big) return; const a=e.a||X.T, b=e.b||a; const d=D.find(q=>{ const qa=X.bt+q.a*YR, qb=X.bt+q.b*YR; return qa<b&&qb>a&&n.trig.some(t=>t.k===N2[q.p]); }); if(d){ e.dbl=TN[N2[d.p]]; } });
+ return E; }
+function tTr(X){ const E=events(X), f=E.filter(e=>FIL==='all'||(FIL==='big'?e.big:!e.big)), now=f.filter(e=>e.now), up=f.filter(e=>!e.now).sort((p,q)=>p.a-q.a);
+ const fb=`<div class="dc8src">${[['all','ทั้งหมด'],['big','เสาร์ ราหู จรเล็งลัคน์'],['car','ดาวรับกำลังจรเล็งลัคน์']].map(([k,t])=>`<button type="button" data-dcf="${k}" class="${FIL===k?'on':''}">${t}</button>`).join('')}</div>`;
+ const tl=(()=>{ const Yr=30, W=640, t0=X.T, t1=X.T+Yr*365.25*DAY, x=t=>54+(t-t0)/(t1-t0)*(W-72); const rows=[['SA','เสาร์'],['RA','ราหู']]; return `<svg viewBox="0 0 ${W} 100" class="dc8tl">${rows.map(([k,nm],i)=>`<text x="4" y="${26+i*30}" font-size="11" style="fill:${PC[k]}">${nm}</text><line x1="54" x2="${W-18}" y1="${22+i*30}" y2="${22+i*30}" style="stroke:var(--line)"/>${E.filter(e=>e.k===k&&e.big).map(e=>{ const a=Math.max(t0,e.a||t0), b=Math.min(t1,e.b||t1); if(b<=t0||a>=t1) return ''; return `<rect x="${x(a)}" y="${16+i*30}" width="${Math.max(3,x(b)-x(a))}" height="12" rx="3" style="fill:${e.dbl?B:k==='SA'?SC:OR};opacity:.8"><title>${e.name}</title></rect>`; }).join('')}`).join('')}${Array.from({length:Yr/3+1},(_,i)=>`<text x="${x(t0+i*3*365.25*DAY)}" y="92" text-anchor="middle" font-size="9.5" style="fill:currentColor;opacity:.6">${td(new Date(t0).getFullYear()+543+i*3).slice(-2)}</text>`).join('')}</svg>`; })();
+ const row=e=>`<tr class="${e.dbl?'dc8dbl':''}"><td>${pl(e.k)} ${e.name}${e.dbl?`<br>${tag('ซ้อนช่วง'+e.dbl+'เสวยอายุ (หนักซ้อน)',B)}`:''}</td><td>${tag(e.t[0],e.t[0]==='แตก'?B:SC)}</td><td>${e.now?tag('กำลังเป็นอยู่',B):fdtm(e.a)}</td><td>${e.b?fdtm(e.b):'—'}</td><td>${e.now?(e.b?'เหลือ'+left(e.b).replace('อีก',''):'—'):left(e.a)}</td><td>${ageAt(e.now?X.T:e.a)}</td><td>${e.txt}</td></tr>`;
+ const th='<tr><th>เกณฑ์</th><th>ลักษณะ</th><th>เริ่ม</th><th>ถึง</th><th>นับถอยหลัง</th><th>อายุ</th><th>คำพยากรณ์</th></tr>';
+ return `${fb}${card(A,'cal','แถบเวลา ๓๐ ปีข้างหน้า',`${tl}<p class="note">ช่วงที่เสาร์จรหรือราหูจรอยู่ภพที่ ๗ จากลัคนาเดิม แถบสีแดงคือช่วงที่ซ้อนกับดาวเสวยอายุที่ช้ำแตก</p>`)}
+${card(B,'warn','กำลังเป็นอยู่',now.length?`<div class="kh8tw"><table class="kh8tb">${th}${now.map(row).join('')}</table></div>`:'<p class="note">ไม่มี ดาวจรยังไม่เล็งลัคนาเดิม</p>')}
+${card(GD,'cal','ช่วงต่อไป',up.length?`<div class="kh8tw"><table class="kh8tb">${th}${up.slice(0,40).map(row).join('')}</table></div>`:'<p class="note">ไม่พบในช่วงที่คำนวณ</p>')}`; }
+function tHow(){ return `<div class="dc8poem"><p>เสาร์เล็งลัคน์คือชาตาช้ำ ราหูเล็งลัคน์คือชาตาแตก ลักษณะเดียวกัน ต่างกันที่ความเร็ว</p><small>จักรทีปนี หน้า ๑๒๓–๑๒๕</small></div>
+<div class="kh8tw"><table class="kh8tb"><tr><th>เกณฑ์ตามตำรา</th><th>วิธีตรวจของระบบ</th></tr>
+<tr><td>เสาร์เล็งลัคนา = ชาตาช้ำ · ราหูเล็งลัคนา = ชาตาแตก</td><td>เสาร์หรือราหูอยู่ภพที่ ๗ จากลัคนา (ราศีตรงข้าม)</td></tr>
+<tr><td>เสาร์ ราหู จรมาเล็งลัคนา ก็แตกช้ำเหมือนกัน</td><td>หาช่วงที่เสาร์จรหรือราหูจรเข้าภพที่ ๗ ของลัคนาเดิม พร้อมวันเริ่ม สิ้นสุด นับถอยหลัง และอายุ</td></tr>
+<tr><td>เสาร์หรือราหูกุมดาวอื่น ดาวนั้นรับกำลังไว้ เมื่อดาวนั้นโคจรมาเล็งลัคนาก็ช้ำแตก ยิ่งเดิมอยู่ภพอริ มรณะ วินาศ ยิ่งแรง</td><td>ดาวอาทิตย์ถึงศุกร์ที่อยู่ราศีเดียวกับเสาร์หรือราหูในดวงเดิม หาช่วงที่ดาวนั้นจรเข้าภพที่ ๗ ของลัคนาเดิม ถ้าดาวนั้นเดิมอยู่ภพ ๖ ๘ ๑๒ ระบบแจ้งว่ารุนแรงขึ้น</td></tr>
+<tr><td>เสาร์หรือราหูช้ำแตกเมื่อเข้าเสวยอายุ</td><td>ใช้มหาทักษา (อาทิตย์ ๖ จันทร์ ๑๕ อังคาร ๘ พุธ ๑๗ เสาร์ ๑๐ พฤหัส ๑๙ ราหู ๑๒ ศุกร์ ๒๑ ปี) เริ่มจากดาวบริวาร</td></tr>
+<tr><td>ดาวที่กุมเสาร์หรือราหูซึ่งเล็งลัคนา เสวยอายุเมื่อใดก็ช้ำได้</td><td>ดาวที่อยู่ภพที่ ๗ ร่วมกับเสาร์หรือราหู</td></tr>
+<tr><td>เจ้าเรือนเกษตรของราศีที่เสาร์หรือราหูอยู่ (ขณะเล็งลัคนา) เสวยอายุก็ช้ำแตกได้</td><td>ดาวเจ้าเรือนของราศีภพที่ ๗ เมื่อมีเสาร์หรือราหูอยู่ (ราศีกุมภ์ใช้ราหู)</td></tr>
+<tr><td>หนักซ้อน</td><td>ระบบเพิ่มเอง: เสาร์หรือราหูจรเล็งลัคนาในช่วงที่ดาวเสวยอายุเป็นดาวที่ทำให้ช้ำแตก</td></tr></table></div>
+<p class="note">ที่มา: หนังสือจักรทีปนี พระคัมภีร์หลักพยากรณ์โหราศาสตร์ไทย รวบรวมและเรียบเรียงโดย พ.ต.หลวงเสนานิติการ (ยง บุนนาค) หน้า ๑๒๓–๑๒๕ เผยแพร่เป็นวิทยาทานโดย โหรชัยวัฒน์ สดชื่น ระบบเรียบเรียงใหม่ ตำราย้ำว่านักโหราศาสตร์ต้องพิเคราะห์เรื่องดวงแตก ช้ำ หรือรั่ว ให้ถูกทาง อย่าใช้ตามความเคยชิน ระบบไม่แสดงดวงของบุคคลจริงเป็นตัวอย่าง</p>`; }
+const TABS=[['ov','home','ภาพรวม'],['dasa','clock','เสวยอายุ'],['tr','orbit','ดาวจรเล็งลัคน์'],['how','book','หลักและที่มา']];
+function render(){ const out=document.getElementById('dc385Out'); if(!out) return; let X={}; try{ X=ctx(); }catch(e){ console.error(e); } let b='';
+ try{ if(!X.N&&TAB!=='how') b='<p class="note">ผูกดวงก่อน แล้วกลับมาที่หน้านี้</p>'; else b=({ov:tOv,dasa:tDasa,tr:tTr,how:tHow})[TAB](X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; }
+ out.innerHTML=`<h3 class="kh8H">${ic('crack',GD,24)} ดวงช้ำ ดวงแตก (จักรทีปนี)</h3><p class="note">เสาร์เล็งลัคน์ชาตาช้ำ ราหูเล็งลัคน์ชาตาแตก ทั้งดวงเดิม ดาวจร ดาวที่รับกำลัง และช่วงเสวยอายุ</p><div class="kh8tabs">${TABS.map(([k,i,t])=>`<button type="button" data-dcb="${k}" class="${TAB===k?'on':''}">${ic(i,TAB===k?GD:null,20)}<span>${t}</span></button>`).join('')}</div>${b}`; }
+document.addEventListener('click',ev=>{ const t=ev.target.closest&&ev.target.closest('#dc385Out [data-dcb],#dc385Out [data-dcf]'); if(!t) return; if(t.dataset.dcb) TAB=t.dataset.dcb; if(t.dataset.dcf) FIL=t.dataset.dcf; const y=scrollY; render(); scrollTo(0,y); });
+if(!document.getElementById('dc385css')){ const st=document.createElement('style'); st.id='dc385css'; const kc=document.getElementById('kh358css'); st.textContent=(kc?kc.textContent.split('#kh358Out ').join('#dc385Out '):'')+`
+#dc385Out .dc8t{display:inline-flex;align-items:center;padding:1px 9px;border-radius:999px;font-size:12px;color:var(--c);border:1px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 12%,transparent);white-space:nowrap}
+#dc385Out .dc8p{display:inline-flex;width:24px;height:24px;flex:none;border-radius:50%;align-items:center;justify-content:center;background:var(--c);color:#fff;font-size:12.5px;vertical-align:middle}
+#dc385Out .dc8c{border:1px solid color-mix(in srgb,var(--c) 35%,var(--line));border-left:4px solid var(--c);border-radius:12px;padding:10px 14px;margin:10px 0;background:var(--panel)}#dc385Out .dc8c h4{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 8px;font-weight:500}#dc385Out .dc8c p{margin:4px 0}
+#dc385Out .dc8w{max-width:520px;margin:0 auto}#dc385Out .dc8w svg{width:100%;height:auto;display:block}
+#dc385Out .dc8hero{display:flex;gap:14px;align-items:center;padding:14px 16px;margin:10px 0;border-radius:14px;border:1px solid color-mix(in srgb,var(--c) 45%,var(--line));background:color-mix(in srgb,var(--c) 10%,var(--panel))}#dc385Out .dc8hero h3{margin:2px 0;color:var(--c)}#dc385Out .dc8hero p{margin:0;font-size:13.5px}#dc385Out .dc8hero small{opacity:.7}
+#dc385Out .dc8two{display:grid;grid-template-columns:1fr 1fr;gap:10px}#dc385Out .dc8g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}@media(max-width:700px){#dc385Out .dc8two,#dc385Out .dc8g2{grid-template-columns:1fr}}
+#dc385Out .dc8ax{width:100%;max-width:380px;display:block;margin:auto}
+#dc385Out .dc8l{list-style:none;padding:0;margin:0}#dc385Out .dc8l li{display:flex;gap:8px;align-items:flex-start;margin:6px 0;font-size:14px}#dc385Out .dc8l li>svg{margin-top:3px}
+#dc385Out .dc8src{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}#dc385Out .dc8src button{display:inline-flex;gap:6px;align-items:center;width:auto!important;margin:0!important;padding:6px 12px;border-radius:999px}#dc385Out .dc8src button.on{outline:2px solid var(--gold)}
+#dc385Out .dc8poem{border:1px solid color-mix(in srgb,${SC} 40%,var(--line));border-radius:12px;padding:10px 14px;margin-bottom:8px;background:color-mix(in srgb,${SC} 7%,transparent)}#dc385Out .dc8poem p{margin:2px 0;font-size:14.5px}#dc385Out .dc8poem small{opacity:.65}
+#dc385Out .dc8tl{width:100%;height:auto;display:block}#dc385Out tr.dc8dbl td{background:color-mix(in srgb,${B} 10%,transparent)}#dc385Out tr.on td{background:color-mix(in srgb,${A} 12%,transparent)}`; document.head.appendChild(st); }
+return {render};
+})();
