@@ -8792,3 +8792,93 @@ const txRx=X=>{ try{ if(!X||!X.N) return ''; const X2={...X,bt:+X.bt,TR:posAt(+X
 const pmStand=(k,host)=>{ try{ const W=typeof WSTATE!=='undefined'?WSTATE:null; if(!W||!W.nat||!W.nat.pos) return '<p class="note">ผูกดวงก่อน</p>'; let T; try{ T=getTransit(); }catch(_){ } if(!T||isNaN(T)) T=new Date(); const N=W.nat2||W.nat.pos; if(!document.getElementById(host+'pmcss')){ const st=document.createElement('style'); st.id=host+'pmcss'; st.textContent=CSS.split('#PXO ').join('#'+host+' '); document.head.appendChild(st); } return pmSection(k,{N,L:sg(N.LA),TR:posAt(+T)},false); }catch(e){ console.error(e); return ''; } };
 return {M,PK,TX,txRx,pmStand,vnStand};
 })();
+window.CS388=(()=>{
+const td=n=>String(n).replace(/\d/g,c=>'๐๑๒๓๔๕๖๗๘๙'[c]);
+const G='#2faa5a',B='#e0453a',Y='#e8b90f',A='#4aa3ff',GD='var(--gold,#c9a227)',GR='#8a8f98',SC='#7a5ab8',RC='#8a6e4b',OR='#f08a24';
+const SN=['เมษ','พฤษภ','เมถุน','กรกฎ','สิงห์','กันย์','ตุลย์','พิจิก','ธนู','มังกร','กุมภ์','มีน'];
+const HN=['ตนุ','กดุมภะ','สหัชชะ','พันธุ','ปุตตะ','อริ','ปัตนิ','มรณะ','ศุภะ','กัมมะ','ลาภะ','วินาศ'];
+const K=['SU','MO','MA','ME','JU','VE','SA','RA'];
+const TN={SU:'อาทิตย์',MO:'จันทร์',MA:'อังคาร',ME:'พุธ',JU:'พฤหัสบดี',VE:'ศุกร์',SA:'เสาร์',RA:'ราหู'};
+const PN={SU:'๑',MO:'๒',MA:'๓',ME:'๔',JU:'๕',VE:'๖',SA:'๗',RA:'๘'}, N2={1:'SU',2:'MO',3:'MA',4:'ME',5:'JU',6:'VE',7:'SA',8:'RA'};
+const PC={SU:'#e8743b',MO:'#b9a33e',MA:'#e05f8a',ME:'#2faa5a',JU:'#f08a24',VE:'#4aa3ff',SA:SC,RA:RC};
+const LRD=['MA','VE','ME','MO','SU','ME','VE','MA','JU','SA','RA','JU'];
+const nrm=x=>((x%360)+360)%360, sg=x=>Math.floor(nrm(x)/30), cnt=(a,b)=>((b-a)%12+12)%12+1, DAY=864e5, YR=365.2425*DAY;
+const MO_=['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'], WD=['อาทิตย์','จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์','เสาร์'];
+const fdt=t=>{ const d=new Date(t); return `${td(d.getDate())} ${MO_[d.getMonth()]} ${td(d.getFullYear()+543)}`; };
+const fdtm=t=>{ const d=new Date(t); return `วัน${WD[d.getDay()]} ${fdt(d)} ${td(String(d.getHours()).padStart(2,'0'))}:${td(String(d.getMinutes()).padStart(2,'0'))} น.`; };
+const ymd=(a,b)=>{ a=new Date(a); b=new Date(b); let y=b.getFullYear()-a.getFullYear(), m=b.getMonth()-a.getMonth(), d=b.getDate()-a.getDate(); if(d<0){ m--; d+=new Date(b.getFullYear(),b.getMonth(),0).getDate(); } if(m<0){ y--; m+=12; } return [y,m,d]; };
+const ymdT=([y,m,d])=>[y?td(y)+' ปี':'',m?td(m)+' เดือน':'',d||(!y&&!m)?td(d)+' วัน':''].filter(Boolean).join(' ');
+const left=t=>{ const n=Date.now(); if(t<=n+6e4) return 'ตอนนี้'; const h=(t-n)/36e5; if(h<24) return `อีก ${td(Math.ceil(h))} ชั่วโมง`; const dd=Math.ceil((t-n)/DAY); return `อีก ${td(dd)} วัน${dd>31?' ('+ymdT(ymd(n,t))+')':''}`; };
+const I={home:'<path d="M3 11l9-7 9 7M5 10v10h14V10"/>',orbit:'<circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="10" ry="4.5"/>',book:'<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M8 7h7M8 11h7"/>',ok:'<circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/>',no:'<circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/>',warn:'<path d="M12 3l9.5 17h-19z"/><path d="M12 10v4.5M12 17.5v.5"/>',cal:'<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+ crack:'<circle cx="12" cy="12" r="9"/><path d="M12 3l-2 5 3 3-3 4 2 6"/>',bruise:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5" fill="currentColor" opacity=".3"/>',ember:'<path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-3 2-4 2-6 1 1 2 2 2 3 0-3 1-5 1-7z"/>',wind:'<path d="M3 8h11a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h8"/>',link:'<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>',axis:'<circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="12" r="2.5"/><path d="M7.5 12h9"/>'};
+const ic=(n,c,s)=>`<svg viewBox="0 0 24 24" width="${s||18}" height="${s||18}" style="width:${s||18}px!important;height:${s||18}px!important;flex:none;vertical-align:-3px" fill="none" stroke="${c||'currentColor'}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${I[n]||n}</svg>`;
+const tag=(t,c)=>`<span class="dc8t" style="--c:${c}">${t}</span>`, pl=k=>`<b class="dc8p" style="--c:${PC[k]||GR}">${PN[k]}</b>`;
+const card=(c,icn,h,b)=>`<div class="dc8c" style="--c:${c}"><h4>${ic(icn,c)} ${h}</h4>${b}</div>`;
+let X0=null, TAB='ov', SCAN=null, FIL='all';
+const ageAt=t=>X0&&X0.bt?ymdT(ymd(X0.bt,t)):'—';
+const P=(t,k)=>posH(horaOf(new Date(t)),k);
+function posAt(t){ const o={}; try{ const h=horaOf(new Date(t)); K.forEach(k=>{ try{ o[k]=posH(h,k); }catch(_){ } }); }catch(_){ } return o; }
+function ctx(){ const W=typeof WSTATE!=='undefined'?WSTATE:null; let T; try{ T=getTransit(); }catch(_){ } if(!T||isNaN(T)) T=new Date(); const o={T:+T}; if(W&&W.nat&&W.nat.pos){ o.N=W.nat2||W.nat.pos; o.L=sg(o.N.LA); o.bt=+W.bt; o.tanu=W.tanu; } o.TR=posAt(T); return X0=o; }
+
+const PAIRS={'MO-MA':['๒-๓','คู่ชู้ คู่เสน่ห์ร้อนแรง'],'MO-JU':['๒-๕','คู่เสน่หา ใจกว้างกับคนใหม่'],'MO-RA':['๒-๘','คู่ชู้ หลงใหล คบซ้อน'],'SU-MO':['๑-๒','คู่ผัวเมีย'],'MA-ME':['๓-๔','คู่ปากกล้า ความรักร้อนแรง'],'MA-SA':['๓-๗','คู่อารมณ์รุนแรง คบ ๆ เลิก ๆ'],'MO-ME':['๒-๔','คู่เสน่ห์ในการพูด'],'MO-VE':['๒-๖','คู่ใช้จ่ายเพื่อความรัก'],'MA-RA':['๓-๘','คู่ชู้ ความสัมพันธ์ชั่ววูบ'],'SU-MA':['๑-๓','คู่ศัตรู ความรุนแรง']};
+const MAIN=['MO-MA','MO-JU','MO-RA','SU-MO','MA-ME','MA-SA'];
+const pkey=(a,b)=>{ const o=K.indexOf(a)<K.indexOf(b)?[a,b]:[b,a]; return o.join('-'); };
+const HMEAN={1:'กุมลัคนา เจ้าชะตาเป็นต้นเรื่องเอง',2:'เรื่องเงินทองเกี่ยวกับความรัก',3:'การติดต่อ เพื่อนฝูง คนใกล้ตัว',4:'คนในบ้าน ครอบครัว',5:'ความรักเชิงบันเทิง เพื่อนกลุ่ม ปาร์ตี้',6:'ความรักที่นำปัญหา หนี้ หรือความขัดแย้ง',7:'คู่ครองโดยตรง ชีวิตคู่ไม่ราบรื่น',8:'ความลับ ความสัมพันธ์ที่ต้องปิดซ่อน',9:'คนต่างถิ่น ผู้ใหญ่ หรือคนห่างไกล',10:'คนในที่ทำงาน',11:'ตัวเลือก คนในกลุ่มสังคม ลาภจากความรัก',12:'ความลับ แอบคบ ไม่เปิดเผย'};
+// ตัวอย่างจากแบบฝึกหัด (เรียบเรียงสั้น)
+const EX=[['SU-MO',6,'ชีวิตคู่ไม่ราบรื่น ถ้าเจ้าเรือนปัตนิเล็งหรือหลบอยู่ภพวินาศ อาจต้องเลิกลา'],['MO-RA',1,'คบแบบไม่จริงจัง เป็นมือที่สามโดยไม่รู้ตัว คบได้ไม่นาน'],['MO-MA',7,'ชีวิตคู่หรือชีวิตสมรสไม่ราบรื่น'],['MO-ME',11,'ถูกเก็บไว้เป็นตัวเลือก คบแบบไม่เปิดตัว'],['MA-SA',1,'ถูกใช้เป็นสะพานประชดแฟนเก่า'],['MO-MA',10,'แอบคบกันในที่ทำงาน'],['MA-SA',7,'คบ ๆ เลิก ๆ วนเป็นวงจร'],['MO-VE',0,'ใช้จ่ายฟุ่มเฟือยเพื่อความรัก เสี่ยงเป็นคนที่ถูกเลี้ยงดู'],['MO-RA',5,'แอบคบซ้อนในกลุ่มเพื่อน สายปาร์ตี้'],['SU-MA',0,'ร่วมกับ ๗-๘ กุมเจ้าเรือนปัตนิ: รักสามเส้า แฟนเก่ากลับมาวุ่นวาย'],['MO-MA',11,'มีหลายคนในชีวิตพร้อมกัน (ถ้ามีดาว ๔ ร่วม)'],['MA-RA',0,'ความสัมพันธ์ชั่ววูบ ถ้าเล็งหรือมรณะถึงลัคนาอาจเป็นคดีความ']];
+const REL={1:'กุม',7:'เล็ง',5:'ตรีโกณ',9:'ตรีโกณ'};
+function analyze(N,L){ const S=k=>N[k]!=null?sg(N[k]):-1, out=[], s7=(L+6)%12, l7=LRD[s7];
+ const bySign={}; K.forEach(k=>{ const s=S(k); if(s>=0)(bySign[s]=bySign[s]||[]).push(k); });
+ Object.entries(bySign).forEach(([s,ks])=>{ s=+s; for(let i=0;i<ks.length;i++) for(let j=i+1;j<ks.length;j++){ const key=pkey(ks[i],ks[j]); if(!PAIRS[key]) continue; const h=cnt(L,s), why=[], others=ks.filter(k=>k!==ks[i]&&k!==ks[j]); let sc=MAIN.includes(key)?2:1;
+  if([5,7,11].includes(h)){ sc+=2; why.push([B,`อยู่ภพ${HN[h-1]} ซึ่งเป็นภพความรัก`]); }
+  const rl=[5,7,11].map(x=>[x,REL[cnt(s,(L+x-1)%12)]]).filter(x=>x[1]&&x[1]!=='กุม'); if(rl.length){ sc+=1; why.push([Y,rl.map(x=>`${x[1]}ภพ${HN[x[0]-1]}`).join(' · ')]); }
+  if([6,8,12].includes(h)){ sc+=1; why.push([B,`อยู่ทุสถานภพ${HN[h-1]} เรื่องนำปัญหา`]); }
+  if(h===1){ sc+=1.5; why.push([B,'กุมลัคนา เจ้าชะตาเป็นต้นเรื่อง']); } else if(cnt(L,s)===7){ }
+  if(ks.includes(l7)&&!key.split('-').includes(l7)){ sc+=1; why.push([B,`กุมเจ้าเรือนปัตนิ (${TN[l7]})`]); } else if(key.split('-').includes(l7)){ sc+=1; why.push([B,`มีเจ้าเรือนปัตนิ (${TN[l7]}) อยู่ในคู่`]); }
+  if(!others.length){ sc+=.5; why.push([Y,'อยู่ราศีเดียวกันเพียงคู่เดียว ผลชัด']); } else why.push([GR,`มี${others.map(k=>TN[k]).join(' ')}ร่วมเป็นองค์ประกอบ`]);
+  const ex=EX.filter(e=>e[0]===key&&(e[1]===h||e[1]===0)).map(e=>e[2]);
+  out.push({key,a:ks[i],b:ks[j],s,h,sc,why,ex,others}); } });
+ return out.sort((x,y)=>y.sc-x.sc); }
+const lvl=sc=>sc>=6?[B,'เกณฑ์คบซ้อนเด่น']:sc>=4?[Y,'มีเกณฑ์คบซ้อน']:[GR,'เกณฑ์อ่อน'];
+function wheel(X){ try{ return `<div class="cs8w">${wheelF({id:'cs8w',natal:X.N,transit:X.TR,retro:{},retroT:{},mark:{},lagSign:X.L,center:['ดาวคบซ้อน',''],tanu:X.tanu,L:{}})}</div>`; }catch(e){ return ''; } }
+function pairCard(p,lab){ const v=lvl(p.sc); return `<div class="cs8p" style="--c:${v[0]}"><div class="cs8ph">${pl(p.a)}${pl(p.b)}<b>${PAIRS[p.key][0]} ${PAIRS[p.key][1]}</b>${tag(v[1],v[0])}</div><p>${lab||''}ราศี${SN[p.s]} · ภพ${HN[p.h-1]} (${td(p.h)}) · ${HMEAN[p.h]}</p><ul class="cs8l">${p.why.map(([c,t])=>`<li><i style="background:${c}"></i>${t}</li>`).join('')}</ul>${p.ex.length?`<p class="cs8ex">${ic('book',GD,14)} ตัวอย่างในตำรา: ${p.ex.join(' · ')}</p>`:''}</div>`; }
+function tOv(X){ const A=analyze(X.N,X.L), top=A.length?A[0].sc:0, v=A.length?lvl(top):[G,'ไม่พบดาวคู่คบซ้อนกุมกันในดวงเดิม'];
+ const s7=(X.L+6)%12, l7=LRD[s7];
+ return `${wheel(X)}<div class="cs8hero" style="--c:${v[0]}">${ic(A.length?'warn':'ok',v[0],42)}<div><small>ดวงเดิม</small><h3>${v[1]}</h3><p>${A.length?`พบดาวคู่ ${td(A.length)} คู่ · เจ้าเรือนปัตนิคือ${TN[l7]} อยู่ภพ${HN[cnt(X.L,sg(X.N[l7]))-1]}`:'ไม่ได้แปลว่าไม่มีเรื่องความรัก เพียงไม่มีเกณฑ์ตามตำรานี้ในดวงเดิม ดูดาวจรประกอบ'}</p></div></div>
+${A.length?card(B,'link','ดาวคู่คบซ้อนในดวงเดิม',A.map(p=>pairCard(p,'')).join('')):''}
+${card(GD,'book','ข้อคิด','<p>ตำราใช้ดูแนวโน้ม ไม่ได้ตัดสินตัวบุคคล ผลจริงขึ้นกับมาตรฐานดาว ทักษา และดาวศุภเคราะห์ที่ส่งมุมช่วย ถ้ามีศุภเคราะห์ (๔ ๕ ๖) ส่งมุมดีมาก ความรุนแรงจะลดลง</p>')}`; }
+// ดาวจร: ดาวคู่ของจันทร์เดิมโคจรมากุมจันทร์เดิม หรือดาวจรเป็นคู่กุมกันในภพ ๑ ๕ ๗ ๑๑
+const HOR={SU:1.2,MA:2.2,ME:1.2,VE:1.2,JU:12.2,SA:30,RA:19}, STP={SU:1,MA:1,ME:.5,VE:.5,JU:5,SA:5,RA:5};
+function scan(X){ if(SCAN&&SCAN.T===X.T&&SCAN.L===X.L) return SCAN.d; const d={}; Object.keys(HOR).forEach(k=>{ const L=[]; let t=X.T, s=sg(P(t,k)), st=null; const end=X.T+Math.min(HOR[k],3)*365.25*DAY; while(t<end){ const t2=t+STP[k]*DAY, s2=sg(P(t2,k)); if(s2!==s){ let a=t,b=t2; for(let i=0;i<28&&b-a>6e4;i++){ const m=(a+b)/2; if(sg(P(m,k))===s) a=m; else b=m; } L.push({s,a:st,b}); st=b; s=s2; } t=t2; } L.push({s,a:st,b:null}); d[k]=L; }); SCAN={T:X.T,L:X.L,d}; return d; }
+function events(X){ const d=scan(X), N=X.N, L=X.L, mo=sg(N.MO), E=[], LOVE=[1,5,7,11];
+ Object.keys(d).forEach(k=>{ const key=pkey('MO',k); if(!PAIRS[key]) return; d[k].forEach(g=>{ if(g.s!==mo) return; const h=cnt(L,mo); E.push({k,key,h,a:g.a,b:g.b,now:g.a==null,hot:LOVE.includes(h),txt:`${TN[k]}จรกุมจันทร์เดิม เกิดคู่ ${PAIRS[key][0]} ${PAIRS[key][1]} ในภพ${HN[h-1]}`}); }); });
+ // ดาวจรกุมดาวคู่เดิม (กระตุ้นซ้ำ)
+ analyze(N,L).forEach(p=>['SA','RA','JU','MA'].forEach(k=>(d[k]||[]).forEach(g=>{ if(g.s!==p.s||k===p.a||k===p.b) return; E.push({k,key:p.key,h:p.h,a:g.a,b:g.b,now:g.a==null,hot:p.sc>=4,txt:`${TN[k]}จรทับคู่ ${PAIRS[p.key][0]} เดิม กระตุ้นเกณฑ์ในภพ${HN[p.h-1]}`}); })));
+ return E; }
+function tTr(X){ const E=events(X), f=E.filter(e=>FIL==='all'||(FIL==='hot'?e.hot:!e.hot)), now=f.filter(e=>e.now), up=f.filter(e=>!e.now).sort((p,q)=>p.a-q.a);
+ const fb=`<div class="cs8src">${[['all','ทั้งหมด'],['hot','ภพความรัก / เกณฑ์เด่น'],['low','อื่น ๆ']].map(([k,t])=>`<button type="button" data-csf="${k}" class="${FIL===k?'on':''}">${t}</button>`).join('')}</div>`;
+ const row=e=>`<tr class="${e.hot?'cs8hot':''}"><td>${pl(e.k)} ${e.txt}</td><td>${e.now?tag('กำลังเป็นอยู่',B):fdtm(e.a)}</td><td>${e.b?fdtm(e.b):'—'}</td><td>${e.now?(e.b?'เหลือ'+left(e.b).replace('อีก',''):'—'):left(e.a)}</td><td>${ageAt(e.now?X.T:e.a)}</td><td>${HMEAN[e.h]}</td></tr>`;
+ const th='<tr><th>เกณฑ์</th><th>เริ่ม</th><th>ถึง</th><th>นับถอยหลัง</th><th>อายุ</th><th>เรื่อง</th></tr>';
+ return `${fb}${card(B,'warn','กำลังเป็นอยู่',now.length?`<div class="kh8tw"><table class="kh8tb">${th}${now.map(row).join('')}</table></div>`:'<p class="note">ไม่มี</p>')}${card(GD,'cal','ช่วงต่อไป',up.length?`<div class="kh8tw"><table class="kh8tb">${th}${up.slice(0,40).map(row).join('')}</table></div>`:'<p class="note">ไม่พบในช่วงที่คำนวณ</p>')}<p class="note">ดาวเร็วคำนวณล่วงหน้าราว ๑ ปี ดาวช้า ๓ ปี · แถวสีแดงคือเกิดในภพตนุ ปุตตะ ปัตนิ ลาภะ หรือคู่ที่มีเกณฑ์เด่น</p>`; }
+function tHow(){ return `<div class="cs8poem"><p>ดาวคู่คบซ้อนต้องกุมกันในราศีเดียว ยิ่งเป็นคู่เดียวยิ่งชัด และต้องสัมพันธ์กับภพปัตนิ ปุตตะ ลาภะ หรือทุสถาน ยิ่งกุมลัคนายิ่งมีผล</p><small>โหรา ษ.อารยะ</small></div>
+<div class="kh8tw"><table class="kh8tb"><tr><th>คู่</th><th>ความหมาย</th></tr>${Object.entries(PAIRS).map(([k,v])=>`<tr><td>${k.split('-').map(pl).join('')} ${v[0]}${MAIN.includes(k)?' '+tag('คู่หลักในตำรา',B):''}</td><td>${v[1]}</td></tr>`).join('')}</table></div>
+<div class="kh8tw" style="margin-top:10px"><table class="kh8tb"><tr><th>ตัวอย่างจากแบบฝึกหัด</th><th>คำทาย</th></tr>${EX.map(e=>`<tr><td>${PAIRS[e[0]][0]}${e[1]?' ในภพ'+HN[e[1]-1]:''}</td><td>${e[2]}</td></tr>`).join('')}</table></div>
+<p class="note">วิธีตรวจของระบบ: คู่หลัก ๖ คู่ได้ ๒ คะแนน คู่ในแบบฝึกหัดได้ ๑ · อยู่ภพปุตตะ ปัตนิ ลาภะ +๒ · เล็งหรือตรีโกณภพเหล่านี้ +๑ · อยู่ทุสถาน +๑ · กุมลัคนา +๑.๕ · เกี่ยวกับเจ้าเรือนปัตนิ +๑ · คู่เดียวในราศี +๐.๕ · ๖ ขึ้นไปเด่น ๔ ขึ้นไปมีเกณฑ์ น้ำหนักระบบกำหนดเอง · ที่มา: "เปิดเผยดวงคบซ้อน ด้วยแบบฝึกหัด" เรียบเรียงโดย โหรา ษ.อารยะ ระบบถอดความใหม่ ไม่แสดงดวงของบุคคลจริง</p>`; }
+const TABS=[['ov','home','ภาพรวม'],['tr','orbit','ดาวจรกระตุ้น'],['how','book','หลักและตัวอย่าง']];
+function render(){ const out=document.getElementById('cs388Out'); if(!out) return; let X={}; try{ X=ctx(); }catch(e){ console.error(e); } let b='';
+ try{ if(!X.N&&TAB!=='how') b='<p class="note">ผูกดวงก่อน แล้วกลับมาที่หน้านี้</p>'; else b=({ov:tOv,tr:tTr,how:tHow})[TAB](X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; }
+ out.innerHTML=`<h3 class="kh8H">${ic('link',GD,24)} ดาวคบซ้อน (โหรา ษ.อารยะ)</h3><p class="note">ตรวจดาวคู่ที่กุมกันและสัมพันธ์กับภพปัตนิ ปุตตะ ลาภะ ทุสถาน และลัคนา ทั้งดวงเดิมและช่วงดาวจรกระตุ้น</p><div class="kh8tabs">${TABS.map(([k,i,t])=>`<button type="button" data-csb="${k}" class="${TAB===k?'on':''}">${ic(i,TAB===k?GD:null,20)}<span>${t}</span></button>`).join('')}</div>${b}`; }
+document.addEventListener('click',ev=>{ const t=ev.target.closest&&ev.target.closest('#cs388Out [data-csb],#cs388Out [data-csf]'); if(!t) return; if(t.dataset.csb) TAB=t.dataset.csb; if(t.dataset.csf) FIL=t.dataset.csf; const y=scrollY; render(); scrollTo(0,y); });
+if(!document.getElementById('cs388css')){ const st=document.createElement('style'); st.id='cs388css'; const kc=document.getElementById('kh358css'); st.textContent=(kc?kc.textContent.split('#kh358Out ').join('#cs388Out '):'')+`
+#cs388Out .dc8t{display:inline-flex;align-items:center;padding:1px 9px;border-radius:999px;font-size:12px;color:var(--c);border:1px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 12%,transparent);white-space:nowrap}
+#cs388Out .dc8p{display:inline-flex;width:24px;height:24px;flex:none;border-radius:50%;align-items:center;justify-content:center;background:var(--c);color:#fff;font-size:12.5px;vertical-align:middle;margin-right:2px}
+#cs388Out .dc8c{border:1px solid color-mix(in srgb,var(--c) 35%,var(--line));border-left:4px solid var(--c);border-radius:12px;padding:10px 14px;margin:10px 0;background:var(--panel)}#cs388Out .dc8c h4{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 8px;font-weight:500}#cs388Out .dc8c p{margin:4px 0}
+#cs388Out .cs8w{max-width:520px;margin:0 auto}#cs388Out .cs8w svg{width:100%;height:auto;display:block}
+#cs388Out .cs8hero{display:flex;gap:14px;align-items:center;padding:14px 16px;margin:10px 0;border-radius:14px;border:1px solid color-mix(in srgb,var(--c) 45%,var(--line));background:color-mix(in srgb,var(--c) 10%,var(--panel))}#cs388Out .cs8hero h3{margin:2px 0;color:var(--c)}#cs388Out .cs8hero p{margin:0;font-size:13.5px}#cs388Out .cs8hero small{opacity:.7}
+#cs388Out .cs8p{border:1px solid color-mix(in srgb,var(--c) 40%,var(--line));border-left:4px solid var(--c);border-radius:10px;padding:8px 12px;margin:8px 0;background:color-mix(in srgb,var(--c) 6%,var(--panel))}#cs388Out .cs8ph{display:flex;gap:6px;align-items:center;flex-wrap:wrap}#cs388Out .cs8p p{margin:4px 0;font-size:13.5px}
+#cs388Out .cs8l{list-style:none;padding:0;margin:4px 0}#cs388Out .cs8l li{display:flex;gap:8px;align-items:baseline;font-size:13px;margin:3px 0}#cs388Out .cs8l i{width:8px;height:8px;border-radius:50%;flex:none;display:inline-block}#cs388Out .cs8ex{font-size:12.8px;opacity:.9}
+#cs388Out .cs8src{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}#cs388Out .cs8src button{width:auto!important;margin:0!important;padding:6px 12px;border-radius:999px}#cs388Out .cs8src button.on{outline:2px solid var(--gold)}
+#cs388Out tr.cs8hot td{background:color-mix(in srgb,${B} 9%,transparent)}
+#cs388Out .cs8poem{border:1px solid color-mix(in srgb,${B} 40%,var(--line));border-radius:12px;padding:10px 14px;margin-bottom:8px;background:color-mix(in srgb,${B} 6%,transparent)}#cs388Out .cs8poem p{margin:2px 0;font-size:14.5px}#cs388Out .cs8poem small{opacity:.65}`; document.head.appendChild(st); }
+return {render};
+})();
