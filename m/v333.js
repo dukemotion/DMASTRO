@@ -4398,7 +4398,7 @@ ${ret?`<p>${tag('ราหูจรกลับมาราศีเดียว
 <h5 style="margin:12px 0 4px">ช่วงราหูจรแต่ละราศี (ประมาณ ๑๙ ปีข้างหน้า)</h5>
 <div class="kh8tw"><table class="kh8tb"><tr><th>ราหูจร</th><th>ภพ</th><th>ธาตุเทียบราหูเดิม</th><th>มาตรฐาน</th><th>เริ่ม</th><th>สิ้นสุด</th><th>อีกกี่ปี เดือน วัน</th><th>อายุ</th></tr>${rows}</table></div>
 <p class="sm" style="opacity:.75">เครื่องหมายถูกสีเขียว คือช่วงที่ได้ทั้งธาตุชั้น ๑–๒ และมาตรฐานดี ควรใช้วางแผนเรื่อง${HM[Lh-1].split(' ')[0]} · ควรดูเจ้าเรือนลัคนา เจ้าเรือนของภพที่ราหูจร ตรีวัย และดาวจรอื่นประกอบ · เรียบเรียงจากบทความระบบธาตุและเรือนชาตา (arjarnthi)</p></div>`; }
-const _ov=overview; overview=X=>_ov(X)+(X&&X.N?arish(X)+rgood(X)+rlag(X)+rpair(X)+rbia(X)+rqual(X)+rlabha(X)+(window.PX387&&PX387.txRx?PX387.txRx(X):'')+(window.DC385&&DC385.plCard?DC385.plCard('RA','rx362Out'):'')+(window.PX387?'<div style="margin-top:16px">'+PX387.pmStand('RA','rx362Out')+'</div>':''):''); }
+const _ov=overview; overview=X=>_ov(X)+(X&&X.N?arish(X)+rgood(X)+rlag(X)+rpair(X)+rbia(X)+rqual(X)+rlabha(X)+(window.AP389&&AP389.rahuCard?AP389.rahuCard('rx362Out'):'')+(window.PX387&&PX387.txRx?PX387.txRx(X):'')+(window.DC385&&DC385.plCard?DC385.plCard('RA','rx362Out'):'')+(window.PX387?'<div style="margin-top:16px">'+PX387.pmStand('RA','rx362Out')+'</div>':''):''); }
 function render(){ const out=document.getElementById('rx362Out'); if(!out) return; let X={}; try{ X=ctx(); }catch(e){ console.error(e); } let b=''; if(SEL==='ov'){ try{ b=overview(X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; } } else if(SEL==='nat'){ try{ b=natv(X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; } }
 out.innerHTML=`<h3 class="kh8H">${ic('rahu',GD,24)} ตรวจดาวราหู ☊︎</h3><p class="note">รวมทุกตำราเรื่องราหูไว้ที่เดียว ดูราหูเดิม ราหูจร ช่วงราหูเสวยอายุ และเลือกตำราที่ต้องการตรวจต่อจากแถบด้านล่าง</p>${nav()}${b}`; apply(); }
 function go(id,scroll){ SEL=id; render(); if(typeof MBX==='function') setTimeout(MBX,0); if(scroll!==false){ const el=document.getElementById('rx362P'); if(el) setTimeout(()=>{ const y=el.getBoundingClientRect().top+scrollY-74; scrollTo({top:y,behavior:'smooth'}); },60); } }
@@ -8807,7 +8807,7 @@ const CSS=`#PXO .px8t{display:inline-flex;align-items:center;padding:1px 9px;bor
 const M={}; ['SU','MA','ME','JU','VE','SA','KE','UR'].forEach(k=>{ M[k]=makeMode(k); window[k+'387']=M[k]; });
 const txRx=X=>{ try{ if(!X||!X.N) return ''; const X2={...X,bt:+X.bt,TR:posAt(+X.T)}; if(!document.getElementById('rx362pxcss')){ const st=document.createElement('style'); st.id='rx362pxcss'; st.textContent=CSS.split('#PXO ').join('#rx362Out '); document.head.appendChild(st); } return '<div style="margin-top:16px">'+txSection('RA',X2,true)+'</div>'; }catch(e){ console.error(e); return ''; } };
 const pmStand=(k,host)=>{ try{ const W=typeof WSTATE!=='undefined'?WSTATE:null; if(!W||!W.nat||!W.nat.pos) return '<p class="note">ผูกดวงก่อน</p>'; let T; try{ T=getTransit(); }catch(_){ } if(!T||isNaN(T)) T=new Date(); const N=W.nat2||W.nat.pos; if(!document.getElementById(host+'pmcss')){ const st=document.createElement('style'); st.id=host+'pmcss'; st.textContent=CSS.split('#PXO ').join('#'+host+' '); document.head.appendChild(st); } return pmSection(k,{N,L:sg(N.LA),TR:posAt(+T)},false); }catch(e){ console.error(e); return ''; } };
-return {M,PK,TX,txRx,pmStand,vnStand};
+return {M,PK,TX,txRx,pmStand,vnStand,PM};
 })();
 window.CS388=(()=>{
 const td=n=>String(n).replace(/\d/g,c=>'๐๑๒๓๔๕๖๗๘๙'[c]);
@@ -8898,4 +8898,227 @@ if(!document.getElementById('cs388css')){ const st=document.createElement('style
 #cs388Out tr.cs8hot td{background:color-mix(in srgb,${B} 9%,transparent)}
 #cs388Out .cs8poem{border:1px solid color-mix(in srgb,${B} 40%,var(--line));border-radius:12px;padding:10px 14px;margin-bottom:8px;background:color-mix(in srgb,${B} 6%,transparent)}#cs388Out .cs8poem p{margin:2px 0;font-size:14.5px}#cs388Out .cs8poem small{opacity:.65}`; document.head.appendChild(st); }
 return {render};
+})();
+window.AP389=(()=>{
+const td=n=>String(n).replace(/\d/g,c=>'๐๑๒๓๔๕๖๗๘๙'[c]);
+const G='#2faa5a',B='#e0453a',Y='#e8b90f',A='#4aa3ff',GD='var(--gold,#c9a227)',GDH='#c9a227',GR='#8a8f98',SC='#7a5ab8',RC='#8a6e4b';
+const SN=['เมษ','พฤษภ','เมถุน','กรกฎ','สิงห์','กันย์','ตุลย์','พิจิก','ธนู','มังกร','กุมภ์','มีน'];
+const HN=['ตนุ','กดุมภะ','สหัชชะ','พันธุ','ปุตตะ','อริ','ปัตนิ','มรณะ','ศุภะ','กัมมะ','ลาภะ','วินาศ'];
+const K9=['SU','MO','MA','ME','JU','VE','SA','RA','KE'], KW8=['SU','MO','MA','ME','JU','VE','SA','RA'];
+const TN={SU:'อาทิตย์',MO:'จันทร์',MA:'อังคาร',ME:'พุธ',JU:'พฤหัสบดี',VE:'ศุกร์',SA:'เสาร์',RA:'ราหู',KE:'เกตุ',LA:'ลัคนา'};
+const PN={SU:'๑',MO:'๒',MA:'๓',ME:'๔',JU:'๕',VE:'๖',SA:'๗',RA:'๘',KE:'๙',LA:'ล'}, NUM={SU:1,MO:2,MA:3,ME:4,JU:5,VE:6,SA:7,RA:8,KE:9};
+const PC={SU:'#e8743b',MO:'#b9a33e',MA:'#e05f8a',ME:'#2faa5a',JU:'#f08a24',VE:'#4aa3ff',SA:SC,RA:RC,KE:'#6f7a86',LA:'#c9a227'};
+const LRD=['MA','VE','ME','MO','SU','ME','VE','MA','JU','SA','RA','JU'];
+const KWD={SU:'อำนาจ ศักดิ์ศรี ผู้ใหญ่',MO:'อารมณ์ จิตใจ ครอบครัว',MA:'พลัง ความกล้า การแข่งขัน',ME:'ความคิด การเจรจา การค้า',JU:'ปัญญา โชค ผู้อุปถัมภ์',VE:'ความรัก ความสุข การเงิน',SA:'ภาระ ความอดทน ความล่าช้า',RA:'ความทะเยอทะยาน สิ่งแปลกใหม่ ความหลง',KE:'ความหลุดพ้น เหตุไม่คาดคิด',LA:'ตัวเจ้าชะตา สุขภาพ ภาพลักษณ์'};
+const nrm=x=>((x%360)+360)%360, w180=x=>{ x=nrm(x); return x>180?x-360:x; }, sg=x=>Math.floor(nrm(x)/30), cnt=(a,b)=>((b-a)%12+12)%12+1, DAY=864e5;
+const MO_=['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'], WD=['อาทิตย์','จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์','เสาร์'];
+const p2=n=>String(n).padStart(2,'0');
+const fdt=t=>{ const d=new Date(t); return `${td(d.getDate())} ${MO_[d.getMonth()]} ${td(d.getFullYear()+543)}`; };
+const fdtm=t=>{ const d=new Date(t); return `วัน${WD[d.getDay()]} ${fdt(d)} ${td(p2(d.getHours()))}:${td(p2(d.getMinutes()))} น.`; };
+const ymd=(a,b)=>{ a=new Date(a); b=new Date(b); let y=b.getFullYear()-a.getFullYear(), m=b.getMonth()-a.getMonth(), d=b.getDate()-a.getDate(); if(d<0){ m--; d+=new Date(b.getFullYear(),b.getMonth(),0).getDate(); } if(m<0){ y--; m+=12; } return [y,m,d]; };
+const ymdT=([y,m,d])=>[y?td(y)+' ปี':'',m?td(m)+' เดือน':'',d||(!y&&!m)?td(d)+' วัน':''].filter(Boolean).join(' ');
+const left=t=>{ const n=Date.now(); if(Math.abs(t-n)<6e4) return 'ตอนนี้'; if(t<n) return 'ผ่านมา '+ymdT(ymd(t,n)); const h=(t-n)/36e5; if(h<24) return `อีก ${td(Math.ceil(h))} ชั่วโมง`; return 'อีก '+ymdT(ymd(n,t)); };
+const dg=x=>{ x=nrm(x); const s=Math.floor(x/30), d=x-s*30; return `${SN[s]} ${td(Math.floor(d))}°${td(p2(Math.floor((d%1)*60)))}′`; };
+const I={home:'<path d="M3 11l9-7 9 7M5 10v10h14V10"/>',orbit:'<circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="10" ry="4.5"/>',book:'<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M8 7h7M8 11h7"/>',ok:'<circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/>',warn:'<path d="M12 3l9.5 17h-19z"/><path d="M12 10v4.5M12 17.5v.5"/>',cal:'<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',
+ sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/>',eye:'<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',grid:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>',
+ ang:'<path d="M4 20L20 4"/><path d="M4 20h16"/><path d="M12 20a8 8 0 0 0-2.3-5.7"/>',tri:'<path d="M12 3l9 16H3z"/>',sq:'<rect x="5" y="5" width="14" height="14"/>',cmp:'<path d="M4 6h16M4 12h16M4 18h16"/><path d="M9 3v18M15 3v18"/>',node:'<path d="M7 20a5 5 0 1 1 0-8M17 20a5 5 0 1 0 0-8M7 12c0-5 10-5 10 0"/>',coin:'<ellipse cx="12" cy="7" rx="7" ry="3"/><path d="M5 7v5c0 1.7 3.1 3 7 3s7-1.3 7-3V7M5 12v5c0 1.7 3.1 3 7 3s7-1.3 7-3v-5"/>',up:'<path d="M4 18l6-6 4 4 6-8"/><path d="M15 8h5v5"/>',dn:'<path d="M4 6l6 6 4-4 6 8"/><path d="M15 16h5v-5"/>'};
+const ic=(n,c,s)=>`<svg viewBox="0 0 24 24" width="${s||18}" height="${s||18}" style="width:${s||18}px!important;height:${s||18}px!important;flex:none;vertical-align:-3px" fill="none" stroke="${c||'currentColor'}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${I[n]||n}</svg>`;
+const tag=(t,c)=>`<span class="ap8t" style="--c:${c}">${t}</span>`, pl=k=>`<b class="ap8p" style="--c:${PC[k]||GR}" title="${TN[k]}">${PN[k]}</b>`;
+const card=(c,icn,h,b)=>`<div class="ap8c" style="--c:${c}"><h4>${ic(icn,c)} ${h}</h4>${b}</div>`;
+const tbl=(h,rows)=>`<div class="ap8tw"><table class="ap8tb"><tr>${h.map(x=>`<th>${x}</th>`).join('')}</tr>${rows.join('')}</table></div>`;
+
+// ---------- มุมสากล (องศา) ----------
+// [มุม, ชื่อไทย, ชื่อสากล, ชนิด h=แข็ง s=อ่อน q=๑๕๐ c=กุม, orb, หลัก]
+const ASP=[[0,'กุม','Conjunction','c',8,1],[30,'กึ่งโยค','Semi-sextile','s',2,0],[45,'กึ่งฉาก','Semi-square','h',2,0],[60,'โยค','Sextile','s',5,1],[90,'ฉาก','Square','h',7,1],[120,'ตรีโกณ','Trine','s',7,1],[135,'ฉากครึ่ง','Sesquiquadrate','h',2,0],[150,'มุมมรณะ','Quincunx','q',3,1],[180,'เล็ง','Opposition','h',8,1]];
+const TY={h:['มุมแข็ง',B,'ตึงเครียด ต้องลงแรง เกิดแรงผลักดันผ่านแรงกดดัน'],s:['มุมอ่อน',G,'ไหลลื่น ส่งเสริมกัน ได้ผลโดยไม่ต้องฝืน'],q:['มุม ๑๕๐°',A,'ไม่ลงรอย ต้องปรับตัวต่อเนื่อง เรื่องค้างคาแก้ไม่จบในครั้งเดียว'],c:['กุม',GDH,'รวมพลังเป็นเรื่องเดียวกัน ผลดีหรือร้ายขึ้นกับคู่ดาว']};
+function aspOf(a,b,orbMul){ const d=Math.abs(w180(a-b)); let best=null; ASP.forEach(x=>{ const o=Math.abs(d-x[0]); if(o<=x[4]*(orbMul||1)&&(!best||o<best.o)) best={x,o}; }); return best; }
+
+// ---------- ภารตะ: ครหทฤษฏิ ----------
+const BASE={7:100,4:75,8:75,5:50,9:50,3:25,10:25}, SPC={MA:[4,8],JU:[5,9],SA:[3,10]};
+let RK=0; // ราหู เกตุ ใช้ ๕ ๙ เต็ม (บางสาย)
+function drS(k,h){ if(SPC[k]&&SPC[k].includes(h)) return [100,1]; if(RK&&(k==='RA'||k==='KE')&&[5,9].includes(h)) return [100,2]; return [BASE[h]||0,0]; }
+function vir(d){ d=nrm(d); if(d<30) return 0; if(d<60) return (d-30)/2; if(d<90) return d-45; if(d<120) return 30+(120-d)/2; if(d<150) return 150-d; if(d<180) return (d-150)*2; if(d<300) return (300-d)/2; return 0; }
+const BON={MA:15,JU:30,SA:45};
+function drD(k,la,lb){ let v=vir(lb-la); const h=cnt(sg(la),sg(lb)); if(SPC[k]&&SPC[k].includes(h)) v=Math.min(60,v+BON[k]); return v; }
+
+// ---------- ไทย: สัมพันธ์ระดับราศี ----------
+const THR={1:['กุม',GDH],7:['เล็ง',B],5:['ตรีโกณ',G],9:['ตรีโกณ',G],4:['จตุโกณ',Y],10:['จตุโกณ',Y],3:['โยค',G],11:['โยค',G],2:['ประชิด ๒/๑๒',GR],12:['ประชิด ๒/๑๒',GR],6:['๖/๘',A],8:['๖/๘',A]};
+const THM={'กุม':'อยู่ราศีเดียวกัน รวมพลังเป็นเรื่องเดียว','เล็ง':'ตรงข้ามกัน ปะทะ ดึงกันคนละทาง','ตรีโกณ':'ธาตุเดียวกัน ส่งเสริมเกื้อหนุน','จตุโกณ':'มุมฉากระดับราศี กดดันแต่ผลักให้ทำ','โยค':'มิตรสัมพันธ์ ช่วยเหลือกันเบา ๆ','ประชิด ๒/๑๒':'อยู่ติดกัน ไม่จัดเป็นมุมสัมพันธ์หลัก','๖/๘':'ห่างแบบ ๖/๘ ไม่ถูกกัน ต้องปรับตัว'};
+let PMX=null; const pmOf=(a,b)=>{ try{ if(!PMX&&window.PX387&&PX387.PM) PMX=PX387.PM; if(!PMX) return null; const x=NUM[a],y=NUM[b]; if(!x||!y) return null; const k=x<y?x+'-'+y:y+'-'+x; return PMX[k]||null; }catch(_){ return null; } };
+
+let X0=null, TAB='ov', VIEW='n', FT='all', FP='all', SCAN=null, VMODE='s';
+const ageAt=t=>X0&&X0.bt?ymdT(ymd(X0.bt,t)):'—';
+function posAt(t){ const o={}; try{ const h=horaOf(new Date(t)); KW8.forEach(k=>{ try{ o[k]=posH(h,k); }catch(_){ } }); if(o.RA!=null) o.KE=nrm(o.RA+180); }catch(_){ } return o; }
+function ctx(){ const W=typeof WSTATE!=='undefined'?WSTATE:null; let T; try{ T=getTransit(); }catch(_){ } if(!T||isNaN(T)) T=new Date(); const o={T:+T}; if(W&&W.nat&&W.nat.pos){ const N={...(W.nat2||W.nat.pos)}; if(N.KE==null&&N.RA!=null) N.KE=nrm(N.RA+180); o.N=N; o.NV={...N,KE:N.RA!=null?nrm(N.RA+180):N.KE}; o.L=sg(N.LA); o.bt=+W.bt; o.tanu=W.tanu; } o.TR=posAt(T); return X0=o; }
+
+// รายการคู่ดาวเดิม
+function natPairs(X){ const N=X.N, out=[], N1=X.bt?posAt(X.bt+DAY):null; const ks=[...KW8,'LA'];
+ for(let i=0;i<ks.length;i++) for(let j=i+1;j<ks.length;j++){ const a=ks[i], b=ks[j]; if(N[a]==null||N[b]==null) continue;
+  const as=aspOf(N[a],N[b]); let app=null; if(as&&N1&&N1[a]!=null&&(N1[b]!=null||b==='LA')){ const o1=Math.abs(Math.abs(w180(N1[a]-(b==='LA'?N[b]:N1[b])))-as.x[0]); app=o1<as.o; }
+  const h=cnt(sg(N[a]),sg(N[b])); out.push({a,b,as,app,h,th:THR[h]}); }
+ return out; }
+const KEYW=(a,b)=>`เรื่อง${KWD[a]} กับ ${KWD[b]}`;
+function predAsp(a,b,as){ const t=TY[as.x[3]]; return `${KEYW(a,b)} ${t[2]}`; }
+
+// ---------- วงกลมมุมสัมพันธ์ ----------
+function spread(arr,min){ arr.sort((p,q)=>p.v-q.v); for(let it=0;it<6;it++) for(let i=0;i<arr.length;i++){ const p=arr[i], q=arr[(i+1)%arr.length]; if(arr.length<2) break; let d=nrm(q.d-p.d); if(d<min){ const m=(min-d)/2; p.d=nrm(p.d-m); q.d=nrm(q.d+m); } } return arr; }
+function diagram(X){ const S=380, c=S/2, LA=X.N.LA, th=l=>Math.PI+(nrm(l-LA))*Math.PI/180, P=(r,l)=>[c+r*Math.cos(th(l)), c-r*Math.sin(th(l))];
+ const ringO=182, ringI=158, rN=VIEW==='t'?104:128, rT=140, rL=VIEW==='t'?86:104;
+ let g=`<svg viewBox="0 0 ${S} ${S}" class="ap8d" role="img" aria-label="แผนผังมุมสัมพันธ์">`;
+ g+=`<circle cx="${c}" cy="${c}" r="${ringO}" fill="none" stroke="var(--line)"/><circle cx="${c}" cy="${c}" r="${ringI}" fill="none" stroke="var(--line)"/><circle cx="${c}" cy="${c}" r="${rL}" fill="none" stroke="var(--line)" stroke-dasharray="2 4"/>`;
+ for(let s=0;s<12;s++){ const [x1,y1]=P(ringI,s*30),[x2,y2]=P(ringO,s*30),[tx,ty]=P((ringI+ringO)/2,s*30+15); g+=`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="var(--line)"/><text x="${tx}" y="${ty}" font-size="10.5" text-anchor="middle" dominant-baseline="middle" fill="currentColor" opacity=".75">${SN[s]}</text>`; }
+ const [ax,ay]=P(ringI,LA),[bx,by]=P(rL,LA); g+=`<line x1="${ax}" y1="${ay}" x2="${bx}" y2="${by}" stroke="${GDH}" stroke-width="2" stroke-dasharray="5 3"/>`;
+ const lines=[]; const ok=t=>FT==='all'||FT===t||(FT==='h'&&t==='h');
+ if(VIEW==='n'){ natPairs(X).forEach(p=>{ if(!p.as||p.as.x[3]==='c'||!ok(p.as.x[3])) return; lines.push([X.N[p.a],X.N[p.b],p.as]); }); }
+ else { KW8.forEach(k=>{ [...KW8,'LA'].forEach(n=>{ if(X.TR[k]==null||X.N[n]==null) return; const as=aspOf(X.TR[k],X.N[n],.4); if(!as||as.x[3]==='c'||!ok(as.x[3])) return; lines.push([X.TR[k],X.N[n],as,1]); }); }); }
+ lines.forEach(([l1,l2,as])=>{ const [x1,y1]=P(rL,l1),[x2,y2]=P(rL,l2), col=TY[as.x[3]][1]; g+=`<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${col}" stroke-width="${as.x[5]?1.8:1.1}" ${as.x[5]?'':'stroke-dasharray="4 3"'} opacity="${Math.max(.35,1-as.o/as.x[4]*.6).toFixed(2)}"/>`; });
+ const dot=(arr,r,ring)=>{ spread(arr,11.5).forEach(p=>{ const [x,y]=P(r,p.d),[x0,y0]=P(rL,p.v); g+=`<line x1="${x0}" y1="${y0}" x2="${x}" y2="${y}" stroke="${PC[p.k]}" stroke-width=".8" opacity=".6"/><circle cx="${x}" cy="${y}" r="10.5" fill="${ring?'var(--panel)':PC[p.k]}" stroke="${PC[p.k]}" stroke-width="2"/><text x="${x}" y="${y+.5}" font-size="11" text-anchor="middle" dominant-baseline="middle" fill="${ring?PC[p.k]:'#fff'}">${PN[p.k]}</text>`; }); };
+ dot(KW8.filter(k=>X.N[k]!=null).map(k=>({k,v:X.N[k],d:X.N[k]})),rN,0);
+ if(VIEW==='t') dot(KW8.filter(k=>X.TR[k]!=null).map(k=>({k,v:X.TR[k],d:X.TR[k]})),rT,1);
+ const [lx,ly]=P(rL+12,LA-7); g+=`<rect x="${lx-9}" y="${ly-8}" width="18" height="16" rx="4" fill="${GDH}"/><text x="${lx}" y="${ly+.5}" font-size="11" text-anchor="middle" fill="#fff" dominant-baseline="middle">ล</text>`;
+ g+=`<text x="${c}" y="${c-6}" text-anchor="middle" font-size="12" fill="currentColor" opacity=".8">${VIEW==='t'?'ดาวจร → ดาวเดิม':'ดวงเดิม'}</text><text x="${c}" y="${c+12}" text-anchor="middle" font-size="11" fill="currentColor" opacity=".55">${td(lines.length)} เส้น</text></svg>`;
+ return g; }
+function legend(){ return `<div class="ap8lg">${[['h','มุมแข็ง ๔๕ ๙๐ ๑๓๕ ๑๘๐'],['s','มุมอ่อน ๓๐ ๖๐ ๑๒๐'],['q','มุม ๑๕๐ (Quincunx)']].map(([k,t])=>`<span><i style="background:${TY[k][1]}"></i>${t}</span>`).join('')}<span><i class="ds"></i>เส้นประ = มุมรอง</span></div>`; }
+function ctrl(){ const b=(attr,k,t,cur)=>`<button type="button" data-${attr}="${k}" class="${cur===k?'on':''}">${t}</button>`;
+ return `<div class="ap8src">${b('apv','n','ดวงเดิม',VIEW)}${b('apv','t','ดาวจรทำมุมดาวเดิม',VIEW)}</div><div class="ap8src">${b('apf','all','ทุกมุม',FT)}${b('apf','h','มุมแข็ง',FT)}${b('apf','s','มุมอ่อน',FT)}${b('apf','q','๑๕๐°',FT)}</div>`; }
+
+function wheel(X){ try{ return `<div class="ap8w">${wheelF({id:'ap8w',natal:X.N,transit:X.TR,retro:{},retroT:{},mark:{},lagSign:X.L,center:['มุมสัมพันธ์',''],tanu:X.tanu,L:{}})}</div>`; }catch(e){ return ''; } }
+
+function tOv(X){ const P=natPairs(X).filter(p=>p.as), cn={h:0,s:0,q:0,c:0}; P.forEach(p=>cn[p.as.x[3]]++);
+ const tight=P.filter(p=>p.as.x[3]!=='c').sort((p,q)=>p.as.o-q.as.o)[0];
+ const asym=[], NV=X.NV; K9.forEach(a=>K9.forEach(b=>{ if(a>=b||NV[a]==null||NV[b]==null) return; const h1=cnt(sg(NV[a]),sg(NV[b])), h2=cnt(sg(NV[b]),sg(NV[a])), v1=drS(a,h1)[0], v2=drS(b,h2)[0]; if(v1!==v2&&(v1||v2)) asym.push([a,b,v1,v2]); }));
+ const tot=cn.h+cn.s+cn.q, tone=cn.s>cn.h+1?[G,'มุมอ่อนเด่น ชีวิตไหลลื่น']:cn.h>cn.s+1?[B,'มุมแข็งเด่น สำเร็จด้วยแรงกดดัน']:[Y,'มุมแข็งและอ่อนพอ ๆ กัน'];
+ return `${wheel(X)}
+<div class="ap8hero" style="--c:${tone[0]}">${ic('ang',tone[0],42)}<div><small>มุมสัมพันธ์ในดวงเดิม (ระดับองศา)</small><h3>${tone[1]}</h3><p>${tag('มุมแข็ง '+td(cn.h),B)} ${tag('มุมอ่อน '+td(cn.s),G)} ${tag('๑๕๐° '+td(cn.q),A)} ${tag('กุม '+td(cn.c),GDH)}</p></div></div>
+${card(GD,'eye','แผนผังมุมสัมพันธ์',`${ctrl()}<div class="ap8dw">${diagram(X)}</div>${legend()}<p class="note">สีและเส้นบอกชนิดของมุม ไม่ได้บอกเปอร์เซ็นต์กำลัง เส้นจางคือห่างจากมุมสนิทมาก</p>`)}
+${tight?card(TY[tight.as.x[3]][1],'ang','มุมที่สนิทที่สุดในดวง',`<p>${pl(tight.a)} ${TN[tight.a]} ${tight.as.x[1]} (${tight.as.x[2]} ${td(tight.as.x[0])}°) ${pl(tight.b)} ${TN[tight.b]} · คลาด ${td(tight.as.o.toFixed(1))}° ${tight.app==null?'':tag(tight.app?'กำลังเข้า':'กำลังออก',tight.app?Y:GR)}</p><p>${predAsp(tight.a,tight.b,tight.as)}</p>`):''}
+${asym.length?card(SC,'orbit','ส่องแสงไม่เท่ากัน (ภารตะ)',`<p class="note">ทฤษฏิมีทิศทาง ดาวสองดวงจึงส่งกำลังถึงกันไม่เท่ากัน ตัวอย่างในดวงนี้</p>${tbl(['คู่','ส่องไป','ส่องกลับ'],asym.slice(0,6).map(([a,b,v1,v2])=>`<tr><td>${pl(a)}${pl(b)}</td><td>${TN[a]} → ${TN[b]} ${bar(v1)}</td><td>${TN[b]} → ${TN[a]} ${bar(v2)}</td></tr>`))}`):''}`; }
+const bar=v=>`<span class="ap8bar"><i style="width:${v}%;background:${v>=100?G:v>=75?'#7cc576':v>=50?Y:v?'#e8a76a':'transparent'}"></i></span><b class="ap8v">${td(Math.round(v))}%</b>`;
+
+function tVd(X){ const N=X.NV, M=K9.filter(k=>N[k]!=null);
+ const cell=(a,b)=>{ if(a===b) return '<td class="ap8x">—</td>'; let v,sp=0; if(VMODE==='s'){ [v,sp]=drS(a,cnt(sg(N[a]),sg(N[b]))); } else v=drD(a,N[a],N[b])/60*100; const c=v>=100?G:v>=75?'#7cc576':v>=50?Y:v>=25?'#e8a76a':null; return `<td style="${c?`background:color-mix(in srgb,${c} ${Math.round(18+v*.25)}%,transparent)`:''}" title="${TN[a]} ส่องถึง ${TN[b]}">${v?td(Math.round(v)):'·'}${sp?'<sup>★</sup>':''}</td>`; };
+ const hs=a=>{ const o=[]; for(let h=1;h<=12;h++){ const v=drS(a,h)[0]; if(v&&h!==1) o.push([h,v]); } return o; };
+ return `<div class="ap8src"><button type="button" data-apm="s" class="${VMODE==='s'?'on':''}">ระดับราศี (ตามคัมภีร์)</button><button type="button" data-apm="d" class="${VMODE==='d'?'on':''}">ระดับองศา (สผุฏทฤษฏิ)</button><button type="button" data-apr="1" class="${RK?'on':''}">ราหู เกตุ ๕ ๙ เต็ม (บางสาย)</button></div>
+${card(SC,'grid','ตารางการส่องแสง แถว = ดาวผู้ส่อง คอลัมน์ = ดาวผู้รับ',`<div class="ap8tw"><table class="ap8tb ap8mx"><tr><th></th>${M.map(k=>`<th>${pl(k)}</th>`).join('')}</tr>${M.map(a=>`<tr><th>${pl(a)}</th>${M.map(b=>cell(a,b)).join('')}</tr>`).join('')}</table></div><p class="note">หน่วยเป็นเปอร์เซ็นต์ของการส่องเต็ม · เกตุในตารางภารตะคือจุดตรงข้ามราหู (ต่างจากเกตุ ๙ แบบไทยในดวงหลัก) · ★ คือวิเศษทฤษฏิ (อังคาร ๔ ๘ · พฤหัสบดี ๕ ๙ · เสาร์ ๓ ๑๐)${VMODE==='d'?' · ระดับองศาคำนวณตามสูตรวิรูปะของปราศร (เต็ม ๖๐) แล้วบวกกำลังพิเศษของอังคาร พฤหัสบดี เสาร์ ระบบปัดเป็นเปอร์เซ็นต์':''}</p>`)}
+${card(GD,'home','ดาวแต่ละดวงส่องภพใดของลัคนา',tbl(['ดาว','อยู่ภพ','ส่องภพ (กำลัง)'],M.map(a=>{ const h0=cnt(X.L,sg(N[a])); return `<tr><td>${pl(a)} ${TN[a]}</td><td>${HN[h0-1]}</td><td><div style="display:flex;flex-wrap:wrap;gap:4px">${hs(a).map(([h,v])=>{ const hh=((h0+h-2)%12)+1; return tag(`${HN[hh-1]} ${td(v)}%`,v>=100?G:v>=75?'#5fae5a':v>=50?'#b8930a':'#c07a3a'); }).join('')}</div></td></tr>`; })))}
+${card(B,'eye','ดาวที่ส่องถึงลัคนาเดิม',(()=>{ const r=M.map(a=>[a,drS(a,cnt(sg(N[a]),X.L))[0]]).filter(x=>x[1]); return r.length?tbl(['ดาว','กำลัง','ผล'],r.sort((p,q)=>q[1]-p[1]).map(([a,v])=>`<tr><td>${pl(a)} ${TN[a]}</td><td>${bar(v)}</td><td>${['JU','VE','ME','MO'].includes(a)?tag('ศุภเคราะห์ ให้คุณแก่ตัว',G):tag('บาปเคราะห์ กดดันตัว',B)} ${KWD[a]}</td></tr>`)):'<p class="note">ไม่มีดาวส่องแสงถึงลัคนาตามเกณฑ์</p>'; })())}`; }
+
+function tTh(X){ const P=natPairs(X).filter(p=>p.a!=='LA'&&p.b!=='LA'); const N=X.N;
+ const ke=K9.filter(k=>k!=='KE'&&N[k]!=null).map(k=>({a:k,b:'KE',h:cnt(sg(N[k]),sg(N.KE))})).filter(p=>p.a!=='RA').map(p=>({...p,th:THR[p.h]}));
+ const all=[...P,...ke].filter(p=>p.th&&!/ประชิด/.test(p.th[0])), grp={};
+ all.forEach(p=>{ (grp[p.th[0]]=grp[p.th[0]]||[]).push(p); });
+ const ord=['กุม','เล็ง','ตรีโกณ','จตุโกณ','โยค','๖/๘'];
+ const lag=K9.filter(k=>N[k]!=null).map(k=>[k,THR[cnt(X.L,sg(N[k]))]]).filter(x=>x[1]&&!/ประชิด/.test(x[1][0]));
+ return `${ord.filter(o=>grp[o]).map(o=>card(grp[o][0].th[1],o==='เล็ง'?'warn':o==='ตรีโกณ'?'tri':o==='จตุโกณ'?'sq':'orbit',`${o} · ${THM[o]}`,tbl(['คู่ดาว','ราศี','คำพยากรณ์คู่ดาว'],grp[o].map(p=>{ const pm=pmOf(p.a,p.b); return `<tr><td>${pl(p.a)}${pl(p.b)} ${TN[p.a]}–${TN[p.b]}</td><td>${SN[sg(N[p.a])]} / ${SN[sg(N[p.b])]}</td><td>${pm?`<b>${pm[1]}</b> ${pm[2]}`:KEYW(p.a,p.b)}</td></tr>`; })))).join('')}
+${card(GD,'home','ดาวสัมพันธ์กับลัคนาเดิม (ระดับราศี)',tbl(['ดาว','สัมพันธ์','ความหมาย'],lag.map(([k,t])=>`<tr><td>${pl(k)} ${TN[k]}</td><td>${tag(t[0],t[1])}</td><td>${THM[t[0]]} · ${KWD[k]}</td></tr>`)))}
+<p class="note">โหรไทยดั้งเดิมหลายสายนับความสัมพันธ์ที่ระดับราศีและภพ ไม่ดูองศา จึงนับคู่ที่อยู่ราศีตรงข้ามเป็นเล็งแม้องศาจะห่างจาก ๑๘๐° มาก คำพยากรณ์คู่ดาวดึงจากตำราคู่ดาว ๔๕ คู่ในโหมดตรวจดาว</p>`; }
+
+function tWe(X){ const P=natPairs(X).filter(p=>p.as&&(FT==='all'||p.as.x[3]===FT)).sort((p,q)=>p.as.o-q.as.o);
+ return `<div class="ap8src">${[['all','ทุกมุม'],['h','มุมแข็ง'],['s','มุมอ่อน'],['q','๑๕๐°'],['c','กุม']].map(([k,t])=>`<button type="button" data-apf="${k}" class="${FT===k?'on':''}">${t}</button>`).join('')}</div>
+${card(A,'ang','มุมสัมพันธ์ระดับองศาในดวงเดิม',P.length?tbl(['คู่ดาว','มุม','คลาด','ชนิด','คำพยากรณ์'],P.map(p=>{ const t=TY[p.as.x[3]]; return `<tr style="--c:${t[1]}" class="ap8r"><td>${pl(p.a)}${pl(p.b)} ${TN[p.a]}–${TN[p.b]}</td><td><b>${p.as.x[1]}</b> ${td(p.as.x[0])}°<br><small>${p.as.x[2]}</small></td><td>${td(p.as.o.toFixed(1))}°${p.app==null?'':'<br>'+tag(p.app?'กำลังเข้า':'กำลังออก',p.app?Y:GR)}</td><td>${tag(t[0],t[1])}</td><td>${predAsp(p.a,p.b,p.as)}</td></tr>`; })):'<p class="note">ไม่มีมุมในกลุ่มนี้</p>')}
+${card(GD,'book','ระยะวังกะ (Orb) ที่ระบบใช้',tbl(['มุม','ชื่อ','ชนิด','Orb'],ASP.map(a=>`<tr><td>${td(a[0])}°</td><td>${a[1]} · ${a[2]}</td><td>${tag(TY[a[3]][0],TY[a[3]][1])}</td><td>±${td(a[4])}°</td></tr>`)))}`; }
+
+function tCmp(X){ const N=X.N, ks=KW8.filter(k=>N[k]!=null), rows=[];
+ for(let i=0;i<ks.length;i++) for(let j=i+1;j<ks.length;j++){ const a=ks[i], b=ks[j], h=cnt(sg(N[a]),sg(N[b])), th=THR[h], as=aspOf(N[a],N[b]), v1=drS(a,h)[0], v2=drS(b,cnt(sg(N[b]),sg(N[a])))[0];
+  if(!as&&(!th||/ประชิด/.test(th[0]))&&!v1&&!v2) continue;
+  const d=Math.abs(w180(N[a]-N[b])); let note;
+  if(th&&!/ประชิด|๖\/๘/.test(th[0])&&!as) note=[Y,'สัมพันธ์ระดับราศี แต่องศาไม่เข้ามุม'];
+  else if(as&&th&&as.x[0]===({'กุม':0,'เล็ง':180,'ตรีโกณ':120,'จตุโกณ':90,'โยค':60,'๖/๘':150})[th[0]]) note=[G,'สามระบบสอดคล้องกัน'];
+  else if(as) note=[A,'มุมองศาข้ามราศี เห็นได้เฉพาะระบบสากล'];
+  else note=[GR,'มีเฉพาะการส่องแสงแบบภารตะ'];
+  rows.push(`<tr><td>${pl(a)}${pl(b)}</td><td>${th&&!/ประชิด/.test(th[0])?tag(th[0],th[1]):'—'}</td><td>${TN[a]}→ ${bar(v1)}<br>${TN[b]}→ ${bar(v2)}</td><td>${as?`${tag(as.x[1]+' '+td(as.x[0])+'°',TY[as.x[3]][1])}<br><small>คลาด ${td(as.o.toFixed(1))}°</small>`:`<small>ห่าง ${td(d.toFixed(1))}°</small>`}</td><td>${tag(note[1],note[0])}</td></tr>`); }
+ return card(GD,'cmp','เทียบสามระบบ ทีละคู่ดาว',tbl(['คู่','ไทย (ราศี)','ภารตะ (ทฤษฏิ)','สากล (องศา)','ข้อสังเกต'],rows))+'<p class="note">ภารตะนับราศีและมีทิศทาง ไทยนับราศีและภพ สากลวัดองศาพร้อมระยะวังกะ ระบบเดียวกันจึงอาจเห็นคู่ดาวต่างกัน การดูหลายระบบประกอบกันช่วยให้เห็นรายละเอียดมากขึ้น</p>'; }
+
+// ---------- ดาวจรทำมุมดาวเดิม ----------
+const TK=['SU','MA','JU','SA','RA'], HZ={SU:370,MA:370,JU:1100,SA:1100,RA:1100}, TA=[0,60,90,120,150,180], ORB_T={SU:1,MA:1.5,JU:2,SA:2,RA:2};
+function scan(X){ if(SCAN&&SCAN.T===Math.floor(X.T/36e5)&&SCAN.bt===X.bt) return SCAN.E; const N=X.N, T0=X.T, days=1100, arr=[];
+ for(let d=0;d<=days;d++){ let o={}; try{ const h=horaOf(new Date(T0+d*DAY)); TK.forEach(k=>{ if(d<=HZ[k]) try{ o[k]=posH(h,k); }catch(_){ } }); }catch(_){ } arr.push(o); }
+ const E=[], TG=[...KW8,'LA'];
+ TK.forEach(k=>TG.forEach(n=>{ if(N[n]==null) return; TA.forEach(A=>(A%180===0?[1]:[1,-1]).forEach(s=>{ let g0=null;
+  for(let d=0;d<=HZ[k];d++){ const p=arr[d][k]; if(p==null){ g0=null; continue; } const g=w180(p-N[n]-s*A); if(g0!=null&&((g0<0&&g>=0)||(g0>0&&g<=0))&&Math.abs(g-g0)<20){ const t=T0+(d-1)*DAY+(-g0/(g-g0))*DAY; E.push({k,n,A,s,t}); } g0=g; } })); }));
+ E.sort((p,q)=>p.t-q.t); SCAN={T:Math.floor(X.T/36e5),bt:X.bt,E}; return E; }
+const AN=A=>ASP.find(x=>x[0]===A);
+function imp(e){ const as=AN(e.A); return (['SA','RA','JU'].includes(e.k)?1:0)+(['LA','SU','MO'].includes(e.n)?1:0)+(as[3]!=='s'?.5:0); }
+function tTr(X){ const E=scan(X), now=[], N=X.N;
+ TK.forEach(k=>[...KW8,'LA'].forEach(n=>{ if(X.TR[k]==null||N[n]==null) return; TA.forEach(A=>(A%180===0?[1]:[1,-1]).forEach(s=>{ const g=w180(X.TR[k]-N[n]-s*A); if(Math.abs(g)<=ORB_T[k]){ const ex=E.find(e=>e.k===k&&e.n===n&&e.A===A&&e.s===s); now.push({k,n,A,s,o:Math.abs(g),t:ex?ex.t:null}); } })); }));
+ const fl=e=>(FT==='all'||AN(e.A)[3]===FT)&&(FP==='all'||e.k===FP);
+ const row=(e,cur)=>{ const as=AN(e.A), t=TY[as[3]], im=imp(e); return `<tr class="ap8r${im>=2?' ap8hot':''}" style="--c:${t[1]}"><td>${pl(e.k)} ${TN[e.k]}จร <b>${as[1]}</b> ${td(e.A)}° ${pl(e.n)} ${TN[e.n]}เดิม${im>=2?' '+tag('สำคัญ',B):''}</td><td>${tag(t[0],t[1])}</td><td>${e.t?fdtm(e.t):'—'}${cur?`<br><small>คลาดตอนนี้ ${td(e.o.toFixed(1))}°</small>`:''}</td><td>${e.t?left(e.t):'—'}</td><td>${e.t?ageAt(e.t):'—'}</td><td>${predAsp(e.k,e.n,{x:as})}</td></tr>`; };
+ const H=['เกณฑ์','ชนิด','วันเวลามุมสนิท','นับถอยหลัง','อายุตอนนั้น','คำพยากรณ์'];
+ const up=E.filter(e=>e.t>Date.now()&&fl(e)).slice(0,80);
+ return `<div class="ap8src">${[['all','ทุกมุม'],['h','มุมแข็ง'],['s','มุมอ่อน'],['q','๑๕๐°'],['c','กุม']].map(([k,t])=>`<button type="button" data-apf="${k}" class="${FT===k?'on':''}">${t}</button>`).join('')}</div><div class="ap8src">${[['all','ทุกดาวจร'],...TK.map(k=>[k,TN[k]])].map(([k,t])=>`<button type="button" data-app="${k}" class="${FP===k?'on':''}">${k!=='all'?pl(k):''}${t}</button>`).join('')}</div>
+${card(Y,'orbit','กำลังเข้ามุมอยู่ตอนนี้',now.filter(fl).length?tbl(H,now.filter(fl).sort((p,q)=>p.o-q.o).map(e=>row(e,1))):'<p class="note">ไม่มีดาวจรอยู่ในระยะมุมสนิทกับดาวเดิมในกลุ่มที่เลือก</p>')}
+${card(GD,'cal','มุมสนิทครั้งต่อไป',up.length?tbl(H,up.map(e=>row(e))):'<p class="note">ไม่พบในช่วงที่คำนวณ</p>')}
+<p class="note">อาทิตย์และอังคารคำนวณล่วงหน้า ๑ ปี พฤหัสบดี เสาร์ ราหู ๓ ปี · ดาวถอยอาจทำมุมเดิมซ้ำ ๓ ครั้ง · เกตุอยู่ตรงข้ามราหูเสมอ มุมของเกตุจึงเท่ากับมุมกลับด้านของราหู ระบบจึงแสดงเฉพาะราหู · แถวสีแดงคือดาวช้าทำมุมกับลัคนา อาทิตย์ หรือจันทร์เดิม</p>`; }
+
+function tHow(){ return `<div class="ap8poem"><p>การอ่านดวงไม่ได้ดูเพียงว่าดาวอยู่ราศีหรือภพใด แต่ต้องดูว่าดาวสัมพันธ์กันอย่างไร และแต่ละระบบมีหลักเกณฑ์ต่างกัน</p><small>เรียบเรียงจากบทความที่อาจารย์ส่งมา</small></div>
+${card(SC,'eye','๑. ภารตะ: ครหทฤษฏิ (Graha Drishti)',`<p>ปรากฏในคัมภีร์ Brihat Jataka และ Brihat Parashara Hora Shastra ดาวทุกดวงส่องแสงไปยังราศีที่นับจากตัวเอง โดยกำลังพื้นฐานเป็นดังนี้</p>${tbl(['ราศีที่นับจากดาว','กำลัง'],[[7,100],['๔ และ ๘',75],['๕ และ ๙',50],['๓ และ ๑๐',25]].map(([h,v])=>`<tr><td>${typeof h==='number'?td(h):h}</td><td>${bar(v)}</td></tr>`))}<p>วิเศษทฤษฏิ คือส่องเต็มเป็นพิเศษ: อังคาร ๔ ๗ ๘ · พฤหัสบดี ๕ ๗ ๙ · เสาร์ ๓ ๗ ๑๐ · ราหูเกตุบางสายใช้ ๑ ๕ ๙ แต่ไม่จัดเป็นวิเศษทฤษฏิ</p><p>ทฤษฏิมีทิศทาง ดาวสองดวงไม่จำเป็นต้องส่งกำลังถึงกันเท่ากัน</p>`)}
+${card(G,'orbit','๒. ไทย: สัมพันธ์ระดับราศีและภพ','<p>รับอิทธิพลจากภารตะแล้วพัฒนาเป็นเอกลักษณ์ ดูดาวกุม เล็ง โยค ตรีโกณ จตุโกณ เกณฑ์ดาว และคู่ดาวสัมพันธ์ โหรไทยดั้งเดิมหลายสายให้ความสำคัญกับระดับราศีและภพ</p>')}
+${card(A,'ang','๓. สากล: มุมสัมพันธ์ (Aspect) และระยะวังกะ (Orb)',`<p>วัดความสัมพันธ์ระดับองศาอย่างละเอียด และพิจารณาความคลาดจากมุมสนิท</p><div class="ap8lg">${legend().replace(/^<div class="ap8lg">|<\/div>$/g,'')}</div><p>สีและรูปแบบเส้นใช้แยกชนิดของมุม ไม่ได้บอกเปอร์เซ็นต์กำลังการส่องแสง</p>`)}
+${card(GD,'book','บทสรุป','<p>ปัจจุบันโหรไทยและโหรภารตะหลายสำนักนำมุมสัมพันธ์ระดับองศามาใช้ประกอบหลักดั้งเดิม การเข้าใจทั้งการส่องแสงระดับราศีและมุมระดับองศาช่วยเปิดมุมมองให้กว้างขึ้น โดยไม่ต้องทิ้งรากฐานของวิชาเดิม ภารตะเองก็มีการคำนวณกำลังทฤษฏิตามองศาจริง (สผุฏทฤษฏิ) เช่นกัน</p>')}
+<p class="note">วิธีของระบบ: ตารางภารตะใช้กำลังตามคัมภีร์ ส่วนระดับองศาใช้สูตรวิรูปะของปราศรแบบย่อแล้วบวกกำลังพิเศษ · Orb ระบบกำหนดเอง (มุมหลัก ๕–๘° มุมรอง ๒–๓°) · คำพยากรณ์มุมระบบประกอบจากความหมายดาวและชนิดมุม ส่วนคำพยากรณ์คู่ดาวดึงจากตำราคู่ดาว ๔๕ คู่ · ระบบถอดความใหม่ ไม่แสดงดวงบุคคลจริง</p>`; }
+
+// ---------- ราหูให้คุณหรือให้โทษ (สำหรับหน้าตรวจดาวราหู) ----------
+const UPA=[3,6,10,11], KEN=[1,4,7,10], TRI=[1,5,9];
+function rahuYogas(X){ const N=X.NV, L=X.L, sr=sg(N.RA), sk=sg(N.KE), Y_=[], hR=cnt(L,sr);
+ const lordOf=h=>LRD[(L+h-1)%12], withR=k=>N[k]!=null&&sg(N[k])===sr, withK=k=>N[k]!=null&&sg(N[k])===sk;
+ const asp=k=>N[k]!=null&&drS(k,cnt(sg(N[k]),sr))[0]>=100;
+ const rel=k=>withR(k)||asp(k);
+ if(withR('JU')) Y_.push([B,'คุรุจัณฑาลโยค','พฤหัสบดีกุมราหู ปัญญาและศีลธรรมถูกบดบัง ระวังการตัดสินใจผิดจากความหลงหรือคำแนะนำผิด']);
+ const gr=['SU','MO'].filter(k=>withR(k)||withK(k)); if(gr.length) Y_.push([B,'กรหณโยค',`${gr.map(k=>TN[k]).join(' และ ')}กุม${gr.some(withR)?'ราหู':'เกตุ'} แสงสว่างถูกบดบัง เรื่องจิตใจ ชื่อเสียง หรือผู้ใหญ่ผันผวน`]);
+ if(withR('SA')) Y_.push([B,'ศราปิตโยค','เสาร์กุมราหู ภาระสะสม งานหนักเกินตัว ต้องอดทนนานกว่าจะเห็นผล']);
+ if(withR('MA')||withK('MA')) Y_.push([B,'อังคารกโยค','อังคารกุมราหูหรือเกตุ ใจร้อน วู่วาม ระวังอุบัติเหตุและความขัดแย้งรุนแรง']);
+ const ks7=['SU','MO','MA','ME','JU','VE','SA'].filter(k=>N[k]!=null), side=k=>nrm(N[k]-N.RA)<180;
+ if(ks7.length===7&&(ks7.every(side)||ks7.every(k=>!side(k)))) Y_.push([B,'กาลสรรปโยค','ดาวทั้งเจ็ดอยู่ด้านเดียวระหว่างราหูกับเกตุ ชีวิตขึ้นลงแรง ช่วงทองมาช้าแต่มาแรง']);
+ const kl=KEN.map(lordOf), tl=[5,9].map(lordOf), dl=[2,11].map(lordOf);
+ const kr=kl.filter(k=>k!=='RA'&&rel(k)), trr=tl.filter(k=>k!=='RA'&&rel(k));
+ if(kr.length&&trr.length) Y_.push([G,'ราหูร่วมราชโยค',`ราหูสัมพันธ์ทั้งเจ้าเรือนเกณฑ์ (${[...new Set(kr)].map(k=>TN[k]).join(' ')}) และเจ้าเรือนตรีโกณ (${[...new Set(trr)].map(k=>TN[k]).join(' ')}) ช่วยยกฐานะและตำแหน่ง`]);
+ if((KEN.includes(hR)||TRI.includes(hR))&&(kr.length||trr.length)) Y_.push([G,'ราหูโยคการกะ',`ราหูอยู่ภพ${HN[hR-1]} (เกณฑ์หรือตรีโกณ) และสัมพันธ์เจ้าเรือนดี ราหูทำหน้าที่ให้ผลแรงทางบวก`]);
+ const dr=dl.filter(k=>k!=='RA'&&rel(k)); if(dr.length||[2,11].includes(hR)&&dr.length) Y_.push([G,'ราหูร่วมธนโยค',`ราหูสัมพันธ์เจ้าเรือนกดุมภะหรือลาภะ (${[...new Set(dr)].map(k=>TN[k]).join(' ')}) โอกาสทรัพย์ก้อนใหญ่จากช่องทางใหม่`]);
+ if(rel(lordOf(9))&&rel(lordOf(10))&&lordOf(9)!=='RA') Y_.push([G,'ราหูร่วมธรรมกรรมาธิปติโยค',`ราหูสัมพันธ์ทั้งเจ้าเรือนศุภะ (${TN[lordOf(9)]}) และกัมมะ (${TN[lordOf(10)]}) งานกับโชคเกื้อกัน`]);
+ return Y_; }
+function rahuRows(X){ const N=X.N, L=X.L; const E=[]; let t=X.T, s=sg(posAt(t).RA), end=X.T+20*365.25*DAY;
+ while(t<end){ const t2=t+10*DAY, s2=sg(posAt(t2).RA); if(s2!==s){ let a=t,b=t2; for(let i=0;i<22&&b-a>6e4;i++){ const m=(a+b)/2; if(sg(posAt(m).RA)===s) a=m; else b=m; } const h=cnt(L,s2); if(UPA.includes(h)||h===2) E.push({t:b,s:s2,h}); s=s2; } t=t2; if(E.length>=6) break; }
+ return E; }
+let RCC=null;
+function rahuCard(host){ try{ const X=ctx(); if(!X.N||X.N.RA==null) return ''; const N=X.N, hR=cnt(X.L,sg(N.RA)), up=UPA.includes(hR), Y_=rahuYogas(X);
+ const who=KW8.filter(k=>k!=='RA'&&N[k]!=null).map(k=>[k,drS(k,cnt(sg(N[k]),sg(N.RA)))[0]]).filter(x=>x[1]);
+ const ben=who.filter(x=>['JU','VE','ME','MO'].includes(x[0])).reduce((s,x)=>s+x[1],0), mal=who.filter(x=>!['JU','VE','ME','MO'].includes(x[0])).reduce((s,x)=>s+x[1],0);
+ const gY=Y_.filter(y=>y[0]===G).length, bY=Y_.filter(y=>y[0]===B).length;
+ const sc=(up?2:0)+(ben>mal?1:ben<mal?-1:0)+gY-bY*.7, v=sc>=1.5?[G,'ราหูมีแนวโน้มให้คุณ','up']:sc<=-1?[B,'ราหูมีแนวโน้มให้โทษ','dn']:[Y,'ราหูให้ได้ทั้งคุณและโทษ ต้องดูองค์ประกอบ','node'];
+ const nx=(RCC&&RCC.k===Math.floor(X.T/864e5)+':'+X.L)?RCC.v:(RCC={k:Math.floor(X.T/864e5)+':'+X.L,v:rahuRows(X)}).v;
+ if(host&&!document.getElementById('ap389css-'+host)){ const st=document.createElement('style'); st.id='ap389css-'+host; st.textContent=CSS.split('#APO ').join('#'+host+' '); document.head.appendChild(st); }
+ const GOOD=['อำนาจ บารมี อิทธิพล','ชื่อเสียง ความโดดเด่น','กล้าคิด กล้าทำ ทะเยอทะยาน','ชนะการแข่งขันและอุปสรรค','โอกาสจากต่างประเทศ คนต่างถิ่น สิ่งใหม่','ก้าวหน้าจากการค้า เจรจา เครือข่าย','ทรัพย์และลาภที่คาดไม่ถึง','สำเร็จจากการเปลี่ยนแปลงครั้งใหญ่'], BAD=['โลภ หลง มัวเมา','ถูกหลอก เล่ห์เหลี่ยม การปกปิด','ประมาท ตัดสินใจพลาด','ศัตรู ความขัดแย้ง เรื่องอื้อฉาว','เสื่อมเสียชื่อเสียง','เสียหายทางทรัพย์สิน','วิตกกังวล ไม่แน่นอน วุ่นวาย','พลิกผันรุนแรง'];
+ return `<div class="ap8c" style="--c:${v[0]};margin-top:16px"><h4>${ic('node',v[0])} ราหูให้คุณหรือให้โทษ <small style="opacity:.65">· วิศวกรโหรสิงโต</small></h4>
+<div class="ap8hero" style="--c:${v[0]}">${ic(v[2],v[0],40)}<div><small>ราหูอยู่ราศี${SN[sg(N.RA)]} ภพ${HN[hR-1]} (${td(hR)})</small><h3>${v[1]}</h3><p>${up?tag('อยู่อุปจยภพ',G):tag('ไม่อยู่อุปจยภพ',GR)} ${hR===2?tag('ภพกดุมภะ: ราหูค้นทรัพย์',Y):''} ${tag('ศุภเคราะห์ส่องรวม '+td(ben),G)} ${tag('บาปเคราะห์ส่องรวม '+td(mal),B)}</p></div></div>
+<div class="ap8two"><div style="--c:${G}"><b>${ic('sun',G,16)} ด้านให้คุณ</b><ul>${GOOD.map(x=>`<li>${x}</li>`).join('')}</ul></div><div style="--c:${B}"><b>${ic('warn',B,16)} ด้านให้โทษ</b><ul>${BAD.map(x=>`<li>${x}</li>`).join('')}</ul></div></div>
+<p><b>อุปจยภพ</b> (ภพแห่งความพยายามเพื่อความสำเร็จ) ได้แก่ สหัชชะ อริ กัมมะ ลาภะ ราหูเป็นบาปเคราะห์ที่แสดงศักยภาพได้ดีในภพเหล่านี้ ${up?`ดวงนี้ราหูอยู่ภพ${HN[hR-1]} เข้าเกณฑ์ แต่ยังไม่ได้แปลว่าให้คุณเสมอ`:`ดวงนี้ราหูไม่อยู่ในอุปจยภพ แต่ไม่ได้แปลว่าให้โทษเสมอ`} กำลังของดาวกับคุณภาพของผลเป็นคนละเรื่องกัน</p>
+${hR===2?`<p><b>ราหูค้นทรัพย์</b> ราหูอยู่ภพกดุมภะ บางคำทายแปลว่าเสียทรัพย์ เงินรั่วไหล แต่ในทางปฏิบัติให้ได้ทั้งได้ทรัพย์ก้อนใหญ่และเสียก้อนใหญ่ ต้องดูดาวที่ส่องแสงถึงราหูและเจ้าเรือนกดุมภะ (${TN[LRD[(X.L+1)%12]]}) ประกอบ</p>`:''}
+<p><b>ดาวที่ส่องแสงถึงราหู</b> (ครหทฤษฏิ)</p>${who.length?tbl(['ดาว','กำลัง','ผล'],who.sort((p,q)=>q[1]-p[1]).map(([k,x])=>`<tr><td>${pl(k)} ${TN[k]}</td><td>${bar(x)}</td><td>${['JU','VE','ME','MO'].includes(k)?tag('ศุภเคราะห์ ช่วยให้ราหูให้คุณ',G):tag('บาปเคราะห์ เพิ่มแรงพลิกผัน',B)}</td></tr>`)):'<p class="note">ไม่มีดาวส่องแสงถึงราหูตามเกณฑ์</p>'}
+<p><b>โยคที่เกี่ยวกับราหูในดวงนี้</b></p>${Y_.length?`<ul class="ap8yl">${Y_.map(([c,n,d])=>`<li style="--c:${c}"><b>${n}</b> ${d}</li>`).join('')}</ul>`:'<p class="note">ไม่พบโยคราหูตามเกณฑ์ที่ระบบตรวจ</p>'}
+${nx.length?`<p><b>ราหูจรเข้าอุปจยภพหรือภพกดุมภะครั้งต่อไป</b></p>${tbl(['วันเวลา','ราศี','ภพ','นับถอยหลัง','อายุ'],nx.map(e=>`<tr><td>${fdtm(e.t)}</td><td>${SN[e.s]}</td><td>${tag(HN[e.h-1],e.h===2?Y:G)}</td><td>${left(e.t)}</td><td>${ageAt(e.t)}</td></tr>`))}`:''}
+<p class="note">อย่าตัดสินราหูจากชื่อเสียงของดาว และอย่าตัดสินผลของดาวจากตำแหน่งเพียงปัจจัยเดียว · ระบบตรวจโยคแบบย่อ: กุมราศีเดียวกันหรือส่องแสงเต็ม ผลของโยคขึ้นกับองค์ประกอบดวงและหลักของแต่ละสำนัก · ที่มา: บทความ "ราหู ดีหรือร้ายอย่างไร" วิศวกรโหรสิงโต ระบบถอดความใหม่</p></div>`; }catch(e){ console.error(e); return ''; } }
+
+const TABS=[['ov','home','ภาพรวม'],['vd','eye','ภารตะ ทฤษฏิ'],['th','orbit','ไทย ราศี'],['we','ang','สากล องศา'],['cmp','cmp','เทียบสามระบบ'],['tr','cal','ดาวจรทำมุม'],['how','book','หลักวิชา']];
+function render(){ const out=document.getElementById('ap389Out'); if(!out) return; let X={}; try{ X=ctx(); }catch(e){ console.error(e); } let b='';
+ try{ if(!X.N&&TAB!=='how') b='<p class="note">ผูกดวงก่อน แล้วกลับมาที่หน้านี้</p>'; else b=({ov:tOv,vd:tVd,th:tTh,we:tWe,cmp:tCmp,tr:tTr,how:tHow})[TAB](X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; }
+ out.innerHTML=`<h3 class="kh8H">${ic('ang',GD,24)} ส่องแสง · มุมสัมพันธ์ สามระบบ</h3><p class="note">ดาวสัมพันธ์กันอย่างไรในโหรภารตะ (ทฤษฏิ) โหรไทย (ราศีและภพ) และโหรสากล (องศาและวังกะ) ทั้งดวงเดิมและดาวจร</p><div class="kh8tabs">${TABS.map(([k,i,t])=>`<button type="button" data-apt="${k}" class="${TAB===k?'on':''}">${ic(i,TAB===k?GD:null,20)}<span>${t}</span></button>`).join('')}</div>${b}`; }
+document.addEventListener('click',ev=>{ const t=ev.target.closest&&ev.target.closest('#ap389Out [data-apt],#ap389Out [data-apv],#ap389Out [data-apf],#ap389Out [data-apm],#ap389Out [data-apr],#ap389Out [data-app]'); if(!t) return; const d=t.dataset; if(d.apt) TAB=d.apt; if(d.apv) VIEW=d.apv; if(d.apf) FT=d.apf; if(d.apm) VMODE=d.apm; if(d.apr) RK=RK?0:1; if(d.app) FP=d.app; const y=scrollY; render(); scrollTo(0,y); });
+const CSS=`#APO .ap8t{display:inline-flex;align-items:center;padding:1px 9px;border-radius:999px;font-size:12px;color:var(--c);border:1px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 12%,transparent);white-space:nowrap;margin:1px 0}
+#APO .ap8p{display:inline-flex;width:24px;height:24px;flex:none;border-radius:50%;align-items:center;justify-content:center;background:var(--c);color:#fff;font-size:12.5px;vertical-align:middle;margin-right:2px;font-weight:500}
+#APO .ap8c{border:1px solid color-mix(in srgb,var(--c) 35%,var(--line));border-left:4px solid var(--c);border-radius:12px;padding:10px 14px;margin:10px 0;background:var(--panel)}#APO .ap8c h4{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 8px;font-weight:500}#APO .ap8c p{margin:6px 0}
+#APO .ap8w{max-width:520px;margin:0 auto}#APO .ap8w svg{width:100%;height:auto;display:block}
+#APO .ap8dw{max-width:440px;margin:6px auto}#APO .ap8d{width:100%;height:auto;display:block}
+#APO .ap8hero{display:flex;gap:14px;align-items:center;padding:12px 16px;margin:10px 0;border-radius:14px;border:1px solid color-mix(in srgb,var(--c) 45%,var(--line));background:color-mix(in srgb,var(--c) 10%,var(--panel))}#APO .ap8hero h3{margin:2px 0 4px;color:var(--c)}#APO .ap8hero p{margin:0;display:flex;gap:4px;flex-wrap:wrap}#APO .ap8hero small{opacity:.7}
+#APO .ap8src{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}#APO .ap8src button{width:auto!important;margin:0!important;padding:6px 12px;border-radius:999px;display:inline-flex;gap:4px;align-items:center}#APO .ap8src button.on{outline:2px solid var(--gold)}
+#APO .ap8lg{display:flex;gap:12px;flex-wrap:wrap;font-size:12.5px;margin:6px 0}#APO .ap8lg span{display:inline-flex;gap:6px;align-items:center}#APO .ap8lg i{width:22px;height:3px;border-radius:2px;display:inline-block}#APO .ap8lg i.ds{background:repeating-linear-gradient(90deg,currentColor 0 4px,transparent 4px 7px);opacity:.6}
+#APO .ap8tw{overflow-x:auto;-webkit-overflow-scrolling:touch}#APO .ap8tb{width:100%;border-collapse:collapse;font-size:13px}#APO .ap8tb th,#APO .ap8tb td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}#APO .ap8tb th{font-weight:500;opacity:.8;white-space:nowrap}
+#APO .ap8mx td,#APO .ap8mx th{text-align:center;padding:5px 4px;min-width:34px}#APO .ap8mx td.ap8x{opacity:.3}#APO .ap8mx sup{color:${G};font-size:9px}
+#APO tr.ap8r td:first-child{border-left:3px solid var(--c)}#APO tr.ap8hot td{background:color-mix(in srgb,${B} 8%,transparent)}
+#APO .ap8bar{display:inline-block;width:56px;height:6px;border-radius:3px;background:color-mix(in srgb,currentColor 12%,transparent);vertical-align:middle;margin-right:5px;overflow:hidden}#APO .ap8bar i{display:block;height:100%;border-radius:3px}#APO .ap8v{font-weight:500;font-size:12px}
+#APO .ap8two{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0}#APO .ap8two>div{border:1px solid color-mix(in srgb,var(--c) 40%,var(--line));background:color-mix(in srgb,var(--c) 7%,transparent);border-radius:10px;padding:8px 12px}#APO .ap8two b{display:flex;gap:6px;align-items:center;color:var(--c);font-weight:500}#APO .ap8two ul{margin:6px 0 0;padding-left:18px;font-size:13px}#APO .ap8two li{margin:2px 0}
+#APO .ap8yl{list-style:none;padding:0;margin:4px 0}#APO .ap8yl li{border-left:3px solid var(--c);padding:4px 10px;margin:5px 0;background:color-mix(in srgb,var(--c) 7%,transparent);border-radius:0 8px 8px 0;font-size:13.5px}#APO .ap8yl b{color:var(--c);font-weight:500}
+#APO .ap8poem{border:1px solid color-mix(in srgb,${GDH} 40%,var(--line));border-radius:12px;padding:10px 14px;margin-bottom:8px;background:color-mix(in srgb,${GDH} 6%,transparent)}#APO .ap8poem p{margin:2px 0;font-size:14.5px}#APO .ap8poem small{opacity:.65}
+@media(max-width:560px){#APO .ap8two{grid-template-columns:1fr}#APO .ap8hero{flex-direction:column;align-items:flex-start}}`;
+if(!document.getElementById('ap389css')){ const st=document.createElement('style'); st.id='ap389css'; const kc=document.getElementById('kh358css'); st.textContent=(kc?kc.textContent.split('#kh358Out ').join('#ap389Out '):'')+'\n'+CSS.split('#APO ').join('#ap389Out '); document.head.appendChild(st); }
+return {render,rahuCard,drS,aspOf};
 })();
