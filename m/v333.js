@@ -4398,7 +4398,7 @@ ${ret?`<p>${tag('ราหูจรกลับมาราศีเดียว
 <h5 style="margin:12px 0 4px">ช่วงราหูจรแต่ละราศี (ประมาณ ๑๙ ปีข้างหน้า)</h5>
 <div class="kh8tw"><table class="kh8tb"><tr><th>ราหูจร</th><th>ภพ</th><th>ธาตุเทียบราหูเดิม</th><th>มาตรฐาน</th><th>เริ่ม</th><th>สิ้นสุด</th><th>อีกกี่ปี เดือน วัน</th><th>อายุ</th></tr>${rows}</table></div>
 <p class="sm" style="opacity:.75">เครื่องหมายถูกสีเขียว คือช่วงที่ได้ทั้งธาตุชั้น ๑–๒ และมาตรฐานดี ควรใช้วางแผนเรื่อง${HM[Lh-1].split(' ')[0]} · ควรดูเจ้าเรือนลัคนา เจ้าเรือนของภพที่ราหูจร ตรีวัย และดาวจรอื่นประกอบ · เรียบเรียงจากบทความระบบธาตุและเรือนชาตา (arjarnthi)</p></div>`; }
-const _ov=overview; overview=X=>_ov(X)+(X&&X.N?arish(X)+rgood(X)+rlag(X)+rpair(X)+rbia(X)+rqual(X)+rlabha(X)+(window.AP389&&AP389.rahuCard?AP389.zsCard('RA','rx362Out')+AP389.rahuCard('rx362Out')+AP389.rahuWealth('rx362Out'):'')+(window.PX387&&PX387.txRx?PX387.txRx(X):'')+(window.DC385&&DC385.plCard?DC385.plCard('RA','rx362Out'):'')+(window.PX387?'<div style="margin-top:16px">'+PX387.pmStand('RA','rx362Out')+'</div>':''):''); }
+const _ov=overview; overview=X=>_ov(X)+(X&&X.N?arish(X)+rgood(X)+rlag(X)+rpair(X)+rbia(X)+rqual(X)+rlabha(X)+(window.AP389&&AP389.rahuCard?AP389.zsCard('RA','rx362Out')+AP389.rahuCard('rx362Out')+AP389.rahuWealth('rx362Out')+AP389.bigCard('RA','rx362Out'):'')+(window.PX387&&PX387.txRx?PX387.txRx(X):'')+(window.DC385&&DC385.plCard?DC385.plCard('RA','rx362Out'):'')+(window.PX387?'<div style="margin-top:16px">'+PX387.pmStand('RA','rx362Out')+'</div>':''):''); }
 function render(){ const out=document.getElementById('rx362Out'); if(!out) return; let X={}; try{ X=ctx(); }catch(e){ console.error(e); } let b=''; if(SEL==='ov'){ try{ b=overview(X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; } } else if(SEL==='nat'){ try{ b=natv(X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; } }
 out.innerHTML=`<h3 class="kh8H">${ic('rahu',GD,24)} ตรวจดาวราหู ☊︎</h3><p class="note">รวมทุกตำราเรื่องราหูไว้ที่เดียว ดูราหูเดิม ราหูจร ช่วงราหูเสวยอายุ และเลือกตำราที่ต้องการตรวจต่อจากแถบด้านล่าง</p>${nav()}${b}`; apply(); }
 function go(id,scroll){ SEL=id; render(); if(typeof MBX==='function') setTimeout(MBX,0); if(scroll!==false){ const el=document.getElementById('rx362P'); if(el) setTimeout(()=>{ const y=el.getBoundingClientRect().top+scrollY-74; scrollTo({top:y,behavior:'smooth'}); },60); } }
@@ -8737,7 +8737,7 @@ function makeMode(k){ const ID=k.toLowerCase()+'387', OUT=ID+'Out', PRE='px'+k.t
 <ul class="px8l">${n.why.map(([c,t])=>`<li><i style="background:${c}"></i>${t}</li>`).join('')}<li><i style="background:${GD}"></i>เรื่องของภพนี้: ${HT[n.h-1]}</li>${n.lords.length?`<li><i style="background:${A}"></i>เป็นเจ้าเรือนภพ${n.lords.map(h=>HN[h-1]).join(' และ ')} นำเรื่อง${n.lords.map(h=>HT[h-1].split(' ')[0]).join(' ')}มาสู่${HT[n.h-1].split(' ')[0]}</li>`:''}${n.la?`<li><i style="background:${A}"></i>${n.la}ลัคนา</li>`:''}</ul>`)}
 ${tx!=null?card(tv[0],'orbit','ดาว'+TN[k]+'จรตอนนี้',`<p class="px8big">ราศี${SN[ts]} ${fmD(tx)} · ภพ${HN[th-1]} (${td(th)})${rt?' '+tag('พักร์ (ถอยหลัง)',Y):''}</p><p>${tag(tv[1],tv[0])} ${tst?tag(tst,good(tst)?G:bad(tst)?B:GR):''} ${tier?tag(tier[1],tier[2]):''}</p>
 <ul class="px8l"><li><i style="background:${tq[0]>0?G:tq[0]<0?B:Y}"></i>${tq[1]}</li><li><i style="background:${GD}"></i>ช่วงนี้${TN[k]}กระตุ้นเรื่อง${HT[th-1]}</li>${seg&&seg.b?`<li><i style="background:${A}"></i>ย้ายราศี ${fdtm(seg.b)} (${left(seg.b)})</li>`:''}</ul>`):''}</div>
-${k==='KE'?keSec(X):''}${window.AP389&&AP389.zsCard?AP389.zsCard(k,OUT)+(k==='JU'?AP389.juCard(OUT):'')+(k==='MA'?AP389.maCard(OUT):''):''}${window.DC385&&DC385.plCard?DC385.plCard(k,OUT):''}${LRD[(X.L+11)%12]===k?vnSec(X,true):''}${pmSection(k,X,true)}${txSection(k,X,false)}${card(GD,'link','ตำราที่เกี่ยวกับดาว'+TN[k]+'ในระบบ',rel(true))}`; }
+${k==='KE'?keSec(X):''}${window.AP389&&AP389.zsCard?AP389.zsCard(k,OUT)+(k==='JU'?AP389.juCard(OUT):'')+(k==='MA'?AP389.maCard(OUT):'')+(['SA','JU','UR'].includes(k)?AP389.bigCard(k,OUT):''):''}${window.DC385&&DC385.plCard?DC385.plCard(k,OUT):''}${LRD[(X.L+11)%12]===k?vnSec(X,true):''}${pmSection(k,X,true)}${txSection(k,X,false)}${card(GD,'link','ตำราที่เกี่ยวกับดาว'+TN[k]+'ในระบบ',rel(true))}`; }
  function tNat(){ const PKk=PK[k], rows=SN.map((s,i)=>{ const d=sd(k,i*30+15); return [i,d]; }), sp=rows.filter(r=>r[1]);
   const pairs=ALL.filter(o=>o!==k).map(o=>[o,pmOf(k,o)]).filter(p=>p[1]);
   const sys=[['ไทย','#e8743b',`เลข ${PN[k]} ${PKk.nt}เคราะห์ ธาตุ${PKk.el} · ${PKk.kw}`],['ตะวันตก','#4aa3ff',PKk.w],['ภารตะ','#9a6bd1',PKk.in]];
@@ -9263,6 +9263,28 @@ function rahuWealth(host){ try{ const X=ctx(); const N=X.N; if(!N||N.RA==null) r
 ${rows.length?tbl(['ราหูจรราศี','ภพ','เริ่ม','ถึง','นับถอยหลัง','อายุ','ผล'],rows.map(row)):''}
 <p class="note">${pk?'ราหูเดิมอยู่ราศีปกิณณกโชค (เมถุน ตุลย์ กุมภ์) ':''}ตำรานี้แย้งว่าปกิณณกโชคอย่างเดียวไม่พอตัดสินว่าดี ต้องดูดาวที่ส่องถึง · ถูกแสงเกตุคือสุดโต่ง ไม่รวยสุดก็แย่สุด · ที่มา: "ดาวราหูดาวร้ายในมายาคติ" ราชรามัญ โหรดวงดาว ระบบถอดความใหม่</p></div>`; }catch(e){ console.error(e); return ''; } }
 
+// ---------- ดาวใหญ่จร (ราชรามัญ): ดูพื้นดวงเดิมก่อนทาย ----------
+const BIGC={};
+function bigCard(k,host){ try{ const X=ctx(); const N=X.N; if(!N||N[k]==null) return ''; css(host); const L=X.L, TNk=k==='UR'?'มฤตยู':TN[k];
+ const P=t=>{ try{ const h=horaOf(new Date(t)); return posH(h,k); }catch(_){ return null; } };
+ const h0=cnt(L,sg(N[k])), bad=[6,8,12].includes(h0), ben=k==='JU';
+ const REL=[['กุมลัคนา',0],['เล็งลัคนา',6],['โยคถึงลัคนา',2],['โยคถึงลัคนา',10],['โยคถึงภพปัตนิ',4],['โยคถึงภพปัตนิ',8],['เบียนลัคนา',11]];
+ const res=n=>{ if(bad) return n==='กุมลัคนา'?[G,'ดี']:[Y,'เสมอตัว ไม่เกิดเหตุร้าย'];
+  if(ben) return n==='เบียนลัคนา'?[Y,'เสมอตัว']:[G,'ดี'];
+  return n==='กุมลัคนา'||n==='เล็งลัคนา'?[B,'ระวัง']:n==='เบียนลัคนา'?[Y,'ระวังเล็กน้อย']:[G,'ดี']; };
+ const key=Math.floor(X.T/864e5)+':'+L+':'+k;
+ if(!BIGC[key]){ const st=k==='UR'?10:7, E=[]; let t=X.T, s=sg(P(t)), a0=null; const end=X.T+30*365.25*DAY;
+  while(t<end&&E.length<40){ const t2=t+st*DAY, p=P(t2); if(p==null) break; const s2=sg(p); if(s2!==s){ let a=t,b=t2; for(let i=0;i<22&&b-a>6e4;i++){ const m=(a+b)/2; if(sg(P(m))===s) a=m; else b=m; } E.push({s:s2,a:b}); s=s2; } t=t2; }
+  for(let i=0;i<E.length;i++) E[i].b=E[i+1]?E[i+1].a:null; BIGC[key]={s0:sg(P(X.T)),b0:E[0]?E[0].a:null,E}; }
+ const D=BIGC[key], rel=s=>REL.find(r=>(L+r[1])%12===s);
+ const cur=rel(D.s0), rows=[]; if(cur) rows.push({s:D.s0,a:null,b:D.b0,now:1,r:cur}); D.E.forEach(e=>{ const r=rel(e.s); if(r&&rows.length<10) rows.push({...e,r}); });
+ const c0=cur?res(cur[0]):null;
+ return `<div class="ap8c" style="--c:${bad?G:GDH};margin-top:16px"><h4>${ic('orbit',GD)} ดาวใหญ่จร: ดูพื้นดวงเดิมก่อนทาย <small style="opacity:.65">· ราชรามัญ</small></h4>
+<div class="ap8hero" style="--c:${bad?Y:G}">${ic(bad?'warn':'ok',bad?Y:G,38)}<div><small>${TNk}เดิมอยู่ภพ${HN[h0-1]} (${td(h0)})</small><h3>${bad?'พื้นดวงอยู่ภพไม่ดี: จรมาแล้วผลร้ายกลับเบาลง':'พื้นดวงอยู่ภพดี: ทายตามหลักปกติ'}</h3><p style="display:block">${bad?`${TNk}จรกุมลัคนาทายว่าดี เล็งลัคนา โยคถึงลัคนาหรือภพปัตนิ และเบียนลัคนา ทายว่าเสมอตัว ไม่เกิดเหตุร้าย`:ben?'พฤหัสบดีเป็นศุภเคราะห์ จรกุม เล็ง หรือโยคลัคนาให้คุณ เบียนลัคนาเสมอตัว':`${TNk}จรกุมหรือเล็งลัคนาควรระวัง โยคให้คุณ เบียนลัคนาระวังเล็กน้อย`}</p></div></div>
+<p>${c0?`ตอนนี้${TNk}จรราศี${SN[D.s0]} ${cur[0]} ${tag(c0[1],c0[0])}`:`ตอนนี้${TNk}จรราศี${SN[D.s0]} ไม่ได้กุม เล็ง โยค หรือเบียนลัคนา`}</p>
+${rows.length?tbl(['เกณฑ์','ราศี','เริ่ม','ถึง','นับถอยหลัง','อายุ','ทาย'],rows.map(e=>{ const r=res(e.r[0]); return `<tr class="ap8r" style="--c:${r[0]}"><td>${TNk}จร${e.r[0]}</td><td>${SN[e.s]}</td><td>${e.now?tag('กำลังเป็นอยู่',Y):fdtm(e.a)}</td><td>${e.b?fdtm(e.b):'—'}</td><td>${e.now?(e.b?'เหลือ '+left(e.b).replace('อีก ',''):'—'):left(e.a)}</td><td>${ageAt(e.now?X.T:e.a)}</td><td>${tag(r[1],r[0])}</td></tr>`; })):''}
+<p class="note">ดาวใหญ่คือพฤหัสบดี ราหู มฤตยู และเสาร์ ก่อนทายให้ดูว่าดาวดวงนั้นในพื้นดวงเดิมอยู่ภพดีหรือไม่ดี ตำรายกตัวอย่างเสาร์เดิมอยู่ภพมรณะ · กรณีพื้นดวงอยู่ภพดี ตำราไม่ได้ระบุ ระบบใช้หลักทั่วไป · ภพไม่ดีคืออริ มรณะ วินาศ · ที่มา: "ดาวใหญ่" ราชรามัญ โหรดวงดาว ระบบถอดความใหม่</p></div>`; }catch(e){ console.error(e); return ''; } }
+
 const TABS=[['ov','home','ภาพรวม'],['vd','eye','ภารตะ ทฤษฏิ'],['th','orbit','ไทย ราศี'],['we','ang','สากล องศา'],['cmp','cmp','เทียบสามระบบ'],['tr','cal','ดาวจรทำมุม'],['how','book','หลักวิชา']];
 function render(){ const out=document.getElementById('ap389Out'); if(!out) return; let X={}; try{ X=ctx(); }catch(e){ console.error(e); } let b='';
  try{ if(!X.N&&TAB!=='how') b='<p class="note">ผูกดวงก่อน แล้วกลับมาที่หน้านี้</p>'; else b=({ov:tOv,vd:tVd,th:tTh,we:tWe,cmp:tCmp,tr:tTr,how:tHow})[TAB](X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; }
@@ -9286,7 +9308,7 @@ const CSS=`#APO .ap8t{display:inline-flex;align-items:center;padding:1px 9px;bor
 #APO .ap8chip{display:inline-flex;align-items:center;gap:3px;width:auto!important;margin:0!important;padding:2px 6px 2px 10px;border-radius:999px;font:inherit;font-size:12px;color:var(--c);border:1px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 12%,transparent);cursor:pointer}#APO .ap8chip:hover{background:color-mix(in srgb,var(--c) 24%,transparent)}#APO tr.ap8click{cursor:pointer}#APO tr.ap8click:hover td{background:color-mix(in srgb,var(--gold,#c9a227) 8%,transparent)}
 @media(max-width:560px){#APO .ap8two{grid-template-columns:1fr}#APO .ap8hero{flex-direction:column;align-items:flex-start}}`;
 if(!document.getElementById('ap389css')){ const st=document.createElement('style'); st.id='ap389css'; const kc=document.getElementById('kh358css'); st.textContent=(kc?kc.textContent.split('#kh358Out ').join('#ap389Out '):'')+'\n'+CSS.split('#APO ').join('#ap389Out '); document.head.appendChild(st); }
-return {render,rahuCard,rahuWealth,juCard,maCard,zsCard,drS,aspOf,H:{td,ic,tag,pl,card,tbl,fdt,fdtm,left,ymd,ymdT,posAt,ctx,pmOf,cnt,sg,nrm,w180,SN,HN,TN,PN,PC,LRD,HM,KWD,BEN,G,B,Y,A,GD,GDH,GR,css,ageAt,nextIn,DAY,K9,KW8}};
+return {render,rahuCard,rahuWealth,bigCard,juCard,maCard,zsCard,drS,aspOf,H:{td,ic,tag,pl,card,tbl,fdt,fdtm,left,ymd,ymdT,posAt,ctx,pmOf,cnt,sg,nrm,w180,SN,HN,TN,PN,PC,LRD,HM,KWD,BEN,G,B,Y,A,GD,GDH,GR,css,ageAt,nextIn,DAY,K9,KW8}};
 })();
 (()=>{
 const H=()=>window.AP389.H;
