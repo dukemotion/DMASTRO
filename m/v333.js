@@ -4398,7 +4398,7 @@ ${ret?`<p>${tag('ราหูจรกลับมาราศีเดียว
 <h5 style="margin:12px 0 4px">ช่วงราหูจรแต่ละราศี (ประมาณ ๑๙ ปีข้างหน้า)</h5>
 <div class="kh8tw"><table class="kh8tb"><tr><th>ราหูจร</th><th>ภพ</th><th>ธาตุเทียบราหูเดิม</th><th>มาตรฐาน</th><th>เริ่ม</th><th>สิ้นสุด</th><th>อีกกี่ปี เดือน วัน</th><th>อายุ</th></tr>${rows}</table></div>
 <p class="sm" style="opacity:.75">เครื่องหมายถูกสีเขียว คือช่วงที่ได้ทั้งธาตุชั้น ๑–๒ และมาตรฐานดี ควรใช้วางแผนเรื่อง${HM[Lh-1].split(' ')[0]} · ควรดูเจ้าเรือนลัคนา เจ้าเรือนของภพที่ราหูจร ตรีวัย และดาวจรอื่นประกอบ · เรียบเรียงจากบทความระบบธาตุและเรือนชาตา (arjarnthi)</p></div>`; }
-const _ov=overview; overview=X=>_ov(X)+(X&&X.N?arish(X)+rgood(X)+rlag(X)+rpair(X)+rbia(X)+rqual(X)+rlabha(X)+(window.AP389&&AP389.rahuCard?AP389.zsCard('RA','rx362Out')+AP389.rahuCard('rx362Out'):'')+(window.PX387&&PX387.txRx?PX387.txRx(X):'')+(window.DC385&&DC385.plCard?DC385.plCard('RA','rx362Out'):'')+(window.PX387?'<div style="margin-top:16px">'+PX387.pmStand('RA','rx362Out')+'</div>':''):''); }
+const _ov=overview; overview=X=>_ov(X)+(X&&X.N?arish(X)+rgood(X)+rlag(X)+rpair(X)+rbia(X)+rqual(X)+rlabha(X)+(window.AP389&&AP389.rahuCard?AP389.zsCard('RA','rx362Out')+AP389.rahuCard('rx362Out')+AP389.rahuWealth('rx362Out'):'')+(window.PX387&&PX387.txRx?PX387.txRx(X):'')+(window.DC385&&DC385.plCard?DC385.plCard('RA','rx362Out'):'')+(window.PX387?'<div style="margin-top:16px">'+PX387.pmStand('RA','rx362Out')+'</div>':''):''); }
 function render(){ const out=document.getElementById('rx362Out'); if(!out) return; let X={}; try{ X=ctx(); }catch(e){ console.error(e); } let b=''; if(SEL==='ov'){ try{ b=overview(X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; } } else if(SEL==='nat'){ try{ b=natv(X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; } }
 out.innerHTML=`<h3 class="kh8H">${ic('rahu',GD,24)} ตรวจดาวราหู ☊︎</h3><p class="note">รวมทุกตำราเรื่องราหูไว้ที่เดียว ดูราหูเดิม ราหูจร ช่วงราหูเสวยอายุ และเลือกตำราที่ต้องการตรวจต่อจากแถบด้านล่าง</p>${nav()}${b}`; apply(); }
 function go(id,scroll){ SEL=id; render(); if(typeof MBX==='function') setTimeout(MBX,0); if(scroll!==false){ const el=document.getElementById('rx362P'); if(el) setTimeout(()=>{ const y=el.getBoundingClientRect().top+scrollY-74; scrollTo({top:y,behavior:'smooth'}); },60); } }
@@ -9239,6 +9239,30 @@ ${extra}
 <details style="margin-top:8px"><summary style="cursor:pointer">${TNX[k]}ในราศีทั้ง ๑๒</summary>${tbl(['ราศี','ความหมาย'],rows)}</details>
 <p class="note">นำความหมายราศีไปรวมกับภพที่ดาวสถิตแล้วจึงทำนาย · ที่มา: ชุดบทความดาวในราศีที่อาจารย์ส่งมา ระบบถอดความใหม่</p></div>`; }catch(e){ console.error(e); return ''; } }
 
+// ---------- ราหูจรเพิ่มทรัพย์หรือผลาญทรัพย์ (ราชรามัญ) ----------
+let RWC=null;
+function rahuWealth(host){ try{ const X=ctx(); const N=X.N; if(!N||N.RA==null) return ''; css(host); const L=X.L;
+ const UP=['SA','UR','RA'], DN=['SU','ME','JU','MA'];
+ const light=s=>[...KW8,'KE','UR'].filter(k=>N[k]!=null&&[1,5,7,9].includes(cnt(s,sg(N[k]))));
+ const judge=s=>{ const l=light(s), u=l.filter(k=>UP.includes(k)), d=l.filter(k=>DN.includes(k)), k9=l.includes('KE');
+  if(d.length&&!u.length) return [B,'ผลาญทรัพย์',`ถูกแสง${d.map(k=>TN[k]||'มฤตยู').join(' ')} มาเพื่อทำลาย แม้อยู่ราศีปกิณณกโชคก็เสียหาย`,l];
+  if(u.length&&!d.length) return [G,'เพิ่มทรัพย์ ให้ลาภ',`ถูกแสง${u.map(k=>k==='UR'?'มฤตยู':TN[k]).join(' ')}ตั้งรับ มาดี ให้คุณ`,l];
+  if(u.length&&d.length) return [Y,'ปนกัน ต้องดูน้ำหนัก',`ฝ่ายเพิ่มทรัพย์ ${u.map(k=>k==='UR'?'มฤตยู':TN[k]).join(' ')} · ฝ่ายผลาญ ${d.map(k=>TN[k]).join(' ')}`,l];
+  if(k9) return [Y,'สุดโต่ง','ถูกแสงเกตุ ไม่รวยสุดก็แย่สุด ต้องดูดาวอื่นประกอบ',l];
+  return [GR,'ไม่มีดาวเกณฑ์ส่องถึง','ผลขึ้นกับองค์ประกอบอื่น',l]; };
+ const key=Math.floor(X.T/864e5)+':'+L; const D=(RWC&&RWC.k===key)?RWC.v:(RWC={k:key,v:ingress('RA',X.T,14,10)}).v;
+ const hNow=cnt(L,D.cur.s), W=[2,10,11];
+ const rows=[{s:D.cur.s,a:D.cur.a,b:D.cur.b,now:1},...D.E].filter(e=>W.includes(cnt(L,e.s))).slice(0,8);
+ const pk=[2,6,10].includes(sg(N.RA));
+ const row=e=>{ const j=judge(e.s), h=cnt(L,e.s); return `<tr class="ap8r" style="--c:${j[0]}"><td>${SN[e.s]}${[2,6,10].includes(e.s)?' '+tag('ปกิณณกโชค',GR):''}</td><td>${HN[h-1]}</td><td>${e.now?tag('กำลังเป็นอยู่',Y):fdtm(e.a)}</td><td>${e.b?fdtm(e.b):'—'}</td><td>${e.now?(e.b?'เหลือ '+left(e.b).replace('อีก ',''):'—'):left(e.a)}</td><td>${ageAt(e.now?X.T:e.a)}</td><td>${tag(j[1],j[0])}<br><small>${j[2]}</small></td></tr>`; };
+ const cj=W.includes(hNow)?judge(D.cur.s):null;
+ return `<div class="ap8c" style="--c:${cj?cj[0]:GDH};margin-top:16px"><h4>${ic('coin',cj?cj[0]:GD)} ราหูจรเพิ่มทรัพย์หรือผลาญทรัพย์ <small style="opacity:.65">· ราชรามัญ</small></h4>
+<p>ราหูไม่ใช่ดาวผลาญทรัพย์เสมอไป ให้ดูเมื่อราหูจรเข้าภพการเงิน (กดุมภะ) การงาน (กัมมะ) หรือลาภะ แล้วดูว่าถูกแสงดาวเดิมดวงใด (ระบบนับกุม เล็ง ตรีโกณ)</p>
+<div class="ap8two"><div style="--c:${G}"><b>${ic('up',G,16)} เพิ่มทรัพย์ ให้ลาภ</b><p style="font-size:13.5px">ถูกแสงเสาร์ มฤตยู หรือราหูเดิมที่ตั้งรับอยู่</p></div><div style="--c:${B}"><b>${ic('dn',B,16)} ผลาญทรัพย์</b><p style="font-size:13.5px">ถูกแสงอาทิตย์ พุธ พฤหัสบดี หรืออังคาร แม้อยู่ราศีปกิณณกโชคก็วิบัติ</p></div></div>
+<p>${cj?`ตอนนี้ราหูจรราศี${SN[D.cur.s]} ภพ${HN[hNow-1]} ${tag(cj[1],cj[0])} ${cj[2]}`:`ตอนนี้ราหูจรราศี${SN[D.cur.s]} ภพ${HN[hNow-1]} ยังไม่อยู่ภพการเงิน การงาน หรือลาภะ`}</p>
+${rows.length?tbl(['ราหูจรราศี','ภพ','เริ่ม','ถึง','นับถอยหลัง','อายุ','ผล'],rows.map(row)):''}
+<p class="note">${pk?'ราหูเดิมอยู่ราศีปกิณณกโชค (เมถุน ตุลย์ กุมภ์) ':''}ตำรานี้แย้งว่าปกิณณกโชคอย่างเดียวไม่พอตัดสินว่าดี ต้องดูดาวที่ส่องถึง · ถูกแสงเกตุคือสุดโต่ง ไม่รวยสุดก็แย่สุด · ที่มา: "ดาวราหูดาวร้ายในมายาคติ" ราชรามัญ โหรดวงดาว ระบบถอดความใหม่</p></div>`; }catch(e){ console.error(e); return ''; } }
+
 const TABS=[['ov','home','ภาพรวม'],['vd','eye','ภารตะ ทฤษฏิ'],['th','orbit','ไทย ราศี'],['we','ang','สากล องศา'],['cmp','cmp','เทียบสามระบบ'],['tr','cal','ดาวจรทำมุม'],['how','book','หลักวิชา']];
 function render(){ const out=document.getElementById('ap389Out'); if(!out) return; let X={}; try{ X=ctx(); }catch(e){ console.error(e); } let b='';
  try{ if(!X.N&&TAB!=='how') b='<p class="note">ผูกดวงก่อน แล้วกลับมาที่หน้านี้</p>'; else b=({ov:tOv,vd:tVd,th:tTh,we:tWe,cmp:tCmp,tr:tTr,how:tHow})[TAB](X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; }
@@ -9262,5 +9286,122 @@ const CSS=`#APO .ap8t{display:inline-flex;align-items:center;padding:1px 9px;bor
 #APO .ap8chip{display:inline-flex;align-items:center;gap:3px;width:auto!important;margin:0!important;padding:2px 6px 2px 10px;border-radius:999px;font:inherit;font-size:12px;color:var(--c);border:1px solid color-mix(in srgb,var(--c) 45%,transparent);background:color-mix(in srgb,var(--c) 12%,transparent);cursor:pointer}#APO .ap8chip:hover{background:color-mix(in srgb,var(--c) 24%,transparent)}#APO tr.ap8click{cursor:pointer}#APO tr.ap8click:hover td{background:color-mix(in srgb,var(--gold,#c9a227) 8%,transparent)}
 @media(max-width:560px){#APO .ap8two{grid-template-columns:1fr}#APO .ap8hero{flex-direction:column;align-items:flex-start}}`;
 if(!document.getElementById('ap389css')){ const st=document.createElement('style'); st.id='ap389css'; const kc=document.getElementById('kh358css'); st.textContent=(kc?kc.textContent.split('#kh358Out ').join('#ap389Out '):'')+'\n'+CSS.split('#APO ').join('#ap389Out '); document.head.appendChild(st); }
-return {render,rahuCard,juCard,maCard,zsCard,drS,aspOf};
+return {render,rahuCard,rahuWealth,juCard,maCard,zsCard,drS,aspOf,H:{td,ic,tag,pl,card,tbl,fdt,fdtm,left,ymd,ymdT,posAt,ctx,pmOf,cnt,sg,nrm,w180,SN,HN,TN,PN,PC,LRD,HM,KWD,BEN,G,B,Y,A,GD,GDH,GR,css,ageAt,nextIn,DAY,K9,KW8}};
+})();
+(()=>{
+const H=()=>window.AP389.H;
+const kcss=host=>{ H().css(host); if(!document.getElementById('kh-'+host)){ const kc=document.getElementById('kh358css'); if(kc){ const st=document.createElement('style'); st.id='kh-'+host; st.textContent=kc.textContent.split('#kh358Out ').join('#'+host+' '); document.head.appendChild(st); } } };
+const tabs=(attr,T,cur)=>{ const {ic,GD}=H(); return `<div class="kh8tabs">${T.map(([k,i,t])=>`<button type="button" data-${attr}="${k}" class="${cur===k?'on':''}">${ic(i,cur===k?GD:null,20)}<span>${t}</span></button>`).join('')}</div>`; };
+const head=(icn,t,d)=>{ const {ic,GD}=H(); return `<h3 class="kh8H">${ic(icn,GD,24)} ${t}</h3><p class="note">${d}</p>`; };
+const WDK=['SU','MO','MA','ME','JU','VE','SA'];
+function ownPlanet(X,ov){ if(ov) return ov; if(!X.bt) return 'SU'; const d=new Date(X.bt), w=d.getDay(); return (w===3&&d.getHours()>=18)?'RA':WDK[w]; }
+function rel(a,b){ const {pmOf,G,B,Y}=H(); if(a===b) return [G,'ดาวเดียวกัน ส่งเสริมเต็มที่',2]; const pm=pmOf(a,b); const g=pm?pm[0]:'x'; if(/s/.test(g)) return [B,'คู่ศัตรู ไม่ส่งเสริม',-1]; if(/[mep]/.test(g)) return [G,(pm&&pm[1]?pm[1]:'คู่มิตร')+' เกื้อกูลกัน',1]; return [Y,'คู่ผสม ไม่ส่งเสริมไม่เสีย',0]; }
+const own9=['SU','MO','MA','ME','JU','VE','SA','RA'];
+const ownPick=(attr,cur,auto)=>{ const {pl,TN}=H(); return `<div class="ap8src"><span class="note" style="align-self:center">ดาวประจำตัว (ตามวันเกิด${auto?': '+TN[auto]:''})</span>${own9.map(k=>`<button type="button" data-${attr}="${k}" class="${cur===k?'on':''}">${pl(k)}${TN[k]}</button>`).join('')}</div>`; };
+
+// ================= DR390 ดาวประจำทิศ (ชัยภูมิ) =================
+window.DR390=(()=>{
+const DIRS=[['เหนือ','VE',0,'ผู้คนอ่อนน้อม อ่อนหวาน สุภาพ กิริยางาม พูดจานุ่มนวลน่าฟัง'],['ตะวันออกเฉียงเหนือ (อีสาน)','SU',45,'แกร่ง อดทน ขยัน สู้ความลำบาก สุดท้ายมั่นคงในชีวิต'],['ตะวันออก','MO',90,'เมืองบริการและท่องเที่ยว ผู้คนอัธยาศัยดี มีน้ำใจไมตรี'],['ตะวันออกเฉียงใต้','MA',135,'เมืองอุตสาหกรรม ผู้คนใจถึง ตรงไปตรงมา รักษาสัจจะ'],['ใต้','SA',180,'ดินแดนเข้มแข็ง ผู้คนใจนักเลง ยึดเหตุผลที่เป็นธรรม มักทำอาชีพเด็ดขาด เช่น ทนาย อัยการ ผู้พิพากษา ตำรวจ'],['ตะวันตกเฉียงใต้','ME',225,'ท่าเรือ ขนส่ง ค้าขาย ท่องเที่ยวฝั่งทะเล ผู้คนมีน้ำใจ ปราศรัยดี เผื่อแผ่'],['ตะวันตก','JU',270,'ป่าเขาสมบูรณ์ ผู้คนใฝ่ธรรม พระธุดงค์นิยมจาริก แต่ถ้าดุก็ดุจริง'],['ตะวันตกเฉียงเหนือ','RA',315,'ไม่มีอะไรแน่นอน เปลี่ยนแปลงเสมอ มีสิ่งมัวเมา ฉากหน้าสงบแต่ภายในเร้าร้อน ลุ่มหลง']];
+const COL={SU:['แดง','#e0453a','ดอกไม้สีแดง เช่น เข็มแดง ชบาแดง'],MO:['ขาวนวล','#e8e2c8','ดอกไม้สีขาว เช่น มะลิ พุดซ้อน'],MA:['ชมพู','#e05f8a','ดอกไม้สีชมพู เช่น เฟื่องฟ้าชมพู'],ME:['เขียว','#2faa5a','ไม้ใบเขียวพุ่มแน่น'],JU:['ส้ม แสด','#f08a24','ดอกไม้สีส้ม เช่น ดาวเรือง'],VE:['ฟ้า','#4aa3ff','ดอกไม้สีฟ้าหรือคราม เช่น อัญชัน'],SA:['ม่วง','#7a5ab8','ดอกไม้สีม่วง เช่น พวงคราม'],RA:['เทา หมอก','#8a8f98','ไม้ใบเงินหรือใบด่าง']};
+let TAB='ov', OWN=null, DIR=null;
+function compass(own){ const {TN,PN,PC}=H(); const S=300,c=150,R=128; let g=`<svg viewBox="0 0 ${S} ${S}" style="width:100%;max-width:320px;display:block;margin:0 auto" role="img" aria-label="เข็มทิศดาวประจำทิศ">`;
+ const P=(r,a)=>[c+r*Math.sin(a*Math.PI/180),c-r*Math.cos(a*Math.PI/180)];
+ DIRS.forEach(([n,k,a],i)=>{ const r=rel(own,k), [x1,y1]=P(R,a-22.5),[x2,y2]=P(R,a+22.5), on=DIR===i; g+=`<path d="M${c} ${c} L${x1} ${y1} A${R} ${R} 0 0 1 ${x2} ${y2} Z" fill="${r[0]}" fill-opacity="${on?.55:.2}" stroke="var(--panel)" stroke-width="2" data-drd="${i}" style="cursor:pointer"><title>${n} · ${TN[k]} · ${r[1]}</title></path>`;
+  const [tx,ty]=P(R*.66,a); g+=`<circle cx="${tx}" cy="${ty}" r="14" fill="${PC[k]}" pointer-events="none"/><text x="${tx}" y="${ty+.5}" font-size="14" text-anchor="middle" dominant-baseline="middle" fill="#fff" pointer-events="none">${PN[k]}</text>`;
+  const [lx,ly]=P(R+12,a); g+=`<text x="${lx}" y="${ly}" font-size="10.5" text-anchor="middle" dominant-baseline="middle" fill="currentColor" opacity=".8" pointer-events="none">${['N','NE','E','SE','S','SW','W','NW'][i]}</text>`; });
+ g+=`<circle cx="${c}" cy="${c}" r="26" fill="var(--panel)" stroke="var(--line)"/><text x="${c}" y="${c-5}" text-anchor="middle" font-size="10" fill="currentColor" opacity=".7">ดาวประจำตัว</text><text x="${c}" y="${c+11}" text-anchor="middle" font-size="15" fill="${PC[own]}">${PN[own]} ${TN[own]}</text>`;
+ if(DIR!=null){ const a=DIRS[DIR][2], [ax,ay]=P(R-4,a),[bx,by]=P(30,a); g+=`<line x1="${bx}" y1="${by}" x2="${ax}" y2="${ay}" stroke="var(--gold,#c9a227)" stroke-width="3" marker-end="url(#dr8a)"/><defs><marker id="dr8a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--gold,#c9a227)"/></marker></defs>`; }
+ return g+'</svg>'; }
+function fixes(own,k){ return own9.filter(x=>x!==own&&x!==k&&rel(own,x)[2]>0&&rel(k,x)[2]>0); }
+function tOv(X){ const {card,tag,pl,TN,G,B,Y,GD,tbl,fdt,left,ic}=H(); const auto=ownPlanet(X), own=OWN||auto;
+ const rows=DIRS.map((d,i)=>({d,i,r:rel(own,d[1])})).sort((p,q)=>q.r[2]-p.r[2]);
+ let det='';
+ if(DIR!=null){ const [n,k,,ppl]=DIRS[DIR], r=rel(own,k), fx=fixes(own,k);
+  const msg=r[2]>0?'ดาวประจำตัวกับดาวประจำทิศเกื้อกูลกัน อยู่แล้วเจริญรุ่งเรือง สงบสุข':r[2]<0?'ดาวประจำตัวไม่ถูกกับดาวประจำทิศ ทำอะไรยากลำบาก หาเช้ากินค่ำ ได้มาก็หมด ควรแก้ชัยภูมิ':'ไม่ส่งเสริมไม่เสีย พออยู่พอกิน แต่หวังร่ำรวยได้ยาก';
+  det=card(r[0],'home',`หน้าบ้านหันทิศ${n} · ดาวประจำทิศ ${TN[k]}`,`<div class="ap8hero" style="--c:${r[0]}">${ic(r[2]>0?'ok':r[2]<0?'warn':'orbit',r[0],40)}<div><small>${pl(own)} ${TN[own]} กับ ${pl(k)} ${TN[k]} · ${r[1]}</small><h3>${r[2]>0?'ชัยภูมิส่งเสริม':r[2]<0?'ชัยภูมิไม่ส่งเสริม ควรแก้':'ชัยภูมิกลาง ๆ'}</h3><p style="display:block">${msg}</p></div></div><p><b>ลักษณะทิศ${n}</b> ${ppl}</p>
+${r[2]<=0?`<p><b>วิธีแก้ด้วยธรรมชาติ</b> ไม่ต้องรื้อหรือสร้างใหม่ เติมดาวที่เข้ากับทั้งดาวประจำตัวและดาวประจำทิศ ให้ดาวครบกลุ่มกัน</p>${fx.length?tbl(['เติมดาว','สี','ทำได้ง่าย ๆ'],fx.map(x=>`<tr><td>${pl(x)} ${TN[x]}</td><td><span style="display:inline-block;width:14px;height:14px;border-radius:4px;background:${COL[x][1]};vertical-align:-2px;border:1px solid var(--line)"></span> ${COL[x][0]}</td><td>ทาสีประตูหรือของตกแต่งหน้าบ้านเป็นสี${COL[x][0]} หรือปลูก${COL[x][2]}</td></tr>`)):'<p class="note">ไม่พบดาวที่เข้ากับทั้งสองดวง ควรปรึกษาเพิ่มเติม</p>'}<p class="note">การแก้ควรดูอาชีพของเจ้าของบ้านด้วย เพื่อให้ส่งเสริมงานที่ทำอยู่</p>`:`<p class="note">ทิศนี้ส่งเสริมอยู่แล้ว เสริมได้ด้วยสี${COL[k][0]}ของดาวประจำทิศ</p>`}`); }
+ const days=[]; for(let d=0;d<14;d++){ const t=new Date(); t.setHours(9,0,0,0); t.setDate(t.getDate()+d); const k=WDK[t.getDay()], r=rel(own,k), r2=DIR!=null?rel(DIRS[DIR][1],k):null; if(r[2]>0&&(!r2||r2[2]>=0)) days.push([+t,k]); }
+ return `${ownPick('dro',own,auto)}
+${card(GD,'orbit','เลือกทิศที่หน้าบ้านหันไป (แตะที่เข็มทิศ)',`${compass(own)}<p class="note" style="text-align:center">เขียว เกื้อกูล · เหลือง กลาง ๆ · แดง ไม่ส่งเสริม</p>`)}
+${det}
+${card(GD,'grid','ทุกทิศเทียบกับดาวประจำตัว',tbl(['ทิศ','ดาวประจำทิศ','ผล'],rows.map(({d,i,r})=>`<tr class="ap8click" data-drd="${i}" style="${DIR===i?'background:color-mix(in srgb,var(--gold) 12%,transparent)':''}"><td>${d[0]}</td><td>${pl(d[1])} ${TN[d[1]]}</td><td>${tag(r[1],r[0])}</td></tr>`)))}
+${days.length?card(G,'cal','วันเหมาะลงมือแก้หรือปรับชัยภูมิ ๑๔ วันข้างหน้า',tbl(['วัน','ดาวประจำวัน','นับถอยหลัง'],days.map(([t,k])=>`<tr><td>${fdt(t)}</td><td>${pl(k)} ${TN[k]} ${tag(rel(own,k)[1],G)}</td><td>${left(t)}</td></tr>`))):''}
+<p class="note">หลักวิชาดาวประจำทิศ ใช้ในการรบ การเดินทาง และการสร้างบ้านแปลงเมือง · ดาวประจำตัวใช้ดาวประจำวันเกิด (พุธกลางคืนเป็นราหู) เปลี่ยนเองได้ · ความสัมพันธ์ดาวใช้ตำราคู่ดาว ๔๕ คู่ในระบบ · ที่มา: "ดาวประจำทิศตามหลักชัยภูมิ" ราชรามัญ โหรดวงดาว ระบบถอดความใหม่</p>`; }
+function render(){ const out=document.getElementById('dr390Out'); if(!out||!window.AP389) return; kcss('dr390Out'); let X={}; try{ X=H().ctx(); }catch(e){} let b=''; try{ b=tOv(X); }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; }
+ out.innerHTML=head('orbit','ดาวประจำทิศ ชัยภูมิ','ดาวประจำตัวกับดาวประจำทิศหน้าบ้าน เกื้อกูลหรือขัดกัน และวิธีแก้ด้วยสีและต้นไม้')+b; }
+document.addEventListener('click',ev=>{ const t=ev.target.closest&&ev.target.closest('#dr390Out [data-drd],#dr390Out [data-dro]'); if(!t) return; if(t.dataset.drd!=null) DIR=+t.dataset.drd; if(t.dataset.dro) OWN=t.dataset.dro; const y=scrollY; render(); scrollTo(0,y); });
+return {render};
+})();
+
+// ================= LG391 วิชา ๖ ลัคนา =================
+window.LG391=(()=>{
+let SEL=null;
+function six(L){ return [0,1,2,3,4,5].map(i=>(L+2*i)%12); }
+function yearL(X,age){ const S=six(X.L); return S[age>=1?(age-1)%6:0]; }
+function board(X,yl){ const {SN,PC,sg,LRD}=H(), PN={...H().PN,UR:'๐'}; const N=X.N, S=six(X.L), S0=300,c=150,R=134,r0=46; const occ={}; [...H().KW8,'KE','UR'].forEach(k=>{ if(N[k]!=null){ const s=sg(N[k]); (occ[s]=occ[s]||[]).push(k); } });
+ const P=(r,a)=>[c+r*Math.cos(a),c-r*Math.sin(a)], ang=s=>Math.PI+((s-X.L)*30+15)*Math.PI/180;
+ let g=`<svg viewBox="0 0 ${S0} ${S0}" style="width:100%;max-width:360px;display:block;margin:0 auto" role="img" aria-label="ผัง ๖ ลัคนา"><circle cx="${c}" cy="${c}" r="${R}" fill="none" stroke="var(--line)"/><circle cx="${c}" cy="${c}" r="${r0}" fill="none" stroke="var(--line)"/>`;
+ for(let s=0;s<12;s++){ const a=Math.PI+((s-X.L)*30)*Math.PI/180, [x1,y1]=P(r0,a),[x2,y2]=P(R,a); g+=`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="var(--line)"/>`;
+  const am=ang(s), on=s===yl, isL=S.includes(s); if(on){ const a1=Math.PI+((s-X.L)*30)*Math.PI/180, a2=a1+Math.PI/6, [p1x,p1y]=P(R,a1),[p2x,p2y]=P(R,a2),[p3x,p3y]=P(r0,a2),[p4x,p4y]=P(r0,a1); g+=`<path d="M${p1x} ${p1y} A${R} ${R} 0 0 0 ${p2x} ${p2y} L${p3x} ${p3y} A${r0} ${r0} 0 0 1 ${p4x} ${p4y}Z" fill="#f08a24" fill-opacity=".22"/>`; }
+  const [sx,sy]=P(R+10,am); g+=`<text x="${sx}" y="${sy}" font-size="9.5" text-anchor="middle" dominant-baseline="middle" fill="currentColor" opacity=".6">${SN[s]}</text>`;
+  const ks=occ[s]||[], fill=!ks.length?[LRD[s]]:[], items=[...ks.map(k=>[k,0]),...fill.map(k=>[k,1])];
+  items.forEach(([k,f],j)=>{ const rr=R-22-j*17, [x,y]=P(rr,am); g+=`<text x="${x}" y="${y}" font-size="13" text-anchor="middle" dominant-baseline="middle" fill="${f?'#3fd17a':'currentColor'}">${PN[k]}</text>`; });
+  if(s===X.L){ const [x,y]=P(r0+14,am); g+=`<text x="${x}" y="${y}" font-size="11" text-anchor="middle" dominant-baseline="middle" fill="var(--gold,#c9a227)">ล</text>`; }
+  if(isL){ const [x,y]=P(r0+(s===X.L?28:14),am); g+=`<text x="${x}" y="${y}" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle" fill="#f08a24">@</text>`; } }
+ return g+`<text x="${c}" y="${c+4}" text-anchor="middle" font-size="11" fill="currentColor" opacity=".7">๖ ลัคนา</text></svg>`; }
+function read(X,yl){ const {SN,HN,TN,pl,tag,sg,cnt,LRD,HM,BEN,G,B,Y,KWD}=H(); const N=X.N, ks=[...H().KW8,'KE','UR'].filter(k=>N[k]!=null&&sg(N[k])===yl), lord=LRD[yl], hl=N[lord]!=null?cnt(yl,sg(N[lord])):null, tr=H().KW8.filter(k=>X.TR[k]!=null&&sg(X.TR[k])===yl), hn=cnt(X.L,yl);
+ const out=[]; out.push(`<p>ลัคนาปีนี้อยู่ราศี<b>${SN[yl]}</b> ตรงกับภพ${HN[hn-1]}ของดวงเดิม เรื่องเด่นของปีคือ${HM[hn]}</p>`);
+ if(ks.length) out.push(`<p>ดาวเดิมในลัคนาปี: ${ks.map(k=>`${pl(k)} ${TN[k]} ${BEN.includes(k)?tag('ศุภเคราะห์ ให้คุณ',G):tag('บาปเคราะห์ ต้องระวัง',B)}`).join(' ')} · เด่นเรื่อง${ks.map(k=>KWD[k]||'').join(' / ')}</p>`); else out.push(`<p>ราศีนี้ไม่มีดาวเดิม ใช้ดาวเกษตรบดี ${pl(lord)} ${TN[lord]} เติมแทน ตัวแทนเรื่อง${KWD[lord]||''}</p>`);
+ if(hl) out.push(`<p>เจ้าเรือนลัคนาปี (${TN[lord]}) อยู่ภพ${HN[hl-1]}นับจากลัคนาปี ${[6,8,12].includes(hl)?tag('ทุสถาน ปีนี้ต้องระวังเรื่อง'+HM[hl],B):[1,4,5,7,9,10,11].includes(hl)?tag('ตำแหน่งดี หนุนเรื่อง'+HM[hl],G):tag('กลาง ๆ',Y)}</p>`);
+ if(tr.length) out.push(`<p>ดาวจรตอนนี้ทับลัคนาปี: ${tr.map(k=>`${pl(k)} ${TN[k]}`).join(' ')} ${tr.some(k=>BEN.includes(k))?tag('มีศุภเคราะห์จรหนุน',G):tag('มีบาปเคราะห์จรกดดัน',B)}</p>`);
+ return out.join(''); }
+function tOv(X){ const {card,tbl,tag,fdt,left,SN,HN,cnt,GD,G,ymd,ageAt,td}=H(); const age=ymd(X.bt,X.T)[0], yl=SEL!=null?SEL:yearL(X,age);
+ let w=''; try{ w=`<div class="ap8w">${wheelF({id:'lg8w',natal:X.N,transit:X.TR,retro:{},retroT:{},mark:{},lagSign:yl,center:['ลัคนาปี',SN[yl]],tanu:X.tanu,L:{}})}</div>`; }catch(e){}
+ const rows=[]; const b=new Date(X.bt); for(let a=Math.max(1,age-2);a<=age+10;a++){ const d=new Date(b); d.setFullYear(b.getFullYear()+a); const l=yearL(X,a), cur=a===age; rows.push(`<tr class="ap8click" data-lgs="${l}" style="${cur?'background:color-mix(in srgb,#f08a24 14%,transparent)':''}"><td>${td(a)} ปี${cur?' '+tag('ปีนี้','#f08a24'):''}</td><td>${fdt(+d)}</td><td>${SN[l]}</td><td>${HN[cnt(X.L,l)-1]}</td><td>${+d>Date.now()?left(+d):'ผ่านมาแล้ว'}</td></tr>`); }
+ return `${card('#f08a24','orbit','ผัง ๖ ลัคนา',`${board(X,yl)}<p class="note" style="text-align:center">@ สีส้ม คือลัคนาทั้ง ๖ (นับลัคนาเดิมเป็นหนึ่ง เว้นสองราศี) · เลขสีเขียวคือดาวเกษตรบดีที่เติมในราศีว่าง · ช่องส้มคือลัคนาปี${SEL!=null?' ที่เลือก':' อายุ '+td(age)+' ปี'}</p>`)}
+${card(GD,'book',`อ่านดวงปีนี้จากลัคนาปี (ราศี${SN[yl]})`,read(X,yl))}
+${w}
+${card(G,'cal','ลัคนาปีตามอายุ (กดแถวเพื่อดูปีนั้น)',tbl(['อายุ','วันครบรอบ','ลัคนาปี','ภพของดวงเดิม','นับถอยหลัง'],rows))}
+<p class="note">วิธีของตำรา: นับลัคนาเดิมเป็นหนึ่ง นับทวนเข็มไปสามราศีวาง @ ทำซ้ำจนครบ ๖ ลัคนา แล้วนับอายุผ่าน @ ทีละช่อง ช่องที่ตกตรงอายุคือลัคนาของปีนั้น จากนั้นอ่านดาวเดิมร่วมกับดาวจรตามปกติ · ระบบนับอายุเต็มปี · ราศีกุมภ์ใช้ราหูเป็นเกษตรบดีตามแบบไทย · ที่มา: "วิชา ๖ ลัคนา" ราชรามัญ โหรดวงดาว ระบบถอดความใหม่</p>`; }
+function render(){ const out=document.getElementById('lg391Out'); if(!out||!window.AP389) return; kcss('lg391Out'); let X={}; try{ X=H().ctx(); }catch(e){} let b=''; try{ b=X.N?tOv(X):'<p class="note">ผูกดวงก่อน แล้วกลับมาที่หน้านี้</p>'; }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; }
+ out.innerHTML=head('orbit','วิชา ๖ ลัคนา (โหรมอญ)','วาง ๖ ลัคนา เติมดาวเกษตรบดี นับอายุหาลัคนาของปี แล้วอ่านดวงปีนั้นร่วมกับดาวจร')+b; }
+document.addEventListener('click',ev=>{ const t=ev.target.closest&&ev.target.closest('#lg391Out [data-lgs]'); if(!t) return; SEL=+t.dataset.lgs; const y=scrollY; render(); scrollTo(0,y); });
+return {render};
+})();
+
+// ================= DD392 ดาวดับ: ช่วงดาวเสียพร้อมกัน =================
+window.DD392=(()=>{
+let OWN=null, CACHE=null;
+const MAL=['SA','RA','KE','MA','UR'];
+function PT(t){ const o=H().posAt(t); try{ const h=horaOf(new Date(t)); o.KE=posH(h,'KE'); o.UR=posH(h,'UR'); }catch(_){ } return o; }
+function natal(X,own){ const {sg,cnt}=H(); const N=X.N, L=X.L, hO=cnt(L,sg(N[own])), hJ=cnt(L,sg(N.JU)), s12=(L+11)%12;
+ const in12=[...H().KW8,'KE','UR'].filter(k=>N[k]!=null&&sg(N[k])===s12); const badP=[]; for(let i=0;i<in12.length;i++) for(let j=i+1;j<in12.length;j++) if(rel(in12[i],in12[j])[2]<0) badP.push([in12[i],in12[j]]);
+ return {hO,hJ,s12,in12,badP,c1:[6,8,12].includes(hO),c2:[6,8,12].includes(hJ),c3:badP.length>0}; }
+function hits(X,own,T){ const {sg,cnt}=H(); const N=X.N, L=X.L, s12=(L+11)%12, so=sg(N[own]), sJ=sg(N.JU), hJ=cnt(L,sJ), h=[];
+ const ks=['SU','MA','ME','JU','VE','SA','RA','KE','UR'];
+ if(MAL.some(k=>T[k]!=null&&k!==own&&[0,6].includes((sg(T[k])-so+12)%12))) h.push('บาปเคราะห์จรกุมหรือเล็งดาวประจำตัวเดิม');
+ if(ks.some(k=>T[k]!=null&&sg(T[k])===L&&rel(own,k)[2]<0)) h.push('ดาวที่เป็นคู่ศัตรูกับดาวประจำตัวจรทับลัคนา');
+ const in12=ks.filter(k=>T[k]!=null&&sg(T[k])===s12); let bp=false; for(let i=0;i<in12.length;i++) for(let j=i+1;j<in12.length;j++) if(rel(in12[i],in12[j])[2]<0||(MAL.includes(in12[i])&&MAL.includes(in12[j]))) bp=true; if(bp) h.push('ดาวคู่เสียจรเบียนลัคนา (ราศีที่ ๑๒)');
+ if([6,8,12].includes(hJ)&&T.MA!=null&&[0,6].includes((sg(T.MA)-sJ+12)%12)) h.push('อังคารจรต้องพฤหัสบดีเดิมที่ตกทุสถาน');
+ if(T[own]!=null&&[6,8,12].includes(cnt(L,sg(T[own])))&&ks.some(k=>k!==own&&MAL.includes(k)&&T[k]!=null&&sg(T[k])===sg(T[own]))) h.push('ดาวประจำตัวจรตกทุสถานร่วมบาปเคราะห์');
+ return h; }
+function scan(X,own){ const key=Math.floor(X.T/864e5)+':'+X.L+':'+own; if(CACHE&&CACHE.k===key) return CACHE.v; const D=[]; for(let d=0;d<=730;d+=1){ const t=X.T+d*H().DAY; D.push([t,hits(X,own,PT(t))]); }
+ const W=[]; let cur=null; D.forEach(([t,h])=>{ const n=h.length; if(n>=2){ if(!cur||cur.lv!==(n>=3?3:2)){ if(cur) W.push(cur); cur={a:t,b:t,lv:n>=3?3:2,h:new Set(h)}; } else { cur.b=t; h.forEach(x=>cur.h.add(x)); } } else if(cur){ W.push(cur); cur=null; } }); if(cur) W.push(cur);
+ return (CACHE={k:key,v:{D,W}}).v; }
+function tOv(X){ const {card,tbl,tag,pl,TN,HN,SN,G,B,Y,GD,fdt,left,ageAt,ic,td}=H(); const auto=ownPlanet(X), own=OWN||auto, n=natal(X,own), S=scan(X,own), now=S.D[0][1];
+ const ck=(ok,t)=>`<li style="display:flex;gap:8px;align-items:baseline;margin:4px 0"><i style="width:9px;height:9px;border-radius:50%;flex:none;display:inline-block;background:${ok?B:G}"></i>${t}</li>`;
+ const lvC=n=>n>=3?B:n>=2?Y:G;
+ const bars=S.D.filter((_,i)=>i%7===0).map(([t,h],i)=>`<i title="${fdt(t)} · ${td(h.length)} เกณฑ์" style="height:${8+h.length*12}px;background:${lvC(h.length)}"></i>`).join('');
+ return `${ownPick('ddo',own,auto)}
+<div class="ap8hero" style="--c:${lvC(now.length)}">${ic(now.length>=2?'warn':'ok',lvC(now.length),40)}<div><small>ตอนนี้เข้าเกณฑ์ ${td(now.length)} ข้อ</small><h3>${now.length>=3?'ช่วงดาวเสียพร้อมกัน ควรดูแลสุขภาพเป็นพิเศษ':now.length>=2?'มีดาวเสียซ้อนกัน ควรระวัง':'ยังไม่มีดาวเสียพร้อมกัน'}</h3><p style="display:block">${now.length?now.join(' · '):'ใช้ช่วงนี้วางแผนชีวิตและตรวจสุขภาพตามปกติ'}</p></div></div>
+${card(GD,'book','พื้นดวงเดิม',`<ul style="list-style:none;padding:0;margin:0">${ck(n.c1,`ดาวประจำตัว ${pl(own)} ${TN[own]} อยู่ภพ${HN[n.hO-1]} ${n.c1?'(ทุสถาน)':''}`)}${ck(n.c2,`พฤหัสบดีอยู่ภพ${HN[n.hJ-1]} ${n.c2?'(ทุสถาน)':''}`)}${ck(n.c3,`ราศีเบียนลัคนา (${SN[n.s12]}) ${n.in12.length?'มีดาว '+n.in12.map(k=>TN[k]).join(' '):'ไม่มีดาว'}${n.badP.length?' · มีคู่เสีย '+n.badP.map(p=>p.map(k=>TN[k]).join('–')).join(', '):''}`)}</ul><p class="note">จุดแดงคือพื้นดวงที่อ่อน ถ้าดาวจรมาเสียพร้อมกันหลายจุดจะหนักกว่าปกติ</p>`)}
+${card(Y,'orbit','จำนวนเกณฑ์ดาวเสียรายสัปดาห์ ๒ ปีข้างหน้า',`<div class="dd8bars">${bars}</div><p class="note">เขียว ๐–๑ · เหลือง ๒ · แดง ๓ ขึ้นไป</p>`)}
+${card(B,'cal','ช่วงดาวเสียพร้อมกัน',S.W.length?tbl(['ระดับ','เริ่ม','ถึง','นับถอยหลัง','อายุ','เกณฑ์ที่เข้า'],S.W.slice(0,30).map(w=>`<tr class="ap8r" style="--c:${w.lv>=3?B:Y}"><td>${tag(w.lv>=3?'หนัก':'ระวัง',w.lv>=3?B:Y)}</td><td>${fdt(w.a)}</td><td>${fdt(w.b)}</td><td>${w.a>Date.now()?left(w.a):'กำลังเป็นอยู่'}</td><td>${ageAt(w.a)}</td><td><small>${[...w.h].join(' · ')}</small></td></tr>`)):'<p class="note">ไม่พบช่วงที่ดาวเสียซ้อนกันในสองปีข้างหน้า</p>')}
+<p class="note"><b>ใช้อย่างไร</b> ดาวจรแต่ละดวงที่เสียมาคนละครั้งอาจแค่เจ็บป่วยหรือมีอุปสรรค ตำราเน้นช่วงที่ดาวมาเสียพร้อมกันหลายจุด ระบบใช้เพื่อเฝ้าระวังและวางแผนดูแลสุขภาพ ไม่ใช่การทำนายวันเสียชีวิต ถ้ามีอาการเจ็บป่วยควรพบแพทย์ · ดาวประจำตัวใช้ดาวประจำวันเกิด เปลี่ยนเองได้ · เบียนลัคนาคือราศีก่อนลัคนา (ภพที่ ๑๒) · คู่เสียใช้คู่ศัตรูจากตำราคู่ดาว ๔๕ คู่ · ที่มา: "วิชาดาวดับ" ราชรามัญ โหรดวงดาว ระบบถอดความใหม่ ไม่แสดงดวงบุคคลจริง</p>`; }
+function render(){ const out=document.getElementById('dd392Out'); if(!out||!window.AP389) return; kcss('dd392Out'); if(!document.getElementById('dd392css')){ const st=document.createElement('style'); st.id='dd392css'; st.textContent='#dd392Out .dd8bars{display:flex;align-items:flex-end;gap:2px;height:60px;overflow-x:auto}#dd392Out .dd8bars i{flex:1 0 4px;border-radius:2px 2px 0 0;min-width:4px}'; document.head.appendChild(st); }
+ let X={}; try{ X=H().ctx(); }catch(e){} let b=''; try{ b=X.N?tOv(X):'<p class="note">ผูกดวงก่อน แล้วกลับมาที่หน้านี้</p>'; }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; }
+ out.innerHTML=head('warn','ดาวดับ: ช่วงดาวเสียพร้อมกัน','ตรวจพื้นดวงที่อ่อน และช่วงที่ดาวจรมาเสียพร้อมกันหลายจุด เพื่อเฝ้าระวังสุขภาพและวางแผนชีวิต')+b; }
+document.addEventListener('click',ev=>{ const t=ev.target.closest&&ev.target.closest('#dd392Out [data-ddo]'); if(!t) return; OWN=t.dataset.ddo; const y=scrollY; render(); scrollTo(0,y); });
+return {render};
+})();
 })();
