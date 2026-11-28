@@ -9588,3 +9588,45 @@ function render(){ const out=document.getElementById('pj395Out'); if(!out||!wind
  const {ic,GD}=H(); out.innerHTML=`<h3 class="kh8H">${ic('orbit',GD,24)} คัมภีร์พฤหัสจักร</h3><p class="note">พฤหัสบดีเดินรอบโลก ๖๐ ปีต่อราศี บรรยากาศของยุค สงคราม และการเกิดประเทศใหม่</p>`+b; }
 return {render};
 })();
+window.KK396=(()=>{
+const H=()=>window.AP389.H;
+const SEQ=['SU','MO','MA','ME','SA','JU','RA','VE'], ROLE=['บริวาร','อายุ','เดช','ศรี','มูละ','อุตสาหะ','มนตรี','กาลกิณี'];
+const ORG=['ศีรษะ ใบหน้า','ปาก ลำคอ','แขน ไหล่','อก','ท้องส่วนบน','ท้อง ลำไส้','สะโพก เอว','อวัยวะเพศ','ต้นขา','เข่า','แข้ง น่อง','เท้า'];
+const ORGR={1:['หน้าตา ภาพลักษณ์ดี เป็นที่นิยม','หน้าตาภาพลักษณ์มีเรื่องให้ติ ระวังศีรษะ'],2:['ปากเป็นเอก พูดแล้วคนเมตตา สร้างคะแนนนิยมด้วยคำพูด','พูดไม่ถูกหูคน คำพูดหาความสัตย์ยาก'],3:['แขนดี มือดี ทำงานด้วยมือแล้วได้ผล','ระวังแขน ไหล่ งานใช้มือมักสะดุด'],4:['ใจกว้าง จิตใจดี','ใจหนัก เก็บเรื่องไว้ในอก'],5:['ท้องอิ่ม กินดีอยู่ดี','ระวังกระเพาะ การกิน'],6:['ระบบย่อยดี','ระวังท้องและลำไส้'],7:['สะโพก ท่วงท่าดี มีเสน่ห์ต่อคู่','ระวังเอว สะโพก'],8:['เรื่องคู่และความสัมพันธ์ราบรื่น','มีทุกข์เพราะเรื่องชู้สาวและความสัมพันธ์ ต้องรักษาศีล'],9:['ขาแข็งแรง เดินทางได้ผลดี','ระวังต้นขา การเดินทาง'],10:['หัวเข่าดี ยืนหยัดได้นาน','ระวังข้อเข่า'],11:['เดินเหินคล่อง','ระวังแข้ง น่อง'],12:['เท้าพาไปเจอสิ่งดี','ระวังเท้า เดินไปเจอเรื่องเสีย']};
+const ZP={1:[110,34],2:[110,70],3:[60,118],4:[110,112],5:[110,140],6:[110,168],7:[86,200],8:[110,222],9:[92,262],10:[92,306],11:[92,348],12:[92,398]};
+let VIEW='n';
+function bday(X){ if(!X.bt) return 'SU'; const d=new Date(X.bt), w=d.getDay(); return (w===3&&d.getHours()>=18)?'RA':['SU','MO','MA','ME','JU','VE','SA'][w]; }
+function roles(X){ const b=bday(X), i0=SEQ.indexOf(b), r={}; SEQ.forEach((_,i)=>{ r[SEQ[(i0+i)%8]]=ROLE[i]; }); return {b,r,sri:SEQ[(i0+3)%8],kal:SEQ[(i0+7)%8]}; }
+function figure(X,P,R){ const {PN,PC,cnt,sg,td}=H(); const by={}; SEQ.forEach(k=>{ if(P[k]!=null){ const h=cnt(X.L,sg(P[k])); (by[h]=by[h]||[]).push(k); } });
+ let g=`<svg viewBox="0 0 220 430" style="width:100%;max-width:260px;display:block;margin:0 auto" role="img" aria-label="ภพกับอวัยวะ"><g fill="none" stroke="currentColor" stroke-opacity=".45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="110" cy="34" rx="22" ry="26"/><path d="M100 58v12M120 58v12"/><path d="M72 84q38-16 76 0l10 112q-48 18-96 0z"/><path d="M72 86l-24 70-8 64M148 86l24 70 8 64"/><path d="M78 196l-8 110 6 98M142 196l8 110-6 98M110 214l-6 92 2 98M110 214l6 92-2 98"/></g>`;
+ for(let h=1;h<=12;h++){ const [x,y]=ZP[h], ks=by[h]||[], hasS=ks.includes(R.sri), hasK=ks.includes(R.kal), c=hasK?'#e0453a':hasS?'#2faa5a':ks.length?'#c9a227':'var(--line)';
+  g+=`<circle cx="${x}" cy="${y}" r="${ks.length?12:7}" fill="${c}" fill-opacity="${ks.length?.9:.5}" stroke="var(--panel)" stroke-width="1.5"><title>ภพ ${td(h)} ${ORG[h-1]}</title></circle><text x="${x}" y="${y+.5}" font-size="${ks.length?10:8}" text-anchor="middle" dominant-baseline="middle" fill="#fff">${ks.length?ks.map(k=>PN[k]).join(''):td(h)}</text>`;
+  const lx=x<110?x-18:x+18; if(ks.length) g+=`<text x="${h===3?24:200}" y="${y+4}" font-size="9.5" text-anchor="${h===3?'start':'end'}" fill="${c}">${ORG[h-1].split(' ')[0]}</text>`; }
+ return g+'</svg>'; }
+function readings(X,P,R,tr){ const {tag,TN,HN,cnt,sg,G,B,Y,pl}=H(); const out=[]; const h=k=>cnt(X.L,sg(P[k]));
+ const hs=h(R.sri), hk=h(R.kal);
+ out.push([G,`ศรี (${TN[R.sri]}) ${tr?'จร':'อยู่'}ภพ${HN[hs-1]} ตรงกับ${ORG[hs-1]}`,ORGR[hs][0]]);
+ out.push([B,`กาลกิณี (${TN[R.kal]}) ${tr?'จร':'อยู่'}ภพ${HN[hk-1]} ตรงกับ${ORG[hk-1]}`,ORGR[hk][1]+(hk===2&&R.kal==='ME'?' · พุธเป็นดาวแห่งคำพูด ยิ่งปากจัด ด่าเก่ง':'')]);
+ if(!tr){ const mars8=h('MA')===8, sa7=h('SA')===7, ra8=h('RA')===8, mo11=P.MO!=null&&P.RA!=null&&cnt(sg(P.RA),sg(P.MO))===11;
+  if(sa7||mars8||ra8||mo11) out.push([B,'ภินทุบาทว์ เบียนดวงไม่ให้ถึงจุดดี',[sa7?'เสาร์เล็งลัคนา':'',ra8?'ราหูอยู่ภพ ๘':'',mars8?'อังคารอยู่ภพ ๘':'',mo11?'จันทร์เป็นที่ ๑๑ แก่ราหู':''].filter(Boolean).join(' · ')+(mars8&&R.kal==='MA'?' · อังคารเป็นกาลกิณีด้วย ผลยิ่งชัด เรื่องคู่ครองมักไม่ราบรื่น':'')]);
+  if(X.L===10&&sg(P.MA)===7) out.push([Y,'ลัคนากุมภ์ อังคารเกษตรพิจิก (ภพ ๑๐)','ตำราเตือนเฉพาะดวงหญิง ระวังถูกครหาเรื่องความสัมพันธ์กับเพศตรงข้าม']); }
+ return out; }
+let TC=null;
+function transitTable(X,R){ const {fdtm,left,ageAt,tag,HN,cnt,sg,posAt,DAY,G,B,TN}=H(); const key=Math.floor(X.T/864e5)+':'+X.L+':'+R.sri; if(TC&&TC.k===key) return TC.v;
+ const rows=[]; [[R.sri,'ศรี',G],[R.kal,'กาลกิณี',B]].forEach(([k,n,c])=>{ const st={MO:.25,SU:1,ME:1,VE:1,MA:2,JU:5,SA:5,RA:5}[k], hz={MO:30,SU:370,ME:370,VE:370,MA:740,JU:1500,SA:3000,RA:2200}[k]; let t=X.T, s=sg(posAt(t)[k]), cnt2=0;
+  while(t<X.T+hz*DAY&&cnt2<6){ const t2=t+st*DAY, s2=sg(posAt(t2)[k]); if(s2!==s){ let a=t,b=t2; for(let i=0;i<20&&b-a>6e4;i++){ const m=(a+b)/2; if(sg(posAt(m)[k])===s) a=m; else b=m; } const h=cnt(X.L,s2); rows.push({t:b,k,n,c,h}); s=s2; cnt2++; } t=t2; } });
+ rows.sort((p,q)=>p.t-q.t); return (TC={k:key,v:rows}).v; }
+function body(X){ const {card,tbl,tag,GD,G,B,Y,ic,TN,PN,HN,SN,pl,cnt,sg,fdtm,left,ageAt}=H(); const R=roles(X), P=VIEW==='n'?X.N:X.TR, rd=readings(X,P,R,VIEW==='t'), T=transitTable(X,R);
+ const tbl1=tbl(['ดาว','ทักษา','อยู่ภพ','อวัยวะ'],SEQ.filter(k=>P[k]!=null).map(k=>{ const h=cnt(X.L,sg(P[k])), r=R.r[k], c=r==='ศรี'?G:r==='กาลกิณี'?B:null; return `<tr${c?` class="ap8r" style="--c:${c}"`:''}><td>${pl(k)} ${TN[k]}</td><td>${c?tag(r,c):r}</td><td>${HN[h-1]}</td><td>${ORG[h-1]}</td></tr>`; }));
+ return `<div class="ap8src"><button type="button" data-kkv="n" class="${VIEW==='n'?'on':''}">ดวงเดิม</button><button type="button" data-kkv="t" class="${VIEW==='t'?'on':''}">ดาวจรตอนนี้</button></div>
+<div class="ap8hero" style="--c:${GD}">${ic('sun',GD,40)}<div><small>เกิดวัน${TN[R.b]} (ภูมิพยากรณ์ตามวันเกิด) · ลัคนา${SN[X.L]}</small><h3>ศรีคือ ${pl(R.sri)} ${TN[R.sri]} · กาลกิณีคือ ${pl(R.kal)} ${TN[R.kal]}</h3><p style="display:block">ภพในดวงเทียบกับอวัยวะ ลัคนาเป็นศีรษะ ภพ ๒ เป็นปาก ไล่ลงไปจนภพ ๑๒ เป็นเท้า ดาวศรีอยู่อวัยวะใด อวัยวะนั้นให้คุณ ดาวกาลกิณีอยู่อวัยวะใด อวัยวะนั้นให้โทษ</p></div></div>
+<div class="kk8g"><div>${card(GD,'eye',VIEW==='n'?'ดาวเดิมบนร่างกาย':'ดาวจรบนร่างกาย',`${figure(X,P,R)}<p class="note" style="text-align:center">เขียว ศรี · แดง กาลกิณี · ทอง ดาวอื่น</p>`)}</div><div>${card(GD,'book','คำพยากรณ์',`<ul class="ap8yl">${rd.map(([c,t,d])=>`<li style="--c:${c}"><b>${t}</b> ${d}</li>`).join('')}</ul>`)}${card(GD,'grid','ทักษาและอวัยวะของดาวแต่ละดวง',tbl1)}</div></div>
+${card(GD,'cal','ศรีและกาลกิณีจรเข้าภพใหม่',tbl(['ดาว','เข้าภพ','อวัยวะ','ผล','วันเวลา','นับถอยหลัง','อายุ'],T.slice(0,14).map(e=>`<tr class="ap8r" style="--c:${e.c}"><td>${pl(e.k)} ${tag(e.n,e.c)}</td><td>${HN[e.h-1]}</td><td>${ORG[e.h-1]}</td><td><small>${e.n==='ศรี'?ORGR[e.h][0]:ORGR[e.h][1]}</small></td><td>${fdtm(e.t)}</td><td>${left(e.t)}</td><td>${ageAt(e.t)}</td></tr>`)))}
+<p class="note">ภูมิพยากรณ์นับตามทักษา ๑ ๒ ๓ ๔ ๗ ๕ ๘ ๖ เริ่มจากดาววันเกิด เป็นบริวาร อายุ เดช ศรี มูละ อุตสาหะ มนตรี กาลกิณี · เกิดวันพุธหลัง ๑๘.๐๐ น. ใช้ราหู · ระบบนับวันตามเวลาเที่ยงคืน ไม่ได้ปรับตามเวลาพระอาทิตย์ขึ้น · ภินทุบาทว์ตามโคลงที่ยกมา ระบบตีความเป็นเสาร์เล็งลัคนา ราหูและอังคารอยู่ภพ ๘ และจันทร์เป็นที่ ๑๑ แก่ราหู · ที่มา: ตำราของพระพรหมมุนี (แย้ม) วัดราชประดิษฐ อ้างในหนังสือมหาทักษาพยากรณ์ อ.เทพย์ สาริกบุตร เผยแพร่โดยโหรชัยวัฒน์ สดชื่น ระบบถอดความใหม่</p>`; }
+function render(){ const out=document.getElementById('kk396Out'); if(!out||!window.AP389) return; H().css('kk396Out'); if(!document.getElementById('kh-kk396Out')){ const kc=document.getElementById('kh358css'); const st=document.createElement('style'); st.id='kh-kk396Out'; st.textContent=(kc?kc.textContent.split('#kh358Out ').join('#kk396Out '):'')+'#kk396Out .kk8g{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:12px}@media(max-width:700px){#kk396Out .kk8g{grid-template-columns:1fr}}'; document.head.appendChild(st); }
+ let X={}; try{ X=H().ctx(); }catch(e){} let b=''; try{ b=X.N?body(X):'<p class="note">ผูกดวงก่อน แล้วกลับมาที่หน้านี้</p>'; }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; }
+ const {ic,GD}=H(); out.innerHTML=`<h3 class="kh8H">${ic('eye',GD,24)} ศรี กาลกิณี กับอวัยวะ</h3><p class="note">ภพ ๑–๑๒ เทียบกับร่างกาย ดาวศรีและกาลกิณีตามวันเกิดอยู่อวัยวะใด ทั้งดวงเดิมและดาวจร</p>`+b; }
+document.addEventListener('click',ev=>{ const t=ev.target.closest&&ev.target.closest('#kk396Out [data-kkv]'); if(!t) return; VIEW=t.dataset.kkv; const y=scrollY; render(); scrollTo(0,y); });
+return {render};
+})();
