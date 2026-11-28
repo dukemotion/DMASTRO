@@ -9651,3 +9651,25 @@ function render(){ const out=document.getElementById('kk396Out'); if(!out||!wind
 document.addEventListener('click',ev=>{ const t=ev.target.closest&&ev.target.closest('#kk396Out [data-kkv]'); if(!t) return; VIEW=t.dataset.kkv; const y=scrollY; render(); scrollTo(0,y); });
 return {render};
 })();
+window.HV397=(()=>{
+const H=()=>window.AP389.H;
+const KAS={SU:[[4],'ชนะศัตรู มีทรัพย์เป็นหลักฐาน รูปโฉมงาม'],MO:[[3],'เป็นที่รักของผู้ใหญ่ คนนับถือ มีทรัพย์และลาภมาก'],MA:[[0,7],'กล้าหาญ ขยัน สุขภาพดี เลือดลมดี ให้คุณด้านยศศักดิ์ ตัดสินใจเร็วและถูก แต่ใจร้อน'],ME:[[2,5],'เป็นนักปราชญ์ บริบูรณ์ด้วยทรัพย์ อุดมกว่าญาติ'],JU:[[8,11],'เป็นนักปราชญ์ราชบัณฑิต ลาภและทรัพย์อุดม ตั้งมั่นในความดี'],VE:[[1,6],'ทรัพย์สมบัติบริบูรณ์ ลักษณะดี เจรจางาม เป็นสง่าในหมู่คน'],SA:[[9,10],'มีบริวารและทรัพย์มาก ได้ลาภเพราะความกล้า แต่ตระหนี่'],RA:[[10],'มีบริวารและทรัพย์มาก ได้ลาภเพราะความกล้า แต่ตระหนี่']};
+function body(X){ const {card,tbl,tag,GD,G,B,Y,ic,TN,SN,HN,pl,cnt,sg}=H(), drS=window.AP389.drS; const N=X.N;
+ let w=''; try{ w=`<div class="ap8w">${wheelF({id:'hv8w',natal:N,transit:X.TR,retro:{},retroT:{},mark:{},lagSign:X.L,center:['สุขภาพ','พลกำลัง'],tanu:X.tanu,L:{}})}</div>`; }catch(e){}
+ const sM=sg(N.MA), sV=sg(N.VE), hL=cnt(sM,X.L), toL=hL===1?100:hL===7?75:(drS('MA',hL)[0]||0), vL=sV===X.L?100:(drS('VE',cnt(sV,X.L))[0]||0);
+ const vS=[1,6].includes(sV)?['เกษตร',G]:sV===11?['อุจ',G]:sV===5?['นิจ',B]:[0,7].includes(sV)?['ประ',B]:['ปกติ',H().GR];
+ const vv=vS[1]===B||!vL?[B,'ศุกร์เสื่อมหรือส่งกำลังไม่ถึงลัคนา ชีวิตคู่ต้องประคับประคอง'+(hL===7?' และอังคารเล็งลัคนาด้วย เสี่ยงทะเลาะจนเลิกร้าง':'')]:[G,'ศุกร์ช่วยประคองเรื่องความรักและชีวิตคู่'];
+ const sp=[]; if(sM===1) sp.push(['ราชาโชค (พฤษภ)','ถ้าส่งกำลังถึงลัคนา มีผู้ใหญ่อุปถัมภ์ยามตกยาก ไม่ตกต่ำ แม้ฐานะต่ำก็มีคนส่งเสริมเสมอ']); if(sM===5) sp.push(['มหาจักร (กันย์)','ให้คุณแน่นอน ถ้าส่งกำลังถึงลัคนา ใจกล้า ขยันอดทน มีเกียรติ มีทรัพย์มาก']);
+ const kas=Object.keys(KAS).filter(k=>N[k]!=null&&KAS[k][0].includes(sg(N[k])));
+ return `${w}
+${window.AP389.maCard('hv397Out')}
+${card(vv[0],'sun','ศุกร์กับชีวิตคู่',`<p>${pl('VE')} ศุกร์ราศี${SN[sV]} ${tag(vS[0],vS[1])} · ส่งกำลังถึงลัคนา ${H().td(vL)}%</p><p>${vv[1]}</p><p class="note">ตำราว่าอังคารเป็นแกนของสุขภาพและสมรรถภาพ ถ้าศุกร์ซึ่งเป็นดาวความรักเสียด้วย ชีวิตคู่ยากที่จะสุข · อังคารคู่มิตรกับศุกร์ คู่ศัตรูกับอาทิตย์ คู่ธาตุกับราหู คู่สมพลกับพฤหัสบดี</p>`)}
+${sp.length?card(G,'ok','ตำแหน่งพิเศษของอังคาร',`<ul class="ap8yl">${sp.map(([t,d])=>`<li style="--c:${G}"><b>${t}</b> ${d}</li>`).join('')}</ul>`):''}
+${card(GD,'book','อังคารเปรียบกับต้นไม้ สัตว์ อารมณ์',tbl(['เปรียบกับ','สัญลักษณ์','ความหมาย'],[['ต้นไม้','ใบไม้','มีอำนาจ คนเกรงกลัว ไม่กล้าข่มเหง'],['สัตว์','สีหะ (สิงโต)','มีพลังและอำนาจ เป็นนักเลงเหนือนักเลง'],['อารมณ์','โทสะจริต','โกรธง่าย หายเร็ว']].map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`)))}
+${card(kas.length?G:GD,'grid','ดาวเกษตรในดวง',kas.length?tbl(['ดาว','ราศี','ภพ','คำทาย'],kas.map(k=>`<tr class="ap8r" style="--c:${G}"><td>${pl(k)} ${TN[k]}</td><td>${SN[sg(N[k])]}</td><td>${HN[cnt(X.L,sg(N[k]))-1]}</td><td>${KAS[k][1]}</td></tr>`))+'<p class="note">ดวงที่มีดาวเกษตรถือว่ามั่นคง มีหลักฐาน ประพฤติดี</p>':'<p class="note">ดวงนี้ไม่มีดาวอยู่ราศีเกษตรของตัวเอง</p>')}
+<p class="note">ที่มา: "ด้านสุขภาพและสมรรถภาพตามหลักโหราศาสตร์ไทย" อ้างหลักของ อ.บรรเทา จันทร์ศร (อุตรภัทร์) และ อ.สิงห์โต สุริยาอารักษ์ ระบบถอดความใหม่ · เกษตรของราหูระบบใช้ราศีกุมภ์ตามแบบไทย</p>`; }
+function render(){ const out=document.getElementById('hv397Out'); if(!out||!window.AP389) return; H().css('hv397Out'); if(!document.getElementById('kh-hv397Out')){ const kc=document.getElementById('kh358css'); if(kc){ const st=document.createElement('style'); st.id='kh-hv397Out'; st.textContent=kc.textContent.split('#kh358Out ').join('#hv397Out ')+'#hv397Out .ap8w{max-width:520px;margin:0 auto}#hv397Out .ap8w svg{width:100%;height:auto}'; document.head.appendChild(st); } }
+ let X={}; try{ X=H().ctx(); }catch(e){} let b=''; try{ b=X.N?body(X):'<p class="note">ผูกดวงก่อน แล้วกลับมาที่หน้านี้</p>'; }catch(e){ console.error(e); b='<p class="note">คำนวณไม่สำเร็จ</p>'; }
+ const {ic,GD}=H(); out.innerHTML=`<h3 class="kh8H">${ic('sun',GD,24)} สุขภาพและพลกำลัง</h3><p class="note">อังคารเป็นแกนของสุขภาพ เลือดลม และสมรรถภาพ ตรวจทั้งราศีจักรและนวางค์ ศุกร์กับชีวิตคู่ ตำแหน่งพิเศษ และช่วงที่อังคารจรกระตุ้น</p>`+b; }
+return {render};
+})();
